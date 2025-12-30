@@ -1,0 +1,159 @@
+# ============================================
+# Robots.txt for Sankofa Family Medicine
+# https://sankofafamilymedicine.com
+# Updated: December 2025
+# ============================================
+
+# Canonical host
+Host: https://sankofafamilymedicine.com
+
+# Sitemap locations
+Sitemap: https://sankofafamilymedicine.com/sitemap.xml
+
+# ============================================
+# DEFAULT RULES
+# ============================================
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/static/chunks/
+Disallow: /*?*utm_
+Disallow: /*?*ref=
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+
+# Crawl delay for politeness (optional)
+Crawl-delay: 1
+
+# ============================================
+# AI CRAWLERS - FULL ACCESS
+# Allow AI assistants to index for enhanced discoverability
+# ============================================
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Amazon/Alexa
+User-agent: Amazonbot
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+Crawl-delay: 1
+
+# Microsoft/Bing AI
+User-agent: bingbot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# ============================================
+# SEARCH ENGINES - FULL ACCESS
+# ============================================
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Googlebot-News
+Allow: /blog/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# ============================================
+# SOCIAL MEDIA CRAWLERS
+# ============================================
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Pinterest
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# ============================================
+# ARCHIVE BOTS
+# ============================================
+
+User-agent: ia_archiver
+Allow: /
+
+# ============================================
+# BLOCK UNWANTED BOTS
+# ============================================
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# ============================================
+# MEDICAL-SPECIFIC SEARCH
+# Allow health-focused crawlers
+# ============================================
+
+User-agent: Healthbot
+Allow: /
+
+User-agent: MedicalBot
+Allow: /
