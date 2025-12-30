@@ -246,17 +246,6 @@ export default function HomePage() {
                     {/* Decorative ring - outer */}
                     <div className="absolute -inset-4 rounded-[50px] border border-sfm-gold/20 opacity-60" />
                     
-                    {/* Floating Sankofa Bird overlay */}
-                    <div className="absolute -right-6 -bottom-6 w-28 h-28 lg:w-36 lg:h-36 image-float z-20">
-                      <div className="absolute inset-0 bg-sfm-gold/20 rounded-full blur-xl animate-pulse-slow" />
-                      <Image
-                        src="/images/sankofa-bird.png"
-                        alt="Sankofa Bird"
-                        fill
-                        className="object-contain drop-shadow-2xl"
-                      />
-                    </div>
-                    
                     {/* Gold accent ring */}
                     <div className="absolute -right-8 -bottom-8 w-32 h-32 lg:w-40 lg:h-40 rounded-full border-2 border-sfm-gold/30 border-dashed animate-spin-slow z-10" style={{ animationDuration: '30s' }} />
                   </div>
