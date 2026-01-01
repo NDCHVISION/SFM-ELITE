@@ -1670,7 +1670,6 @@ body {
 
 /* Shimmer overlay for images */
 .image-shimmer {
-  position: relative;
   overflow: hidden;
 }
 
