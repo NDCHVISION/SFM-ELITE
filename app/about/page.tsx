@@ -377,7 +377,7 @@ export default function AboutPage() {
               <div className="relative hidden lg:block">
                 <div className="relative aspect-[4/5] max-w-lg mx-auto group">
                   <div className="absolute inset-0 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl animate-pulse-slow" />
-                  <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden image-tilt">
+                  <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden image-tilt image-fade-dark">
                     <Image
                       src="/images/sankofa-wooden-sculpture.png"
                       alt="Traditional wooden Sankofa bird sculpture representing the principle of retrieving what matters from the past"
@@ -430,13 +430,13 @@ export default function AboutPage() {
                 {/* Gold Sankofa Sculpture */}
                 <div className="relative mb-8">
                   <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/30 to-sfm-gold/5 rounded-3xl blur-2xl animate-pulse-slow" />
-                  <div className="image-lift">
+                  <div className="image-lift image-fade-elite rounded-2xl overflow-hidden">
                     <Image
                       src="/images/sankofa-gold-sculpture.png"
                       alt="Modern gold Sankofa sculpture on marble base: the bird looking back while moving forward, symbolizing the retrieval of wisdom from the past"
                       width={400}
                       height={600}
-                      className="relative rounded-2xl shadow-2xl object-cover w-full max-w-sm mx-auto transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-110"
+                      className="relative shadow-2xl object-cover w-full max-w-sm mx-auto transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-110"
                     />
                   </div>
                 </div>
@@ -477,16 +477,9 @@ export default function AboutPage() {
               {/* Image */}
               <div className="relative order-2 lg:order-1 group">
                 <div className="absolute -inset-6 bg-gradient-to-br from-sfm-gold/25 via-sfm-azure/10 to-transparent rounded-3xl blur-3xl animate-pulse-slow" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-sfm-navy/20">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-sfm-navy/20 image-fade-elite">
                   {/* Brand color overlay */}
                   <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-tr from-sfm-navy/10 via-transparent to-sfm-gold/5" />
-                  
-                  {/* Vignette for edge blending */}
-                  <div className="absolute inset-0 z-10 pointer-events-none"
-                    style={{
-                      boxShadow: 'inset 0 0 80px 30px rgba(252,250,245,0.4)',
-                    }}
-                  />
                   
                   <Image
                     src="/images/physician-conversation-warm.png"
@@ -635,7 +628,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl opacity-50 animate-pulse-slow" />
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden image-lift portrait-premium">
+                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden image-lift portrait-premium image-fade-elite">
                   <Image
                     src="/images/dr-nkrumah-desk.png"
                     alt="Dr. Yaw Nkrumah, MD, founder of Sankofa Family Medicine, at his desk"

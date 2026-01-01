@@ -1112,6 +1112,139 @@ body {
 }
 
 /* ===========================================
+   V30 ELITE: FADED BORDER EFFECTS
+   Premium edge fade for all images
+   =========================================== */
+
+/* Base faded border - subtle and elegant */
+.image-fade-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-fade-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: 
+    inset 0 0 40px 15px rgba(250, 249, 247, 0.4),
+    inset 0 0 80px 25px rgba(250, 249, 247, 0.2);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Stronger fade for light backgrounds */
+.image-fade-border-strong {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-fade-border-strong::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: 
+    inset 0 0 50px 20px rgba(250, 249, 247, 0.6),
+    inset 0 0 100px 35px rgba(250, 249, 247, 0.3);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Elite fade combining multiple techniques */
+.image-fade-elite {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-fade-elite::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(250, 249, 247, 0.15) 0%,
+    transparent 20%,
+    transparent 80%,
+    rgba(250, 249, 247, 0.15) 100%
+  );
+  pointer-events: none;
+  z-index: 9;
+}
+
+.image-fade-elite::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: 
+    inset 0 0 60px 25px rgba(250, 249, 247, 0.5),
+    inset 0 0 120px 40px rgba(250, 249, 247, 0.25);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Dark background fade - for hero sections */
+.image-fade-dark {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-fade-dark::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: 
+    inset 0 0 40px 15px rgba(5, 28, 59, 0.4),
+    inset 0 0 80px 25px rgba(5, 28, 59, 0.2);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Dark mode support for faded borders */
+.dark .image-fade-border::after {
+  box-shadow: 
+    inset 0 0 40px 15px rgba(10, 22, 40, 0.5),
+    inset 0 0 80px 25px rgba(10, 22, 40, 0.3);
+}
+
+.dark .image-fade-border-strong::after {
+  box-shadow: 
+    inset 0 0 50px 20px rgba(10, 22, 40, 0.7),
+    inset 0 0 100px 35px rgba(10, 22, 40, 0.4);
+}
+
+.dark .image-fade-elite::before {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 22, 40, 0.2) 0%,
+    transparent 20%,
+    transparent 80%,
+    rgba(10, 22, 40, 0.2) 100%
+  );
+}
+
+.dark .image-fade-elite::after {
+  box-shadow: 
+    inset 0 0 60px 25px rgba(10, 22, 40, 0.6),
+    inset 0 0 120px 40px rgba(10, 22, 40, 0.35);
+}
+
+/* Rounded corners with fade - complete elite package */
+.image-elite-rounded {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.image-elite-rounded-lg {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.image-elite-rounded-xl {
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+/* ===========================================
    SECTION 14: ACCESSIBILITY
    =========================================== */
 

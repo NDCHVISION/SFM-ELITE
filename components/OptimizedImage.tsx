@@ -5,18 +5,26 @@ import Image, { ImageProps } from 'next/image'
 
 interface OptimizedImageProps extends Omit<ImageProps, 'onLoadingComplete'> {
   skeletonClassName?: string
+  fadeBorder?: 'none' | 'subtle' | 'strong' | 'elite'
 }
 
 export default function OptimizedImage({ 
   className = '', 
   skeletonClassName = '',
+  fadeBorder = 'elite',
   alt,
   ...props 
 }: OptimizedImageProps) {
   const [isLoading, setIsLoading] = useState(true)
 
+  // Determine fade border class
+  const fadeClass = fadeBorder === 'none' ? '' 
+    : fadeBorder === 'subtle' ? 'image-fade-border'
+    : fadeBorder === 'strong' ? 'image-fade-border-strong'
+    : 'image-fade-elite'
+
   return (
-    <div className={`relative overflow-hidden ${skeletonClassName}`}>
+    <div className={`relative overflow-hidden ${fadeClass} ${skeletonClassName}`}>
       {/* Skeleton loader */}
       {isLoading && (
         <div 

@@ -131,7 +131,7 @@ export default function HomePage() {
                   
                   {/* Main Image Container - Wooden Sankofa Sculpture */}
                   <div className="relative w-[300px] sm:w-[380px] lg:w-[460px] aspect-[3/4]">
-                    <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl shadow-sfm-navy/30">
+                    <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl shadow-sfm-navy/30 image-fade-dark">
                       {/* Subtle brand tint overlay */}
                       <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-sfm-navy/40 via-transparent to-transparent" />
                       
@@ -242,7 +242,7 @@ export default function HomePage() {
               },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="relative group overflow-hidden rounded-2xl aspect-[4/5]">
+                <div className="relative group overflow-hidden rounded-2xl aspect-[4/5] image-fade-elite">
                   <Image
                     src={item.src}
                     alt={item.alt}
@@ -573,7 +573,7 @@ export default function HomePage() {
               <ScrollReveal key={article.href} delay={i * 0.1}>
                 <Link href={article.href} className="group block">
                   <article className="bg-white rounded-2xl overflow-hidden border border-sfm-border-light hover:border-sfm-border transition-all hover:shadow-lg">
-                    <div className="aspect-[16/10] relative overflow-hidden">
+                    <div className="aspect-[16/10] relative overflow-hidden image-fade-elite">
                       <Image
                         src={article.image}
                         alt={article.title}
@@ -639,7 +639,7 @@ export default function HomePage() {
 
           {/* Physician Preview - Refined */}
           <div className="inline-flex items-center gap-4 mb-10 p-4 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/8">
-            <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-sfm-gold/40">
+            <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-sfm-gold/40 image-fade-border">
               <Image
                 src="/images/dr-nkrumah-thoughtful.png"
                 alt="Dr. Yaw Nkrumah"
