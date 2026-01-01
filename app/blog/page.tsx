@@ -329,7 +329,7 @@ export default function BlogPage() {
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link href="/services" className="btn-secondary btn-shine">
-              Pricing
+              Membership Plans
             </Link>
           </div>
           <p className="text-sfm-text-muted text-xs mt-3">

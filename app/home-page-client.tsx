@@ -104,7 +104,7 @@ export default function HomePage() {
                     href="/services" 
                     className="btn-outline btn-shine"
                   >
-                    Pricing
+                    Membership Plans
                   </Link>
                 </div>
 
@@ -130,12 +130,12 @@ export default function HomePage() {
               {/* Right Column - Hero Visual */}
               <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
                 <div className="opacity-0 animate-scale-in animation-delay-300 relative">
-                  {/* Soft glow - refined with pulse */}
-                  <div className="absolute -inset-8 bg-gradient-to-br from-sfm-gold/20 via-sfm-gold/10 to-sfm-azure/10 rounded-[50px] blur-3xl pulse-glow-elite" />
+                  {/* Soft glow - refined without excessive pulse */}
+                  <div className="absolute -inset-8 bg-gradient-to-br from-sfm-gold/20 via-sfm-gold/10 to-sfm-azure/10 rounded-[50px] blur-3xl" />
                   
                   {/* Main Image Container - Wooden Sankofa Sculpture */}
                   <div className="relative w-[300px] sm:w-[380px] lg:w-[460px] aspect-[3/4]">
-                    <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl shadow-sfm-navy/30 image-fade-dark image-shimmer">
+                    <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl shadow-sfm-navy/30 image-fade-dark">
                       {/* Subtle brand tint overlay */}
                       <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-sfm-navy/40 via-transparent to-transparent" />
                       
@@ -663,7 +663,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <PrimaryCTA variant="hero" />
             <Link href="/services" className="btn-outline btn-shine touch-target">
-              Pricing
+              Membership Plans
             </Link>
           </div>
 

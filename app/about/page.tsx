@@ -97,7 +97,7 @@ const organizationJsonLd = {
   url: 'https://sankofafamilymedicine.com',
   logo: {
     '@type': 'ImageObject',
-    url: 'https://sankofafamilymedicine.com/images/sfm-logo.png',
+    url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
     width: 512,
     height: 512,
   },
@@ -365,7 +365,7 @@ export default function AboutPage() {
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                   <Link href="/services" className="btn-secondary-white btn-shine">
-                    Pricing
+                    Membership Plans
                   </Link>
                 </div>
                 <p className="text-white/40 text-xs mt-3">
@@ -680,7 +680,7 @@ export default function AboutPage() {
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                   <Link href="/services" className="btn-secondary btn-shine">
-                    Pricing
+                    Membership Plans
                   </Link>
                 </div>
               </div>
@@ -720,7 +720,7 @@ export default function AboutPage() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
               <Link href="/services" className="btn-secondary btn-shine">
-                Pricing
+                Membership Plans
               </Link>
             </div>
 

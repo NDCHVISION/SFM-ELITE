@@ -78,7 +78,7 @@ export default function Footer() {
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-2xl 
                   border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 btn-shine"
               >
-                Pricing
+                Membership Plans
               </Link>
             </div>
           </div>

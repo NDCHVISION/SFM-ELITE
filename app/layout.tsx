@@ -97,7 +97,7 @@ export const metadata: Metadata = {
         alt: 'Sankofa Family Medicine - Virtual Direct Primary Care Washington State',
       },
       {
-        url: '/images/sfm-logo.png',
+        url: '/images/SFM_Trans.png',
         width: 800,
         height: 800,
         alt: 'Sankofa Family Medicine - Medicine That Remembers',
@@ -241,7 +241,7 @@ const structuredData = {
       url: 'https://sankofafamilymedicine.com',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://sankofafamilymedicine.com/images/sfm-logo.png',
+        url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
         width: 512,
         height: 512,
       },

@@ -74,7 +74,7 @@ const guideJsonLd = {
     name: 'Sankofa Family Medicine',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://sankofafamilymedicine.com/images/sfm-logo.png',
+      url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
     },
   },
   datePublished: '2025-01-01',
