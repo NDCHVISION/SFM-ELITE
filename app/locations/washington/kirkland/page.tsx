@@ -81,7 +81,7 @@ export default function KirklandPage() {
     },
     {
       icon: Shield,
-      title: 'Clear Pricing',
+      title: 'Transparent Pricing',
       description: 'Monthly membership with no surprise bills. HSA and FSA accepted.'
     },
   ]

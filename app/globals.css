@@ -1620,3 +1620,364 @@ body {
   opacity: 0.3;
   line-height: 1;
 }
+
+/* ===========================================
+   SECTION 19: V31 ELITE MAXIMUM ENHANCEMENTS
+   Maximize visual impact with elite overlays and animations
+   =========================================== */
+
+/* Premium hero overlay gradient */
+.hero-overlay-elite {
+  position: relative;
+}
+
+.hero-overlay-elite::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 30% 20%, rgba(188, 152, 51, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(5, 67, 110, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, transparent 0%, rgba(5, 28, 59, 0.4) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Floating animation for badges and highlights */
+@keyframes floatElite {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-6px) rotate(0.5deg); }
+  75% { transform: translateY(4px) rotate(-0.5deg); }
+}
+
+.float-elite {
+  animation: floatElite 6s ease-in-out infinite;
+}
+
+/* Pulse glow for premium elements */
+@keyframes pulseGlowElite {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(188, 152, 51, 0.2), 0 0 40px rgba(188, 152, 51, 0.1);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(188, 152, 51, 0.35), 0 0 60px rgba(188, 152, 51, 0.15);
+  }
+}
+
+.pulse-glow-elite {
+  animation: pulseGlowElite 3s ease-in-out infinite;
+}
+
+/* Shimmer overlay for images */
+.image-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  animation: shimmerSlide 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes shimmerSlide {
+  0% { transform: translateX(-100%) translateY(-100%); }
+  100% { transform: translateX(100%) translateY(100%); }
+}
+
+/* Enhanced section overlays */
+.section-overlay-premium {
+  position: relative;
+}
+
+.section-overlay-premium::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(188, 152, 51, 0.04) 0%, transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(5, 67, 110, 0.03) 0%, transparent 30%);
+  pointer-events: none;
+}
+
+/* Animated border gradient */
+.border-animate-gold {
+  position: relative;
+  border-radius: 1rem;
+}
+
+.border-animate-gold::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(
+    45deg,
+    var(--sfm-gold),
+    transparent,
+    var(--sfm-gold),
+    transparent,
+    var(--sfm-gold)
+  );
+  background-size: 400% 400%;
+  animation: borderGradient 8s linear infinite;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+@keyframes borderGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Premium text reveal animation */
+@keyframes textRevealElite {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.text-reveal-elite {
+  animation: textRevealElite 1s var(--ease-out-expo) forwards;
+}
+
+/* Enhanced button with gradient border */
+.btn-gradient-border {
+  position: relative;
+  background: transparent;
+  border: none;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.btn-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--sfm-gold), var(--sfm-azure), var(--sfm-gold));
+  background-size: 200% 200%;
+  animation: gradientMove 3s ease infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Smooth parallax scrolling elements */
+.parallax-subtle {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* Premium card with hover depth effect */
+.card-elite {
+  position: relative;
+  background: white;
+  border-radius: 1.5rem;
+  border: 1px solid var(--sfm-border-light);
+  overflow: hidden;
+  transition: all 0.5s var(--ease-out-expo);
+}
+
+.card-elite::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(188, 152, 51, 0.02) 100%);
+  opacity: 0;
+  transition: opacity 0.5s var(--ease-smooth);
+}
+
+.card-elite:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 25px 60px rgba(5, 28, 59, 0.12),
+    0 15px 25px rgba(5, 28, 59, 0.08),
+    0 0 0 1px rgba(188, 152, 51, 0.1);
+}
+
+.card-elite:hover::before {
+  opacity: 1;
+}
+
+/* Spotlight hover effect */
+.spotlight-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-hover::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(188, 152, 51, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.spotlight-hover:hover::after {
+  opacity: 1;
+}
+
+/* Enhanced section divider */
+.divider-elite {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--sfm-gold) 20%,
+    var(--sfm-gold) 80%,
+    transparent 100%
+  );
+  opacity: 0.3;
+}
+
+/* Premium badge with animated border */
+.badge-elite {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(188, 152, 51, 0.1);
+  border: 1px solid rgba(188, 152, 51, 0.2);
+  border-radius: 2rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--sfm-gold);
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-elite::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  animation: badgeShine 3s ease-in-out infinite;
+}
+
+@keyframes badgeShine {
+  0%, 70%, 100% { transform: translateX(-100%); }
+  30% { transform: translateX(100%); }
+}
+
+/* Glowing CTA section background */
+.cta-glow-bg {
+  position: relative;
+}
+
+.cta-glow-bg::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(188, 152, 51, 0.08) 0%,
+    rgba(5, 67, 110, 0.04) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  animation: ctaGlowPulse 8s ease-in-out infinite;
+}
+
+@keyframes ctaGlowPulse {
+  0%, 100% { 
+    opacity: 0.6; 
+    transform: translate3d(-50%, -50%, 0) scale(1); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: translate3d(-50%, -50%, 0) scale(1.05); 
+  }
+}
+
+/* Icon container with elite styling */
+.icon-elite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, white 0%, var(--sfm-cream) 100%);
+  border: 1px solid var(--sfm-border-light);
+  border-radius: 1rem;
+  box-shadow: 
+    0 4px 12px rgba(5, 28, 59, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 rgba(5, 28, 59, 0.02);
+  transition: all 0.4s var(--ease-out-expo);
+}
+
+.icon-elite:hover {
+  transform: translateY(-4px) rotate(3deg);
+  box-shadow: 
+    0 8px 24px rgba(5, 28, 59, 0.08),
+    0 0 0 1px rgba(188, 152, 51, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* Section with animated gradient background */
+.section-gradient-animate {
+  background: linear-gradient(
+    135deg,
+    var(--sfm-cream) 0%,
+    white 25%,
+    var(--sfm-cream) 50%,
+    white 75%,
+    var(--sfm-cream) 100%
+  );
+  background-size: 400% 400%;
+  animation: sectionGradient 20s ease infinite;
+}
+
+@keyframes sectionGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

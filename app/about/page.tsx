@@ -364,8 +364,8 @@ export default function AboutPage() {
                     Become a Patient
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
-                  <Link href="/services" className="btn-secondary-white">
-                    Clear Pricing
+                  <Link href="/services" className="btn-secondary-white btn-shine">
+                    Pricing
                   </Link>
                 </div>
                 <p className="text-white/40 text-xs mt-3">
@@ -679,8 +679,8 @@ export default function AboutPage() {
                     Become a Patient
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
-                  <Link href="/services" className="btn-secondary">
-                    Clear Pricing
+                  <Link href="/services" className="btn-secondary btn-shine">
+                    Pricing
                   </Link>
                 </div>
               </div>
@@ -719,8 +719,8 @@ export default function AboutPage() {
                 Become a Patient
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
-              <Link href="/services" className="btn-secondary">
-                Clear Pricing
+              <Link href="/services" className="btn-secondary btn-shine">
+                Pricing
               </Link>
             </div>
 

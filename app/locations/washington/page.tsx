@@ -129,8 +129,8 @@ export default function WashingtonLocationPage() {
                 <span>Become a Patient</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
-              <Link href="/services" className="btn-secondary-white text-base px-10 py-5">
-                Clear Pricing
+              <Link href="/services" className="btn-secondary-white btn-shine text-base px-10 py-5">
+                Pricing
               </Link>
             </div>
             <p className="text-white/40 text-xs mb-12">
