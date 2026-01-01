@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Linkedin, Phone, Mail, ArrowRight, MapPin, Clock, Shield, Sparkles } from 'lucide-react'
+import { Linkedin, Facebook, Phone, Mail, ArrowRight, MapPin, Clock, Shield, Sparkles } from 'lucide-react'
 import { ATLAS_PORTAL_URL } from './PrimaryCTA'
 
 export default function Footer() {
@@ -160,6 +160,16 @@ export default function Footer() {
                 aria-label="Connect with Dr. Yaw Nkrumah on LinkedIn"
               >
                 <Linkedin size={20} />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61585659638610"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 
+                  hover:bg-sfm-gold hover:border-sfm-gold hover:text-sfm-navy transition-all duration-300"
+                aria-label="Follow Sankofa Family Medicine on Facebook"
+              >
+                <Facebook size={20} />
               </a>
             </div>
           </div>
