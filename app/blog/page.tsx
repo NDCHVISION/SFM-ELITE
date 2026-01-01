@@ -328,8 +328,8 @@ export default function BlogPage() {
               Become a Patient
               <ArrowRight className="w-4 h-4" />
             </a>
-            <Link href="/services" className="btn-secondary">
-              Clear Pricing
+            <Link href="/services" className="btn-secondary btn-shine">
+              Pricing
             </Link>
           </div>
           <p className="text-sfm-text-muted text-xs mt-3">

@@ -22,7 +22,7 @@ export default function HomePage() {
   return (
     <>
       {/* HERO SECTION - Refined with more breathing room */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden hero-overlay-elite">
         {/* Background - Simplified gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-sfm-navy via-sfm-navy to-sfm-azure/70" />
         
@@ -30,12 +30,16 @@ export default function HomePage() {
         <div className="absolute inset-0 pattern-sankofa-subtle pattern-animated opacity-50" aria-hidden="true" />
         
         {/* Refined ambient glow - fewer, softer */}
-        <div className="absolute top-1/3 right-1/3 w-[500px] h-[500px] bg-sfm-gold/8 rounded-full blur-[180px]" />
+        <div className="absolute top-1/3 right-1/3 w-[500px] h-[500px] bg-sfm-gold/8 rounded-full blur-[180px] pulse-glow-elite" />
+        
+        {/* Additional ambient glow for depth */}
+        <div className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-sfm-azure/10 rounded-full blur-[150px]" />
 
         {/* Memory Thread - Signature element */}
         <div className="absolute left-8 lg:left-20 top-0 h-full w-px hidden lg:block">
           <div className="memory-thread h-full opacity-30" />
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 memory-node memory-node-pulse" />
+          <div className="absolute top-2/3 left-1/2 -translate-x-1/2 memory-node memory-node-pulse" style={{ animationDelay: '1.5s' }} />
         </div>
 
         {/* Content */}
@@ -46,9 +50,9 @@ export default function HomePage() {
               {/* Left Column - Content */}
               <div className="order-2 lg:order-1">
                 
-                {/* Location Badge - Cleaner */}
+                {/* Location Badge - Cleaner with float animation */}
                 <div className="opacity-0 animate-fade-in animation-delay-100 mb-10">
-                  <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full">
+                  <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full float-elite">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
                     <span className="text-white/70 text-sm font-medium">Virtual Primary Care</span>
                     <span className="w-px h-4 bg-white/20" />
@@ -98,9 +102,9 @@ export default function HomePage() {
                   <PrimaryCTA variant="hero" />
                   <Link 
                     href="/services" 
-                    className="btn-outline"
+                    className="btn-outline btn-shine"
                   >
-                    Clear Pricing
+                    Pricing
                   </Link>
                 </div>
 
@@ -126,12 +130,12 @@ export default function HomePage() {
               {/* Right Column - Hero Visual */}
               <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
                 <div className="opacity-0 animate-scale-in animation-delay-300 relative">
-                  {/* Soft glow - refined */}
-                  <div className="absolute -inset-8 bg-gradient-to-br from-sfm-gold/20 via-sfm-gold/10 to-sfm-azure/10 rounded-[50px] blur-3xl" />
+                  {/* Soft glow - refined with pulse */}
+                  <div className="absolute -inset-8 bg-gradient-to-br from-sfm-gold/20 via-sfm-gold/10 to-sfm-azure/10 rounded-[50px] blur-3xl pulse-glow-elite" />
                   
                   {/* Main Image Container - Wooden Sankofa Sculpture */}
                   <div className="relative w-[300px] sm:w-[380px] lg:w-[460px] aspect-[3/4]">
-                    <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl shadow-sfm-navy/30 image-fade-dark">
+                    <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl shadow-sfm-navy/30 image-fade-dark image-shimmer">
                       {/* Subtle brand tint overlay */}
                       <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-sfm-navy/40 via-transparent to-transparent" />
                       
@@ -140,7 +144,7 @@ export default function HomePage() {
                         alt="Traditional wooden Sankofa bird sculpture symbolizing the importance of learning from the past"
                         fill
                         priority
-                        className="object-cover object-center"
+                        className="object-cover object-center transition-transform duration-700 hover:scale-105"
                         sizes="(max-width: 640px) 300px, (max-width: 1024px) 380px, 460px"
                       />
                     </div>
@@ -152,8 +156,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* PHILOSOPHY SECTION - Cleaner */}
-      <section className="relative py-24 lg:py-32 bg-sfm-cream overflow-hidden">
+      {/* PHILOSOPHY SECTION - Cleaner with premium overlay */}
+      <section className="relative py-24 lg:py-32 bg-sfm-cream overflow-hidden section-overlay-premium">
         <div className="absolute inset-0 pattern-sankofa-subtle opacity-30" />
         
         <div className="relative max-w-7xl mx-auto px-6">
@@ -190,7 +194,7 @@ export default function HomePage() {
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white shadow-md mb-6">
+                  <div className="icon-elite mx-auto mb-6">
                     <item.icon className="w-6 h-6 text-sfm-gold" />
                   </div>
                   <h3 className="font-display text-xl text-sfm-navy mb-3">{item.title}</h3>
@@ -203,7 +207,7 @@ export default function HomePage() {
       </section>
 
       {/* WHO WE SERVE - Patient Lifestyle Gallery */}
-      <section className="relative py-20 lg:py-28 bg-white overflow-hidden">
+      <section className="relative py-20 lg:py-28 bg-white overflow-hidden section-overlay-premium">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
             <span className="inline-block text-sfm-gold text-sm font-semibold tracking-widest uppercase mb-6">
@@ -613,22 +617,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FINAL CTA - Refined, elegant */}
-      <section className="relative py-24 lg:py-32 overflow-hidden" aria-labelledby="cta-heading">
+      {/* FINAL CTA - Refined, elegant with premium glow */}
+      <section className="relative py-24 lg:py-32 overflow-hidden cta-glow-bg" aria-labelledby="cta-heading">
         <div className="absolute inset-0 bg-sfm-navy" />
         <div className="absolute inset-0 pattern-sankofa-subtle opacity-30" aria-hidden="true" />
         
         {/* Refined ambient glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sfm-gold/6 rounded-full blur-[200px]" aria-hidden="true" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sfm-gold/6 rounded-full blur-[200px] pulse-glow-elite" aria-hidden="true" />
+        
+        {/* Additional depth overlay */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-sfm-navy-deep/50 via-transparent to-sfm-navy-deep/30 pointer-events-none" />
         
         <div className="relative max-w-3xl mx-auto px-6 text-center">
-          {/* Status badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full mb-10">
+          {/* Status badge with elite styling */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full mb-10 badge-elite float-elite">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" aria-hidden="true" />
             <span className="text-white/70 text-sm font-medium">Now Accepting Patients</span>
           </div>
           
-          <h2 id="cta-heading" className="text-3xl sm:text-4xl lg:text-5xl font-display text-white mb-6 leading-tight" data-speakable>
+          <h2 id="cta-heading" className="text-3xl sm:text-4xl lg:text-5xl font-display text-white mb-6 leading-tight text-reveal-elite" data-speakable>
             Begin Your Care Journey
           </h2>
           
@@ -637,9 +644,9 @@ export default function HomePage() {
             select your membership tier, and begin your care with Medicine That Remembers.
           </p>
 
-          {/* Physician Preview - Refined */}
-          <div className="inline-flex items-center gap-4 mb-10 p-4 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/8">
-            <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-sfm-gold/40 image-fade-border">
+          {/* Physician Preview - Refined with shimmer */}
+          <div className="inline-flex items-center gap-4 mb-10 p-4 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/8 spotlight-hover">
+            <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-sfm-gold/40 image-fade-border pulse-glow-elite">
               <Image
                 src="/images/dr-nkrumah-thoughtful.png"
                 alt="Dr. Yaw Nkrumah"
@@ -655,12 +662,12 @@ export default function HomePage() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <PrimaryCTA variant="hero" />
-            <Link href="/services" className="btn-outline touch-target">
-              Clear Pricing
+            <Link href="/services" className="btn-outline btn-shine touch-target">
+              Pricing
             </Link>
           </div>
 
-          {/* Minimal trust footer */}
+          {/* Minimal trust footer with divider */}
           <div className="mt-12 pt-8 border-t border-white/8">
             <div className="flex flex-wrap items-center justify-center gap-8 text-white/35 text-sm">
               <span className="flex items-center gap-2">

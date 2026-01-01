@@ -82,7 +82,7 @@ export default function SammamishPage() {
     },
     {
       icon: Shield,
-      title: 'Clear Pricing',
+      title: 'Transparent Pricing',
       description: 'Monthly membership, no surprise bills. HSA and FSA accepted.'
     },
   ]
