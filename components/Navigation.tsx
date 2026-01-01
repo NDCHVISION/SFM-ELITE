@@ -3,8 +3,9 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ChevronDown, Phone, Mail, ArrowRight, Stethoscope, Users, FileText, Shield, Heart, MapPin, Sparkles } from 'lucide-react'
+import { Menu, X, ChevronDown, Phone, Mail, ArrowRight, Stethoscope, Users, FileText, Shield, Heart, MapPin, Sparkles, Sun, Moon } from 'lucide-react'
 import { ATLAS_PORTAL_URL } from './PrimaryCTA'
+import { useTheme } from './ThemeProvider'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -12,6 +13,7 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const { resolvedTheme, toggleTheme } = useTheme()
 
   const handleDropdownEnter = useCallback((dropdown: string) => {
     if (closeTimeoutRef.current) {
@@ -101,8 +103,8 @@ export default function Navigation() {
       <header 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500
           ${scrolled 
-            ? 'bg-white/98 shadow-lg shadow-sfm-navy/5 backdrop-blur-xl' 
-            : 'bg-white/95 backdrop-blur-md'}`}
+            ? 'bg-white/98 dark:bg-sfm-bg-primary/98 shadow-lg shadow-sfm-navy/5 dark:shadow-black/20 backdrop-blur-xl' 
+            : 'bg-white/95 dark:bg-sfm-bg-primary/95 backdrop-blur-md'}`}
         role="banner"
       >
         {/* Top Bar - Enhanced */}
@@ -160,7 +162,7 @@ export default function Navigation() {
                 unoptimized
               />
               <div className="hidden sm:flex flex-col ml-3.5">
-                <span className="font-display text-lg text-sfm-navy leading-tight tracking-tight group-hover:text-sfm-azure transition-colors duration-300">
+                <span className="font-display text-lg text-sfm-navy dark:text-sfm-text leading-tight tracking-tight group-hover:text-sfm-azure transition-colors duration-300">
                   Sankofa Family Medicine
                 </span>
                 <span className="text-[10px] text-sfm-gold font-semibold tracking-wider uppercase flex items-center gap-1">
@@ -172,6 +174,14 @@ export default function Navigation() {
 
             {/* Desktop Navigation */}
             <nav ref={dropdownRef} className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+              {/* Home Link */}
+              <Link 
+                href="/" 
+                className="px-4 py-2.5 text-sfm-navy dark:text-sfm-text hover:text-sfm-azure transition-colors duration-300 text-[15px] font-medium rounded-lg hover:bg-sfm-cream/50 dark:hover:bg-white/5"
+              >
+                Home
+              </Link>
+
               {Object.entries(navGroups).map(([key, group]) => (
                 <div 
                   key={key} 
@@ -180,7 +190,7 @@ export default function Navigation() {
                   onMouseLeave={handleDropdownLeave}
                 >
                   <button
-                    className="flex items-center gap-1.5 px-4 py-2.5 text-sfm-navy hover:text-sfm-azure transition-all duration-300 text-[15px] font-medium rounded-xl hover:bg-gradient-to-r hover:from-sfm-cream/60 hover:to-sfm-cream/30"
+                    className="flex items-center gap-1.5 px-4 py-2.5 text-sfm-navy dark:text-sfm-text hover:text-sfm-azure transition-all duration-300 text-[15px] font-medium rounded-xl hover:bg-gradient-to-r hover:from-sfm-cream/60 hover:to-sfm-cream/30 dark:hover:from-white/10 dark:hover:to-white/5"
                     aria-expanded={activeDropdown === key}
                     aria-haspopup="true"
                   >
@@ -196,28 +206,28 @@ export default function Navigation() {
                         : 'opacity-0 invisible -translate-y-3'
                     }`}
                   >
-                    <div className="bg-white/95 backdrop-blur-xl rounded-2xl border border-sfm-cream-dark shadow-2xl shadow-sfm-navy/10 p-3 min-w-[300px] ring-1 ring-sfm-navy/5">
+                    <div className="bg-white/95 dark:bg-sfm-surface/95 backdrop-blur-xl rounded-2xl border border-sfm-cream-dark dark:border-sfm-dark-border shadow-2xl shadow-sfm-navy/10 dark:shadow-black/30 p-3 min-w-[300px] ring-1 ring-sfm-navy/5 dark:ring-white/5">
                       {group.items.map((item) => (
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="flex items-start gap-4 px-4 py-4 rounded-xl hover:bg-gradient-to-r hover:from-sfm-cream hover:to-sfm-cream/50 transition-all duration-300 group/item"
+                          className="flex items-start gap-4 px-4 py-4 rounded-xl hover:bg-gradient-to-r hover:from-sfm-cream hover:to-sfm-cream/50 dark:hover:from-white/10 dark:hover:to-white/5 transition-all duration-300 group/item"
                           onClick={() => setActiveDropdown(null)}
                         >
-                          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-sfm-cream to-white flex items-center justify-center flex-shrink-0 group-hover/item:bg-white group-hover/item:shadow-lg group-hover/item:shadow-sfm-gold/10 transition-all duration-300 border border-sfm-cream-dark/50">
+                          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-sfm-cream to-white dark:from-sfm-bg-secondary dark:to-sfm-surface flex items-center justify-center flex-shrink-0 group-hover/item:bg-white dark:group-hover/item:bg-sfm-surface-elevated group-hover/item:shadow-lg group-hover/item:shadow-sfm-gold/10 transition-all duration-300 border border-sfm-cream-dark/50 dark:border-sfm-dark-border-light">
                             <item.icon className="w-5 h-5 text-sfm-gold" />
                           </div>
                           <div>
-                            <span className="block text-sm font-semibold text-sfm-navy group-hover/item:text-sfm-azure transition-colors duration-300">
+                            <span className="block text-sm font-semibold text-sfm-navy dark:text-sfm-dark-text group-hover/item:text-sfm-azure transition-colors duration-300">
                               {item.label}
                               {'status' in item && item.status === 'active' && (
-                                <span className="ml-2 px-2 py-0.5 bg-emerald-100 text-emerald-700 text-[10px] font-bold rounded-full">NOW</span>
+                                <span className="ml-2 px-2 py-0.5 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold rounded-full">NOW</span>
                               )}
                               {'status' in item && item.status === 'coming-soon' && (
-                                <span className="ml-2 px-2 py-0.5 bg-amber-100 text-amber-700 text-[10px] font-bold rounded-full">2026</span>
+                                <span className="ml-2 px-2 py-0.5 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-[10px] font-bold rounded-full">2026</span>
                               )}
                             </span>
-                            <span className="text-xs text-sfm-text-muted mt-0.5 block">{item.desc}</span>
+                            <span className="text-xs text-sfm-text-muted dark:text-sfm-dark-text-muted mt-0.5 block">{item.desc}</span>
                           </div>
                         </Link>
                       ))}
@@ -228,22 +238,36 @@ export default function Navigation() {
 
               <Link 
                 href="/blog" 
-                className="px-4 py-2.5 text-sfm-navy hover:text-sfm-azure transition-colors duration-300 text-[15px] font-medium rounded-lg hover:bg-sfm-cream/50"
+                className="px-4 py-2.5 text-sfm-navy dark:text-sfm-text hover:text-sfm-azure transition-colors duration-300 text-[15px] font-medium rounded-lg hover:bg-sfm-cream/50 dark:hover:bg-white/5"
               >
                 Blog
               </Link>
               
               <Link 
                 href="/contact" 
-                className="px-4 py-2.5 text-sfm-navy hover:text-sfm-azure transition-colors duration-300 text-[15px] font-medium rounded-lg hover:bg-sfm-cream/50"
+                className="px-4 py-2.5 text-sfm-navy dark:text-sfm-text hover:text-sfm-azure transition-colors duration-300 text-[15px] font-medium rounded-lg hover:bg-sfm-cream/50 dark:hover:bg-white/5"
               >
                 Contact
               </Link>
 
+              {/* Theme Toggle Button */}
+              <button
+                onClick={toggleTheme}
+                className="ml-2 p-2.5 rounded-xl text-sfm-navy dark:text-sfm-dark-text border border-sfm-cream-dark dark:border-sfm-dark-border hover:bg-sfm-cream dark:hover:bg-white/10 hover:border-sfm-gold/50 transition-all duration-300"
+                aria-label={`Switch to ${resolvedTheme === 'light' ? 'dark' : 'light'} mode`}
+                title={`Switch to ${resolvedTheme === 'light' ? 'dark' : 'light'} mode`}
+              >
+                {resolvedTheme === 'light' ? (
+                  <Moon className="w-5 h-5" />
+                ) : (
+                  <Sun className="w-5 h-5 text-sfm-gold" />
+                )}
+              </button>
+
               {/* Primary CTA - Premium Styling */}
               <a
                 href={ATLAS_PORTAL_URL}
-                className="ml-5 btn-primary group"
+                className="ml-3 btn-primary group"
                 aria-label="Become a patient at Sankofa Family Medicine"
               >
                 <span>Become a Patient</span>
@@ -254,7 +278,7 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(true)}
-              className="lg:hidden p-3 text-sfm-navy hover:bg-sfm-cream rounded-xl transition-all duration-300"
+              className="lg:hidden p-3 text-sfm-navy dark:text-sfm-text hover:bg-sfm-cream dark:hover:bg-white/10 rounded-xl transition-all duration-300"
               aria-label="Open menu"
               aria-expanded={isOpen}
             >
@@ -280,12 +304,12 @@ export default function Navigation() {
         
         {/* Panel */}
         <div 
-          className={`absolute top-0 right-0 h-full w-full max-w-sm bg-white shadow-2xl 
+          className={`absolute top-0 right-0 h-full w-full max-w-sm bg-white dark:bg-sfm-bg-primary shadow-2xl 
             transition-transform duration-500 ease-out-expo overflow-y-auto
             ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
         >
           {/* Header */}
-          <div className="flex items-center justify-between p-5 border-b border-sfm-cream-dark">
+          <div className="flex items-center justify-between p-5 border-b border-sfm-cream-dark dark:border-sfm-border">
             <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3">
               <Image 
                 src="/images/SFM_Trans.png" 
@@ -297,7 +321,7 @@ export default function Navigation() {
                 unoptimized
               />
               <div>
-                <span className="font-display text-lg text-sfm-navy block leading-tight">Sankofa</span>
+                <span className="font-display text-lg text-sfm-navy dark:text-sfm-text block leading-tight">Sankofa</span>
                 <span className="text-[10px] text-sfm-gold font-semibold uppercase tracking-wide flex items-center gap-1">
                   <Sparkles className="w-2.5 h-2.5" />
                   Medicine That Remembers
@@ -306,7 +330,7 @@ export default function Navigation() {
             </Link>
             <button
               onClick={() => setIsOpen(false)}
-              className="p-2.5 text-sfm-navy hover:bg-sfm-cream rounded-xl transition-all duration-300"
+              className="p-2.5 text-sfm-navy dark:text-sfm-text hover:bg-sfm-cream dark:hover:bg-white/10 rounded-xl transition-all duration-300"
               aria-label="Close menu"
             >
               <X size={22} strokeWidth={1.5} />
@@ -331,12 +355,12 @@ export default function Navigation() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between px-4 py-3.5 text-sfm-navy hover:bg-sfm-cream rounded-xl transition-all duration-300 font-medium"
+                  className="flex items-center justify-between px-4 py-3.5 text-sfm-navy dark:text-sfm-text hover:bg-sfm-cream dark:hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
                 >
                   <span className="flex items-center gap-2.5">
                     {item.label}
                     {'status' in item && item.status === 'active' && (
-                      <span className="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-[10px] font-bold rounded-full">NOW</span>
+                      <span className="px-2 py-0.5 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold rounded-full">NOW</span>
                     )}
                   </span>
                   <ArrowRight className="w-4 h-4 text-sfm-text-light" />
@@ -345,20 +369,42 @@ export default function Navigation() {
             </div>
 
             {/* Contact Info */}
-            <div className="bg-sfm-cream rounded-xl p-5 space-y-4">
-              <a href="tel:+14252857390" className="flex items-center gap-3.5 text-sm text-sfm-navy hover:text-sfm-azure transition-colors duration-300">
-                <span className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm">
+            <div className="bg-sfm-cream dark:bg-sfm-surface rounded-xl p-5 space-y-4">
+              <a href="tel:+14252857390" className="flex items-center gap-3.5 text-sm text-sfm-navy dark:text-sfm-text hover:text-sfm-azure transition-colors duration-300">
+                <span className="w-10 h-10 rounded-xl bg-white dark:bg-sfm-bg-primary flex items-center justify-center shadow-sm">
                   <Phone className="w-4 h-4 text-sfm-gold" />
                 </span>
                 <span className="font-medium">+1 (425) 285-7390</span>
               </a>
-              <a href="mailto:info@sankofafamilymedicine.com" className="flex items-center gap-3.5 text-sm text-sfm-navy hover:text-sfm-azure transition-colors duration-300">
-                <span className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm">
+              <a href="mailto:info@sankofafamilymedicine.com" className="flex items-center gap-3.5 text-sm text-sfm-navy dark:text-sfm-text hover:text-sfm-azure transition-colors duration-300">
+                <span className="w-10 h-10 rounded-xl bg-white dark:bg-sfm-surface flex items-center justify-center shadow-sm">
                   <Mail className="w-4 h-4 text-sfm-gold" />
                 </span>
                 <span className="font-medium">info@sankofafamilymedicine.com</span>
               </a>
             </div>
+
+            {/* Theme Toggle - Mobile */}
+            <button
+              onClick={toggleTheme}
+              className="flex items-center justify-between w-full px-4 py-4 mt-4 bg-sfm-cream dark:bg-sfm-surface rounded-xl text-sfm-navy dark:text-sfm-text font-medium transition-all duration-300"
+            >
+              <span className="flex items-center gap-3">
+                {resolvedTheme === 'light' ? (
+                  <Moon className="w-5 h-5 text-sfm-azure" />
+                ) : (
+                  <Sun className="w-5 h-5 text-sfm-gold" />
+                )}
+                <span>{resolvedTheme === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
+              </span>
+              <div className={`w-12 h-7 rounded-full transition-colors duration-300 relative ${
+                resolvedTheme === 'dark' ? 'bg-sfm-gold' : 'bg-sfm-navy/20'
+              }`}>
+                <div className={`absolute top-1 w-5 h-5 rounded-full bg-white shadow-md transition-transform duration-300 ${
+                  resolvedTheme === 'dark' ? 'translate-x-6' : 'translate-x-1'
+                }`} />
+              </div>
+            </button>
           </nav>
         </div>
       </div>

@@ -104,6 +104,251 @@
 }
 
 /* ===========================================
+   SECTION 1B: DARK MODE VARIABLES
+   Comprehensive dark theme support
+   =========================================== */
+
+.dark {
+  /* Background Colors - Dark */
+  --sfm-bg-primary: #0a1628;
+  --sfm-bg-secondary: #0f1f35;
+  --sfm-bg-tertiary: #142440;
+  --sfm-surface: #162a4a;
+  --sfm-surface-elevated: #1a3055;
+  
+  /* Text Colors - Dark */
+  --sfm-text: #f0f4f8;
+  --sfm-text-muted: #a8b8c8;
+  --sfm-text-light: #7a8fa3;
+  
+  /* Neutral Colors - Dark */
+  --sfm-cream: #0f1f35;
+  --sfm-cream-dark: #142440;
+  
+  /* Border Colors - Dark */
+  --sfm-border: #2a4060;
+  --sfm-border-light: #1e3350;
+  
+  /* Shadows - Dark (more prominent) */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.4);
+  --shadow-gold: 0 8px 32px rgba(188, 152, 51, 0.25);
+  --shadow-gold-hover: 0 12px 40px rgba(188, 152, 51, 0.35);
+  
+  /* Gradients - Dark adjusted */
+  --gradient-gold-subtle: linear-gradient(135deg, rgba(188, 152, 51, 0.12) 0%, transparent 50%);
+}
+
+/* Dark mode base styles */
+.dark body {
+  background: var(--sfm-bg-primary);
+  color: var(--sfm-text);
+}
+
+/* Dark mode navigation */
+.dark header {
+  background: rgba(10, 22, 40, 0.95) !important;
+  backdrop-filter: blur(20px);
+}
+
+.dark header.scrolled,
+.dark header[class*="bg-white"] {
+  background: rgba(10, 22, 40, 0.98) !important;
+  border-bottom: 1px solid var(--sfm-border-light);
+}
+
+/* Dark mode navigation text */
+.dark nav a,
+.dark nav button,
+.dark .nav-link {
+  color: var(--sfm-text);
+}
+
+.dark nav a:hover,
+.dark nav button:hover,
+.dark .nav-link:hover {
+  color: var(--sfm-gold);
+}
+
+/* Dark mode dropdowns */
+.dark [class*="dropdown"] > div,
+.dark .dropdown-menu {
+  background: var(--sfm-surface) !important;
+  border-color: var(--sfm-border) !important;
+}
+
+/* Dark mode cards */
+.dark .card-premium,
+.dark [class*="bg-white"],
+.dark [class*="bg-sfm-cream"] {
+  background: var(--sfm-surface) !important;
+  border-color: var(--sfm-border-light) !important;
+}
+
+.dark .card-premium:hover {
+  background: var(--sfm-surface-elevated) !important;
+}
+
+/* Dark mode glass effects */
+.dark .glass-card {
+  background: rgba(22, 42, 74, 0.85);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .glass-frosted {
+  background: rgba(22, 42, 74, 0.7);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Dark mode inputs */
+.dark .input-elegant,
+.dark input[type="text"],
+.dark input[type="email"],
+.dark textarea,
+.dark select {
+  background: var(--sfm-bg-secondary) !important;
+  border-color: var(--sfm-border) !important;
+  color: var(--sfm-text) !important;
+}
+
+.dark .input-elegant:focus,
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+  border-color: var(--sfm-gold) !important;
+  box-shadow: 0 0 0 3px rgba(188, 152, 51, 0.15) !important;
+}
+
+.dark .input-elegant::placeholder,
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: var(--sfm-text-light) !important;
+}
+
+/* Dark mode trust badges */
+.dark .trust-badge-light {
+  background: var(--sfm-bg-secondary);
+  border-color: var(--sfm-border-light);
+  color: var(--sfm-text-muted);
+}
+
+/* Dark mode sections with light backgrounds */
+.dark section[class*="bg-sfm-cream"],
+.dark section[class*="bg-white"],
+.dark div[class*="bg-sfm-cream"],
+.dark div[class*="bg-white"]:not([class*="bg-white/"]) {
+  background: var(--sfm-bg-secondary) !important;
+}
+
+/* Dark mode text overrides */
+.dark [class*="text-sfm-navy"],
+.dark [class*="text-sfm-text"],
+.dark [class*="text-sfm-black"] {
+  color: var(--sfm-text) !important;
+}
+
+.dark [class*="text-sfm-text-muted"] {
+  color: var(--sfm-text-muted) !important;
+}
+
+/* Dark mode borders */
+.dark [class*="border-sfm-cream"],
+.dark [class*="border-sfm-border"],
+.dark hr {
+  border-color: var(--sfm-border-light) !important;
+}
+
+/* Dark mode icon containers */
+.dark .icon-premium {
+  background: linear-gradient(135deg, var(--sfm-bg-secondary) 0%, var(--sfm-surface) 100%);
+  border-color: var(--sfm-border-light);
+}
+
+.dark .icon-premium:hover {
+  background: var(--sfm-surface-elevated);
+}
+
+/* Dark mode premium badge */
+.dark .badge-premium {
+  background: linear-gradient(135deg, rgba(188, 152, 51, 0.2) 0%, rgba(188, 152, 51, 0.1) 100%);
+  border-color: rgba(188, 152, 51, 0.3);
+}
+
+/* Dark mode patterns */
+.dark .pattern-sankofa-subtle,
+.dark .pattern-sankofa-flow-gold,
+.dark .pattern-sankofa-spiral-gold {
+  background-image: 
+    radial-gradient(ellipse 100px 100px at 20% 30%, rgba(188, 152, 51, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 80px 80px at 80% 70%, rgba(188, 152, 51, 0.04) 0%, transparent 50%);
+}
+
+/* Dark mode skeleton loading */
+.dark .skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--sfm-bg-secondary) 0%,
+    var(--sfm-surface) 50%,
+    var(--sfm-bg-secondary) 100%
+  );
+}
+
+/* Dark mode focus states */
+.dark :focus-visible {
+  outline-color: var(--sfm-gold);
+}
+
+.dark .focus-ring-premium:focus-visible {
+  box-shadow: 
+    0 0 0 2px var(--sfm-bg-primary),
+    0 0 0 4px var(--sfm-gold);
+}
+
+/* Dark mode quotes */
+.dark .quote-elegant {
+  border-left-color: var(--sfm-gold);
+}
+
+.dark .quote-elegant::before {
+  color: var(--sfm-gold);
+  opacity: 0.5;
+}
+
+/* Dark mode dividers */
+.dark .divider-subtle {
+  background: var(--sfm-border-light);
+}
+
+/* Ensure gold accents stay vibrant in dark mode */
+.dark .text-sfm-gold,
+.dark [class*="text-sfm-gold"] {
+  color: var(--sfm-gold) !important;
+}
+
+.dark .bg-sfm-gold,
+.dark [class*="bg-sfm-gold"] {
+  background-color: var(--sfm-gold) !important;
+}
+
+/* Dark mode animated gradient */
+.dark .bg-gradient-animate {
+  background: linear-gradient(
+    -45deg,
+    #0a1628,
+    #142440,
+    #0f1f35,
+    #1a3055
+  );
+  background-size: 400% 400%;
+}
+
+/* ===========================================
    SECTION 2: BASE STYLES
    =========================================== */
 
