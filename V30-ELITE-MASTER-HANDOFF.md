@@ -35,6 +35,45 @@ V30 Elite represents the pinnacle of design and technical refinement for the San
 - Improved focus ring styling for accessibility
 - Quote and list premium styling utilities
 - SearchGPT and Claude AI metadata optimization
+- **Full Dark Mode Support** with theme toggle in navigation
+- Comprehensive dark mode CSS variable system
+- Dark mode styling for all components
+
+---
+
+## DARK MODE SUPPORT
+
+V30 includes comprehensive dark mode support with a theme toggle in the navigation.
+
+### How It Works
+- Theme toggle button in desktop nav (moon/sun icon)
+- Full toggle switch in mobile menu
+- Persists preference in localStorage (`sfm-theme`)
+- Supports system preference detection
+- Smooth transition between modes
+
+### Dark Mode Variables
+```css
+.dark {
+  --sfm-bg-primary: #0a1628;
+  --sfm-bg-secondary: #0f1f35;
+  --sfm-bg-tertiary: #142440;
+  --sfm-surface: #162a4a;
+  --sfm-surface-elevated: #1a3055;
+  --sfm-text: #f0f4f8;
+  --sfm-text-muted: #a8b8c8;
+  --sfm-text-light: #7a8fa3;
+  --sfm-border: #2a4060;
+  --sfm-border-light: #1e3350;
+}
+```
+
+### Component Overrides
+- Navigation: Dark header background, light text
+- Cards: Dark surface colors
+- Inputs: Dark backgrounds with gold focus rings
+- Buttons: Preserved gold accent colors
+- Glass effects: Adjusted transparency for dark backgrounds
 
 ---
 
