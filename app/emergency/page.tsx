@@ -583,65 +583,27 @@ function HospitalListings({ selectedState }: { selectedState: string }) {
   )
 }
 
-// Download Section
+// Member Resources Section
 function DownloadSection() {
   return (
     <div className="bg-sfm-cream rounded-2xl p-6 md:p-8 mb-12">
       <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mb-2 flex items-center gap-3">
         <Download className="w-7 h-7 text-sfm-gold" />
-        Download &amp; Print
+        Member Resources
       </h2>
       <p className="text-sfm-text-muted mb-6">
-        Save these guides for quick reference during an emergency.
+        Emergency guides and quick reference materials are available through your patient portal.
       </p>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
-          <h3 className="font-bold text-sfm-navy mb-2">Quick Reference Card</h3>
-          <p className="text-sm text-sfm-text-muted mb-4">1 page - perfect for your fridge or wallet</p>
-          <div className="flex gap-2">
-            <a 
-              href="/downloads/SFM_Quick_Reference_WA.pdf" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 bg-sfm-navy text-white text-center py-2.5 px-4 rounded-xl hover:bg-sfm-azure transition-colors text-sm font-medium"
-            >
-              Washington
-            </a>
-            <a 
-              href="/downloads/SFM_Quick_Reference_SC.pdf" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 bg-sfm-navy text-white text-center py-2.5 px-4 rounded-xl hover:bg-sfm-azure transition-colors text-sm font-medium"
-            >
-              South Carolina
-            </a>
-          </div>
-        </div>
-        
-        <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
-          <h3 className="font-bold text-sfm-navy mb-2">Complete Emergency Guide</h3>
-          <p className="text-sm text-sfm-text-muted mb-4">Full guide with all resources and hospitals</p>
-          <div className="flex gap-2">
-            <a 
-              href="/downloads/SFM_Emergency_Guide_WA.pdf" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 bg-sfm-gold text-sfm-navy text-center py-2.5 px-4 rounded-xl hover:bg-sfm-gold-light transition-colors text-sm font-medium"
-            >
-              Washington
-            </a>
-            <a 
-              href="/downloads/SFM_Emergency_Guide_SC.pdf" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 bg-sfm-gold text-sfm-navy text-center py-2.5 px-4 rounded-xl hover:bg-sfm-gold-light transition-colors text-sm font-medium"
-            >
-              South Carolina
-            </a>
-          </div>
-        </div>
-      </div>
+      <a 
+        href="https://sankofafamilymedicine.atlas.md/hub/login"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 bg-sfm-gold text-sfm-navy py-3 px-6 rounded-xl hover:bg-sfm-gold-light transition-colors font-medium"
+      >
+        Access Patient Portal
+        <ArrowRight className="w-4 h-4" />
+      </a>
     </div>
   )
 }

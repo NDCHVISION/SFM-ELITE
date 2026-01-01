@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, CheckCircle2, MapPin, Clock, Bell, Loader2 } from 'lucide-react'
 import { stateConfigs } from '@/lib/states'
 
@@ -222,6 +223,29 @@ export default function SouthCarolinaLocationPage() {
 
               {/* Cities */}
               <div className="mt-10 pt-10 border-t border-gray-200 dark:border-sfm-border">
+                {/* South Carolina State Map */}
+                <div className="mb-8 group">
+                  <div className="relative rounded-xl overflow-hidden shadow-md max-w-lg mx-auto">
+                    {/* Subtle brand tint overlay */}
+                    <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-br from-sfm-gold/5 via-transparent to-sfm-azure/5 mix-blend-overlay" />
+                    
+                    {/* Edge softening */}
+                    <div className="absolute inset-0 z-10 pointer-events-none"
+                      style={{
+                        boxShadow: 'inset 0 0 40px 10px rgba(255,255,255,0.3)',
+                      }}
+                    />
+                    
+                    <Image
+                      src="/images/map-south-carolina.png"
+                      alt="Map of South Carolina showing future Sankofa Family Medicine service areas including Columbia, Charleston, Greenville, and Myrtle Beach. Coming 2026."
+                      width={600}
+                      height={450}
+                      className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+                    />
+                  </div>
+                </div>
+                
                 <p className="text-sm text-sfm-text-muted dark:text-sfm-text-muted mb-4">
                   Coming to communities across South Carolina including:
                 </p>

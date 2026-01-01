@@ -61,7 +61,7 @@ export default function ComingSoon({ title, description, icon, expectedDate }: C
               href="/contact"
               className="btn-primary"
             >
-              Book a 15-Minute Fit Call
+              Book a 15-Minute Enrollment
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
             <Link

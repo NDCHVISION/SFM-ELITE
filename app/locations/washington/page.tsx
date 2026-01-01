@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Metadata } from 'next'
 import { ArrowRight, CheckCircle2, MapPin, Clock, MessageCircle, Shield, Phone, Video, Stethoscope } from 'lucide-react'
 import { stateConfigs } from '@/lib/states'
@@ -82,8 +83,23 @@ export default function WashingtonLocationPage() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-sfm-navy via-sfm-navy to-sfm-azure" />
-        <div className="absolute inset-0 pattern-sankofa-flow-gold pattern-subtle" />
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/lifestyle-pnw-wellness.png"
+            alt="Pacific Northwest trail at golden hour representing wellness and vitality"
+            fill
+            priority
+            className="object-cover object-center scale-105"
+          />
+          {/* Primary gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-sfm-navy/95 via-sfm-navy/90 to-sfm-navy/75" />
+          {/* Brand color tint */}
+          <div className="absolute inset-0 bg-gradient-to-br from-sfm-azure/20 via-transparent to-sfm-gold/10" />
+          {/* Bottom fade for content blend */}
+          <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy/40 via-transparent to-transparent" />
+        </div>
+        <div className="absolute inset-0 pattern-sankofa-flow-gold pattern-subtle opacity-20" />
         
         <div className="relative max-w-6xl mx-auto px-6">
           <div className="max-w-3xl">
@@ -109,8 +125,8 @@ export default function WashingtonLocationPage() {
             </p>
 
             <div className="flex flex-wrap gap-4 mb-4">
-              <a href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-10 py-5 group">
-                <span>Book a 15-Minute Fit Call</span>
+              <a href="https://sankofafamilymedicine.atlas.md/hub/login" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-10 py-5 group">
+                <span>Become a Patient</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
               <Link href="/services" className="btn-secondary-white text-base px-10 py-5">
@@ -186,166 +202,106 @@ export default function WashingtonLocationPage() {
           </div>
 
           {/* Service Area Map */}
-          <div className="bg-white dark:bg-sfm-surface rounded-2xl p-8 mb-12 border border-sfm-azure/10">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              {/* Washington State Map - Accurate Outline */}
-              <div className="relative">
-                <svg viewBox="0 0 500 320" className="w-full h-auto" aria-label="Washington State service area map">
-                  <defs>
-                    {/* Glow filter for state */}
-                    <filter id="stateGlow" x="-20%" y="-20%" width="140%" height="140%">
-                      <feGaussianBlur stdDeviation="4" result="blur"/>
-                      <feMerge>
-                        <feMergeNode in="blur"/>
-                        <feMergeNode in="SourceGraphic"/>
-                      </feMerge>
-                    </filter>
-                    {/* Gradient fill */}
-                    <linearGradient id="waGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#05436e" stopOpacity="0.12"/>
-                      <stop offset="50%" stopColor="#05436e" stopOpacity="0.08"/>
-                      <stop offset="100%" stopColor="#bc9833" stopOpacity="0.05"/>
-                    </linearGradient>
-                  </defs>
+          <div className="bg-white dark:bg-sfm-surface rounded-2xl p-6 md:p-8 mb-12 border border-sfm-azure/10 shadow-lg shadow-sfm-navy/5">
+            <div className="grid lg:grid-cols-5 gap-8 items-start">
+              {/* Washington State Map */}
+              <div className="lg:col-span-3 relative group">
+                <div className="relative rounded-xl overflow-hidden shadow-md">
+                  {/* Subtle brand tint overlay */}
+                  <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-br from-sfm-azure/5 via-transparent to-sfm-gold/5 mix-blend-overlay" />
                   
-                  {/* Actual Washington State Outline */}
-                  <path 
-                    d="M15,95 C15,90 20,80 30,70 L45,55 L60,45 L80,38 L100,32 L125,28 L150,25 L175,22 L200,20 L225,18 L250,17 L275,18 L300,20 L325,22 L350,20 L375,18 L400,15 L425,12 L445,15 L455,25 L460,40 L458,60 L455,80 L452,100 L448,120 L445,140 L440,160 L435,178 L428,195 L418,210 L405,220 L388,228 L370,232 L350,235 L330,236 L308,235 L285,232 L262,228 L240,225 L218,228 L195,235 L172,242 L150,248 L128,252 L105,255 L82,255 L62,252 L45,245 L32,235 L22,220 L15,200 L12,178 L10,155 L8,132 L10,110 L15,95 Z"
-                    fill="url(#waGradient)"
-                    stroke="#05436e"
-                    strokeWidth="2.5"
-                    filter="url(#stateGlow)"
-                    className="transition-all duration-300"
+                  {/* Edge softening */}
+                  <div className="absolute inset-0 z-10 pointer-events-none"
+                    style={{
+                      boxShadow: 'inset 0 0 40px 10px rgba(255,255,255,0.3)',
+                    }}
                   />
                   
-                  {/* Puget Sound region highlight */}
-                  <ellipse 
-                    cx="135" cy="145" rx="70" ry="65" 
-                    fill="#bc9833" 
-                    fillOpacity="0.12"
-                    stroke="#bc9833"
-                    strokeWidth="1.5"
-                    strokeDasharray="6,3"
+                  <Image
+                    src="/images/map-washington.png"
+                    alt="Map of Washington State showing Sankofa Family Medicine service areas including Seattle, Bellevue, Spokane, Tacoma, and the Tri-Cities"
+                    width={800}
+                    height={500}
+                    className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+                    priority
                   />
-                  
-                  {/* City markers with enhanced visibility */}
-                  <g className="city-markers">
-                    {/* Everett */}
-                    <circle cx="120" cy="95" r="5" fill="#bc9833" className="drop-shadow-sm" />
-                    <text x="105" y="88" textAnchor="end" className="text-[11px] fill-sfm-navy font-medium">Everett</text>
-                    
-                    {/* Seattle - Major */}
-                    <circle cx="105" cy="125" r="8" fill="#bc9833" className="drop-shadow-md" />
-                    <text x="88" y="128" textAnchor="end" className="text-[12px] fill-sfm-navy font-bold">Seattle</text>
-                    
-                    {/* Bellevue - Major */}
-                    <circle cx="150" cy="135" r="7" fill="#bc9833" className="drop-shadow-md" />
-                    <text x="150" y="122" textAnchor="middle" className="text-[11px] fill-sfm-navy font-semibold">Bellevue</text>
-                    
-                    {/* Kirkland */}
-                    <circle cx="148" cy="110" r="4" fill="#bc9833" />
-                    <text x="165" y="108" textAnchor="start" className="text-[10px] fill-sfm-navy">Kirkland</text>
-                    
-                    {/* Redmond */}
-                    <circle cx="175" cy="125" r="5" fill="#bc9833" />
-                    <text x="192" y="123" textAnchor="start" className="text-[10px] fill-sfm-navy">Redmond</text>
-                    
-                    {/* Sammamish */}
-                    <circle cx="190" cy="142" r="4" fill="#bc9833" />
-                    <text x="207" y="145" textAnchor="start" className="text-[10px] fill-sfm-navy">Sammamish</text>
-                    
-                    {/* Mercer Island */}
-                    <circle cx="135" cy="148" r="4" fill="#bc9833" />
-                    <text x="135" y="165" textAnchor="middle" className="text-[10px] fill-sfm-navy">Mercer Is.</text>
-                    
-                    {/* Tacoma - Major */}
-                    <circle cx="95" cy="185" r="7" fill="#bc9833" className="drop-shadow-md" />
-                    <text x="78" y="190" textAnchor="end" className="text-[11px] fill-sfm-navy font-semibold">Tacoma</text>
-                    
-                    {/* Olympia */}
-                    <circle cx="75" cy="218" r="5" fill="#bc9833" />
-                    <text x="58" y="223" textAnchor="end" className="text-[10px] fill-sfm-navy">Olympia</text>
-                    
-                    {/* Vancouver */}
-                    <circle cx="62" cy="252" r="5" fill="#bc9833" />
-                    <text x="78" y="258" textAnchor="start" className="text-[10px] fill-sfm-navy">Vancouver</text>
-                    
-                    {/* Spokane - Major (Eastern WA) */}
-                    <circle cx="430" cy="75" r="8" fill="#bc9833" className="drop-shadow-md" />
-                    <text x="430" y="60" textAnchor="middle" className="text-[12px] fill-sfm-navy font-bold">Spokane</text>
-                  </g>
-                  
-                  {/* Legend - positioned better */}
-                  <g transform="translate(320, 245)">
-                    <circle cx="8" cy="8" r="5" fill="#bc9833" />
-                    <text x="22" y="12" className="text-[11px] fill-sfm-text-muted font-medium">Service Areas</text>
-                  </g>
-                  <g transform="translate(320, 268)">
-                    <rect x="3" y="3" width="10" height="10" fill="#05436e" fillOpacity="0.12" stroke="#05436e" strokeWidth="1" rx="2" />
-                    <text x="22" y="12" className="text-[11px] fill-sfm-text-muted font-medium">Statewide Coverage</text>
-                  </g>
-                </svg>
+                </div>
               </div>
               
               {/* City Links */}
-              <div>
-                <h3 className="font-display text-xl text-sfm-navy mb-4">Eastside &amp; Greater Seattle</h3>
-                <div className="grid grid-cols-2 gap-2 mb-6">
-                  <Link href="/locations/washington/seattle" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+              <div className="lg:col-span-2">
+                <h3 className="font-display text-lg text-sfm-navy dark:text-sfm-navy mb-3">Puget Sound Metro</h3>
+                <div className="grid grid-cols-2 gap-1.5 mb-5">
+                  <Link href="/locations/washington/seattle" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
                     <MapPin className="w-3 h-3 text-sfm-gold" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Seattle</span>
                   </Link>
-                  <Link href="/locations/washington/bellevue" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                  <Link href="/locations/washington/bellevue" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
                     <MapPin className="w-3 h-3 text-sfm-gold" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Bellevue</span>
                   </Link>
-                  <Link href="/locations/washington/kirkland" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                  <Link href="/locations/washington/kirkland" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
                     <MapPin className="w-3 h-3 text-sfm-gold" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Kirkland</span>
                   </Link>
-                  <Link href="/locations/washington/redmond" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                  <Link href="/locations/washington/redmond" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
                     <MapPin className="w-3 h-3 text-sfm-gold" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Redmond</span>
                   </Link>
-                  <Link href="/locations/washington/sammamish" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                  <Link href="/locations/washington/sammamish" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
                     <MapPin className="w-3 h-3 text-sfm-gold" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Sammamish</span>
                   </Link>
-                  <Link href="/locations/washington/mercer-island" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                  <Link href="/locations/washington/mercer-island" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
                     <MapPin className="w-3 h-3 text-sfm-gold" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Mercer Island</span>
                   </Link>
-                  <Link href="/locations/washington/everett" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                  <Link href="/locations/washington/everett" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
                     <MapPin className="w-3 h-3 text-sfm-gold" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Everett</span>
                   </Link>
                 </div>
                 
-                <h3 className="font-display text-xl text-sfm-navy mb-4">South Sound &amp; Beyond</h3>
-                <div className="grid grid-cols-2 gap-2 mb-6">
-                  <Link href="/locations/washington/tacoma" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                <h3 className="font-display text-lg text-sfm-navy dark:text-sfm-navy mb-3">South Sound</h3>
+                <div className="grid grid-cols-2 gap-1.5 mb-5">
+                  <Link href="/locations/washington/tacoma" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
                     <MapPin className="w-3 h-3 text-sfm-gold" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Tacoma</span>
                   </Link>
-                  <Link href="/locations/washington/olympia" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                  <Link href="/locations/washington/olympia" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
                     <MapPin className="w-3 h-3 text-sfm-gold" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Olympia</span>
                   </Link>
-                  <Link href="/locations/washington/vancouver" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                  <Link href="/locations/washington/vancouver" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
                     <MapPin className="w-3 h-3 text-sfm-gold" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Vancouver</span>
                   </Link>
-                  <Link href="/locations/washington/spokane" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                  <Link href="/locations/washington/spokane" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
                     <MapPin className="w-3 h-3 text-sfm-gold" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Spokane</span>
                   </Link>
                 </div>
 
-                <div className="bg-sfm-cream rounded-xl p-4 border border-sfm-gold/20">
+                <h3 className="font-display text-lg text-sfm-navy dark:text-sfm-navy mb-3">Tri-Cities</h3>
+                <div className="grid grid-cols-2 gap-1.5 mb-3">
+                  <div className="flex items-center gap-2 px-3 py-2 bg-sfm-azure/5 dark:bg-sfm-azure/10 rounded-lg border border-sfm-azure/20">
+                    <MapPin className="w-3 h-3 text-sfm-azure" />
+                    <span className="text-sm text-sfm-navy">Richland</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-3 py-2 bg-sfm-azure/5 dark:bg-sfm-azure/10 rounded-lg border border-sfm-azure/20">
+                    <MapPin className="w-3 h-3 text-sfm-azure" />
+                    <span className="text-sm text-sfm-navy">Pasco</span>
+                  </div>
+                </div>
+                <p className="text-xs text-sfm-azure italic mb-5 pl-1">
+                  Dr. Nkrumah completed residency training in the Tri-Cities
+                </p>
+
+                <div className="bg-sfm-cream dark:bg-sfm-surface rounded-xl p-4 border border-sfm-gold/20">
                   <p className="text-sm text-sfm-navy font-medium mb-1">
                     Statewide Virtual Coverage
                   </p>
-                  <p className="text-sm text-sfm-text-muted">
+                  <p className="text-xs text-sfm-text-muted">
                     {waConfig.telemedicineNotes}
                   </p>
                 </div>
@@ -371,15 +327,15 @@ export default function WashingtonLocationPage() {
           </h2>
 
           <p className="text-white/60 text-lg mb-4 max-w-2xl mx-auto">
-            Founding members begin with a brief fit call. If aligned, onboarding and first visit scheduling follow.
+            Founding members begin with a brief enrollment consultation. If aligned, onboarding and first visit scheduling follow.
           </p>
           <p className="text-white/40 text-sm mb-12 max-w-2xl mx-auto">
             This is a brief, non-clinical call to ensure alignment before enrollment.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-12 py-5 group">
-              <span>Book a 15-Minute Fit Call</span>
+            <a href="https://sankofafamilymedicine.atlas.md/hub/login" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-12 py-5 group">
+              <span>Become a Patient</span>
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </a>
             <Link href="/services" className="btn-secondary-white text-base px-12 py-5">

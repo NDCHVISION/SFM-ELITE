@@ -306,12 +306,12 @@ export default function BlogPost() {
             The answer depends on your history, your goals, and what we are trying to understand. Let&apos;s have that conversation.
           </p>
           <a 
-            href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+            href="https://sankofafamilymedicine.atlas.md/hub/login"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary"
           >
-            Book a 15-Minute Fit Call
+            Become a Patient
           </a>
           <p className="text-sfm-text-muted text-xs mt-3">
             This is a brief, non-clinical call to ensure alignment before enrollment.

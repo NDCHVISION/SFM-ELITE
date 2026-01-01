@@ -86,7 +86,7 @@ FOUNDING MEMBER OFFER:
 - Pricing protected while your membership remains active while membership remains continuous
 
 GETTING STARTED:
-- Book a 15-minute fit call to ensure alignment
+- Book a 15-minute enrollment consultation to ensure alignment
 - First visit is 45-60 minute comprehensive intake
 - Records transfer assistance provided
 - Currently serving Washington State only (South Carolina coming 2026)
@@ -177,7 +177,7 @@ const faqSchema = {
       name: 'How do I become a patient at Sankofa Family Medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Start by booking a 15-minute fit call at calendly.com/nkrumah-ndchvision/15-minute-fit-call. We'll discuss your health goals and ensure alignment. If it's a good fit, we'll schedule your comprehensive 45-60 minute onboarding visit where we review your complete health history and develop a personalized care plan.",
+        text: "Start by enrolling through our secure patient portal at sankofafamilymedicine.atlas.md. Complete your health history, select your membership tier, and we will schedule your comprehensive 45-60 minute onboarding visit where we review your complete health history and develop a personalized care plan.",
       },
     },
     {

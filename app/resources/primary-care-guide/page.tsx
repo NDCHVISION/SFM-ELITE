@@ -1,13 +1,23 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, CheckCircle2, BookOpen, Shield, Heart, Users, Clock } from 'lucide-react'
+import { ArrowRight, CheckCircle2, BookOpen, Shield, Heart, Users, Clock, Lock } from 'lucide-react'
 
-// FORMSPREE CONFIGURATION
-// Replace 'YOUR_FORMSPREE_ID' with your actual Formspree form ID
-// Example: if your endpoint is https://formspree.io/f/xyzabcde, use 'xyzabcde'
 const FORMSPREE_ID = 'xjgbllpe'
 
 export default function PrimaryCareGuidePage() {
+  const [showAssessment, setShowAssessment] = useState(false)
+
+  const assessmentQuestions = [
+    'Have you seen the same physician for more than 2 years?',
+    'Has anyone compared your labs across multiple years?',
+    'Can you message your doctor directly?',
+    'Do you feel comfortable bringing up vague concerns?',
+    'Does your doctor take your family history into account?',
+  ]
+
   const learningPoints = [
     'Why normal labs can still miss real problems',
     'The difference between a true physician partner and an overloaded system',
@@ -18,7 +28,7 @@ export default function PrimaryCareGuidePage() {
 
   return (
     <>
-      {/* Pre-Gate Page */}
+      {/* Hero Section with Opening Vignette */}
       <section className="min-h-screen pt-40 pb-20 bg-gradient-to-b from-white via-sfm-cream/30 to-white relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-sfm-azure/5 rounded-full blur-3xl" />
@@ -26,7 +36,7 @@ export default function PrimaryCareGuidePage() {
 
         <div className="relative max-w-4xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Content Side */}
+            {/* Content Side - Opening Vignette */}
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <BookOpen className="w-5 h-5 text-sfm-azure" strokeWidth={1.5} />
@@ -35,42 +45,88 @@ export default function PrimaryCareGuidePage() {
                 </span>
               </div>
 
-              <h1 className="font-display text-4xl md:text-5xl text-sfm-navy mb-4 leading-[1.1]">
+              <h1 className="font-display text-4xl md:text-5xl text-sfm-navy mb-6 leading-[1.1]">
                 How Healthy Is Your Relationship With Your Primary Care Doctor?
               </h1>
-              
-              <p className="text-sfm-azure text-lg font-medium italic mb-8">
-                A physician&apos;s guide to continuity, prevention, and what most patients never see.
-              </p>
 
-              <div className="space-y-4 text-muted leading-relaxed mb-10">
-                <p>
-                  Most people assume primary care is about lab results, referrals, and annual visits. In reality, the most powerful part of primary care is whether someone is actually watching your health over time.
-                </p>
-                <p>
-                  This guide explains what good primary care looks like in practice and how to recognize when it is quietly failing you.
+              {/* The key line - moved high */}
+              <div className="bg-sfm-navy/5 border-l-4 border-sfm-gold p-6 mb-8 rounded-r-xl">
+                <p className="text-sfm-navy text-lg font-display italic">
+                  "The problem was never her body. The problem was that no one had been watching."
                 </p>
               </div>
 
-              {/* What You Will Learn */}
-              <div className="bg-sfm-cream rounded-2xl p-6 mb-10">
-                <p className="text-sfm-navy font-medium mb-4">What you will learn:</p>
-                <ul className="space-y-3">
-                  {learningPoints.map((point, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-sfm-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <CheckCircle2 className="w-3 h-3 text-sfm-gold" strokeWidth={2} />
-                      </div>
-                      <span className="text-muted text-sm">{point}</span>
-                    </li>
-                  ))}
-                </ul>
+              {/* Opening Vignette */}
+              <div className="prose prose-lg text-muted mb-8">
+                <p>
+                  She was 47. Successful. Busy. Annual physicals every year, labs always "normal."
+                </p>
+                <p>
+                  But no one noticed her fasting glucose creeping up over five years. No one tracked 
+                  the subtle weight gain pattern. No one asked about the family history she mentioned 
+                  once, years ago, to a doctor she never saw again.
+                </p>
+                <p>
+                  By the time she was diagnosed with Type 2 diabetes, the window for early intervention 
+                  had closed. Not because the signs were not there. Because no one was watching.
+                </p>
               </div>
 
-              {/* Authority Line */}
-              <div className="flex items-center gap-3 text-sm text-muted">
-                <Shield className="w-4 h-4 text-sfm-azure" strokeWidth={1.5} />
-                <span>Written by a board-certified family physician practicing longitudinal, relationship-based care.</span>
+              {/* Self-Assessment Toggle */}
+              <div className="mb-8">
+                <button
+                  onClick={() => setShowAssessment(!showAssessment)}
+                  className="w-full flex items-center justify-between p-5 bg-sfm-cream rounded-xl hover:bg-sfm-cream/80 transition-colors group"
+                >
+                  <span className="font-medium text-sfm-navy">Take the 30-Second Self-Assessment</span>
+                  <ArrowRight className={`w-5 h-5 text-sfm-gold transition-transform duration-300 ${showAssessment ? 'rotate-90' : 'group-hover:translate-x-1'}`} />
+                </button>
+
+                {showAssessment && (
+                  <div className="mt-4 p-6 bg-white rounded-xl border border-sfm-cream-dark">
+                    <p className="text-sfm-navy font-medium mb-4">Answer honestly:</p>
+                    <div className="space-y-3 mb-6">
+                      {assessmentQuestions.map((question, index) => (
+                        <label key={index} className="flex items-start gap-3 cursor-pointer group">
+                          <input 
+                            type="checkbox" 
+                            className="mt-1 w-5 h-5 rounded border-gray-300 text-sfm-gold focus:ring-sfm-gold/20" 
+                          />
+                          <span className="text-muted group-hover:text-sfm-navy transition-colors">
+                            {question}
+                          </span>
+                        </label>
+                      ))}
+                    </div>
+                    <p className="text-sfm-azure font-medium text-sm">
+                      If you answered "No" to any of these, this guide is for you.
+                    </p>
+                  </div>
+                )}
+              </div>
+
+              {/* What is in the full guide - gated content preview */}
+              <div className="relative">
+                <div className="bg-sfm-cream rounded-2xl p-6 opacity-60">
+                  <p className="text-sfm-navy font-medium mb-4">What you will learn in the full guide:</p>
+                  <ul className="space-y-3">
+                    {learningPoints.map((point, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <div className="w-5 h-5 rounded-full bg-sfm-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <CheckCircle2 className="w-3 h-3 text-sfm-gold" strokeWidth={2} />
+                        </div>
+                        <span className="text-muted text-sm">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {/* Gate overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent flex items-end justify-center pb-4">
+                  <div className="flex items-center gap-2 text-sfm-azure text-sm font-medium">
+                    <Lock className="w-4 h-4" />
+                    Enter your email to unlock the full guide
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -82,8 +138,8 @@ export default function PrimaryCareGuidePage() {
                   <div className="relative">
                     <div className="absolute -inset-4 bg-sfm-gold/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     <Image
-                      src="/images/sfm-logo-full.png"
-                      alt="Sankofa Family Medicine"
+                      src="/images/SFM_Trans.png"
+                      alt="Sankofa Family Medicine logo"
                       width={180}
                       height={120}
                       className="h-auto w-auto max-h-24 relative transition-all duration-500 group-hover:scale-105"
@@ -91,9 +147,12 @@ export default function PrimaryCareGuidePage() {
                   </div>
                 </div>
 
-                <h2 className="font-display text-2xl text-sfm-navy mb-6 text-center">
-                  Access the Full Guide
+                <h2 className="font-display text-2xl text-sfm-navy mb-2 text-center">
+                  Get the Full Guide
                 </h2>
+                <p className="text-muted text-sm text-center mb-6">
+                  Free. No sales pitch. Just clarity.
+                </p>
 
                 {/* Formspree Form */}
                 <form 
@@ -101,14 +160,11 @@ export default function PrimaryCareGuidePage() {
                   method="POST"
                   className="space-y-5"
                 >
-                  {/* Hidden field for redirect after submission */}
                   <input 
                     type="hidden" 
                     name="_next" 
                     value="https://sankofafamilymedicine.com/resources/primary-care-guide/success" 
                   />
-                  
-                  {/* Hidden fields for tracking */}
                   <input 
                     type="hidden" 
                     name="_subject" 
@@ -116,8 +172,6 @@ export default function PrimaryCareGuidePage() {
                   />
                   <input type="hidden" name="leadType" value="Primary Care Guide" />
                   <input type="hidden" name="sourcePage" value="/resources/primary-care-guide" />
-
-                  {/* Honeypot for spam prevention */}
                   <input type="text" name="_gotcha" style={{ display: 'none' }} />
 
                   <div>
@@ -147,7 +201,6 @@ export default function PrimaryCareGuidePage() {
                     />
                   </div>
 
-                  {/* Consent Checkbox */}
                   <div className="flex items-start gap-3">
                     <input
                       type="checkbox"
@@ -165,7 +218,7 @@ export default function PrimaryCareGuidePage() {
                     type="submit"
                     className="w-full btn-primary justify-center"
                   >
-                    Get the Guide
+                    Send Me the Guide
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </button>
 
@@ -194,13 +247,15 @@ export default function PrimaryCareGuidePage() {
                 <p className="text-sm text-muted mb-3">
                   Prefer to talk directly?
                 </p>
-                <Link 
-                  href="/contact" 
+                <a 
+                  href="https://sankofafamilymedicine.atlas.md/hub/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-navy font-medium text-sm transition-colors"
                 >
-                  Schedule a conversation
+                  Become a Patient
                   <ArrowRight className="w-4 h-4" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

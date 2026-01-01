@@ -92,6 +92,54 @@ const servicesSchema = {
   ],
 }
 
+// FAQ Schema for rich snippets
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is Direct Primary Care?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'DPC is a membership-based model where you pay a monthly fee directly to your physician, removing insurance from the primary care relationship. This allows for longer visits, easier access, and care focused on you rather than billing codes.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I still need health insurance with Direct Primary Care?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. DPC covers primary care only. You should maintain coverage for emergencies, hospitalizations, specialists, and catastrophic events. Many members pair DPC with high-deductible health plans.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if I need a specialist referral?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Dr. Nkrumah will coordinate referrals to trusted specialists and help navigate the process. Care coordination is included in all membership tiers.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is virtual care as effective as in-person visits?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'For most primary care needs, yes. Research shows virtual care provides equivalent outcomes for many conditions, while offering greater convenience and access. We will refer you for in-person evaluation when clinically indicated.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does membership cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sankofa Family Medicine offers three membership tiers: Continuity Care at $149/month, Precision Care at $249/month, and Legacy Health at $449/month. All plans include unlimited virtual visits, direct physician messaging, and wholesale lab pricing. Annual billing provides a 10% discount.',
+      },
+    },
+  ],
+}
+
 export const metadata: Metadata = {
   title: 'Services & Pricing | Virtual Direct Primary Care | Washington State',
   description: 'Sankofa Family Medicine offers virtual-first direct primary care (DPC) across Washington State. Membership from $149/month includes genetic testing, precision medicine, and cardiometabolic health optimization. Founding members receive Legacy Health benefits at Precision Care pricing.',
@@ -206,6 +254,10 @@ export default function ServicesLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {children}
     </>

@@ -41,8 +41,9 @@ export default function Error({
           <button
             onClick={() => reset()}
             className="btn-primary"
+            aria-label="Try again"
           >
-            <RefreshCw className="w-4 h-4" />
+            <RefreshCw className="w-4 h-4" aria-hidden="true" />
             Try Again
           </button>
           <Link href="/" className="btn-secondary">

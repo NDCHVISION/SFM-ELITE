@@ -7,7 +7,7 @@ const contactSchema = {
       '@type': 'ContactPage',
       '@id': 'https://sankofafamilymedicine.com/contact/#page',
       name: 'Contact Sankofa Family Medicine',
-      description: 'Book a fit call or get in touch for virtual-first direct primary care in Washington State',
+      description: 'Book a enrollment consultation or get in touch for virtual-first direct primary care in Washington State',
       url: 'https://sankofafamilymedicine.com/contact',
       mainEntity: {
         '@type': 'MedicalBusiness',
@@ -38,11 +38,11 @@ const contactSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Contact | Book a Fit Call | Sankofa Family Medicine | Virtual Direct Primary Care',
-  description: 'Book a 15-minute fit call with Sankofa Family Medicine. Virtual-first direct primary care (DPC) for patients across Washington State. Medicine That Remembers solves healthcare fragmentation through continuity, genetic testing, and precision medicine.',
+  title: 'Contact | Become a Patient | Sankofa Family Medicine | Virtual Direct Primary Care',
+  description: 'Book a 15-minute enrollment consultation with Sankofa Family Medicine. Virtual-first direct primary care (DPC) for patients across Washington State. Medicine That Remembers solves healthcare fragmentation through continuity, genetic testing, and precision medicine.',
   keywords: [
     'Sankofa Family Medicine contact',
-    'book fit call DPC',
+    'book enrollment consultation DPC',
     'direct primary care Washington',
     'virtual DPC signup',
     'Medicine That Remembers',
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     'founding member',
   ],
   openGraph: {
-    title: 'Contact | Book a Fit Call | Sankofa Family Medicine',
-    description: 'Book a 15-minute fit call for virtual-first direct primary care (DPC) in Washington State. Founding members receive exclusive pricing benefits.',
+    title: 'Contact | Become a Patient | Sankofa Family Medicine',
+    description: 'Book a 15-minute enrollment consultation for virtual-first direct primary care (DPC) in Washington State. Founding members receive exclusive pricing benefits.',
     url: 'https://sankofafamilymedicine.com/contact',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Contact Us | Sankofa Family Medicine',
-    description: 'Book a fit call for premium virtual primary care in Washington State.',
+    description: 'Book a enrollment consultation for premium virtual primary care in Washington State.',
     images: ['/images/og-image.png'],
   },
   alternates: {

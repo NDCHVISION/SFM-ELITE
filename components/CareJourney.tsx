@@ -125,9 +125,12 @@ export default function CareJourney() {
           <p className="text-muted mb-6">
             Take the first step.
           </p>
-          <Link href="/contact" className="btn-primary">
-            Book a 15-Minute Fit Call
-          </Link>
+          <a 
+            href="https://sankofafamilymedicine.atlas.md/hub/login" 
+            className="btn-primary"
+          >
+            Become a Patient
+          </a>
         </div>
       </div>
     </section>

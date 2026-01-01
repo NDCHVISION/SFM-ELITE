@@ -188,9 +188,9 @@ const howToJsonLd = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Book a Fit Call',
+      name: 'Become a Patient',
       text: 'Schedule a brief 15-minute conversation to understand your health goals and ensure our practice is the right fit.',
-      url: 'https://calendly.com/nkrumah-ndchvision/15-minute-fit-call',
+      url: 'https://sankofafamilymedicine.atlas.md/hub/login',
     },
     {
       '@type': 'HowToStep',
@@ -220,7 +220,7 @@ const howToJsonLd = {
 const journeySteps = [
   {
     step: '01',
-    title: 'Book a Fit Call',
+    title: 'Become a Patient',
     description: 'Schedule a brief 15-minute conversation to understand your health goals and ensure our practice is the right fit.',
     icon: FileText,
   },
@@ -356,12 +356,12 @@ export default function AboutPage() {
 
                 <div className="flex flex-wrap gap-4">
                   <a 
-                    href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+                    href="https://sankofafamilymedicine.atlas.md/hub/login"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary"
                   >
-                    Book a 15-Minute Fit Call
+                    Become a Patient
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                   <Link href="/founder" className="btn-secondary-white">
@@ -477,14 +477,24 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
               {/* Image */}
               <div className="relative order-2 lg:order-1 group">
-                <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/20 to-transparent rounded-3xl blur-2xl animate-pulse-slow" />
-                <div className="image-depth">
+                <div className="absolute -inset-6 bg-gradient-to-br from-sfm-gold/25 via-sfm-azure/10 to-transparent rounded-3xl blur-3xl animate-pulse-slow" />
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-sfm-navy/20">
+                  {/* Brand color overlay */}
+                  <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-tr from-sfm-navy/10 via-transparent to-sfm-gold/5" />
+                  
+                  {/* Vignette for edge blending */}
+                  <div className="absolute inset-0 z-10 pointer-events-none"
+                    style={{
+                      boxShadow: 'inset 0 0 80px 30px rgba(252,250,245,0.4)',
+                    }}
+                  />
+                  
                   <Image
-                    src="/images/physician-patient-connection.png"
-                    alt="Bronze sculpture depicting the physician-patient relationship: two figures connected by a stethoscope forming a heart, symbolizing Medicine That Remembers"
+                    src="/images/lifestyle-physician-conversation.png"
+                    alt="Physician having an unhurried conversation with patient in a warm, non-clinical setting"
                     width={600}
                     height={400}
-                    className="relative rounded-2xl shadow-2xl object-cover w-full transition-all duration-700 group-hover:scale-[1.02] group-hover:brightness-105"
+                    className="relative object-cover w-full transition-all duration-700 group-hover:scale-[1.02] group-hover:brightness-105"
                   />
                 </div>
               </div>
@@ -673,12 +683,12 @@ export default function AboutPage() {
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                   <a 
-                    href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+                    href="https://sankofafamilymedicine.atlas.md/hub/login"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-secondary"
                   >
-                    Book a 15-Minute Fit Call
+                    Become a Patient
                   </a>
                 </div>
               </div>
@@ -701,7 +711,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-sfm-navy/60 text-lg mb-4 max-w-2xl mx-auto">
-              Founding members begin with a brief fit call. If aligned, onboarding and first visit scheduling follow.
+              Founding members begin with a brief enrollment consultation. If aligned, onboarding and first visit scheduling follow.
             </p>
             <p className="text-sfm-navy/40 text-sm mb-10 max-w-2xl mx-auto">
               This is a brief, non-clinical call to ensure alignment before enrollment.
@@ -709,12 +719,12 @@ export default function AboutPage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a 
-                href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+                href="https://sankofafamilymedicine.atlas.md/hub/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                Book a 15-Minute Fit Call
+                Become a Patient
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
               <Link href="/services" className="btn-secondary">

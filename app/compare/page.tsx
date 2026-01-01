@@ -423,7 +423,7 @@ export default function ComparePage() {
           </h2>
           
           <p className="text-white/60 text-lg mb-4 max-w-2xl mx-auto">
-            Founding members begin with a brief fit call. If aligned, onboarding and first visit scheduling follow.
+            Founding members begin with a brief enrollment consultation. If aligned, onboarding and first visit scheduling follow.
           </p>
           <p className="text-white/40 text-sm mb-10 max-w-2xl mx-auto">
             This is a brief, non-clinical call to ensure alignment before enrollment.
@@ -431,12 +431,12 @@ export default function ComparePage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+              href="https://sankofafamilymedicine.atlas.md/hub/login"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-all shadow-lg shadow-sfm-gold/25"
             >
-              Book a 15-Minute Fit Call
+              Become a Patient
               <ArrowRight className="w-5 h-5" />
             </a>
             <Link 

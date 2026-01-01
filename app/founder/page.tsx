@@ -351,11 +351,17 @@ export default function FounderPage() {
               { icon: Brain, title: 'AI-Supported Workflows', description: 'Technology that enhances clinical decision-making and documentation' },
               { icon: Wifi, title: 'Virtual Care Delivery', description: 'HIPAA-compliant telehealth that maintains human connection' },
               { icon: Globe, title: 'Culturally Grounded Medicine', description: 'Care that honors diverse backgrounds and health traditions' },
-            ].map((interest) => (
-              <div key={interest.title} className="bg-white p-6 border-l-4 border-sfm-azure rounded-xl shadow-sm">
-                <interest.icon className="w-6 h-6 text-sfm-azure mb-3" strokeWidth={1.5} aria-hidden="true" />
-                <h3 className="font-display text-lg text-sfm-navy mb-2">{interest.title}</h3>
-                <p className="text-muted text-sm">{interest.description}</p>
+            ].map((interest, index) => (
+              <div 
+                key={interest.title} 
+                className="group bg-white p-6 border-l-4 border-sfm-azure rounded-xl shadow-sm hover:shadow-xl hover:shadow-sfm-azure/10 hover:-translate-y-1 hover:border-sfm-gold transition-all duration-300 cursor-pointer"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="w-12 h-12 rounded-xl bg-sfm-azure/10 flex items-center justify-center mb-4 group-hover:bg-sfm-gold/20 group-hover:scale-110 transition-all duration-300">
+                  <interest.icon className="w-6 h-6 text-sfm-azure group-hover:text-sfm-gold transition-colors duration-300" strokeWidth={1.5} aria-hidden="true" />
+                </div>
+                <h3 className="font-display text-lg text-sfm-navy mb-2 group-hover:text-sfm-azure transition-colors duration-300">{interest.title}</h3>
+                <p className="text-muted text-sm group-hover:text-sfm-navy/80 transition-colors duration-300">{interest.description}</p>
               </div>
             ))}
           </div>
@@ -413,19 +419,19 @@ export default function FounderPage() {
             <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
           </h2>
           <p className="text-white/60 text-lg md:text-xl mb-4 max-w-2xl mx-auto">
-            Founding members begin with a brief fit call. If aligned, onboarding and first visit scheduling follow.
+            Founding members begin with a brief enrollment consultation. If aligned, onboarding and first visit scheduling follow.
           </p>
           <p className="text-white/40 text-sm mb-12 max-w-2xl mx-auto">
             This is a brief, non-clinical call to ensure alignment before enrollment.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+              href="https://sankofafamilymedicine.atlas.md/hub/login"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Book a 15-Minute Fit Call
+              Become a Patient
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </a>
             <Link href="/services" className="btn-secondary-white">

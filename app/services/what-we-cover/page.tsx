@@ -562,14 +562,14 @@ export default function ServicesPage() {
 
             {/* Trust Signals */}
             <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm text-white font-medium">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm text-white font-medium hover:bg-white/20 hover:border-sfm-gold/40 hover:scale-105 transition-all duration-300 cursor-pointer">
                 <span className="w-2 h-2 rounded-full bg-sfm-gold" aria-hidden="true" />
                 18+ Clinical Categories
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm text-white font-medium">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm text-white font-medium hover:bg-white/20 hover:border-sfm-gold/40 hover:scale-105 transition-all duration-300 cursor-pointer">
                 100+ Conditions Treated
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm text-white font-medium">
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 text-sm text-white font-medium hover:bg-white/20 hover:border-sfm-gold/40 hover:scale-105 transition-all duration-300 cursor-pointer">
                 1 Physician Relationship
               </span>
             </div>
@@ -579,17 +579,17 @@ export default function ServicesPage() {
               className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center"
               aria-label="Key statistics"
             >
-              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <p className="text-4xl font-display text-sfm-gold mb-2">Same Day</p>
-                <p className="text-sm text-white/70">Acute care appointments available</p>
+              <div className="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-sfm-gold/30 hover:scale-105 transition-all duration-300 cursor-pointer">
+                <p className="text-4xl font-display text-sfm-gold mb-2 group-hover:scale-110 transition-transform duration-300">Same Day</p>
+                <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors">Acute care appointments available</p>
               </div>
-              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <p className="text-4xl font-display text-sfm-gold mb-2">100%</p>
-                <p className="text-sm text-white/70">Virtual via HIPAA-compliant telehealth</p>
+              <div className="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-sfm-gold/30 hover:scale-105 transition-all duration-300 cursor-pointer">
+                <p className="text-4xl font-display text-sfm-gold mb-2 group-hover:scale-110 transition-transform duration-300">100%</p>
+                <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors">Virtual via HIPAA-compliant telehealth</p>
               </div>
-              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                <p className="text-4xl font-display text-sfm-gold mb-2">Your Physician</p>
-                <p className="text-sm text-white/70">Dr. Nkrumah for every visit</p>
+              <div className="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-sfm-gold/30 hover:scale-105 transition-all duration-300 cursor-pointer">
+                <p className="text-4xl font-display text-sfm-gold mb-2 group-hover:scale-110 transition-transform duration-300">Your Physician</p>
+                <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors">Dr. Nkrumah for every visit</p>
               </div>
             </div>
           </div>
@@ -763,10 +763,11 @@ export default function ServicesPage() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {additionalServices.map((service) => (
+              {additionalServices.map((service, index) => (
                 <article
                   key={service.id}
-                  className="group bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-sfm-gold/50 hover:shadow-xl hover:shadow-sfm-gold/10"
+                  className="group bg-white border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-sfm-gold/50 hover:shadow-xl hover:shadow-sfm-gold/10 hover:-translate-y-2"
+                  style={{ animationDelay: `${index * 50}ms` }}
                 >
                   <div className="p-6">
                     <div className="w-12 h-12 rounded-xl bg-sfm-azure/10 flex items-center justify-center mb-4 group-hover:bg-sfm-gold/10 transition-colors">
@@ -1071,17 +1072,17 @@ export default function ServicesPage() {
             </h2>
 
             <p className="text-sfm-navy/60 text-lg mb-10 max-w-2xl mx-auto">
-              Schedule a brief fit call to see if our approach aligns with your health goals.
+              Schedule a brief enrollment consultation to see if our approach aligns with your health goals.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a 
-                href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+                href="https://sankofafamilymedicine.atlas.md/hub/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-all shadow-lg shadow-sfm-gold/25"
               >
-                Book a 15-Minute Fit Call
+                Become a Patient
                 <ArrowRight className="w-5 h-5" />
               </a>
               <Link 

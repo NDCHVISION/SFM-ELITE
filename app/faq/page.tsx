@@ -172,9 +172,9 @@ export default function FAQPage() {
           question: 'How do I become a patient?',
           answer: (
             <div className="space-y-3">
-              <p>Start by booking a brief 15-minute fit call. If aligned, we will discuss membership options and schedule your comprehensive onboarding.</p>
-              <a href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sfm-azure hover:text-sfm-navy font-medium">
-                Book a 15-Minute Fit Call <ArrowRight className="ml-2 w-4 h-4" />
+              <p>Start by booking a brief 15-minute enrollment consultation. If aligned, we will discuss membership options and schedule your comprehensive onboarding.</p>
+              <a href="https://sankofafamilymedicine.atlas.md/hub/login" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sfm-azure hover:text-sfm-navy font-medium">
+                Become a Patient <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </div>
           )
@@ -185,7 +185,7 @@ export default function FAQPage() {
         },
         {
           question: 'How does enrollment work?',
-          answer: 'Founding members begin with a brief fit call (15 minutes) to ensure alignment. If aligned, onboarding and first visit scheduling follow. Care can begin as early as the same week, depending on onboarding.'
+          answer: 'Founding members begin with a brief enrollment consultation (15 minutes) to ensure alignment. If aligned, onboarding and first visit scheduling follow. Care can begin as early as the same week, depending on onboarding.'
         },
         {
           question: 'Do I need to transfer my medical records?',
@@ -344,19 +344,19 @@ export default function FAQPage() {
             <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
           </h2>
           <p className="text-white/60 text-lg md:text-xl mb-4 max-w-2xl mx-auto">
-            Founding members begin with a brief fit call. If aligned, onboarding and first visit scheduling follow.
+            Founding members begin with a brief enrollment consultation. If aligned, onboarding and first visit scheduling follow.
           </p>
           <p className="text-white/40 text-sm mb-12 max-w-2xl mx-auto">
             This is a brief, non-clinical call to ensure alignment before enrollment.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+              href="https://sankofafamilymedicine.atlas.md/hub/login"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Book a 15-Minute Fit Call
+              Become a Patient
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </a>
             <Link href="/services" className="btn-secondary-white">

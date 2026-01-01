@@ -52,7 +52,7 @@ export default function TestimonialsPage() {
             href="/contact" 
             className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold hover:bg-sfm-gold-dark text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            <span>Book a 15-Minute Fit Call</span>
+            <span>Become a Patient</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -106,16 +106,16 @@ export default function TestimonialsPage() {
             Your Story Starts Here
           </h2>
           <p className="text-sfm-text-muted mb-8">
-            Book a brief fit call and be among the first to experience Medicine That Remembers™.
+            Book a brief enrollment consultation and be among the first to experience Medicine That Remembers™.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+              href="https://sankofafamilymedicine.atlas.md/hub/login"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-sfm-azure hover:bg-sfm-navy text-white font-medium rounded-lg transition-colors"
             >
-              Book a 15-Minute Fit Call
+              Become a Patient
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link 

@@ -2,31 +2,28 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Linkedin, Phone, Mail, MapPin, ArrowRight, ArrowUpRight, Shield, Heart, Clock } from 'lucide-react'
+import { Linkedin, Phone, Mail, ArrowRight, MapPin, Clock, Shield, Sparkles } from 'lucide-react'
+import { ATLAS_PORTAL_URL } from './PrimaryCTA'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   const footerLinks = {
-    about: {
-      title: 'About',
+    practice: {
+      title: 'Practice',
       links: [
         { label: 'Meet Dr. Nkrumah', href: '/founder' },
-        { label: 'How It Works', href: '/about' },
+        { label: 'Membership Plans', href: '/services' },
+        { label: 'What We Treat', href: '/services/what-we-cover' },
         { label: 'FAQs', href: '/faq' },
-        { label: 'Blog', href: '/blog' },
-        { label: 'Free Guide', href: '/resources/primary-care-guide' },
       ],
     },
-    services: {
-      title: 'Services',
+    resources: {
+      title: 'Resources',
       links: [
-        { label: 'Our Standard', href: '/compare' },
-        { label: 'Conditions We Treat', href: '/services/what-we-cover' },
-        { label: 'Membership Plans', href: '/services' },
-        { label: 'Sankofa OS', href: '/sankofa-os' },
-        { label: 'Resources', href: '/resources' },
-        { label: 'Emergency Resources', href: '/emergency' },
+        { label: 'Blog', href: '/blog' },
+        { label: 'Free Guide', href: '/resources/primary-care-guide' },
+        { label: 'Emergency Info', href: '/emergency' },
         { label: 'Contact', href: '/contact' },
       ],
     },
@@ -35,177 +32,138 @@ export default function Footer() {
       links: [
         { label: 'Washington', href: '/locations/washington', badge: 'Active' },
         { label: 'South Carolina', href: '/locations/south-carolina', badge: '2026' },
-        { label: 'Request Your State', href: '/locations/expansion' },
-      ],
-    },
-    company: {
-      title: 'Company',
-      links: [
-        { label: 'Careers', href: '/careers' },
-        { label: 'Patient Forms', href: '/patient-forms' },
-        { label: 'Testimonials', href: '/testimonials' },
-        { label: 'Privacy Policy', href: '/privacy' },
-        { label: 'Terms of Service', href: '/terms' },
-        { label: 'Accessibility', href: '/accessibility' },
-        { label: 'Sitemap', href: '/sitemap.xml' },
       ],
     },
   }
 
-  const socialLinks = [
-    {
-      name: 'Dr. Nkrumah on LinkedIn',
-      href: 'https://www.linkedin.com/in/yawnkrumahmd/',
-      icon: Linkedin,
-    },
-    {
-      name: 'Sankofa Family Medicine on LinkedIn',
-      href: 'https://www.linkedin.com/company/109183000/',
-      icon: Linkedin,
-    },
-  ]
-
-  const trustBadges = [
-    { icon: Shield, label: 'HIPAA Compliant' },
-    { icon: Heart, label: 'Patient-Centered' },
-    { icon: Clock, label: '24hr Response' },
-  ]
-
   return (
-    <footer className="bg-gradient-to-b from-sfm-navy via-sfm-navy to-sfm-navy-deep relative overflow-hidden" role="contentinfo">
-      {/* Decorative Background - Single Sankofa Bird Watermark */}
+    <footer className="bg-gradient-to-b from-sfm-navy to-sfm-navy-deep relative overflow-hidden" role="contentinfo">
+      {/* Premium background effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-sfm-azure/8 rounded-full blur-[100px]" />
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-sfm-gold/6 rounded-full blur-[100px]" />
-        {/* Sankofa Bird Watermark */}
-        <div 
-          className="absolute -bottom-20 -right-20 w-[500px] h-[500px] opacity-[0.04]"
-          style={{
-            backgroundImage: "url('/images/sankofa-bird.png')",
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-          }}
-        />
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-sfm-azure/8 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-sfm-gold/5 rounded-full blur-[120px]" />
+        <div className="absolute inset-0 pattern-sankofa-subtle opacity-20" />
       </div>
 
       {/* Main Footer Content */}
-      <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+      <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-24">
+        
+        {/* CTA Banner - V30 Elite Premium */}
+        <div className="bg-gradient-to-r from-white/10 via-white/6 to-white/10 backdrop-blur-2xl border border-white/15 rounded-[2rem] p-12 mb-20 relative overflow-hidden">
+          {/* Subtle glow effect */}
+          <div className="absolute top-0 right-1/4 w-[300px] h-[300px] bg-sfm-gold/10 rounded-full blur-[100px] pointer-events-none" />
+          <div className="relative flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div className="text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
+                <span className="flex items-center gap-2 px-4 py-1.5 bg-emerald-500/20 rounded-full">
+                  <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+                  <span className="text-emerald-300 text-sm font-medium">Now Accepting Patients</span>
+                </span>
+              </div>
+              <h3 className="text-white font-display text-2xl lg:text-3xl mb-2">Ready to Begin Your Care?</h3>
+              <p className="text-white/50 text-sm max-w-md">Join our practice and experience healthcare built on relationship, continuity, and trust.</p>
+            </div>
+            <a
+              href={ATLAS_PORTAL_URL}
+              className="inline-flex items-center gap-3 px-12 py-5 bg-sfm-gold text-sfm-navy font-semibold rounded-2xl 
+                shadow-gold hover:bg-sfm-gold-light hover:shadow-gold-hover transition-all duration-300 group relative overflow-hidden"
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+              <span className="text-lg relative">Become a Patient</span>
+              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5 relative" />
+            </a>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
           
-          {/* Brand Column */}
+          {/* Brand Column - V30 Elite */}
           <div className="lg:col-span-5">
-            <Link href="/" className="inline-block mb-8 group">
-              <div className="flex items-center gap-4">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-sfm-gold/20 rounded-2xl blur-xl group-hover:bg-sfm-gold/40 transition-all duration-500 animate-pulse-slow" />
-                  <Image 
-                    src="/images/SFM_Trans.png" 
-                    alt="Sankofa Family Medicine" 
-                    width={180}
-                    height={180}
-                    quality={100}
-                    priority
-                    className="relative h-24 lg:h-28 w-auto transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
-                    style={{ imageRendering: 'crisp-edges' }}
-                    unoptimized
-                  />
-                </div>
-                <div className="flex flex-col">
+            <Link href="/" className="inline-block mb-10 group">
+              <div className="flex items-center gap-6">
+                <Image 
+                  src="/images/SFM_Trans.png" 
+                  alt="Sankofa Family Medicine" 
+                  width={160}
+                  height={160}
+                  quality={100}
+                  priority
+                  className="h-24 lg:h-28 w-auto transition-all duration-500 group-hover:scale-105"
+                  unoptimized
+                />
+                <div>
                   <span className="font-display text-2xl lg:text-3xl text-white leading-none tracking-tight group-hover:text-sfm-gold transition-colors duration-300">
                     Sankofa Family Medicine
                   </span>
-                  <span className="text-sfm-gold text-sm font-medium tracking-widest uppercase mt-1.5">
-                    Medicine That Remembers<span className="tm">&#8482;</span>
+                  <span className="flex items-center gap-2 text-sfm-gold text-sm font-semibold tracking-wider uppercase mt-2">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    Medicine That Remembers<sup className="text-[8px]">&#8482;</sup>
                   </span>
                 </div>
               </div>
             </Link>
             
-            <p className="text-white/50 text-sm leading-relaxed max-w-md mb-8">
+            <p className="text-white/50 text-base leading-relaxed max-w-md mb-10">
               Premium virtual primary care built on memory, dignity, and the physician-patient relationship. 
-              HIPAA-compliant telehealth serving patients throughout Washington State.
+              Serving Washington State with South Carolina coming 2026.
             </p>
 
-            {/* Trust Badges */}
-            <div className="flex flex-wrap gap-3 mb-10">
-              {trustBadges.map((badge) => (
-                <div 
-                  key={badge.label}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full"
-                >
-                  <badge.icon className="w-4 h-4 text-sfm-gold" />
-                  <span className="text-white/70 text-xs font-medium">{badge.label}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Contact Info */}
-            <div className="space-y-4 mb-8">
+            {/* Contact - Enhanced */}
+            <div className="space-y-4 mb-10">
               <a 
                 href="tel:+14252857390" 
-                className="flex items-center gap-4 text-white/70 hover:text-sfm-gold transition-colors duration-300 group"
+                className="flex items-center gap-4 text-white/60 hover:text-sfm-gold transition-all duration-300 group"
               >
-                <span className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-sfm-gold/10 transition-colors">
-                  <Phone className="w-4 h-4 text-sfm-gold" />
+                <span className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-sfm-gold/10 group-hover:border-sfm-gold/30 transition-all duration-300">
+                  <Phone className="w-4.5 h-4.5 text-sfm-gold/80" />
                 </span>
-                <span className="text-sm font-medium">+1 (425) 285-7390</span>
+                <span className="font-medium">+1 (425) 285-7390</span>
               </a>
               <a 
                 href="mailto:info@sankofafamilymedicine.com" 
-                className="flex items-center gap-4 text-white/70 hover:text-sfm-gold transition-colors duration-300 group"
+                className="flex items-center gap-4 text-white/60 hover:text-sfm-gold transition-all duration-300 group"
               >
-                <span className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-sfm-gold/10 transition-colors">
-                  <Mail className="w-4 h-4 text-sfm-gold" />
+                <span className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-sfm-gold/10 group-hover:border-sfm-gold/30 transition-all duration-300">
+                  <Mail className="w-4.5 h-4.5 text-sfm-gold/80" />
                 </span>
-                <span className="text-sm font-medium">info@sankofafamilymedicine.com</span>
+                <span className="font-medium">info@sankofafamilymedicine.com</span>
               </a>
-              <div className="flex items-center gap-4 text-white/50">
-                <span className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center">
-                  <MapPin className="w-4 h-4 text-sfm-gold/60" />
-                </span>
-                <span className="text-sm">Serving Washington State (Virtual)</span>
-              </div>
             </div>
 
-            {/* Social Links */}
-            <div className="flex items-center gap-3">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={social.name}
-                  className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 
-                    hover:bg-sfm-gold hover:border-sfm-gold hover:text-sfm-navy transition-all duration-300 group"
-                  aria-label={social.name}
-                >
-                  <social.icon size={18} strokeWidth={1.5} />
-                </a>
-              ))}
+            {/* Social - Enhanced */}
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.linkedin.com/company/109183000/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 
+                  hover:bg-sfm-gold hover:border-sfm-gold hover:text-sfm-navy transition-all duration-300"
+                aria-label="Follow Sankofa Family Medicine on LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
             </div>
           </div>
 
-          {/* Links Columns */}
+          {/* Links Columns - Enhanced */}
           <div className="lg:col-span-7">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-10 lg:gap-12">
               {Object.entries(footerLinks).map(([key, section]) => (
                 <div key={key}>
-                  <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-6 flex items-center gap-2">
-                    <span className="w-8 h-px bg-sfm-gold" />
+                  <h4 className="text-white font-semibold text-xs uppercase tracking-[0.2em] mb-6 flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-sfm-gold" />
                     {section.title}
                   </h4>
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     {section.links.map((link) => (
                       <li key={link.href}>
                         <Link 
                           href={link.href} 
-                          className="text-white/60 hover:text-sfm-gold transition-colors duration-300 text-sm flex items-center gap-2 group"
+                          className="text-white/55 hover:text-sfm-gold transition-all duration-300 text-sm flex items-center gap-2 group"
                         >
-                          <span>{link.label}</span>
+                          <span className="group-hover:translate-x-1 transition-transform duration-300">{link.label}</span>
                           {'badge' in link && link.badge && (
-                            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
+                            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
                               link.badge === 'Active' 
                                 ? 'bg-emerald-500/20 text-emerald-400' 
                                 : 'bg-amber-500/20 text-amber-400'
@@ -213,7 +171,6 @@ export default function Footer() {
                               {link.badge}
                             </span>
                           )}
-                          <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                         </Link>
                       </li>
                     ))}
@@ -221,33 +178,56 @@ export default function Footer() {
                 </div>
               ))}
             </div>
+
+            {/* Trust Indicators */}
+            <div className="mt-12 pt-8 border-t border-white/8">
+              <div className="flex flex-wrap gap-6 text-white/40 text-xs">
+                <div className="flex items-center gap-2">
+                  <Shield className="w-4 h-4 text-sfm-gold/60" />
+                  <span>HIPAA Compliant</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-sfm-gold/60" />
+                  <span>Same-Day Access</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-sfm-gold/60" />
+                  <span>Washington State Licensed</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Legal Links - Enhanced */}
+            <div className="mt-8 pt-6 border-t border-white/8">
+              <div className="flex flex-wrap gap-8 text-sm">
+                <Link href="/privacy" className="text-white/40 hover:text-white/70 transition-colors duration-300">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="text-white/40 hover:text-white/70 transition-colors duration-300">
+                  Terms of Service
+                </Link>
+                <Link href="/accessibility" className="text-white/40 hover:text-white/70 transition-colors duration-300">
+                  Accessibility
+                </Link>
+                <Link href="/sitemap.xml" className="text-white/40 hover:text-white/70 transition-colors duration-300">
+                  Sitemap
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="relative border-t border-white/10">
+      {/* Bottom Bar - Premium */}
+      <div className="relative border-t border-white/8">
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4 group">
-              <Image 
-                src="/images/SFM_Trans.png" 
-                alt="Sankofa" 
-                width={64}
-                height={64}
-                quality={100}
-                className="h-10 w-auto opacity-70 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110"
-                style={{ imageRendering: 'crisp-edges' }}
-                unoptimized
-              />
-              <p className="text-white/50 text-sm font-medium">
-                &copy; {currentYear} Sankofa Family Medicine. All rights reserved.
-              </p>
-            </div>
-            <p className="text-white/30 text-xs text-center md:text-right max-w-xl leading-relaxed">
+            <p className="text-white/40 text-sm">
+              &copy; {currentYear} Sankofa Family Medicine. All rights reserved.
+            </p>
+            <p className="text-white/25 text-xs text-center md:text-right max-w-xl">
               This website is for informational purposes only and does not constitute medical advice. 
-              Always consult a qualified healthcare provider for diagnosis and treatment. 
-              For emergencies, call 911.
+              For emergencies, call 911. Medicine That Remembers&#8482; is a trademark of Sankofa Family Medicine.
             </p>
           </div>
         </div>

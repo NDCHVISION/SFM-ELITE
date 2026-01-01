@@ -116,12 +116,12 @@ export default function TacomaPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+              href="https://sankofafamilymedicine.atlas.md/hub/login"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-colors"
             >
-              Book a 15-Minute Fit Call
+              Become a Patient
               <ArrowRight className="w-5 h-5" />
             </a>
             <Link
@@ -203,19 +203,19 @@ export default function TacomaPage() {
             <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
           </h2>
           <p className="text-white/60 mb-4">
-            Founding members begin with a brief fit call. If aligned, onboarding and first visit scheduling follow.
+            Founding members begin with a brief enrollment consultation. If aligned, onboarding and first visit scheduling follow.
           </p>
           <p className="text-white/40 text-xs mb-8">
             This is a brief, non-clinical call to ensure alignment before enrollment.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+              href="https://sankofafamilymedicine.atlas.md/hub/login"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-colors"
             >
-              Book a 15-Minute Fit Call
+              Become a Patient
               <ArrowRight className="w-5 h-5" />
             </a>
             <Link href="/services" className="btn-secondary-white px-8 py-4">

@@ -88,15 +88,15 @@ export default function ContactPage() {
             Not ready to book a call? Leave your email and we will follow up with next steps and availability.
           </p>
           
-          {/* Primary CTA - Calendly */}
+          {/* Primary CTA - Atlas Portal */}
           <a
-            href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+            href="https://sankofafamilymedicine.atlas.md/hub/login"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-sfm-gold to-sfm-gold-light text-sfm-navy font-bold rounded-xl shadow-lg shadow-sfm-gold/25 hover:shadow-xl hover:shadow-sfm-gold/40 hover:scale-[1.02] transition-all duration-300 group"
           >
             <Calendar className="w-5 h-5" />
-            Book a 15-Minute Fit Call
+            Become a Patient
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </a>
           <p className="text-white/40 text-sm mt-3">
@@ -176,12 +176,12 @@ export default function ContactPage() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-sfm-gold/10 rounded-full blur-2xl" />
                 <div className="relative">
                   <p className="text-sfm-gold text-sm font-medium mb-2">Ready to get started?</p>
-                  <h3 className="font-display text-2xl mb-3">Book Your Fit Call</h3>
+                  <h3 className="font-display text-2xl mb-3">Become a Patient</h3>
                   <p className="text-white/70 text-sm mb-6 leading-relaxed">
                     A brief conversation to ensure Sankofa Family Medicine is the right fit for your health journey.
                   </p>
                   <a 
-                    href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+                    href="https://sankofafamilymedicine.atlas.md/hub/login"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sfm-gold font-semibold group"
@@ -218,12 +218,12 @@ export default function ContactPage() {
                     <div className="pt-6 border-t border-sfm-cream w-full">
                       <p className="text-sfm-text-muted text-sm mb-4">Ready to take the next step?</p>
                       <a 
-                        href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
+                        href="https://sankofafamilymedicine.atlas.md/hub/login"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-sfm-azure font-medium hover:text-sfm-gold transition-colors"
                       >
-                        Book a 15-Minute Fit Call
+                        Become a Patient
                         <ArrowRight className="w-4 h-4" />
                       </a>
                     </div>

@@ -1,39 +1,81 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { ATLAS_PORTAL_URL } from './PrimaryCTA'
 
 export default function MobileCTA() {
   const [isVisible, setIsVisible] = useState(false)
+  const [lastScrollY, setLastScrollY] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollThreshold = 600
-      setIsVisible(window.scrollY > scrollThreshold)
+      const currentScrollY = window.scrollY
+      
+      // Show after scrolling down 300px
+      if (currentScrollY > 300) {
+        // Hide when scrolling down quickly, show when scrolling up or stopped
+        if (currentScrollY > lastScrollY && currentScrollY - lastScrollY > 10) {
+          setIsVisible(false)
+        } else {
+          setIsVisible(true)
+        }
+      } else {
+        setIsVisible(false)
+      }
+      
+      setLastScrollY(currentScrollY)
     }
 
-    handleScroll()
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    // Debounce scroll handler
+    let ticking = false
+    const scrollListener = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll()
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
+    window.addEventListener('scroll', scrollListener, { passive: true })
+    return () => window.removeEventListener('scroll', scrollListener)
+  }, [lastScrollY])
 
   return (
-    <div 
+    <div
       className={`fixed bottom-0 left-0 right-0 z-40 lg:hidden transition-all duration-300 ${
-        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'
+        isVisible 
+          ? 'translate-y-0 opacity-100' 
+          : 'translate-y-full opacity-0 pointer-events-none'
       }`}
     >
-      <div className="h-4 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+      {/* Gradient fade effect */}
+      <div className="absolute inset-x-0 -top-6 h-6 bg-gradient-to-t from-white to-transparent pointer-events-none" />
       
-      <div className="bg-white border-t border-gray-100 px-4 py-4 pb-safe">
-        <Link 
-          href="/contact" 
-          className="w-full flex items-center justify-center gap-2 bg-sfm-gold text-sfm-navy font-semibold py-4 rounded-lg"
+      {/* CTA Container */}
+      <div className="bg-white/95 backdrop-blur-xl border-t border-sfm-gold/10 shadow-[0_-4px_20px_rgba(5,28,59,0.1)] px-4 py-3 safe-area-inset-bottom">
+        <a
+          href={ATLAS_PORTAL_URL}
+          className="flex items-center justify-center gap-2 w-full py-3.5 bg-gradient-to-r from-sfm-gold to-sfm-gold-light 
+            text-sfm-navy font-bold rounded-xl shadow-lg shadow-sfm-gold/25 
+            active:scale-[0.98] transition-transform group"
+          aria-label="Become a patient at Sankofa Family Medicine"
         >
-          <span>Request Enrollment</span>
-          <ArrowRight className="w-4 h-4" />
-        </Link>
+          <span>Become a Patient</span>
+          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+        </a>
+        
+        {/* Trust indicator */}
+        <div className="flex items-center justify-center gap-4 mt-2 text-xs text-sfm-text-muted">
+          <span className="flex items-center gap-1">
+            <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" />
+            Accepting patients
+          </span>
+          <span className="w-px h-3 bg-gray-200" />
+          <span>Secure portal enrollment</span>
+        </div>
       </div>
     </div>
   )

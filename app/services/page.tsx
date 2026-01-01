@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import PrimaryCTA, { ATLAS_PORTAL_URL } from '@/components/PrimaryCTA'
 import { 
   ArrowRight, Check, Sparkles, Shield, Clock, MessageCircle, 
   Heart, Dna, Phone, FileText, Star, Users, Zap,
@@ -30,7 +31,7 @@ const tiers = [
       { text: 'Advanced biomarker panels', included: false },
       { text: 'Dedicated phone line', included: false },
     ],
-    cta: 'Book a 15-Minute Fit Call',
+    cta: 'Select This Plan',
     popular: false,
   },
   {
@@ -51,7 +52,7 @@ const tiers = [
       { text: 'Dedicated phone line', included: false },
       { text: 'After-hours access', included: false },
     ],
-    cta: 'Book a 15-Minute Fit Call',
+    cta: 'Select This Plan',
     popular: true,
     founding: true,
   },
@@ -72,7 +73,7 @@ const tiers = [
       { text: 'Personalized wellness protocols', included: true },
       { text: 'Concierge-level responsiveness', included: true },
     ],
-    cta: 'Book a 15-Minute Fit Call',
+    cta: 'Select This Plan',
     popular: false,
   },
 ]
@@ -252,10 +253,37 @@ export default function ServicesPage() {
 
         <div className="relative max-w-7xl mx-auto px-6">
           {/* Section header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <p className="text-sfm-gold text-sm tracking-[0.3em] uppercase mb-4 font-medium">Membership</p>
             <h2 className="font-display text-4xl text-sfm-navy mb-4">Choose Your Level of Care</h2>
             <p className="text-muted max-w-xl mx-auto">Every plan includes unlimited virtual visits, direct messaging, and wholesale lab pricing.</p>
+          </div>
+
+          {/* Founding Member Alert - URGENCY SIGNAL */}
+          <div className="bg-gradient-to-r from-sfm-gold/10 via-sfm-gold/5 to-sfm-gold/10 border border-sfm-gold/20 rounded-2xl p-6 mb-12">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-sfm-gold/20 flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-sfm-gold" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+                    <span className="text-sfm-navy font-semibold text-sm">Founding Member Enrollment Open</span>
+                  </div>
+                  <p className="text-sfm-text-muted text-xs">
+                    Limited to 30 founding members. Lock in your rate for life.
+                  </p>
+                </div>
+              </div>
+              <Link 
+                href="/faq#founding-members" 
+                className="text-sfm-azure text-sm font-medium hover:text-sfm-gold transition-colors flex items-center gap-1"
+              >
+                Learn about founding benefits
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
@@ -333,9 +361,7 @@ export default function ServicesPage() {
                   </p>
 
                   <a
-                    href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={ATLAS_PORTAL_URL}
                     className={`w-full flex items-center justify-center gap-2 py-4 rounded-xl font-semibold transition-all duration-300 mb-8 ${
                       tier.popular
                         ? 'bg-gradient-to-r from-sfm-gold to-sfm-gold-light text-sfm-navy hover:shadow-lg hover:shadow-sfm-gold/30 hover:-translate-y-0.5'
@@ -573,24 +599,17 @@ export default function ServicesPage() {
                 <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
               </h2>
               <p className="text-white/70 text-lg mb-4 max-w-2xl">
-                Founding members begin with a brief fit call. If aligned, onboarding and first visit scheduling follow.
+                Founding members start enrollment through our secure patient portal. Complete your health history, 
+                select your membership tier, and begin your care journey.
               </p>
               <p className="text-white/40 text-sm mb-10 max-w-2xl">
-                This is a brief, non-clinical call to ensure alignment before enrollment.
+                Questions before enrolling? We are here to help.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
-                <a 
-                  href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary px-10 py-5"
-                >
-                  Book a 15-Minute Fit Call
-                  <ArrowRight className="w-5 h-5" />
-                </a>
+                <PrimaryCTA variant="hero" />
                 <Link href="/contact" className="btn-secondary-white px-10 py-5">
-                  Join Updates Instead
+                  Questions? Contact Us
                 </Link>
               </div>
 

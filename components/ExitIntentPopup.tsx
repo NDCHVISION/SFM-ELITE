@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { X, Calendar, Mail, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { X, Calendar, Mail, ArrowRight, CheckCircle2, Heart } from 'lucide-react'
+import { ATLAS_PORTAL_URL } from './PrimaryCTA'
 
 export default function ExitIntentPopup() {
   const [isVisible, setIsVisible] = useState(false)
@@ -103,12 +104,10 @@ export default function ExitIntentPopup() {
               <h3 className="font-display text-2xl text-sfm-navy mb-2">You are on the list!</h3>
               <p className="text-sfm-text-muted mb-6">We will send you founding member updates.</p>
               <a
-                href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={ATLAS_PORTAL_URL}
                 className="inline-flex items-center gap-2 text-sfm-azure font-medium hover:text-sfm-gold transition-colors"
               >
-                Or book a fit call now
+                Or become a patient now
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -159,26 +158,24 @@ export default function ExitIntentPopup() {
           ) : (
             <>
               <div className="text-center mb-8">
-                <h3 className="font-display text-2xl text-sfm-navy mb-3">Before You Go</h3>
-                <p className="text-sfm-text-muted">Have questions? A 15-minute call can help you decide if this is right for you.</p>
+                <h3 className="font-display text-2xl text-sfm-navy mb-3">A Moment Before You Leave</h3>
+                <p className="text-sfm-text-muted">We would welcome the opportunity to care for you.</p>
               </div>
               <a
-                href="https://calendly.com/nkrumah-ndchvision/15-minute-fit-call"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={ATLAS_PORTAL_URL}
                 className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-colors mb-4"
               >
-                <Calendar className="w-5 h-5" />
-                Book a 15-Minute Fit Call
+                <Heart className="w-5 h-5" />
+                Become a Patient
               </a>
               <button
                 onClick={() => setShowEmailForm(true)}
                 className="w-full flex items-center justify-center gap-3 px-6 py-3 border border-gray-200 text-sfm-text-muted font-medium rounded-xl hover:bg-gray-50 transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                Just send me updates
+                Receive occasional updates
               </button>
-              <p className="text-xs text-center text-sfm-text-muted mt-6">No pressure. No spam.</p>
+              <p className="text-xs text-center text-sfm-text-muted mt-6">No pressure. We respect your time.</p>
             </>
           )}
         </div>
