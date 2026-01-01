@@ -32,10 +32,10 @@
   ],
   "shortcuts": [
     {
-      "name": "Join Waitlist",
+      "name": "Become a Patient",
       "short_name": "Join",
-      "description": "Join the Sankofa Family Medicine waitlist",
-      "url": "/contact",
+      "description": "Join Sankofa Family Medicine as a patient",
+      "url": "https://sankofafamilymedicine.atlas.md/hub/login",
       "icons": [{ "src": "/favicon.png", "sizes": "192x192" }]
     },
     {
