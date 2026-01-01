@@ -100,7 +100,7 @@ export default function HomePage() {
                     href="/services" 
                     className="btn-outline"
                   >
-                    View Plans
+                    Clear Pricing
                   </Link>
                 </div>
 
@@ -129,55 +129,20 @@ export default function HomePage() {
                   {/* Soft glow - refined */}
                   <div className="absolute -inset-8 bg-gradient-to-br from-sfm-gold/20 via-sfm-gold/10 to-sfm-azure/10 rounded-[50px] blur-3xl" />
                   
-                  {/* Main Image Container */}
+                  {/* Main Image Container - Wooden Sankofa Sculpture */}
                   <div className="relative w-[300px] sm:w-[380px] lg:w-[460px] aspect-[3/4]">
                     <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl shadow-sfm-navy/30">
-                      {/* Color blend overlay - brand tint */}
-                      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-br from-sfm-azure/10 via-transparent to-sfm-gold/5" />
-                      
-                      {/* Vignette overlay - stronger edges */}
-                      <div className="absolute inset-0 z-10 pointer-events-none"
-                        style={{
-                          background: 'radial-gradient(ellipse at center, transparent 40%, rgba(5,28,59,0.5) 100%)',
-                        }}
-                      />
-                      
-                      {/* Edge fade overlay */}
-                      <div className="absolute inset-0 z-10 pointer-events-none"
-                        style={{
-                          boxShadow: 'inset 0 0 60px 20px rgba(5,28,59,0.4)',
-                        }}
-                      />
+                      {/* Subtle brand tint overlay */}
+                      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-sfm-navy/40 via-transparent to-transparent" />
                       
                       <Image
-                        src="/images/lifestyle-telehealth-hero.png"
-                        alt="Patient consulting with physician via secure video visit from her home office"
+                        src="/images/sankofa-wooden-sculpture.png"
+                        alt="Traditional wooden Sankofa bird sculpture symbolizing the importance of learning from the past"
                         fill
                         priority
                         className="object-cover object-center"
                         sizes="(max-width: 640px) 300px, (max-width: 1024px) 380px, 460px"
                       />
-                    </div>
-                    
-                    {/* Physician card overlay */}
-                    <div className="absolute -bottom-4 -left-4 sm:bottom-6 sm:-left-6 z-20">
-                      <div className="glass-dark px-5 py-4 rounded-2xl border border-white/10">
-                        <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-sfm-gold/40 shadow-lg">
-                            <Image
-                              src="/images/dr-nkrumah-thoughtful.png"
-                              alt="Dr. Nkrumah"
-                              width={48}
-                              height={48}
-                              className="object-cover object-top"
-                            />
-                          </div>
-                          <div>
-                            <p className="text-white font-medium text-sm">Dr. Yaw Nkrumah, MD</p>
-                            <p className="text-white/50 text-xs">Board Certified Family Medicine</p>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -230,6 +195,64 @@ export default function HomePage() {
                   </div>
                   <h3 className="font-display text-xl text-sfm-navy mb-3">{item.title}</h3>
                   <p className="text-sfm-text-muted leading-relaxed">{item.description}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </ScrollRevealGroup>
+        </div>
+      </section>
+
+      {/* WHO WE SERVE - Patient Lifestyle Gallery */}
+      <section className="relative py-20 lg:py-28 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
+            <span className="inline-block text-sfm-gold text-sm font-semibold tracking-widest uppercase mb-6">
+              Who We Serve
+            </span>
+            <h2 className="text-display-md text-sfm-navy mb-6">
+              Care That Fits Your Life
+            </h2>
+            <p className="text-lg text-sfm-text-muted leading-relaxed">
+              From busy professionals to growing families, our virtual-first model adapts to how you live. 
+              Premium primary care, wherever you are in Washington State.
+            </p>
+          </ScrollReveal>
+
+          <ScrollRevealGroup className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+            {[
+              { 
+                src: '/images/telehealth-video-visit.png', 
+                alt: 'Professional woman enjoying a video consultation with her physician from home',
+                label: 'Busy Professionals'
+              },
+              { 
+                src: '/images/patient-tablet-seattle.png', 
+                alt: 'Man reviewing health information on tablet with Seattle skyline in background',
+                label: 'Tech-Forward Care'
+              },
+              { 
+                src: '/images/family-gathering-pnw.png', 
+                alt: 'Multigenerational family enjoying time together in the Pacific Northwest',
+                label: 'Families'
+              },
+              { 
+                src: '/images/woman-tablet-thoughtful.png', 
+                alt: 'Woman thoughtfully reviewing her health plan on a tablet',
+                label: 'Proactive Health'
+              },
+            ].map((item, i) => (
+              <ScrollReveal key={i} delay={i * 0.1}>
+                <div className="relative group overflow-hidden rounded-2xl aspect-[4/5]">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy/80 via-sfm-navy/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-6">
+                    <p className="text-white font-display text-sm lg:text-base">{item.label}</p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}
@@ -633,7 +656,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <PrimaryCTA variant="hero" />
             <Link href="/services" className="btn-outline touch-target">
-              View Plans
+              Clear Pricing
             </Link>
           </div>
 

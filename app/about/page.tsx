@@ -364,8 +364,8 @@ export default function AboutPage() {
                     Become a Patient
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
-                  <Link href="/founder" className="btn-secondary-white">
-                    Meet Dr. Nkrumah
+                  <Link href="/services" className="btn-secondary-white">
+                    Clear Pricing
                   </Link>
                 </div>
                 <p className="text-white/40 text-xs mt-3">
@@ -375,17 +375,16 @@ export default function AboutPage() {
 
               {/* Sankofa Visual */}
               <div className="relative hidden lg:block">
-                <div className="relative aspect-square max-w-lg mx-auto group">
+                <div className="relative aspect-[4/5] max-w-lg mx-auto group">
                   <div className="absolute inset-0 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl animate-pulse-slow" />
-                  <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 image-tilt">
+                  <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden image-tilt">
                     <Image
-                      src="/images/sankofa-bird.png"
-                      alt="The Sankofa bird, an Akan symbol representing the principle of retrieving what matters from the past"
-                      width={400}
-                      height={400}
-                      className="w-full h-auto opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
+                      src="/images/sankofa-wooden-sculpture.png"
+                      alt="Traditional wooden Sankofa bird sculpture representing the principle of retrieving what matters from the past"
+                      fill
+                      className="object-cover opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
                     />
-                    <div className="absolute bottom-8 left-8 right-8 bg-sfm-navy/80 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-sfm-navy/90 to-transparent p-8">
                       <p className="text-sfm-gold font-display text-lg mb-1">Sankofa</p>
                       <p className="text-white/70 text-sm">
                         "Go back and retrieve what matters. Carry it forward."
@@ -490,7 +489,7 @@ export default function AboutPage() {
                   />
                   
                   <Image
-                    src="/images/lifestyle-physician-conversation.png"
+                    src="/images/physician-conversation-warm.png"
                     alt="Physician having an unhurried conversation with patient in a warm, non-clinical setting"
                     width={600}
                     height={400}
@@ -638,8 +637,8 @@ export default function AboutPage() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl opacity-50 animate-pulse-slow" />
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden image-lift portrait-premium">
                   <Image
-                    src="/images/dr-nkrumah-thoughtful.png"
-                    alt="Dr. Yaw Nkrumah, MD, founder of Sankofa Family Medicine"
+                    src="/images/dr-nkrumah-desk.png"
+                    alt="Dr. Yaw Nkrumah, MD, founder of Sankofa Family Medicine, at his desk"
                     fill
                     className="object-cover object-top transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-105"
                   />
@@ -678,18 +677,18 @@ export default function AboutPage() {
                 </div>
 
                 <div className="flex flex-wrap gap-4">
-                  <Link href="/founder" className="btn-primary">
-                    Full Biography
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
                   <a 
                     href="https://sankofafamilymedicine.atlas.md/hub/login"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-secondary"
+                    className="btn-primary"
                   >
                     Become a Patient
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
+                  <Link href="/services" className="btn-secondary">
+                    Clear Pricing
+                  </Link>
                 </div>
               </div>
             </div>
@@ -728,7 +727,7 @@ export default function AboutPage() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
               <Link href="/services" className="btn-secondary">
-                View Membership Options
+                Clear Pricing
               </Link>
             </div>
 

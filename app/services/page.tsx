@@ -572,16 +572,16 @@ export default function ServicesPage() {
 
         <div className="relative max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Gold Heart Sculpture */}
+            {/* Doctor-Patient Connection Art */}
             <div className="relative hidden lg:block group">
-              <div className="absolute -inset-8 bg-gradient-to-br from-sfm-gold/30 to-transparent rounded-full blur-3xl animate-pulse-slow" />
-              <div className="image-float">
+              <div className="absolute -inset-8 bg-gradient-to-br from-sfm-gold/30 to-transparent rounded-3xl blur-3xl animate-pulse-slow" />
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/gold-heart-sculpture.png"
-                  alt="Gold intertwined heart sculpture representing the enduring connection at the center of patient care"
-                  width={400}
-                  height={600}
-                  className="relative mx-auto drop-shadow-2xl transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
+                  src="/images/doctor-patient-heart-art.png"
+                  alt="Artistic wall sculpture depicting the enduring connection between physician and patient through a heart symbol"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto transition-all duration-700 group-hover:scale-105"
                 />
               </div>
             </div>

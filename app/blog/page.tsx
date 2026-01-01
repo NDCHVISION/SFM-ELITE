@@ -318,15 +318,20 @@ export default function BlogPage() {
       <section className="py-16 bg-sfm-cream">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <p className="text-muted mb-4">Take the next step in your health journey.</p>
-          <a 
-            href="https://sankofafamilymedicine.atlas.md/hub/login"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            Become a Patient
-            <ArrowRight className="w-4 h-4" />
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a 
+              href="https://sankofafamilymedicine.atlas.md/hub/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Become a Patient
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <Link href="/services" className="btn-secondary">
+              Clear Pricing
+            </Link>
+          </div>
           <p className="text-sfm-text-muted text-xs mt-3">
             This is a brief, non-clinical call to ensure alignment before enrollment.
           </p>

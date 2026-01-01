@@ -86,8 +86,8 @@ export default function WashingtonLocationPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/lifestyle-pnw-wellness.png"
-            alt="Pacific Northwest trail at golden hour representing wellness and vitality"
+            src="/images/hiker-pnw-mountains.png"
+            alt="Hiker overlooking Pacific Northwest mountains at sunrise representing wellness and vitality"
             fill
             priority
             className="object-cover object-center scale-105"
@@ -130,7 +130,7 @@ export default function WashingtonLocationPage() {
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
               <Link href="/services" className="btn-secondary-white text-base px-10 py-5">
-                View Membership Options
+                Clear Pricing
               </Link>
             </div>
             <p className="text-white/40 text-xs mb-12">

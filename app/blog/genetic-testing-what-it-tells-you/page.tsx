@@ -305,14 +305,19 @@ export default function BlogPost() {
           <p className="text-muted mb-8 max-w-2xl mx-auto">
             The answer depends on your history, your goals, and what we are trying to understand. Let&apos;s have that conversation.
           </p>
-          <a 
-            href="https://sankofafamilymedicine.atlas.md/hub/login"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-          >
-            Become a Patient
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a 
+              href="https://sankofafamilymedicine.atlas.md/hub/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Become a Patient
+            </a>
+            <Link href="/services" className="btn-secondary">
+              Clear Pricing
+            </Link>
+          </div>
           <p className="text-sfm-text-muted text-xs mt-3">
             This is a brief, non-clinical call to ensure alignment before enrollment.
           </p>

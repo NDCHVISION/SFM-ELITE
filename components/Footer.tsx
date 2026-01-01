@@ -63,15 +63,24 @@ export default function Footer() {
               <h3 className="text-white font-display text-2xl lg:text-3xl mb-2">Ready to Begin Your Care?</h3>
               <p className="text-white/50 text-sm max-w-md">Join our practice and experience healthcare built on relationship, continuity, and trust.</p>
             </div>
-            <a
-              href={ATLAS_PORTAL_URL}
-              className="inline-flex items-center gap-3 px-12 py-5 bg-sfm-gold text-sfm-navy font-semibold rounded-2xl 
-                shadow-gold hover:bg-sfm-gold-light hover:shadow-gold-hover transition-all duration-300 group relative overflow-hidden"
-            >
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-              <span className="text-lg relative">Become a Patient</span>
-              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5 relative" />
-            </a>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <a
+                href={ATLAS_PORTAL_URL}
+                className="inline-flex items-center gap-3 px-10 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-2xl 
+                  shadow-gold hover:bg-sfm-gold-light hover:shadow-gold-hover transition-all duration-300 group relative overflow-hidden"
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+                <span className="text-lg relative">Become a Patient</span>
+                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5 relative" />
+              </a>
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-2xl 
+                  border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300"
+              >
+                Clear Pricing
+              </Link>
+            </div>
           </div>
         </div>
 
