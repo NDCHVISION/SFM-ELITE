@@ -3,9 +3,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ChevronDown, Phone, Mail, ArrowRight, Stethoscope, Users, FileText, Shield, Heart, MapPin, Sparkles, Sun, Moon } from 'lucide-react'
+import { Menu, X, ChevronDown, Phone, Mail, ArrowRight, Stethoscope, Users, FileText, Shield, Heart, MapPin, Sparkles } from 'lucide-react'
 import { ATLAS_PORTAL_URL } from './PrimaryCTA'
-import { useTheme } from './ThemeProvider'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,7 +12,6 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
-  const { resolvedTheme, toggleTheme } = useTheme()
 
   const handleDropdownEnter = useCallback((dropdown: string) => {
     if (closeTimeoutRef.current) {
@@ -250,20 +248,6 @@ export default function Navigation() {
                 Contact
               </Link>
 
-              {/* Theme Toggle Button */}
-              <button
-                onClick={toggleTheme}
-                className="ml-2 p-2.5 rounded-xl text-sfm-navy dark:text-sfm-dark-text border border-sfm-cream-dark dark:border-sfm-dark-border hover:bg-sfm-cream dark:hover:bg-white/10 hover:border-sfm-gold/50 transition-all duration-300"
-                aria-label={`Switch to ${resolvedTheme === 'light' ? 'dark' : 'light'} mode`}
-                title={`Switch to ${resolvedTheme === 'light' ? 'dark' : 'light'} mode`}
-              >
-                {resolvedTheme === 'light' ? (
-                  <Moon className="w-5 h-5" />
-                ) : (
-                  <Sun className="w-5 h-5 text-sfm-gold" />
-                )}
-              </button>
-
               {/* Primary CTA - Premium Styling */}
               <a
                 href={ATLAS_PORTAL_URL}
@@ -383,28 +367,6 @@ export default function Navigation() {
                 <span className="font-medium">info@sankofafamilymedicine.com</span>
               </a>
             </div>
-
-            {/* Theme Toggle - Mobile */}
-            <button
-              onClick={toggleTheme}
-              className="flex items-center justify-between w-full px-4 py-4 mt-4 bg-sfm-cream dark:bg-sfm-surface rounded-xl text-sfm-navy dark:text-sfm-text font-medium transition-all duration-300"
-            >
-              <span className="flex items-center gap-3">
-                {resolvedTheme === 'light' ? (
-                  <Moon className="w-5 h-5 text-sfm-azure" />
-                ) : (
-                  <Sun className="w-5 h-5 text-sfm-gold" />
-                )}
-                <span>{resolvedTheme === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
-              </span>
-              <div className={`w-12 h-7 rounded-full transition-colors duration-300 relative ${
-                resolvedTheme === 'dark' ? 'bg-sfm-gold' : 'bg-sfm-navy/20'
-              }`}>
-                <div className={`absolute top-1 w-5 h-5 rounded-full bg-white shadow-md transition-transform duration-300 ${
-                  resolvedTheme === 'dark' ? 'translate-x-6' : 'translate-x-1'
-                }`} />
-              </div>
-            </button>
           </nav>
         </div>
       </div>
