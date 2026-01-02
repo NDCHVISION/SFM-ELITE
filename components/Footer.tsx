@@ -54,7 +54,7 @@ export default function Footer() {
             <Link href="/" className="inline-block mb-10 group">
               <div className="flex items-center gap-6">
                 <Image 
-                  src="/images/sankofa-transparent.png" 
+                  src="/images/comettrans.png" 
                   alt="Sankofa Bird Logo" 
                   width={160}
                   height={160}
