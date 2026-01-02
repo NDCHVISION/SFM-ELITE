@@ -287,7 +287,7 @@ export default function HomePage() {
             <div className="max-w-4xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Traditional Care */}
-                <div className="bg-gray-50 rounded-2xl p-8">
+                <div className="bg-gray-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <h3 className="font-display text-lg text-sfm-navy mb-6 flex items-center gap-3">
                     <span className="w-3 h-3 rounded-full bg-gray-400" />
                     Traditional Primary Care
@@ -309,7 +309,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Sankofa Care */}
-                <div className="bg-sfm-navy rounded-2xl p-8">
+                <div className="bg-sfm-navy rounded-2xl p-8 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-sfm-azure/90">
                   <h3 className="font-display text-lg text-white mb-6 flex items-center gap-3">
                     <span className="w-3 h-3 rounded-full bg-sfm-gold" />
                     Sankofa Family Medicine
@@ -474,10 +474,10 @@ export default function HomePage() {
               },
             ].map((tier, i) => (
               <ScrollReveal key={tier.name} delay={i * 0.1}>
-                <div className={`relative rounded-2xl p-8 h-full transition-all ${
+                <div className={`relative rounded-2xl p-8 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
                   tier.featured 
-                    ? 'bg-sfm-navy text-white ring-2 ring-sfm-gold' 
-                    : 'bg-white border border-sfm-border-light hover:border-sfm-border'
+                    ? 'bg-sfm-navy text-white ring-2 ring-sfm-gold hover:bg-sfm-azure/90' 
+                    : 'bg-white border border-sfm-border-light hover:border-sfm-border hover:shadow-lg'
                 }`}>
                   {tier.featured && (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">

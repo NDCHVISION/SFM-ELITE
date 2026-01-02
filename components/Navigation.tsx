@@ -237,10 +237,10 @@ export default function Navigation() {
               ))}
 
               <Link 
-                href="/blog" 
+                href="/resources" 
                 className="px-4 py-2.5 text-sfm-navy dark:text-sfm-text hover:text-sfm-azure transition-colors duration-300 text-[15px] font-medium rounded-lg hover:bg-sfm-cream/50 dark:hover:bg-white/5"
               >
-                Blog
+                Resources
               </Link>
               
               <Link 
