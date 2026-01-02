@@ -77,25 +77,29 @@ export default function PartnershipsPage() {
       </section>
 
       {/* Current Partners */}
-      <section className="py-20 bg-white" aria-labelledby="current-partners">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-20 bg-sfm-navy relative overflow-hidden" aria-labelledby="current-partners">
+        <div className="absolute inset-0 opacity-50" aria-hidden="true">
+          <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-sfm-gold/5 rounded-full blur-3xl -translate-y-1/2" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-sfm-azure/5 rounded-full blur-3xl" />
+        </div>
+        <div className="relative max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 id="current-partners" className="font-display text-3xl md:text-4xl text-sfm-navy mb-4">
+            <h2 id="current-partners" className="font-display text-3xl md:text-4xl text-white mb-4">
               Current Partners
             </h2>
-            <p className="text-sfm-navy/60 max-w-2xl mx-auto">
+            <p className="text-white/60 max-w-2xl mx-auto">
               Organizations helping us deliver Medicine That Remembers™
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Nexus Health */}
-            <div className="bg-gradient-to-br from-sfm-cream to-white rounded-2xl p-8 border border-sfm-gold/20 hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 mb-6 bg-sfm-azure/10 rounded-xl flex items-center justify-center">
-                <Brain className="w-6 h-6 text-sfm-azure" aria-hidden="true" />
+            <div className="bg-white/[0.05] border border-sfm-gold/30 rounded-2xl p-8 hover:bg-white/[0.08] transition-all hover:border-sfm-gold/50">
+              <div className="w-12 h-12 mb-6 bg-sfm-gold/20 rounded-xl flex items-center justify-center">
+                <Brain className="w-6 h-6 text-sfm-gold" aria-hidden="true" />
               </div>
-              <h3 className="font-display text-2xl text-sfm-navy mb-3">Nexus Health</h3>
-              <p className="text-sfm-navy/70 leading-relaxed mb-4">
+              <h3 className="font-display text-2xl text-white mb-3">Nexus Health</h3>
+              <p className="text-white/70 leading-relaxed mb-6">
                 Clinical decision support through BioMatrix™, providing genomic and laboratory analysis integrated into our care workflows.
               </p>
               <div className="flex flex-col gap-3">
@@ -103,44 +107,48 @@ export default function PartnershipsPage() {
                   href="https://nexushealth.me"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-sfm-azure text-white font-medium rounded-lg hover:bg-sfm-navy transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-sfm-gold/20 text-sfm-gold font-medium rounded-lg hover:bg-sfm-gold/30 border border-sfm-gold/40 transition-all"
                 >
                   Visit Nexus Health
                   <ArrowRight className="w-4 h-4" />
                 </a>
-                <Link
+                <a
                   href="/sankofa-os#nexus-health"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2 border border-sfm-azure text-sfm-azure font-medium rounded-lg hover:bg-sfm-azure/5 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-sfm-azure/20 text-sfm-azure font-medium rounded-lg hover:bg-sfm-azure/30 border border-sfm-azure/40 transition-all"
                 >
                   Learn About Integration
                   <ArrowRight className="w-4 h-4" />
-                </Link>
+                </a>
               </div>
             </div>
 
             {/* Future Partners Placeholder */}
-            <div className="bg-gradient-to-br from-sfm-cream to-white rounded-2xl p-8 border border-sfm-gold/20 border-dashed opacity-60">
+            <div className="bg-white/[0.03] border border-sfm-gold/20 border-dashed rounded-2xl p-8 opacity-70">
               <div className="w-12 h-12 mb-6 bg-sfm-gold/10 rounded-xl flex items-center justify-center">
-                <Briefcase className="w-6 h-6 text-sfm-gold" aria-hidden="true" />
+                <Briefcase className="w-6 h-6 text-sfm-gold/60" aria-hidden="true" />
               </div>
-              <h3 className="font-display text-2xl text-sfm-navy/70 mb-3">Coming Soon</h3>
-              <p className="text-sfm-navy/60 leading-relaxed mb-4">
+              <h3 className="font-display text-2xl text-white/70 mb-3">Coming Soon</h3>
+              <p className="text-white/50 leading-relaxed mb-4">
                 Additional strategic partnerships that amplify our commitment to precision, continuity, and equitable care.
               </p>
-              <p className="text-sfm-navy/50 text-sm font-medium">More partnerships launching in 2026</p>
+              <p className="text-white/40 text-sm font-medium">More partnerships launching in 2026</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Partnership Opportunities */}
-      <section className="py-20 bg-sfm-cream" aria-labelledby="opportunities">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-20 bg-sfm-navy relative overflow-hidden" aria-labelledby="opportunities">
+        <div className="absolute inset-0 opacity-50" aria-hidden="true">
+          <div className="absolute top-1/4 right-1/3 w-96 h-96 bg-sfm-gold/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-sfm-azure/5 rounded-full blur-3xl" />
+        </div>
+        <div className="relative max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 id="opportunities" className="font-display text-3xl md:text-4xl text-sfm-navy mb-4">
+            <h2 id="opportunities" className="font-display text-3xl md:text-4xl text-white mb-4">
               Partnership Opportunities
             </h2>
-            <p className="text-sfm-navy/60 max-w-2xl mx-auto">
+            <p className="text-white/60 max-w-2xl mx-auto">
               We are building relationships with organizations committed to transforming healthcare delivery.
             </p>
           </div>
@@ -190,11 +198,11 @@ export default function PartnershipsPage() {
 
                 <span className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium ${
                   item.status === 'Accepting Inquiries' 
-                    ? 'bg-emerald-50 text-emerald-700' 
-                    : 'bg-sfm-cream text-sfm-navy/50'
+                    ? 'bg-emerald-500/20 text-emerald-300' 
+                    : 'bg-amber-500/20 text-amber-300'
                 }`}>
                   <span className={`w-1.5 h-1.5 rounded-full ${
-                    item.status === 'Accepting Inquiries' ? 'bg-emerald-500' : 'bg-sfm-navy/30'
+                    item.status === 'Accepting Inquiries' ? 'bg-emerald-400' : 'bg-amber-400'
                   }`} aria-hidden="true" />
                   {item.status}
                 </span>
@@ -205,10 +213,14 @@ export default function PartnershipsPage() {
       </section>
 
       {/* Why Partner With Us */}
-      <section className="py-20 bg-white" aria-labelledby="why-partner">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="py-20 bg-sfm-navy relative overflow-hidden" aria-labelledby="why-partner">
+        <div className="absolute inset-0 opacity-50" aria-hidden="true">
+          <div className="absolute top-1/3 -left-96 w-96 h-96 bg-sfm-gold/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/3 -right-96 w-96 h-96 bg-sfm-azure/5 rounded-full blur-3xl" />
+        </div>
+        <div className="relative max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 id="why-partner" className="font-display text-3xl text-sfm-navy mb-4">
+            <h2 id="why-partner" className="font-display text-3xl text-white mb-4">
               Why Partner With Us
             </h2>
           </div>
@@ -237,12 +249,12 @@ export default function PartnershipsPage() {
               },
             ].map((item) => (
               <div key={item.title} className="flex gap-4">
-                <div className="w-12 h-12 bg-sfm-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-sfm-gold/20 rounded-lg flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-6 h-6 text-sfm-gold" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="font-display text-lg text-sfm-navy mb-2">{item.title}</h3>
-                  <p className="text-sfm-navy/60 text-sm leading-relaxed">{item.description}</p>
+                  <h3 className="font-display text-lg text-white mb-2">{item.title}</h3>
+                  <p className="text-white/60 text-sm leading-relaxed">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -251,9 +263,11 @@ export default function PartnershipsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-sfm-navy relative overflow-hidden">
-        <div className="absolute inset-0 pattern-sankofa-spiral-gold pattern-subtle" aria-hidden="true" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl" aria-hidden="true" />
+      <section className="py-20 bg-gradient-to-br from-sfm-navy via-[#0a2847] to-sfm-navy-deep relative overflow-hidden">
+        <div className="absolute inset-0 opacity-50" aria-hidden="true">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-sfm-azure/10 rounded-full blur-3xl" />
+        </div>
         
         <div className="relative max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-display text-3xl text-white mb-4">
@@ -265,7 +279,7 @@ export default function PartnershipsPage() {
           </p>
           <Link 
             href="/contact" 
-            className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold hover:bg-sfm-gold-dark text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold hover:bg-sfm-gold-light text-sfm-navy font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Contact Us
             <ArrowRight className="w-4 h-4" aria-hidden="true" />
