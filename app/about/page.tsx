@@ -324,9 +324,6 @@ export default function AboutPage() {
                     Become a Patient
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
-                  <Link href="/services" className="btn-secondary-white btn-shine">
-                    Membership Plans
-                  </Link>
                 </div>
                 <p className="text-white/40 text-xs mt-3">
                   Enrollment begins in Atlas.

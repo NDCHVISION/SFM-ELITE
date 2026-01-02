@@ -64,30 +64,32 @@ export default function HomePage() {
                 <div className="overflow-hidden mb-10">
                   <h1 className="opacity-0 animate-hero-text animation-delay-200" data-speakable>
                     <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display text-white leading-[0.92] mb-4">
-                      Healthcare Built on Continuity
-                    </span>
-                    <span className="block text-2xl sm:text-3xl lg:text-4xl font-display text-gold-glow leading-[0.92]">
-                      Through Memory
+                      Remembered, Not Rushed
                     </span>
                   </h1>
                 </div>
 
                 {/* Subheadline - Refined */}
-                <div className="opacity-0 animate-fade-in animation-delay-300 mb-12">
+                <div className="opacity-0 animate-fade-in animation-delay-300 mb-6">
+                  <p className="text-xl lg:text-2xl text-gold-glow font-display leading-relaxed max-w-lg">
+                    Primary care built for long-term relationships, clear thinking, and follow-through.
+                  </p>
+                </div>
+
+                {/* Body Copy */}
+                <div className="opacity-0 animate-fade-in animation-delay-350 mb-10">
                   <p className="text-lg lg:text-xl text-white/55 leading-relaxed max-w-lg">
-                    Sankofa Family Medicine practices continuity as a clinical discipline. 
-                    Your physician knows your history, understands your context, and carries it forward across time. 
-                    Memory is not a feature here. It is the foundation of care.
+                    At Sankofa Family Medicine, your physician knows your history and carries it forward. Visits are unhurried, access is direct, and care builds over time instead of starting over.
                   </p>
                 </div>
 
                 {/* Value Props - Cleaner presentation */}
-                <div className="opacity-0 animate-fade-in animation-delay-350 mb-12">
+                <div className="opacity-0 animate-fade-in animation-delay-400 mb-12">
                   <div className="space-y-4">
                     {[
-                      'Your story travels with you. Every visit carries forward your history and context.',
-                      'Direct physician access. Message your doctor directly with no call centers or gatekeepers.',
-                      'Transparent memberships from $149 per month. Clear and predictable pricing.',
+                      'Longer visits with your physician, not a rotating staff',
+                      'Direct messaging with no call centers or gatekeepers',
+                      'Transparent memberships from $149 per month',
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="w-1.5 h-1.5 rounded-full bg-sfm-gold mt-2.5 flex-shrink-0" />
@@ -98,7 +100,7 @@ export default function HomePage() {
                 </div>
 
                 {/* CTA Buttons - Refined styling */}
-                <div className="opacity-0 animate-fade-in animation-delay-400 flex flex-wrap items-center gap-4">
+                <div className="opacity-0 animate-fade-in animation-delay-450 flex flex-wrap items-center gap-4">
                   <PrimaryCTA variant="hero" />
                   <Link 
                     href="#membership-plans" 
@@ -108,18 +110,15 @@ export default function HomePage() {
                   </Link>
                 </div>
 
-                {/* Signature Line */}
-                <div className="opacity-0 animate-fade-in animation-delay-450 mt-6">
-                  <p className="text-sfm-gold font-display text-lg mb-2">
-                    Medicine That Remembers™
-                  </p>
+                {/* Microcopy under CTA */}
+                <div className="opacity-0 animate-fade-in animation-delay-500 mt-6">
                   <p className="text-white/40 text-sm">
                     Enrollment begins in Atlas.
                   </p>
                 </div>
 
                 {/* Trust Indicators - Single row, consolidated */}
-                <div className="opacity-0 animate-fade-in animation-delay-500 mt-10 pt-8 border-t border-white/8">
+                <div className="opacity-0 animate-fade-in animation-delay-550 mt-10 pt-8 border-t border-white/8">
                   <div className="flex flex-wrap items-center gap-8">
                     <div className="flex items-center gap-2 text-white/40 text-sm">
                       <Shield className="w-4 h-4 text-sfm-gold/70" />
