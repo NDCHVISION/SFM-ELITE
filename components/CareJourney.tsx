@@ -50,7 +50,7 @@ export default function CareJourney() {
     {
       number: 4,
       title: 'Ongoing Physician Partnership',
-      description: 'Care continues through secure messaging, follow-up visits, and long-term continuity with a physician who knows your history over time.',
+      description: 'Care continues through secure messaging, follow-up visits, and long-term continuity with a physician who understands your comprehensive health care needs.',
       hasCTA: false,
     },
   ]
