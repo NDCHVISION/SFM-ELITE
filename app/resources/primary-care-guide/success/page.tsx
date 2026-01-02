@@ -23,7 +23,7 @@ export default function GuideSuccessPage() {
             <div className="relative">
               <div className="absolute -inset-4 bg-sfm-gold/10 rounded-full blur-xl animate-pulse-slow" />
               <Image
-                src="/images/sfm-logo-full.png"
+                src="/images/SFM_Trans.png"
                 alt="Sankofa Family Medicine"
                 width={160}
                 height={100}

@@ -130,7 +130,7 @@ export default function WashingtonLocationPage() {
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
               <Link href="/services" className="btn-secondary-white btn-shine text-base px-10 py-5">
-                Pricing
+                Membership Plans
               </Link>
             </div>
             <p className="text-white/40 text-xs mb-12">

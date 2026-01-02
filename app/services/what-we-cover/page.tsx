@@ -34,7 +34,7 @@ const organizationJsonLd = {
   url: 'https://sankofafamilymedicine.com',
   logo: {
     '@type': 'ImageObject',
-    url: 'https://sankofafamilymedicine.com/images/sfm-logo.png',
+    url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
     width: 512,
     height: 512,
   },

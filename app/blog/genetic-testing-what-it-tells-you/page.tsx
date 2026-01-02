@@ -42,7 +42,7 @@ const articleSchema = {
     name: 'Sankofa Family Medicine',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://sankofafamilymedicine.com/images/sfm-logo.png',
+      url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
     },
   },
   mainEntityOfPage: {
@@ -315,7 +315,7 @@ export default function BlogPost() {
               Become a Patient
             </a>
             <Link href="/services" className="btn-secondary btn-shine">
-              Pricing
+              Membership Plans
             </Link>
           </div>
           <p className="text-sfm-text-muted text-xs mt-3">
