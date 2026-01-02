@@ -199,10 +199,6 @@ export default function ServicesPage() {
               <span>HSA/FSA Eligible</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Heart className="w-4 h-4 text-sfm-gold" />
-              <span>No Contracts</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-gray-600">
               <ArrowRight className="w-4 h-4 text-sfm-azure" />
               <span>Cancel Anytime</span>
             </div>

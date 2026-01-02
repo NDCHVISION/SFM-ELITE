@@ -67,7 +67,7 @@ export default function Footer() {
                   <span className="font-display text-2xl lg:text-3xl text-white leading-none tracking-tight group-hover:text-sfm-gold transition-colors duration-300">
                     Sankofa Family Medicine<sup className="text-[14px]">™</sup>
                   </span>
-                  <span className="text-sfm-gold text-sm font-semibold tracking-wider uppercase mt-2">
+                  <span className="text-sfm-gold text-sm font-semibold tracking-wider uppercase mt-2 block">
                     Medicine That Remembers<sup className="text-[8px]">®</sup>
                   </span>
                 </div>
