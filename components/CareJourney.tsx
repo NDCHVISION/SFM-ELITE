@@ -31,26 +31,26 @@ export default function CareJourney() {
   const steps = [
     {
       number: 1,
-      title: 'Become a Patient',
-      description: 'Create your secure Atlas account to begin care. Atlas is our private clinical platform where all intake, consent, messaging, scheduling, and visits take place.',
+      title: 'Enroll and Connect',
+      description: 'Create your secure Atlas account and get started. Atlas is our private clinical platform for intake, consent, messaging, scheduling, and visits.',
       hasCTA: true,
     },
     {
       number: 2,
-      title: 'Complete Secure Intake',
-      description: "After signup, you'll complete your health history, goals, and required consents inside Atlas. This ensures your care begins with full context and continuity.",
+      title: 'Tell Us Your Story',
+      description: 'Complete a comprehensive intake capturing your history, goals, and concerns. We document your story with intention so care never resets.',
       hasCTA: false,
     },
     {
       number: 3,
-      title: 'Initial Visit & Care Planning',
-      description: 'Your first visit is scheduled within Atlas. We review your history, priorities, and concerns, then develop a thoughtful, personalized care plan.',
+      title: 'Design Your Plan',
+      description: 'Your first visit is a 45 to 60 minute conversation reviewing your context and co-creating a personalized care plan.',
       hasCTA: false,
     },
     {
       number: 4,
-      title: 'Ongoing Physician Partnership',
-      description: 'Care continues through secure messaging, follow-up visits, and long-term continuity with a physician who understands your comprehensive health care needs.',
+      title: 'Grow Together',
+      description: 'Continue through secure messaging, follow-up visits, and long-term tracking. Your care compounds as your physician knows you and stays with you.',
       hasCTA: false,
     },
   ]
@@ -65,14 +65,14 @@ export default function CareJourney() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <p className="text-editorial text-sfm-gold mb-4">
-            How It Works
+            How Your Care Unfolds
           </p>
           <h2 className="text-display-md text-sfm-navy mb-6">
-            Your Care Journey
+            How Your Care Unfolds
           </h2>
           <div className="divider-gold mx-auto mb-6" />
           <p className="text-muted max-w-2xl mx-auto text-lg">
-            From first decision to long-term partnership, every step is structured for continuity, privacy, and trust.
+            A simple and private pathway built for continuity, trust, and real physician follow-through.
           </p>
         </div>
 
@@ -136,7 +136,7 @@ export default function CareJourney() {
         {/* Footer text */}
         <div className="mt-16 text-center">
           <p className="text-muted text-sm">
-            All clinical care, communication, scheduling, and documentation occur securely within Atlas.
+            All clinical care and communication happen securely inside Atlas.
           </p>
         </div>
       </div>

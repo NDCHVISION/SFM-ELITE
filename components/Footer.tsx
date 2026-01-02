@@ -76,7 +76,7 @@ export default function Footer() {
             
             <p className="text-white/50 text-base leading-relaxed max-w-md mb-10">
               Premium virtual primary care built on memory, dignity, and the physician-patient relationship. 
-              Serving Washington State with South Carolina coming 2026.
+              Serving Washington State. South Carolina coming 2026.
             </p>
 
             {/* Contact - Enhanced */}
