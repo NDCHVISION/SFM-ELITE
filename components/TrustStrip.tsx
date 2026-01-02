@@ -1,31 +1,26 @@
 import Link from 'next/link'
-import { Shield, Dna, CreditCard, Lock, Star } from 'lucide-react'
+import { Shield, Dna, Lock, Star } from 'lucide-react'
 
 export default function TrustStrip() {
   const trustItems = [
     {
-      icon: Star,
-      label: 'Board Certified Physician',
-      href: '/founder',
-    },
-    {
       icon: Shield,
-      label: 'HIPAA Compliant',
+      label: 'HIPAA-Aligned Communication',
       href: '/privacy',
     },
     {
+      icon: Star,
+      label: 'Board Certified Family Medicine',
+      href: '/founder',
+    },
+    {
       icon: Lock,
-      label: 'Washington Licensed',
+      label: 'Washington State Licensed',
       href: '/about',
     },
     {
       icon: Dna,
-      label: 'Genetic Testing',
-      href: '/services/what-we-cover',
-    },
-    {
-      icon: CreditCard,
-      label: 'HSA/FSA Accepted',
+      label: 'Secure Atlas Portal',
       href: '/services',
     },
   ]

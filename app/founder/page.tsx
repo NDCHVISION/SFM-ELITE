@@ -135,9 +135,9 @@ export default function FounderPage() {
             />
           </div>
           <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-4 font-medium">Founder & Medical Director</p>
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1]">Dr. Yaw Nkrumah, MD</h1>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1]">Meet Dr. Yaw Nkrumah</h1>
           <p className="text-white/70 text-lg md:text-xl max-w-xl mx-auto mb-8">
-            Board Certified Family Physician | Washington State
+            Board-certified family physician and founder of Sankofa Family Medicine. Building relationship-centered primary care where continuity and clinical judgment lead.
           </p>
           <div className="flex items-center justify-center gap-4">
             <a 
@@ -197,28 +197,20 @@ export default function FounderPage() {
             {/* Biography Text */}
             <div className="space-y-6 text-muted leading-relaxed order-1 lg:order-2">
             <p>
-              Dr. Yaw Nkrumah is a <strong className="text-sfm-navy">Board Certified family physician</strong>, founder of Sankofa Family Medicine, and Founder & CEO of The Nkrumah Doctrine Cultural Holdings (NDCH).
+              Dr. Yaw Nkrumah is a board-certified family physician and founder of Sankofa Family Medicine and NDCH. His work centers on restoring the physician-patient relationship through continuity, clarity, and systems that preserve memory.
             </p>
             
             <p>
-              His clinical philosophy centers on three principles:
+              Core Principles:
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li><strong className="text-sfm-navy">Presence:</strong> Giving patients undivided attention</li>
-              <li><strong className="text-sfm-navy">Clarity:</strong> Explaining health in understandable terms</li>
-              <li><strong className="text-sfm-navy">Continuity:</strong> Remembering your history across every visit</li>
+              <li><strong className="text-sfm-navy">Presence.</strong> Giving patients undivided attention.</li>
+              <li><strong className="text-sfm-navy">Clarity.</strong> Explaining health in understandable terms.</li>
+              <li><strong className="text-sfm-navy">Continuity.</strong> Carrying history through every visit.</li>
             </ul>
             
             <p>
-              Dr. Nkrumah integrates frontline medical training with modern digital workflows and AI support, building systems that hold memory, reduce friction, and protect dignity at scale.
-            </p>
-            
-            <p className="text-sfm-navy font-medium bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">
-              Sankofa Family Medicine reflects what becomes possible when those values are supported instead of constrained.
-            </p>
-            
-            <p>
-              Outside his clinical and founder roles, he values time with family, strength training, travel, and the ongoing study of focus, clarity, and legacy.
+              He blends frontline medical training with modern, HIPAA-aligned digital workflows to strengthen follow-through without losing the human core of care.
             </p>
             </div>
           </div>
@@ -379,21 +371,16 @@ export default function FounderPage() {
           
           <div className="space-y-6 text-muted leading-relaxed">
             <p>
-              Sankofa Family Medicine was built to restore relationship-centered primary care. 
-              This practice is designed around continuity, clinical judgment, and follow-through.
+              Sankofa Family Medicine was built to restore relationship-centered primary care where continuity, clinical judgment, and follow-through are protected.
             </p>
             <p>
-              I built Sankofa Family Medicine to bridge that gap, to create a practice where continuity 
-              isn&apos;t aspirational, it&apos;s structural. Where your physician actually knows you, 
-              your history follows you, and your care improves over time because memory compounds.
+              The Sankofa principle means looking back to move forward wisely. Each visit, result, and conversation is carried forward so care compounds over time.
             </p>
             <p>
-              The Sankofa principle, looking back to move forward wisely, isn&apos;t just a name. 
-              It&apos;s the operating philosophy. We retrieve what matters from each visit, each conversation, 
-              each test result, and carry it forward into your future care.
+              Sankofa also restores respect for physicians by giving them the time and autonomy to think, decide, and follow through.
             </p>
             <p className="text-sfm-navy font-medium text-lg">
-              This is the kind of practice I would trust with my own family. Now it&apos;s available to yours.
+              This is the kind of practice I would trust with my own family.
             </p>
           </div>
         </div>
@@ -409,20 +396,16 @@ export default function FounderPage() {
           {/* Now Accepting Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" aria-hidden="true" />
-            <span className="text-white/80 text-sm font-medium">Now Accepting Founding Members</span>
+            <span className="text-white/80 text-sm font-medium">Now Accepting Patients</span>
           </div>
 
           <h2 className="font-display text-4xl md:text-5xl text-white mb-4 leading-tight">
-            Begin Your Care with<br />
-            <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
+            Begin with a Physician Who <span className="text-sfm-gold">Remembers</span>
           </h2>
           <p className="text-white/60 text-lg md:text-xl mb-4 max-w-2xl mx-auto">
-            Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
+            Start in Atlas. Secure intake, scheduling, messaging, and visits happen there.
           </p>
-          <p className="text-white/40 text-sm mb-12 max-w-2xl mx-auto">
-            All intake, scheduling, messaging, and visits occur securely inside Atlas.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a 
               href="https://sankofafamilymedicine.atlas.md/hub/login"
               target="_blank"

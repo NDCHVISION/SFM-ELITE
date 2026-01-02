@@ -64,10 +64,10 @@ export default function HomePage() {
                 <div className="overflow-hidden mb-10">
                   <h1 className="opacity-0 animate-hero-text animation-delay-200" data-speakable>
                     <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display text-white leading-[0.92] mb-4">
-                      Medicine That
+                      Remembered,
                     </span>
                     <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display text-gold-glow leading-[0.92]">
-                      Remembers<span className="text-sfm-gold text-xl align-top ml-1">&#8482;</span>
+                      Not Rushed
                     </span>
                   </h1>
                 </div>
@@ -75,9 +75,8 @@ export default function HomePage() {
                 {/* Subheadline - Refined */}
                 <div className="opacity-0 animate-fade-in animation-delay-300 mb-12">
                   <p className="text-lg lg:text-xl text-white/55 leading-relaxed max-w-lg">
-                    Primary care built on continuity, relationship, and the 
-                    physician-patient bond. One doctor who knows your history, 
-                    your context, and your trajectory.
+                    Premium primary care rooted in continuity, relationship, and respect. 
+                    One doctor knows your story, understands your context, and stays with you.
                   </p>
                 </div>
 
@@ -85,9 +84,9 @@ export default function HomePage() {
                 <div className="opacity-0 animate-fade-in animation-delay-350 mb-12">
                   <div className="space-y-4">
                     {[
-                      'Every visit documented with continuity and context',
-                      'Direct access through secure messaging',
-                      'Transparent pricing from $149/month',
+                      'Your story travels with you. Every visit carries forward your history and context.',
+                      'Direct physician access. Message your doctor directly with no call centers or gatekeepers.',
+                      'Transparent memberships from $149 per month. Clear and predictable pricing.',
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="w-1.5 h-1.5 rounded-full bg-sfm-gold mt-2.5 flex-shrink-0" />
@@ -101,15 +100,22 @@ export default function HomePage() {
                 <div className="opacity-0 animate-fade-in animation-delay-400 flex flex-wrap items-center gap-4">
                   <PrimaryCTA variant="hero" />
                   <Link 
-                    href="/services" 
+                    href="#membership-plans" 
                     className="btn-outline btn-shine"
                   >
                     Membership Plans
                   </Link>
                 </div>
 
+                {/* Atlas Note */}
+                <div className="opacity-0 animate-fade-in animation-delay-450 mt-6">
+                  <p className="text-white/40 text-sm">
+                    All intake, scheduling, messaging, and visits occur securely inside Atlas.
+                  </p>
+                </div>
+
                 {/* Trust Indicators - Single row, consolidated */}
-                <div className="opacity-0 animate-fade-in animation-delay-500 mt-14 pt-8 border-t border-white/8">
+                <div className="opacity-0 animate-fade-in animation-delay-500 mt-10 pt-8 border-t border-white/8">
                   <div className="flex flex-wrap items-center gap-8">
                     <div className="flex items-center gap-2 text-white/40 text-sm">
                       <Shield className="w-4 h-4 text-sfm-gold/70" />
@@ -214,11 +220,10 @@ export default function HomePage() {
               Who We Serve
             </span>
             <h2 className="text-display-md text-sfm-navy mb-6">
-              Care That Fits Your Life
+              Who We Serve
             </h2>
             <p className="text-lg text-sfm-text-muted leading-relaxed">
-              From busy professionals to growing families, our virtual-first model adapts to how you live. 
-              Premium primary care, wherever you are in Washington State.
+              Whether you are a busy professional, a growing family, tech-forward, or focused on proactive health, our virtual-first model adapts to your life.
             </p>
           </ScrollReveal>
 
@@ -227,22 +232,26 @@ export default function HomePage() {
               { 
                 src: '/images/telehealth-video-visit.png', 
                 alt: 'Professional woman enjoying a video consultation with her physician from home',
-                label: 'Busy Professionals'
+                label: 'Busy Professionals',
+                description: 'Rapid support for high-performing leaders who cannot afford delays.'
               },
               { 
                 src: '/images/patient-tablet-seattle.png', 
                 alt: 'Man reviewing health information on tablet with Seattle skyline in background',
-                label: 'Tech-Forward Care'
+                label: 'Tech-Forward Patients',
+                description: 'Digital-first care with modern workflows designed for clarity and follow-through.'
               },
               { 
                 src: '/images/family-gathering-pnw.png', 
                 alt: 'Multigenerational family enjoying time together in the Pacific Northwest',
-                label: 'Families'
+                label: 'Families',
+                description: 'Continuity for every member of your household with one physician who knows your story.'
               },
               { 
                 src: '/images/woman-tablet-thoughtful.png', 
                 alt: 'Woman thoughtfully reviewing her health plan on a tablet',
-                label: 'Proactive Health'
+                label: 'Proactive Health',
+                description: 'Prevention and long-term planning for patients who invest in longevity.'
               },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
@@ -253,9 +262,10 @@ export default function HomePage() {
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy/80 via-sfm-navy/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy/90 via-sfm-navy/30 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-6">
-                    <p className="text-white font-display text-sm lg:text-base">{item.label}</p>
+                    <p className="text-white font-display text-sm lg:text-base mb-1">{item.label}</p>
+                    <p className="text-white/70 text-xs lg:text-sm leading-snug hidden sm:block">{item.description}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -275,11 +285,10 @@ export default function HomePage() {
               The Difference
             </span>
             <h2 className="text-display-lg text-sfm-navy mb-6">
-              What Direct Primary Care Changes
+              Why Direct Primary Care Works
             </h2>
             <p className="text-lg text-sfm-text-muted">
-              Traditional insurance-based primary care has structural problems that cannot be fixed 
-              within the system. DPC removes those constraints entirely.
+              Insurance-driven systems are built for volume, not memory. Direct Primary Care restores time, continuity, and transparency.
             </p>
           </ScrollReveal>
 
@@ -295,10 +304,10 @@ export default function HomePage() {
                   <ul className="space-y-4">
                     {[
                       '15-minute rushed appointments',
-                      '26+ day average wait for visits',
-                      '2,300+ patients per physician',
+                      'Long waits for visits',
+                      'Thousands of patients per physician',
                       'Different provider each visit',
-                      'Bills arrive weeks later',
+                      'Surprise billing',
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-sfm-text-muted">
                         <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 flex-shrink-0" />
@@ -316,11 +325,11 @@ export default function HomePage() {
                   </h3>
                   <ul className="space-y-4">
                     {[
-                      '45-60 minute unhurried visits',
+                      '45 to 60 minute visits',
                       'Same-day or next-day access',
                       'Under 500 patients total',
-                      'Your physician, every time',
-                      'Clear monthly pricing, no surprises',
+                      'Your physician every time',
+                      'Clear monthly pricing',
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-white/80">
                         <CheckCircle2 className="w-5 h-5 text-sfm-gold flex-shrink-0 mt-0.5" />
@@ -351,14 +360,13 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <span className="inline-block text-sfm-gold text-sm font-semibold tracking-widest uppercase mb-6">
-                Is DPC Right For You?
+                Is This Model Right for You?
               </span>
               <h2 className="text-display-md text-sfm-navy mb-6">
-                A Quick Self-Assessment
+                Is This Model Right for You?
               </h2>
               <p className="text-lg text-sfm-text-muted mb-8 leading-relaxed">
-                Direct Primary Care works best for people who value relationship, access, and 
-                continuity over the insurance-driven model. See if it fits your priorities.
+                If you value time with your physician, continuity of care, and predictable pricing, you will fit right in.
               </p>
               
               <div className="flex items-center gap-4">
@@ -366,7 +374,7 @@ export default function HomePage() {
                   href="/resources/primary-care-guide" 
                   className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors font-medium"
                 >
-                  Download our free guide
+                  Download the Free Guide
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -380,11 +388,11 @@ export default function HomePage() {
                 
                 <div className="space-y-4 mb-8">
                   {[
-                    'I want more time with my doctor during visits',
-                    'I value having the same physician who knows my history',
-                    'I want easier access when I need care',
-                    'I prefer transparent, predictable healthcare costs',
-                    'I believe prevention is worth investing in',
+                    'I want more time with my doctor.',
+                    'I want the same physician who knows my history.',
+                    'I want easier access when I need care.',
+                    'I prefer transparent monthly costs.',
+                    'I believe prevention is worth investing in.',
                   ].map((item, index) => (
                     <label 
                       key={index}
@@ -437,18 +445,17 @@ export default function HomePage() {
       </section>
 
       {/* MEMBERSHIP PREVIEW */}
-      <section className="relative py-24 lg:py-32 bg-white overflow-hidden">
+      <section id="membership-plans" className="relative py-24 lg:py-32 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal className="text-center mb-16">
             <span className="inline-block text-sfm-gold text-sm font-semibold tracking-widest uppercase mb-6">
               Membership Plans
             </span>
             <h2 className="text-display-lg text-sfm-navy mb-6">
-              Transparent, Simple Pricing
+              Memberships Built for You
             </h2>
             <p className="text-lg text-sfm-text-muted max-w-2xl mx-auto">
-              Choose the level of care that fits your health goals. All plans include unlimited visits, 
-              direct messaging, and wholesale lab pricing.
+              All plans include unlimited visits, direct messaging, and wholesale lab pricing.
             </p>
           </ScrollReveal>
 
@@ -457,13 +464,13 @@ export default function HomePage() {
               {
                 name: 'Continuity Care',
                 price: 149,
-                description: 'Essential virtual primary care with the continuity traditional medicine has lost.',
+                description: 'Essential primary care designed to restore the continuity traditional medicine has lost.',
                 featured: false,
               },
               {
                 name: 'Precision Care',
                 price: 249,
-                description: 'Everything in Continuity, plus genetic insights and advanced diagnostics.',
+                description: 'Everything in Continuity Care plus precision insights and advanced diagnostics when appropriate.',
                 featured: true,
               },
               {
@@ -535,11 +542,14 @@ export default function HomePage() {
           <div className="flex items-end justify-between mb-12">
             <ScrollReveal>
               <span className="inline-block text-sfm-gold text-sm font-semibold tracking-widest uppercase mb-4">
-                Insights
+                Insights from the Practice
               </span>
               <h2 className="text-display-md text-sfm-navy">
-                From the Practice
+                Insights from the Practice
               </h2>
+              <p className="text-sfm-text-muted mt-4 max-w-xl">
+                Articles on virtual care, prevention, and modern primary care written for clarity and better decision-making.
+              </p>
             </ScrollReveal>
             <Link 
               href="/blog" 
@@ -636,17 +646,16 @@ export default function HomePage() {
           </div>
           
           <h2 id="cta-heading" className="text-3xl sm:text-4xl lg:text-5xl font-display text-white mb-6 leading-tight text-reveal-elite" data-speakable>
-            Begin your care with <span className="text-sfm-gold">Medicine that Remembers</span><span className="text-sfm-gold text-xl align-top">™</span>
+            Begin with a Physician Who <span className="text-sfm-gold">Remembers</span>
           </h2>
           
           <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-            Enroll through our secure patient portal. Complete your health history, 
-            select your membership tier, and begin your care journey.
+            Enrollment starts in Atlas. Secure intake, scheduling, messaging, and visits happen there.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <PrimaryCTA variant="hero" />
-            <Link href="/services" className="btn-outline btn-shine touch-target">
+            <Link href="#membership-plans" className="btn-outline btn-shine touch-target">
               Membership Plans
             </Link>
           </div>
