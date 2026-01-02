@@ -11,9 +11,7 @@ import {
   Users,
   Sparkles,
   CheckCircle2,
-  MessageSquare,
   Zap,
-  Target,
   Brain,
 } from 'lucide-react'
 import type { Metadata } from 'next'
@@ -172,43 +170,25 @@ const breadcrumbJsonLd = {
   ],
 }
 
-// HowTo Schema for patient onboarding journey
+// HowTo Schema - simplified for membership-based care overview
 const howToJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'How to Become a Patient at Sankofa Family Medicine',
-  description: 'Step-by-step guide to joining Sankofa Family Medicine, a virtual-first direct primary care practice serving Washington State.',
-  totalTime: 'P7D',
-  estimatedCost: {
-    '@type': 'MonetaryAmount',
-    currency: 'USD',
-    value: '149-449',
-  },
+  name: 'How Care Works at Sankofa Family Medicine',
+  description: 'Membership-based primary care built on continuity, access, and thoughtful clinical judgment. Care begins with secure onboarding followed by virtual-first visits and long-term physician partnership.',
   step: [
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Become a Patient',
-      text: 'Schedule a brief 15-minute conversation to understand your health goals and ensure our practice is the right fit.',
+      name: 'Secure Onboarding',
+      text: 'Complete secure onboarding in our private clinical platform.',
       url: 'https://sankofafamilymedicine.atlas.md/hub/login',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Alignment Check',
-      text: 'If aligned, we discuss membership options and schedule your comprehensive onboarding.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 3,
-      name: 'Comprehensive Onboarding',
-      text: 'Your 60-minute initial visit covers your complete health history, goals, and creates your personalized care plan.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 4,
-      name: 'Ongoing Partnership',
-      text: 'Same-day messaging, priority appointments, and continuous optimization. Your physician knows your history.',
+      name: 'Ongoing Care Partnership',
+      text: 'Receive virtual-first visits, direct physician access, and long-term partnership over time.',
     },
   ],
 }
@@ -216,33 +196,6 @@ const howToJsonLd = {
 // =============================================================================
 // DATA
 // =============================================================================
-
-const journeySteps = [
-  {
-    step: '01',
-    title: 'Become a Patient',
-    description: 'Schedule a brief 15-minute conversation to understand your health goals and ensure our practice is the right fit.',
-    icon: FileText,
-  },
-  {
-    step: '02',
-    title: 'Alignment Check',
-    description: 'If aligned, we discuss membership options and schedule your comprehensive onboarding.',
-    icon: MessageSquare,
-  },
-  {
-    step: '03',
-    title: 'Comprehensive Onboarding',
-    description: 'Your 60-minute initial visit covers your complete health history, goals, and creates your personalized care plan.',
-    icon: Target,
-  },
-  {
-    step: '04',
-    title: 'Ongoing Partnership',
-    description: 'Same-day messaging, priority appointments, and continuous optimization. Your physician knows your history.',
-    icon: Heart,
-  },
-]
 
 const standards = [
   {
@@ -544,43 +497,30 @@ export default function AboutPage() {
 
         {/* Journey Steps */}
         <section className="py-24 bg-white">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <p className="section-label">How It Works</p>
-              <h2 className="font-display text-3xl md:text-4xl text-sfm-navy mb-4">
-                Your Journey With Us
-              </h2>
-              <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-6" />
-              <p className="text-sfm-navy/60 max-w-2xl mx-auto">
-                From first contact to ongoing partnership, every step is designed for clarity and care.
+          <div className="max-w-3xl mx-auto px-6 text-center">
+            <p className="section-label">How It Works</p>
+            <h2 className="font-display text-3xl md:text-4xl text-sfm-navy mb-6">
+              Membership-Based Primary Care
+            </h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-8" />
+            
+            <div className="space-y-6 text-sfm-navy/70 text-lg leading-relaxed">
+              <p>
+                We practice membership-based primary care built on continuity, access, and thoughtful clinical judgment.
+              </p>
+              <p>
+                Care begins with secure onboarding in our private clinical platform, followed by virtual-first visits, direct physician access, and long-term partnership over time.
               </p>
             </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {journeySteps.map((step, index) => (
-                <div
-                  key={step.step}
-                  className="relative group"
-                >
-                  {/* Connector Line */}
-                  {index < journeySteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-12 left-full w-full h-px bg-gradient-to-r from-sfm-gold/30 to-transparent z-0" />
-                  )}
-                  
-                  <div className="relative bg-sfm-cream rounded-2xl p-6 h-full border border-sfm-gold/10 hover:border-sfm-gold/30 transition-all duration-300 hover:shadow-soft">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sfm-gold to-sfm-gold/80 flex items-center justify-center shadow-gold">
-                        <span className="font-display text-sfm-navy font-semibold">{step.step}</span>
-                      </div>
-                      <div className="w-10 h-10 rounded-lg bg-sfm-azure/10 flex items-center justify-center">
-                        <step.icon className="w-5 h-5 text-sfm-azure" strokeWidth={1.5} />
-                      </div>
-                    </div>
-                    <h3 className="font-display text-lg text-sfm-navy mb-2">{step.title}</h3>
-                    <p className="text-sfm-navy/60 text-sm leading-relaxed">{step.description}</p>
-                  </div>
-                </div>
-              ))}
+            
+            <div className="mt-10">
+              <Link 
+                href="/#care-journey" 
+                className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors font-medium"
+              >
+                Learn how care works
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </section>
