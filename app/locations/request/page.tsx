@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2, MapPin, Globe, Loader2, Heart, Users, Clock } from 'lucide-react'
-import { allUSStates, stateConfigs } from '@/lib/states'
+import { getExpansionStates } from '@/lib/states'
 
 export default function LocationRequestPage() {
   const [formData, setFormData] = useState({
@@ -16,9 +16,8 @@ export default function LocationRequestPage() {
   })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
-  // Filter out states we already serve or have coming soon
-  const configuredCodes = Object.keys(stateConfigs)
-  const availableStates = allUSStates.filter(s => !configuredCodes.includes(s.code))
+  // Get states available for expansion requests (excludes active and coming-soon states)
+  const availableStates = getExpansionStates()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -56,7 +55,8 @@ export default function LocationRequestPage() {
       } else {
         setStatus('error')
       }
-    } catch {
+    } catch (error) {
+      console.error('Location request submission error:', error)
       setStatus('error')
     }
   }
@@ -297,7 +297,10 @@ export default function LocationRequestPage() {
 
                   {status === 'error' && (
                     <p className="text-red-600 dark:text-red-400 text-sm text-center">
-                      Something went wrong. Please try again or contact us directly.
+                      Something went wrong. Please try again or{' '}
+                      <Link href="/contact" className="underline hover:text-red-700 dark:hover:text-red-300">
+                        contact us directly
+                      </Link>.
                     </p>
                   )}
 
