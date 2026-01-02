@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ChevronDown, Phone, Mail, ArrowRight, Stethoscope, Users, FileText, Shield, Heart, MapPin, Sparkles } from 'lucide-react'
+import { Menu, X, ChevronDown, Phone, Mail, ArrowRight, Stethoscope, Users, FileText, Shield, Heart, MapPin, Sparkles, Globe } from 'lucide-react'
 import { ATLAS_PORTAL_URL } from './PrimaryCTA'
 
 export default function Navigation() {
@@ -81,6 +81,7 @@ export default function Navigation() {
       items: [
         { href: '/locations/washington', label: 'Washington', desc: 'Now accepting patients', icon: MapPin, status: 'active' },
         { href: '/locations/south-carolina', label: 'South Carolina', desc: 'Coming 2026', icon: MapPin, status: 'coming-soon' },
+        { href: '/locations/request', label: 'Request a Location', desc: 'Bring us to your area', icon: Globe },
       ],
     },
   }
@@ -93,6 +94,7 @@ export default function Navigation() {
     { href: '/services/what-we-cover', label: 'What We Treat' },
     { href: '/faq', label: 'FAQs' },
     { href: '/locations/washington', label: 'Washington', status: 'active' },
+    { href: '/locations/request', label: 'Request a Location' },
     { href: '/contact', label: 'Contact' },
   ]
 
