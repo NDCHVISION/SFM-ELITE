@@ -178,8 +178,8 @@ export default function ServicesPage() {
               { icon: MessageCircle, label: 'Direct Messaging', desc: 'No phone trees' },
               { icon: FileText, label: 'No Surprise Bills', desc: 'Transparent pricing' },
             ].map((item) => (
-              <div key={item.label} className="text-center p-4">
-                <div className="w-12 h-12 mx-auto mb-3 bg-sfm-gold/10 rounded-xl flex items-center justify-center">
+              <div key={item.label} className="text-center p-4 group rounded-xl hover:bg-sfm-cream/50 transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 mx-auto mb-3 bg-sfm-gold/10 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:bg-sfm-gold/20 transition-all duration-300">
                   <item.icon className="w-6 h-6 text-sfm-gold" />
                 </div>
                 <p className="font-semibold text-sfm-navy text-sm">{item.label}</p>

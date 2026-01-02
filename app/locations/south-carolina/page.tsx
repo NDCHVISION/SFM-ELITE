@@ -204,9 +204,9 @@ export default function SouthCarolinaLocationPage() {
                 {benefits.map((benefit) => (
                   <div 
                     key={benefit.title}
-                    className="flex gap-5 p-6 bg-sfm-cream dark:bg-sfm-surface rounded-xl"
+                    className="flex gap-5 p-6 bg-sfm-cream dark:bg-sfm-surface rounded-xl group hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-sfm-gold/10 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-sfm-gold/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:bg-sfm-gold/20 transition-all duration-300">
                       <benefit.icon className="w-6 h-6 text-sfm-gold" />
                     </div>
                     <div>
