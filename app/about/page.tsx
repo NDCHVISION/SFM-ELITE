@@ -515,7 +515,7 @@ export default function AboutPage() {
             
             <div className="mt-10">
               <Link 
-                href="/#care-journey" 
+                href="/about#care-journey" 
                 className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors font-medium"
               >
                 Learn how care works
