@@ -319,7 +319,7 @@ export default function BlogPost() {
             </Link>
           </div>
           <p className="text-sfm-text-muted text-xs mt-3">
-            This is a brief, non-clinical call to ensure alignment before enrollment.
+            All intake, scheduling, messaging, and visits occur securely inside Atlas.
           </p>
         </div>
       </section>

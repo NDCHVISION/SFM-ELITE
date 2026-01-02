@@ -297,14 +297,21 @@ export default function AboutPage() {
                   <span className="text-white/80 text-sm font-medium tracking-wide">About Our Practice</span>
                 </div>
 
-                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-2 leading-tight">
                   Healthcare Built on{' '}
-                  <span className="text-sfm-gold">Memory</span>
+                  <span className="text-sfm-gold">Continuity</span>
                 </h1>
 
-                <p className="text-white/70 text-lg md:text-xl mb-8 max-w-xl leading-relaxed">
-                  Sankofa Family Medicine was founded on a simple belief: your physician should know 
-                  your history without you having to repeat it. We call this Medicine That Remembers™.
+                <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-white/80 mb-6 leading-tight">
+                  Through Memory
+                </h2>
+
+                <p className="text-white/70 text-lg md:text-xl mb-4 max-w-xl leading-relaxed">
+                  Sankofa Family Medicine practices continuity as a clinical discipline. Your physician knows your history, understands your context, and carries it forward across time. Memory is not a feature here. It is the foundation of care.
+                </p>
+
+                <p className="text-sfm-gold text-lg font-medium mb-8">
+                  Medicine That Remembers™
                 </p>
 
                 <div className="flex flex-wrap gap-4">
@@ -322,7 +329,7 @@ export default function AboutPage() {
                   </Link>
                 </div>
                 <p className="text-white/40 text-xs mt-3">
-                  This is a brief, non-clinical call to ensure alignment before enrollment.
+                  Enrollment begins in Atlas.
                 </p>
               </div>
 
@@ -600,9 +607,8 @@ export default function AboutPage() {
                 
                 <div className="space-y-4 text-sfm-navy/70 leading-relaxed mb-8">
                   <p>
-                    Dr. Nkrumah founded Sankofa Family Medicine to address a fundamental problem 
-                    he witnessed throughout his training: patients forced to repeat their histories 
-                    because no one in the system remembered them.
+                    Sankofa Family Medicine was built to restore relationship-centered primary care. 
+                    This practice is designed around continuity, clinical judgment, and follow-through.
                   </p>
                   <p>
                     Trained at the Medical University of South Carolina and Kadlec Family Medicine 
@@ -645,10 +651,10 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-sfm-navy/60 text-lg mb-4 max-w-2xl mx-auto">
-              Founding members begin with a brief enrollment consultation. If aligned, onboarding and first visit scheduling follow.
+              Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
             </p>
             <p className="text-sfm-navy/40 text-sm mb-10 max-w-2xl mx-auto">
-              This is a brief, non-clinical call to ensure alignment before enrollment.
+              All intake, scheduling, messaging, and visits occur securely inside Atlas.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -85,7 +85,7 @@ export default function ContactPage() {
           <div className="w-24 h-1 bg-gradient-to-r from-transparent via-sfm-gold to-transparent mx-auto mb-10" />
           
           <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-8">
-            Not ready to book a call? Leave your email and we will follow up with next steps and availability.
+            Start in Atlas. Leave your email and we will follow up with next steps and availability.
           </p>
           
           {/* Primary CTA - Atlas Portal */}
@@ -100,7 +100,7 @@ export default function ContactPage() {
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </a>
           <p className="text-white/40 text-sm mt-3">
-            This is a brief, non-clinical call to ensure alignment before enrollment.
+            All intake, scheduling, messaging, and visits occur securely inside Atlas.
           </p>
         </div>
       </section>
@@ -175,7 +175,7 @@ export default function ContactPage() {
               <div className="bg-gradient-to-br from-sfm-navy to-sfm-azure rounded-2xl p-6 md:p-8 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-sfm-gold/10 rounded-full blur-2xl" />
                 <div className="relative">
-                  <p className="text-sfm-gold text-sm font-medium mb-2">Ready to get started?</p>
+                  <p className="text-sfm-gold text-sm font-medium mb-2">Ready to begin?</p>
                   <h3 className="font-display text-2xl mb-3">Become a Patient</h3>
                   <p className="text-white/70 text-sm mb-6 leading-relaxed">
                     A brief conversation to ensure Sankofa Family Medicine is the right fit for your health journey.
@@ -186,7 +186,7 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sfm-gold font-semibold group"
                   >
-                    Schedule now
+                    Begin enrollment
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>

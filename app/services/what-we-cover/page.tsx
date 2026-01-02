@@ -1072,7 +1072,7 @@ export default function ServicesPage() {
             </h2>
 
             <p className="text-sfm-navy/60 text-lg mb-10 max-w-2xl mx-auto">
-              Schedule a brief enrollment consultation to see if our approach aligns with your health goals.
+              Start in Atlas to see if our approach aligns with your health goals.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
