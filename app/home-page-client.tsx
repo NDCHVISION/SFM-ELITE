@@ -636,29 +636,13 @@ export default function HomePage() {
           </div>
           
           <h2 id="cta-heading" className="text-3xl sm:text-4xl lg:text-5xl font-display text-white mb-6 leading-tight text-reveal-elite" data-speakable>
-            Begin Your Care Journey
+            Begin your care with <span className="text-sfm-gold">Medicine that Remembers</span><span className="text-sfm-gold text-xl align-top">™</span>
           </h2>
           
           <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
             Enroll through our secure patient portal. Complete your health history, 
-            select your membership tier, and begin your care with Medicine That Remembers.
+            select your membership tier, and begin your care journey.
           </p>
-
-          {/* Physician Preview - Refined with shimmer */}
-          <div className="inline-flex items-center gap-4 mb-10 p-4 bg-white/5 rounded-2xl backdrop-blur-sm border border-white/8 spotlight-hover">
-            <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-sfm-gold/40 image-fade-border pulse-glow-elite">
-              <Image
-                src="/images/dr-nkrumah-thoughtful.png"
-                alt="Dr. Yaw Nkrumah"
-                fill
-                className="object-cover object-top"
-              />
-            </div>
-            <div className="text-left">
-              <p className="text-white font-medium text-sm">Dr. Yaw Nkrumah, MD</p>
-              <p className="text-white/50 text-xs">Board Certified Family Medicine</p>
-            </div>
-          </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <PrimaryCTA variant="hero" />

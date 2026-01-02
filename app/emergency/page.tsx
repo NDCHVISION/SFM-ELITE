@@ -651,7 +651,7 @@ export default function EmergencyPage() {
       <EmergencyBanner />
       
       {/* Hero Section */}
-      <section className="pt-44 lg:pt-48 pb-16 bg-gradient-to-b from-white via-sfm-cream/20 to-sfm-cream/50 relative overflow-hidden">
+      <section className="pt-48 lg:pt-56 pb-20 bg-gradient-to-b from-white via-sfm-cream/20 to-sfm-cream/50 relative overflow-hidden">
         <div className="absolute top-1/4 right-0 w-96 h-96 bg-red-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-sfm-azure/5 rounded-full blur-3xl" />
         
@@ -678,7 +678,7 @@ export default function EmergencyPage() {
 
       {/* Main Content */}
       <main className="bg-white">
-        <div className="max-w-4xl mx-auto px-6 py-12">
+        <div className="max-w-4xl mx-auto px-6 py-16 lg:py-20">
           <StateSelector selectedState={selectedState} onStateChange={handleStateChange} />
           <DecisionGuide />
           <KeyPhoneNumbers selectedState={selectedState} />
@@ -705,7 +705,7 @@ export default function EmergencyPage() {
       </main>
 
       {/* Disclaimer */}
-      <section className="bg-sfm-cream py-8">
+      <section className="bg-sfm-cream py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-xs text-sfm-text-muted">
             This information is for educational purposes only and does not constitute medical advice. 

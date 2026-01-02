@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Linkedin, Facebook, Phone, Mail, ArrowRight, MapPin, Clock, Shield, Sparkles } from 'lucide-react'
+import { Linkedin, Facebook, Instagram, Phone, Mail, ArrowRight, MapPin, Clock, Shield, Sparkles } from 'lucide-react'
 import { ATLAS_PORTAL_URL } from './PrimaryCTA'
 
 export default function Footer() {
@@ -12,7 +12,7 @@ export default function Footer() {
     practice: {
       title: 'Practice',
       links: [
-        { label: 'Meet Dr. Nkrumah', href: '/founder' },
+        { label: 'Meet Our Founder', href: '/founder' },
         { label: 'Membership Plans', href: '/services' },
         { label: 'What We Treat', href: '/services/what-we-cover' },
         { label: 'FAQs', href: '/faq' },
@@ -173,6 +173,16 @@ export default function Footer() {
                 aria-label="Follow Sankofa Family Medicine on Facebook"
               >
                 <Facebook size={20} />
+              </a>
+              <a
+                href="https://www.instagram.com/sankofafamilymedicine/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 
+                  hover:bg-sfm-gold hover:border-sfm-gold hover:text-sfm-navy transition-all duration-300"
+                aria-label="Follow Sankofa Family Medicine on Instagram"
+              >
+                <Instagram size={20} />
               </a>
             </div>
           </div>
