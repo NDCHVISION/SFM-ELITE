@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Linkedin, Facebook, Instagram, Phone, Mail, MapPin, Clock, Shield, Sparkles } from 'lucide-react'
+import { Linkedin, Facebook, Instagram, Phone, Mail, MapPin, Clock, Shield } from 'lucide-react'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -65,11 +65,10 @@ export default function Footer() {
                 />
                 <div>
                   <span className="font-display text-2xl lg:text-3xl text-white leading-none tracking-tight group-hover:text-sfm-gold transition-colors duration-300">
-                    Sankofa Family Medicine
+                    Sankofa Family Medicine<sup className="text-[14px]">™</sup>
                   </span>
-                  <span className="flex items-center gap-2 text-sfm-gold text-sm font-semibold tracking-wider uppercase mt-2">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    Medicine That Remembers<sup className="text-[8px]">&#8482;</sup>
+                  <span className="text-sfm-gold text-sm font-semibold tracking-wider uppercase mt-2">
+                    Medicine That Remembers<sup className="text-[8px]">®</sup>
                   </span>
                 </div>
               </div>

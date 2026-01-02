@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ChevronDown, Phone, Mail, ArrowRight, Stethoscope, Users, FileText, Shield, Heart, MapPin, Sparkles, Globe } from 'lucide-react'
+import { Menu, X, ChevronDown, Phone, Mail, ArrowRight, Stethoscope, Users, FileText, Shield, Heart, MapPin, Globe } from 'lucide-react'
 import { ATLAS_PORTAL_URL } from './PrimaryCTA'
 
 export default function Navigation() {
@@ -163,10 +163,9 @@ export default function Navigation() {
               />
               <div className="hidden sm:flex flex-col ml-3.5">
                 <span className="font-display text-lg text-sfm-navy dark:text-sfm-text leading-tight tracking-tight group-hover:text-sfm-azure transition-colors duration-300">
-                  Sankofa Family Medicine
+                  Sankofa Family Medicine<sup className="text-[10px]">™</sup>
                 </span>
                 <span className="text-[10px] text-sfm-gold font-semibold tracking-wider uppercase flex items-center gap-1">
-                  <Sparkles className="w-2.5 h-2.5" />
                   Medicine That Remembers
                 </span>
               </div>
@@ -307,9 +306,8 @@ export default function Navigation() {
                 unoptimized
               />
               <div>
-                <span className="font-display text-lg text-sfm-navy dark:text-sfm-text block leading-tight">Sankofa</span>
-                <span className="text-[10px] text-sfm-gold font-semibold uppercase tracking-wide flex items-center gap-1">
-                  <Sparkles className="w-2.5 h-2.5" />
+                <span className="font-display text-lg text-sfm-navy dark:text-sfm-text block leading-tight">Sankofa<sup className="text-[8px]">™</sup></span>
+                <span className="text-[10px] text-sfm-gold font-semibold uppercase tracking-wide">
                   Medicine That Remembers
                 </span>
               </div>
