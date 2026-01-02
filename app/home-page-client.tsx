@@ -64,10 +64,10 @@ export default function HomePage() {
                 <div className="overflow-hidden mb-10">
                   <h1 className="opacity-0 animate-hero-text animation-delay-200" data-speakable>
                     <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display text-white leading-[0.92] mb-4">
-                      Remembered,
+                      Healthcare Built on Continuity
                     </span>
-                    <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display text-gold-glow leading-[0.92]">
-                      Not Rushed
+                    <span className="block text-2xl sm:text-3xl lg:text-4xl font-display text-gold-glow leading-[0.92]">
+                      Through Memory
                     </span>
                   </h1>
                 </div>
@@ -75,8 +75,9 @@ export default function HomePage() {
                 {/* Subheadline - Refined */}
                 <div className="opacity-0 animate-fade-in animation-delay-300 mb-12">
                   <p className="text-lg lg:text-xl text-white/55 leading-relaxed max-w-lg">
-                    Premium primary care rooted in continuity, relationship, and respect. 
-                    One doctor knows your story, understands your context, and stays with you.
+                    Sankofa Family Medicine practices continuity as a clinical discipline. 
+                    Your physician knows your history, understands your context, and carries it forward across time. 
+                    Memory is not a feature here. It is the foundation of care.
                   </p>
                 </div>
 
@@ -107,10 +108,13 @@ export default function HomePage() {
                   </Link>
                 </div>
 
-                {/* Atlas Note */}
+                {/* Signature Line */}
                 <div className="opacity-0 animate-fade-in animation-delay-450 mt-6">
+                  <p className="text-sfm-gold font-display text-lg mb-2">
+                    Medicine That Remembers™
+                  </p>
                   <p className="text-white/40 text-sm">
-                    All intake, scheduling, messaging, and visits occur securely inside Atlas.
+                    Enrollment begins in Atlas.
                   </p>
                 </div>
 
