@@ -510,7 +510,7 @@ export default function HomePage() {
                         : 'text-sfm-azure hover:text-sfm-gold'
                     }`}
                   >
-                    Learn more <ArrowRight className="w-4 h-4" />
+                    View Plan Details <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </ScrollReveal>

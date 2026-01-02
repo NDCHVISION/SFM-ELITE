@@ -7,7 +7,7 @@ const contactSchema = {
       '@type': 'ContactPage',
       '@id': 'https://sankofafamilymedicine.com/contact/#page',
       name: 'Contact Sankofa Family Medicine',
-      description: 'Book a enrollment consultation or get in touch for virtual-first direct primary care in Washington State',
+      description: 'Become a patient through our secure Atlas portal for virtual-first direct primary care in Washington State',
       url: 'https://sankofafamilymedicine.com/contact',
       mainEntity: {
         '@type': 'MedicalBusiness',
@@ -39,10 +39,10 @@ const contactSchema = {
 
 export const metadata: Metadata = {
   title: 'Contact | Become a Patient | Sankofa Family Medicine | Virtual Direct Primary Care',
-  description: 'Book a 15-minute enrollment consultation with Sankofa Family Medicine. Virtual-first direct primary care (DPC) for patients across Washington State. Medicine That Remembers solves healthcare fragmentation through continuity, genetic testing, and precision medicine.',
+  description: 'Become a patient at Sankofa Family Medicine through our secure Atlas portal. Virtual-first direct primary care (DPC) for patients across Washington State. Medicine That Remembers solves healthcare fragmentation through continuity, genetic testing, and precision medicine.',
   keywords: [
     'Sankofa Family Medicine contact',
-    'book enrollment consultation DPC',
+    'become a patient DPC',
     'direct primary care Washington',
     'virtual DPC signup',
     'Medicine That Remembers',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Contact | Become a Patient | Sankofa Family Medicine',
-    description: 'Book a 15-minute enrollment consultation for virtual-first direct primary care (DPC) in Washington State. Founding members receive exclusive pricing benefits.',
+    description: 'Become a patient through our secure Atlas portal for virtual-first direct primary care (DPC) in Washington State. Founding members receive exclusive pricing benefits.',
     url: 'https://sankofafamilymedicine.com/contact',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Contact Us | Sankofa Family Medicine',
-    description: 'Book a enrollment consultation for premium virtual primary care in Washington State.',
+    description: 'Become a patient through our secure Atlas portal for premium virtual primary care in Washington State.',
     images: ['/images/og-image.png'],
   },
   alternates: {

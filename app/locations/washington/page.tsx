@@ -134,7 +134,7 @@ export default function WashingtonLocationPage() {
               </Link>
             </div>
             <p className="text-white/40 text-xs mb-12">
-              This is a brief, non-clinical call to ensure alignment before enrollment.
+              All intake, scheduling, messaging, and visits occur securely inside Atlas.
             </p>
 
             {/* Trust Points */}
@@ -331,10 +331,10 @@ export default function WashingtonLocationPage() {
           </h2>
 
           <p className="text-white/60 text-lg mb-4 max-w-2xl mx-auto">
-            Founding members begin with a brief enrollment consultation. If aligned, onboarding and first visit scheduling follow.
+            Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
           </p>
           <p className="text-white/40 text-sm mb-12 max-w-2xl mx-auto">
-            This is a brief, non-clinical call to ensure alignment before enrollment.
+            All intake, scheduling, messaging, and visits occur securely inside Atlas.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

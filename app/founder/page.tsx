@@ -379,10 +379,8 @@ export default function FounderPage() {
           
           <div className="space-y-6 text-muted leading-relaxed">
             <p>
-              Throughout my training, I encountered two realities. The first: healthcare systems that 
-              fragment care, rush visits, and force patients to repeat their stories to strangers. 
-              The second: exceptional clinicians who showed me what medicine could look like when given 
-              the time and structure to do it right.
+              Sankofa Family Medicine was built to restore relationship-centered primary care. 
+              This practice is designed around continuity, clinical judgment, and follow-through.
             </p>
             <p>
               I built Sankofa Family Medicine to bridge that gap, to create a practice where continuity 
@@ -419,10 +417,10 @@ export default function FounderPage() {
             <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
           </h2>
           <p className="text-white/60 text-lg md:text-xl mb-4 max-w-2xl mx-auto">
-            Founding members begin with a brief enrollment consultation. If aligned, onboarding and first visit scheduling follow.
+            Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
           </p>
           <p className="text-white/40 text-sm mb-12 max-w-2xl mx-auto">
-            This is a brief, non-clinical call to ensure alignment before enrollment.
+            All intake, scheduling, messaging, and visits occur securely inside Atlas.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
