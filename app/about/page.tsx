@@ -297,14 +297,21 @@ export default function AboutPage() {
                   <span className="text-white/80 text-sm font-medium tracking-wide">About Our Practice</span>
                 </div>
 
-                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-2 leading-tight">
                   Healthcare Built on{' '}
-                  <span className="text-sfm-gold">Memory</span>
+                  <span className="text-sfm-gold">Continuity</span>
                 </h1>
 
-                <p className="text-white/70 text-lg md:text-xl mb-8 max-w-xl leading-relaxed">
-                  Sankofa Family Medicine was founded on a simple belief: your physician should know 
-                  your history without you having to repeat it. We call this Medicine That Remembers™.
+                <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-white/80 mb-6 leading-tight">
+                  Through Memory
+                </h2>
+
+                <p className="text-white/70 text-lg md:text-xl mb-4 max-w-xl leading-relaxed">
+                  Sankofa Family Medicine practices continuity as a clinical discipline. Your physician knows your history, understands your context, and carries it forward across time. Memory is not a feature here. It is the foundation of care.
+                </p>
+
+                <p className="text-sfm-gold text-lg font-medium mb-8">
+                  Medicine That Remembers™
                 </p>
 
                 <div className="flex flex-wrap gap-4">
