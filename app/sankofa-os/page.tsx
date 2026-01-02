@@ -190,6 +190,128 @@ export default function SankofaOSPage() {
             </div>
           </section>
 
+          {/* Sankofa OS Section - Detailed Overview */}
+          <section className="relative py-24 px-6 bg-white/[0.02] border-t border-white/[0.06]">
+            <div className="max-w-4xl mx-auto">
+              <div className="mb-16">
+                <h2 className="font-display text-4xl sm:text-5xl text-white mb-6 leading-tight">
+                  Sankofa OS<span className="tm">™</span>: The Clinical Infrastructure for Medicine That Remembers<span className="tm">™</span>
+                </h2>
+                <p className="text-sfm-gold text-xl sm:text-2xl font-display mb-8">
+                  Built for Continuity. Designed for Trust. Powered by Human Judgment.
+                </p>
+              </div>
+
+              <div className="space-y-8 text-white/70 text-lg leading-relaxed mb-12">
+                <p>
+                  Sankofa OS<span className="tm">™</span> is our intelligent care framework: a living standard that connects clinical expertise with advanced data-driven tools.
+                </p>
+                
+                <p>
+                  It helps our clinical team see the full picture of each patient&apos;s health: clinical histories, genetic profiles, and lab trends in one continuous thread.
+                </p>
+                
+                <p>
+                  Through secure integrations with trusted partners like Nexus Health (nexushealth.me), we incorporate genomic and laboratory insights directly into clinical decision-making. Nexus Health&apos;s BioMatrix<span className="tm">™</span> decision engine analyzes lab, genetic, and intake data to provide structured insights and protocol-ready options that our clinicians review and customize for each patient. This reduces time spent on complex case analysis while preserving clinical judgment. All data is handled within HIPAA-compliant systems that protect your health information and respect your privacy.
+                </p>
+                
+                <div className="bg-white/[0.05] border border-sfm-gold/20 rounded-lg p-6">
+                  <p className="text-sfm-gold font-semibold mb-2">
+                    Important: BioMatrix<span className="tm">™</span> provides clinical decision support; it does not provide diagnosis, and all care decisions are made by licensed clinicians.
+                  </p>
+                </div>
+                
+                <p>
+                  We don&apos;t just remember your history. We translate it, then integrate it with your labs, genetics, and lived experience to guide precise, personalized medical decisions.
+                </p>
+              </div>
+
+              {/* Why Nexus Health Section */}
+              <div className="mb-16">
+                <h3 className="font-display text-3xl text-white mb-8">Why Nexus Health?</h3>
+                
+                <p className="text-white/70 text-lg leading-relaxed mb-6">
+                  Nexus Health was selected for its focus on HIPAA-aligned decision support, physician-led workflows, and precision tools that respect clinical autonomy. BioMatrix<span className="tm">™</span> complements our mission without replacing it.
+                </p>
+                
+                <p className="text-white/70 text-lg font-semibold mb-4">Our partnership criteria required:</p>
+                <ul className="space-y-3 text-white/70 mb-8">
+                  <li className="flex items-start gap-3">
+                    <span className="text-sfm-gold mt-1">•</span>
+                    <span>Proven genomic and laboratory analysis capabilities</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-sfm-gold mt-1">•</span>
+                    <span>Commitment to equity and accessibility in precision health design</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-sfm-gold mt-1">•</span>
+                    <span>Technology that enhances clinical judgment rather than supplanting it</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-sfm-gold mt-1">•</span>
+                    <span>HIPAA-compliant infrastructure with robust privacy controls</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-sfm-gold mt-1">•</span>
+                    <span>Clear positioning as decision support, not autonomous diagnosis or treatment</span>
+                  </li>
+                </ul>
+                
+                <p className="text-white/70 text-lg leading-relaxed">
+                  Nexus Health met all criteria and shares our commitment to designing precision health tools that can serve diverse patient populations. Their platform, already trusted by wellness centers and primary care practices, now extends into our virtual-first model as a validation site for equitable, clinician-led implementation.
+                </p>
+              </div>
+
+              {/* Key Benefits Section */}
+              <div className="mb-16">
+                <h3 className="font-display text-3xl text-white mb-8">Key Benefits of BioMatrix<span className="tm">™</span> Integration</h3>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 rounded-full bg-sfm-gold mt-3 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-white mb-1">Saves 2–4 hours per complex case</p>
+                      <p className="text-white/60">Reduces complex case analysis from hours to structured minutes</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 rounded-full bg-sfm-gold mt-3 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-white mb-1">Supports safer prescribing</p>
+                      <p className="text-white/60">Provides pharmacogenomic guidance matched to your genetic profile</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 rounded-full bg-sfm-gold mt-3 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-white mb-1">Catches risks earlier</p>
+                      <p className="text-white/60">Identifies cardiometabolic risk patterns before problems emerge</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 rounded-full bg-sfm-gold mt-3 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-white mb-1">Reduces cognitive load</p>
+                      <p className="text-white/60">Presents clear, protocol-ready options for clinician review</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Living System Section */}
+              <div className="bg-white/[0.05] border border-sfm-gold/20 rounded-lg p-8">
+                <h3 className="font-display text-2xl text-white mb-4">A Living System, Powered by Partnership</h3>
+                <p className="text-white/70 text-lg leading-relaxed">
+                  Sankofa OS<span className="tm">™</span> is a living clinical framework. While BioMatrix<span className="tm">™</span> strengthens today&apos;s decisions, our team continues developing proprietary physician tools and ethical layers to protect continuity, trust, and equity at scale.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* What It Does - Accordion Section */}
           <section className="relative py-24 px-6 border-t border-white/[0.06]">
             <div className="max-w-4xl mx-auto">
