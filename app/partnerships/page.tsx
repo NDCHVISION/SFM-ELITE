@@ -104,19 +104,19 @@ export default function PartnershipsPage() {
               </p>
               <div className="flex flex-col gap-3">
                 <a
-                  href="https://nexushealth.me"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-sfm-gold/20 text-sfm-gold font-medium rounded-lg hover:bg-sfm-gold/30 border border-sfm-gold/40 transition-all"
+                  href="/sankofa-os#nexus-health"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-sfm-gold text-sfm-navy font-semibold rounded-lg hover:bg-sfm-gold-light transition-all shadow-lg shadow-sfm-gold/25"
                 >
-                  Visit Nexus Health
+                  Learn About Integration
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <a
-                  href="/sankofa-os#nexus-health"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-sfm-azure/20 text-sfm-azure font-medium rounded-lg hover:bg-sfm-azure/30 border border-sfm-azure/40 transition-all"
+                  href="https://nexushealth.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-white/10 text-white font-medium rounded-lg hover:bg-white/15 border border-white/20 transition-all"
                 >
-                  Learn About Integration
+                  Visit Nexus Health
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

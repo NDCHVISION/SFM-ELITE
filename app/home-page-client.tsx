@@ -64,10 +64,10 @@ export default function HomePage() {
                 <div className="overflow-hidden mb-10">
                   <h1 className="opacity-0 animate-hero-text animation-delay-200" data-speakable>
                     <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display text-white leading-[0.92] mb-4">
-                      Healthcare Built on Continuity
+                      <span className="text-sfm-gold">Remembered</span>, Not
                     </span>
-                    <span className="block text-2xl sm:text-3xl lg:text-4xl font-display text-gold-glow leading-[0.92]">
-                      Through Memory
+                    <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display text-white leading-[0.92]">
+                      Rushed
                     </span>
                   </h1>
                 </div>
