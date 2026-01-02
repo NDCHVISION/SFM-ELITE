@@ -2,8 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Linkedin, Facebook, Instagram, Phone, Mail, ArrowRight, MapPin, Clock, Shield, Sparkles } from 'lucide-react'
-import { ATLAS_PORTAL_URL } from './PrimaryCTA'
+import { Linkedin, Facebook, Instagram, Phone, Mail, MapPin, Clock, Shield, Sparkles } from 'lucide-react'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -47,46 +46,6 @@ export default function Footer() {
 
       {/* Main Footer Content */}
       <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-24">
-        
-        {/* CTA Banner - V30 Elite Premium */}
-        <div className="bg-gradient-to-r from-white/10 via-white/6 to-white/10 backdrop-blur-2xl border border-white/15 rounded-[2rem] p-12 mb-20 relative overflow-hidden">
-          {/* Subtle glow effect */}
-          <div className="absolute top-0 right-1/4 w-[300px] h-[300px] bg-sfm-gold/10 rounded-full blur-[100px] pointer-events-none" />
-          <div className="relative flex flex-col lg:flex-row items-center justify-between gap-10">
-            <div className="text-center lg:text-left">
-              <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
-                <span className="flex items-center gap-2 px-4 py-1.5 bg-emerald-500/20 rounded-full">
-                  <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                  <span className="text-emerald-300 text-sm font-medium">Now Accepting Patients</span>
-                </span>
-              </div>
-              <h3 className="text-white font-display text-2xl lg:text-3xl mb-2">
-                Begin Your Care with <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-base align-top">&#8482;</span>
-              </h3>
-              <p className="text-white/50 text-sm max-w-md">Join our practice and experience healthcare built on relationship, continuity, and trust.</p>
-            </div>
-            <div className="flex flex-col sm:flex-row items-center gap-4">
-              <a
-                href={ATLAS_PORTAL_URL}
-                className="inline-flex items-center gap-3 px-10 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-2xl 
-                  shadow-gold hover:bg-sfm-gold-light hover:shadow-gold-hover transition-all duration-300 group relative overflow-hidden"
-              >
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-                <span className="text-lg relative">Become a Patient</span>
-                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1.5 relative" />
-              </a>
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-3 px-10 py-4 bg-sfm-azure text-white font-semibold rounded-2xl 
-                  shadow-lg hover:bg-sfm-azure/90 hover:shadow-xl transition-all duration-300 group"
-              >
-                <span className="text-lg">View Membership Options</span>
-                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-            </div>
-          </div>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
           
           {/* Brand Column - V30 Elite */}
