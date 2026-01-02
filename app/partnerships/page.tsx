@@ -76,17 +76,60 @@ export default function PartnershipsPage() {
         </div>
       </section>
 
-      {/* Current Partners - Simple mention */}
-      <section className="py-16 bg-white" aria-labelledby="current-partners">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase mb-4 font-medium">Clinical Infrastructure</p>
-          <p className="text-sfm-navy/70 text-lg">
-            Our{' '}
-            <Link href="/sankofa-os" className="text-sfm-azure hover:text-sfm-navy font-medium underline underline-offset-4 decoration-sfm-gold/50 hover:decoration-sfm-gold transition-colors">
-              Sankofa OS
-            </Link>
-            {' '}platform delivers advanced clinical decision support through BioMatrix integration.
-          </p>
+      {/* Current Partners */}
+      <section className="py-20 bg-white" aria-labelledby="current-partners">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 id="current-partners" className="font-display text-3xl md:text-4xl text-sfm-navy mb-4">
+              Current Partners
+            </h2>
+            <p className="text-sfm-navy/60 max-w-2xl mx-auto">
+              Organizations helping us deliver Medicine That Remembers™
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Nexus Health */}
+            <div className="bg-gradient-to-br from-sfm-cream to-white rounded-2xl p-8 border border-sfm-gold/20 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 mb-6 bg-sfm-azure/10 rounded-xl flex items-center justify-center">
+                <Brain className="w-6 h-6 text-sfm-azure" aria-hidden="true" />
+              </div>
+              <h3 className="font-display text-2xl text-sfm-navy mb-3">Nexus Health</h3>
+              <p className="text-sfm-navy/70 leading-relaxed mb-4">
+                Clinical decision support through BioMatrix™, providing genomic and laboratory analysis integrated into our care workflows.
+              </p>
+              <div className="flex flex-col gap-3">
+                <a
+                  href="https://nexushealth.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-sfm-azure text-white font-medium rounded-lg hover:bg-sfm-navy transition-colors"
+                >
+                  Visit Nexus Health
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <Link
+                  href="/sankofa-os#nexus-health"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 border border-sfm-azure text-sfm-azure font-medium rounded-lg hover:bg-sfm-azure/5 transition-colors"
+                >
+                  Learn About Integration
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Future Partners Placeholder */}
+            <div className="bg-gradient-to-br from-sfm-cream to-white rounded-2xl p-8 border border-sfm-gold/20 border-dashed opacity-60">
+              <div className="w-12 h-12 mb-6 bg-sfm-gold/10 rounded-xl flex items-center justify-center">
+                <Briefcase className="w-6 h-6 text-sfm-gold" aria-hidden="true" />
+              </div>
+              <h3 className="font-display text-2xl text-sfm-navy/70 mb-3">Coming Soon</h3>
+              <p className="text-sfm-navy/60 leading-relaxed mb-4">
+                Additional strategic partnerships that amplify our commitment to precision, continuity, and equitable care.
+              </p>
+              <p className="text-sfm-navy/50 text-sm font-medium">More partnerships launching in 2026</p>
+            </div>
+          </div>
         </div>
       </section>
 

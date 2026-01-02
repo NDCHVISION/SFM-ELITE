@@ -210,25 +210,32 @@ export default function SankofaOSPage() {
                 <p>
                   It helps our clinical team see the full picture of each patient&apos;s health: clinical histories, genetic profiles, and lab trends in one continuous thread.
                 </p>
+              </div>
+
+              {/* Nexus Health Section */}
+              <div className="mb-16">
+                <h3 className="font-display text-3xl text-white mb-8" id="nexus-health">Nexus Health</h3>
                 
-                <p>
-                  Through secure integrations with trusted partners like Nexus Health (nexushealth.me), we incorporate genomic and laboratory insights directly into clinical decision-making. Nexus Health&apos;s BioMatrix<span className="tm">™</span> decision engine analyzes lab, genetic, and intake data to provide structured insights and protocol-ready options that our clinicians review and customize for each patient. This reduces time spent on complex case analysis while preserving clinical judgment. All data is handled within HIPAA-compliant systems that protect your health information and respect your privacy.
-                </p>
-                
-                <div className="bg-white/[0.05] border border-sfm-gold/20 rounded-lg p-6">
-                  <p className="text-sfm-gold font-semibold mb-2">
-                    Important: BioMatrix<span className="tm">™</span> provides clinical decision support; it does not provide diagnosis, and all care decisions are made by licensed clinicians.
+                <div className="space-y-8 text-white/70 text-lg leading-relaxed mb-8">
+                  <p>
+                    Through secure integrations with trusted partners like Nexus Health (nexushealth.me), we incorporate genomic and laboratory insights directly into clinical decision-making. Nexus Health&apos;s BioMatrix<span className="tm">™</span> decision engine analyzes lab, genetic, and intake data to provide structured insights and protocol-ready options that our clinicians review and customize for each patient. This reduces time spent on complex case analysis while preserving clinical judgment. All data is handled within HIPAA-compliant systems that protect your health information and respect your privacy.
+                  </p>
+                  
+                  <div className="bg-white/[0.05] border border-sfm-gold/20 rounded-lg p-6">
+                    <p className="text-sfm-gold font-semibold mb-2">
+                      Important: BioMatrix<span className="tm">™</span> provides clinical decision support; it does not provide diagnosis, and all care decisions are made by licensed clinicians.
+                    </p>
+                  </div>
+                  
+                  <p>
+                    We don&apos;t just remember your history. We translate it, then integrate it with your labs, genetics, and lived experience to guide precise, personalized medical decisions.
                   </p>
                 </div>
-                
-                <p>
-                  We don&apos;t just remember your history. We translate it, then integrate it with your labs, genetics, and lived experience to guide precise, personalized medical decisions.
-                </p>
               </div>
 
               {/* Why Nexus Health Section */}
               <div className="mb-16">
-                <h3 className="font-display text-3xl text-white mb-8">Why Nexus Health?</h3>
+                <h3 className="font-display text-2xl text-white mb-6">Why Nexus Health?</h3>
                 
                 <p className="text-white/70 text-lg leading-relaxed mb-6">
                   Nexus Health was selected for its focus on HIPAA-aligned decision support, physician-led workflows, and precision tools that respect clinical autonomy. BioMatrix<span className="tm">™</span> complements our mission without replacing it.
