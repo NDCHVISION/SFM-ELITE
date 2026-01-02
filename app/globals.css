@@ -572,6 +572,78 @@ body {
   color: var(--sfm-azure);
 }
 
+/* Secondary White Button - For dark backgrounds (navy/azure sections)
+   Use when: CTA sections with dark backgrounds, footer banners, hero sections
+   Visual: Semi-transparent white fill with white border, white text */
+.btn-secondary-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.875rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  transition: all var(--duration-normal) var(--ease-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary-white:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary-white:active {
+  transform: translateY(0);
+}
+
+.btn-secondary-white:focus-visible {
+  outline: 2px solid var(--sfm-gold);
+  outline-offset: 3px;
+}
+
+/* Secondary Button - For light backgrounds (white/cream sections)
+   Use when: About page CTAs, light-colored sections, forms
+   Visual: Transparent with azure border, fills azure on hover */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: var(--sfm-navy);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.875rem;
+  border: 2px solid var(--sfm-azure);
+  transition: all var(--duration-normal) var(--ease-smooth);
+}
+
+.btn-secondary:hover {
+  background: var(--sfm-azure);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--sfm-gold);
+  outline-offset: 3px;
+}
+
 /* Touch target sizing */
 .touch-target {
   min-height: 48px;

@@ -283,10 +283,14 @@ export default function WashingtonLocationPage() {
                 </div>
 
                 <h3 className="font-display text-lg text-sfm-navy dark:text-sfm-navy mb-3">Tri-Cities</h3>
-                <div className="grid grid-cols-2 gap-1.5 mb-3">
+                <div className="grid grid-cols-3 gap-1.5 mb-3">
                   <div className="flex items-center gap-2 px-3 py-2 bg-sfm-azure/5 dark:bg-sfm-azure/10 rounded-lg border border-sfm-azure/20">
                     <MapPin className="w-3 h-3 text-sfm-azure" />
                     <span className="text-sm text-sfm-navy">Richland</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-3 py-2 bg-sfm-azure/5 dark:bg-sfm-azure/10 rounded-lg border border-sfm-azure/20">
+                    <MapPin className="w-3 h-3 text-sfm-azure" />
+                    <span className="text-sm text-sfm-navy">Kennewick</span>
                   </div>
                   <div className="flex items-center gap-2 px-3 py-2 bg-sfm-azure/5 dark:bg-sfm-azure/10 rounded-lg border border-sfm-azure/20">
                     <MapPin className="w-3 h-3 text-sfm-azure" />

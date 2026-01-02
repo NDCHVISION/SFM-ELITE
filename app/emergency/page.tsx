@@ -194,6 +194,11 @@ const WA_HOSPITALS: Record<string, Array<{ name: string; designation?: string; a
     { name: 'St. Joseph Medical Center', address: '1717 S J St, Tacoma', phone: '(253) 426-4101' },
     { name: 'Good Samaritan Puyallup', address: '401 15th Ave SE, Puyallup', phone: '(253) 697-4000' },
   ],
+  'Tri-Cities': [
+    { name: 'Kadlec Regional Medical Center', designation: 'Level II Trauma', address: '888 Swift Blvd, Richland', phone: '(509) 946-4611' },
+    { name: 'Trios Southridge Hospital', address: '3810 Plaza Way, Kennewick', phone: '(509) 221-5000' },
+    { name: 'Lourdes Medical Center', address: '520 N 4th Ave, Pasco', phone: '(509) 547-7704' },
+  ],
   'Spokane': [
     { name: 'Providence Sacred Heart', designation: 'Level I Trauma', address: '101 W 8th Ave, Spokane', phone: '(509) 474-3131' },
     { name: 'MultiCare Deaconess', address: '800 W 5th Ave, Spokane', phone: '(509) 473-5800' },
@@ -646,7 +651,7 @@ export default function EmergencyPage() {
       <EmergencyBanner />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-white via-sfm-cream/20 to-sfm-cream/50 relative overflow-hidden">
+      <section className="pt-44 lg:pt-48 pb-16 bg-gradient-to-b from-white via-sfm-cream/20 to-sfm-cream/50 relative overflow-hidden">
         <div className="absolute top-1/4 right-0 w-96 h-96 bg-red-500/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-sfm-azure/5 rounded-full blur-3xl" />
         
