@@ -322,7 +322,7 @@ export default function AboutPage() {
                   </Link>
                 </div>
                 <p className="text-white/40 text-xs mt-3">
-                  This is a brief, non-clinical call to ensure alignment before enrollment.
+                  Enrollment begins in Atlas.
                 </p>
               </div>
 
@@ -600,9 +600,8 @@ export default function AboutPage() {
                 
                 <div className="space-y-4 text-sfm-navy/70 leading-relaxed mb-8">
                   <p>
-                    Dr. Nkrumah founded Sankofa Family Medicine to address a fundamental problem 
-                    he witnessed throughout his training: patients forced to repeat their histories 
-                    because no one in the system remembered them.
+                    Sankofa Family Medicine was built to restore relationship-centered primary care. 
+                    This practice is designed around continuity, clinical judgment, and follow-through.
                   </p>
                   <p>
                     Trained at the Medical University of South Carolina and Kadlec Family Medicine 
@@ -645,10 +644,10 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-sfm-navy/60 text-lg mb-4 max-w-2xl mx-auto">
-              Founding members begin with a brief enrollment consultation. If aligned, onboarding and first visit scheduling follow.
+              Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
             </p>
             <p className="text-sfm-navy/40 text-sm mb-10 max-w-2xl mx-auto">
-              This is a brief, non-clinical call to ensure alignment before enrollment.
+              All intake, scheduling, messaging, and visits occur securely inside Atlas.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

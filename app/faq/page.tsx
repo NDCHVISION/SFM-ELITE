@@ -172,7 +172,7 @@ export default function FAQPage() {
           question: 'How do I become a patient?',
           answer: (
             <div className="space-y-3">
-              <p>Start by booking a brief 15-minute enrollment consultation. If aligned, we will discuss membership options and schedule your comprehensive onboarding.</p>
+              <p>Start in Atlas, our secure patient portal. Complete your intake, select your membership tier, and schedule your first visit directly through the platform.</p>
               <a href="https://sankofafamilymedicine.atlas.md/hub/login" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sfm-azure hover:text-sfm-navy font-medium">
                 Become a Patient <ArrowRight className="ml-2 w-4 h-4" />
               </a>
@@ -185,7 +185,7 @@ export default function FAQPage() {
         },
         {
           question: 'How does enrollment work?',
-          answer: 'Founding members begin with a brief enrollment consultation (15 minutes) to ensure alignment. If aligned, onboarding and first visit scheduling follow. Care can begin as early as the same week, depending on onboarding.'
+          answer: 'Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal. Care can begin as early as the same week, depending on onboarding.'
         },
         {
           question: 'Do I need to transfer my medical records?',
@@ -344,10 +344,10 @@ export default function FAQPage() {
             <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
           </h2>
           <p className="text-white/60 text-lg md:text-xl mb-4 max-w-2xl mx-auto">
-            Founding members begin with a brief enrollment consultation. If aligned, onboarding and first visit scheduling follow.
+            Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
           </p>
           <p className="text-white/40 text-sm mb-12 max-w-2xl mx-auto">
-            This is a brief, non-clinical call to ensure alignment before enrollment.
+            All intake, scheduling, messaging, and visits occur securely inside Atlas.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 

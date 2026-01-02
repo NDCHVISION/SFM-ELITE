@@ -133,7 +133,7 @@ export default function EverettPage() {
             </Link>
           </div>
           <p className="text-white/40 text-xs mt-3">
-            This is a brief, non-clinical call to ensure alignment before enrollment.
+            All intake, scheduling, messaging, and visits occur securely inside Atlas.
           </p>
         </div>
       </section>
@@ -204,10 +204,10 @@ export default function EverettPage() {
             <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
           </h2>
           <p className="text-white/60 mb-4">
-            Founding members begin with a brief enrollment consultation. If aligned, onboarding and first visit scheduling follow.
+            Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
           </p>
           <p className="text-white/40 text-xs mb-8">
-            This is a brief, non-clinical call to ensure alignment before enrollment.
+            All intake, scheduling, messaging, and visits occur securely inside Atlas.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

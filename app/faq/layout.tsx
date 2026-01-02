@@ -86,7 +86,7 @@ FOUNDING MEMBER OFFER:
 - Pricing protected while your membership remains active while membership remains continuous
 
 GETTING STARTED:
-- Book a 15-minute enrollment consultation to ensure alignment
+- Enrollment begins in Atlas, our secure patient portal
 - First visit is 45-60 minute comprehensive intake
 - Records transfer assistance provided
 - Currently serving Washington State only (South Carolina coming 2026)
