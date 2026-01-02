@@ -63,7 +63,7 @@ export default function Navigation() {
     about: {
       label: 'About',
       items: [
-        { href: '/founder', label: 'Meet Dr. Nkrumah', desc: 'Board Certified Family Physician', icon: Users },
+        { href: '/founder', label: 'Meet Our Founder', desc: 'Board Certified Family Physician', icon: Users },
         { href: '/about', label: 'How It Works', desc: 'Our virtual care model', icon: Heart },
         { href: '/faq', label: 'FAQs', desc: 'Common questions answered', icon: FileText },
       ],
@@ -88,7 +88,7 @@ export default function Navigation() {
   // Streamlined mobile nav - reduced to essential items
   const mobileNav = [
     { href: '/', label: 'Home' },
-    { href: '/founder', label: 'Meet Dr. Nkrumah' },
+    { href: '/founder', label: 'Meet Our Founder' },
     { href: '/services', label: 'Membership Plans' },
     { href: '/services/what-we-cover', label: 'What We Treat' },
     { href: '/faq', label: 'FAQs' },
