@@ -136,10 +136,10 @@ export default function ContactPage() {
                   <div className="flex-1 min-w-0">
                     <p className="text-sfm-navy font-display text-lg mb-1">Email</p>
                     <a 
-                      href="mailto:appointments@sankofafamilymedicine.com" 
+                      href="mailto:info@sankofafamilymedicine.com" 
                       className="text-sfm-azure hover:text-sfm-gold transition-colors duration-300 break-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
                     >
-                      appointments@sankofafamilymedicine.com
+                      info@sankofafamilymedicine.com
                     </a>
                   </div>
                 </div>

@@ -628,13 +628,15 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl opacity-50 animate-pulse-slow" />
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden image-lift portrait-premium image-fade-elite">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden image-lift portrait-premium image-fade-elite">
                   <Image
                     src="/images/dr-nkrumah-desk.png"
-                    alt="Dr. Yaw Nkrumah, MD, founder of Sankofa Family Medicine, at his desk"
+                    alt="Dr. Yaw Nkrumah, founder of Sankofa Family Medicine"
                     fill
-                    className="object-cover object-top transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-105"
+                    className="object-cover object-center transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-105"
                   />
+                  {/* Motion overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-sfm-gold/5 via-transparent to-sfm-azure/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                   <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy/80 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <div className="flex flex-wrap gap-2">
