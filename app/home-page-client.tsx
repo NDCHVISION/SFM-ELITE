@@ -262,9 +262,10 @@ export default function HomePage() {
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy/80 via-sfm-navy/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy/90 via-sfm-navy/30 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-6">
-                    <p className="text-white font-display text-sm lg:text-base">{item.label}</p>
+                    <p className="text-white font-display text-sm lg:text-base mb-1">{item.label}</p>
+                    <p className="text-white/70 text-xs lg:text-sm leading-snug hidden sm:block">{item.description}</p>
                   </div>
                 </div>
               </ScrollReveal>
