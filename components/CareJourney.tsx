@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
 import { CheckCircle2 } from 'lucide-react'
 
 export default function CareJourney() {
@@ -32,23 +31,27 @@ export default function CareJourney() {
   const steps = [
     {
       number: 1,
-      title: 'Intake & Evaluation',
-      description: 'We get to know your complete history, goals, and health concerns. This foundation shapes everything we do.',
+      title: 'Become a Patient',
+      description: 'Create your secure Atlas account to begin care. Atlas is our private clinical platform where all intake, consent, messaging, scheduling, and visits take place.',
+      hasCTA: true,
     },
     {
       number: 2,
-      title: 'Personalized Testing',
-      description: 'We run comprehensive labs, genetic panels, and specialized tests tailored specifically to you.',
+      title: 'Complete Secure Intake',
+      description: "After signup, you'll complete your health history, goals, and required consents inside Atlas. This ensures your care begins with full context and continuity.",
+      hasCTA: false,
     },
     {
       number: 3,
-      title: 'Follow-Up & Plan',
-      description: 'We review all results together and build a detailed, actionable plan you understand.',
+      title: 'Initial Visit & Care Planning',
+      description: 'Your first visit is scheduled within Atlas. We review your history, priorities, and concerns, then develop a thoughtful, personalized care plan.',
+      hasCTA: false,
     },
     {
       number: 4,
-      title: 'Ongoing Care & Support',
-      description: 'Regular check-ins, goal tracking, and adjustments. We stay with you every step of the way.',
+      title: 'Ongoing Physician Partnership',
+      description: 'Care continues through secure messaging, follow-up visits, and long-term continuity with a physician who knows your history over time.',
+      hasCTA: false,
     },
   ]
 
@@ -62,14 +65,14 @@ export default function CareJourney() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <p className="text-editorial text-sfm-gold mb-4">
-            Your Care Journey
+            How It Works
           </p>
           <h2 className="text-display-md text-sfm-navy mb-6">
-            What Happens After You Join
+            Your Care Journey
           </h2>
           <div className="divider-gold mx-auto mb-6" />
           <p className="text-muted max-w-2xl mx-auto text-lg">
-            A clear, transparent process designed to build confidence and set expectations from day one.
+            From first decision to long-term partnership, every step is structured for continuity, privacy, and trust.
           </p>
         </div>
 
@@ -92,7 +95,7 @@ export default function CareJourney() {
                 {/* Step Number Circle */}
                 <div className="flex flex-col items-center flex-shrink-0">
                   <div className="w-14 h-14 rounded-full bg-gradient-to-br from-sfm-gold to-sfm-gold-light flex items-center justify-center text-white font-display text-xl font-bold shadow-lg group-hover:shadow-gold transition-shadow duration-300">
-                    {step.number}
+                    {String(step.number).padStart(2, '0')}
                   </div>
                   {/* Connector line (not on last item) */}
                   {index < steps.length - 1 && (
@@ -114,23 +117,27 @@ export default function CareJourney() {
                   <p className="text-muted text-base leading-relaxed ml-10">
                     {step.description}
                   </p>
+                  {step.hasCTA && (
+                    <div className="ml-10 mt-4">
+                      <a 
+                        href="https://sankofafamilymedicine.atlas.md/hub/login" 
+                        className="btn-primary inline-flex items-center"
+                      >
+                        Become a Patient
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA at bottom */}
+        {/* Footer text */}
         <div className="mt-16 text-center">
-          <p className="text-muted mb-6">
-            Take the first step.
+          <p className="text-muted text-sm">
+            All clinical care, communication, scheduling, and documentation occur securely within Atlas.
           </p>
-          <a 
-            href="https://sankofafamilymedicine.atlas.md/hub/login" 
-            className="btn-primary"
-          >
-            Become a Patient
-          </a>
         </div>
       </div>
     </section>
