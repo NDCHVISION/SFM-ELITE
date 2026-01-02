@@ -152,8 +152,8 @@ export default function Navigation() {
             {/* Brand */}
             <Link href="/" className="flex items-center group" aria-label="Sankofa Family Medicine - Home">
               <Image 
-                src="/images/SFM_Trans.png" 
-                alt="Sankofa Family Medicine Logo" 
+                src="/images/sankofa-transparent.png" 
+                alt="Sankofa Bird Logo" 
                 width={96} 
                 height={96}
                 priority
@@ -298,8 +298,8 @@ export default function Navigation() {
           <div className="flex items-center justify-between p-5 border-b border-sfm-cream-dark dark:border-sfm-border">
             <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3">
               <Image 
-                src="/images/SFM_Trans.png" 
-                alt="Sankofa Family Medicine" 
+                src="/images/sankofa-transparent.png" 
+                alt="Sankofa Bird Logo" 
                 width={80} 
                 height={80} 
                 quality={100}
