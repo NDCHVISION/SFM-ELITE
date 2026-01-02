@@ -60,7 +60,9 @@ export default function Footer() {
                   <span className="text-emerald-300 text-sm font-medium">Now Accepting Patients</span>
                 </span>
               </div>
-              <h3 className="text-white font-display text-2xl lg:text-3xl mb-2">Ready to Begin Your Care?</h3>
+              <h3 className="text-white font-display text-2xl lg:text-3xl mb-2">
+                Begin Your Care with <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-base align-top">&#8482;</span>
+              </h3>
               <p className="text-white/50 text-sm max-w-md">Join our practice and experience healthcare built on relationship, continuity, and trust.</p>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -75,10 +77,11 @@ export default function Footer() {
               </a>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-2xl 
-                  border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 btn-shine"
+                className="inline-flex items-center gap-3 px-10 py-4 bg-sfm-azure text-white font-semibold rounded-2xl 
+                  shadow-lg hover:bg-sfm-azure/90 hover:shadow-xl transition-all duration-300 group"
               >
-                Membership Plans
+                <span className="text-lg">View Membership Options</span>
+                <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>

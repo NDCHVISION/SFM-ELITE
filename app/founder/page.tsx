@@ -181,8 +181,8 @@ export default function FounderPage() {
               <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/20 to-transparent rounded-3xl blur-2xl animate-pulse-slow" />
               <div className="image-lift portrait-premium">
                 <Image
-                  src="/images/dr-nkrumah-desk.png"
-                  alt="Dr. Yaw Nkrumah at his desk at Sankofa Family Medicine, reviewing patient care documentation"
+                  src="/images/dr-nkrumah-thoughtful.png"
+                  alt="Dr. Yaw Nkrumah in a contemplative moment at Sankofa Family Medicine"
                   width={600}
                   height={800}
                   className="relative rounded-2xl shadow-2xl object-cover w-full transition-all duration-700 group-hover:scale-[1.02] group-hover:brightness-105"
