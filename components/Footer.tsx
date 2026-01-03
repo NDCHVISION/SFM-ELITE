@@ -237,12 +237,6 @@ export default function Footer() {
             {/* Legal Links - Enhanced */}
             <div className="mt-8 pt-6 border-t border-white/8">
               <div className="flex flex-wrap gap-8 text-sm">
-                <Link href="/privacy" className="text-white/40 hover:text-white/70 transition-colors duration-300">
-                  Privacy Policy
-                </Link>
-                <Link href="/terms" className="text-white/40 hover:text-white/70 transition-colors duration-300">
-                  Terms of Service
-                </Link>
                 <Link href="/accessibility" className="text-white/40 hover:text-white/70 transition-colors duration-300">
                   Accessibility
                 </Link>

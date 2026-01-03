@@ -6,7 +6,7 @@ export default function TrustStrip() {
     {
       icon: Shield,
       label: 'HIPAA-Aligned Communication',
-      href: '/privacy',
+      href: '/about',
     },
     {
       icon: Star,
