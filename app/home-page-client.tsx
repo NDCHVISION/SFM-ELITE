@@ -54,7 +54,7 @@ export default function HomePage() {
                 <div className="opacity-0 animate-fade-in animation-delay-100 mb-10">
                   <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full float-elite">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                    <span className="text-white/70 text-sm font-medium">Virtual Primary Care</span>
+                    <span className="text-white/70 text-sm font-medium">Virtual Concierge Primary Care</span>
                     <span className="w-px h-4 bg-white/20" />
                     <span className="text-white/50 text-sm">Washington State</span>
                   </div>
@@ -75,7 +75,7 @@ export default function HomePage() {
                 {/* Subheadline - Refined */}
                 <div className="opacity-0 animate-fade-in animation-delay-300 mb-12">
                   <p className="text-lg lg:text-xl text-white/55 leading-relaxed max-w-lg">
-                    Sankofa Family Medicine practices continuity as a clinical discipline. 
+                    Sankofa Family Medicine treats continuity as a clinical discipline. 
                     Your physician knows your history, understands your context, and carries it forward across time. 
                     Memory is not a feature here. It is the foundation of care.
                   </p>
@@ -85,9 +85,9 @@ export default function HomePage() {
                 <div className="opacity-0 animate-fade-in animation-delay-350 mb-12">
                   <div className="space-y-4">
                     {[
-                      'Your story travels with you. Every visit carries forward your history and context.',
+                      'Your story travels with you. Every visit builds on your history and context.',
                       'Direct physician access. Message your doctor directly with no call centers or gatekeepers.',
-                      'Transparent memberships from $149 per month. Clear and predictable pricing.',
+                      'Transparent memberships from $195 per month. Clear and predictable pricing for concierge level access.',
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="w-1.5 h-1.5 rounded-full bg-sfm-gold mt-2.5 flex-shrink-0" />
@@ -131,7 +131,7 @@ export default function HomePage() {
                     </div>
                     <div className="flex items-center gap-2 text-white/40 text-sm">
                       <Clock className="w-4 h-4 text-sfm-gold/70" />
-                      <span>Same-Day Access</span>
+                      <span>Same or Next Day Access</span>
                     </div>
                   </div>
                 </div>
