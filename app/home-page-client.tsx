@@ -220,9 +220,6 @@ export default function HomePage() {
       <section className="relative py-20 lg:py-28 bg-white overflow-hidden section-overlay-premium">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
-            <span className="inline-block text-sfm-gold text-sm font-semibold tracking-widest uppercase mb-6">
-              Who We Serve
-            </span>
             <h2 className="text-display-md text-sfm-navy mb-6">
               Who We Serve
             </h2>
@@ -363,9 +360,6 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
-              <span className="inline-block text-sfm-gold text-sm font-semibold tracking-widest uppercase mb-6">
-                Is This Model Right for You?
-              </span>
               <h2 className="text-display-md text-sfm-navy mb-6">
                 Is This Model Right for You?
               </h2>
@@ -545,9 +539,6 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-end justify-between mb-12">
             <ScrollReveal>
-              <span className="inline-block text-sfm-gold text-sm font-semibold tracking-widest uppercase mb-4">
-                Insights from the Practice
-              </span>
               <h2 className="text-display-md text-sfm-navy">
                 Insights from the Practice
               </h2>
