@@ -470,31 +470,34 @@ export default function HomePage() {
               Membership Plans
             </span>
             <h2 className="text-display-lg text-sfm-navy mb-6">
-              Memberships Built for You
+              Concierge Memberships Built for You
             </h2>
+            <p className="text-lg text-sfm-text-muted max-w-2xl mx-auto mb-4">
+              All plans include generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing.
+            </p>
             <p className="text-lg text-sfm-text-muted max-w-2xl mx-auto">
-              All plans include unlimited visits, direct messaging, and wholesale lab pricing.
+              Each membership restores the time, continuity, and trust that make medicine personal again.
             </p>
           </ScrollReveal>
 
           <ScrollRevealGroup className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                name: 'Continuity Care',
-                price: 149,
-                description: 'Essential primary care designed to restore the continuity traditional medicine has lost.',
+                name: 'Continuity Concierge',
+                price: 195,
+                description: 'Essential virtual concierge primary care focused on restoring the continuity traditional medicine has lost. Ideal for individuals who value long term relationships, steady access, and thoughtful care.',
                 featured: false,
               },
               {
-                name: 'Precision Care',
-                price: 249,
-                description: 'Everything in Continuity Care plus precision insights and advanced diagnostics when appropriate.',
+                name: 'Precision Concierge',
+                price: 295,
+                description: 'Everything in Continuity Concierge plus deeper preventive insight, advanced diagnostics when appropriate, and more proactive follow up. Designed for those who want to move beyond treatment toward prevention and precision.',
                 featured: true,
               },
               {
-                name: 'Legacy Health',
+                name: 'Executive Concierge',
                 price: 449,
-                description: 'Concierge-level care with direct phone access and comprehensive health planning.',
+                description: 'Comprehensive concierge level care with direct phone access during extended hours and complete health planning for founders, executives, and professionals. Built for those who value strategic partnership in care and seamless accessibility.',
                 featured: false,
               },
             ].map((tier, i) => (
@@ -504,16 +507,10 @@ export default function HomePage() {
                     ? 'bg-sfm-navy text-white ring-2 ring-sfm-gold hover:bg-sfm-azure/90' 
                     : 'bg-white border border-sfm-border-light hover:border-sfm-border hover:shadow-lg'
                 }`}>
-                  {tier.featured && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="px-4 py-1 bg-sfm-gold text-sfm-navy text-xs font-bold rounded-full">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
                   
                   <h3 className={`font-display text-xl mb-2 ${tier.featured ? 'text-white' : 'text-sfm-navy'}`}>
                     {tier.name}
+                    {tier.featured && <span className="text-sfm-gold"> (Most Popular)</span>}
                   </h3>
                   
                   <div className="mb-4">
