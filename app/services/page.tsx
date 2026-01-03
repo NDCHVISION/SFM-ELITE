@@ -184,7 +184,7 @@ export default function ServicesPage() {
                 <p className="font-semibold text-sfm-navy text-sm">{item.label}</p>
                 <p className="text-xs text-gray-500 mt-1">{item.desc}</p>
               </div>
-            ))}}
+            ))}
           </div>
 
           {/* Trust Badges */}
