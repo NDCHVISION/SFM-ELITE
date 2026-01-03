@@ -64,9 +64,6 @@ export default function CareJourney() {
       <div className="relative max-w-5xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <p className="text-editorial text-sfm-gold mb-4">
-            How Your Care Unfolds
-          </p>
           <h2 className="text-display-md text-sfm-navy mb-6">
             How Your Care Unfolds
           </h2>
