@@ -280,7 +280,7 @@ export default function FounderPage() {
       </section>
 
       {/* Research & Publications */}
-      <section className="py-24 bg-white">
+      <section id="publications" className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="mb-12">
             <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase mb-4">Research</p>
