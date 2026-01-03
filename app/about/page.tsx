@@ -364,7 +364,7 @@ export default function AboutPage() {
               <div>
                 <p className="section-label">The Principle</p>
                 <h2 className="font-display text-3xl md:text-4xl text-sfm-navy mb-6">
-                  What is Sankofa?
+                  What does Sankofa mean?
                 </h2>
                 <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-8" />
                 
@@ -388,16 +388,17 @@ export default function AboutPage() {
 
               <div className="relative group">
                 {/* Gold Sankofa Sculpture */}
-                <div className="relative mb-8">
+                <div className="relative mb-8 ml-8">
                   <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/30 to-sfm-gold/5 rounded-3xl blur-2xl animate-pulse-slow" />
-                  <div className="image-lift image-fade-elite rounded-2xl overflow-hidden">
+                  <div className="image-lift image-fade-elite rounded-3xl overflow-hidden shadow-2xl shadow-sfm-navy/20">
                     <Image
                       src="/images/sankofa-gold-sculpture.png"
                       alt="Modern gold Sankofa sculpture on marble base: the bird looking back while moving forward, symbolizing the retrieval of wisdom from the past"
                       width={400}
                       height={600}
-                      className="relative shadow-2xl object-cover w-full max-w-sm mx-auto transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-110"
+                      className="relative object-cover w-full max-w-sm mx-auto transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-110"
                     />
+                    <div className="absolute inset-0 rounded-3xl pointer-events-none shadow-[inset_0_0_30px_rgba(0,0,0,0.2)]" />
                   </div>
                 </div>
                 
@@ -406,7 +407,7 @@ export default function AboutPage() {
                     {differentiators.map((item, index) => (
                       <div
                         key={item.label}
-                        className={`bg-white rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 ${
+                        className={`bg-white rounded-2xl p-6 shadow-soft hover:shadow-large hover:-translate-y-1 transition-all duration-300 ${
                           index === 0 ? 'border-2 border-sfm-gold/20' : ''
                         }`}
                       >
@@ -573,15 +574,17 @@ export default function AboutPage() {
         <section className="py-24 bg-white">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="relative group">
+              <div className="relative group -ml-8">
                 <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl opacity-50 animate-pulse-slow" />
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden image-lift portrait-premium image-fade-elite">
+                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden image-lift portrait-premium image-fade-elite shadow-2xl shadow-sfm-navy/20">
                   <Image
                     src="/images/dr-nkrumah-desk.png"
                     alt="Dr. Yaw Nkrumah, founder of Sankofa Family Medicine"
                     fill
                     className="object-cover object-left transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-105"
                   />
+                  {/* Blur edge overlay */}
+                  <div className="absolute inset-0 rounded-3xl pointer-events-none shadow-[inset_0_0_40px_rgba(0,0,0,0.25)]" />
                   {/* Motion overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-sfm-gold/5 via-transparent to-sfm-azure/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
                   <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy/80 via-transparent to-transparent" />
