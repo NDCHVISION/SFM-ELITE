@@ -178,9 +178,13 @@ export default function HomePage() {
             <h2 className="text-display-lg text-sfm-navy mb-6">
               Healthcare Should Remember You
             </h2>
+            <p className="text-lg text-sfm-text-muted leading-relaxed mb-6">
+              Sankofa is a West African word and symbol that means &ldquo;go back and retrieve what matters.&rdquo; 
+              In medicine, what matters is continuity, relationship, and the bond between patient and physician.
+            </p>
             <p className="text-lg text-sfm-text-muted leading-relaxed">
-              Sankofa is a West African word meaning &ldquo;go back and retrieve what matters.&rdquo; 
-              In medicine, what matters is continuity, relationship, and the physician-patient bond.
+              At Sankofa Family Medicine, that idea guides everything we do. We believe good care begins with memory, 
+              with knowing your history, your context, and your goals. Lasting relationships make better medicine.
             </p>
           </ScrollReveal>
 
@@ -189,17 +193,17 @@ export default function HomePage() {
               {
                 icon: Heart,
                 title: 'Relationship First',
-                description: 'One physician who knows your history, your context, and your goals. No rotating providers or starting over.',
+                description: 'One physician who knows your history, your context, and your goals. No rotating providers. No retelling your story. No starting over.',
               },
               {
                 icon: Clock,
                 title: 'Time That Matters',
-                description: '45-minute visits as standard. Time to listen, to understand, to address what actually matters to you.',
+                description: 'Visits average about forty-five minutes. Time to listen. Time to understand. Time to address what truly matters to you.',
               },
               {
                 icon: MessageCircle,
                 title: 'Always Accessible',
-                description: 'Direct messaging with your physician. Questions answered promptly, not routed through layers.',
+                description: 'Message your physician directly and receive a response within one business day, Monday through Friday. For urgent concerns, virtual visits are available the same or next business day whenever possible.',
               },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
@@ -213,6 +217,12 @@ export default function HomePage() {
               </ScrollReveal>
             ))}
           </ScrollRevealGroup>
+
+          <ScrollReveal className="max-w-3xl mx-auto text-center mt-16">
+            <p className="text-lg text-sfm-text-muted leading-relaxed italic">
+              Continuity is not an old idea. It is the foundation of care that remembers.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
