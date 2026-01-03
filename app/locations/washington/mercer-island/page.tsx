@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'Mercer Island doctor',
     'Mercer Island primary care',
     'Mercer Island telemedicine',
-    'Mercer Island DPC',
+    'Mercer Island concierge medicine',
     'Mercer Island concierge medicine',
     'Mercer Island virtual doctor',
     'private physician Mercer Island',

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'Olympia virtual doctor',
     'Olympia telemedicine',
     'Olympia primary care',
-    'Olympia DPC',
+    'Olympia concierge medicine',
     'Thurston County doctor',
     'Lacey primary care',
     'Tumwater telemedicine',

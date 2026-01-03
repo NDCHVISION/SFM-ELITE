@@ -3,10 +3,10 @@ import HomePage from './home-page-client'
 
 export const metadata: Metadata = {
   title: 'Sankofa Family Medicine | Medicine That Remembers | Washington State',
-  description: 'Virtual-first direct primary care built on continuity, relationship, and the physician-patient bond. One physician. Your complete history. Every visit. Serving Washington State.',
+  description: 'Virtual-first concierge medicine built on continuity, relationship, and the physician-patient bond. One physician. Your complete history. Every visit. Serving Washington State.',
   keywords: [
     'direct primary care Washington',
-    'virtual DPC',
+    'virtual concierge medicine',
     'Medicine That Remembers',
     'continuity of care',
     'physician-patient relationship',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'Dr. Yaw Nkrumah',
     'telehealth Washington',
     'primary care membership',
-    'DPC doctor Washington State',
+    'concierge medicine doctor Washington State',
     'virtual doctor near me',
     'telemedicine family doctor',
     'genetic testing primary care',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     
     // Enhanced LLM Context (2026)
     'llm-summary': 'Homepage for Sankofa Family Medicine, a virtual-first Direct Primary Care practice in Washington State. Patient enrollment, messaging, scheduling, and all clinical functions are handled through the Atlas patient portal. The website provides information about the practice but does not collect patient health information. Three membership tiers available: Continuity Care ($149/mo), Precision Care ($249/mo), Legacy Health ($449/mo). Founded by Dr. Yaw Nkrumah, MD.',
-    'llm-key-facts': 'Virtual DPC | Washington State | $149-$449/month | Dr. Yaw Nkrumah MD | MUSC Graduate | Board Certified | Atlas Patient Portal | Sankofa means go back and retrieve',
+    'llm-key-facts': 'Virtual Concierge Medicine | Washington State | $149-$449/month | Dr. Yaw Nkrumah MD | MUSC Graduate | Board Certified | Atlas Patient Portal | Sankofa means go back and retrieve',
     
     // Voice Search Optimization
     'voice-search-answer': 'Sankofa Family Medicine is a virtual primary care practice serving Washington State. To become a patient, visit their website and click Become a Patient to access the secure enrollment portal. Membership starts at $149 per month.',

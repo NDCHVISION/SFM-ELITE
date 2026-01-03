@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'Kirkland virtual doctor',
     'Kirkland telemedicine',
     'Kirkland primary care',
-    'Kirkland DPC',
+    'Kirkland concierge medicine',
     'Juanita doctor',
     'Totem Lake primary care',
     'Houghton telemedicine',

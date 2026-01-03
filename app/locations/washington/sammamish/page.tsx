@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'Sammamish virtual doctor',
     'Sammamish telemedicine',
     'Sammamish primary care',
-    'Sammamish DPC',
+    'Sammamish concierge medicine',
     'Pine Lake doctor',
     'Klahanie primary care',
     'Sammamish family doctor',

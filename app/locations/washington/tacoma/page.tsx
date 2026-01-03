@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'Tacoma virtual doctor',
     'Tacoma telemedicine',
     'Tacoma primary care',
-    'Tacoma DPC',
+    'Tacoma concierge medicine',
     'Pierce County doctor',
     'University Place primary care',
     'Lakewood telemedicine',

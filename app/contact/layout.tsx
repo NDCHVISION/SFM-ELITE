@@ -39,19 +39,19 @@ const contactSchema = {
 
 export const metadata: Metadata = {
   title: 'Contact | Become a Patient | Sankofa Family Medicine | Virtual Direct Primary Care',
-  description: 'Become a patient at Sankofa Family Medicine through our secure Atlas portal. Virtual-first direct primary care (DPC) for patients across Washington State. Medicine That Remembers solves healthcare fragmentation through continuity, genetic testing, and precision medicine.',
+  description: 'Become a patient at Sankofa Family Medicine through our secure Atlas portal. Virtual-first concierge medicine for patients across Washington State. Medicine That Remembers solves healthcare fragmentation through continuity, genetic testing, and precision medicine.',
   keywords: [
     'Sankofa Family Medicine contact',
-    'become a patient DPC',
+    'become a patient concierge medicine',
     'direct primary care Washington',
-    'virtual DPC signup',
+    'virtual concierge medicine signup',
     'Medicine That Remembers',
     'healthcare fragmentation solution',
     'founding member',
   ],
   openGraph: {
     title: 'Contact | Become a Patient | Sankofa Family Medicine',
-    description: 'Become a patient through our secure Atlas portal for virtual-first direct primary care (DPC) in Washington State. Founding members receive exclusive pricing benefits.',
+    description: 'Become a patient through our secure Atlas portal for virtual-first concierge medicine in Washington State. Founding members receive exclusive pricing benefits.',
     url: 'https://sankofafamilymedicine.com/contact',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',

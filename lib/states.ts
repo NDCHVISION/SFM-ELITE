@@ -41,7 +41,7 @@ export const stateConfigs: Record<string, StateConfig> = {
     metadata: {
       title: 'Virtual Primary Care in Washington State',
       description: 'Sankofa Family Medicine offers virtual-first direct primary care across Washington State. Same-day appointments, direct physician access, transparent pricing.',
-      keywords: ['Washington virtual doctor', 'Seattle telemedicine', 'WA direct primary care', 'Washington State DPC', 'virtual primary care Washington']
+      keywords: ['Washington virtual doctor', 'Seattle telemedicine', 'WA direct primary care', 'Washington State concierge medicine', 'virtual primary care Washington']
     }
   },
   SC: {
@@ -61,7 +61,7 @@ export const stateConfigs: Record<string, StateConfig> = {
     metadata: {
       title: 'Virtual Primary Care Coming to South Carolina',
       description: 'Sankofa Family Medicine is expanding to South Carolina in 2026. Join the founding member waitlist for priority enrollment and exclusive benefits.',
-      keywords: ['South Carolina virtual doctor', 'Charleston telemedicine', 'SC direct primary care', 'South Carolina DPC coming soon']
+      keywords: ['South Carolina virtual doctor', 'Charleston telemedicine', 'SC direct primary care', 'South Carolina concierge medicine coming soon']
     }
   }
 }

@@ -99,18 +99,18 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is Direct Primary Care?',
+      name: 'What is Concierge Medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'DPC is a membership-based model where you pay a monthly fee directly to your physician, removing insurance from the primary care relationship. This allows for longer visits, easier access, and care focused on you rather than billing codes.',
+        text: 'Concierge medicine is a membership-based model where you pay a monthly fee directly to your physician, removing insurance from the primary care relationship. This allows for longer visits, easier access, and care focused on you rather than billing codes.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Do I still need health insurance with Direct Primary Care?',
+      name: 'Do I still need health insurance with Concierge Medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. DPC covers primary care only. You should maintain coverage for emergencies, hospitalizations, specialists, and catastrophic events. Many members pair DPC with high-deductible health plans.',
+        text: 'Yes. Concierge medicine covers primary care only. You should maintain coverage for emergencies, hospitalizations, specialists, and catastrophic events. Many members pair concierge medicine with high-deductible health plans.',
       },
     },
     {
@@ -142,10 +142,10 @@ const faqSchema = {
 
 export const metadata: Metadata = {
   title: 'Services & Pricing | Virtual Direct Primary Care | Washington State',
-  description: 'Sankofa Family Medicine offers virtual-first direct primary care (DPC) across Washington State. Membership from $149/month includes genetic testing, precision medicine, and cardiometabolic health optimization. Founding members receive Legacy Health benefits at Precision Care pricing.',
+  description: 'Sankofa Family Medicine offers virtual-first concierge medicine across Washington State. Membership from $149/month includes genetic testing, precision medicine, and cardiometabolic health optimization. Founding members receive Legacy Health benefits at Precision Care pricing.',
   keywords: [
     'direct primary care Washington',
-    'DPC membership pricing',
+    'concierge medicine membership pricing',
     'virtual primary care',
     'telehealth Washington State',
     'concierge medicine Seattle',
