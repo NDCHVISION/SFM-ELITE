@@ -244,7 +244,7 @@ export default function HomePage() {
               Who We Serve
             </h2>
             <p className="text-lg text-sfm-text-muted leading-relaxed">
-              Whether you are a busy professional, a growing family, tech-forward, or focused on proactive health, our virtual-first model adapts to your life.
+              Whether you are a busy professional, a growing family, tech forward, or focused on proactive health, our virtual concierge model is built to fit your life.
             </p>
           </ScrollReveal>
 
