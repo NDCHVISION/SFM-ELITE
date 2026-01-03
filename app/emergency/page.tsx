@@ -712,7 +712,7 @@ export default function EmergencyPage() {
             In case of emergency, always call 911.
           </p>
           <p className="text-xs text-sfm-text-light mt-2">
-            © 2025 Sankofa Family Medicine, PLLC. All Rights Reserved.
+            © 2026 Sankofa Family Medicine, PLLC. All Rights Reserved.
           </p>
         </div>
       </section>

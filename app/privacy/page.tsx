@@ -87,7 +87,7 @@ export default function PrivacyPage() {
             <p className="text-white/70 text-lg max-w-2xl mx-auto">
               Sankofa Family Medicine is committed to protecting your privacy and maintaining the confidentiality of your health information.
             </p>
-            <p className="text-white/50 text-sm mt-6">Last updated: December 2025</p>
+            <p className="text-white/50 text-sm mt-6">Last updated: January 2026</p>
           </div>
         </section>
 
