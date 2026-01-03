@@ -3,12 +3,12 @@ import { ArrowRight, ArrowLeft, Check, X } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Why Direct Primary Care? | Traditional vs. Sankofa DPC Comparison',
-  description: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice. Compare: 15 min vs 45 min visits, 26-day waits vs same-day access, 2,300 patients vs 450. See why DPC solves healthcare fragmentation.',
-  keywords: ['direct primary care comparison', 'DPC vs traditional', 'Washington State DPC', 'Medicine That Remembers', 'healthcare fragmentation', 'virtual primary care'],
+  title: 'Why Concierge Medicine? | Traditional vs. Sankofa Concierge Membership Comparison',
+  description: 'Sankofa Family Medicine is a virtual-first concierge medicine practice. Compare: 15 min vs 30-60 min visits, 26-day waits vs same-day access, 2,300 patients vs approximately 200. See why concierge primary care offers a better relationship with your physician.',
+  keywords: ['concierge medicine comparison', 'concierge vs traditional', 'Washington State concierge medicine', 'Medicine That Remembers', 'healthcare fragmentation', 'virtual primary care'],
   openGraph: {
-    title: 'Why Direct Primary Care? | Traditional vs. Sankofa DPC Comparison',
-    description: 'See the evidence-based differences: 15 min vs 45 min visits, 26-day waits vs same-day access. Direct primary care solves healthcare fragmentation.',
+    title: 'Why Concierge Medicine? | Traditional vs. Sankofa Concierge Membership Comparison',
+    description: 'See the evidence-based differences: 15 min vs 30-60 min visits, 26-day waits vs same-day access. Concierge primary care offers a better relationship with your physician.',
     url: 'https://sankofafamilymedicine.com/compare',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Compare Traditional vs Direct Primary Care Sankofa Family Medicine',
+        alt: 'Compare Traditional vs Concierge Medicine Sankofa Family Medicine',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Why Direct Primary Care? | Sankofa Family Medicine',
-    description: 'See the evidence-based differences: 15 min vs 45 min visits, 26-day waits vs same-day access.',
+    title: 'Why Concierge Medicine? | Sankofa Family Medicine',
+    description: 'See the evidence-based differences: 15 min vs 30-60 min visits, 26-day waits vs same-day access.',
     images: ['/images/og-image.png'],
   },
   alternates: {
@@ -57,7 +57,7 @@ const structuredData = {
     {
       '@type': 'MedicalWebPage',
       name: 'Healthcare Model Comparison',
-      description: 'Side-by-side evidence-based comparison between traditional primary care and Direct Primary Care',
+      description: 'Side-by-side evidence-based comparison between typical insurance-based primary care and Concierge Medicine',
       specialty: { '@type': 'MedicalSpecialty', name: 'Family Medicine' },
       publisher: {
         '@type': 'MedicalBusiness',
@@ -74,7 +74,7 @@ const structuredData = {
           name: 'How long is a typical primary care appointment?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Traditional primary care averages 15-18 minutes. Direct Primary Care practices like Sankofa offer 30-60 minute visits.',
+            text: 'Typical insurance-based primary care averages 15 minutes. Concierge medicine practices like Sankofa offer 30 to 60 minute visits.',
           },
         },
         {
@@ -82,23 +82,23 @@ const structuredData = {
           name: 'How many patients does a typical doctor have?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Traditional practices average 2,300+ patients per physician. DPC practices average 445 patients, enabling personalized care.',
+            text: 'Typical practices average 2,300+ patients per physician. Concierge practices like Sankofa have approximately 200 patients per physician, enabling personalized care.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Can I text my doctor directly?',
+          name: 'Can I message my doctor directly?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'In traditional care, patients use patient portals with 24-72 hour response times. 82% of DPC practices offer direct physician messaging with same-day responses.',
+            text: 'In typical insurance-based care, patients use patient portals with 48+ hour response times. Sankofa offers direct secure messaging with responses within one business day, Monday through Friday.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How much do labs cost with Direct Primary Care?',
+          name: 'How much do labs cost with Concierge Medicine?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'DPC practices offer wholesale lab pricing, often 80-90% less than hospital or insurance-negotiated rates.',
+            text: 'Concierge practices offer wholesale lab pricing, often significantly lower than retail cash rates.',
           },
         },
       ],
@@ -110,22 +110,22 @@ const comparisonData = [
   {
     category: 'Visit Duration',
     context: 'Time with your physician',
-    traditional: { value: '15 min', label: 'median appointment', isNegative: false },
-    sankofa: { value: '30-60 min', label: 'unhurried visits', isPositive: true },
+    traditional: { value: '15 min', label: '', isNegative: false },
+    sankofa: { value: '30 to 60 min', label: '', isPositive: true },
     highlight: true,
   },
   {
-    category: 'Appointment Wait',
+    category: 'Appointment Waits',
     context: 'Days until you are seen',
-    traditional: { value: '26+ days', label: 'national average', isNegative: false },
-    sankofa: { value: 'Same day', label: 'or next day', isPositive: true },
+    traditional: { value: '26+ days', label: '', isNegative: false },
+    sankofa: { text: 'Same day or next business day for urgent concerns whenever possible', isPositive: true },
     highlight: false,
   },
   {
     category: 'Patients per Doctor',
     context: 'How many share your physician',
     traditional: { value: '2,300+', label: 'patients per physician', isNegative: false },
-    sankofa: { value: '<500', label: 'patients per physician', isPositive: true },
+    sankofa: { text: 'Approximately 200 patients per physician', isPositive: true },
     highlight: true,
   },
   {
@@ -138,43 +138,43 @@ const comparisonData = [
   {
     category: 'Message Your Doctor',
     context: 'How you reach your physician',
-    traditional: { text: 'Patient portal, 24-72hr', isNegative: true },
-    sankofa: { text: 'Direct text, same day', isPositive: true },
+    traditional: { text: 'Patient portal, 48+ hrs', isNegative: true },
+    sankofa: { text: 'Direct secure messaging, responses within one business day, Monday through Friday', isPositive: true },
     highlight: true,
   },
   {
     category: 'After Hours Care',
     context: 'When you need help at night',
     traditional: { text: 'ER or wait until Monday', isNegative: true },
-    sankofa: { text: '24/7 physician access', isPositive: true },
+    sankofa: { text: 'Clear after hours guidance and physician access options defined in your membership', isPositive: true },
     highlight: false,
   },
   {
     category: 'Lab Work Pricing',
     context: 'What routine labs cost you',
-    traditional: { value: '$100+', label: 'insurance-negotiated', isNegative: false },
-    sankofa: { value: '$5-20', label: 'wholesale pricing', isPositive: true },
+    traditional: { value: '$100s', label: 'often opaque', isNegative: false },
+    sankofa: { text: 'Wholesale pricing, often significantly lower than retail cash rates', isPositive: true },
     highlight: true,
   },
   {
-    category: 'Prior Authorization',
+    category: 'Prior Authorizations',
     context: 'Insurance approval delays',
     traditional: { text: 'Days to weeks waiting', isNegative: true },
-    sankofa: { text: 'None required', isPositive: true },
+    sankofa: { text: 'Help navigating prior authorizations when they are required', isPositive: true },
     highlight: false,
   },
   {
     category: 'Monthly Cost',
     context: 'What you pay for access',
     traditional: { text: 'Unpredictable copays and bills', isNegative: true },
-    sankofa: { text: 'One transparent fee', isPositive: true },
+    sankofa: { text: 'One transparent membership fee', isPositive: true },
     highlight: true,
   },
   {
     category: 'When You Call',
     context: 'The phone experience',
-    traditional: { text: 'Phone tree, hold, callback', isNegative: true },
-    sankofa: { text: 'Direct line to Dr. Nkrumah', isPositive: true },
+    traditional: { text: 'Phone tree, holds, callbacks', isNegative: true },
+    sankofa: { text: 'Direct line to the practice and direct secure messaging with your physician', isPositive: true },
     highlight: false,
   },
 ]
@@ -221,13 +221,13 @@ export default function ComparePage() {
                     Category
                   </th>
                   <th className="w-[36%] p-6 text-center text-xs font-semibold tracking-[0.2em] uppercase text-white/40 bg-white/[0.02]">
-                    <span className="block text-white/60">Typical Insurance-Based Clinic</span>
+                    <span className="block text-white/60">Typical Insurance Based Clinic</span>
                     <span className="block font-display text-2xl font-normal tracking-normal normal-case text-white/50 mt-2">
                       The Norm
                     </span>
                   </th>
                   <th className="w-[36%] p-6 text-center text-xs font-semibold tracking-[0.2em] uppercase text-sfm-gold bg-sfm-gold/[0.08]">
-                    <span className="block">Sankofa Direct Primary Care</span>
+                    <span className="block">Sankofa Concierge Membership</span>
                     <span className="block font-display text-2xl font-normal tracking-normal normal-case text-white mt-2">
                       The Standard
                     </span>
@@ -305,7 +305,7 @@ export default function ComparePage() {
                 </div>
                 <div className="grid grid-cols-2">
                   <div className="p-4 bg-white/[0.02] text-center border-r border-white/[0.04]">
-                    <div className="text-xs uppercase tracking-wider text-white/30 mb-2">Insurance-Based</div>
+                    <div className="text-xs uppercase tracking-wider text-white/30 mb-2">Insurance Based</div>
                     <div className="flex items-center justify-center gap-2">
                       {row.traditional.isNegative && (
                         <X className="w-4 h-4 text-white/25" strokeWidth={2.5} />
@@ -323,7 +323,7 @@ export default function ComparePage() {
                     </div>
                   </div>
                   <div className="p-4 bg-sfm-gold/[0.08] text-center">
-                    <div className="text-xs uppercase tracking-wider text-sfm-gold mb-2">Sankofa DPC</div>
+                    <div className="text-xs uppercase tracking-wider text-sfm-gold mb-2">Sankofa Concierge</div>
                     <div className="flex items-center justify-center gap-2">
                       {row.sankofa.isPositive && !row.sankofa.value && (
                         <Check className="w-4 h-4 text-sfm-gold" strokeWidth={2.5} />
@@ -345,8 +345,15 @@ export default function ComparePage() {
             ))}
           </div>
 
+          {/* Footnote */}
+          <div className="mt-8 text-center">
+            <p className="text-white/40 text-sm italic">
+              *Typical features of many insurance based primary care clinics. Individual experiences may differ.
+            </p>
+          </div>
+
           {/* Evidence Footer */}
-          <div className="mt-12 p-8 bg-white/[0.02] rounded-xl border border-white/[0.04]">
+          <div className="mt-8 p-8 bg-white/[0.02] rounded-xl border border-white/[0.04]">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-center md:text-left">
                 <p className="text-white/60 text-sm mb-2">
@@ -382,9 +389,9 @@ export default function ComparePage() {
                 </svg>
               </div>
               <div className="flex-1 text-center md:text-left">
-                <h3 className="font-display text-xl text-white mb-2">Not Sure If DPC Is Right for You?</h3>
+                <h3 className="font-display text-xl text-white mb-2">Not Sure If Concierge Primary Care Is Right for You?</h3>
                 <p className="text-white/60 text-sm mb-4">
-                  Read our free guide: <strong className="text-white">"How Healthy Is Your Relationship With Your Primary Care Doctor?"</strong> An interactive self-assessment to discover what kind of care you&apos;re getting.
+                  Read the free guide <strong className="text-white">&quot;How Healthy Is Your Relationship With Your Primary Care Doctor?&quot;</strong> for a simple way to decide whether concierge primary care fits how you want to be treated.
                 </p>
               </div>
               <div className="flex-shrink-0">
