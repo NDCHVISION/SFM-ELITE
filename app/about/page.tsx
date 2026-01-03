@@ -574,7 +574,7 @@ export default function AboutPage() {
         <section className="py-24 bg-white">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="relative group -ml-8">
+              <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl opacity-50 animate-pulse-slow" />
                 <div className="relative aspect-[4/3] rounded-3xl overflow-hidden image-lift portrait-premium image-fade-elite shadow-2xl shadow-sfm-navy/20">
                   <Image
@@ -604,7 +604,7 @@ export default function AboutPage() {
               <div>
                 <p className="section-label">The Founder</p>
                 <h2 className="font-display text-3xl md:text-4xl text-sfm-navy mb-6">
-                  Dr. Yaw Nkrumah, MD
+                  Yaw Nkrumah, MD
                 </h2>
                 <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-8" />
                 
