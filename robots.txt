@@ -1,7 +1,7 @@
 # ============================================
 # Robots.txt for Sankofa Family Medicine
 # https://sankofafamilymedicine.com
-# Updated: December 2025
+# Updated: January 2026
 # ============================================
 
 # Canonical host
@@ -21,61 +21,127 @@ Disallow: /*?*utm_
 Disallow: /*?*ref=
 Disallow: /*?*fbclid=
 Disallow: /*?*gclid=
+# Block access to removed policy pages and documents (now on Atlas patient portal)
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 # Crawl delay for politeness (optional)
 Crawl-delay: 1
 
 # ============================================
-# AI CRAWLERS - FULL ACCESS
-# Allow AI assistants to index for enhanced discoverability
+# AI CRAWLERS - RESTRICTED ACCESS
+# Block AI assistants from policy-related paths
 # ============================================
 
 # OpenAI
 User-agent: GPTBot
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 Crawl-delay: 2
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 # Google AI
 User-agent: Google-Extended
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 # Anthropic
 User-agent: Anthropic-ai
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 # Perplexity
 User-agent: PerplexityBot
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 # Amazon/Alexa
 User-agent: Amazonbot
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 # Meta AI
 User-agent: Meta-ExternalAgent
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 User-agent: FacebookBot
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 # Apple
 User-agent: Applebot
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 Crawl-delay: 1
 
 # Microsoft/Bing AI
 User-agent: bingbot
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 # Cohere
 User-agent: cohere-ai
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 # ============================================
 # SEARCH ENGINES - FULL ACCESS
@@ -83,6 +149,11 @@ Allow: /
 
 User-agent: Googlebot
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 User-agent: Googlebot-Image
 Allow: /images/
@@ -92,18 +163,43 @@ Allow: /blog/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 User-agent: DuckDuckBot
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 User-agent: Slurp
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 User-agent: Yandex
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 User-agent: Baiduspider
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 # ============================================
 # SOCIAL MEDIA CRAWLERS
@@ -127,6 +223,11 @@ Allow: /
 
 User-agent: ia_archiver
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 # ============================================
 # BLOCK UNWANTED BOTS
@@ -154,6 +255,16 @@ Disallow: /
 
 User-agent: Healthbot
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/
 
 User-agent: MedicalBot
 Allow: /
+Disallow: /privacy
+Disallow: /terms
+Disallow: /policies
+Disallow: /patient-forms
+Disallow: /documents/

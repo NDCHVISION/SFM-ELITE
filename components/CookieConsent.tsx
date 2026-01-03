@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { X, Cookie } from 'lucide-react'
-import Link from 'next/link'
 
 export default function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false)
@@ -54,11 +53,7 @@ export default function CookieConsent() {
               <p className="text-sm text-sfm-text-muted mb-4">
                 We use cookies to improve your experience and analyze site traffic. 
                 By clicking &quot;Accept All&quot;, you consent to our use of cookies. 
-                Read our{' '}
-                <Link href="/privacy" className="text-sfm-azure hover:underline">
-                  Privacy Policy
-                </Link>{' '}
-                to learn more.
+                Privacy policies are available through your patient portal.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3">
