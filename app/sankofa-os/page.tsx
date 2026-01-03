@@ -576,56 +576,6 @@ export default function SankofaOSPage() {
             </div>
           </section>
 
-          {/* Testimonials Placeholder */}
-          <section className="relative py-24 px-6 border-t border-white/[0.06]">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-6">
-                Patient Stories
-              </p>
-              <h2 className="font-display text-4xl text-white mb-12">
-                What Our Members Say
-              </h2>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                <blockquote className="p-8 bg-white/[0.02] border border-white/10 rounded-2xl text-left">
-                  <p className="text-white/70 italic mb-6">
-                    "For the first time in years, I have a doctor who actually remembers my history. 
-                    I do not have to repeat my story every visit."
-                  </p>
-                  <footer className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-sfm-gold/20 flex items-center justify-center">
-                      <Users className="w-5 h-5 text-sfm-gold" />
-                    </div>
-                    <div>
-                      <p className="text-white font-medium">Founding Member</p>
-                      <p className="text-white/40 text-sm">Seattle, WA</p>
-                    </div>
-                  </footer>
-                </blockquote>
-                
-                <blockquote className="p-8 bg-white/[0.02] border border-white/10 rounded-2xl text-left">
-                  <p className="text-white/70 italic mb-6">
-                    "The ability to message Dr. Nkrumah directly and get a thoughtful response 
-                    within hours has changed how I think about healthcare."
-                  </p>
-                  <footer className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-sfm-gold/20 flex items-center justify-center">
-                      <Users className="w-5 h-5 text-sfm-gold" />
-                    </div>
-                    <div>
-                      <p className="text-white font-medium">Founding Member</p>
-                      <p className="text-white/40 text-sm">Bellevue, WA</p>
-                    </div>
-                  </footer>
-                </blockquote>
-              </div>
-              
-              <p className="text-white/30 text-sm mt-8 italic">
-                More testimonials coming as our founding cohort grows
-              </p>
-            </div>
-          </section>
-
           {/* CTA Section */}
           <section id="waitlist" className="relative py-24 px-6 border-t border-white/[0.06]">
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(ellipse_at_bottom,_rgba(188,152,51,0.1)_0%,_transparent_70%)]" />
