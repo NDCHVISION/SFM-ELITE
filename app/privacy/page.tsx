@@ -226,26 +226,9 @@ export default function PrivacyPage() {
                 </p>
                 <div className="bg-white rounded-xl p-6 border border-sfm-gold/10">
                   <h3 className="font-display text-lg text-sfm-navy mb-4">Official HIPAA Documents</h3>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <a 
-                      href="/documents/notice-of-privacy-practices.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 px-4 py-3 bg-sfm-azure text-white rounded-lg hover:bg-sfm-navy transition-colors group"
-                    >
-                      <FileText className="w-5 h-5" />
-                      <span className="font-medium">Notice of Privacy Practices</span>
-                      <ArrowRight className="w-4 h-4 ml-auto group-hover:translate-x-1 transition-transform" />
-                    </a>
-                    <Link 
-                      href="/patient-forms"
-                      className="flex items-center gap-3 px-4 py-3 bg-sfm-gold/10 text-sfm-navy rounded-lg hover:bg-sfm-gold/20 transition-colors group border border-sfm-gold/20"
-                    >
-                      <FileText className="w-5 h-5 text-sfm-gold" />
-                      <span className="font-medium">All Patient Forms</span>
-                      <ArrowRight className="w-4 h-4 ml-auto group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </div>
+                  <p className="text-sfm-navy/70 leading-relaxed">
+                    Full HIPAA documents, including our Notice of Privacy Practices and other compliance materials, are available in the patient portal. Please contact us if you need assistance accessing these documents.
+                  </p>
                 </div>
               </div>
 
