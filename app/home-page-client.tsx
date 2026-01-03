@@ -75,8 +75,10 @@ export default function HomePage() {
                 {/* Subheadline - Refined */}
                 <div className="opacity-0 animate-fade-in animation-delay-300 mb-12">
                   <p className="text-lg lg:text-xl text-white/55 leading-relaxed max-w-lg">
-                    Sankofa Family Medicine treats continuity as a clinical discipline. 
-                    Your physician knows your history, understands your context, and carries it forward across time. 
+                    Sankofa Family Medicine treats continuity as a calling.
+                    Your physician knows your history, understands your context, and carries it forward with care.
+                  </p>
+                  <p className="italic text-lg lg:text-xl text-white/80 font-medium leading-relaxed max-w-lg mt-4">
                     Memory is not a feature here. It is the foundation of care.
                   </p>
                 </div>
@@ -87,7 +89,7 @@ export default function HomePage() {
                     {[
                       'Your story travels with you. Every visit builds on your history and context.',
                       'Direct physician access. Message your doctor directly with no call centers or gatekeepers.',
-                      'Transparent memberships from $195 per month. Clear and predictable pricing for concierge level access.',
+                      'Transparent memberships from $195 per month. Clear, predictable pricing for personalized care.',
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="w-1.5 h-1.5 rounded-full bg-sfm-gold mt-2.5 flex-shrink-0" />
@@ -97,6 +99,14 @@ export default function HomePage() {
                   </div>
                 </div>
 
+                {/* CTA Bridge */}
+                <div className="opacity-0 animate-fade-in animation-delay-380 mb-8">
+                  <p className="text-white/70 text-base lg:text-lg leading-relaxed max-w-lg">
+                    Ready for care that remembers you?<br />
+                    Join a practice built on connection and continuity.
+                  </p>
+                </div>
+
                 {/* CTA Buttons - Refined styling */}
                 <div className="opacity-0 animate-fade-in animation-delay-400 flex flex-wrap items-center gap-4">
                   <PrimaryCTA variant="hero" />
@@ -104,7 +114,7 @@ export default function HomePage() {
                     href="#membership-plans" 
                     className="btn-outline btn-shine"
                   >
-                    Membership Plans
+                    View Membership Plans
                   </Link>
                 </div>
 
