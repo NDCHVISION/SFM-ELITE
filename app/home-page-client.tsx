@@ -320,15 +320,15 @@ export default function HomePage() {
                 <div className="bg-gray-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <h3 className="font-display text-lg text-sfm-navy mb-6 flex items-center gap-3">
                     <span className="w-3 h-3 rounded-full bg-gray-400" />
-                    Traditional Primary Care
+                    Traditional Primary Care<span className="text-sfm-text-muted">*</span>
                   </h3>
                   <ul className="space-y-4">
                     {[
-                      '15-minute rushed appointments',
-                      'Long waits for visits',
+                      '15 minute appointments that feel rushed',
+                      'Long waits for visits and limited access',
                       'Thousands of patients per physician',
-                      'Different provider each visit',
-                      'Surprise billing',
+                      'Different provider at each visit',
+                      'Surprise billing and confusing statements',
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-sfm-text-muted">
                         <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 flex-shrink-0" />
@@ -346,11 +346,11 @@ export default function HomePage() {
                   </h3>
                   <ul className="space-y-4">
                     {[
-                      '45 to 60 minute visits',
-                      'Same-day or next-day access',
-                      'Under 500 patients total',
-                      'Your physician every time',
-                      'Clear monthly pricing',
+                      'Visits that average about forty five minutes',
+                      'Same or next business day virtual access for urgent concerns whenever possible',
+                      'A limited panel of approximately 200 adults to protect time and access',
+                      'The same physician every time, not a rotating team',
+                      'Clear monthly pricing with no visit fees or unexpected bills',
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-white/80">
                         <CheckCircle2 className="w-5 h-5 text-sfm-gold flex-shrink-0 mt-0.5" />
@@ -361,7 +361,11 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="text-center mt-10">
+              <p className="text-center text-xs text-sfm-text-muted mt-8">
+                *Typical features of many insurance based primary care clinics. Individual experiences may differ.
+              </p>
+
+              <div className="text-center mt-6">
                 <Link 
                   href="/compare" 
                   className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors font-medium"
@@ -470,8 +474,11 @@ export default function HomePage() {
               Membership Plans
             </span>
             <h2 className="text-display-lg text-sfm-navy mb-6">
-              Memberships Built for You
+              Concierge Memberships Built for You
             </h2>
+            <p className="text-lg text-sfm-text-muted max-w-2xl mx-auto mb-4">
+              All plans include generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing.
+            </p>
             <p className="text-lg text-sfm-text-muted max-w-2xl mx-auto">
               Every membership includes generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing.
             </p>
@@ -504,16 +511,10 @@ export default function HomePage() {
                     ? 'bg-sfm-navy text-white ring-2 ring-sfm-gold hover:bg-sfm-azure/90' 
                     : 'bg-white border border-sfm-border-light hover:border-sfm-border hover:shadow-lg'
                 }`}>
-                  {tier.featured && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="px-4 py-1 bg-sfm-gold text-sfm-navy text-xs font-bold rounded-full">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
                   
                   <h3 className={`font-display text-xl mb-2 ${tier.featured ? 'text-white' : 'text-sfm-navy'}`}>
                     {tier.name}
+                    {tier.featured && <span className="text-sfm-gold"> (Most Popular)</span>}
                   </h3>
                   
                   <div className="mb-4">

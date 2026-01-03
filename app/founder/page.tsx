@@ -6,11 +6,11 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Dr. Yaw Nkrumah, MD | Founder | Sankofa Family Medicine',
-  description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State. Board Certified family physician specializing in genetic testing, precision medicine, cardiometabolic health, and Medicine That Remembers.',
-  keywords: ['Dr. Yaw Nkrumah', 'family physician Washington', 'DPC founder', 'Sankofa Family Medicine', 'genetic testing', 'precision medicine', 'cardiometabolic health'],
+  description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a virtual-first concierge medicine practice serving patients across Washington State. Board Certified family physician specializing in genetic testing, precision medicine, cardiometabolic health, and Medicine That Remembers.',
+  keywords: ['Dr. Yaw Nkrumah', 'family physician Washington', 'concierge medicine founder', 'Sankofa Family Medicine', 'genetic testing', 'precision medicine', 'cardiometabolic health'],
   openGraph: {
     title: 'Dr. Yaw Nkrumah, MD | Founder | Sankofa Family Medicine',
-    description: 'Founder of Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State.',
+    description: 'Founder of Sankofa Family Medicine, a virtual-first concierge medicine practice serving patients across Washington State.',
     url: 'https://sankofafamilymedicine.com/founder',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -63,7 +63,7 @@ const personSchema = {
   honorificPrefix: 'Dr.',
   honorificSuffix: 'MD',
   jobTitle: 'Founder & Medical Director',
-  description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State. He created Medicine That Remembers to solve healthcare fragmentation through continuity, genetic testing, precision medicine, and cardiometabolic health optimization.',
+  description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a virtual-first concierge medicine practice serving patients across Washington State. He created Medicine That Remembers to solve healthcare fragmentation through continuity, genetic testing, precision medicine, and cardiometabolic health optimization.',
   image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
   url: 'https://sankofafamilymedicine.com/founder',
   sameAs: [
@@ -91,7 +91,7 @@ const personSchema = {
   ],
   medicalSpecialty: ['PrimaryCare', 'FamilyMedicine', 'PreventiveMedicine'],
   knowsAbout: [
-    'Direct Primary Care (DPC)',
+    'Concierge Medicine',
     'Virtual/Telehealth Medicine',
     'Genetic Testing & Precision Medicine',
     'Cardiometabolic Health',
@@ -101,7 +101,7 @@ const personSchema = {
     '@type': 'MedicalOrganization',
     '@id': 'https://sankofafamilymedicine.com/#organization',
     name: 'Sankofa Family Medicine',
-    description: 'Virtual-first direct primary care (DPC) practice serving patients across Washington State.',
+    description: 'Virtual-first concierge medicine practice serving patients across Washington State.',
   },
 }
 
@@ -280,7 +280,7 @@ export default function FounderPage() {
       </section>
 
       {/* Research & Publications */}
-      <section className="py-24 bg-white">
+      <section id="publications" className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="mb-12">
             <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase mb-4">Research</p>

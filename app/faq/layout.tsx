@@ -3,10 +3,10 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'FAQ | Virtual Direct Primary Care | Washington State',
   description:
-    'Frequently asked questions about Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State. Learn about membership pricing, telehealth visits, genetic testing, and how Medicine That Remembers works.',
+    'Frequently asked questions about Sankofa Family Medicine, a virtual-first concierge medicine practice serving patients across Washington State. Learn about membership pricing, telehealth visits, genetic testing, and how Medicine That Remembers works.',
   keywords: [
     'direct primary care FAQ',
-    'DPC questions Washington',
+    'concierge medicine questions Washington',
     'virtual primary care FAQ',
     'telehealth questions',
     'genetic testing FAQ',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'FAQ | Sankofa Family Medicine | Virtual Direct Primary Care',
     description:
-      'Everything you need to know about Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State.',
+      'Everything you need to know about Sankofa Family Medicine, a virtual-first concierge medicine practice serving patients across Washington State.',
     url: 'https://sankofafamilymedicine.com/faq',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'FAQ | Sankofa Family Medicine | Virtual Direct Primary Care',
     description:
-      'Everything you need to know about Sankofa Family Medicine, a virtual-first direct primary care (DPC) practice serving patients across Washington State.',
+      'Everything you need to know about Sankofa Family Medicine, a virtual-first concierge medicine practice serving patients across Washington State.',
     images: ['/images/og-image.png'],
   },
   alternates: {

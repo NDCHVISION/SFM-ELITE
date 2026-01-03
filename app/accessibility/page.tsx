@@ -180,7 +180,7 @@ export default function AccessibilityPage() {
           {/* Date */}
           <div className="pt-8 border-t border-gray-200">
             <p className="text-sm text-gray-500">
-              This accessibility statement was last updated on December 27, 2025.
+              This accessibility statement was last updated on January 3, 2026.
             </p>
           </div>
         </div>

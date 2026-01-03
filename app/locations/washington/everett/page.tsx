@@ -9,11 +9,10 @@ export const metadata: Metadata = {
     'Everett virtual doctor',
     'Everett telemedicine',
     'Everett primary care',
-    'Everett DPC',
+    'Everett concierge medicine',
     'Snohomish County doctor',
     'Marysville primary care',
     'Lake Stevens telemedicine',
-    'Everett concierge medicine',
     'Boeing employee doctor'
   ],
   openGraph: {

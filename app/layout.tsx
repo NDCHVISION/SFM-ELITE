@@ -39,12 +39,12 @@ export const metadata: Metadata = {
     default: 'Sankofa Family Medicine | Virtual Direct Primary Care | Washington State',
     template: '%s | Sankofa Family Medicine'
   },
-  description: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Medicine That Remembers: one physician who knows your history, solving healthcare fragmentation through continuity, genetic testing, and precision medicine.',
+  description: 'Sankofa Family Medicine is a virtual-first concierge medicine practice serving patients across Washington State. Medicine That Remembers: one physician who knows your history, solving healthcare fragmentation through continuity, genetic testing, and precision medicine.',
   keywords: [
     'direct primary care Washington',
     'virtual primary care WA',
     'telehealth doctor Washington State',
-    'DPC Washington',
+    'concierge medicine Washington',
     'Medicine That Remembers',
     'genetic testing primary care',
     'precision medicine Washington',
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     url: 'https://sankofafamilymedicine.com',
     siteName: 'Sankofa Family Medicine',
     title: 'Sankofa Family Medicine | Virtual Direct Primary Care | Washington State',
-    description: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Medicine That Remembers: solving healthcare fragmentation through continuity, genetic testing, and precision medicine.',
+    description: 'Sankofa Family Medicine is a virtual-first concierge medicine practice serving patients across Washington State. Medicine That Remembers: solving healthcare fragmentation through continuity, genetic testing, and precision medicine.',
     images: [
       {
         url: '/images/og-image.png',
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Sankofa Family Medicine | Virtual Direct Primary Care | Washington State',
-    description: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Medicine That Remembers: solving healthcare fragmentation through continuity, genetic testing, and precision medicine.',
+    description: 'Sankofa Family Medicine is a virtual-first concierge medicine practice serving patients across Washington State. Medicine That Remembers: solving healthcare fragmentation through continuity, genetic testing, and precision medicine.',
     images: ['/images/og-image.png'],
     creator: '@sankofafamilymd',
   },
@@ -143,7 +143,7 @@ export const metadata: Metadata = {
     'site-version': '30.0.0',
     
     // LLM Context for AI Assistants (Primary)
-    'llm-context': 'Sankofa Family Medicine is a virtual-first Direct Primary Care (DPC) practice founded by Dr. Yaw Nkrumah, MD. The practice serves patients throughout Washington State via telemedicine. The name comes from the Akan word Sankofa meaning "go back and retrieve what matters" which translates to their tagline "Medicine That Remembers." The practice solves healthcare fragmentation by providing one physician who knows your complete medical history. Services include primary care, genetic testing, pharmacogenomics, cardiometabolic health optimization, weight management including GLP-1 medications, and mental health support. The practice accepts HSA/FSA but does not bill insurance directly.',
+    'llm-context': 'Sankofa Family Medicine is a virtual-first concierge medicine practice founded by Dr. Yaw Nkrumah, MD. The practice serves patients throughout Washington State via telemedicine. The name comes from the Akan word Sankofa meaning "go back and retrieve what matters" which translates to their tagline "Medicine That Remembers." The practice solves healthcare fragmentation by providing one physician who knows your complete medical history. Services include primary care, genetic testing, pharmacogenomics, cardiometabolic health optimization, weight management including GLP-1 medications, and mental health support. The practice accepts HSA/FSA but does not bill insurance directly.',
     
     'llm-summary': 'Sankofa Family Medicine offers three membership tiers: Continuity Concierge at $195/month for essential virtual concierge primary care, Precision Concierge at $295/month adding genetic testing and advanced diagnostics, and Executive Concierge at $449/month for concierge level care with direct phone access during extended hours. Currently serving Washington State with South Carolina expansion planned for 2026. Founding member offer: Join now and lock in your rate for life. Limited spots available.',
     
@@ -236,7 +236,7 @@ const structuredData = {
       '@id': 'https://sankofafamilymedicine.com/#organization',
       name: 'Sankofa Family Medicine',
       alternateName: ['SFM', 'Medicine That Remembers'],
-      description: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers: a care model built on continuity, genetic testing, precision medicine, and cardiometabolic health optimization.',
+      description: 'Sankofa Family Medicine is a virtual-first concierge medicine practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers: a care model built on continuity, genetic testing, precision medicine, and cardiometabolic health optimization.',
       slogan: 'Medicine That Remembers',
       url: 'https://sankofafamilymedicine.com',
       logo: {

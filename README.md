@@ -144,7 +144,7 @@ Before any copy goes live, it must answer yes to:
 
 ## License
 
-Proprietary - Sankofa Family Medicine PLLC 2025
+Proprietary - Sankofa Family Medicine PLLC 2026
 
 ---
 

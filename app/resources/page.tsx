@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Patient Resources and Health Guides | Sankofa Family Medicine',
   description: 'Educational health resources, patient guides, and wellness tools from Sankofa Family Medicine. Free health information for Washington State residents on preventive care, chronic disease management, and telehealth.',
-  keywords: ['patient resources', 'health guides', 'wellness tools', 'patient education', 'health information Washington', 'primary care guide', 'DPC resources'],
+  keywords: ['patient resources', 'health guides', 'wellness tools', 'patient education', 'health information Washington', 'primary care guide', 'concierge medicine resources'],
   openGraph: {
     title: 'Patient Resources and Health Guides | Sankofa Family Medicine',
     description: 'Educational resources and tools to support your wellness journey.',
@@ -190,10 +190,10 @@ export default function ResourcesPage() {
                   </div>
                   <div className="flex-1 pt-1">
                     <h3 className="font-display text-xl text-sfm-navy mb-2 group-hover:text-sfm-azure transition-colors">
-                      Direct Primary Care Guide
+                      Concierge Medicine Guide
                     </h3>
                     <p className="text-sfm-navy/60 text-sm mb-4">
-                      Understanding the DPC model and whether it is right for you.
+                      Understanding the concierge medicine model and whether it is right for you.
                     </p>
                     <span className="inline-flex items-center gap-2 text-sfm-azure font-medium text-sm group-hover:gap-3 transition-all">
                       Read Guide

@@ -5,7 +5,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Healthcare Partnerships | Sankofa Family Medicine',
   description: 'Strategic healthcare partnerships powering Medicine That Remembers. Partner opportunities for employers, health systems, and community organizations in Washington State.',
-  keywords: ['healthcare partnerships', 'employer health benefits', 'telehealth partnerships', 'corporate wellness', 'healthcare collaboration', 'DPC employer benefits'],
+  keywords: ['healthcare partnerships', 'employer health benefits', 'telehealth partnerships', 'corporate wellness', 'healthcare collaboration', 'concierge medicine employer benefits'],
   openGraph: {
     title: 'Healthcare Partnerships | Sankofa Family Medicine',
     description: 'Strategic partnerships powering precision primary care.',

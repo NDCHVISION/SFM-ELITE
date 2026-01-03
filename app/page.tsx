@@ -3,10 +3,10 @@ import HomePage from './home-page-client'
 
 export const metadata: Metadata = {
   title: 'Sankofa Family Medicine | Medicine That Remembers | Washington State',
-  description: 'Virtual-first direct primary care built on continuity, relationship, and the physician-patient bond. One physician. Your complete history. Every visit. Serving Washington State.',
+  description: 'Virtual-first concierge medicine built on continuity, relationship, and the physician-patient bond. One physician. Your complete history. Every visit. Serving Washington State.',
   keywords: [
     'direct primary care Washington',
-    'virtual DPC',
+    'virtual concierge medicine',
     'Medicine That Remembers',
     'continuity of care',
     'physician-patient relationship',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     'Dr. Yaw Nkrumah',
     'telehealth Washington',
     'primary care membership',
-    'DPC doctor Washington State',
+    'concierge medicine doctor Washington State',
     'virtual doctor near me',
     'telemedicine family doctor',
     'genetic testing primary care',

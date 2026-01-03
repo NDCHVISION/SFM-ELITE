@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'Seattle virtual doctor',
     'Seattle telemedicine',
     'Seattle primary care',
-    'Seattle DPC',
+    'Seattle concierge medicine',
     'Capitol Hill doctor',
     'Ballard primary care',
     'Seattle online doctor',
