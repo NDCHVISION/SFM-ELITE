@@ -146,16 +146,16 @@ export default function ServicesPage() {
 
             {/* Quick Stats */}
             <div className="flex flex-wrap gap-6 text-white/60">
-              <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-sfm-gold" />
+              <div className="flex items-center gap-2 group">
+                <Clock className="w-5 h-5 text-sfm-gold group-hover:scale-110 group-hover:text-sfm-gold transition-all duration-300" />
                 <span className="text-sm">Same-day access</span>
               </div>
-              <div className="flex items-center gap-2">
-                <MessageCircle className="w-5 h-5 text-sfm-gold" />
+              <div className="flex items-center gap-2 group">
+                <MessageCircle className="w-5 h-5 text-sfm-gold group-hover:scale-110 group-hover:text-sfm-gold transition-all duration-300" />
                 <span className="text-sm">Direct messaging</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-sfm-gold" />
+              <div className="flex items-center gap-2 group">
+                <Shield className="w-5 h-5 text-sfm-gold group-hover:scale-110 group-hover:text-sfm-gold transition-all duration-300" />
                 <span className="text-sm">No copays or surprise bills</span>
               </div>
             </div>
@@ -172,20 +172,19 @@ export default function ServicesPage() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: Users, label: 'One Physician', desc: 'Dr. Nkrumah personally' },
+            {[              { icon: Users, label: 'One Physician', desc: 'Dr. Nkrumah personally' },
               { icon: Clock, label: 'Same-Day Access', desc: 'When you need it' },
               { icon: MessageCircle, label: 'Direct Messaging', desc: 'No phone trees' },
               { icon: FileText, label: 'No Surprise Bills', desc: 'Transparent pricing' },
             ].map((item) => (
-              <div key={item.label} className="text-center p-4 group rounded-xl hover:bg-sfm-cream/50 transition-all duration-300 hover:-translate-y-1">
+              <div key={item.label} className="text-center p-4 group rounded-xl bg-white/50 hover:bg-sfm-cream/80 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
                 <div className="w-12 h-12 mx-auto mb-3 bg-sfm-gold/10 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:bg-sfm-gold/20 transition-all duration-300">
                   <item.icon className="w-6 h-6 text-sfm-gold" />
                 </div>
                 <p className="font-semibold text-sfm-navy text-sm">{item.label}</p>
                 <p className="text-xs text-gray-500 mt-1">{item.desc}</p>
               </div>
-            ))}
+            ))}}
           </div>
 
           {/* Trust Badges */}
@@ -300,8 +299,8 @@ export default function ServicesPage() {
 
                 <div className={`relative h-full rounded-3xl p-8 lg:p-10 transition-all duration-500 ${
                   tier.popular
-                    ? 'bg-gradient-to-b from-white via-white to-sfm-cream/30 border-2 border-sfm-gold shadow-2xl shadow-sfm-gold/20'
-                    : 'bg-white border border-gray-200/80 hover:border-sfm-gold/30 hover:shadow-xl hover:shadow-sfm-gold/10 group-hover:-translate-y-1'
+                    ? 'bg-gradient-to-b from-white via-white to-sfm-cream/30 border-2 border-sfm-gold shadow-2xl shadow-sfm-gold/20 group-hover:-translate-y-3'
+                    : 'bg-white border border-gray-200/80 hover:border-sfm-gold/30 hover:shadow-xl hover:shadow-sfm-gold/10 group-hover:-translate-y-2'
                 }`}>
                   {/* Popular Badge */}
                   {tier.popular && (
