@@ -14,10 +14,10 @@ import {
 const tiers = [
   {
     id: 'continuity',
-    name: 'Continuity Care',
-    tagline: 'Essential virtual primary care',
-    price: { monthly: 149, annual: 134 },
-    description: 'Comprehensive primary care with the continuity and access that traditional medicine has lost.',
+    name: 'Continuity Concierge',
+    tagline: 'Essential virtual concierge primary care',
+    price: { monthly: 195, annual: 176 },
+    description: 'Essential virtual concierge primary care designed to restore the continuity traditional medicine has lost.',
     features: [
       { text: 'Unlimited virtual visits', included: true },
       { text: 'Same-day or next-day appointments', included: true },
@@ -31,17 +31,17 @@ const tiers = [
       { text: 'Advanced biomarker panels', included: false },
       { text: 'Dedicated phone line', included: false },
     ],
-    cta: 'Select This Plan',
+    cta: 'View Plan Details',
     popular: false,
   },
   {
     id: 'precision',
-    name: 'Precision Care',
-    tagline: 'Data-driven personalized medicine',
-    price: { monthly: 249, annual: 224 },
-    description: 'Everything in Continuity, plus genetic insights and advanced diagnostics for truly personalized care.',
+    name: 'Precision Concierge',
+    tagline: 'Deeper preventive insight',
+    price: { monthly: 295, annual: 266 },
+    description: 'Everything in Continuity Concierge plus deeper preventive insight, advanced diagnostics when appropriate, and more proactive follow up.',
     features: [
-      { text: 'Everything in Continuity Care', included: true, highlight: true },
+      { text: 'Everything in Continuity Concierge', included: true, highlight: true },
       { text: 'Genetic testing and pharmacogenomics', included: true },
       { text: 'Advanced biomarker panels', included: true },
       { text: 'Cardiometabolic risk profiling', included: true },
@@ -52,18 +52,18 @@ const tiers = [
       { text: 'Dedicated phone line', included: false },
       { text: 'After-hours access', included: false },
     ],
-    cta: 'Select This Plan',
+    cta: 'View Plan Details',
     popular: true,
     founding: true,
   },
   {
-    id: 'legacy',
-    name: 'Legacy Health',
-    tagline: 'Concierge-level care',
+    id: 'executive',
+    name: 'Executive Concierge',
+    tagline: 'Concierge level care with extended hours',
     price: { monthly: 449, annual: 404 },
-    description: 'The highest level of personalized care with direct access and comprehensive health optimization.',
+    description: 'Concierge level care with direct phone access during extended hours and comprehensive health planning for founders, executives, and professionals.',
     features: [
-      { text: 'Everything in Precision Care', included: true, highlight: true },
+      { text: 'Everything in Precision Concierge', included: true, highlight: true },
       { text: 'Dedicated phone line', included: true },
       { text: 'After-hours access for urgent needs', included: true },
       { text: 'Annual comprehensive health assessment', included: true },
@@ -73,7 +73,7 @@ const tiers = [
       { text: 'Personalized wellness protocols', included: true },
       { text: 'Concierge-level responsiveness', included: true },
     ],
-    cta: 'Select This Plan',
+    cta: 'View Plan Details',
     popular: false,
   },
 ]
@@ -88,12 +88,12 @@ const nonMemberPricing = [
 
 const faqs = [
   {
-    q: 'What is Direct Primary Care?',
-    a: 'DPC is a membership-based model where you pay a monthly fee directly to your physician, removing insurance from the primary care relationship. This allows for longer visits, easier access, and care focused on you rather than billing codes.',
+    q: 'What is concierge medicine?',
+    a: 'Concierge medicine is a membership-based model where you pay a monthly fee directly to your physician, removing insurance from the primary care relationship. This allows for longer visits, easier access, and care focused on you rather than billing codes.',
   },
   {
     q: 'Do I still need health insurance?',
-    a: 'Yes. DPC covers primary care only. You should maintain coverage for emergencies, hospitalizations, specialists, and catastrophic events. Many members pair DPC with high-deductible health plans.',
+    a: 'Yes. Concierge medicine covers primary care only. You should maintain coverage for emergencies, hospitalizations, specialists, and catastrophic events. Many members pair concierge medicine with high-deductible health plans.',
   },
   {
     q: 'What if I need a specialist?',
@@ -251,7 +251,7 @@ export default function ServicesPage() {
           <div className="text-center mb-12">
             <p className="text-sfm-gold text-sm tracking-[0.3em] uppercase mb-4 font-medium">Membership</p>
             <h2 className="font-display text-4xl text-sfm-navy mb-4">Choose Your Level of Care</h2>
-            <p className="text-muted max-w-xl mx-auto">Every plan includes unlimited virtual visits, direct messaging, and wholesale lab pricing.</p>
+            <p className="text-muted max-w-xl mx-auto">Every membership includes generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing.</p>
           </div>
 
           {/* Founding Member Alert - URGENCY SIGNAL */}
@@ -401,7 +401,7 @@ export default function ServicesPage() {
             <div className="inline-flex items-center gap-3 px-6 py-4 bg-sfm-gold/10 border border-sfm-gold/20 rounded-2xl">
               <Zap className="w-5 h-5 text-sfm-gold" />
               <p className="text-sm text-sfm-navy">
-                <span className="font-semibold">Founding Members:</span> Join now and receive Legacy Health benefits at Precision Care pricing.
+                <span className="font-semibold">Founding Members:</span> Join now and lock in your rate for life. Limited spots available.
               </p>
             </div>
           </div>
@@ -453,7 +453,7 @@ export default function ServicesPage() {
         <div className="relative max-w-5xl mx-auto px-6">
           <div className="text-center mb-10">
             <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase font-medium mb-2">The Difference</p>
-            <h2 className="font-display text-3xl text-white">Why Members Choose DPC</h2>
+            <h2 className="font-display text-3xl text-white">Why Members Choose Concierge Medicine</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -479,7 +479,7 @@ export default function ServicesPage() {
               </ul>
             </div>
 
-            {/* Sankofa DPC */}
+            {/* Sankofa Concierge Medicine */}
             <div className="bg-sfm-gold/10 border border-sfm-gold/30 rounded-2xl p-6">
               <p className="text-sfm-gold text-sm uppercase tracking-wider mb-4">Sankofa Family Medicine</p>
               <ul className="space-y-3">

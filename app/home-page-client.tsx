@@ -298,7 +298,7 @@ export default function HomePage() {
       {/* CARE JOURNEY COMPONENT */}
       <CareJourney />
 
-      {/* DPC COMPARISON SECTION - Refined */}
+      {/* CONCIERGE MEDICINE COMPARISON SECTION - Refined */}
       <section className="relative py-24 lg:py-32 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
@@ -306,10 +306,10 @@ export default function HomePage() {
               The Difference
             </span>
             <h2 className="text-display-lg text-sfm-navy mb-6">
-              Why Direct Primary Care Works
+              Why Concierge Medicine Works
             </h2>
             <p className="text-lg text-sfm-text-muted">
-              Insurance-driven systems are built for volume, not memory. Direct Primary Care restores time, continuity, and transparency.
+              Insurance-driven systems are built for volume, not memory. Concierge medicine restores time, continuity, and transparency.
             </p>
           </ScrollReveal>
 
@@ -444,11 +444,11 @@ export default function HomePage() {
                 }`}>
                   {yesCount >= 3 ? (
                     <p className="text-emerald-800 text-sm">
-                      <strong>DPC may be a great fit.</strong> You value the things that Direct Primary Care excels at.
+                      <strong>Concierge medicine may be a great fit.</strong> You value the things that concierge medicine excels at.
                     </p>
                   ) : yesCount > 0 ? (
                     <p className="text-gray-700 text-sm">
-                      Check more items to see if DPC aligns with your healthcare priorities.
+                      Check more items to see if concierge medicine aligns with your healthcare priorities.
                     </p>
                   ) : (
                     <p className="text-gray-500 text-sm">
@@ -473,28 +473,28 @@ export default function HomePage() {
               Memberships Built for You
             </h2>
             <p className="text-lg text-sfm-text-muted max-w-2xl mx-auto">
-              All plans include unlimited visits, direct messaging, and wholesale lab pricing.
+              Every membership includes generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing.
             </p>
           </ScrollReveal>
 
           <ScrollRevealGroup className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                name: 'Continuity Care',
-                price: 149,
-                description: 'Essential primary care designed to restore the continuity traditional medicine has lost.',
+                name: 'Continuity Concierge',
+                price: 195,
+                description: 'Essential virtual concierge primary care designed to restore the continuity traditional medicine has lost.',
                 featured: false,
               },
               {
-                name: 'Precision Care',
-                price: 249,
-                description: 'Everything in Continuity Care plus precision insights and advanced diagnostics when appropriate.',
+                name: 'Precision Concierge',
+                price: 295,
+                description: 'Everything in Continuity Concierge plus deeper preventive insight and advanced diagnostics when appropriate.',
                 featured: true,
               },
               {
-                name: 'Legacy Health',
+                name: 'Executive Concierge',
                 price: 449,
-                description: 'Concierge-level care with direct phone access and comprehensive health planning.',
+                description: 'Concierge level care with direct phone access during extended hours and comprehensive health planning.',
                 featured: false,
               },
             ].map((tier, i) => (
