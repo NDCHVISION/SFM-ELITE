@@ -306,12 +306,10 @@ export default function HomePage() {
               The Difference
             </span>
             <h2 className="text-display-lg text-sfm-navy mb-6">
-              Why Concierge Membership Works
+              Why Concierge Medicine Works
             </h2>
             <p className="text-lg text-sfm-text-muted">
-              Insurance driven systems are designed for volume, not memory.
-              Our virtual concierge membership restores time, continuity, and transparency.
-              It creates space for relationships, not rush.
+              Insurance-driven systems are built for volume, not memory. Concierge medicine restores time, continuity, and transparency.
             </p>
           </ScrollReveal>
 
@@ -482,7 +480,7 @@ export default function HomePage() {
               All plans include generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing.
             </p>
             <p className="text-lg text-sfm-text-muted max-w-2xl mx-auto">
-              Each membership restores the time, continuity, and trust that make medicine personal again.
+              Every membership includes generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing.
             </p>
           </ScrollReveal>
 
@@ -491,19 +489,19 @@ export default function HomePage() {
               {
                 name: 'Continuity Concierge',
                 price: 195,
-                description: 'Essential virtual concierge primary care focused on restoring the continuity traditional medicine has lost. Ideal for individuals who value long term relationships, steady access, and thoughtful care.',
+                description: 'Essential virtual concierge primary care designed to restore the continuity traditional medicine has lost.',
                 featured: false,
               },
               {
                 name: 'Precision Concierge',
                 price: 295,
-                description: 'Everything in Continuity Concierge plus deeper preventive insight, advanced diagnostics when appropriate, and more proactive follow up. Designed for those who want to move beyond treatment toward prevention and precision.',
+                description: 'Everything in Continuity Concierge plus deeper preventive insight and advanced diagnostics when appropriate.',
                 featured: true,
               },
               {
                 name: 'Executive Concierge',
                 price: 449,
-                description: 'Comprehensive concierge level care with direct phone access during extended hours and complete health planning for founders, executives, and professionals. Built for those who value strategic partnership in care and seamless accessibility.',
+                description: 'Concierge level care with direct phone access during extended hours and comprehensive health planning.',
                 featured: false,
               },
             ].map((tier, i) => (

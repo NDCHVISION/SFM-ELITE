@@ -7,12 +7,12 @@ const servicesSchema = {
       '@type': 'MedicalBusiness',
       '@id': 'https://sankofafamilymedicine.com/#practice',
       name: 'Sankofa Family Medicine',
-      description: 'Virtual-first direct primary care practice serving Washington State',
+      description: 'Virtual-first concierge medicine practice serving Washington State',
       url: 'https://sankofafamilymedicine.com',
       telephone: '+1-425-285-7390',
       email: 'info@sankofafamilymedicine.com',
       areaServed: 'Washington State, USA',
-      priceRange: '$149-$449/month',
+      priceRange: '$195-$449/month',
       medicalSpecialty: ['PrimaryCare', 'FamilyMedicine'],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
@@ -22,14 +22,14 @@ const servicesSchema = {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Continuity Care',
-              description: 'Essential virtual primary care with unlimited visits, same-day appointments, and direct physician messaging',
+              name: 'Continuity Concierge',
+              description: 'Essential virtual concierge primary care designed to restore the continuity traditional medicine has lost',
             },
-            price: '149',
+            price: '195',
             priceCurrency: 'USD',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '149',
+              price: '195',
               priceCurrency: 'USD',
               unitText: 'month',
               billingDuration: 'P1M',
@@ -39,14 +39,14 @@ const servicesSchema = {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Precision Care',
-              description: 'Data-driven personalized medicine with genetic testing, pharmacogenomics, and advanced biomarker panels',
+              name: 'Precision Concierge',
+              description: 'Everything in Continuity Concierge plus deeper preventive insight, advanced diagnostics when appropriate, and more proactive follow up',
             },
-            price: '249',
+            price: '295',
             priceCurrency: 'USD',
             priceSpecification: {
               '@type': 'UnitPriceSpecification',
-              price: '249',
+              price: '295',
               priceCurrency: 'USD',
               unitText: 'month',
               billingDuration: 'P1M',
@@ -56,8 +56,8 @@ const servicesSchema = {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'Legacy Health',
-              description: 'Concierge-level care with dedicated phone line, after-hours access, and comprehensive health optimization',
+              name: 'Executive Concierge',
+              description: 'Concierge level care with direct phone access during extended hours and comprehensive health planning for founders, executives, and professionals',
             },
             price: '449',
             priceCurrency: 'USD',
@@ -99,7 +99,7 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is Concierge Medicine?',
+      name: 'What is concierge medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Concierge medicine is a membership-based model where you pay a monthly fee directly to your physician, removing insurance from the primary care relationship. This allows for longer visits, easier access, and care focused on you rather than billing codes.',
@@ -107,7 +107,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Do I still need health insurance with Concierge Medicine?',
+      name: 'Do I still need health insurance with concierge medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Yes. Concierge medicine covers primary care only. You should maintain coverage for emergencies, hospitalizations, specialists, and catastrophic events. Many members pair concierge medicine with high-deductible health plans.',
@@ -134,18 +134,18 @@ const faqSchema = {
       name: 'How much does membership cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa Family Medicine offers three membership tiers: Continuity Care at $149/month, Precision Care at $249/month, and Legacy Health at $449/month. All plans include unlimited virtual visits, direct physician messaging, and wholesale lab pricing. Annual billing provides a 10% discount.',
+        text: 'Sankofa Family Medicine offers three membership tiers: Continuity Concierge at $195/month, Precision Concierge at $295/month, and Executive Concierge at $449/month. All plans include generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing. Annual billing provides a 10% discount.',
       },
     },
   ],
 }
 
 export const metadata: Metadata = {
-  title: 'Services & Pricing | Virtual Direct Primary Care | Washington State',
-  description: 'Sankofa Family Medicine offers virtual-first concierge medicine across Washington State. Membership from $149/month includes genetic testing, precision medicine, and cardiometabolic health optimization. Founding members receive Legacy Health benefits at Precision Care pricing.',
+  title: 'Services & Pricing | Virtual Concierge Medicine | Washington State',
+  description: 'Sankofa Family Medicine offers virtual-first concierge medicine across Washington State. Membership from $195/month includes genetic testing, precision medicine, and cardiometabolic health optimization. Founding members lock in their rate for life.',
   keywords: [
-    'direct primary care Washington',
-    'concierge medicine membership pricing',
+    'concierge medicine Washington',
+    'concierge membership pricing',
     'virtual primary care',
     'telehealth Washington State',
     'concierge medicine Seattle',
@@ -162,7 +162,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Services & Pricing | Sankofa Family Medicine',
-    description: 'Premium virtual primary care starting at $149/month. Founding members receive Legacy Health benefits at Precision Care pricing.',
+    description: 'Premium virtual concierge medicine starting at $195/month. Founding members lock in their rate for life.',
     url: 'https://sankofafamilymedicine.com/services',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -172,14 +172,14 @@ export const metadata: Metadata = {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Sankofa Family Medicine Premium Virtual Primary Care Membership',
+        alt: 'Sankofa Family Medicine Premium Virtual Concierge Medicine Membership',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Services & Pricing | Sankofa Family Medicine',
-    description: 'Premium virtual primary care starting at $149/month. Founding members receive Legacy Health benefits at Precision Care pricing.',
+    description: 'Premium virtual concierge medicine starting at $195/month. Founding members lock in their rate for life.',
     images: ['/images/og-image.png'],
   },
   alternates: {
@@ -202,45 +202,48 @@ export const metadata: Metadata = {
     'content-type': 'Services',
     'medical-specialty': 'Primary Care, Family Medicine',
     'service-area': 'Washington State, USA',
-    'practice-type': 'Direct Primary Care',
-    'price-range': '$149-$449/month',
+    'practice-type': 'Concierge Medicine',
+    'price-range': '$195-$449/month',
     'payment-methods': 'Credit Card, Debit Card, HSA, FSA',
-    'founding-member-offer': 'First 30 members receive Legacy Health benefits at Precision Care pricing ($249/month), protected while your membership remains active',
+    'founding-member-offer': 'Founding members lock in their rate for life. Limited spots available.',
     
     // Detailed LLM summary for AI assistants
     'llm-summary': `Sankofa Family Medicine Membership Tiers:
 
-TIER 1 - CONTINUITY CARE ($149/month):
-- Unlimited virtual visits (45 minutes each)
+TIER 1 - CONTINUITY CONCIERGE ($195/month, $176/month billed annually):
+- Generous virtual visit access
 - Same-day or next-day appointments
-- Direct physician messaging (response within 24-48 hours)
-- Annual wellness exam
+- Direct secure messaging with your physician
+- 45-minute initial consultation
 - Wholesale lab pricing (up to 90% off retail)
-- Basic chronic disease management
-- Prescription management
+- Chronic disease management
+- Medication management
+- Care coordination
 - HSA/FSA eligible
 
-TIER 2 - PRECISION CARE ($249/month):
-- Everything in Continuity Care, plus:
+TIER 2 - PRECISION CONCIERGE ($295/month, $266/month billed annually) - Most Popular:
+- Everything in Continuity Concierge, plus:
 - Genetic testing and interpretation
 - Pharmacogenomics (medication DNA matching)
 - Advanced biomarker panels
-- Sankofa OS AI-powered clinical decision support
-- Cardiometabolic risk assessment
-- Personalized prevention strategies
+- Cardiometabolic risk profiling
+- Personalized prevention protocols
 - Priority scheduling
+- Extended visit times (60 min)
+- Quarterly health reviews
 
-TIER 3 - LEGACY HEALTH ($449/month):
-- Everything in Precision Care, plus:
-- Direct physician cell phone access
-- After-hours availability
-- Family health planning consultations
-- Expedited specialist referrals
-- Executive-level care coordination
-- Annual health optimization reviews
-- Concierge-level service
+TIER 3 - EXECUTIVE CONCIERGE ($449/month, $404/month billed annually):
+- Everything in Precision Concierge, plus:
+- Dedicated phone line
+- After-hours access for urgent needs
+- Annual comprehensive health assessment
+- Executive health planning
+- Family health coordination
+- Specialist coordination and advocacy
+- Personalized wellness protocols
+- Concierge-level responsiveness
 
-FOUNDING MEMBER OFFER: First 30 members receive all Legacy Health (Tier 3) benefits at Precision Care (Tier 2) pricing of $249/month, protected while your membership remains active.`,
+FOUNDING MEMBER OFFER: Join now and lock in your rate for life. Limited spots available.`,
   },
 }
 

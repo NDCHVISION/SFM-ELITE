@@ -45,30 +45,30 @@ interface MembershipItem {
 const membershipTiers: Record<string, MembershipItem> = {
   continuity: {
     item_id: 'tier_1_continuity',
-    item_name: 'Continuity Care',
+    item_name: 'Continuity Concierge',
     item_category: 'membership',
-    price: 149,
+    price: 195,
     quantity: 1
   },
   precision: {
     item_id: 'tier_2_precision',
-    item_name: 'Precision Care',
+    item_name: 'Precision Concierge',
     item_category: 'membership',
-    price: 249,
+    price: 295,
     quantity: 1
   },
-  legacy: {
-    item_id: 'tier_3_legacy',
-    item_name: 'Legacy Health',
+  executive: {
+    item_id: 'tier_3_executive',
+    item_name: 'Executive Concierge',
     item_category: 'membership',
     price: 449,
     quantity: 1
   },
   founding: {
     item_id: 'founding_member',
-    item_name: 'Founding Member (Legacy at Precision Price)',
+    item_name: 'Founding Member',
     item_category: 'membership',
-    price: 249,
+    price: 295,
     quantity: 1
   }
 }

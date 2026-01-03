@@ -77,13 +77,13 @@ VIRTUAL CARE:
 - For emergencies, patients should call 911
 
 MEMBERSHIP TIERS:
-- Tier 1 Continuity Care: $149/month (unlimited visits, messaging, basic care)
-- Tier 2 Precision Care: $249/month (adds genetic testing, pharmacogenomics, AI insights)
-- Tier 3 Legacy Health: $449/month (adds direct cell access, after-hours care)
+- Tier 1 Continuity Concierge: $195/month ($176/month billed annually)
+- Tier 2 Precision Concierge: $295/month ($266/month billed annually) - Most Popular
+- Tier 3 Executive Concierge: $449/month ($404/month billed annually)
 
 FOUNDING MEMBER OFFER:
-- First 30 members get Legacy Health benefits at Precision Care pricing ($249/month)
-- Pricing protected while your membership remains active while membership remains continuous
+- Founding members lock in their rate for life
+- Limited spots available
 
 GETTING STARTED:
 - Enrollment begins in Atlas, our secure patient portal
@@ -126,7 +126,7 @@ const faqSchema = {
       name: 'How much does membership cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa Family Medicine offers three membership tiers: Continuity Care at $149/month for essential virtual primary care, Precision Care at $249/month adding genetic testing and AI-powered insights, and Legacy Health at $449/month for concierge-level care with direct physician cell access. The first 30 founding members receive Legacy Health benefits at Precision Care pricing ($249/month), protected while your membership remains active.',
+        text: 'Sankofa Family Medicine offers three membership tiers: Continuity Concierge at $195/month for essential virtual concierge primary care, Precision Concierge at $295/month adding deeper preventive insight and advanced diagnostics, and Executive Concierge at $449/month for concierge level care with direct phone access during extended hours. Founding members lock in their rate for life.',
       },
     },
     // Virtual Care
@@ -160,7 +160,7 @@ const faqSchema = {
       name: "What's included in a Sankofa Family Medicine membership?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'All membership tiers include unlimited 45-minute virtual visits with Dr. Nkrumah, secure messaging with 24-48 hour response times, care coordination, prescription management, and wholesale lab pricing (up to 90% off retail). Higher tiers add genetic testing, pharmacogenomics, AI-powered health insights via Sankofa OS, and direct physician cell phone access.',
+        text: 'Every membership includes generous virtual visit access with Dr. Nkrumah, direct secure messaging with your physician, care coordination, prescription management, and wholesale lab pricing (up to 90% off retail). Higher tiers add genetic testing, pharmacogenomics, advanced biomarker panels, and direct phone access during extended hours.',
       },
     },
     {
@@ -168,7 +168,7 @@ const faqSchema = {
       name: "What is the founding member offer at Sankofa Family Medicine?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'The first 30 members receive Legacy Health benefits at Precision Care pricing: $249/month instead of $449/month. This includes genetic testing, pharmacogenomics, direct physician cell access, and same-day appointments. This pricing is protected while your membership remains active.',
+        text: 'Founding members lock in their rate for life. Limited spots available. Join now to secure your membership at current pricing.',
       },
     },
     // Getting Started
