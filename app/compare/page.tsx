@@ -3,12 +3,12 @@ import { ArrowRight, ArrowLeft, Check, X } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Why Direct Primary Care? | Traditional vs. Sankofa DPC Comparison',
-  description: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice. Compare: 15 min vs 45 min visits, 26-day waits vs same-day access, 2,300 patients vs 450. See why DPC solves healthcare fragmentation.',
-  keywords: ['direct primary care comparison', 'DPC vs traditional', 'Washington State DPC', 'Medicine That Remembers', 'healthcare fragmentation', 'virtual primary care'],
+  title: 'The Difference | Why Concierge Membership Works | Sankofa Family Medicine',
+  description: 'Insurance driven systems are designed for volume, not memory. Our virtual concierge membership restores time, continuity, and transparency. Compare traditional primary care vs Sankofa Family Medicine.',
+  keywords: ['concierge medicine comparison', 'DPC vs traditional', 'Washington State DPC', 'Medicine That Remembers', 'healthcare fragmentation', 'virtual primary care', 'concierge membership'],
   openGraph: {
-    title: 'Why Direct Primary Care? | Traditional vs. Sankofa DPC Comparison',
-    description: 'See the evidence-based differences: 15 min vs 45 min visits, 26-day waits vs same-day access. Direct primary care solves healthcare fragmentation.',
+    title: 'The Difference | Why Concierge Membership Works',
+    description: 'Insurance driven systems are designed for volume, not memory. Our virtual concierge membership restores time, continuity, and transparency.',
     url: 'https://sankofafamilymedicine.com/compare',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Compare Traditional vs Direct Primary Care Sankofa Family Medicine',
+        alt: 'Compare Traditional vs Concierge Primary Care - Sankofa Family Medicine',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Why Direct Primary Care? | Sankofa Family Medicine',
-    description: 'See the evidence-based differences: 15 min vs 45 min visits, 26-day waits vs same-day access.',
+    title: 'The Difference | Why Concierge Membership Works',
+    description: 'Insurance driven systems are designed for volume, not memory. Our virtual concierge membership restores time, continuity, and transparency.',
     images: ['/images/og-image.png'],
   },
   alternates: {
@@ -56,8 +56,8 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'MedicalWebPage',
-      name: 'Healthcare Model Comparison',
-      description: 'Side-by-side evidence-based comparison between traditional primary care and Direct Primary Care',
+      name: 'The Difference - Why Concierge Membership Works',
+      description: 'Side-by-side comparison between traditional insurance-based primary care and Sankofa Family Medicine concierge membership',
       specialty: { '@type': 'MedicalSpecialty', name: 'Family Medicine' },
       publisher: {
         '@type': 'MedicalBusiness',
@@ -74,7 +74,7 @@ const structuredData = {
           name: 'How long is a typical primary care appointment?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Traditional primary care averages 15-18 minutes. Direct Primary Care practices like Sankofa offer 30-60 minute visits.',
+            text: 'Traditional primary care averages 15 minutes and often feels rushed. Sankofa Family Medicine visits average about forty five minutes.',
           },
         },
         {
@@ -82,23 +82,23 @@ const structuredData = {
           name: 'How many patients does a typical doctor have?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Traditional practices average 2,300+ patients per physician. DPC practices average 445 patients, enabling personalized care.',
+            text: 'Traditional practices have thousands of patients per physician. Sankofa maintains a limited panel of approximately 200 adults to protect time and access.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Can I text my doctor directly?',
+          name: 'Will I see the same doctor every time?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'In traditional care, patients use patient portals with 24-72 hour response times. 82% of DPC practices offer direct physician messaging with same-day responses.',
+            text: 'In traditional care, you may see a different provider at each visit. At Sankofa Family Medicine, you see the same physician every time, not a rotating team.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How much do labs cost with Direct Primary Care?',
+          name: 'How is billing handled at Sankofa Family Medicine?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'DPC practices offer wholesale lab pricing, often 80-90% less than hospital or insurance-negotiated rates.',
+            text: 'Unlike traditional care with surprise billing and confusing statements, Sankofa offers clear monthly pricing with no visit fees or unexpected bills.',
           },
         },
       ],
@@ -110,72 +110,37 @@ const comparisonData = [
   {
     category: 'Visit Duration',
     context: 'Time with your physician',
-    traditional: { value: '15 min', label: 'median appointment', isNegative: false },
-    sankofa: { value: '30-60 min', label: 'unhurried visits', isPositive: true },
+    traditional: { text: '15 minute appointments that feel rushed', isNegative: true },
+    sankofa: { text: 'Visits that average about forty five minutes', isPositive: true },
     highlight: true,
   },
   {
-    category: 'Appointment Wait',
-    context: 'Days until you are seen',
-    traditional: { value: '26+ days', label: 'national average', isNegative: false },
-    sankofa: { value: 'Same day', label: 'or next day', isPositive: true },
+    category: 'Access & Wait Times',
+    context: 'When you can be seen',
+    traditional: { text: 'Long waits for visits and limited access', isNegative: true },
+    sankofa: { text: 'Same or next business day virtual access for urgent concerns whenever possible', isPositive: true },
     highlight: false,
   },
   {
-    category: 'Patients per Doctor',
+    category: 'Panel Size',
     context: 'How many share your physician',
-    traditional: { value: '2,300+', label: 'patients per physician', isNegative: false },
-    sankofa: { value: '<500', label: 'patients per physician', isPositive: true },
+    traditional: { text: 'Thousands of patients per physician', isNegative: true },
+    sankofa: { text: 'A limited panel of approximately 200 adults to protect time and access', isPositive: true },
     highlight: true,
   },
   {
-    category: 'Your Physician',
+    category: 'Continuity of Care',
     context: 'Who you see each visit',
-    traditional: { text: 'Whoever is available', isNegative: true },
-    sankofa: { text: 'Dr. Nkrumah, always', isPositive: true },
+    traditional: { text: 'Different provider at each visit', isNegative: true },
+    sankofa: { text: 'The same physician every time, not a rotating team', isPositive: true },
     highlight: false,
   },
   {
-    category: 'Message Your Doctor',
-    context: 'How you reach your physician',
-    traditional: { text: 'Patient portal, 24-72hr', isNegative: true },
-    sankofa: { text: 'Direct text, same day', isPositive: true },
+    category: 'Pricing & Billing',
+    context: 'What you pay for care',
+    traditional: { text: 'Surprise billing and confusing statements', isNegative: true },
+    sankofa: { text: 'Clear monthly pricing with no visit fees or unexpected bills', isPositive: true },
     highlight: true,
-  },
-  {
-    category: 'After Hours Care',
-    context: 'When you need help at night',
-    traditional: { text: 'ER or wait until Monday', isNegative: true },
-    sankofa: { text: '24/7 physician access', isPositive: true },
-    highlight: false,
-  },
-  {
-    category: 'Lab Work Pricing',
-    context: 'What routine labs cost you',
-    traditional: { value: '$100+', label: 'insurance-negotiated', isNegative: false },
-    sankofa: { value: '$5-20', label: 'wholesale pricing', isPositive: true },
-    highlight: true,
-  },
-  {
-    category: 'Prior Authorization',
-    context: 'Insurance approval delays',
-    traditional: { text: 'Days to weeks waiting', isNegative: true },
-    sankofa: { text: 'None required', isPositive: true },
-    highlight: false,
-  },
-  {
-    category: 'Monthly Cost',
-    context: 'What you pay for access',
-    traditional: { text: 'Unpredictable copays and bills', isNegative: true },
-    sankofa: { text: 'One transparent fee', isPositive: true },
-    highlight: true,
-  },
-  {
-    category: 'When You Call',
-    context: 'The phone experience',
-    traditional: { text: 'Phone tree, hold, callback', isNegative: true },
-    sankofa: { text: 'Direct line to Dr. Nkrumah', isPositive: true },
-    highlight: false,
   },
 ]
 
@@ -198,19 +163,23 @@ export default function ComparePage() {
             Back to Home
           </Link>
           <p className="text-sfm-gold text-sm tracking-[0.3em] uppercase mb-4 font-medium">
-            Side by Side
+            The Difference
           </p>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1]">
-            The <em className="text-sfm-gold italic">Evidence</em> Speaks
+            Why <em className="text-sfm-gold italic">Concierge Membership</em> Works
           </h1>
-          <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto">
-            Every metric below is drawn from peer-reviewed research. The difference is not subtle.
+          <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            Insurance driven systems are designed for volume, not memory.<br className="hidden md:block" />
+            Our virtual concierge membership restores time, continuity, and transparency.
+          </p>
+          <p className="text-white/40 text-base mt-4 max-w-xl mx-auto italic">
+            It creates space for relationships, not rush.
           </p>
         </div>
       </section>
 
       {/* Comparison Table */}
-      <section className="py-16 bg-gradient-to-b from-[#070705] to-sfm-navy">
+      <section className="py-20 bg-gradient-to-b from-[#070705] to-sfm-navy">
         <div className="max-w-5xl mx-auto px-6">
           {/* Desktop Table */}
           <div className="hidden md:block overflow-hidden rounded-2xl border border-white/10">
@@ -221,24 +190,24 @@ export default function ComparePage() {
                     Category
                   </th>
                   <th className="w-[36%] p-6 text-center text-xs font-semibold tracking-[0.2em] uppercase text-white/40 bg-white/[0.02]">
-                    <span className="block text-white/60">Typical Insurance-Based Clinic</span>
-                    <span className="block font-display text-2xl font-normal tracking-normal normal-case text-white/50 mt-2">
-                      The Norm
+                    <span className="block text-white/50">Traditional Primary Care</span>
+                    <span className="block font-display text-xl font-normal tracking-normal normal-case text-white/40 mt-2 italic">
+                      Insurance-Based
                     </span>
                   </th>
                   <th className="w-[36%] p-6 text-center text-xs font-semibold tracking-[0.2em] uppercase text-sfm-gold bg-sfm-gold/[0.08]">
-                    <span className="block">Sankofa Direct Primary Care</span>
-                    <span className="block font-display text-2xl font-normal tracking-normal normal-case text-white mt-2">
-                      The Standard
+                    <span className="block">Sankofa Family Medicine</span>
+                    <span className="block font-display text-xl font-normal tracking-normal normal-case text-white mt-2 italic">
+                      Concierge Membership
                     </span>
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {comparisonData.map((row, index) => (
+                {comparisonData.map((row) => (
                   <tr 
                     key={row.category}
-                    className={`border-t border-white/[0.04] transition-colors hover:bg-white/[0.02] ${
+                    className={`border-t border-white/[0.06] transition-colors hover:bg-white/[0.02] ${
                       row.highlight ? 'bg-sfm-gold/[0.02]' : ''
                     }`}
                   >
@@ -247,40 +216,22 @@ export default function ComparePage() {
                       <div className="text-sm text-white/40 italic">{row.context}</div>
                     </td>
                     <td className={`p-6 text-center bg-white/[0.02] ${row.highlight ? 'bg-white/[0.03]' : ''}`}>
-                      <div className="flex items-center justify-center gap-3">
+                      <div className="flex items-start justify-center gap-3">
                         {row.traditional.isNegative && (
-                          <X className="w-5 h-5 text-white/25 flex-shrink-0" strokeWidth={2.5} />
+                          <X className="w-5 h-5 text-white/30 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                         )}
-                        <span className="text-white/50">
-                          {row.traditional.value ? (
-                            <>
-                              <span className="block text-2xl font-display font-medium text-white/50">
-                                {row.traditional.value}
-                              </span>
-                              <span className="text-sm opacity-70">{row.traditional.label}</span>
-                            </>
-                          ) : (
-                            row.traditional.text
-                          )}
+                        <span className="text-white/50 text-base leading-relaxed">
+                          {row.traditional.text}
                         </span>
                       </div>
                     </td>
                     <td className={`p-6 text-center bg-sfm-gold/[0.08] ${row.highlight ? 'bg-sfm-gold/[0.12]' : ''}`}>
-                      <div className="flex items-center justify-center gap-3">
-                        {row.sankofa.isPositive && !row.sankofa.value && (
-                          <Check className="w-5 h-5 text-sfm-gold flex-shrink-0" strokeWidth={2.5} />
+                      <div className="flex items-start justify-center gap-3">
+                        {row.sankofa.isPositive && (
+                          <Check className="w-5 h-5 text-sfm-gold flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                         )}
-                        <span className="text-white">
-                          {row.sankofa.value ? (
-                            <>
-                              <span className="block text-2xl font-display font-medium text-sfm-gold">
-                                {row.sankofa.value}
-                              </span>
-                              <span className="text-sm opacity-70">{row.sankofa.label}</span>
-                            </>
-                          ) : (
-                            row.sankofa.text
-                          )}
+                        <span className="text-white text-base leading-relaxed">
+                          {row.sankofa.text}
                         </span>
                       </div>
                     </td>
@@ -290,8 +241,8 @@ export default function ComparePage() {
             </table>
           </div>
 
-          {/* Mobile Cards */}
-          <div className="md:hidden space-y-4">
+          {/* Mobile Cards - Stacked vertically */}
+          <div className="md:hidden space-y-6">
             {comparisonData.map((row) => (
               <div 
                 key={row.category}
@@ -303,40 +254,28 @@ export default function ComparePage() {
                   <div className="font-display text-lg text-white">{row.category}</div>
                   <div className="text-sm text-white/40 italic">{row.context}</div>
                 </div>
-                <div className="grid grid-cols-2">
-                  <div className="p-4 bg-white/[0.02] text-center border-r border-white/[0.04]">
-                    <div className="text-xs uppercase tracking-wider text-white/30 mb-2">Insurance-Based</div>
-                    <div className="flex items-center justify-center gap-2">
+                <div className="flex flex-col">
+                  {/* Traditional - Gray styling */}
+                  <div className="p-5 bg-white/[0.02] text-center border-b border-white/[0.06]">
+                    <div className="text-xs uppercase tracking-wider text-white/30 mb-3">Traditional Primary Care</div>
+                    <div className="flex items-start justify-center gap-2">
                       {row.traditional.isNegative && (
-                        <X className="w-4 h-4 text-white/25" strokeWidth={2.5} />
+                        <X className="w-4 h-4 text-white/30 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                       )}
-                      <span className="text-white/50 text-sm">
-                        {row.traditional.value ? (
-                          <>
-                            <span className="block text-xl font-display">{row.traditional.value}</span>
-                            <span className="text-xs opacity-70">{row.traditional.label}</span>
-                          </>
-                        ) : (
-                          row.traditional.text
-                        )}
+                      <span className="text-white/50 text-sm leading-relaxed">
+                        {row.traditional.text}
                       </span>
                     </div>
                   </div>
-                  <div className="p-4 bg-sfm-gold/[0.08] text-center">
-                    <div className="text-xs uppercase tracking-wider text-sfm-gold mb-2">Sankofa DPC</div>
-                    <div className="flex items-center justify-center gap-2">
-                      {row.sankofa.isPositive && !row.sankofa.value && (
-                        <Check className="w-4 h-4 text-sfm-gold" strokeWidth={2.5} />
+                  {/* Sankofa - Gold styling */}
+                  <div className="p-5 bg-sfm-gold/[0.08] text-center">
+                    <div className="text-xs uppercase tracking-wider text-sfm-gold mb-3">Sankofa Family Medicine</div>
+                    <div className="flex items-start justify-center gap-2">
+                      {row.sankofa.isPositive && (
+                        <Check className="w-4 h-4 text-sfm-gold flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                       )}
-                      <span className="text-white text-sm">
-                        {row.sankofa.value ? (
-                          <>
-                            <span className="block text-xl font-display text-sfm-gold">{row.sankofa.value}</span>
-                            <span className="text-xs opacity-70">{row.sankofa.label}</span>
-                          </>
-                        ) : (
-                          row.sankofa.text
-                        )}
+                      <span className="text-white text-sm leading-relaxed">
+                        {row.sankofa.text}
                       </span>
                     </div>
                   </div>
@@ -345,32 +284,11 @@ export default function ComparePage() {
             ))}
           </div>
 
-          {/* Evidence Footer */}
-          <div className="mt-12 p-8 bg-white/[0.02] rounded-xl border border-white/[0.04]">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="text-center md:text-left">
-                <p className="text-white/60 text-sm mb-2">
-                  <strong className="text-white">Evidence-based statistics</strong> from peer-reviewed sources:
-                </p>
-                <p className="text-white/40 text-xs leading-relaxed">
-                  PMC, AAFP, AMN Healthcare, Society of Actuaries, Health Tracking Household Survey
-                </p>
-              </div>
-              <div className="flex items-center gap-4 text-white/50 text-sm">
-                <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-sfm-gold" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-                  </svg>
-                  <span>Board Certified</span>
-                </div>
-                <span>•</span>
-                <span>HIPAA Compliant</span>
-                <span>•</span>
-                <Link href="/founder#publications" className="text-sfm-gold hover:text-white transition-colors">
-                  View Publications
-                </Link>
-              </div>
-            </div>
+          {/* Disclaimer Footer */}
+          <div className="mt-12 p-6 bg-white/[0.02] rounded-xl border border-white/[0.04]">
+            <p className="text-white/40 text-sm text-center italic leading-relaxed">
+              *Typical features of many insurance based primary care clinics. Individual experiences may differ.
+            </p>
           </div>
 
           {/* Lead Magnet - Download Guide */}
