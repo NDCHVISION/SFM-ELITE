@@ -23,11 +23,11 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About Sankofa Family Medicine | Medicine That Remembers',
   description:
-    'Learn about Sankofa Family Medicine, a virtual-first direct primary care practice serving Washington State. Founded on the Sankofa principle of retrieving what matters to carry forward.',
+    'Learn about Sankofa Family Medicine, a virtual-first concierge medicine practice serving Washington State. Founded on the Sankofa principle of retrieving what matters to carry forward.',
   keywords: [
     'Sankofa Family Medicine',
-    'direct primary care',
-    'DPC',
+    'concierge medicine',
+    'concierge medicine Washington',
     'virtual primary care',
     'Washington State telehealth',
     'Medicine That Remembers',
@@ -91,7 +91,7 @@ const organizationJsonLd = {
   name: 'Sankofa Family Medicine',
   alternateName: 'SFM',
   description:
-    'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers.',
+    'Sankofa Family Medicine is a virtual-first concierge medicine practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers.',
   url: 'https://sankofafamilymedicine.com',
   logo: {
     '@type': 'ImageObject',
@@ -129,7 +129,7 @@ const faqJsonLd = {
       name: 'What is Sankofa Family Medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers.',
+        text: 'Sankofa Family Medicine is a virtual-first concierge medicine practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers.',
       },
     },
     {

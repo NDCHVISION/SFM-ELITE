@@ -9,11 +9,10 @@ export const metadata: Metadata = {
     'Vancouver WA virtual doctor',
     'Vancouver Washington telemedicine',
     'Vancouver WA primary care',
-    'Vancouver WA DPC',
+    'Vancouver WA concierge medicine',
     'Clark County doctor',
     'Camas primary care',
     'Washougal telemedicine',
-    'Vancouver WA concierge medicine',
     'Southwest Washington healthcare'
   ],
   openGraph: {

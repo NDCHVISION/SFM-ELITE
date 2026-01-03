@@ -9,12 +9,11 @@ export const metadata: Metadata = {
     'Olympia virtual doctor',
     'Olympia telemedicine',
     'Olympia primary care',
-    'Olympia DPC',
+    'Olympia concierge medicine',
     'Thurston County doctor',
     'Lacey primary care',
     'Tumwater telemedicine',
-    'state employee healthcare',
-    'Olympia concierge medicine'
+    'state employee healthcare'
   ],
   openGraph: {
     title: 'Virtual Primary Care in Olympia | Sankofa Family Medicine',

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'Bellevue telemedicine',
     'Bellevue primary care',
     'Eastside doctor',
-    'Bellevue DPC',
+    'Bellevue concierge medicine',
     'Redmond primary care',
     'Kirkland virtual doctor',
     'Eastside telemedicine'

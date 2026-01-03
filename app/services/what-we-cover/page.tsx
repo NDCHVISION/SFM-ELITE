@@ -30,7 +30,7 @@ const organizationJsonLd = {
   name: 'Sankofa Family Medicine',
   alternateName: ['SFM', 'Medicine That Remembers'],
   description:
-    'Sankofa Family Medicine is a virtual-first direct primary care (DPC) practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers - a care model built on continuity, genetic testing, precision medicine, and cardiometabolic health optimization.',
+    'Sankofa Family Medicine is a virtual-first concierge medicine practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers - a care model built on continuity, genetic testing, precision medicine, and cardiometabolic health optimization.',
   url: 'https://sankofafamilymedicine.com',
   logo: {
     '@type': 'ImageObject',
@@ -75,7 +75,7 @@ const organizationJsonLd = {
     },
   ],
   knowsAbout: [
-    'Direct Primary Care (DPC)',
+    'Concierge Medicine',
     'Virtual/Telehealth Medicine',
     'Genetic Testing & Precision Medicine',
     'Cardiometabolic Health',
@@ -243,16 +243,16 @@ const breadcrumbJsonLd = {
 export const metadata: Metadata = {
   title: 'What We Treat | Virtual Direct Primary Care Services | Washington State',
   description:
-    'Sankofa Family Medicine offers virtual-first direct primary care (DPC) across Washington State. We treat cardiometabolic conditions, diabetes, hypertension, mental health, weight management, and acute illness through Medicine That Remembers.',
+    'Sankofa Family Medicine offers virtual-first concierge medicine across Washington State. We treat cardiometabolic conditions, diabetes, hypertension, mental health, weight management, and acute illness through Medicine That Remembers.',
   keywords: [
     'direct primary care services',
-    'DPC conditions treated',
+    'concierge medicine conditions treated',
     'virtual primary care Washington',
     'genetic testing primary care',
     'precision medicine',
     'cardiometabolic health',
     'diabetes management telehealth',
-    'weight management DPC',
+    'weight management concierge medicine',
     'mental health primary care',
     'Medicine That Remembers',
     'Dr. Yaw Nkrumah',

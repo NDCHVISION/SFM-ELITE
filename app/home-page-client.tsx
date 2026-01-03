@@ -298,7 +298,7 @@ export default function HomePage() {
       {/* CARE JOURNEY COMPONENT */}
       <CareJourney />
 
-      {/* DPC COMPARISON SECTION - Refined */}
+      {/* CONCIERGE MEDICINE COMPARISON SECTION - Refined */}
       <section className="relative py-24 lg:py-32 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
@@ -450,11 +450,11 @@ export default function HomePage() {
                 }`}>
                   {yesCount >= 3 ? (
                     <p className="text-emerald-800 text-sm">
-                      <strong>DPC may be a great fit.</strong> You value the things that Direct Primary Care excels at.
+                      <strong>Concierge medicine may be a great fit.</strong> You value the things that concierge medicine excels at.
                     </p>
                   ) : yesCount > 0 ? (
                     <p className="text-gray-700 text-sm">
-                      Check more items to see if DPC aligns with your healthcare priorities.
+                      Check more items to see if concierge medicine aligns with your healthcare priorities.
                     </p>
                   ) : (
                     <p className="text-gray-500 text-sm">

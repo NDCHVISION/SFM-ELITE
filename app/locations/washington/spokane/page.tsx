@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'Spokane virtual doctor',
     'Spokane telemedicine',
     'Spokane primary care',
-    'Spokane DPC',
+    'Spokane concierge medicine',
     'Eastern Washington doctor',
     'Spokane Valley primary care',
     'Liberty Lake doctor',

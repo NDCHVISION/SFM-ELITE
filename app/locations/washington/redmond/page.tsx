@@ -9,11 +9,10 @@ export const metadata: Metadata = {
     'Redmond virtual doctor',
     'Redmond telemedicine',
     'Redmond primary care',
-    'Redmond DPC',
+    'Redmond concierge medicine',
     'Microsoft employee doctor',
     'Overlake primary care',
     'Education Hill doctor',
-    'Redmond concierge medicine',
     'tech corridor healthcare'
   ],
   openGraph: {
