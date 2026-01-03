@@ -33,7 +33,7 @@ export default function CareJourney() {
       number: 1,
       title: 'Enroll and Connect',
       description: 'Create your secure Atlas account and get started. Atlas is our private clinical platform for intake, consent, messaging, scheduling, and visits.',
-      hasCTA: true,
+      hasCTA: false,
     },
     {
       number: 2,
@@ -51,7 +51,7 @@ export default function CareJourney() {
       number: 4,
       title: 'Grow Together',
       description: 'Continue through secure messaging, follow-up visits, and long-term tracking. Your care compounds as your physician knows you and stays with you.',
-      hasCTA: false,
+      hasCTA: true,
     },
   ]
 
