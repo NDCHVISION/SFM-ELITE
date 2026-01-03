@@ -181,7 +181,7 @@ See `SFM-HANDOFF-V19.md` for complete technical handoff documentation.
 
 ## License
 
-Proprietary - Sankofa Family Medicine PLLC 2025
+Proprietary - Sankofa Family Medicine PLLC 2026
 
 ---
 

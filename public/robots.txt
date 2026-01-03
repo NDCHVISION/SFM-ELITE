@@ -1,7 +1,7 @@
 # ============================================
 # Robots.txt for Sankofa Family Medicine
 # https://sankofafamilymedicine.com
-# Updated: December 2025
+# Updated: January 2026
 # ============================================
 
 # Canonical host
