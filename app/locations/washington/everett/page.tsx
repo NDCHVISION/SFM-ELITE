@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     'Snohomish County doctor',
     'Marysville primary care',
     'Lake Stevens telemedicine',
-    'Everett concierge medicine',
     'Boeing employee doctor'
   ],
   openGraph: {

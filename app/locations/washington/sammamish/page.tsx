@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     'Pine Lake doctor',
     'Klahanie primary care',
     'Sammamish family doctor',
-    'Sammamish concierge medicine',
     'Plateau healthcare'
   ],
   openGraph: {

@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     'Clark County doctor',
     'Camas primary care',
     'Washougal telemedicine',
-    'Vancouver WA concierge medicine',
     'Southwest Washington healthcare'
   ],
   openGraph: {

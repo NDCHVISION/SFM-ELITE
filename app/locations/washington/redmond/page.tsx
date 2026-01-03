@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     'Microsoft employee doctor',
     'Overlake primary care',
     'Education Hill doctor',
-    'Redmond concierge medicine',
     'tech corridor healthcare'
   ],
   openGraph: {
