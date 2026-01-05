@@ -500,7 +500,7 @@ export default function HomePage() {
               },
               {
                 name: 'Executive Concierge',
-                price: 449,
+                price: 549,
                 description: 'Concierge level care with direct phone access during extended hours and comprehensive health planning.',
                 featured: false,
               },

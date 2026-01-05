@@ -142,12 +142,12 @@ V24.2 final refinements:
 
 | Tier | Price | Key Features |
 |------|-------|--------------|
-| Continuity Care | $149/mo | Essential virtual primary care |
-| Precision Care | $249/mo | + Genetic testing, extended visits |
-| Legacy Health | $449/mo | + Direct cell access, concierge level |
+| Continuity Concierge | $195/mo | Essential virtual primary care |
+| Precision Concierge | $295/mo | + Genetic testing, extended visits |
+| Executive Concierge | $549/mo | + Direct cell access, concierge level |
 
 ### Founding Member Offer
-- First 30 members: Legacy Health benefits at Precision Care pricing ($249/month)
+- First 30 members: Executive Concierge benefits at Precision Concierge pricing ($295/month)
 - Benefits protected while membership remains active
 
 ---

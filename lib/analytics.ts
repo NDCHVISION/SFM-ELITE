@@ -61,7 +61,7 @@ const membershipTiers: Record<string, MembershipItem> = {
     item_id: 'tier_3_executive',
     item_name: 'Executive Concierge',
     item_category: 'membership',
-    price: 449,
+    price: 549,
     quantity: 1
   },
   founding: {
