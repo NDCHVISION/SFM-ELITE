@@ -53,12 +53,8 @@ Check your email for your guide, or download it now below.          </p>
               <Download className="w-5 h-5" strokeWidth={2} />
               Download Your Guide (PDF)
             </a>
-            <p className="text-white/40 text-sm mt-4">
-              6 pages • 2 minute read
-            </p>
           </div>
 
-8 pages • 3 minute read          {/* What Is Inside */}
           <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12 text-left">
             <div className="flex items-center gap-2 mb-4">
               <BookOpen className="w-5 h-5 text-sfm-gold" strokeWidth={1.5} />
