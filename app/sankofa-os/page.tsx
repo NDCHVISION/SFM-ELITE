@@ -587,11 +587,6 @@ export default function SankofaOSPage() {
               <h2 className="font-display text-4xl sm:text-5xl text-white mb-6">
                 Become a Patient
               </h2>
-              <p className="text-white/50 text-lg mb-12 leading-relaxed">
-                A 15-minute conversation to see if Sankofa Family Medicine 
-                is the right fit for your healthcare needs.
-              </p>
-
               <a
                 href="https://sankofafamilymedicine.atlas.md/hub/login"
                 target="_blank"
