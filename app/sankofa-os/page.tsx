@@ -584,13 +584,9 @@ export default function SankofaOSPage() {
               <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-6">
                 Ready to Experience Continuity?
               </p>
-              <h2 className="font-display text-4xl sm:text-5xl text-white mb-6">
-                Become a Patient
+              <h2 className="font-display text-4xl sm:text-5xl text-white mb-12">
+                Learn More About Sankofa Family Medicine
               </h2>
-              <p className="text-white/50 text-lg mb-12 leading-relaxed">
-                A 15-minute conversation to see if Sankofa Family Medicine 
-                is the right fit for your healthcare needs.
-              </p>
 
               <Link
                 href="/"
