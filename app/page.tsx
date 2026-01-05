@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     'service-area': 'Washington State, USA',
     'practice-type': 'Direct Primary Care',
     'accepting-patients': 'true',
-    'price-range': '$149-$449/month',
+    'price-range': '$195-$449/month',
     
     // Patient Portal Information
     'patient-enrollment-url': 'https://sankofafamilymedicine.atlas.md/hub/login',

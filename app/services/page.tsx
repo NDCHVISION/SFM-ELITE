@@ -14,9 +14,9 @@ import {
 const tiers = [
   {
     id: 'continuity',
-    name: 'Continuity Care',
+    name: 'Continuity Concierge',
     tagline: 'Essential virtual primary care',
-    price: { monthly: 149, annual: 134 },
+    price: { monthly: 195, annual: 176 },
     description: 'Comprehensive primary care with the continuity and access that traditional medicine has lost.',
     features: [
       { text: 'Unlimited virtual visits', included: true },
@@ -36,12 +36,12 @@ const tiers = [
   },
   {
     id: 'precision',
-    name: 'Precision Care',
+    name: 'Precision Concierge',
     tagline: 'Data-driven personalized medicine',
-    price: { monthly: 249, annual: 224 },
+    price: { monthly: 295, annual: 266 },
     description: 'Everything in Continuity, plus genetic insights and advanced diagnostics for truly personalized care.',
     features: [
-      { text: 'Everything in Continuity Care', included: true, highlight: true },
+      { text: 'Everything in Continuity Concierge', included: true, highlight: true },
       { text: 'Genetic testing and pharmacogenomics', included: true },
       { text: 'Advanced biomarker panels', included: true },
       { text: 'Cardiometabolic risk profiling', included: true },
@@ -58,12 +58,12 @@ const tiers = [
   },
   {
     id: 'legacy',
-    name: 'Legacy Health',
+    name: 'Executive Concierge',
     tagline: 'Concierge-level care',
     price: { monthly: 449, annual: 404 },
     description: 'The highest level of personalized care with direct access and comprehensive health optimization.',
     features: [
-      { text: 'Everything in Precision Care', included: true, highlight: true },
+      { text: 'Everything in Precision Concierge', included: true, highlight: true },
       { text: 'Dedicated phone line', included: true },
       { text: 'After-hours access for urgent needs', included: true },
       { text: 'Annual comprehensive health assessment', included: true },
@@ -406,7 +406,7 @@ export default function ServicesPage() {
             <div className="inline-flex items-center gap-3 px-6 py-4 bg-sfm-gold/10 border border-sfm-gold/20 rounded-2xl">
               <Zap className="w-5 h-5 text-sfm-gold" />
               <p className="text-sm text-sfm-navy">
-                <span className="font-semibold">Founding Members:</span> Join now and receive Legacy Health benefits at Precision Care pricing.
+                <span className="font-semibold">Founding Members:</span> Join now and receive Executive Concierge benefits at Precision Concierge pricing.
               </p>
             </div>
           </div>
