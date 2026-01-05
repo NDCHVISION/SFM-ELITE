@@ -51,10 +51,8 @@ export default function PrimaryCareGuideSuccess() {
             Interested in learning more about our approach to primary care?
           </p>
           <Link
-            href="/services"            className="text-rust hover:text-rust/80 underline"
-          >
-            Become a Patient
-          </Link>
+            href="/"        className="text-rust hover:text-rust/80 underline"          >
+            Learn More          </Link>
         </div>
       </div>
     </div>
