@@ -592,19 +592,13 @@ export default function SankofaOSPage() {
                 is the right fit for your healthcare needs.
               </p>
 
-              <a
-                href="https://sankofafamilymedicine.atlas.md/hub/login"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/"
                 className="group inline-flex items-center gap-3 px-10 py-4 bg-sfm-gold text-sfm-navy font-medium rounded-full hover:bg-amber-300 transition-all duration-300 hover:shadow-[0_0_50px_rgba(188,152,51,0.4)] hover:-translate-y-0.5"
               >
-                Become a Patient
+                Home
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
-
-              <p className="text-white/30 text-sm mt-6">
-                No commitment. Just a conversation.
-              </p>
+              </Link>
             </div>
           </section>
 
