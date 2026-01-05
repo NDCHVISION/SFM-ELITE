@@ -52,23 +52,20 @@ export default function PrimaryCareGuidePage() {
               {/* The key line - moved high */}
               <div className="bg-sfm-navy/5 border-l-4 border-sfm-gold p-6 mb-8 rounded-r-xl">
                 <p className="text-sfm-navy text-lg font-display italic">
-                  "The problem was never her body. The problem was that no one had been watching."
+                  "The problem was never her body. The problem was that no one had been holding the thread."
                 </p>
               </div>
 
               {/* Opening Vignette */}
               <div className="prose prose-lg text-muted mb-8">
                 <p>
-                  She was 47. Successful. Busy. Annual physicals every year, labs always "normal."
+                  She was in her early forties. Tired for longer than she could remember. Annual physicals every year, labs always "normal."
                 </p>
                 <p>
-                  But no one noticed her fasting glucose creeping up over five years. No one tracked 
-                  the subtle weight gain pattern. No one asked about the family history she mentioned 
-                  once, years ago, to a doctor she never saw again.
+                  But no one noticed her thyroid levels beginning to drift. No one tracked the subtle weight gain despite eating less. Her story was written across years of records, but no one had read it as a single narrative.
                 </p>
                 <p>
-                  By the time she was diagnosed with Type 2 diabetes, the window for early intervention 
-                  had closed. Not because the signs were not there. Because no one was watching.
+                  By the time she found a physician who held the thread, years had passed. Not because the signs weren't there. Because no one had compared where she was to where she had been.
                 </p>
               </div>
 
