@@ -64,7 +64,7 @@ export default function HomePage() {
                 <div className="overflow-hidden mb-10">
                   <h1 className="opacity-0 animate-hero-text animation-delay-200" data-speakable>
                     <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display text-white leading-[0.92] mb-4">
-                      <span className="text-sfm-gold">Remembered</span>, Not
+                      <span className="remember-glow">Remembered</span>, Not
                     </span>
                     <span className="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display text-white leading-[0.92]">
                       Rushed

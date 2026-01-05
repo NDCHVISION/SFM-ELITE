@@ -461,6 +461,44 @@ body {
   text-shadow: 0 0 40px rgba(188, 152, 51, 0.25);
 }
 
+/* Elite "Remember" Glow - Animated signature effect */
+.remember-glow {
+  color: var(--sfm-gold);
+  text-shadow: 
+    0 0 10px rgba(188, 152, 51, 0.6),
+    0 0 20px rgba(188, 152, 51, 0.4),
+    0 0 40px rgba(188, 152, 51, 0.3),
+    0 0 60px rgba(188, 152, 51, 0.2);
+  animation: rememberGlow 3s ease-in-out infinite;
+}
+
+@keyframes rememberGlow {
+  0%, 100% { 
+    text-shadow: 
+      0 0 10px rgba(188, 152, 51, 0.6),
+      0 0 20px rgba(188, 152, 51, 0.4),
+      0 0 40px rgba(188, 152, 51, 0.3),
+      0 0 60px rgba(188, 152, 51, 0.2);
+  }
+  50% { 
+    text-shadow: 
+      0 0 15px rgba(188, 152, 51, 0.8),
+      0 0 30px rgba(188, 152, 51, 0.6),
+      0 0 50px rgba(188, 152, 51, 0.4),
+      0 0 80px rgba(188, 152, 51, 0.3);
+  }
+}
+
+/* Respect user's motion preferences for remember-glow */
+@media (prefers-reduced-motion: reduce) {
+  .remember-glow {
+    animation: none;
+    text-shadow: 
+      0 0 10px rgba(188, 152, 51, 0.6),
+      0 0 20px rgba(188, 152, 51, 0.4);
+  }
+}
+
 /* Trademark styling */
 .tm {
   font-size: 0.5em;
