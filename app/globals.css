@@ -489,6 +489,16 @@ body {
   }
 }
 
+/* Respect user's motion preferences for remember-glow */
+@media (prefers-reduced-motion: reduce) {
+  .remember-glow {
+    animation: none;
+    text-shadow: 
+      0 0 10px rgba(188, 152, 51, 0.6),
+      0 0 20px rgba(188, 152, 51, 0.4);
+  }
+}
+
 /* Trademark styling */
 .tm {
   font-size: 0.5em;
