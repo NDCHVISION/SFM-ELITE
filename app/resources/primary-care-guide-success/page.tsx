@@ -45,15 +45,6 @@ export default function PrimaryCareGuideSuccess() {
             Return Home
           </Link>
         </div>
-
-        <div className="mt-12 pt-12 border-t border-sage-200">
-          <p className="text-charcoal/70 mb-4">
-            Interested in learning more about our approach to primary care?
-          </p>
-          <Link
-            href="/"        className="text-rust hover:text-rust/80 underline"          >
-            Learn More          </Link>
-        </div>
       </div>
     </div>
   );
