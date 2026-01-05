@@ -69,7 +69,7 @@ export default function CareJourney() {
           </h2>
           <div className="divider-gold mx-auto mb-6" />
           <p className="text-muted max-w-2xl mx-auto text-lg mb-4">
-            Every patient&apos;s path begins with connection and unfolds through care that remembers.
+            Every patient&apos;s path begins with connection and unfolds through medicine that doesn&apos;t forget.
           </p>
           <p className="text-muted max-w-2xl mx-auto text-lg">
             A simple, private pathway built for continuity, trust, and lasting connection.
