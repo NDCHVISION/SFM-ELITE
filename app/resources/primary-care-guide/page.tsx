@@ -163,7 +163,9 @@ export default function PrimaryCareGuidePage() {
                   <input 
                     type="hidden" 
                     name="_next" 
-                    value="https://sankofafamilymedicine.com/resources/primary-care-guide/success" 
+                    value="https://166166
+                    
+                    /primary-care-guide/success" 
                   />
                   <input 
                     type="hidden" 
