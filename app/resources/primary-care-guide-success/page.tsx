@@ -39,21 +39,13 @@ export default function PrimaryCareGuideSuccess() {
             Download Guide Now
           </Link>
           <Link
-            href="/"
+            href="/resources"
             className="inline-flex items-center justify-center px-8 py-3 bg-charcoal text-white rounded-md hover:bg-charcoal/90 transition-colors"
           >
-            Return Home
+            Resources
           </Link>
         </div>
 
-        <div className="mt-12 pt-12 border-t border-sage-200">
-          <p className="text-charcoal/70 mb-4">
-            Interested in learning more about our approach to primary care?
-          </p>
-          <Link
-            href="/"        className="text-rust hover:text-rust/80 underline"          >
-            Learn More          </Link>
-        </div>
       </div>
     </div>
   );
