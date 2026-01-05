@@ -41,7 +41,7 @@ export default function GuideSuccessPage() {
           </h1>
           
           <p className="text-white/70 text-lg mb-10 leading-relaxed max-w-lg mx-auto">
-            Thank you for your interest in understanding what good primary care looks like. You do not need to read it all at once. It is meant to clarify, not overwhelm.
+            Thank you. Your guide has been sent.
           </p>
 
           {/* Download Button */}
