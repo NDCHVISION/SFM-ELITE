@@ -102,7 +102,7 @@ export default function HomePage() {
                 {/* CTA Bridge */}
                 <div className="opacity-0 animate-fade-in animation-delay-380 mb-8">
                   <p className="text-white/70 text-base lg:text-lg leading-relaxed max-w-lg">
-                    Ready for care that remembers you?<br />
+                    Ready for Medicine that doesn't forget?<br />
                     Join a practice built on connection and continuity.
                   </p>
                 </div>
@@ -186,7 +186,7 @@ export default function HomePage() {
               Our Philosophy
             </span>
             <h2 className="text-display-lg text-sfm-navy mb-6">
-              Healthcare Should Remember You
+              Medicine that Remembers
             </h2>
             <p className="text-lg text-sfm-text-muted leading-relaxed mb-6">
               Sankofa is a West African word and symbol that means &ldquo;go back and retrieve what matters.&rdquo; 
@@ -230,7 +230,7 @@ export default function HomePage() {
 
           <ScrollReveal className="max-w-3xl mx-auto text-center mt-16">
             <p className="text-lg text-sfm-text-muted leading-relaxed italic">
-              Continuity is not an old idea. It is the foundation of care that remembers.
+              Continuity is not an old idea. It is the foundation of medicine that doesn't forget.
             </p>
           </ScrollReveal>
         </div>
