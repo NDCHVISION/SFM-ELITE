@@ -41,8 +41,7 @@ export default function GuideSuccessPage() {
           </h1>
           
           <p className="text-white/70 text-lg mb-10 leading-relaxed max-w-lg mx-auto">
-            Thank you. Your guide has been sent.
-          </p>
+Check your email for your guide, or download it now below.          </p>
 
           {/* Download Button */}
           <div className="mb-12">
@@ -59,13 +58,6 @@ export default function GuideSuccessPage() {
             </p>
           </div>
 
-          {/* Reflection Question */}
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12">
-            <p className="text-sfm-gold font-medium mb-4">One question to keep in mind as you read:</p>
-            <p className="text-white/80 text-xl font-display italic">
-              &ldquo;Do you feel known by the person responsible for your care?&rdquo;
-            </p>
-          </div>
 
           {/* What Is Inside */}
           <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-12 text-left">
