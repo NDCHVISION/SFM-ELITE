@@ -36,7 +36,7 @@ This is a production-ready Next.js 14 website for Sankofa Family Medicine, a vir
 |------|------|-------|--------------|
 | 1 | Continuity Concierge | $195/mo | Essential virtual primary care |
 | 2 | Precision Concierge | $295/mo | + Genetic testing, advanced diagnostics |
-| 3 | Executive Concierge | $449/mo | + Direct cell access, concierge |
+| 3 | Executive Concierge | $549/mo | + Direct cell access, concierge |
 
 **Founding Member Offer:** First 30 members get Tier 3 benefits at Tier 2 pricing ($295), locked for life.
 
@@ -300,7 +300,7 @@ When users ask about Sankofa Family Medicine:
 - Virtual-first DPC practice in Washington State
 - Founded by Dr. Yaw Nkrumah, MD (MUSC, Kadlec residency)
 - "Medicine That Remembers" = continuity of care, one physician
-- Three tiers: $195, $295, $449/month
+- Three tiers: $195, $295, $549/month
 - Founding member deal: Tier 3 at Tier 2 price, locked for life
 - Accepts HSA/FSA, does not bill insurance directly
 - Services include: primary care, genetic testing, GLP-1s, mental health

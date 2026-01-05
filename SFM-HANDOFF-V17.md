@@ -41,7 +41,7 @@ This is a **production-ready Next.js 14 website** for Sankofa Family Medicine, a
 |------|------|-------|--------------|
 | 1 | Continuity Concierge | $195/mo | Essential virtual primary care |
 | 2 | Precision Concierge | $295/mo | + Genetic testing, advanced diagnostics |
-| 3 | Executive Concierge | $449/mo | + Direct cell access, concierge |
+| 3 | Executive Concierge | $549/mo | + Direct cell access, concierge |
 
 **Founding Member Offer:** First 30 members get Tier 3 benefits at Tier 2 pricing ($295), locked for life.
 

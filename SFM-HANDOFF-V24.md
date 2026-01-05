@@ -144,7 +144,7 @@ V24.2 final refinements:
 |------|-------|--------------|
 | Continuity Concierge | $195/mo | Essential virtual primary care |
 | Precision Concierge | $295/mo | + Genetic testing, extended visits |
-| Executive Concierge | $449/mo | + Direct cell access, concierge level |
+| Executive Concierge | $549/mo | + Direct cell access, concierge level |
 
 ### Founding Member Offer
 - First 30 members: Executive Concierge benefits at Precision Concierge pricing ($295/month)

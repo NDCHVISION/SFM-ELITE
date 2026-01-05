@@ -60,7 +60,7 @@ const tiers = [
     id: 'legacy',
     name: 'Executive Concierge',
     tagline: 'Concierge-level care',
-    price: { monthly: 449, annual: 404 },
+    price: { monthly: 549, annual: 494 },
     description: 'The highest level of personalized care with direct access and comprehensive health optimization.',
     features: [
       { text: 'Everything in Precision Concierge', included: true, highlight: true },

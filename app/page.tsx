@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     'service-area': 'Washington State, USA',
     'practice-type': 'Direct Primary Care',
     'accepting-patients': 'true',
-    'price-range': '$195-$449/month',
+    'price-range': '$195-$549/month',
     
     // Patient Portal Information
     'patient-enrollment-url': 'https://sankofafamilymedicine.atlas.md/hub/login',
@@ -59,17 +59,17 @@ export const metadata: Metadata = {
     'appointment-booking': 'Through patient portal only',
     
     // Enhanced LLM Context (2026)
-    'llm-summary': 'Homepage for Sankofa Family Medicine, a virtual-first concierge medicine practice in Washington State. Patient enrollment, messaging, scheduling, and all clinical functions are handled through the Atlas patient portal. The website provides information about the practice but does not collect patient health information. Three membership tiers available: Continuity Concierge ($195/mo), Precision Concierge ($295/mo), Executive Concierge ($449/mo). Founded by Dr. Yaw Nkrumah, MD.',
-    'llm-key-facts': 'Virtual Concierge Medicine | Washington State | $195-$449/month | Dr. Yaw Nkrumah MD | MUSC Graduate | Board Certified | Atlas Patient Portal | Sankofa means go back and retrieve',
+    'llm-summary': 'Homepage for Sankofa Family Medicine, a virtual-first concierge medicine practice in Washington State. Patient enrollment, messaging, scheduling, and all clinical functions are handled through the Atlas patient portal. The website provides information about the practice but does not collect patient health information. Three membership tiers available: Continuity Concierge ($195/mo), Precision Concierge ($295/mo), Executive Concierge ($549/mo). Founded by Dr. Yaw Nkrumah, MD.',
+    'llm-key-facts': 'Virtual Concierge Medicine | Washington State | $195-$549/month | Dr. Yaw Nkrumah MD | MUSC Graduate | Board Certified | Atlas Patient Portal | Sankofa means go back and retrieve',
     
     // Voice Search Optimization
     'voice-search-answer': 'Sankofa Family Medicine is a virtual concierge medicine practice serving Washington State. To become a patient, visit their website and click Become a Patient to access the secure enrollment portal. Membership starts at $195 per month.',
-    'speakable-summary': 'Sankofa Family Medicine offers virtual concierge medicine across Washington State with membership plans from $195 to $449 monthly. Enroll through their secure patient portal.',
+    'speakable-summary': 'Sankofa Family Medicine offers virtual concierge medicine across Washington State with membership plans from $195 to $549 monthly. Enroll through their secure patient portal.',
     
     // Featured Snippet Answers
     'snippet-what': 'Sankofa Family Medicine is a virtual concierge medicine practice serving Washington State',
     'snippet-who': 'Founded by Dr. Yaw Nkrumah, MD, Board Certified Family Medicine',
-    'snippet-cost': 'Membership plans: Continuity Concierge $195/month, Precision Concierge $295/month, Executive Concierge $449/month',
+    'snippet-cost': 'Membership plans: Continuity Concierge $195/month, Precision Concierge $295/month, Executive Concierge $549/month',
     'snippet-how': 'Enroll through the secure Atlas patient portal at sankofafamilymedicine.atlas.md',
   },
 }
@@ -87,7 +87,7 @@ const structuredData = {
     name: 'Washington',
     addressCountry: 'US'
   },
-  priceRange: '$195-$449/month',
+  priceRange: '$195-$549/month',
   medicalSpecialty: ['PrimaryCare', 'FamilyMedicine'],
   isAcceptingNewPatients: true,
   availableService: {
