@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import ToolLayout from '@/components/ToolLayout'
 import { Copy, Download, RefreshCw, Plus, Trash2, Calendar, Clock, AlertCircle } from 'lucide-react'
 import { copyToClipboard, showToast, generatePDF, formatDate } from '@/lib/tools/utils'
@@ -52,6 +52,7 @@ const DURATION_OPTIONS = [
 
 export default function SymptomTimeline() {
   const [entries, setEntries] = useState<SymptomEntry[]>([])
+  const idCounterRef = useRef(0)
   const [currentEntry, setCurrentEntry] = useState<Partial<SymptomEntry>>({
     date: new Date().toISOString().split('T')[0],
     time: new Date().toTimeString().slice(0, 5),
@@ -68,8 +69,9 @@ export default function SymptomTimeline() {
       return
     }
 
+    idCounterRef.current += 1
     const newEntry: SymptomEntry = {
-      id: Date.now(),
+      id: idCounterRef.current,
       date: currentEntry.date || new Date().toISOString().split('T')[0],
       time: currentEntry.time || new Date().toTimeString().slice(0, 5),
       symptom: currentEntry.symptom || '',
@@ -161,7 +163,7 @@ export default function SymptomTimeline() {
   }
 
   const getSeverityColor = (severity: string) => {
-    const level = parseInt(severity)
+    const level = parseInt(severity, 10)
     if (level <= 2) return 'bg-emerald-100 text-emerald-700 border-emerald-200'
     if (level === 3) return 'bg-amber-100 text-amber-700 border-amber-200'
     return 'bg-red-100 text-red-700 border-red-200'
