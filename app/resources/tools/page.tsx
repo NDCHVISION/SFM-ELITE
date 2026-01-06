@@ -59,7 +59,7 @@ const tools = [
     href: '/resources/tools/medication-organizer',
     available: true,
     comingSoon: false,
-    image: null
+    image: '/images/patient-tablet-seattle.png'
   },
   {
     id: 'questions',
@@ -69,7 +69,7 @@ const tools = [
     href: '/resources/tools/question-planner',
     available: true,
     comingSoon: false,
-    image: null
+    image: '/images/woman-tablet-thoughtful.png'
   }
 ]
 
