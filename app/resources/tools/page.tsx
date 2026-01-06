@@ -26,8 +26,8 @@ const tools = [
     description: 'Track your symptoms over time to help your provider understand the full picture of your health concerns.',
     icon: Activity,
     href: '/resources/tools/symptom-timeline',
-    available: false,
-    comingSoon: true
+    available: true,
+    comingSoon: false
   },
   {
     id: 'visit-goal',
