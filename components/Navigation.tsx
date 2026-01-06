@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ChevronDown, Phone, Mail, ArrowRight, Stethoscope, Users, FileText, Shield, Heart, MapPin, Globe } from 'lucide-react'
+import { Menu, X, ChevronDown, Phone, Mail, ArrowRight, Stethoscope, Users, FileText, Shield, Heart, MapPin, Globe, BookOpen, Wrench, AlertTriangle, PenTool } from 'lucide-react'
 import { ATLAS_PORTAL_URL } from './PrimaryCTA'
 
 export default function Navigation() {
@@ -85,6 +85,15 @@ export default function Navigation() {
         { href: '/locations/request', label: 'Request a Location', desc: 'Bring us to your area', icon: Globe },
       ],
     },
+    resources: {
+      label: 'Resources',
+      items: [
+        { href: '/resources/primary-care-guide', label: 'Primary Care Relationship Guide', desc: 'Assess your care relationship', icon: BookOpen },
+        { href: '/blog', label: 'Blog', desc: 'Health insights & articles', icon: PenTool },
+        { href: '/resources/tools', label: 'Sankofa Tools', desc: 'The Continuity Kit', icon: Wrench },
+        { href: '/emergency', label: 'Emergency Guide', desc: 'Crisis resources & hotlines', icon: AlertTriangle },
+      ],
+    },
   }
 
   // Streamlined mobile nav - reduced to essential items
@@ -96,6 +105,10 @@ export default function Navigation() {
     { href: '/faq', label: 'FAQs' },
     { href: '/locations/washington', label: 'Washington', status: 'active' },
     { href: '/locations/request', label: 'Request a Location' },
+    { href: '/resources/primary-care-guide', label: 'Primary Care Guide' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/resources/tools', label: 'Sankofa Tools' },
+    { href: '/emergency', label: 'Emergency Guide' },
     { href: '/contact', label: 'Contact' },
   ]
 
@@ -236,13 +249,6 @@ export default function Navigation() {
                 </div>
               ))}
 
-              <Link 
-                href="/resources" 
-                className="px-4 py-2.5 text-sfm-navy dark:text-sfm-text hover:text-sfm-azure transition-colors duration-300 text-[15px] font-medium rounded-lg hover:bg-sfm-cream/50 dark:hover:bg-white/5"
-              >
-                Resources
-              </Link>
-              
               <Link 
                 href="/contact" 
                 className="px-4 py-2.5 text-sfm-navy dark:text-sfm-text hover:text-sfm-azure transition-colors duration-300 text-[15px] font-medium rounded-lg hover:bg-sfm-cream/50 dark:hover:bg-white/5"
