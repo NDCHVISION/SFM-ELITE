@@ -67,7 +67,7 @@ const tools = [
     description: 'Prepare thoughtful questions before a medical appointment.',
     icon: HelpCircle,
     href: '/resources/tools/question-planner',
-    image: null,
+    image: '/images/lifestyle-precision-thoughtful.png',
     available: true,
     comingSoon: false
   }
