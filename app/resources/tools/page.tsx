@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { ArrowRight, Target, Activity, Pill, HelpCircle, Clock, Sparkles } from 'lucide-react'
+import Image from 'next/image'
+import { ArrowRight, Target, Activity, Pill, HelpCircle, Clock, Sparkles, CheckCircle2 } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ const tools = [
     description: 'Track your symptoms over time to help your provider understand the full picture of your health concerns.',
     icon: Activity,
     href: '/resources/tools/symptom-timeline',
+    image: '/images/Symptom timeline.png',
     available: true,
     comingSoon: false
   },
@@ -35,6 +37,7 @@ const tools = [
     description: 'Turn scattered thoughts into a clear opening statement for a medical visit.',
     icon: Target,
     href: '/resources/tools/visit-goal-generator',
+    image: '/images/2 sentence visit goal generator.png',
     available: true,
     comingSoon: false
   },
@@ -44,6 +47,7 @@ const tools = [
     description: 'Learn correct measurement technique and calculate a meaningful home BP average.',
     icon: Activity,
     href: '/resources/tools/bp-checker',
+    image: '/images/Blood Pressure Reality.png',
     available: true,
     comingSoon: false
   },
@@ -53,6 +57,7 @@ const tools = [
     description: 'Create a clear, organized medication list to share with providers.',
     icon: Pill,
     href: '/resources/tools/medication-organizer',
+    image: '/images/medication org list.png',
     available: true,
     comingSoon: false
   },
@@ -62,6 +67,7 @@ const tools = [
     description: 'Prepare thoughtful questions before a medical appointment.',
     icon: HelpCircle,
     href: '/resources/tools/question-planner',
+    image: null,
     available: true,
     comingSoon: false
   }
@@ -103,58 +109,65 @@ export default function ToolsPage() {
               <Link
                 key={tool.id}
                 href={tool.href}
-                className={`group relative bg-white rounded-2xl p-8 shadow-soft hover:shadow-xl transition-all duration-300 ${
+                className={`group relative bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-xl transition-all duration-300 ${
                   !tool.available ? 'pointer-events-none' : ''
                 }`}
               >
-                {/* Badge */}
-                <div className="absolute top-4 right-4">
-                  {tool.available ? (
-                    <span className="px-3 py-1 bg-emerald-50 text-emerald-600 text-xs font-semibold rounded-full">
-                      Available Now
-                    </span>
-                  ) : (
-                    <span className="px-3 py-1 bg-sfm-navy/10 text-sfm-navy/50 text-xs font-semibold rounded-full flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      Coming Soon
+                {/* Tool Image or Icon Fallback */}
+                {tool.image ? (
+                  <div className="relative w-full aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={tool.image}
+                      alt={tool.name}
+                      fill
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                ) : (
+                  <div className="relative w-full aspect-[4/3] overflow-hidden bg-gradient-to-br from-sfm-navy via-[#0a2847] to-sfm-navy flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-2xl bg-sfm-gold/20 flex items-center justify-center">
+                      <tool.icon className="w-10 h-10 text-sfm-gold" strokeWidth={1.5} />
+                    </div>
+                  </div>
+                )}
+
+                <div className="p-6">
+                  {/* Badge */}
+                  <div className="mb-4">
+                    {tool.available ? (
+                      <span className="px-3 py-1 bg-emerald-50 text-emerald-600 text-xs font-semibold rounded-full">
+                        Available Now
+                      </span>
+                    ) : (
+                      <span className="px-3 py-1 bg-sfm-navy/10 text-sfm-navy/50 text-xs font-semibold rounded-full inline-flex items-center gap-1">
+                        <Clock className="w-3 h-3" />
+                        Coming Soon
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Content */}
+                  <h3 className={`font-display text-xl mb-3 ${
+                    tool.available 
+                      ? 'text-sfm-navy group-hover:text-sfm-azure' 
+                      : 'text-sfm-navy/50'
+                  } transition-colors`}>
+                    {tool.name}
+                  </h3>
+                  <p className={`text-sm mb-4 leading-relaxed ${
+                    tool.available ? 'text-sfm-navy/70' : 'text-sfm-navy/40'
+                  }`}>
+                    {tool.description}
+                  </p>
+
+                  {tool.available && (
+                    <span className="inline-flex items-center gap-2 text-sfm-azure font-medium text-sm group-hover:gap-3 transition-all">
+                      Open Tool
+                      <ArrowRight className="w-4 h-4" />
                     </span>
                   )}
                 </div>
-
-                {/* Icon */}
-                <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
-                  tool.available 
-                    ? 'bg-sfm-gold/10 group-hover:bg-sfm-gold/20' 
-                    : 'bg-sfm-navy/5'
-                } transition-colors`}>
-                  <tool.icon 
-                    className={`w-7 h-7 ${
-                      tool.available ? 'text-sfm-gold' : 'text-sfm-navy/30'
-                    }`} 
-                    strokeWidth={1.5} 
-                  />
-                </div>
-
-                {/* Content */}
-                <h3 className={`font-display text-xl mb-3 ${
-                  tool.available 
-                    ? 'text-sfm-navy group-hover:text-sfm-azure' 
-                    : 'text-sfm-navy/50'
-                } transition-colors`}>
-                  {tool.name}
-                </h3>
-                <p className={`text-sm mb-4 leading-relaxed ${
-                  tool.available ? 'text-sfm-navy/70' : 'text-sfm-navy/40'
-                }`}>
-                  {tool.description}
-                </p>
-
-                {tool.available && (
-                  <span className="inline-flex items-center gap-2 text-sfm-azure font-medium text-sm group-hover:gap-3 transition-all">
-                    Open Tool
-                    <ArrowRight className="w-4 h-4" />
-                  </span>
-                )}
               </Link>
             ))}
           </div>
@@ -164,19 +177,19 @@ export default function ToolsPage() {
             <h3 className="font-display text-2xl text-sfm-navy mb-4">About These Tools</h3>
             <div className="space-y-3 text-sfm-navy/70">
               <p className="flex items-start gap-3">
-                <span className="text-sfm-gold mt-1">✓</span>
+                <CheckCircle2 className="w-5 h-5 text-sfm-gold flex-shrink-0 mt-0.5" />
                 <span>All tools are completely free and require no login or account</span>
               </p>
               <p className="flex items-start gap-3">
-                <span className="text-sfm-gold mt-1">✓</span>
+                <CheckCircle2 className="w-5 h-5 text-sfm-gold flex-shrink-0 mt-0.5" />
                 <span>Your data stays on your device - we don't store or transmit anything you enter</span>
               </p>
               <p className="flex items-start gap-3">
-                <span className="text-sfm-gold mt-1">✓</span>
+                <CheckCircle2 className="w-5 h-5 text-sfm-gold flex-shrink-0 mt-0.5" />
                 <span>Designed for educational purposes only, not medical advice</span>
               </p>
               <p className="flex items-start gap-3">
-                <span className="text-sfm-gold mt-1">✓</span>
+                <CheckCircle2 className="w-5 h-5 text-sfm-gold flex-shrink-0 mt-0.5" />
                 <span>Mobile-friendly with print and PDF export options</span>
               </p>
             </div>
