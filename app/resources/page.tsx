@@ -1,14 +1,13 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import { BookOpen, ArrowRight, FileText, Heart, Download, Sparkles, Clock, CheckCircle2, Wrench } from 'lucide-react'
+import { BookOpen, ArrowRight, PenTool, Wrench, AlertTriangle } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Patient Resources and Health Guides | Sankofa Family Medicine',
-  description: 'Educational health resources, patient guides, and wellness tools from Sankofa Family Medicine. Free health information for Washington State residents on preventive care, chronic disease management, and telehealth.',
+  title: 'Patient Resources | Sankofa Family Medicine',
+  description: 'Educational health resources, patient guides, and wellness tools from Sankofa Family Medicine. Access primary care guides, blog articles, health tools, and emergency resources.',
   keywords: ['patient resources', 'health guides', 'wellness tools', 'patient education', 'health information Washington', 'primary care guide', 'concierge medicine resources'],
   openGraph: {
-    title: 'Patient Resources and Health Guides | Sankofa Family Medicine',
+    title: 'Patient Resources | Sankofa Family Medicine',
     description: 'Educational resources and tools to support your wellness journey.',
     url: 'https://sankofafamilymedicine.com/resources',
     siteName: 'Sankofa Family Medicine',
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Sankofa Family Medicine Patient Resources and Health Guides',
+        alt: 'Sankofa Family Medicine Patient Resources',
       },
     ],
   },
@@ -35,19 +34,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  other: {
-    'ai-content-declaration': 'human-authored',
-    'content-type': 'Resources',
-    'medical-specialty': 'Primary Care, Family Medicine',
-    'service-area': 'Washington State, USA',
   },
 }
 
@@ -60,6 +46,53 @@ const breadcrumbJsonLd = {
   ],
 }
 
+const resourceCategories = [
+  {
+    title: 'Primary Care Relationship Guide',
+    description: 'Assess the health of your relationship with your primary care doctor. Learn what good primary care looks like.',
+    href: '/resources/primary-care-guide',
+    icon: BookOpen,
+    color: 'sfm-gold',
+    bgColor: 'bg-sfm-gold/10',
+    borderColor: 'border-sfm-gold/20',
+    hoverBorderColor: 'hover:border-sfm-gold/40',
+    textColor: 'text-sfm-gold',
+  },
+  {
+    title: 'Blog',
+    description: 'Health insights and articles from Dr. Yaw Nkrumah on primary care, virtual medicine, and precision health.',
+    href: '/blog',
+    icon: PenTool,
+    color: 'sfm-azure',
+    bgColor: 'bg-sfm-azure/10',
+    borderColor: 'border-sfm-azure/20',
+    hoverBorderColor: 'hover:border-sfm-azure/40',
+    textColor: 'text-sfm-azure',
+  },
+  {
+    title: 'Sankofa Tools',
+    description: 'Free interactive tools to help you prepare for visits, track health metrics, and communicate with providers.',
+    href: '/resources/tools',
+    icon: Wrench,
+    color: 'emerald',
+    bgColor: 'bg-emerald-500/10',
+    borderColor: 'border-emerald-500/20',
+    hoverBorderColor: 'hover:border-emerald-500/40',
+    textColor: 'text-emerald-600',
+  },
+  {
+    title: 'Emergency Guide',
+    description: 'Crisis hotlines, hospital listings, and guidance for when to call 911. Know where to go in an emergency.',
+    href: '/emergency',
+    icon: AlertTriangle,
+    color: 'red',
+    bgColor: 'bg-red-500/10',
+    borderColor: 'border-red-200',
+    hoverBorderColor: 'hover:border-red-300',
+    textColor: 'text-red-600',
+  },
+]
+
 export default function ResourcesPage() {
   return (
     <>
@@ -70,7 +103,7 @@ export default function ResourcesPage() {
 
       <main>
         {/* Hero */}
-        <section className="relative pt-32 pb-20 bg-gradient-to-br from-sfm-navy via-[#0a2847] to-sfm-navy overflow-hidden">
+        <section className="relative pt-32 pb-16 bg-gradient-to-br from-sfm-navy via-[#0a2847] to-sfm-navy overflow-hidden">
           <div className="absolute inset-0 pattern-sankofa-flow-gold pattern-sankofa-animated pattern-subtle" />
           <div className="absolute top-1/4 -left-32 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-sfm-azure/10 rounded-full blur-3xl" />
@@ -91,244 +124,35 @@ export default function ResourcesPage() {
           </div>
         </section>
 
-        {/* Featured Guide */}
+        {/* Resource Categories */}
         <section className="py-20 bg-sfm-cream">
           <div className="max-w-5xl mx-auto px-6">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/10 rounded-[40px] blur-2xl opacity-50" />
-              <div className="relative bg-white rounded-3xl shadow-2xl border border-sfm-gold/10 overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-2">
-                  {/* Content Side */}
-                  <div className="p-8 md:p-12">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-sfm-gold/10 rounded-full border border-sfm-gold/20 mb-6">
-                      <Download className="w-4 h-4 text-sfm-gold" />
-                      <span className="text-sfm-gold text-sm font-semibold">FREE GUIDE</span>
-                    </div>
-                    
-                    <h2 className="font-display text-3xl md:text-4xl text-sfm-navy mb-4 leading-tight">
-                      How Healthy Is Your Relationship With Your Primary Care Doctor?
-                    </h2>
-                    
-                    <p className="text-sfm-navy/70 mb-8 leading-relaxed text-lg">
-                      A physician&apos;s guide to continuity, prevention, and what most patients never see. Learn what good primary care looks like and how to recognize when it is quietly failing you.
-                    </p>
-
-                    <div className="space-y-4 mb-8">
-                      {[
-                        'Why normal labs can still miss real problems',
-                        'How continuity changes outcomes before symptoms appear',
-                        'What questions to ask before committing to a doctor',
-                      ].map((item, index) => (
-                        <div key={index} className="flex items-start gap-3">
-                          <div className="w-6 h-6 rounded-full bg-sfm-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <CheckCircle2 className="w-4 h-4 text-sfm-gold" />
-                          </div>
-                          <span className="text-sfm-navy/70">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <Link href="/resources/primary-care-guide" className="btn-primary">
-                      Get the Free Guide
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </div>
-
-                  {/* Visual Side - Image */}
-                  <div className="relative h-64 lg:h-auto overflow-hidden">
-                    <Image
-                      src="/images/sfm-about.png"
-                      alt="Medical desk with stethoscope representing thoughtful, unhurried care"
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy/80 via-sfm-navy/40 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
-                      <p className="text-white/90 font-display text-xl italic leading-relaxed">
-                        &ldquo;Do you feel known by the person responsible for your care?&rdquo;
-                      </p>
-                      <div className="w-12 h-1 bg-sfm-gold/50 rounded-full mx-auto my-4" />
-                      <p className="text-white/60 text-sm">
-                        Written by Dr. Yaw Nkrumah
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* More Resources Coming */}
-        <section className="py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-6">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-sfm-azure/10 rounded-full border border-sfm-azure/20 mb-6">
-                <Sparkles className="w-4 h-4 text-sfm-azure" />
-                <span className="text-sfm-azure text-sm font-medium">Resource Library</span>
-              </div>
-              <h2 className="font-display text-3xl md:text-4xl text-sfm-navy mb-4">Additional Resources</h2>
-              <p className="text-sfm-navy/60 max-w-xl mx-auto">
-                We are building a comprehensive library of educational content for our patients and the community.
-              </p>
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Sankofa Tools - Available Now */}
-              <Link
-                href="/resources/tools"
-                className="group relative bg-white border border-sfm-azure/20 rounded-2xl p-6 hover:border-sfm-azure/40 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-emerald-50 text-emerald-600 text-xs font-semibold rounded-full">
-                    Available Now
-                  </span>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-sfm-azure/10 flex items-center justify-center flex-shrink-0 group-hover:bg-sfm-azure/20 transition-colors">
-                    <Wrench className="w-7 h-7 text-sfm-azure" strokeWidth={1.5} />
+              {resourceCategories.map((resource) => (
+                <Link
+                  key={resource.href}
+                  href={resource.href}
+                  className={`group relative bg-white ${resource.borderColor} border rounded-2xl p-8 ${resource.hoverBorderColor} hover:shadow-xl transition-all duration-300`}
+                >
+                  <div className="flex items-start gap-5">
+                    <div className={`w-14 h-14 rounded-xl ${resource.bgColor} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform`}>
+                      <resource.icon className={`w-7 h-7 ${resource.textColor}`} strokeWidth={1.5} />
+                    </div>
+                    <div className="flex-1">
+                      <h2 className="font-display text-xl text-sfm-navy mb-3 group-hover:text-sfm-azure transition-colors">
+                        {resource.title}
+                      </h2>
+                      <p className="text-sfm-navy/60 text-sm mb-4 leading-relaxed">
+                        {resource.description}
+                      </p>
+                      <span className={`inline-flex items-center gap-2 ${resource.textColor} font-medium text-sm group-hover:gap-3 transition-all`}>
+                        Explore
+                        <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex-1 pt-1">
-                    <h3 className="font-display text-xl text-sfm-navy mb-2 group-hover:text-sfm-azure transition-colors">
-                      Sankofa Tools - The Continuity Kit
-                    </h3>
-                    <p className="text-sfm-navy/60 text-sm mb-4">
-                      Free interactive tools to help you prepare for visits, track health metrics, and communicate with providers.
-                    </p>
-                    <span className="inline-flex items-center gap-2 text-sfm-azure font-medium text-sm group-hover:gap-3 transition-all">
-                      Explore Tools
-                      <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Available Now */}
-              <Link
-                href="/resources/primary-care-guide"
-                className="group relative bg-white border border-sfm-gold/20 rounded-2xl p-6 hover:border-sfm-gold/40 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-sfm-gold/10 text-sfm-gold text-xs font-semibold rounded-full">
-                    Available Now
-                  </span>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-sfm-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-sfm-gold/20 transition-colors">
-                    <FileText className="w-7 h-7 text-sfm-gold" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1 pt-1">
-                    <h3 className="font-display text-xl text-sfm-navy mb-2 group-hover:text-sfm-azure transition-colors">
-                      Concierge Medicine Guide
-                    </h3>
-                    <p className="text-sfm-navy/60 text-sm mb-4">
-                      Understanding the concierge medicine model and whether it is right for you.
-                    </p>
-                    <span className="inline-flex items-center gap-2 text-sfm-azure font-medium text-sm group-hover:gap-3 transition-all">
-                      Read Guide
-                      <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Emergency Resources - Available Now */}
-              <Link
-                href="/emergency"
-                className="group relative bg-white border border-red-200 rounded-2xl p-6 hover:border-red-300 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-red-50 text-red-600 text-xs font-semibold rounded-full">
-                    Available Now
-                  </span>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-red-50 flex items-center justify-center flex-shrink-0 group-hover:bg-red-100 transition-colors">
-                    <Heart className="w-7 h-7 text-red-500" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1 pt-1">
-                    <h3 className="font-display text-xl text-sfm-navy mb-2 group-hover:text-red-600 transition-colors">
-                      Emergency Resources
-                    </h3>
-                    <p className="text-sfm-navy/60 text-sm mb-4">
-                      Crisis hotlines, hospital listings, and know when to call 911.
-                    </p>
-                    <span className="inline-flex items-center gap-2 text-red-600 font-medium text-sm group-hover:gap-3 transition-all">
-                      View Resources
-                      <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Coming Soon */}
-              <div className="relative bg-sfm-cream/50 border border-sfm-navy/10 rounded-2xl p-6">
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-sfm-navy/10 text-sfm-navy/50 text-xs font-semibold rounded-full flex items-center gap-1">
-                    <Clock className="w-3 h-3" />
-                    Coming 2026
-                  </span>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-sfm-navy/5 flex items-center justify-center flex-shrink-0">
-                    <Heart className="w-7 h-7 text-sfm-navy/30" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1 pt-1">
-                    <h3 className="font-display text-xl text-sfm-navy/50 mb-2">
-                      Cardiometabolic Health Basics
-                    </h3>
-                    <p className="text-sfm-navy/40 text-sm">
-                      Understanding blood pressure, cholesterol, and metabolic markers.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Coming Soon */}
-              <div className="relative bg-sfm-cream/50 border border-sfm-navy/10 rounded-2xl p-6">
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-sfm-navy/10 text-sfm-navy/50 text-xs font-semibold rounded-full flex items-center gap-1">
-                    <Clock className="w-3 h-3" />
-                    Coming 2026
-                  </span>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-sfm-navy/5 flex items-center justify-center flex-shrink-0">
-                    <FileText className="w-7 h-7 text-sfm-navy/30" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1 pt-1">
-                    <h3 className="font-display text-xl text-sfm-navy/50 mb-2">
-                      Genetic Testing Explained
-                    </h3>
-                    <p className="text-sfm-navy/40 text-sm">
-                      How precision medicine enhances preventive care.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Coming Soon */}
-              <div className="relative bg-sfm-cream/50 border border-sfm-navy/10 rounded-2xl p-6">
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-sfm-navy/10 text-sfm-navy/50 text-xs font-semibold rounded-full flex items-center gap-1">
-                    <Clock className="w-3 h-3" />
-                    Coming 2026
-                  </span>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-xl bg-sfm-navy/5 flex items-center justify-center flex-shrink-0">
-                    <BookOpen className="w-7 h-7 text-sfm-navy/30" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1 pt-1">
-                    <h3 className="font-display text-xl text-sfm-navy/50 mb-2">
-                      Weight Management Guide
-                    </h3>
-                    <p className="text-sfm-navy/40 text-sm">
-                      Medical approaches to sustainable weight management.
-                    </p>
-                  </div>
-                </div>
-              </div>
+                </Link>
+              ))}
             </div>
           </div>
         </section>
