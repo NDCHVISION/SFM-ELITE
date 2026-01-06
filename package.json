@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "jspdf": "^4.0.0",
     "lucide-react": "^0.303.0",
     "next": "^14.2.33",
     "react": "^18.2.0",
@@ -24,5 +25,3 @@
     "typescript": "^5.3.3"
   }
 }
-
-

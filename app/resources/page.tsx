@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { BookOpen, ArrowRight, FileText, Heart, Download, Sparkles, Clock, CheckCircle2 } from 'lucide-react'
+import { BookOpen, ArrowRight, FileText, Heart, Download, Sparkles, Clock, CheckCircle2, Wrench } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -174,6 +174,35 @@ export default function ResourcesPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Sankofa Tools - Available Now */}
+              <Link
+                href="/resources/tools"
+                className="group relative bg-white border border-sfm-azure/20 rounded-2xl p-6 hover:border-sfm-azure/40 hover:shadow-xl transition-all duration-300"
+              >
+                <div className="absolute top-4 right-4">
+                  <span className="px-3 py-1 bg-emerald-50 text-emerald-600 text-xs font-semibold rounded-full">
+                    Available Now
+                  </span>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-xl bg-sfm-azure/10 flex items-center justify-center flex-shrink-0 group-hover:bg-sfm-azure/20 transition-colors">
+                    <Wrench className="w-7 h-7 text-sfm-azure" strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-1 pt-1">
+                    <h3 className="font-display text-xl text-sfm-navy mb-2 group-hover:text-sfm-azure transition-colors">
+                      Sankofa Tools - The Continuity Kit
+                    </h3>
+                    <p className="text-sfm-navy/60 text-sm mb-4">
+                      Free interactive tools to help you prepare for visits, track health metrics, and communicate with providers.
+                    </p>
+                    <span className="inline-flex items-center gap-2 text-sfm-azure font-medium text-sm group-hover:gap-3 transition-all">
+                      Explore Tools
+                      <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+
               {/* Available Now */}
               <Link
                 href="/resources/primary-care-guide"
