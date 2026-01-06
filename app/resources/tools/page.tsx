@@ -57,7 +57,7 @@ const tools = [
     description: 'Create a clear, organized medication list to share with providers.',
     icon: Pill,
     href: '/resources/tools/medication-organizer',
-    image: '/images/medication org list.png',
+    image: '/images/NEWMEDORG.png',
     available: true,
     comingSoon: false
   },
@@ -67,7 +67,7 @@ const tools = [
     description: 'Prepare thoughtful questions before a medical appointment.',
     icon: HelpCircle,
     href: '/resources/tools/question-planner',
-    image: null,
+    image: '/images/Previsit.png',
     available: true,
     comingSoon: false
   }
