@@ -118,8 +118,9 @@ export default function ToolsPage() {
                   <div className="relative w-full h-48 overflow-hidden">
                     <Image
                       src={tool.image}
-                      alt={tool.name}
+                      alt={`${tool.name} promotional image`}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
