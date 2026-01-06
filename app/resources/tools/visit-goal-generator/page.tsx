@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import ToolLayout from '@/components/ToolLayout'
-import { Copy, Printer, RefreshCw } from 'lucide-react'
+import { Copy, Printer, RefreshCw, Download } from 'lucide-react'
 import { copyToClipboard, printContent, showToast, generatePDF } from '@/lib/tools/utils'
 
 const DESIRED_OUTCOMES = [
@@ -153,7 +153,7 @@ export default function VisitGoalGenerator() {
                 onClick={handleDownloadPDF}
                 className="flex items-center gap-2 px-6 py-3 bg-white border border-sfm-azure text-sfm-azure rounded-lg font-medium hover:bg-sfm-azure hover:text-white transition-colors duration-300"
               >
-                <Copy className="w-4 h-4" />
+                <Download className="w-4 h-4" />
                 Download PDF
               </button>
               <button
@@ -174,13 +174,9 @@ export default function VisitGoalGenerator() {
           body * {
             visibility: hidden;
           }
-          .bg-sfm-cream {
-            visibility: visible !important;
-          }
+          .bg-sfm-cream,
           .bg-sfm-cream * {
             visibility: visible !important;
-          }
-          .bg-sfm-cream {
             position: absolute;
             left: 0;
             top: 0;

@@ -47,7 +47,7 @@ export const generatePDF = (title: string, content: string, filename: string) =>
   
   // Add content
   doc.setFontSize(11)
-  doc.setTextColor(7, 7, 5) // Black color
+  doc.setTextColor(0, 0, 0) // True black color
   const splitContent = doc.splitTextToSize(content, 170)
   doc.text(splitContent, 20, 45)
   

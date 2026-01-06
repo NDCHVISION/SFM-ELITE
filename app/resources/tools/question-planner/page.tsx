@@ -199,7 +199,7 @@ export default function QuestionPlanner() {
     if (priorityQuestions.length > 0) {
       list += 'TOP PRIORITY QUESTIONS:\n'
       priorityQuestions.forEach((q, i) => {
-        list += `${i + 1}. ⭐ ${q.text}\n`
+        list += `${i + 1}. ★ ${q.text}\n`
       })
       list += '\n'
     }

@@ -75,15 +75,19 @@ export default function MedicationOrganizer() {
 
   const moveUp = (index: number) => {
     if (index === 0) return
-    const newMeds = [...medications]
-    ;[newMeds[index - 1], newMeds[index]] = [newMeds[index], newMeds[index - 1]]
+    const newMeds: Medication[] = [...medications]
+    const temp = newMeds[index - 1]
+    newMeds[index - 1] = newMeds[index]
+    newMeds[index] = temp
     setMedications(newMeds)
   }
 
   const moveDown = (index: number) => {
     if (index === medications.length - 1) return
-    const newMeds = [...medications]
-    ;[newMeds[index], newMeds[index + 1]] = [newMeds[index + 1], newMeds[index]]
+    const newMeds: Medication[] = [...medications]
+    const temp = newMeds[index]
+    newMeds[index] = newMeds[index + 1]
+    newMeds[index + 1] = temp
     setMedications(newMeds)
   }
 
