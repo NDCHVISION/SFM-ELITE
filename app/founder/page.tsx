@@ -412,7 +412,7 @@ export default function FounderPage() {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Become a Patient
+              Founding Member Enrollment Now Open
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </a>
             <Link href="/services" className="btn-secondary-white">

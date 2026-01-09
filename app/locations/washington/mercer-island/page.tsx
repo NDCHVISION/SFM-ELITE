@@ -204,7 +204,7 @@ export default function MercerIslandPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-colors"
             >
-              Become a Patient
+              Founding Member Enrollment Now Open
               <ArrowRight className="w-5 h-5" />
             </a>
             <Link href="/services" className="btn-secondary-white px-8 py-4">

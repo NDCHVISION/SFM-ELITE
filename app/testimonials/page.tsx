@@ -52,7 +52,7 @@ export default function TestimonialsPage() {
             href="/contact" 
             className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold hover:bg-sfm-gold-dark text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            <span>Become a Patient</span>
+            <span>Founding Member Enrollment Now Open</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -115,7 +115,7 @@ export default function TestimonialsPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-sfm-azure hover:bg-sfm-navy text-white font-medium rounded-lg transition-colors"
             >
-              Become a Patient
+              Founding Member Enrollment Now Open
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link 

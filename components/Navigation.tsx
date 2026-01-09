@@ -260,9 +260,9 @@ export default function Navigation() {
               <a
                 href={ATLAS_PORTAL_URL}
                 className="ml-3 btn-primary group"
-                aria-label="Become a patient at Sankofa Family Medicine"
+                aria-label="Founding member enrollment now open at Sankofa Family Medicine"
               >
-                <span>Become a Patient</span>
+                <span>Founding Member Enrollment Now Open</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </nav>
@@ -335,7 +335,7 @@ export default function Navigation() {
               onClick={() => setIsOpen(false)}
               className="flex items-center justify-center gap-2.5 w-full py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl mb-6 shadow-gold hover:bg-sfm-gold-light transition-all duration-300"
             >
-              Become a Patient
+              Founding Member Enrollment Now Open
               <ArrowRight className="w-4 h-4" />
             </a>
 

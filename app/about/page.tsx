@@ -321,7 +321,7 @@ export default function AboutPage() {
                     rel="noopener noreferrer"
                     className="btn-primary"
                   >
-                    Become a Patient
+                    Founding Member Enrollment Now Open
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                   <Link href="/services" className="btn-secondary-white btn-shine">
@@ -659,7 +659,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                Become a Patient
+                Founding Member Enrollment Now Open
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
               <Link href="/services" className="btn-secondary btn-shine">

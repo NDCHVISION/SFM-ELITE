@@ -312,7 +312,7 @@ export default function BlogPost() {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Become a Patient
+              Founding Member Enrollment Now Open
             </a>
             <Link href="/services" className="btn-secondary btn-shine">
               Membership Plans

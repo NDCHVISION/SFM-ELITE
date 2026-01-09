@@ -61,9 +61,9 @@ export default function MobileCTA() {
           className="flex items-center justify-center gap-2 w-full py-3.5 bg-gradient-to-r from-sfm-gold to-sfm-gold-light 
             text-sfm-navy font-bold rounded-xl shadow-lg shadow-sfm-gold/25 
             active:scale-[0.98] transition-transform group"
-          aria-label="Become a patient at Sankofa Family Medicine"
+          aria-label="Founding member enrollment now open at Sankofa Family Medicine"
         >
-          <span>Become a Patient</span>
+          <span>Founding Member Enrollment Now Open</span>
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </a>
         

@@ -174,7 +174,7 @@ export default function FAQPage() {
             <div className="space-y-3">
               <p>Start in Atlas, our secure patient portal. Complete your intake, select your membership tier, and schedule your first visit directly through the platform.</p>
               <a href="https://sankofafamilymedicine.atlas.md/hub/login" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sfm-azure hover:text-sfm-navy font-medium">
-                Become a Patient <ArrowRight className="ml-2 w-4 h-4" />
+                Founding Member Enrollment Now Open <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </div>
           )
@@ -356,7 +356,7 @@ export default function FAQPage() {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Become a Patient
+              Founding Member Enrollment Now Open
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </a>
             <Link href="/services" className="btn-secondary-white">
