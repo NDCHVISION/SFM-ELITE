@@ -325,7 +325,7 @@ export default function BlogPage() {
               rel="noopener noreferrer"
               className="btn-primary"
             >
-              Become a Patient
+              Founding Member Enrollment Now Open
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link href="/services" className="btn-secondary btn-shine">

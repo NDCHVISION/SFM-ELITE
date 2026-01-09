@@ -36,9 +36,9 @@ export default function PrimaryCTA({
     <a
       href={ATLAS_PORTAL_URL}
       className={`${baseStyles} ${variants[variant]} ${className}`}
-      aria-label="Become a patient at Sankofa Family Medicine"
+      aria-label="Founding member enrollment now open at Sankofa Family Medicine"
     >
-      {children || 'Become a Patient'}
+      {children || 'Founding Member Enrollment Now Open'}
       <ArrowRight className="w-4 h-4" />
     </a>
   )

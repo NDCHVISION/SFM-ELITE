@@ -126,7 +126,7 @@ export default function WashingtonLocationPage() {
 
             <div className="flex flex-wrap gap-4 mb-4">
               <a href="https://sankofafamilymedicine.atlas.md/hub/login" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-10 py-5 group">
-                <span>Become a Patient</span>
+                <span>Founding Member Enrollment Now Open</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
               <Link href="/services" className="btn-secondary-white btn-shine text-base px-10 py-5">
@@ -339,7 +339,7 @@ export default function WashingtonLocationPage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://sankofafamilymedicine.atlas.md/hub/login" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-12 py-5 group">
-              <span>Become a Patient</span>
+              <span>Founding Member Enrollment Now Open</span>
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </a>
             <Link href="/services" className="btn-secondary-white text-base px-12 py-5">

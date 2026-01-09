@@ -123,7 +123,7 @@ export default function CareJourney() {
                         href="https://sankofafamilymedicine.atlas.md/hub/login" 
                         className="btn-primary inline-flex items-center"
                       >
-                        Become a Patient
+                        Founding Member Enrollment Now Open
                       </a>
                     </div>
                   )}

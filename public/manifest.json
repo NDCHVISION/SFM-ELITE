@@ -32,9 +32,9 @@
   ],
   "shortcuts": [
     {
-      "name": "Become a Patient",
-      "short_name": "Join",
-      "description": "Join Sankofa Family Medicine as a patient",
+      "name": "Founding Member Enrollment Now Open",
+      "short_name": "Enroll",
+      "description": "Join Sankofa Family Medicine as a founding member",
       "url": "https://sankofafamilymedicine.atlas.md/hub/login",
       "icons": [{ "src": "/favicon.png", "sizes": "192x192" }]
     },

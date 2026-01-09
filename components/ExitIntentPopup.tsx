@@ -107,7 +107,7 @@ export default function ExitIntentPopup() {
                 href={ATLAS_PORTAL_URL}
                 className="inline-flex items-center gap-2 text-sfm-azure font-medium hover:text-sfm-gold transition-colors"
               >
-                Or become a patient now
+                Or enroll as a founding member now
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -166,7 +166,7 @@ export default function ExitIntentPopup() {
                 className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-colors mb-4"
               >
                 <Heart className="w-5 h-5" />
-                Become a Patient
+                Founding Member Enrollment Now Open
               </a>
               <button
                 onClick={() => setShowEmailForm(true)}
