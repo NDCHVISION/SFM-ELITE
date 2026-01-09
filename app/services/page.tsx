@@ -88,8 +88,8 @@ const nonMemberPricing = [
 
 const faqs = [
   {
-    q: 'What is Direct Primary Care?',
-    a: 'DPC is a membership-based model where you pay a monthly fee directly to your physician, removing insurance from the primary care relationship. This allows for longer visits, easier access, and care focused on you rather than billing codes.',
+    q: 'What is Concierge medicine?',
+    a: 'Concierge medicine is a membership-based model where you pay a monthly fee directly to your physician, removing insurance from the primary care relationship. This allows for longer visits, easier access, and care focused on you rather than billing codes.',
   },
   {
     q: 'Do I still need health insurance with concierge medicine?',
@@ -458,7 +458,7 @@ export default function ServicesPage() {
         <div className="relative max-w-5xl mx-auto px-6">
           <div className="text-center mb-10">
             <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase font-medium mb-2">The Difference</p>
-            <h2 className="font-display text-3xl text-white">Why Members Choose DPC</h2>
+            <h2 className="font-display text-3xl text-white">Why Members Choose Concierge</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -484,7 +484,7 @@ export default function ServicesPage() {
               </ul>
             </div>
 
-            {/* Sankofa DPC */}
+            {/* Sankofa Concierge */}
             <div className="bg-sfm-gold/10 border border-sfm-gold/30 rounded-2xl p-6">
               <p className="text-sfm-gold text-sm uppercase tracking-wider mb-4">Sankofa Family Medicine</p>
               <ul className="space-y-3">
