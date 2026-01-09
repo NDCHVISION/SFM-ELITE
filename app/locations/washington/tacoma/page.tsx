@@ -202,7 +202,7 @@ export default function TacomaPage() {
             <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
           </h2>
           <p className="text-white/60 mb-4">
-            Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
+            Complete your intake and schedule your first visit directly through our secure patient portal.
           </p>
           <p className="text-white/40 text-xs mb-8">
             All intake, scheduling, messaging, and visits occur securely inside Atlas.
