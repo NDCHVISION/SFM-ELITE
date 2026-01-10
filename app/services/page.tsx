@@ -392,7 +392,7 @@ export default function ServicesPage() {
                       <li key={i} className="flex items-start gap-3">
                         <span className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors ${
                           feature.included
-                            ? feature.highlight
+                            ? ('highlight' in feature && feature.highlight)highlight
                               ? 'bg-sfm-gold/20 text-sfm-gold'
                               : 'bg-sfm-azure/10 text-sfm-azure'
                             : 'bg-gray-100 text-gray-300'
