@@ -489,20 +489,25 @@ export default function HomePage() {
               {
                 name: 'Continuity Concierge',
                 price: 225,
-                description: 'Essential virtual concierge primary care designed to restore the continuity traditional medicine has lost.',
+                tagline: 'Concierge primary care with continuity and direct physician access',
+                description: 'High-touch virtual primary care designed for patients who value reliable access, unrushed visits, and a long-term relationship with their physician. This membership provides physician-led concierge primary care delivered virtually, including ongoing care coordination, preventive and longitudinal care planning, chronic condition and medication management, and access to wholesale laboratory pricing when clinically appropriate.',
                 featured: false,
               },
               {
                 name: 'Precision Concierge',
                 price: 325,
-                description: 'Everything in Continuity Concierge plus deeper preventive insight and advanced diagnostics when appropriate.',
+                tagline: 'Concierge medicine with advanced interpretation and personalized planning',
+                description: 'Data-informed primary care for patients seeking deeper insight, proactive risk assessment, and individualized medical decision-making. This membership includes everything in Continuity Concierge, with additional time and focus dedicated to advanced laboratory review, cardiometabolic risk assessment, periodic health reviews, and preventive strategy planning aligned with current clinical guidelines. Genetic and pharmacogenomic interpretation, when clinically appropriate, is provided through integration with precision health partners and may involve separate third-party testing costs. Limited after-hours messaging is available for urgent concerns.',
                 featured: true,
+                badge: 'Most Popular | Founding Offer',
               },
               {
                 name: 'Executive Concierge',
                 price: 650,
-                description: 'Concierge level care with direct phone access during extended hours and comprehensive health planning.',
+                tagline: 'Executive-level concierge medicine with comprehensive coordination and oversight',
+                description: 'Physician-directed care coordination for executives, founders, and families who require discretion, advocacy, and longitudinal oversight across healthcare systems. This membership includes everything in Precision Concierge, with expanded access for defined urgent needs, active coordination with specialists and external providers, review and alignment of outside medical recommendations, executive health planning, family care coordination, and concierge-level responsiveness within clearly defined boundaries.',
                 featured: false,
+                badge: 'Limited availability. Physician confirmation required.',
               },
             ].map((tier, i) => (
               <ScrollReveal key={tier.name} delay={i * 0.1}>
@@ -514,8 +519,14 @@ export default function HomePage() {
                   
                   <h3 className={`font-display text-xl mb-2 ${tier.featured ? 'text-white' : 'text-sfm-navy'}`}>
                     {tier.name}
-                    {tier.featured && <span className="text-sfm-gold"> (Most Popular)</span>}
+                    {tier.badge && <span className="text-sfm-gold"> ({tier.badge})</span>}
                   </h3>
+                  
+                  {tier.tagline && (
+                    <p className={`text-sm mb-3 italic ${tier.featured ? 'text-white/80' : 'text-sfm-text-muted'}`}>
+                      {tier.tagline}
+                    </p>
+                  )}
                   
                   <div className="mb-4">
                     <span className={`text-4xl font-display ${tier.featured ? 'text-sfm-gold' : 'text-sfm-navy'}`}>
