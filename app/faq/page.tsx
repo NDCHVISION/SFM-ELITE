@@ -140,11 +140,11 @@ export default function FAQPage() {
       items: [
         {
           question: 'What\'s included in membership?',
-          answer: 'All membership tiers include unlimited virtual visits with Dr. Nkrumah, secure messaging with 24-48 hour response times, care coordination, and prescription management. Higher tiers add genetic testing, AI-powered health insights, and direct physician access. See our Services page for full details.'
+          answer: 'All membership tiers include virtual visits with Dr. Nkrumah, secure messaging, care coordination, and prescription management. Continuity Concierge ($225–$245/month) provides physician-led concierge primary care. Precision Concierge ($325–$375/month) adds advanced laboratory review and cardiometabolic risk assessment. Executive Concierge ($650–$725/month) includes comprehensive coordination and extended access. See our Services page for full details.'
         },
         {
           question: 'What\'s the founding member offer?',
-          answer: 'Founding members lock in their rate for life. Limited spots available. Join now to secure your membership at current pricing.'
+          answer: 'Founding membership is limited to ensure quality, access, and continuity of care. Founding members receive priority onboarding, preferred founding member pricing, and early access as the practice reaches capacity. Founding enrollment closes once capacity is reached. Clinical care begins early February 2026.'
         },
         {
           question: 'Can I change my membership tier?',

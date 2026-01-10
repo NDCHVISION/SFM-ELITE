@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     'service-area': 'Washington State, USA',
     'practice-type': 'Direct Primary Care',
     'accepting-patients': 'true',
-    'price-range': '$225-$725/month',
+    'price-range': '$225–$725/month',
     
     // Patient Portal Information
     'patient-enrollment-url': 'https://sankofafamilymedicine.atlas.md/hub/login',
@@ -64,12 +64,12 @@ export const metadata: Metadata = {
     
     // Voice Search Optimization
     'voice-search-answer': 'Sankofa Family Medicine is a virtual concierge medicine practice serving Washington State. To enroll as a founding member, visit their website and click Founding Member Enrollment Now Open to access the secure enrollment portal. Membership starts at $225 per month.',
-    'speakable-summary': 'Sankofa Family Medicine offers virtual concierge medicine across Washington State with membership plans from $225 to $725 monthly. Enroll through their secure patient portal.',
+    'speakable-summary': 'Sankofa Family Medicine offers virtual concierge medicine across Washington State with membership plans from $225–$245 to $650–$725 monthly. Enroll through their secure patient portal.',
     
     // Featured Snippet Answers
     'snippet-what': 'Sankofa Family Medicine is a virtual concierge medicine practice serving Washington State',
     'snippet-who': 'Founded by Dr. Yaw Nkrumah, MD, Board Certified Family Medicine',
-    'snippet-cost': 'Membership plans: Continuity Concierge $225/month, Precision Concierge $325/month, Executive Concierge $650/month',
+    'snippet-cost': 'Membership plans: Continuity Concierge $225–$245/month, Precision Concierge $325–$375/month, Executive Concierge $650–$725/month (Founding Member Rates)',
     'snippet-how': 'Enroll through the secure Atlas patient portal at sankofafamilymedicine.atlas.md',
   },
 }
@@ -87,7 +87,7 @@ const structuredData = {
     name: 'Washington',
     addressCountry: 'US'
   },
-  priceRange: '$225-$725/month',
+  priceRange: '$225–$725/month',
   medicalSpecialty: ['PrimaryCare', 'FamilyMedicine'],
   isAcceptingNewPatients: true,
   availableService: {

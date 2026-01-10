@@ -35,7 +35,7 @@ export default function ServicesLayout({
                 "name": "How much does SFM Elite membership cost?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Our membership plans range from $225 to $725 per month. Continuity Concierge starts at $225/month, Precision Concierge at $325/month, and Executive Concierge at $650/month. All prices reflect founding member rates."
+                  "text": "Our membership plans range from $225–$245 to $650–$725 per month. Continuity Concierge starts at $225–$245/month, Precision Concierge at $325–$375/month, and Executive Concierge at $650–$725/month. All prices reflect founding member rates."
                 }
               },
               {

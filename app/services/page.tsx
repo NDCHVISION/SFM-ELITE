@@ -275,7 +275,7 @@ export default function ServicesPage() {
                     <span className="text-sfm-navy font-semibold text-sm">Founding Member Enrollment Open</span>
                   </div>
                   <p className="text-sfm-text-muted text-xs">
-                    Founding membership is limited to ensure quality, access, and continuity of care. Founding members receive priority onboarding, preferred founding member pricing, and early access as the practice reaches capacity.
+                    Founding membership is limited to ensure quality, access, and continuity of care. Founding members receive priority onboarding, preferred founding member pricing, and early access as the practice reaches capacity. Founding enrollment closes once capacity is reached.
                   </p>
                 </div>
               </div>
@@ -333,7 +333,7 @@ export default function ServicesPage() {
                   {tier.limitedAvailability && (
                     <div className="absolute -top-3 right-6 z-10">
                       <div className="px-4 py-1.5 bg-amber-600 text-white text-xs font-semibold rounded-full shadow-md">
-                        Limited Availability
+                        Limited availability. Physician confirmation required.
                       </div>
                     </div>
                   )}
@@ -392,7 +392,7 @@ export default function ServicesPage() {
                       <li key={i} className="flex items-start gap-3">
                         <span className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors ${
                           feature.included
-                            ? feature.highlight
+                            ? ('highlight' in feature && feature.highlight)
                               ? 'bg-sfm-gold/20 text-sfm-gold'
                               : 'bg-sfm-azure/10 text-sfm-azure'
                             : 'bg-gray-100 text-gray-300'
@@ -401,7 +401,7 @@ export default function ServicesPage() {
                         </span>
                         <span className={`text-sm leading-relaxed ${
                           feature.included
-                            ? feature.highlight
+                            ? ('highlight' in feature && feature.highlight)
                               ? 'text-sfm-navy font-semibold'
                               : 'text-gray-700'
                             : 'text-gray-400 line-through'
@@ -433,27 +433,23 @@ export default function ServicesPage() {
               <ul className="space-y-3 text-sm text-sfm-text-muted">
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
-                  <span>Membership covers physician access, time, and care coordination</span>
+                  <span>Membership covers physician access, time, and care coordination. Clinical services begin early February 2026.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
-                  <span>Membership does not replace emergency or urgent care services. In emergencies, patients should call 911 or seek local emergency care</span>
+                  <span>Membership does not replace emergency or urgent care services. In emergencies, patients should call 911 or seek local emergency care.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
-                  <span>Laboratory testing, imaging, medications, and specialty services are billed separately by third parties unless explicitly stated</span>
+                  <span>Laboratory testing, imaging, medications, and specialty services are billed separately by third parties unless explicitly stated. Advanced testing and analytics, including genetic and pharmacogenomic panels, may be offered when clinically appropriate and may involve additional cost through external partners.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
-                  <span>Advanced testing and analytics, including genetic and pharmacogenomic panels, may be offered when clinically appropriate and may involve additional cost through external partners</span>
+                  <span>Memberships are month-to-month. No long-term contracts. No insurance billing.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
-                  <span>Memberships are month-to-month. No long-term contracts. No insurance billing</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
-                  <span>Services are provided within a concierge care model and tailored during onboarding based on clinical appropriateness, capacity, and patient needs</span>
+                  <span>Services are provided within a concierge care model and tailored during onboarding based on clinical appropriateness, capacity, and patient needs.</span>
                 </li>
               </ul>
             </div>

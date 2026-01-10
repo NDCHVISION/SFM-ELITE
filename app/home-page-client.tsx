@@ -488,20 +488,20 @@ export default function HomePage() {
             {[
               {
                 name: 'Continuity Concierge',
-                price: 225,
-                description: 'Essential virtual concierge primary care designed to restore the continuity traditional medicine has lost.',
+                priceRange: '$225–$245',
+                description: 'Concierge primary care with continuity and direct physician access.',
                 featured: false,
               },
               {
                 name: 'Precision Concierge',
-                price: 325,
-                description: 'Everything in Continuity Concierge plus deeper preventive insight and advanced diagnostics when appropriate.',
+                priceRange: '$325–$375',
+                description: 'Concierge medicine with advanced interpretation and personalized planning.',
                 featured: true,
               },
               {
                 name: 'Executive Concierge',
-                price: 650,
-                description: 'Concierge level care with direct phone access during extended hours and comprehensive health planning.',
+                priceRange: '$650–$725',
+                description: 'Executive-level concierge medicine with comprehensive coordination and oversight.',
                 featured: false,
               },
             ].map((tier, i) => (
@@ -518,10 +518,13 @@ export default function HomePage() {
                   </h3>
                   
                   <div className="mb-4">
-                    <span className={`text-4xl font-display ${tier.featured ? 'text-sfm-gold' : 'text-sfm-navy'}`}>
-                      ${tier.price}
+                    <span className={`text-3xl font-display ${tier.featured ? 'text-sfm-gold' : 'text-sfm-navy'}`}>
+                      {tier.priceRange}
                     </span>
                     <span className={tier.featured ? 'text-white/60' : 'text-sfm-text-muted'}>/month</span>
+                    <p className={`text-xs mt-1 ${tier.featured ? 'text-white/50' : 'text-sfm-text-muted'}`}>
+                      (Founding Member Rate)
+                    </p>
                   </div>
                   
                   <p className={`text-sm mb-6 ${tier.featured ? 'text-white/70' : 'text-sfm-text-muted'}`}>
