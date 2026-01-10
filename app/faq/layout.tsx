@@ -86,7 +86,6 @@ FOUNDING MEMBER OFFER:
 - Limited spots available
 
 GETTING STARTED:
-- Enrollment begins in Atlas, our secure patient portal
 - First visit is 45-60 minute comprehensive intake
 - Records transfer assistance provided
 - Currently serving Washington State only (South Carolina coming 2026)
