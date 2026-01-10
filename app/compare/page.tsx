@@ -63,7 +63,7 @@ const structuredData = {
         '@type': 'MedicalBusiness',
         name: 'Sankofa Family Medicine',
         areaServed: { '@type': 'State', name: 'Washington' },
-        priceRange: '$149-$449/month',
+        priceRange: '$225-$725/month',
       },
     },
     {
