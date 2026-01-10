@@ -77,9 +77,9 @@ VIRTUAL CARE:
 - For emergencies, patients should call 911
 
 MEMBERSHIP TIERS:
-- Tier 1 Continuity Concierge: $195/month ($176/month billed annually)
-- Tier 2 Precision Concierge: $295/month ($266/month billed annually) - Most Popular
-- Tier 3 Executive Concierge: $449/month ($404/month billed annually)
+- Tier 1 Continuity Concierge: $225-$245/month ($203/month billed annually)
+- Tier 2 Precision Concierge: $325-$375/month ($293/month billed annually) - Most Popular
+- Tier 3 Executive Concierge: $650-$725/month ($585/month billed annually)
 
 FOUNDING MEMBER OFFER:
 - Founding members lock in their rate for life
@@ -126,7 +126,7 @@ const faqSchema = {
       name: 'How much does membership cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa Family Medicine offers three membership tiers: Continuity Concierge at $195/month for essential virtual concierge primary care, Precision Concierge at $295/month adding deeper preventive insight and advanced diagnostics, and Executive Concierge at $449/month for concierge level care with direct phone access during extended hours. Founding members lock in their rate for life.',
+        text: 'Sankofa Family Medicine offers three membership tiers: Continuity Concierge at $225-$245/month for concierge primary care with continuity and direct physician access, Precision Concierge at $325-$375/month adding advanced interpretation and personalized planning, and Executive Concierge at $650-$725/month for executive-level concierge medicine with comprehensive coordination. Founding members receive preferred founding member pricing.',
       },
     },
     // Virtual Care

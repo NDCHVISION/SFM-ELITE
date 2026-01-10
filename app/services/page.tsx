@@ -15,21 +15,22 @@ const tiers = [
   {
     id: 'continuity',
     name: 'Continuity Concierge',
-    tagline: 'Essential virtual primary care',
-    price: { monthly: 195, annual: 176 },
-    description: 'Comprehensive primary care with the continuity and access that traditional medicine has lost.',
+    tagline: 'Concierge primary care with continuity and direct physician access',
+    price: { monthly: 225, annual: 203 },
+    priceRange: '$225–$245/month',
+    description: 'High-touch virtual primary care designed for patients who value reliable access, unrushed visits, and a long-term relationship with their physician. This membership provides physician-led concierge primary care delivered virtually, including ongoing care coordination, preventive and longitudinal care planning, chronic condition and medication management, and access to wholesale laboratory pricing when clinically appropriate.',
     features: [
-      { text: 'Unlimited virtual visits', included: true },
-      { text: 'Same-day or next-day appointments', included: true },
-      { text: 'Direct messaging with Dr. Nkrumah', included: true },
-      { text: '45-minute initial consultation', included: true },
-      { text: 'Wholesale lab pricing (70-90% savings)', included: true },
-      { text: 'Chronic disease management', included: true },
+      { text: 'Virtual visits with physician-led primary care', included: true },
+      { text: 'Same-day or next-day appointments when available', included: true },
+      { text: 'Direct secure messaging with Dr. Nkrumah', included: true },
+      { text: 'Initial consultation (45 minutes)', included: true },
+      { text: 'Wholesale laboratory pricing when clinically appropriate', included: true },
+      { text: 'Chronic condition management', included: true },
       { text: 'Medication management', included: true },
-      { text: 'Care coordination', included: true },
-      { text: 'Genetic testing and interpretation', included: false },
-      { text: 'Advanced biomarker panels', included: false },
-      { text: 'Dedicated phone line', included: false },
+      { text: 'Ongoing care coordination', included: true },
+      { text: 'Preventive and longitudinal care planning', included: true },
+      { text: 'Advanced laboratory review and interpretation', included: false },
+      { text: 'Genetic and pharmacogenomic interpretation', included: false },
     ],
     cta: 'Select This Plan',
     popular: false,
@@ -37,20 +38,21 @@ const tiers = [
   {
     id: 'precision',
     name: 'Precision Concierge',
-    tagline: 'Data-driven personalized medicine',
-    price: { monthly: 295, annual: 266 },
-    description: 'Everything in Continuity, plus genetic insights and advanced diagnostics for truly personalized care.',
+    tagline: 'Concierge medicine with advanced interpretation and personalized planning',
+    price: { monthly: 325, annual: 293 },
+    priceRange: '$325–$375/month',
+    description: 'Data-informed primary care for patients seeking deeper insight, proactive risk assessment, and individualized medical decision-making. This membership includes everything in Continuity Concierge, with additional time and focus dedicated to advanced laboratory review, cardiometabolic risk assessment, periodic health reviews, and preventive strategy planning aligned with current clinical guidelines. Genetic and pharmacogenomic interpretation, when clinically appropriate, is provided through integration with precision health partners and may involve separate third-party testing costs. Limited after-hours messaging is available for urgent concerns.',
     features: [
       { text: 'Everything in Continuity Concierge', included: true, highlight: true },
-      { text: 'Genetic testing and pharmacogenomics', included: true },
-      { text: 'Advanced biomarker panels', included: true },
-      { text: 'Cardiometabolic risk profiling', included: true },
-      { text: 'Personalized prevention protocols', included: true },
+      { text: 'Advanced laboratory review and interpretation', included: true },
+      { text: 'Cardiometabolic risk assessment', included: true },
+      { text: 'Periodic health reviews', included: true },
+      { text: 'Preventive strategy planning aligned with clinical guidelines', included: true },
+      { text: 'Genetic and pharmacogenomic interpretation through precision health partners (separate third-party costs may apply)', included: true },
+      { text: 'Limited after-hours messaging for urgent concerns', included: true },
+      { text: 'Extended visit times (60 minutes)', included: true },
       { text: 'Priority scheduling', included: true },
-      { text: 'Extended visit times (60 min)', included: true },
-      { text: 'Quarterly health reviews', included: true },
-      { text: 'Dedicated phone line', included: false },
-      { text: 'After-hours access', included: false },
+      { text: 'Expanded access for defined urgent needs', included: false },
     ],
     cta: 'Select This Plan',
     popular: true,
@@ -59,22 +61,23 @@ const tiers = [
   {
     id: 'legacy',
     name: 'Executive Concierge',
-    tagline: 'Concierge-level care',
-    price: { monthly: 549, annual: 494 },
-    description: 'The highest level of personalized care with direct access and comprehensive health optimization.',
+    tagline: 'Executive-level concierge medicine with comprehensive coordination and oversight',
+    price: { monthly: 650, annual: 585 },
+    priceRange: '$650–$725/month',
+    description: 'Physician-directed care coordination for executives, founders, and families who require discretion, advocacy, and longitudinal oversight across healthcare systems. This membership includes everything in Precision Concierge, with expanded access for defined urgent needs, active coordination with specialists and external providers, review and alignment of outside medical recommendations, executive health planning, family care coordination, and concierge-level responsiveness within clearly defined boundaries.',
     features: [
       { text: 'Everything in Precision Concierge', included: true, highlight: true },
-      { text: 'Dedicated phone line', included: true },
-      { text: 'After-hours access for urgent needs', included: true },
-      { text: 'Annual comprehensive health assessment', included: true },
+      { text: 'Expanded access for defined urgent needs', included: true },
+      { text: 'Active coordination with specialists and external providers', included: true },
+      { text: 'Review and alignment of outside medical recommendations', included: true },
       { text: 'Executive health planning', included: true },
-      { text: 'Family health coordination', included: true },
-      { text: 'Specialist coordination and advocacy', included: true },
-      { text: 'Personalized wellness protocols', included: true },
-      { text: 'Concierge-level responsiveness', included: true },
+      { text: 'Family care coordination', included: true },
+      { text: 'Concierge-level responsiveness within defined boundaries', included: true },
+      { text: 'Physician confirmation required for enrollment', included: true },
     ],
     cta: 'Select This Plan',
     popular: false,
+    limitedAvailability: true,
   },
 ]
 
@@ -272,7 +275,7 @@ export default function ServicesPage() {
                     <span className="text-sfm-navy font-semibold text-sm">Founding Member Enrollment Open</span>
                   </div>
                   <p className="text-sfm-text-muted text-xs">
-                    Limited to 30 founding members. Lock in your rate for life.
+                    Founding membership is limited to ensure quality, access, and continuity of care. Founding members receive priority onboarding, preferred founding member pricing, and early access as the practice reaches capacity.
                   </p>
                 </div>
               </div>
@@ -326,6 +329,15 @@ export default function ServicesPage() {
                     </div>
                   )}
 
+                  {/* Limited Availability Badge */}
+                  {tier.limitedAvailability && (
+                    <div className="absolute -top-3 right-6 z-10">
+                      <div className="px-4 py-1.5 bg-amber-600 text-white text-xs font-semibold rounded-full shadow-md">
+                        Limited Availability
+                      </div>
+                    </div>
+                  )}
+
                   {/* Tier header */}
                   <div className="mb-8 pt-2">
                     <div className="flex items-center gap-3 mb-3">
@@ -349,6 +361,9 @@ export default function ServicesPage() {
                       </span>
                       <span className="text-gray-400 text-sm font-medium">/month</span>
                     </div>
+                    <p className="text-sfm-text-muted text-sm mt-2">
+                      {tier.priceRange} (Founding Member Rate)
+                    </p>
                     {billingCycle === 'annual' && (
                       <p className="text-sfm-gold text-sm mt-2 font-medium">
                         Billed annually (${tier.price.annual * 12}/year)
@@ -401,13 +416,46 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          {/* Founding Member Note */}
-          <div className="mt-12 max-w-2xl mx-auto text-center">
-            <div className="inline-flex items-center gap-3 px-6 py-4 bg-sfm-gold/10 border border-sfm-gold/20 rounded-2xl">
-              <Zap className="w-5 h-5 text-sfm-gold" />
-              <p className="text-sm text-sfm-navy">
-                <span className="font-semibold">Founding Members:</span> Join now and receive Executive Concierge benefits at Precision Concierge pricing.
-              </p>
+          {/* Founding Member Note & Launch Date */}
+          <div className="mt-12 max-w-3xl mx-auto space-y-4">
+            <div className="text-center">
+              <div className="inline-flex items-center gap-3 px-6 py-4 bg-sfm-gold/10 border border-sfm-gold/20 rounded-2xl mb-4">
+                <Zap className="w-5 h-5 text-sfm-gold" />
+                <p className="text-sm text-sfm-navy">
+                  <span className="font-semibold">Clinical care begins early February 2026.</span> Founding enrollment closes once capacity is reached.
+                </p>
+              </div>
+            </div>
+            
+            {/* Important Information */}
+            <div className="bg-sfm-cream/50 rounded-2xl p-6 border border-sfm-border-light">
+              <h3 className="font-semibold text-sfm-navy mb-4 text-center">Important Information</h3>
+              <ul className="space-y-3 text-sm text-sfm-text-muted">
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
+                  <span>Membership covers physician access, time, and care coordination</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
+                  <span>Membership does not replace emergency or urgent care services. In emergencies, patients should call 911 or seek local emergency care</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
+                  <span>Laboratory testing, imaging, medications, and specialty services are billed separately by third parties unless explicitly stated</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
+                  <span>Advanced testing and analytics, including genetic and pharmacogenomic panels, may be offered when clinically appropriate and may involve additional cost through external partners</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
+                  <span>Memberships are month-to-month. No long-term contracts. No insurance billing</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
+                  <span>Services are provided within a concierge care model and tailored during onboarding based on clinical appropriateness, capacity, and patient needs</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

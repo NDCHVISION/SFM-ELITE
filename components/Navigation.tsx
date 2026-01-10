@@ -72,7 +72,7 @@ export default function Navigation() {
     services: {
       label: 'Services',
       items: [
-        { href: '/services', label: 'Membership Plans', desc: 'From $149/month', icon: Heart },
+        { href: '/services', label: 'Membership Plans', desc: 'From $225/month', icon: Heart },
         { href: '/services/what-we-cover', label: 'Conditions We Treat', desc: 'Scope of care', icon: Stethoscope },
         { href: '/compare', label: 'Our Standard', desc: 'Philosophy and safeguards', icon: Shield },
       ],
