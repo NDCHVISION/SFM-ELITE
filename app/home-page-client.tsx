@@ -89,7 +89,7 @@ export default function HomePage() {
                     {[
                       'Your story travels with you. Every visit builds on your history and context.',
                       'Direct physician access. Message your doctor directly with no call centers or gatekeepers.',
-                      'Transparent memberships from $195 per month. Clear, predictable pricing for personalized care.',
+                      'Transparent memberships from $225 per month. Clear, predictable pricing for personalized care.',
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="w-1.5 h-1.5 rounded-full bg-sfm-gold mt-2.5 flex-shrink-0" />
@@ -488,19 +488,19 @@ export default function HomePage() {
             {[
               {
                 name: 'Continuity Concierge',
-                price: 195,
+                price: 225,
                 description: 'Essential virtual concierge primary care designed to restore the continuity traditional medicine has lost.',
                 featured: false,
               },
               {
                 name: 'Precision Concierge',
-                price: 295,
+                price: 325,
                 description: 'Everything in Continuity Concierge plus deeper preventive insight and advanced diagnostics when appropriate.',
                 featured: true,
               },
               {
                 name: 'Executive Concierge',
-                price: 549,
+                price: 650,
                 description: 'Concierge level care with direct phone access during extended hours and comprehensive health planning.',
                 featured: false,
               },

@@ -43,9 +43,9 @@ export const BRAND = {
 
 export const PRICING = {
   tiers: {
-    continuity: { monthly: 149, annual: 134 },
-    precision: { monthly: 249, annual: 224 },
-    legacy: { monthly: 449, annual: 404 }
+    continuity: { monthly: 225, annual: 203 },
+    precision: { monthly: 325, annual: 293 },
+    legacy: { monthly: 650, annual: 585 }
   }
 } as const
 

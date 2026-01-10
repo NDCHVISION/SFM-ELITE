@@ -47,28 +47,28 @@ const membershipTiers: Record<string, MembershipItem> = {
     item_id: 'tier_1_continuity',
     item_name: 'Continuity Concierge',
     item_category: 'membership',
-    price: 195,
+    price: 225,
     quantity: 1
   },
   precision: {
     item_id: 'tier_2_precision',
     item_name: 'Precision Concierge',
     item_category: 'membership',
-    price: 295,
+    price: 325,
     quantity: 1
   },
   executive: {
     item_id: 'tier_3_executive',
     item_name: 'Executive Concierge',
     item_category: 'membership',
-    price: 549,
+    price: 650,
     quantity: 1
   },
   founding: {
     item_id: 'founding_member',
     item_name: 'Founding Member',
     item_category: 'membership',
-    price: 295,
+    price: 325,
     quantity: 1
   }
 }
