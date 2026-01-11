@@ -11,6 +11,12 @@ import {
   ChevronDown, ChevronUp
 } from 'lucide-react'
 
+interface Feature {
+  text: string
+  included: boolean
+  highlight?: boolean
+}
+
 const tiers = [
   {
     id: 'continuity',
@@ -388,11 +394,11 @@ export default function ServicesPage() {
                   </a>
 
                   <ul className="space-y-4">
-                    {tier.features.map((feature, i) => (
+                    {tier.features.map((feature: Feature, i) => (
                       <li key={i} className="flex items-start gap-3">
                         <span className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors ${
                           feature.included
-                            ? (feature as any).highlight
+                            ? feature.highlight
                               ? 'bg-sfm-gold/20 text-sfm-gold'
                               : 'bg-sfm-azure/10 text-sfm-azure'
                             : 'bg-gray-100 text-gray-300'
@@ -401,7 +407,7 @@ export default function ServicesPage() {
                         </span>
                         <span className={`text-sm leading-relaxed ${
                           feature.included
-                            ? (feature as any).highlight
+                            ? feature.highlight
                               ? 'text-sfm-navy font-semibold'
                               : 'text-gray-700'
                             : 'text-gray-400 line-through'
