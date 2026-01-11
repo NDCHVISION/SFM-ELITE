@@ -17,7 +17,7 @@ const tiers = [
     name: 'Continuity Concierge',
     tagline: 'Concierge primary care with continuity and direct physician access',
     price: { monthly: 225, annual: 203 },
-    priceRange: '$225–$245/month',
+    priceRange: '$225–$275/month',
     description: 'High-touch virtual primary care designed for patients who value reliable access, unrushed visits, and a long-term relationship with their physician. This membership provides physician-led concierge primary care delivered virtually, including ongoing care coordination, preventive and longitudinal care planning, chronic condition and medication management, and access to wholesale laboratory pricing when clinically appropriate.',
     features: [
       { text: 'Virtual visits with physician-led primary care', included: true },
@@ -357,16 +357,16 @@ export default function ServicesPage() {
                   <div className="mb-8 pb-8 border-b border-gray-100">
                     <div className="flex items-baseline gap-1">
                       <span className="text-5xl font-display text-sfm-navy">
-                        ${tier.price[billingCycle]}
+                        {tier.priceRange.replace('/month', '')}
                       </span>
                       <span className="text-gray-400 text-sm font-medium">/month</span>
                     </div>
                     <p className="text-sfm-text-muted text-sm mt-2">
-                      {tier.priceRange} (Founding Member Rate)
+                      Founding Member Rate
                     </p>
                     {billingCycle === 'annual' && (
                       <p className="text-sfm-gold text-sm mt-2 font-medium">
-                        Billed annually (${tier.price.annual * 12}/year)
+                        Save 10% with annual billing
                       </p>
                     )}
                   </div>
