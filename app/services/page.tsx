@@ -24,6 +24,7 @@ const tiers = [
     tagline: 'Concierge primary care with continuity and direct physician access',
     price: { monthly: 225, annual: 203 },
     priceRange: '$225–$275/month',
+    priceRangeAnnual: '$203–$248/month',
     description: 'High-touch virtual primary care designed for patients who value reliable access, unrushed visits, and a long-term relationship with their physician. This membership provides physician-led concierge primary care delivered virtually, including ongoing care coordination, preventive and longitudinal care planning, chronic condition and medication management, and access to wholesale laboratory pricing when clinically appropriate.',
     features: [
       { text: 'Virtual visits with physician-led primary care', included: true },
@@ -47,6 +48,7 @@ const tiers = [
     tagline: 'Concierge medicine with advanced interpretation and personalized planning',
     price: { monthly: 325, annual: 293 },
     priceRange: '$325–$375/month',
+    priceRangeAnnual: '$293–$338/month',
     description: 'Data-informed primary care for patients seeking deeper insight, proactive risk assessment, and individualized medical decision-making. This membership includes everything in Continuity Concierge, with additional time and focus dedicated to advanced laboratory review, cardiometabolic risk assessment, periodic health reviews, and preventive strategy planning aligned with current clinical guidelines. Genetic and pharmacogenomic interpretation, when clinically appropriate, is provided through integration with precision health partners and may involve separate third-party testing costs. Limited after-hours messaging is available for urgent concerns.',
     features: [
       { text: 'Everything in Continuity Concierge', included: true, highlight: true },
@@ -70,6 +72,7 @@ const tiers = [
     tagline: 'Executive-level concierge medicine with comprehensive coordination and oversight',
     price: { monthly: 650, annual: 585 },
     priceRange: '$650–$725/month',
+    priceRangeAnnual: '$585–$653/month',
     description: 'Physician-directed care coordination for executives, founders, and families who require discretion, advocacy, and longitudinal oversight across healthcare systems. This membership includes everything in Precision Concierge, with expanded access for defined urgent needs, active coordination with specialists and external providers, review and alignment of outside medical recommendations, executive health planning, family care coordination, and concierge-level responsiveness within clearly defined boundaries.',
     features: [
       { text: 'Everything in Precision Concierge', included: true, highlight: true },
@@ -363,7 +366,7 @@ export default function ServicesPage() {
                   <div className="mb-8 pb-8 border-b border-gray-100">
                     <div className="flex items-baseline gap-1">
                       <span className="text-5xl font-display text-sfm-navy">
-                        {tier.priceRange.replace('/month', '')}
+                        {(billingCycle === 'annual' ? tier.priceRangeAnnual : tier.priceRange).replace('/month', '')}
                       </span>
                       <span className="text-gray-400 text-sm font-medium">/month</span>
                     </div>
