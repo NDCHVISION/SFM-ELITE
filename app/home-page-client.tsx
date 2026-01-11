@@ -488,19 +488,19 @@ export default function HomePage() {
             {[
               {
                 name: 'Continuity Concierge',
-                price: 225,
+                priceRange: '$225–$275',
                 description: 'Essential virtual concierge primary care designed to restore the continuity traditional medicine has lost.',
                 featured: false,
               },
               {
                 name: 'Precision Concierge',
-                price: 325,
+                priceRange: '$325–$375',
                 description: 'Everything in Continuity Concierge plus deeper preventive insight and advanced diagnostics when appropriate.',
                 featured: true,
               },
               {
                 name: 'Executive Concierge',
-                price: 650,
+                priceRange: '$650–$725',
                 description: 'Concierge level care with direct phone access during extended hours and comprehensive health planning.',
                 featured: false,
               },
@@ -519,7 +519,7 @@ export default function HomePage() {
                   
                   <div className="mb-4">
                     <span className={`text-4xl font-display ${tier.featured ? 'text-sfm-gold' : 'text-sfm-navy'}`}>
-                      ${tier.price}
+                      {tier.priceRange}
                     </span>
                     <span className={tier.featured ? 'text-white/60' : 'text-sfm-text-muted'}>/month</span>
                   </div>
