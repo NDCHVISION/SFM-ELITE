@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Linkedin, Facebook, Instagram, Phone, Mail, MapPin, Clock, Shield } from 'lucide-react'
+import { CookieSettingsButton } from './CookieConsent'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -246,6 +247,7 @@ export default function Footer() {
                 <Link href="/accessibility" className="text-white/40 hover:text-white/70 transition-colors duration-300">
                   Accessibility
                 </Link>
+                <CookieSettingsButton />
                 <Link href="/sitemap.xml" className="text-white/40 hover:text-white/70 transition-colors duration-300">
                   Sitemap
                 </Link>

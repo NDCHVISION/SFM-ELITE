@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Shield, Lock, Eye, FileText, Mail, Phone } from 'lucide-react'
+import { ArrowRight, Shield, Lock, Eye, FileText, Mail, Phone, Cookie, BarChart3, Globe, ExternalLink } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -232,6 +232,116 @@ export default function PrivacyPage() {
                 </div>
               </div>
 
+              {/* Website Analytics and Cookies Section */}
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-sfm-gold/10 flex items-center justify-center">
+                    <Cookie className="w-6 h-6 text-sfm-gold" />
+                  </div>
+                  <h2 className="font-display text-3xl text-sfm-navy">Website Analytics and Cookies</h2>
+                </div>
+                <div className="space-y-8">
+                  <p className="text-sfm-navy/70 leading-relaxed">
+                    To improve our website and understand how visitors use our services, we use the following technologies. We do not use any tracking for advertising purposes.
+                  </p>
+
+                  {/* Google Analytics */}
+                  <div className="bg-sfm-cream rounded-2xl p-6 border-l-4 border-sfm-gold">
+                    <div className="flex items-center gap-2 mb-4">
+                      <BarChart3 className="w-5 h-5 text-sfm-gold" />
+                      <h3 className="font-display text-xl text-sfm-navy">Google Analytics 4</h3>
+                    </div>
+                    <p className="text-sfm-navy/70 mb-4">
+                      We use Google Analytics 4 (GA4), a web analytics service provided by Google LLC, to understand how visitors interact with our website. GA4 collects:
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-3 mb-4">
+                      {['Pages visited and time spent', 'How you arrived at our website', 'General geographic location', 'Device type and browser', 'Interactions with website features'].map((item, index) => (
+                        <div key={index} className="flex items-center gap-2 text-sfm-navy/70 text-sm">
+                          <div className="w-1.5 h-1.5 rounded-full bg-sfm-gold" />
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-sfm-navy/70 text-sm mb-3">
+                      This information helps us improve your experience. <strong>We do not use this data for advertising.</strong> Google may transfer data to servers in the United States.
+                    </p>
+                    <a 
+                      href="https://policies.google.com/privacy" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-sm text-sfm-azure hover:underline"
+                    >
+                      Google Privacy Policy <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+
+                  {/* Formspree */}
+                  <div className="bg-sfm-navy/5 rounded-2xl p-6 border-l-4 border-sfm-azure">
+                    <div className="flex items-center gap-2 mb-4">
+                      <FileText className="w-5 h-5 text-sfm-azure" />
+                      <h3 className="font-display text-xl text-sfm-navy">Form Handling (Formspree)</h3>
+                    </div>
+                    <p className="text-sfm-navy/70 mb-3">
+                      Contact forms and subscription forms on our website are processed by Formspree, a secure form handling service. When you submit a form, Formspree securely transmits your submission (name, email, and message) to us. Formspree does not use your information for marketing purposes.
+                    </p>
+                    <a 
+                      href="https://formspree.io/legal/privacy-policy/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-sm text-sfm-azure hover:underline"
+                    >
+                      Formspree Privacy Policy <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+
+                  {/* Vercel Hosting */}
+                  <div className="bg-white rounded-2xl p-6 border border-sfm-navy/10">
+                    <div className="flex items-center gap-2 mb-4">
+                      <Globe className="w-5 h-5 text-sfm-navy" />
+                      <h3 className="font-display text-xl text-sfm-navy">Website Hosting (Vercel)</h3>
+                    </div>
+                    <p className="text-sfm-navy/70 mb-3">
+                      Our website is hosted on Vercel&apos;s platform. Vercel may collect basic server logs including IP addresses for security and performance purposes.
+                    </p>
+                    <a 
+                      href="https://vercel.com/legal/privacy-policy" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-sm text-sfm-azure hover:underline"
+                    >
+                      Vercel Privacy Policy <ExternalLink className="w-3 h-3" />
+                    </a>
+                  </div>
+
+                  {/* Cookie Consent */}
+                  <div className="bg-gradient-to-br from-sfm-gold/10 to-sfm-gold/5 rounded-2xl p-6 border border-sfm-gold/20">
+                    <h3 className="font-display text-xl text-sfm-navy mb-4">Your Cookie Choices</h3>
+                    <p className="text-sfm-navy/70 mb-4">
+                      When you first visit our website, a cookie consent banner appears allowing you to choose:
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-4 mb-4">
+                      <div className="bg-white rounded-xl p-4">
+                        <p className="font-semibold text-sfm-navy mb-2">Accept All</p>
+                        <p className="text-sfm-navy/60 text-sm">Enables analytics cookies in addition to essential cookies for website functionality.</p>
+                      </div>
+                      <div className="bg-white rounded-xl p-4">
+                        <p className="font-semibold text-sfm-navy mb-2">Essential Only</p>
+                        <p className="text-sfm-navy/60 text-sm">Only cookies required for basic website functionality (theme preference, consent choice).</p>
+                      </div>
+                    </div>
+                    <div className="bg-white/80 rounded-xl p-4">
+                      <h4 className="font-semibold text-sfm-navy mb-2">How to Withdraw Consent</h4>
+                      <p className="text-sfm-navy/70 text-sm mb-2">You may withdraw your consent to analytics tracking at any time by:</p>
+                      <ul className="text-sfm-navy/60 text-sm space-y-1 list-disc list-inside">
+                        <li>Clearing cookies in your browser settings and revisiting our website</li>
+                        <li>Installing browser extensions that block analytics tracking</li>
+                        <li>Contacting us at info@sankofafamilymedicine.com</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* Your Rights */}
               <div>
                 <div className="flex items-center gap-3 mb-6">
@@ -248,6 +358,7 @@ export default function PrivacyPage() {
                     'Request deletion of your information',
                     'Opt-out of promotional communications',
                     'Request a copy of your health records',
+                    'Withdraw cookie consent at any time',
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-3 p-4 bg-white rounded-xl border border-sfm-azure/10 hover:border-sfm-azure/30 transition-colors">
                       <div className="w-8 h-8 rounded-full bg-sfm-azure/10 flex items-center justify-center flex-shrink-0">
