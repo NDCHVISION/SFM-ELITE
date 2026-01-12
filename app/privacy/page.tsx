@@ -238,7 +238,7 @@ export default function PrivacyPage() {
                   <div className="w-12 h-12 rounded-xl bg-sfm-gold/10 flex items-center justify-center">
                     <Cookie className="w-6 h-6 text-sfm-gold" />
                   </div>
-                  <h2 className="font-display text-3xl text-sfm-navy">Website Analytics and Cookies</h2>
+                  <h2 id="website-analytics-and-cookies" className="font-display text-3xl text-sfm-navy">Website Analytics and Cookies</h2>
                 </div>
                 <div className="space-y-8">
                   <p className="text-sfm-navy/70 leading-relaxed">
