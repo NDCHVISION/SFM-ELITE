@@ -541,7 +541,7 @@ export default function ServicesPage() {
               </ul>
             </div>
 
-            {/* Sankofa Concierge */}
+            {/* SFM Concierge */}
             <div className="bg-sfm-gold/10 border border-sfm-gold/30 rounded-2xl p-6">
               <p className="text-sfm-gold text-sm uppercase tracking-wider mb-4">Sankofa Family Medicine</p>
               <ul className="space-y-3">

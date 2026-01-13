@@ -3,11 +3,11 @@ import { ArrowRight, ArrowLeft, Check, X } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Why Concierge Medicine? | Traditional vs. Sankofa Concierge Membership Comparison',
+  title: 'Why Concierge Medicine? | Traditional vs. SFM Concierge Membership Comparison',
   description: 'Sankofa Family Medicine is a virtual-first concierge medicine practice. Compare: 15 min vs 30-60 min visits, 26-day waits vs same-day access, 2,300 patients vs approximately 200. See why concierge primary care offers a better relationship with your physician.',
   keywords: ['concierge medicine comparison', 'concierge vs traditional', 'Washington State concierge medicine', 'Medicine That Remembers', 'healthcare fragmentation', 'virtual primary care'],
   openGraph: {
-    title: 'Why Concierge Medicine? | Traditional vs. Sankofa Concierge Membership Comparison',
+    title: 'Why Concierge Medicine? | Traditional vs. SFM Concierge Membership Comparison',
     description: 'See the evidence-based differences: 15 min vs 30-60 min visits, 26-day waits vs same-day access. Concierge primary care offers a better relationship with your physician.',
     url: 'https://sankofafamilymedicine.com/compare',
     siteName: 'Sankofa Family Medicine',
@@ -227,7 +227,7 @@ export default function ComparePage() {
                     </span>
                   </th>
                   <th className="w-[36%] p-6 text-center text-xs font-semibold tracking-[0.2em] uppercase text-sfm-gold bg-sfm-gold/[0.08]">
-                    <span className="block">Sankofa Concierge Membership</span>
+                    <span className="block">Sankofa Family Medicine Concierge (SFM Concierge)</span>
                     <span className="block font-display text-2xl font-normal tracking-normal normal-case text-white mt-2">
                       The Standard
                     </span>
@@ -323,7 +323,7 @@ export default function ComparePage() {
                     </div>
                   </div>
                   <div className="p-4 bg-sfm-gold/[0.08] text-center">
-                    <div className="text-xs uppercase tracking-wider text-sfm-gold mb-2">Sankofa Concierge</div>
+                    <div className="text-xs uppercase tracking-wider text-sfm-gold mb-2">SFM Concierge</div>
                     <div className="flex items-center justify-center gap-2">
                       {row.sankofa.isPositive && !row.sankofa.value && (
                         <Check className="w-4 h-4 text-sfm-gold" strokeWidth={2.5} />
