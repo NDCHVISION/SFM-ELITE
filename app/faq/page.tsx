@@ -185,7 +185,7 @@ export default function FAQPage() {
         },
         {
           question: 'How does enrollment work?',
-          answer: 'Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal. Care can begin as early as the same week, depending on onboarding.'
+          answer: 'Complete your intake and schedule your first visit directly through our secure patient portal. Care can begin as early as the same week, depending on onboarding.'
         },
         {
           question: 'Do I need to transfer my medical records?',
@@ -344,7 +344,7 @@ export default function FAQPage() {
             <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
           </h2>
           <p className="text-white/60 text-lg md:text-xl mb-4 max-w-2xl mx-auto">
-            Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
+            Complete your intake and schedule your first visit directly through our secure patient portal.
           </p>
           <p className="text-white/40 text-sm mb-12 max-w-2xl mx-auto">
             All intake, scheduling, messaging, and visits occur securely inside Atlas.

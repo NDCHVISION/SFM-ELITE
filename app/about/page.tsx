@@ -328,9 +328,7 @@ export default function AboutPage() {
                     Membership Plans
                   </Link>
                 </div>
-                <p className="text-white/40 text-xs mt-3">
-                  Enrollment begins in Atlas.
-                </p>
+
               </div>
 
               {/* Sankofa Visual */}
@@ -646,7 +644,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-sfm-navy/60 text-lg mb-4 max-w-2xl mx-auto">
-              Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
+              Complete your intake and schedule your first visit directly through our secure patient portal.
             </p>
             <p className="text-sfm-navy/40 text-sm mb-10 max-w-2xl mx-auto">
               All intake, scheduling, messaging, and visits occur securely inside Atlas.

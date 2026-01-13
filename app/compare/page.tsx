@@ -430,7 +430,7 @@ export default function ComparePage() {
           </h2>
           
           <p className="text-white/60 text-lg mb-4 max-w-2xl mx-auto">
-            Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
+            Complete your intake and schedule your first visit directly through our secure patient portal.
           </p>
           <p className="text-white/40 text-sm mb-10 max-w-2xl mx-auto">
             All intake, scheduling, messaging, and visits occur securely inside Atlas.
