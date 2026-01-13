@@ -461,41 +461,58 @@ body {
   text-shadow: 0 0 40px rgba(188, 152, 51, 0.25);
 }
 
-/* Elite "Remember" Glow - Animated signature effect */
+/* Elite "Remember" Glow - Soft ambient radial glow effect
+   Atmospheric, editorial style - like light diffusing through fog */
 .remember-glow {
+  position: relative;
+  display: inline-block;
   color: var(--sfm-gold);
-  text-shadow: 
-    0 0 10px rgba(188, 152, 51, 0.6),
-    0 0 20px rgba(188, 152, 51, 0.4),
-    0 0 40px rgba(188, 152, 51, 0.3),
-    0 0 60px rgba(188, 152, 51, 0.2);
-  animation: rememberGlow 3s ease-in-out infinite;
+  /* Minimal text-shadow for subtle text enhancement only */
+  text-shadow: 0 0 1px rgba(188, 152, 51, 0.3);
 }
 
-@keyframes rememberGlow {
+/* Soft radial glow behind text - atmospheric and diffused
+   - 180% width extends glow horizontally for natural text spread
+   - 300% height creates vertical diffusion like light through fog
+   - 4s animation (slower than original 3s) for subtle, dreamy pulsing */
+.remember-glow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180%;
+  height: 300%;
+  background: radial-gradient(
+    ellipse closest-side,
+    rgba(188, 152, 51, 0.18) 0%,
+    rgba(188, 152, 51, 0.12) 25%,
+    rgba(188, 152, 51, 0.06) 50%,
+    rgba(188, 152, 51, 0.02) 75%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(20px);
+  animation: rememberGlowAmbient 4s ease-in-out infinite;
+}
+
+@keyframes rememberGlowAmbient {
   0%, 100% { 
-    text-shadow: 
-      0 0 10px rgba(188, 152, 51, 0.6),
-      0 0 20px rgba(188, 152, 51, 0.4),
-      0 0 40px rgba(188, 152, 51, 0.3),
-      0 0 60px rgba(188, 152, 51, 0.2);
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
   }
   50% { 
-    text-shadow: 
-      0 0 15px rgba(188, 152, 51, 0.8),
-      0 0 30px rgba(188, 152, 51, 0.6),
-      0 0 50px rgba(188, 152, 51, 0.4),
-      0 0 80px rgba(188, 152, 51, 0.3);
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.08);
   }
 }
 
 /* Respect user's motion preferences for remember-glow */
 @media (prefers-reduced-motion: reduce) {
-  .remember-glow {
+  .remember-glow::before {
     animation: none;
-    text-shadow: 
-      0 0 10px rgba(188, 152, 51, 0.6),
-      0 0 20px rgba(188, 152, 51, 0.4);
+    opacity: 0.9;
   }
 }
 
