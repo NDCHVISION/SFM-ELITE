@@ -381,7 +381,7 @@ body {
   line-height: 1.75;
   letter-spacing: 0.01em;
   font-weight: 400;
-  font-size: 1.0625rem;
+  font-size: 1.1875rem; /* Increased from 1.0625rem for better readability */
 }
 
 @media (max-width: 1023px) {
@@ -413,10 +413,10 @@ body {
   line-height: 1.4;
 }
 
-/* Display Typography Scale */
+/* Display Typography Scale - Enhanced for accessibility */
 .text-display-xl {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-size: clamp(2.75rem, 7.5vw, 5rem);
   font-weight: 500;
   line-height: 0.95;
   letter-spacing: -0.03em;
@@ -424,7 +424,7 @@ body {
 
 .text-display-lg {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2.25rem, 5.5vw, 4rem);
   font-weight: 500;
   line-height: 1;
   letter-spacing: -0.025em;
@@ -432,26 +432,26 @@ body {
 
 .text-display-md {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(2rem, 4.5vw, 2.875rem);
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
-/* Body Typography */
+/* Body Typography - Enhanced for accessibility */
 .text-body-lg {
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   line-height: 1.7;
 }
 
 .text-body-md {
-  font-size: 1.0625rem;
+  font-size: 1.1875rem;
   line-height: 1.75;
 }
 
 .text-body-sm {
-  font-size: 0.9375rem;
-  line-height: 1.6;
+  font-size: 1.0625rem;
+  line-height: 1.65;
 }
 
 /* Gold Glow Text - Refined */
@@ -461,58 +461,48 @@ body {
   text-shadow: 0 0 40px rgba(188, 152, 51, 0.25);
 }
 
-/* Elite "Remember" Glow - Soft ambient radial glow effect
-   Atmospheric, editorial style - like light diffusing through fog */
+/* Elite "Remembered" Glow - Pure gold text glow effect
+   No boxy gradient background - clean, elegant gold letter glow */
 .remember-glow {
-  position: relative;
-  display: inline-block;
   color: var(--sfm-gold);
-  /* Minimal text-shadow for subtle text enhancement only */
-  text-shadow: 0 0 1px rgba(188, 152, 51, 0.3);
+  /* Layered gold text glow: inner glow + mid glow + outer glow */
+  text-shadow: 
+    0 0 4px rgba(188, 152, 51, 0.9),
+    0 0 12px rgba(188, 152, 51, 0.7),
+    0 0 24px rgba(188, 152, 51, 0.5),
+    0 0 48px rgba(188, 152, 51, 0.3),
+    0 0 72px rgba(188, 152, 51, 0.15);
+  animation: rememberGlowPulse 3s ease-in-out infinite;
 }
 
-/* Soft radial glow behind text - atmospheric and diffused
-   - 180% width extends glow horizontally for natural text spread
-   - 300% height creates vertical diffusion like light through fog
-   - 4s animation (slower than original 3s) for subtle, dreamy pulsing */
-.remember-glow::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 180%;
-  height: 300%;
-  background: radial-gradient(
-    ellipse closest-side,
-    rgba(188, 152, 51, 0.18) 0%,
-    rgba(188, 152, 51, 0.12) 25%,
-    rgba(188, 152, 51, 0.06) 50%,
-    rgba(188, 152, 51, 0.02) 75%,
-    transparent 100%
-  );
-  pointer-events: none;
-  z-index: -1;
-  filter: blur(20px);
-  animation: rememberGlowAmbient 4s ease-in-out infinite;
-}
-
-@keyframes rememberGlowAmbient {
+@keyframes rememberGlowPulse {
   0%, 100% { 
-    opacity: 0.8;
-    transform: translate(-50%, -50%) scale(1);
+    text-shadow: 
+      0 0 4px rgba(188, 152, 51, 0.9),
+      0 0 12px rgba(188, 152, 51, 0.7),
+      0 0 24px rgba(188, 152, 51, 0.5),
+      0 0 48px rgba(188, 152, 51, 0.3),
+      0 0 72px rgba(188, 152, 51, 0.15);
   }
   50% { 
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.08);
+    text-shadow: 
+      0 0 6px rgba(188, 152, 51, 1),
+      0 0 16px rgba(188, 152, 51, 0.8),
+      0 0 32px rgba(188, 152, 51, 0.6),
+      0 0 56px rgba(188, 152, 51, 0.4),
+      0 0 80px rgba(188, 152, 51, 0.2);
   }
 }
 
 /* Respect user's motion preferences for remember-glow */
 @media (prefers-reduced-motion: reduce) {
-  .remember-glow::before {
+  .remember-glow {
     animation: none;
-    opacity: 0.9;
+    text-shadow: 
+      0 0 4px rgba(188, 152, 51, 0.9),
+      0 0 12px rgba(188, 152, 51, 0.7),
+      0 0 24px rgba(188, 152, 51, 0.5),
+      0 0 48px rgba(188, 152, 51, 0.3);
   }
 }
 
@@ -538,7 +528,7 @@ body {
   background: var(--sfm-gold);
   color: var(--sfm-navy);
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1rem;
+  font-size: 1.125rem; /* Increased from 1rem for better readability */
   font-weight: 600;
   letter-spacing: 0.025em;
   border-radius: 0.875rem;
@@ -585,7 +575,7 @@ body {
 .btn-primary-hero,
 .btn-hero {
   padding: 1.125rem 2.25rem;
-  font-size: 1.0625rem;
+  font-size: 1.1875rem; /* Increased from 1.0625rem for better readability */
   min-height: 56px;
 }
 
@@ -599,7 +589,7 @@ body {
   background: transparent;
   color: white;
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1rem;
+  font-size: 1.125rem; /* Increased from 1rem for better readability */
   font-weight: 500;
   letter-spacing: 0.02em;
   border-radius: 0.75rem;
@@ -639,7 +629,7 @@ body {
   background: rgba(255, 255, 255, 0.15);
   color: white;
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1rem;
+  font-size: 1.125rem; /* Increased from 1rem for better readability */
   font-weight: 600;
   border-radius: 0.875rem;
   border: 2px solid rgba(255, 255, 255, 0.4);
@@ -676,7 +666,7 @@ body {
   background: transparent;
   color: var(--sfm-navy);
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1rem;
+  font-size: 1.125rem; /* Increased from 1rem for better readability */
   font-weight: 600;
   border-radius: 0.875rem;
   border: 2px solid var(--sfm-azure);
@@ -817,7 +807,7 @@ body {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 2rem;
-  font-size: 0.8125rem;
+  font-size: 0.9375rem; /* Increased from 0.8125rem for better readability */
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -967,7 +957,7 @@ body {
   width: 100%;
   padding: 1rem 1.25rem;
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1rem;
+  font-size: 1.125rem; /* Increased from 1rem for better readability */
   color: var(--sfm-text);
   background: white;
   border: 1px solid var(--sfm-border);
@@ -1008,7 +998,7 @@ body {
 
 .nav-link {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 0.9375rem;
+  font-size: 1.0625rem; /* Increased from 0.9375rem for better readability */
   font-weight: 500;
   color: var(--sfm-navy);
   text-decoration: none;
@@ -1065,7 +1055,7 @@ body {
    =========================================== */
 
 .footer-link {
-  font-size: 0.9375rem;
+  font-size: 1.0625rem; /* Increased from 0.9375rem for better readability */
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color var(--duration-fast) var(--ease-smooth);
@@ -1077,7 +1067,7 @@ body {
 
 .footer-heading {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 0.875rem;
+  font-size: 1rem; /* Increased from 0.875rem for better readability */
   font-weight: 600;
   color: white;
   text-transform: uppercase;
@@ -1653,7 +1643,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   padding: 0.375rem 0.875rem;
-  font-size: 0.75rem;
+  font-size: 0.875rem; /* Increased from 0.75rem for better readability */
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -2009,7 +1999,7 @@ body {
   background: rgba(188, 152, 51, 0.1);
   border: 1px solid rgba(188, 152, 51, 0.2);
   border-radius: 2rem;
-  font-size: 0.8125rem;
+  font-size: 0.9375rem; /* Increased from 0.8125rem for better readability */
   font-weight: 600;
   color: var(--sfm-gold);
   position: relative;

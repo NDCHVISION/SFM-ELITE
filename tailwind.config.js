@@ -47,12 +47,12 @@ module.exports = {
         'ui': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       fontSize: {
-        '2xs': ['0.625rem', { lineHeight: '1rem' }],
-        'display-sm': ['2rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }],
-        'display-md': ['2.5rem', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
-        'display-lg': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display-xl': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display-2xl': ['4rem', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
+        '2xs': ['0.75rem', { lineHeight: '1rem' }], /* Increased from 0.625rem */
+        'display-sm': ['2.25rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }], /* Increased from 2rem */
+        'display-md': ['2.875rem', { lineHeight: '1.15', letterSpacing: '-0.02em' }], /* Increased from 2.5rem */
+        'display-lg': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }], /* Increased from 3rem */
+        'display-xl': ['4rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }], /* Increased from 3.5rem */
+        'display-2xl': ['4.5rem', { lineHeight: '1.05', letterSpacing: '-0.02em' }], /* Increased from 4rem */
       },
       spacing: {
         '18': '4.5rem',
