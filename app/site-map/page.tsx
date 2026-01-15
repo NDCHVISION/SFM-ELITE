@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 interface PageLink {
   title: string
   href: string
-  description: string
+  description?: string
 }
 
 interface PageCategory {
@@ -331,9 +331,11 @@ export default function SiteMapPage() {
                             <h3 className="text-sfm-navy font-semibold group-hover:text-sfm-gold transition-colors duration-200">
                               {page.title}
                             </h3>
-                            <p className="text-sfm-text-muted text-sm mt-1">
-                              {page.description}
-                            </p>
+                            {page.description && (
+                              <p className="text-sfm-text-muted text-sm mt-1">
+                                {page.description}
+                              </p>
+                            )}
                           </div>
                         </div>
                       </Link>
