@@ -179,7 +179,7 @@ export default function ResearchPage() {
             </div>
             
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1]">
-              Research &amp; <em className="text-sfm-gold italic">Evidence</em>
+              Research & <em className="text-sfm-gold italic">Evidence</em>
             </h1>
             <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-8">
               Every comparison on our Evidence Speaks page is backed by peer-reviewed research. Explore the sources below.
