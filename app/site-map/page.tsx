@@ -154,6 +154,11 @@ const sitePages: PageCategory[] = [
         href: '/locations/washington/vancouver',
         description: '',
       },
+      {
+        title: 'Tri-Cities',
+        href: '/locations/washington/tri-cities',
+        description: '',
+      },
     ],
   },
   {
