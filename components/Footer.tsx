@@ -248,8 +248,8 @@ export default function Footer() {
                   Accessibility
                 </Link>
                 <CookieSettingsButton />
-                <Link href="/sitemap.xml" className="text-white/40 hover:text-white/70 transition-colors duration-300">
-                  Sitemap
+                <Link href="/site-map" className="text-white/40 hover:text-white/70 transition-colors duration-300">
+                  All Pages
                 </Link>
               </div>
             </div>
