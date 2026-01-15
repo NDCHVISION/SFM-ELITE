@@ -232,70 +232,70 @@ export default function WashingtonLocationPage() {
               <div className="lg:col-span-2">
                 <h3 className="font-display text-lg text-sfm-navy dark:text-sfm-navy mb-3">Puget Sound Metro</h3>
                 <div className="grid grid-cols-2 gap-1.5 mb-5">
-                  <Link href="/locations/washington/seattle" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
-                    <MapPin className="w-3 h-3 text-sfm-gold" />
+                  <Link href="/locations/washington/seattle" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-gold flex-shrink-0" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Seattle</span>
                   </Link>
-                  <Link href="/locations/washington/bellevue" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
-                    <MapPin className="w-3 h-3 text-sfm-gold" />
+                  <Link href="/locations/washington/bellevue" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-gold flex-shrink-0" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Bellevue</span>
                   </Link>
-                  <Link href="/locations/washington/kirkland" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
-                    <MapPin className="w-3 h-3 text-sfm-gold" />
+                  <Link href="/locations/washington/kirkland" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-gold flex-shrink-0" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Kirkland</span>
                   </Link>
-                  <Link href="/locations/washington/redmond" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
-                    <MapPin className="w-3 h-3 text-sfm-gold" />
+                  <Link href="/locations/washington/redmond" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-gold flex-shrink-0" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Redmond</span>
                   </Link>
-                  <Link href="/locations/washington/sammamish" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
-                    <MapPin className="w-3 h-3 text-sfm-gold" />
+                  <Link href="/locations/washington/sammamish" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-gold flex-shrink-0" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Sammamish</span>
                   </Link>
-                  <Link href="/locations/washington/mercer-island" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
-                    <MapPin className="w-3 h-3 text-sfm-gold" />
+                  <Link href="/locations/washington/mercer-island" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-gold flex-shrink-0" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Mercer Island</span>
                   </Link>
-                  <Link href="/locations/washington/everett" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
-                    <MapPin className="w-3 h-3 text-sfm-gold" />
+                  <Link href="/locations/washington/everett" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-gold flex-shrink-0" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Everett</span>
                   </Link>
                 </div>
                 
                 <h3 className="font-display text-lg text-sfm-navy dark:text-sfm-navy mb-3">South Sound</h3>
                 <div className="grid grid-cols-2 gap-1.5 mb-5">
-                  <Link href="/locations/washington/tacoma" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
-                    <MapPin className="w-3 h-3 text-sfm-gold" />
+                  <Link href="/locations/washington/tacoma" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-gold flex-shrink-0" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Tacoma</span>
                   </Link>
-                  <Link href="/locations/washington/olympia" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
-                    <MapPin className="w-3 h-3 text-sfm-gold" />
+                  <Link href="/locations/washington/olympia" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-gold flex-shrink-0" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Olympia</span>
                   </Link>
-                  <Link href="/locations/washington/vancouver" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
-                    <MapPin className="w-3 h-3 text-sfm-gold" />
+                  <Link href="/locations/washington/vancouver" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-gold flex-shrink-0" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Vancouver</span>
                   </Link>
-                  <Link href="/locations/washington/spokane" className="flex items-center gap-2 px-3 py-2 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
-                    <MapPin className="w-3 h-3 text-sfm-gold" />
+                  <Link href="/locations/washington/spokane" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-cream dark:bg-sfm-surface rounded-lg hover:bg-sfm-gold/10 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-gold flex-shrink-0" />
                     <span className="text-sm text-sfm-navy group-hover:text-sfm-gold transition-colors">Spokane</span>
                   </Link>
                 </div>
 
                 <h3 className="font-display text-lg text-sfm-navy dark:text-sfm-navy mb-3">Tri-Cities</h3>
                 <div className="grid grid-cols-3 gap-1.5 mb-3">
-                  <div className="flex items-center gap-2 px-3 py-2 bg-sfm-azure/5 dark:bg-sfm-azure/10 rounded-lg border border-sfm-azure/20">
-                    <MapPin className="w-3 h-3 text-sfm-azure" />
-                    <span className="text-sm text-sfm-navy">Richland</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 bg-sfm-azure/5 dark:bg-sfm-azure/10 rounded-lg border border-sfm-azure/20">
-                    <MapPin className="w-3 h-3 text-sfm-azure" />
-                    <span className="text-sm text-sfm-navy">Kennewick</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-3 py-2 bg-sfm-azure/5 dark:bg-sfm-azure/10 rounded-lg border border-sfm-azure/20">
-                    <MapPin className="w-3 h-3 text-sfm-azure" />
-                    <span className="text-sm text-sfm-navy">Pasco</span>
-                  </div>
+                  <Link href="/locations/washington/tri-cities" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-azure/5 dark:bg-sfm-azure/10 rounded-lg border border-sfm-azure/20 hover:bg-sfm-azure/15 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-azure flex-shrink-0" />
+                    <span className="text-sm text-sfm-navy group-hover:text-sfm-azure transition-colors">Richland</span>
+                  </Link>
+                  <Link href="/locations/washington/tri-cities" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-azure/5 dark:bg-sfm-azure/10 rounded-lg border border-sfm-azure/20 hover:bg-sfm-azure/15 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-azure flex-shrink-0" />
+                    <span className="text-sm text-sfm-navy group-hover:text-sfm-azure transition-colors">Kennewick</span>
+                  </Link>
+                  <Link href="/locations/washington/tri-cities" className="flex items-center gap-2 px-4 py-2.5 bg-sfm-azure/5 dark:bg-sfm-azure/10 rounded-lg border border-sfm-azure/20 hover:bg-sfm-azure/15 transition-colors group">
+                    <MapPin className="w-3 h-3 text-sfm-azure flex-shrink-0" />
+                    <span className="text-sm text-sfm-navy group-hover:text-sfm-azure transition-colors">Pasco</span>
+                  </Link>
                 </div>
                 <p className="text-xs text-sfm-azure italic mb-5 pl-1">
                   Dr. Nkrumah completed residency training in the Tri-Cities
