@@ -373,8 +373,8 @@ export default function ComparePage() {
                 <span>•</span>
                 <span>HIPAA Compliant</span>
                 <span>•</span>
-                <Link href="/founder#publications" className="text-sfm-gold hover:text-white transition-colors">
-                  View Publications
+                <Link href="/resources/research" className="text-sfm-gold hover:text-white transition-colors">
+                  View Research Sources
                 </Link>
               </div>
             </div>
