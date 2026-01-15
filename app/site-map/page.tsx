@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 interface PageLink {
   title: string
   href: string
-  description: string
+  description?: string
 }
 
 interface PageCategory {
@@ -91,68 +91,52 @@ const sitePages: PageCategory[] = [
     ],
   },
   {
-    category: 'Washington Locations',
-    description: 'Virtual care serving Washington State communities',
+    category: 'Washington State Locations',
+    description: 'Virtual care serving Washington State communities and not limited to the following.',
     pages: [
-      {
-        title: 'Washington State',
-        href: '/locations/washington',
-        description: 'We provide virtual concierge care across Washington State',
-      },
       {
         title: 'Seattle',
         href: '/locations/washington/seattle',
-        description: 'We provide virtual concierge care to Seattle',
       },
       {
         title: 'Bellevue',
         href: '/locations/washington/bellevue',
-        description: 'We provide virtual concierge care to Bellevue',
       },
       {
         title: 'Spokane',
         href: '/locations/washington/spokane',
-        description: 'We provide virtual concierge care to Spokane',
       },
       {
         title: 'Kirkland',
         href: '/locations/washington/kirkland',
-        description: 'We provide virtual concierge care to Kirkland',
       },
       {
         title: 'Redmond',
         href: '/locations/washington/redmond',
-        description: 'We provide virtual concierge care to Redmond',
       },
       {
         title: 'Sammamish',
         href: '/locations/washington/sammamish',
-        description: 'We provide virtual concierge care to Sammamish',
       },
       {
         title: 'Mercer Island',
         href: '/locations/washington/mercer-island',
-        description: 'We provide virtual concierge care to Mercer Island',
       },
       {
         title: 'Tacoma',
         href: '/locations/washington/tacoma',
-        description: 'We provide virtual concierge care to Tacoma',
       },
       {
         title: 'Everett',
         href: '/locations/washington/everett',
-        description: 'We provide virtual concierge care to Everett',
       },
       {
         title: 'Olympia',
         href: '/locations/washington/olympia',
-        description: 'We provide virtual concierge care to Olympia',
       },
       {
         title: 'Vancouver',
         href: '/locations/washington/vancouver',
-        description: 'We provide virtual concierge care to Vancouver, WA',
       },
     ],
   },
@@ -331,9 +315,11 @@ export default function SiteMapPage() {
                             <h3 className="text-sfm-navy font-semibold group-hover:text-sfm-gold transition-colors duration-200">
                               {page.title}
                             </h3>
-                            <p className="text-sfm-text-muted text-sm mt-1">
-                              {page.description}
-                            </p>
+                            {page.description && (
+                              <p className="text-sfm-text-muted text-sm mt-1">
+                                {page.description}
+                              </p>
+                            )}
                           </div>
                         </div>
                       </Link>
