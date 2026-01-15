@@ -91,52 +91,68 @@ const sitePages: PageCategory[] = [
     ],
   },
   {
-    category: 'Washington State Locations',
-    description: 'Virtual care serving Washington State communities and not limited to the following.',
+    category: 'Washington Locations',
+    description: 'We provide virtual concierge care to:',
     pages: [
+      {
+        title: 'Washington State',
+        href: '/locations/washington',
+        description: '',
+      },
       {
         title: 'Seattle',
         href: '/locations/washington/seattle',
+        description: '',
       },
       {
         title: 'Bellevue',
         href: '/locations/washington/bellevue',
+        description: '',
       },
       {
         title: 'Spokane',
         href: '/locations/washington/spokane',
+        description: '',
       },
       {
         title: 'Kirkland',
         href: '/locations/washington/kirkland',
+        description: '',
       },
       {
         title: 'Redmond',
         href: '/locations/washington/redmond',
+        description: '',
       },
       {
         title: 'Sammamish',
         href: '/locations/washington/sammamish',
+        description: '',
       },
       {
         title: 'Mercer Island',
         href: '/locations/washington/mercer-island',
+        description: '',
       },
       {
         title: 'Tacoma',
         href: '/locations/washington/tacoma',
+        description: '',
       },
       {
         title: 'Everett',
         href: '/locations/washington/everett',
+        description: '',
       },
       {
         title: 'Olympia',
         href: '/locations/washington/olympia',
+        description: '',
       },
       {
         title: 'Vancouver',
         href: '/locations/washington/vancouver',
+        description: '',
       },
     ],
   },
