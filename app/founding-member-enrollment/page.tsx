@@ -65,9 +65,7 @@ export default function FoundingMemberEnrollmentPage() {
         
         <div className="w-full max-w-[1200px] mx-auto rounded-lg overflow-hidden shadow-2xl">
           <iframe 
-            frameBorder="0" 
-            className="w-full"
-            height="800" 
+            className="w-full border-0 min-h-[800px]"
             src="https://sankofafamilymedicine.atlas.md/enrollment/index.html?account=h5MEw4d0pIPUxA4CiOGy"
             title="Sankofa Family Medicine Enrollment Form"
           />
