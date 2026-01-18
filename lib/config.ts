@@ -7,7 +7,7 @@
 
 export const EXTERNAL_URLS = {
   // Primary conversion portal - ALL main CTAs should use this
-  atlas: 'https://sankofafamilymedicine.atlas.md/hub/login',
+  atlas: '/founding-member-enrollment',
   
   // DEPRECATED - Use atlas for all CTAs
   // calendly: 'https://calendly.com/nkrumah-ndchvision/15-minute-fit-call',
