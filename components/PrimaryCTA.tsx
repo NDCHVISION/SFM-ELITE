@@ -1,9 +1,10 @@
 'use client'
 
 import { ArrowRight } from 'lucide-react'
+import { EXTERNAL_URLS } from '@/lib/config'
 
-// Centralized Atlas portal URL
-export const ATLAS_PORTAL_URL = 'https://sankofafamilymedicine.atlas.md/enrollment/index.html?account=h5MEw4d0pIPUxA4CiOGy'
+// Centralized Atlas portal URL - imported from config for single source of truth
+export const ATLAS_PORTAL_URL = EXTERNAL_URLS.atlas
 
 interface PrimaryCTAProps {
   variant?: 'default' | 'hero' | 'compact'
