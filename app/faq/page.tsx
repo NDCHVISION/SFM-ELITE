@@ -30,24 +30,57 @@ export default function FAQPage() {
       items: [
         {
           question: 'Do you accept insurance?',
-          answer: 'Sankofa Family Medicine is currently a direct-pay (cash-pay) practice. We do not bill insurance directly. This model allows us to spend more time with patients, avoid insurance restrictions, and provide truly personalized care. We may expand to accept insurance in the future.'
+          answer: (
+            <div className="space-y-3">
+              <p>Sankofa Family Medicine is a direct-pay practice registered as a Direct Primary Care (DPC) practice with the Washington State Office of the Insurance Commissioner pursuant to RCW 48.150. We do not bill insurance companies for primary care membership fees or services.</p>
+              <p>This DPC model allows us to:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Eliminate insurance-driven administrative overhead</li>
+                <li>Spend more time with patients (45-60 minute visits vs. industry standard 15 minutes)</li>
+                <li>Avoid insurance restrictions on care decisions</li>
+                <li>Provide truly personalized care focused on your health rather than billing codes</li>
+              </ul>
+              <p>Our DPC registration qualifies membership fees as HSA-eligible medical expenses as of January 1, 2026, for patients enrolled in HSA-qualified high-deductible health plans (HDHPs).</p>
+            </div>
+          )
         },
         {
           question: 'How do I pay for services?',
           answer: (
             <div className="space-y-3">
-              <p>We accept payment via credit card, debit card, and HSA/FSA cards through our secure, HIPAA-compliant payment system.</p>
-              <p>Membership fees are billed monthly. Individual visits and programs are billed at the time of service.</p>
-              {/* Stripe payment link placeholder - uncomment when ready */}
-              {/* <a href="YOUR_STRIPE_LINK_HERE" className="inline-flex items-center text-sfm-azure hover:text-sfm-navy font-medium">
-                Make a Payment <ArrowRight className="ml-2 w-4 h-4" />
-              </a> */}
+              <p>We accept the following payment methods through our secure, HIPAA-compliant Atlas.md payment platform:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Credit cards (Visa, MasterCard, American Express, Discover, JCB, Diners Club)</li>
+                <li>Debit cards</li>
+                <li>HSA/FSA cards</li>
+                <li>ACH bank transfers (direct from your bank account)</li>
+                <li>Apple Pay and Google Pay (via the Atlas.md patient app)</li>
+                <li>Cash and check (processed manually)</li>
+              </ul>
+              <p>Membership fees are billed monthly on the 1st of each month via automatic recurring payment. You must maintain a valid payment method on file. Failed or declined payments incur a $25 returned payment fee. Individual visits for non-members and optional programs are billed separately at the time of service.</p>
             </div>
           )
         },
         {
           question: 'Can I use my HSA or FSA?',
-          answer: 'Yes! Health Savings Accounts (HSA) and Flexible Spending Accounts (FSA) can be used for membership fees, visits, and programs at Sankofa Family Medicine. These are qualified medical expenses.'
+          answer: (
+            <div className="space-y-3">
+              <p>Yes. As of January 1, 2026, Direct Primary Care (DPC) membership fees are HSA-eligible qualified medical expenses under IRS Section 213(d). Sankofa Family Medicine is registered as a DPC practice with the Washington State Office of the Insurance Commissioner (RCW 48.150), making our membership fees HSA-eligible for patients enrolled in HSA-qualified high-deductible health plans (HDHPs).</p>
+              <p><strong>HSA Eligibility Requirements:</strong></p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>You must be enrolled in an HSA-qualified high-deductible health plan (HDHP)</li>
+                <li>Your HSA administrator must approve DPC membership fees as eligible expenses</li>
+                <li>Verify any monthly or annual DPC contribution limits under your specific plan</li>
+              </ul>
+              <p><strong>FSA Eligibility:</strong></p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Flexible Spending Accounts (FSA) can typically be used for DPC membership fees</li>
+                <li>Eligibility depends on your specific FSA plan rules</li>
+                <li>Confirm with your FSA administrator before enrollment</li>
+              </ul>
+              <p>We accept HSA/FSA cards directly through our Atlas.md payment system. Keep documentation of membership payments for tax purposes.</p>
+            </div>
+          )
         },
         {
           question: 'Can you provide documentation for insurance reimbursement?',
@@ -55,7 +88,17 @@ export default function FAQPage() {
         },
         {
           question: 'What if I need to cancel my membership?',
-          answer: 'Memberships can be cancelled at any time with 30 days notice. There are no cancellation fees. Founding member pricing is locked for the duration of continuous membership.'
+          answer: (
+            <div className="space-y-3">
+              <p><strong>Monthly Memberships:</strong></p>
+              <p>Cancel anytime with 30 days written notice to info@sankofafamilymedicine.com. Cancellation becomes effective at the end of your current billing period. No cancellation fees apply.</p>
+              <p><strong>Annual Memberships:</strong></p>
+              <p>Cancel with 30 days written notice. You will receive a pro-rata refund for unused full months minus a $100 administrative fee. No refund is provided for any month in which services were rendered or available.</p>
+              <p><strong>Founding Member Pricing:</strong></p>
+              <p>Founding member pricing is locked for the duration of continuous membership. If you cancel and re-enroll later, founding member pricing does not apply—you will be charged current standard rates.</p>
+              <p><strong>Important:</strong> Membership fees are non-refundable for any month in which you accessed services or services were available to you, even if you did not use them.</p>
+            </div>
+          )
         },
         {
           question: 'How does concierge medicine compare to traditional insurance co-pays?',
@@ -160,7 +203,20 @@ export default function FAQPage() {
         },
         {
           question: 'Is there a minimum commitment?',
-          answer: 'No. Memberships are month-to-month with no long-term contracts. You can cancel anytime with 30 days notice. We believe you should stay because the care is excellent, not because you are locked in.'
+          answer: (
+            <div className="space-y-3">
+              <p>No. Memberships are month-to-month with no long-term contracts (unless you choose annual prepayment for the 10% discount). You can cancel anytime with 30 days written notice.</p>
+              <p>We believe you should stay because the care is excellent, not because you're locked into a contract. However, please note:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Cancellation requires 30 days written notice</li>
+                <li>Membership fees are billed on the 1st of each month via automatic recurring payment</li>
+                <li>You remain responsible for payment through the end of your notice period</li>
+                <li>No refunds are provided for partial months</li>
+              </ul>
+              <p><strong>Annual Prepayment Option:</strong></p>
+              <p>If you choose to prepay annually to receive a 10% discount, you may still cancel with 30 days notice and receive a pro-rata refund for unused full months minus a $100 administrative fee.</p>
+            </div>
+          )
         },
       ]
     },

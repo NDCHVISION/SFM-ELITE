@@ -101,11 +101,78 @@ const nonMemberPricing = [
 const faqs = [
   {
     q: 'What is Concierge medicine?',
-    a: 'Concierge medicine is a membership-based model where you pay a monthly fee directly to your physician, removing insurance from the primary care relationship. This allows for longer visits, easier access, and care focused on you rather than billing codes.',
+    a: (
+      <div className="space-y-3">
+        <p>Concierge medicine is a membership-based primary care model where you pay a monthly or annual fee directly to your physician for enhanced access and personalized care.</p>
+        <p>Sankofa Family Medicine operates under the <strong>Direct Primary Care (DPC)</strong> model—a specific type of concierge medicine where we <strong>do not bill insurance companies</strong> for any services. This is different from traditional concierge practices that still file insurance claims alongside membership fees.</p>
+        <p>Our DPC approach allows for:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li><strong>Longer visits:</strong> 45-60 minutes vs. traditional 15-minute appointments</li>
+          <li><strong>Same-day or next-day access</strong> when you need care</li>
+          <li><strong>Direct messaging</strong> with your physician (24-48 hour response time)</li>
+          <li><strong>Transparent monthly pricing</strong> with no surprise bills or hidden fees</li>
+          <li><strong>Care focused on your health,</strong> not on insurance billing codes or maximizing visit volume</li>
+        </ul>
+        <p>As of January 1, 2026, qualifying DPC memberships like ours are HSA-eligible for patients with high-deductible health plans.</p>
+      </div>
+    ),
   },
   {
     q: 'Do I still need health insurance with concierge medicine?',
-    a: 'Yes. We currently accept cash and card payments (including HSA/FSA cards), though we anticipate expanding our payment options in the future. Concierge medicine covers primary care only. We strongly advise maintaining health insurance coverage for emergencies, hospitalizations, specialists, and catastrophic events. Many of our members pair concierge medicine with high-deductible health plans.',
+    a: (
+      <div className="space-y-3">
+        <p><strong>Yes. Your membership is NOT health insurance and does NOT replace the need for comprehensive health coverage.</strong></p>
+        <p>Per our membership agreement, Sankofa Family Medicine membership covers ONLY primary care services. Your membership does NOT cover:</p>
+        <p><strong>Emergency & Acute Care:</strong></p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Emergency department visits (call 911 for emergencies—never contact our practice for emergencies)</li>
+          <li>Urgent care visits</li>
+          <li>Ambulance services</li>
+        </ul>
+        <p><strong>Hospital & Surgical Services:</strong></p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Hospital admissions and inpatient care</li>
+          <li>Surgical procedures or invasive procedures of any kind</li>
+          <li>Anesthesia services</li>
+        </ul>
+        <p><strong>Specialty & Diagnostic Services:</strong></p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Specialist consultations (cardiology, gastroenterology, orthopedics, etc.)</li>
+          <li>Advanced diagnostic imaging (MRI, CT scans, ultrasound, X-ray)</li>
+          <li>Laboratory services beyond basic panels (labs billed separately at wholesale pricing)</li>
+          <li>Radiation, chemotherapy, or intensive treatments</li>
+          <li>Physical therapy, occupational therapy, rehabilitation services</li>
+        </ul>
+        <p><strong>Medications & Equipment:</strong></p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Prescription medications (we write prescriptions but medications are purchased separately)</li>
+          <li>Durable medical equipment</li>
+          <li>Medical devices and supplies</li>
+        </ul>
+        <p><strong>Other Excluded Services:</strong></p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Obstetric care and pregnancy management</li>
+          <li>Pediatric care for patients under age 12 (unless approved case-by-case)</li>
+          <li>Psychiatric care beyond basic screening and medication management</li>
+          <li>Chronic pain management requiring ongoing controlled substances</li>
+        </ul>
+        <p><strong>We strongly advise maintaining separate health insurance</strong> (or healthcare cost-sharing plan) to cover emergencies, hospitalizations, specialty care, surgical procedures, and catastrophic medical events.</p>
+        <p><strong>Recommended Pairing: DPC + High-Deductible Health Plan (HDHP)</strong></p>
+        <p>Many of our members use this cost-effective strategy:</p>
+        <ol className="list-decimal pl-5 space-y-1">
+          <li><strong>Sankofa Family Medicine DPC membership</strong> for all primary care needs (paid with HSA funds if enrolled in HDHP)</li>
+          <li><strong>High-deductible health plan (HDHP)</strong> with lower monthly premiums for emergencies, specialists, and hospitalizations</li>
+          <li><strong>Health Savings Account (HSA)</strong> for tax-advantaged medical savings</li>
+        </ol>
+        <p>This approach provides:</p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Comprehensive primary care with exceptional physician access</li>
+          <li>Financial protection for emergencies and catastrophic events</li>
+          <li>Lower monthly insurance premiums compared to traditional low-deductible plans</li>
+          <li>Triple tax advantages through HSA contributions (tax-deductible, tax-free growth, tax-free withdrawals for medical expenses)</li>
+        </ul>
+      </div>
+    ),
   },
   {
     q: 'What if I need a specialist?',
@@ -217,6 +284,45 @@ export default function ServicesPage() {
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <ArrowRight className="w-4 h-4 text-sfm-azure" />
               <span>Cancel Anytime</span>
+            </div>
+          </div>
+
+          {/* Payment Options */}
+          <div className="mt-10 pt-8 border-t border-gray-100">
+            <h3 className="text-center font-display text-xl text-sfm-navy mb-6">Payment Options</h3>
+            <p className="text-center text-sm text-gray-600 mb-6 max-w-2xl mx-auto">
+              We accept all major payment methods through our secure, HIPAA-compliant Atlas.md platform:
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              <div className="bg-gray-50 rounded-xl p-4">
+                <p className="font-semibold text-sfm-navy text-sm mb-1">Credit & Debit Cards</p>
+                <p className="text-xs text-gray-500">Visa, MasterCard, American Express, Discover, JCB, Diners Club</p>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-4">
+                <p className="font-semibold text-sfm-navy text-sm mb-1">Bank Transfers</p>
+                <p className="text-xs text-gray-500">ACH payments directly from your checking or savings account</p>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-4">
+                <p className="font-semibold text-sfm-navy text-sm mb-1">Digital Wallets</p>
+                <p className="text-xs text-gray-500">Apple Pay and Google Pay (via the Atlas.md patient app)</p>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-4">
+                <p className="font-semibold text-sfm-navy text-sm mb-1">Tax-Advantaged Accounts</p>
+                <p className="text-xs text-gray-500">HSA (Health Savings Account) and FSA (Flexible Spending Account) cards</p>
+              </div>
+              <div className="bg-gray-50 rounded-xl p-4">
+                <p className="font-semibold text-sfm-navy text-sm mb-1">Traditional Methods</p>
+                <p className="text-xs text-gray-500">Cash or check (processed manually)</p>
+              </div>
+            </div>
+            <p className="text-center text-xs text-gray-500 mt-6 max-w-2xl mx-auto">
+              Membership fees are billed automatically on the 1st of each month. A $25 fee applies to declined or returned payments.
+            </p>
+            <div className="bg-sfm-cream/50 rounded-xl p-4 mt-6 max-w-2xl mx-auto border border-sfm-border-light">
+              <p className="text-sm text-sfm-navy font-semibold mb-2 text-center">HSA/FSA Eligibility (Effective January 1, 2026)</p>
+              <p className="text-xs text-gray-600 text-center">
+                Direct Primary Care memberships are HSA-eligible under IRS Section 213(d) for patients with HSA-qualified high-deductible health plans. Sankofa Family Medicine is registered as a DPC practice with Washington State (RCW 48.150). Verify eligibility and contribution limits with your HSA/FSA administrator.
+              </p>
             </div>
           </div>
         </div>
@@ -442,27 +548,31 @@ export default function ServicesPage() {
               <ul className="space-y-3 text-sm text-sfm-text-muted">
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
-                  <span>Membership covers physician access, time, and care coordination</span>
+                  <span><strong>This membership is NOT health insurance.</strong> Membership covers only the specific primary care services described. You are strongly encouraged to obtain or maintain separate health insurance for hospitalization, emergency care, specialist visits, surgery, diagnostic imaging, laboratory services, prescription medications, and other services not included.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
-                  <span>Membership does not replace emergency or urgent care services. In emergencies, patients should call 911 or seek local emergency care</span>
+                  <span><strong>Emergency services:</strong> This practice does NOT provide emergency services. For life-threatening conditions (chest pain, difficulty breathing, severe bleeding, stroke symptoms, severe allergic reactions, loss of consciousness, suicidal ideation, or any emergency), immediately call 911 or go to the nearest emergency room. DO NOT contact this practice for emergencies.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
-                  <span>Laboratory testing, imaging, medications, and specialty services are billed separately by third parties unless explicitly stated</span>
+                  <span><strong>Laboratory testing, imaging, medications, and specialty services</strong> are billed separately by third parties. Members receive wholesale laboratory pricing (70-90% savings compared to hospital prices) but pay labs directly.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
-                  <span>Advanced testing and analytics, including genetic and pharmacogenomic panels, may be offered when clinically appropriate and may involve additional cost through external partners</span>
+                  <span><strong>Advanced testing and analytics</strong> (genetic testing, pharmacogenomic panels, cardiometabolic programs) are offered when clinically appropriate and involve additional cost through external partners or optional paid programs.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
-                  <span>Memberships are month-to-month. No long-term contracts. No insurance billing</span>
+                  <span><strong>Memberships are month-to-month</strong> with 30 days written notice required for cancellation. No long-term contracts. We do not bill insurance companies for membership fees. Sankofa Family Medicine operates under the Direct Primary Care (DPC) model and is registered with Washington State (RCW 48.150).</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
-                  <span>Services are provided within a concierge care model and tailored during onboarding based on clinical appropriateness, capacity, and patient needs</span>
+                  <span><strong>Geographic limitation:</strong> Services are provided ONLY to patients physically located in Washington State during telehealth encounters. Providing false location information is grounds for immediate termination.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
+                  <span><strong>Controlled substances:</strong> The Practice has sole discretion regarding controlled substance prescribing. Controlled substances are generally NOT prescribed via telehealth for chronic pain management. Violation of controlled substance policy is grounds for immediate termination without refund.</span>
                 </li>
               </ul>
             </div>
