@@ -120,7 +120,7 @@ export default function CareJourney() {
                   {step.hasCTA && (
                     <div className="ml-10 mt-4">
                       <a 
-                        href="https://sankofafamilymedicine.atlas.md/hub/login" 
+                        href="/founding-member-enrollment" 
                         className="btn-primary inline-flex items-center"
                       >
                         Founding Member Enrollment Now Open
