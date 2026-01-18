@@ -3,7 +3,7 @@
 import { ArrowRight } from 'lucide-react'
 
 // Centralized Atlas portal URL
-export const ATLAS_PORTAL_URL = '/founding-member-enrollment'
+export const ATLAS_PORTAL_URL = 'https://sankofafamilymedicine.atlas.md/enrollment/index.html?account=h5MEw4d0pIPUxA4CiOGy'
 
 interface PrimaryCTAProps {
   variant?: 'default' | 'hero' | 'compact'
