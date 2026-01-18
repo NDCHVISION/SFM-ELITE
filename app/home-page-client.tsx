@@ -89,7 +89,7 @@ export default function HomePage() {
                     {[
                       'Your story travels with you. Every visit builds on your history and context.',
                       'Direct physician access. Message your doctor directly with no call centers or gatekeepers.',
-                      'Transparent memberships from $225 per month. Clear, predictable pricing for personalized care.',
+                      'Transparent memberships from $225 per month. Multiple payment options including HSA/FSA. Clear, predictable pricing for personalized care.',
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <div className="w-1.5 h-1.5 rounded-full bg-sfm-gold mt-2.5 flex-shrink-0" />
@@ -350,7 +350,7 @@ export default function HomePage() {
                       'Same or next business day virtual access for urgent concerns whenever possible',
                       'A limited panel of approximately 200 adults to protect time and access',
                       'The same physician every time, not a rotating team',
-                      'Clear monthly pricing with no visit fees or unexpected bills',
+                      'Clear monthly pricing with multiple payment options accepted (credit, debit, HSA/FSA, ACH, Apple Pay, Google Pay). No visit fees or unexpected bills.',
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-white/80">
                         <CheckCircle2 className="w-5 h-5 text-sfm-gold flex-shrink-0 mt-0.5" />

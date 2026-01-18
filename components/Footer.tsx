@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Linkedin, Facebook, Instagram, Phone, Mail, MapPin, Clock, Shield } from 'lucide-react'
+import { Linkedin, Facebook, Instagram, Phone, Mail, MapPin, Clock, Shield, Heart } from 'lucide-react'
 import { CookieSettingsButton } from './CookieConsent'
 
 export default function Footer() {
@@ -223,6 +223,10 @@ export default function Footer() {
                 <div className="flex items-center gap-2">
                   <Shield className="w-4 h-4 text-sfm-gold/60" />
                   <span>HIPAA Compliant</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Heart className="w-4 h-4 text-sfm-gold/60" />
+                  <span>Direct Primary Care Model</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-sfm-gold/60" />
