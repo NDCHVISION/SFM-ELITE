@@ -343,7 +343,7 @@ export default function FAQPage() {
                       </button>
                       <div 
                         id={`faq-answer-${itemId}`}
-                        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96' : 'max-h-0'}`}
+                        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[1000px]' : 'max-h-0'}`}
                         role="region"
                         aria-labelledby={`faq-question-${itemId}`}
                       >
