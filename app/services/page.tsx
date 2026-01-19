@@ -103,8 +103,8 @@ const faqs = [
     q: 'What is Concierge DPC?',
     a: (
       <div className="space-y-3">
-        <p>Concierge DPC (Direct Primary Care) is a membership-based primary care model where you pay a monthly or annual fee directly to your physician for enhanced access and personalized care—with no insurance billing.</p>
-        <p>Sankofa Family Medicine operates under the <strong>Direct Primary Care (DPC)</strong> model—a specific type of concierge medicine where we <strong>do not bill insurance companies</strong> for any services. This is different from traditional concierge practices that still file insurance claims alongside membership fees.</p>
+        <p>Concierge DPC (Direct Primary Care) is a membership-based primary care model where you pay a monthly or annual fee directly to your physician for enhanced access and personalized care: no insurance billing.</p>
+        <p>Sankofa Family Medicine operates under the <strong>Direct Primary Care (DPC)</strong> model: a specific type of concierge medicine where we <strong>do not bill insurance companies</strong> for any services. This is different from traditional concierge practices that still file insurance claims alongside membership fees.</p>
         <p>Our DPC approach allows for:</p>
         <ul className="list-disc pl-5 space-y-1">
           <li><strong>Longer visits:</strong> 45-60 minutes vs. traditional 15-minute appointments</li>
