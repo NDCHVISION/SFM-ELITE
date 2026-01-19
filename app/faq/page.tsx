@@ -95,7 +95,7 @@ export default function FAQPage() {
               <p><strong>Annual Memberships:</strong></p>
               <p>Cancel with 30 days written notice. You will receive a pro-rata refund for unused full months minus a $100 administrative fee. No refund is provided for any month in which services were rendered or available.</p>
               <p><strong>Founding Member Pricing:</strong></p>
-              <p>Founding member pricing is locked for the duration of continuous membership. If you cancel and re-enroll later, founding member pricing does not apply—you will be charged current standard rates.</p>
+              <p>Founding member pricing is locked for the duration of continuous membership. If you cancel and re-enroll later, founding member pricing does not apply; you will be charged current standard rates.</p>
               <p><strong>Important:</strong> Membership fees are non-refundable for any month in which you accessed services or services were available to you, even if you did not use them.</p>
             </div>
           )
