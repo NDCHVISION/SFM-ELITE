@@ -476,11 +476,8 @@ export default function HomePage() {
             <h2 className="text-display-lg text-sfm-navy mb-6">
               Concierge DPC Memberships Built for You
             </h2>
-            <p className="text-lg text-sfm-text-muted max-w-2xl mx-auto mb-4">
-              All plans include generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing. Every membership operates under the Direct Primary Care (DPC) model—no insurance billing.
-            </p>
             <p className="text-lg text-sfm-text-muted max-w-2xl mx-auto">
-              Every membership includes generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing. All memberships operate under the Direct Primary Care (DPC) model—no insurance billing.
+              Every membership includes generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing. All memberships operate under the Direct Primary Care (DPC) model: no insurance billing.
             </p>
           </ScrollReveal>
 
