@@ -101,8 +101,8 @@ export default function FAQPage() {
           )
         },
         {
-          question: 'How does concierge medicine compare to traditional insurance co-pays?',
-          answer: 'While insurance co-pays may seem lower per visit, most patients with chronic conditions or those who value preventive care find concierge medicine more economical. With concierge medicine, you get generous virtual visit access, no surprise bills, longer appointments, and direct access to your physician. Many members save money overall, especially when factoring in wholesale lab pricing (70-90% savings) and avoiding unnecessary specialist referrals.'
+          question: 'How does concierge DPC compare to traditional insurance co-pays?',
+          answer: 'While insurance co-pays may seem lower per visit, most patients with chronic conditions or those who value preventive care find concierge DPC more economical. With concierge DPC, you get generous virtual visit access, no surprise bills, longer appointments, and direct access to your physician. Many members save money overall, especially when factoring in wholesale lab pricing (70-90% savings) and avoiding unnecessary specialist referrals.'
         },
       ]
     },
