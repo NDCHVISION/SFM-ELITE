@@ -125,7 +125,7 @@ const faqs = [
         <p>Per our membership agreement, Sankofa Family Medicine membership covers ONLY primary care services. Your membership does NOT cover:</p>
         <p><strong>Emergency & Acute Care:</strong></p>
         <ul className="list-disc pl-5 space-y-1">
-          <li>Emergency department visits (call 911 for emergencies—never contact our practice for emergencies)</li>
+          <li>Emergency department visits (call 911 for emergencies; never contact our practice for emergencies)</li>
           <li>Urgent care visits</li>
           <li>Ambulance services</li>
         </ul>
