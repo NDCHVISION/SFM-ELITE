@@ -54,7 +54,7 @@ export default function HomePage() {
                 <div className="opacity-0 animate-fade-in animation-delay-100 mb-10">
                   <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full float-elite">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                    <span className="text-white/70 text-sm font-medium">Virtual Concierge Primary Care</span>
+                    <span className="text-white/70 text-sm font-medium">Virtual Concierge DPC</span>
                     <span className="w-px h-4 bg-white/20" />
                     <span className="text-white/50 text-sm">Washington State</span>
                   </div>
@@ -306,10 +306,10 @@ export default function HomePage() {
               The Difference
             </span>
             <h2 className="text-display-lg text-sfm-navy mb-6">
-              Why Concierge Medicine Works
+              Why Concierge DPC Works
             </h2>
             <p className="text-lg text-sfm-text-muted">
-              Insurance-driven systems are built for volume, not memory. Concierge medicine restores time, continuity, and transparency.
+              Insurance-driven systems are built for volume, not memory. Concierge DPC restores time, continuity, and transparency.
             </p>
           </ScrollReveal>
 
@@ -448,11 +448,11 @@ export default function HomePage() {
                 }`}>
                   {yesCount >= 3 ? (
                     <p className="text-emerald-800 text-sm">
-                      <strong>Concierge medicine may be a great fit.</strong> You value the things that concierge medicine excels at.
+                      <strong>Concierge DPC may be a great fit.</strong> You value the things that concierge DPC excels at.
                     </p>
                   ) : yesCount > 0 ? (
                     <p className="text-gray-700 text-sm">
-                      Check more items to see if concierge medicine aligns with your healthcare priorities.
+                      Check more items to see if concierge DPC aligns with your healthcare priorities.
                     </p>
                   ) : (
                     <p className="text-gray-500 text-sm">
@@ -474,13 +474,13 @@ export default function HomePage() {
               Membership Plans
             </span>
             <h2 className="text-display-lg text-sfm-navy mb-6">
-              Concierge Memberships Built for You
+              Concierge DPC Memberships Built for You
             </h2>
             <p className="text-lg text-sfm-text-muted max-w-2xl mx-auto mb-4">
-              All plans include generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing.
+              All plans include generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing. Every membership operates under the Direct Primary Care (DPC) model—no insurance billing.
             </p>
             <p className="text-lg text-sfm-text-muted max-w-2xl mx-auto">
-              Every membership includes generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing.
+              Every membership includes generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing. All memberships operate under the Direct Primary Care (DPC) model—no insurance billing.
             </p>
           </ScrollReveal>
 
@@ -489,7 +489,7 @@ export default function HomePage() {
               {
                 name: 'Continuity Concierge',
                 priceRange: '$225–$275',
-                description: 'Essential virtual concierge primary care designed to restore the continuity traditional medicine has lost.',
+                description: 'Essential virtual concierge DPC designed to restore the continuity traditional medicine has lost.',
                 featured: false,
               },
               {

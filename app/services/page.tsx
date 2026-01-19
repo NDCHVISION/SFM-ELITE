@@ -21,11 +21,11 @@ const tiers = [
   {
     id: 'continuity',
     name: 'Continuity Concierge',
-    tagline: 'Concierge primary care with continuity and direct physician access',
+    tagline: 'Concierge DPC with continuity and direct physician access',
     price: { monthly: 225, annual: 203 },
     priceRange: '$225–$275/month',
     priceRangeAnnual: '$203–$248/month',
-    description: 'High-touch virtual primary care designed for patients who value reliable access, unrushed visits, and a long-term relationship with their physician. This membership provides physician-led concierge primary care delivered virtually, including ongoing care coordination, preventive and longitudinal care planning, chronic condition and medication management, and access to wholesale laboratory pricing when clinically appropriate.',
+    description: 'High-touch virtual Direct Primary Care (DPC) designed for patients who value reliable access, unrushed visits, and a long-term relationship with their physician. This membership provides physician-led concierge DPC delivered virtually, including ongoing care coordination, preventive and longitudinal care planning, chronic condition and medication management, and access to wholesale laboratory pricing when clinically appropriate.',
     features: [
       { text: 'Virtual visits with physician-led primary care', included: true },
       { text: 'Same-day or next-day appointments when available', included: true },
@@ -45,11 +45,11 @@ const tiers = [
   {
     id: 'precision',
     name: 'Precision Concierge',
-    tagline: 'Concierge medicine with advanced interpretation and personalized planning',
+    tagline: 'Concierge DPC with advanced interpretation and personalized planning',
     price: { monthly: 325, annual: 293 },
     priceRange: '$325–$375/month',
     priceRangeAnnual: '$293–$338/month',
-    description: 'Data-informed primary care for patients seeking deeper insight, proactive risk assessment, and individualized medical decision-making. This membership includes everything in Continuity Concierge, with additional time and focus dedicated to advanced laboratory review, cardiometabolic risk assessment, periodic health reviews, and preventive strategy planning aligned with current clinical guidelines. Genetic and pharmacogenomic interpretation, when clinically appropriate, is provided through integration with precision health partners and may involve separate third-party testing costs. Limited after-hours messaging is available for urgent concerns.',
+    description: 'Data-informed Direct Primary Care (DPC) for patients seeking deeper insight, proactive risk assessment, and individualized medical decision-making. This membership includes everything in Continuity Concierge, with additional time and focus dedicated to advanced laboratory review, cardiometabolic risk assessment, periodic health reviews, and preventive strategy planning aligned with current clinical guidelines. Genetic and pharmacogenomic interpretation, when clinically appropriate, is provided through integration with precision health partners and may involve separate third-party testing costs. Limited after-hours messaging is available for urgent concerns.',
     features: [
       { text: 'Everything in Continuity Concierge', included: true, highlight: true },
       { text: 'Advanced laboratory review and interpretation', included: true },
@@ -69,11 +69,11 @@ const tiers = [
   {
     id: 'legacy',
     name: 'Executive Concierge',
-    tagline: 'Executive-level concierge medicine with comprehensive coordination and oversight',
+    tagline: 'Executive-level concierge DPC with comprehensive coordination and oversight',
     price: { monthly: 650, annual: 585 },
     priceRange: '$650–$725/month',
     priceRangeAnnual: '$585–$653/month',
-    description: 'Physician-directed care coordination for executives, founders, and families who require discretion, advocacy, and longitudinal oversight across healthcare systems. This membership includes everything in Precision Concierge, with expanded access for defined urgent needs, active coordination with specialists and external providers, review and alignment of outside medical recommendations, executive health planning, family care coordination, and concierge-level responsiveness within clearly defined boundaries.',
+    description: 'Physician-directed Direct Primary Care (DPC) coordination for executives, founders, and families who require discretion, advocacy, and longitudinal oversight across healthcare systems. This membership includes everything in Precision Concierge, with expanded access for defined urgent needs, active coordination with specialists and external providers, review and alignment of outside medical recommendations, executive health planning, family care coordination, and concierge-level responsiveness within clearly defined boundaries.',
     features: [
       { text: 'Everything in Precision Concierge', included: true, highlight: true },
       { text: 'Expanded access for defined urgent needs', included: true },
@@ -100,10 +100,10 @@ const nonMemberPricing = [
 
 const faqs = [
   {
-    q: 'What is Concierge medicine?',
+    q: 'What is Concierge DPC?',
     a: (
       <div className="space-y-3">
-        <p>Concierge medicine is a membership-based primary care model where you pay a monthly or annual fee directly to your physician for enhanced access and personalized care.</p>
+        <p>Concierge DPC (Direct Primary Care) is a membership-based primary care model where you pay a monthly or annual fee directly to your physician for enhanced access and personalized care—with no insurance billing.</p>
         <p>Sankofa Family Medicine operates under the <strong>Direct Primary Care (DPC)</strong> model—a specific type of concierge medicine where we <strong>do not bill insurance companies</strong> for any services. This is different from traditional concierge practices that still file insurance claims alongside membership fees.</p>
         <p>Our DPC approach allows for:</p>
         <ul className="list-disc pl-5 space-y-1">
@@ -118,7 +118,7 @@ const faqs = [
     ),
   },
   {
-    q: 'Do I still need health insurance with concierge medicine?',
+    q: 'Do I still need health insurance with concierge DPC?',
     a: (
       <div className="space-y-3">
         <p><strong>Yes. Your membership is NOT health insurance and does NOT replace the need for comprehensive health coverage.</strong></p>
@@ -625,7 +625,7 @@ export default function ServicesPage() {
         <div className="relative max-w-5xl mx-auto px-6">
           <div className="text-center mb-10">
             <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase font-medium mb-2">The Difference</p>
-            <h2 className="font-display text-3xl text-white">Why Members Choose Concierge</h2>
+            <h2 className="font-display text-3xl text-white">Why Members Choose Concierge DPC</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
