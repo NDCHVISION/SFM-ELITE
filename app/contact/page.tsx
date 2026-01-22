@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Mail, Phone, MapPin, Send, ArrowRight, Loader2, Clock, Shield, Heart, Calendar } from 'lucide-react'
+import { EXTERNAL_URLS } from '@/lib/config'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -90,7 +91,7 @@ export default function ContactPage() {
           
           {/* Primary CTA - Atlas Portal */}
           <a
-            href="https://sankofafamilymedicine.atlas.md/enrollment/index.html?account=h5MEw4d0pIPUxA4CiOGy"
+            href={EXTERNAL_URLS.atlas}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-sfm-gold to-sfm-gold-light text-sfm-navy font-bold rounded-xl shadow-lg shadow-sfm-gold/25 hover:shadow-xl hover:shadow-sfm-gold/40 hover:scale-[1.02] transition-all duration-300 group"
@@ -181,7 +182,7 @@ export default function ContactPage() {
                     A brief conversation to ensure Sankofa Family Medicine is the right fit for your health journey.
                   </p>
                   <a 
-                    href="https://sankofafamilymedicine.atlas.md/enrollment/index.html?account=h5MEw4d0pIPUxA4CiOGy"
+                    href={EXTERNAL_URLS.atlas}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sfm-gold font-semibold group"
@@ -218,7 +219,7 @@ export default function ContactPage() {
                     <div className="pt-6 border-t border-sfm-cream w-full">
                       <p className="text-sfm-text-muted text-sm mb-4">Ready to take the next step?</p>
                       <a 
-                        href="https://sankofafamilymedicine.atlas.md/enrollment/index.html?account=h5MEw4d0pIPUxA4CiOGy"
+                        href={EXTERNAL_URLS.atlas}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-sfm-azure font-medium hover:text-sfm-gold transition-colors"
