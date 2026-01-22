@@ -235,7 +235,7 @@ const SC_HOSPITALS: Record<string, Array<{ name: string; designation?: string; a
 // Emergency Banner (Sticky)
 function EmergencyBanner() {
   return (
-    <div className="bg-red-600 text-white py-3 px-4 sticky top-[64px] lg:top-[108px] z-40 shadow-lg">
+    <div className="bg-red-600 text-white py-4 px-4 sticky top-[64px] lg:top-[108px] z-40 shadow-lg">
       <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-4 text-sm md:text-base">
         <span className="font-bold flex items-center gap-2">
           <AlertTriangle className="w-5 h-5" />
