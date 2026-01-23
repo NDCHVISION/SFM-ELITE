@@ -482,6 +482,13 @@ export default function ServicesPage() {
                     <p className="text-sfm-text-muted text-sm mt-2">
                       Founding Member Rate
                     </p>
+                    <p className="text-sfm-gold text-sm mt-2">
+                      Save 10% when you prepay annually — {
+                        tier.id === 'continuity' ? '$2,430–$2,970/year' :
+                        tier.id === 'precision' ? '$3,510–$4,050/year' :
+                        '$7,020–$7,830/year'
+                      }
+                    </p>
                     {billingCycle === 'annual' && (
                       <p className="text-sfm-gold text-sm mt-2 font-medium">
                         Save 10% with annual billing
