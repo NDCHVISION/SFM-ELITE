@@ -79,7 +79,7 @@ const tiers = [
     ],
     accessNotes: 'Clinical communication via secure patient portal during business hours; After-hours messaging, urgent consultations, and on-call access are not included; Services during standard business hours only',
     icon: Heart,
-    color: 'sfm-azure',
+    iconColorClass: 'text-sfm-azure',
   },
   {
     name: 'Precision Concierge',
@@ -98,7 +98,7 @@ const tiers = [
     ],
     accessNotes: 'Includes Continuity access boundaries; Limited after-hours messaging for clinical clarification (not urgent care); Genetic testing and advanced labs billed separately',
     icon: Stethoscope,
-    color: 'sfm-gold',
+    iconColorClass: 'text-sfm-gold',
   },
   {
     name: 'Executive Concierge',
@@ -117,7 +117,7 @@ const tiers = [
     ],
     accessNotes: 'After-hours availability subject to physician discretion; Not a substitute for emergency services; "Executive Concierge does not provide unrestricted or continuous physician availability; access is routed through established triage and care coordination workflows, and the Practice may decline requests that fall outside the scope of primary care or are not clinically appropriate."',
     icon: Users,
-    color: 'sfm-navy',
+    iconColorClass: 'text-sfm-gold',
     highlight: true,
   },
 ]
@@ -223,7 +223,7 @@ export default function MembershipTermsPage() {
                             <tier.icon className={`w-7 h-7 ${
                               tier.highlight 
                                 ? 'text-sfm-gold' 
-                                : `text-${tier.color}`
+                                : tier.iconColorClass
                             }`} />
                           </div>
                           <div className="flex-1">
