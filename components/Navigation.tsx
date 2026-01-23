@@ -175,11 +175,11 @@ export default function Navigation() {
                 className="h-11 w-auto sm:h-12 transition-all duration-500 group-hover:scale-105"
                 unoptimized
               />
-              <div className="hidden sm:flex flex-col ml-3.5">
-                <span className="font-display text-lg text-sfm-navy dark:text-sfm-text leading-tight tracking-tight group-hover:text-sfm-azure transition-colors duration-300">
+              <div className="sfm-header-wordmark hidden sm:flex flex-col ml-3.5 leading-tight">
+                <span className="sfm-wordmark-line-1 font-display text-lg text-sfm-navy dark:text-sfm-text tracking-tight group-hover:text-sfm-azure transition-colors duration-300 whitespace-nowrap">
                   Sankofa Family Medicine<sup className="text-[10px]">™</sup>
                 </span>
-                <span className="text-[10px] text-sfm-gold font-semibold tracking-wider uppercase flex items-center gap-1">
+                <span className="sfm-wordmark-line-2 text-[10px] text-sfm-gold font-semibold tracking-wider uppercase whitespace-nowrap">
                   Medicine That Remembers
                 </span>
               </div>
@@ -312,9 +312,9 @@ export default function Navigation() {
                 className="h-11 w-auto"
                 unoptimized
               />
-              <div>
-                <span className="font-display text-lg text-sfm-navy dark:text-sfm-text block leading-tight">Sankofa<sup className="text-[8px]">™</sup></span>
-                <span className="text-[10px] text-sfm-gold font-semibold uppercase tracking-wide">
+              <div className="sfm-header-wordmark flex flex-col leading-tight">
+                <span className="sfm-wordmark-line-1 font-display text-lg text-sfm-navy dark:text-sfm-text whitespace-nowrap">Sankofa<sup className="text-[8px]">™</sup></span>
+                <span className="sfm-wordmark-line-2 text-[10px] text-sfm-gold font-semibold uppercase tracking-wide whitespace-nowrap">
                   Medicine That Remembers
                 </span>
               </div>
