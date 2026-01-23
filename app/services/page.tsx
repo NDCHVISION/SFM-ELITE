@@ -486,7 +486,8 @@ export default function ServicesPage() {
                       Save 10% when you prepay annually — {
                         tier.id === 'continuity' ? '$2,430–$2,970/year' :
                         tier.id === 'precision' ? '$3,510–$4,050/year' :
-                        '$7,020–$7,830/year'
+                        tier.id === 'legacy' ? '$7,020–$7,830/year' :
+                        ''
                       }
                     </p>
                     {billingCycle === 'annual' && (
