@@ -21,21 +21,22 @@ const tiers = [
   {
     id: 'continuity',
     name: 'Continuity Concierge',
-    tagline: 'Concierge DPC with continuity and direct physician access',
+    tagline: 'Concierge Primary Care delivered under a Direct Primary Care (DPC) model',
     price: { monthly: 225, annual: 203 },
     priceRange: '$225–$275/month',
     priceRangeAnnual: '$203–$248/month',
-    description: 'High-touch virtual Direct Primary Care (DPC) designed for patients who value reliable access, unrushed visits, and a long-term relationship with their physician. This membership provides physician-led concierge DPC delivered virtually, including ongoing care coordination, preventive and longitudinal care planning, chronic condition and medication management, and access to wholesale laboratory pricing when clinically appropriate.',
+    description: 'High-touch virtual Direct Primary Care (DPC) designed for patients who value reliable access, unrushed visits, and a long-term relationship with their physician. Care is delivered through a Concierge Primary Care experience under a Direct Primary Care (DPC) model, focused on continuity, longitudinal planning, and physician-directed coordination. Services are provided during standard business hours only and are subject to clinical appropriateness and physician judgment.',
     features: [
-      { text: 'Virtual visits with physician-led primary care', included: true },
+      { text: 'Physician-led virtual primary care visits', included: true },
       { text: 'Same-day or next-day appointments when available', included: true },
-      { text: 'Direct secure messaging with Dr. Nkrumah', included: true },
+      { text: 'Secure, non-urgent messaging with the physician', included: true },
       { text: 'Initial consultation (45 minutes)', included: true },
-      { text: 'Wholesale laboratory pricing when clinically appropriate', included: true },
       { text: 'Chronic condition management', included: true },
       { text: 'Medication management', included: true },
-      { text: 'Ongoing care coordination', included: true },
       { text: 'Preventive and longitudinal care planning', included: true },
+      { text: 'Ongoing care coordination', included: true },
+      { text: 'Access to wholesale laboratory pricing when clinically appropriate', included: true },
+      { text: 'Clinical communication occurs via the secure patient portal during business hours; after-hours messaging, urgent consultations, and on-call access are not included.', included: true, highlight: true },
       { text: 'Advanced laboratory review and interpretation', included: false },
       { text: 'Genetic and pharmacogenomic interpretation', included: false },
     ],
@@ -45,21 +46,22 @@ const tiers = [
   {
     id: 'precision',
     name: 'Precision Concierge',
-    tagline: 'Concierge DPC with advanced interpretation and personalized planning',
+    tagline: 'Concierge Primary Care delivered under a Direct Primary Care (DPC) model',
     price: { monthly: 325, annual: 293 },
     priceRange: '$325–$375/month',
     priceRangeAnnual: '$293–$338/month',
-    description: 'Data-informed Direct Primary Care (DPC) for patients seeking deeper insight, proactive risk assessment, and individualized medical decision-making. This membership includes everything in Continuity Concierge, with additional time and focus dedicated to advanced laboratory review, cardiometabolic risk assessment, periodic health reviews, and preventive strategy planning aligned with current clinical guidelines. Genetic and pharmacogenomic interpretation, when clinically appropriate, is provided through integration with precision health partners and may involve separate third-party testing costs. Limited after-hours messaging is available for urgent concerns.',
+    description: 'Data-informed Direct Primary Care (DPC) for patients seeking deeper clinical insight, proactive risk assessment, and individualized planning. This tier builds upon Continuity Concierge with additional physician time and analytic review focused on interpretation, risk stratification, and personalized preventive strategy, delivered as Concierge Primary Care under a Direct Primary Care (DPC) model.',
     features: [
-      { text: 'Everything in Continuity Concierge', included: true, highlight: true },
+      { text: 'Everything included in Continuity Concierge', included: true, highlight: true },
       { text: 'Advanced laboratory review and interpretation', included: true },
       { text: 'Cardiometabolic risk assessment', included: true },
       { text: 'Periodic health reviews', included: true },
       { text: 'Preventive strategy planning aligned with clinical guidelines', included: true },
-      { text: 'Genetic and pharmacogenomic interpretation through precision health partners (separate third-party costs may apply)', included: true },
-      { text: 'Limited after-hours messaging for urgent concerns', included: true },
-      { text: 'Extended visit times (60 minutes)', included: true },
-      { text: 'Priority scheduling', included: true },
+      { text: 'Genetic and pharmacogenomic interpretation when clinically appropriate (third-party testing costs may apply)', included: true },
+      { text: 'Extended visit times (up to 60 minutes)', included: true },
+      { text: 'Priority scheduling when available', included: true },
+      { text: 'Limited after-hours secure messaging for time-sensitive, non-emergent concerns (typical response by the next business day; response times may vary)', included: true },
+      { text: 'Genetic and pharmacogenomic interpretation is consultative and supports shared decision-making; it does not replace specialist genetics consultation when indicated.', included: true, highlight: true },
       { text: 'Expanded access for defined urgent needs', included: false },
     ],
     cta: 'Select This Plan',
@@ -69,20 +71,21 @@ const tiers = [
   {
     id: 'legacy',
     name: 'Executive Concierge',
-    tagline: 'Executive-level concierge DPC with comprehensive coordination and oversight',
+    tagline: 'Concierge Primary Care delivered under a Direct Primary Care (DPC) model',
     price: { monthly: 650, annual: 585 },
     priceRange: '$650–$725/month',
     priceRangeAnnual: '$585–$653/month',
-    description: 'Physician-directed Direct Primary Care (DPC) coordination for executives, founders, and families who require discretion, advocacy, and longitudinal oversight across healthcare systems. This membership includes everything in Precision Concierge, with expanded access for defined urgent needs, active coordination with specialists and external providers, review and alignment of outside medical recommendations, executive health planning, family care coordination, and concierge-level responsiveness within clearly defined boundaries.',
+    description: 'Physician-directed Concierge Primary Care delivered under a Direct Primary Care (DPC) model for executives, founders, and families requiring discretion, advocacy, and longitudinal oversight across healthcare systems. This tier emphasizes coordination, interpretation, and strategic health planning while maintaining clear boundaries around access, scope of care, and clinical appropriateness.',
     features: [
-      { text: 'Everything in Precision Concierge', included: true, highlight: true },
-      { text: 'Expanded access for defined urgent needs', included: true },
+      { text: 'Everything included in Precision Concierge', included: true, highlight: true },
+      { text: 'Expanded access pathways for defined urgent needs, subject to clinical appropriateness and availability', included: true },
       { text: 'Active coordination with specialists and external providers', included: true },
       { text: 'Review and alignment of outside medical recommendations', included: true },
       { text: 'Executive health planning', included: true },
       { text: 'Family care coordination', included: true },
-      { text: 'Concierge-level responsiveness within defined boundaries', included: true },
+      { text: 'Concierge-level responsiveness within clearly defined boundaries', included: true },
       { text: 'Physician confirmation required for enrollment', included: true },
+      { text: 'Executive Concierge does not provide unrestricted or continuous physician availability; access is routed through established triage and care coordination workflows, and the Practice may decline requests that fall outside the scope of primary care or are not clinically appropriate.', included: true, highlight: true },
     ],
     cta: 'Select This Plan',
     popular: false,
@@ -100,10 +103,10 @@ const nonMemberPricing = [
 
 const faqs = [
   {
-    q: 'What is Concierge DPC?',
+    q: 'What is Concierge Primary Care under a Direct Primary Care (DPC) model?',
     a: (
       <div className="space-y-3">
-        <p>Concierge DPC (Direct Primary Care) is a membership-based primary care model where you pay a monthly or annual fee directly to your physician for enhanced access and personalized care: no insurance billing.</p>
+        <p>Concierge Primary Care delivered under a Direct Primary Care (DPC) model is a membership-based approach where you pay a monthly or annual fee directly to your physician for enhanced access and personalized care—no insurance billing for primary care services.</p>
         <p>Sankofa Family Medicine operates under the <strong>Direct Primary Care (DPC)</strong> model: a specific type of concierge medicine where we <strong>do not bill insurance companies</strong> for any services. This is different from traditional concierge practices that still file insurance claims alongside membership fees.</p>
         <p>Our DPC approach allows for:</p>
         <ul className="list-disc pl-5 space-y-1">
@@ -118,7 +121,7 @@ const faqs = [
     ),
   },
   {
-    q: 'Do I still need health insurance with concierge DPC?',
+    q: 'Do I still need health insurance with Concierge Primary Care under a DPC model?',
     a: (
       <div className="space-y-3">
         <p><strong>Yes. Your membership is NOT health insurance and does NOT replace the need for comprehensive health coverage.</strong></p>
@@ -564,7 +567,7 @@ export default function ServicesPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
-                  <span><strong>Memberships are month-to-month</strong> with 30 days written notice required for cancellation. No long-term contracts. We do not bill insurance companies for membership fees. Sankofa Family Medicine operates under the Direct Primary Care (DPC) model and is registered with Washington State (RCW 48.150).</span>
+                  <span><strong>Memberships are month-to-month</strong> with 30 days written notice required for cancellation. No long-term contracts. We do not bill insurance companies for membership fees. Sankofa Family Medicine provides Concierge Primary Care services and operates under the Direct Primary Care (DPC) model in compliance with Washington State law (RCW 48.150).</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
@@ -573,6 +576,10 @@ export default function ServicesPage() {
                 <li className="flex items-start gap-2">
                   <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
                   <span><strong>Controlled substances:</strong> The Practice has sole discretion regarding controlled substance prescribing. Controlled substances are generally NOT prescribed via telehealth for chronic pain management. Violation of controlled substance policy is grounds for immediate termination without refund.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <Check className="w-4 h-4 text-sfm-azure flex-shrink-0 mt-0.5" />
+                  <span>No guarantee is made that membership will improve health outcomes, prevent disease, or reduce healthcare costs. Membership fees are for access and care coordination and are not based on utilization.</span>
                 </li>
               </ul>
             </div>
@@ -625,7 +632,7 @@ export default function ServicesPage() {
         <div className="relative max-w-5xl mx-auto px-6">
           <div className="text-center mb-10">
             <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase font-medium mb-2">The Difference</p>
-            <h2 className="font-display text-3xl text-white">Why Members Choose Concierge DPC</h2>
+            <h2 className="font-display text-3xl text-white">Why Members Choose Concierge Primary Care</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
