@@ -164,7 +164,7 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Brand */}
-            <Link href="/" className="flex items-center group" aria-label="Sankofa Family Medicine - Home">
+            <Link href="/" className="flex items-center whitespace-nowrap group" aria-label="Sankofa Family Medicine - Home">
               <Image 
                 src="/images/comettrans.png" 
                 alt="Sankofa Bird Logo" 
@@ -172,17 +172,16 @@ export default function Navigation() {
                 height={96}
                 priority
                 quality={100}
-                className="h-11 w-auto sm:h-12 transition-all duration-500 group-hover:scale-105"
+                className="h-11 w-auto sm:h-12 transition-all duration-500 group-hover:scale-105 mr-2"
                 unoptimized
               />
-              <div className="hidden sm:flex flex-col ml-3.5">
-                <span className="font-display text-lg text-sfm-navy dark:text-sfm-text leading-tight tracking-tight group-hover:text-sfm-azure transition-colors duration-300">
-                  Sankofa Family Medicine<sup className="text-[10px]">™</sup>
-                </span>
-                <span className="text-[10px] text-sfm-gold font-semibold tracking-wider uppercase flex items-center gap-1">
-                  Medicine That Remembers
-                </span>
-              </div>
+              {/* Text kept on one line */}
+              <span className="hidden sm:inline font-display text-lg text-sfm-navy dark:text-sfm-text leading-tight tracking-tight group-hover:text-sfm-azure transition-colors duration-300 mr-2">
+                Sankofa Family Medicine<sup className="text-[10px]">™</sup>
+              </span>
+              <span className="hidden sm:inline text-xs uppercase tracking-[0.2em] text-sfm-gold font-semibold">
+                MEDICINE THAT REMEMBERS
+              </span>
             </Link>
 
             {/* Desktop Navigation */}
