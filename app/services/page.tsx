@@ -600,7 +600,7 @@ export default function ServicesPage() {
 
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-4">
                 Begin Your Care with<br />
-                <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
+                <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">™</span>
               </h2>
               <p className="text-white/70 text-lg mb-4 max-w-2xl">
                 Founding members start enrollment through our secure patient portal. Complete your health history, 
@@ -633,13 +633,13 @@ export default function ServicesPage() {
           </div>
           <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
             <p>
-              <strong className="text-sfm-navy">Emergency Services:</strong> This Practice does NOT provide emergency or urgent care services. For medical emergencies, call 911 or go to your nearest emergency room.
+              <strong className="text-sfm-navy">Emergency Services:</strong> This Practice does <strong>not</strong> provide emergency or urgent care services. For medical emergencies, call 911 or go to your nearest emergency room.
             </p>
             <p>
               <strong className="text-sfm-navy">Laboratory Pricing:</strong> Members may receive access to wholesale laboratory pricing, which is often substantially lower than hospital-based pricing. Members pay laboratories directly.
             </p>
             <p>
-              <strong className="text-sfm-navy">Controlled Substances:</strong> The Practice has sole discretion regarding controlled substance prescribing. Controlled substances are generally NOT prescribed via telehealth for chronic pain management. Violation of the Controlled Substances Policy may result in termination of membership for cause. Any prepaid membership fees may be retained to the extent permitted by law to account for administrative costs, services already rendered, and risk management obligations. No refund is guaranteed.
+              <strong className="text-sfm-navy">Controlled Substances:</strong> The Practice has sole discretion regarding controlled substance prescribing. Controlled substances are generally <strong>not</strong> prescribed via telehealth for chronic pain management. Violation of the Controlled Substances Policy may result in termination of membership for cause. Any prepaid membership fees may be retained to the extent permitted by law to account for administrative costs, services already rendered, and risk management obligations. No refund is guaranteed.
             </p>
           </div>
           <div className="text-center mt-6">
