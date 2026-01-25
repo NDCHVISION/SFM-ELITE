@@ -188,8 +188,15 @@ export default function ComparePage() {
       />
 
       {/* Hero */}
-      <section className="pt-40 pb-16 bg-gradient-to-b from-sfm-navy via-sfm-navy to-[#070705]">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="relative pt-40 pb-16 bg-gradient-to-b from-sfm-navy via-sfm-navy to-[#070705] overflow-hidden">
+        {/* Pattern overlay */}
+        <div className="absolute inset-0 pattern-sankofa-flow-gold pattern-sankofa-animated pattern-subtle" aria-hidden="true" />
+        
+        {/* Ambient glow effects */}
+        <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-sfm-gold/8 rounded-full blur-[150px] pulse-glow-elite" aria-hidden="true" />
+        <div className="absolute bottom-0 left-1/4 w-[300px] h-[300px] bg-sfm-azure/10 rounded-full blur-[120px]" aria-hidden="true" />
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <Link 
             href="/" 
             className="inline-flex items-center gap-2 text-white/50 hover:text-white/80 transition-colors mb-8 text-sm"
@@ -197,9 +204,13 @@ export default function ComparePage() {
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
-          <p className="text-sfm-gold text-sm tracking-[0.3em] uppercase mb-4 font-medium">
-            Side by Side
-          </p>
+          
+          {/* Badge with pulse animation */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full mb-6 float-elite">
+            <span className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse" aria-hidden="true" />
+            <span className="text-white/70 text-sm font-medium tracking-wide">Side by Side</span>
+          </div>
+          
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1]">
             The <em className="text-sfm-gold italic">Evidence</em> Speaks
           </h1>
@@ -411,15 +422,15 @@ export default function ComparePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-sfm-navy relative overflow-hidden">
-        <div className="absolute inset-0 pattern-sankofa-flow-gold pattern-subtle opacity-30" />
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-sfm-gold/10 rounded-full blur-[150px]" />
-        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-sfm-azure/20 rounded-full blur-[100px]" />
+      <section className="py-24 bg-sfm-navy relative overflow-hidden cta-glow-bg">
+        <div className="absolute inset-0 pattern-sankofa-flow-gold pattern-subtle opacity-30" aria-hidden="true" />
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-sfm-gold/10 rounded-full blur-[150px] pulse-glow-elite" aria-hidden="true" />
+        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-sfm-azure/20 rounded-full blur-[100px]" aria-hidden="true" />
         
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           {/* Now Accepting Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8">
-            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8 float-elite">
+            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" aria-hidden="true" />
             <span className="text-white/80 text-sm font-medium">Now Accepting Founding Members</span>
           </div>
 
