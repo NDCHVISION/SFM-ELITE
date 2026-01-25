@@ -123,9 +123,6 @@ export default function HomePage() {
                   <p className="text-sfm-gold font-display text-lg mb-2">
                     Medicine That Remembers™
                   </p>
-                  <p className="text-white/40 text-sm">
-                    Enrollment begins in Atlas.
-                  </p>
                 </div>
 
                 {/* Trust Indicators - Single row, consolidated */}
