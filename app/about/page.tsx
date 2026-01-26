@@ -541,9 +541,9 @@ export default function AboutPage() {
                     A care model designed to preserve the details that shape your health over time, from medical history to goals and preferences.
                   </p>
                   <p className="text-sfm-navy/60 leading-relaxed">
-                    Your physician knows you. Not as a chart number, but as a person with a history that matters. This is the foundation of{' '}
+                    Your physician knows you. Not as a chart number, but as a person with a history that matters. This is a foundation of{' '}
                     <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
-                      membership-based primary care
+                     Sankofa Family Medicine
                     </Link>{' '}
                     done right.
                   </p>
