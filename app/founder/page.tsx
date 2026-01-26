@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link' 
 import Image from 'next/image'
 import Script from 'next/script'
 import { ArrowRight, GraduationCap, FileText, Heart, Stethoscope, Brain, Wifi, Globe, ExternalLink } from 'lucide-react'
@@ -6,29 +6,39 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Dr. Yaw Nkrumah, MD | Founder | Sankofa Family Medicine',
-  description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a virtual-first concierge medicine practice serving patients across Washington State. Board Certified family physician specializing in genetic testing, precision medicine, cardiometabolic health, and Medicine That Remembers.',
-  keywords: ['Dr. Yaw Nkrumah', 'family physician Washington', 'concierge medicine founder', 'Sankofa Family Medicine', 'genetic testing', 'precision medicine', 'cardiometabolic health'],
+  description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a membership-based primary care practice available to Washington State patients via telehealth. Continuity-driven care built on Medicine That Remembers™.',
+  keywords: [
+    'Dr. Yaw Nkrumah',
+    'family physician Washington',
+    'Sankofa Family Medicine',
+    'membership-based primary care',
+    'direct primary care Washington',
+    'DPC Washington State',
+    'telehealth primary care Washington',
+    'continuity of care',
+    'Medicine That Remembers',
+  ],
   openGraph: {
     title: 'Dr. Yaw Nkrumah, MD | Founder | Sankofa Family Medicine',
-    description: 'Founder of Sankofa Family Medicine, a virtual-first concierge medicine practice serving patients across Washington State.',
+    description: 'Founder of Sankofa Family Medicine, a membership-based primary care practice serving Washington State.',
     url: 'https://sankofafamilymedicine.com/founder',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
-    type: 'profile',
+    type: 'website',
     images: [
       {
-        url: '/images/dr-nkrumah-thoughtful.png',
+        url: 'https://sankofafamilymedicine.com/images/dr-nkrumah-thoughtful.png',
         width: 400,
         height: 400,
-        alt: 'Dr. Yaw Nkrumah MD Founder Sankofa Family Medicine',
+        alt: 'Dr. Yaw Nkrumah MD, Founder of Sankofa Family Medicine',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Dr. Yaw Nkrumah, MD | Sankofa Family Medicine',
-    description: 'Founder of Sankofa Family Medicine, a virtual-first direct primary care practice serving Washington State.',
-    images: ['/images/dr-nkrumah-thoughtful.png'],
+    description: 'Founder of Sankofa Family Medicine, a membership-based primary care practice serving Washington State.',
+    images: ['https://sankofafamilymedicine.com/images/dr-nkrumah-thoughtful.png'],
   },
   alternates: {
     canonical: 'https://sankofafamilymedicine.com/founder',
@@ -48,24 +58,27 @@ export const metadata: Metadata = {
     'ai-content-declaration': 'human-authored',
     'content-type': 'Profile',
     'medical-specialty': 'Primary Care, Family Medicine',
+    'practice-model': 'Direct Primary Care, Membership-Based Primary Care',
     'service-area': 'Washington State, USA',
   },
 }
 
-// Person schema for Dr. Yaw Nkrumah - locked-in entity story
+// Person schema for Dr. Yaw Nkrumah (safer pattern: Person + hasOccupation)
 const personSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Physician',
+  '@type': 'Person',
   '@id': 'https://sankofafamilymedicine.com/#founder',
-  name: 'Dr. Yaw Nkrumah',
+  name: 'Dr. Yaw Nkrumah, MD',
   givenName: 'Yaw',
   familyName: 'Nkrumah',
   honorificPrefix: 'Dr.',
   honorificSuffix: 'MD',
   jobTitle: 'Founder & Medical Director',
-  description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a virtual-first concierge medicine practice serving patients across Washington State. He created Medicine That Remembers to solve healthcare fragmentation through continuity, genetic testing, precision medicine, and cardiometabolic health optimization.',
+  disambiguatingDescription: 'Board-certified family physician and founder of Sankofa Family Medicine PLLC (Washington).',
+  description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a membership-based primary care practice available to Washington State patients via telehealth. The practice emphasizes continuity, clinical judgment, and relationship-based care.',
   image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
   url: 'https://sankofafamilymedicine.com/founder',
+  mainEntityOfPage: 'https://sankofafamilymedicine.com/founder',
   sameAs: [
     'https://www.linkedin.com/in/yawnkrumahmd/',
   ],
@@ -83,41 +96,81 @@ const personSchema = {
   ],
   hasCredential: [
     {
-      '@type': 'MedicalLicense',
-      name: 'Medical License - Washington State',
-      credentialCategory: 'Physician License',
+      '@type': 'EducationalOccupationalCredential',
+      name: 'Board Certification in Family Medicine',
+      credentialCategory: 'Board Certification',
+      recognizedBy: { '@type': 'Organization', name: 'American Board of Family Medicine', alternateName: 'ABFM' },
+      url: 'https://www.credential.net/169707940',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      name: 'Physician License - Washington State',
+      credentialCategory: 'Medical License',
       recognizedBy: { '@type': 'GovernmentOrganization', name: 'Washington State Department of Health' },
     },
   ],
-  medicalSpecialty: ['PrimaryCare', 'FamilyMedicine', 'PreventiveMedicine'],
+  hasOccupation: {
+    '@type': 'Occupation',
+    name: 'Family Physician',
+    occupationLocation: {
+      '@type': 'AdministrativeArea',
+      name: 'Washington',
+      addressCountry: 'US',
+    },
+  },
   knowsAbout: [
-    'Concierge Medicine',
-    'Virtual/Telehealth Medicine',
-    'Genetic Testing & Precision Medicine',
+    'Membership-Based Primary Care',
+    'Virtual Primary Care',
+    'Preventive Medicine',
     'Cardiometabolic Health',
-    'Medicine That Remembers',
   ],
   worksFor: {
     '@type': 'MedicalOrganization',
     '@id': 'https://sankofafamilymedicine.com/#organization',
-    name: 'Sankofa Family Medicine',
-    description: 'Virtual-first concierge medicine practice serving patients across Washington State.',
+  },
+}
+
+// Organization schema (connects entity dots)
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalOrganization',
+  '@id': 'https://sankofafamilymedicine.com/#organization',
+  name: 'Sankofa Family Medicine',
+  legalName: 'Sankofa Family Medicine PLLC',
+  url: 'https://sankofafamilymedicine.com',
+  logo: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
+  description: 'Membership-based primary care practice available to Washington State patients via telehealth.',
+  areaServed: {
+    '@type': 'State',
+    name: 'Washington',
+    addressCountry: 'US',
+  },
+  founder: { '@id': 'https://sankofafamilymedicine.com/#founder' },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'new patient enrollment',
+    url: 'https://sankofafamilymedicine.com/founders-waitlist',
+    availableLanguage: ['English'],
   },
 }
 
 export default function FounderPage() {
   return (
     <>
-      {/* Person Schema for Dr. Nkrumah */}
+      {/* Schema */}
       <Script
         id="founder-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       
       {/* Hero */}
       <section className="relative pt-40 pb-24 bg-sfm-navy overflow-hidden">
-        {/* Decorative elements */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-sfm-azure/20 rounded-full blur-3xl animate-float" />
         
@@ -137,7 +190,7 @@ export default function FounderPage() {
           <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-4 font-medium">Founder & Medical Director</p>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1]">Meet Dr. Yaw Nkrumah</h1>
           <p className="text-white/70 text-lg md:text-xl max-w-xl mx-auto mb-8">
-            Board-certified family physician and founder of Sankofa Family Medicine. Building relationship-centered primary care where continuity and clinical judgment lead.
+            Board-certified family physician and founder of Sankofa Family Medicine. Continuity-driven primary care where clinical judgment leads.
           </p>
           <div className="flex items-center justify-center gap-4">
             <a 
@@ -150,6 +203,9 @@ export default function FounderPage() {
               <ExternalLink className="ml-2 w-3 h-3" aria-hidden="true" />
             </a>
           </div>
+          <p className="text-white/40 text-sm mt-6">
+            ABFM Board Certified · Washington State Licensed · MUSC Graduate
+          </p>
         </div>
       </section>
 
@@ -163,6 +219,7 @@ export default function FounderPage() {
             &quot;Care improves when we take the time to listen, document with intention, and follow through 
             with consistency. Memory is the foundation of trust.&quot;
           </blockquote>
+          <p className="text-sfm-navy/60 text-lg mt-6 font-display">— Dr. Yaw Nkrumah</p>
         </div>
       </section>
 
@@ -196,22 +253,22 @@ export default function FounderPage() {
             
             {/* Biography Text */}
             <div className="space-y-6 text-muted leading-relaxed order-1 lg:order-2">
-            <p>
-              Dr. Yaw Nkrumah is a board-certified family physician and founder of Sankofa Family Medicine and NDCH. His work centers on restoring the physician-patient relationship through continuity, clarity, and systems that preserve memory.
-            </p>
-            
-            <p>
-              Core Principles:
-            </p>
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              <li><strong className="text-sfm-navy">Presence.</strong> Giving patients undivided attention.</li>
-              <li><strong className="text-sfm-navy">Clarity.</strong> Explaining health in understandable terms.</li>
-              <li><strong className="text-sfm-navy">Continuity.</strong> Carrying history through every visit.</li>
-            </ul>
-            
-            <p>
-              He blends frontline medical training with modern, HIPAA-aligned digital workflows to strengthen follow-through without losing the human core of care.
-            </p>
+              <p>
+                Dr. Yaw Nkrumah is a board-certified family physician and founder of Sankofa Family Medicine. His work centers on restoring the physician-patient relationship through continuity, clarity, and systems that preserve memory.
+              </p>
+              
+              <p>
+                Core Principles:
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li><strong className="text-sfm-navy">Presence.</strong> Giving patients undivided attention.</li>
+                <li><strong className="text-sfm-navy">Clarity.</strong> Explaining health in understandable terms.</li>
+                <li><strong className="text-sfm-navy">Continuity.</strong> Carrying history through every visit.</li>
+              </ul>
+              
+              <p>
+                He blends frontline medical training with modern, HIPAA-aligned digital workflows to strengthen follow-through without losing the human core of care.
+              </p>
             </div>
           </div>
         </div>
@@ -219,7 +276,6 @@ export default function FounderPage() {
 
       {/* Training & Credentials */}
       <section className="py-28 bg-sfm-navy relative overflow-hidden">
-        {/* Decorative elements */}
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-sfm-gold/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sfm-azure/20 rounded-full blur-3xl" />
         
@@ -230,7 +286,7 @@ export default function FounderPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Board Certification - Featured with Verified Badge */}
+            {/* Board Certification - Featured with Verified Link */}
             <a 
               href="https://www.credential.net/169707940"
               target="_blank"
@@ -241,18 +297,13 @@ export default function FounderPage() {
                 <svg className="w-10 h-10 text-sfm-gold" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
                 </svg>
-                {/* Verified Badge from Accredible */}
-                <img 
-                  src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/169707940"
-                  alt="ABFM Board Certification - Verified"
-                  className="h-16 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
-                />
+                <span className="px-2 py-1 bg-sfm-gold/20 text-sfm-gold text-xs font-medium rounded-full">View Credential</span>
               </div>
               <h3 className="font-display text-xl text-white mb-3">Board Certified</h3>
               <p className="text-white/80">Family Medicine</p>
               <p className="text-sfm-gold text-sm mt-2 font-medium flex items-center gap-2">
                 ABFM
-                <span className="text-xs text-white/50 group-hover:text-sfm-gold transition-colors">Click to verify</span>
+                <ExternalLink className="w-3 h-3 opacity-60 group-hover:opacity-100 transition-opacity" />
               </p>
             </a>
 
@@ -291,13 +342,13 @@ export default function FounderPage() {
           <div className="space-y-8">
             {/* COVID-19 Publication */}
             <div className="border border-gray-100 p-6 rounded-xl hover:border-sfm-azure/30 transition-colors shadow-sm">
-                <p className="text-sfm-azure text-xs tracking-wide uppercase mb-2">COVID-19 Therapeutics First Author</p>
+              <p className="text-sfm-azure text-xs tracking-wide uppercase mb-2">COVID-19 Therapeutics First Author</p>
               <h3 className="font-display text-xl text-sfm-navy mb-2">
                 Treatment of COVID-19 Patients with Remdesivir: A Systematic Review and Meta-Analysis
               </h3>
               <p className="text-muted text-sm mb-4">Annals of Epidemiology & Public Health</p>
               <a 
-                href="https://shorturl.at/6p8nN" 
+                href="https://www.scienceopen.com/hosted-document?doi=10.33696/epidemiology.4.040" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-sfm-azure hover:text-sfm-navy transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
@@ -339,7 +390,7 @@ export default function FounderPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: Heart, title: 'Cardiometabolic Health', description: 'Blood pressure, cholesterol, diabetes prevention and management' },
-              { icon: Stethoscope, title: 'Preventive & Precision Care', description: 'Evidence-based screening, genetic testing, personalized protocols' },
+              { icon: Stethoscope, title: 'Preventive & Precision Care', description: 'Evidence-based screening, pharmacogenomic guidance when appropriate, personalized protocols' },
               { icon: Brain, title: 'AI-Supported Workflows', description: 'Technology that enhances clinical decision-making and documentation' },
               { icon: Wifi, title: 'Virtual Care Delivery', description: 'HIPAA-compliant telehealth that maintains human connection' },
               { icon: Globe, title: 'Culturally Grounded Medicine', description: 'Care that honors diverse backgrounds and health traditions' },
@@ -386,9 +437,43 @@ export default function FounderPage() {
         </div>
       </section>
 
+      {/* How to Work With Me */}
+      <section className="py-16 bg-sfm-cream/50 border-y border-gray-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-2xl text-sfm-navy mb-2">How to Work With Me</h2>
+            <p className="text-muted">Three steps to get started</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-sfm-gold/20 flex items-center justify-center">
+                <span className="font-display text-sfm-gold text-lg">1</span>
+              </div>
+              <h3 className="font-semibold text-sfm-navy mb-2">Reserve Your Spot</h3>
+              <p className="text-muted text-sm">Join the founders waitlist. No payment required today.</p>
+              <p className="text-muted/60 text-xs mt-2 italic">Submitting the waitlist form does not create a physician-patient relationship.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-sfm-gold/20 flex items-center justify-center">
+                <span className="font-display text-sfm-gold text-lg">2</span>
+              </div>
+              <h3 className="font-semibold text-sfm-navy mb-2">Enroll in Atlas</h3>
+              <p className="text-muted text-sm">Complete enrollment through the secure patient portal when clinical care begins.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-sfm-gold/20 flex items-center justify-center">
+                <span className="font-display text-sfm-gold text-lg">3</span>
+              </div>
+              <h3 className="font-semibold text-sfm-navy mb-2">Begin Care</h3>
+              <p className="text-muted text-sm">Membership includes primary care services provided by Sankofa Family Medicine. Labs, imaging, prescriptions, and specialist care are billed separately (insurance or direct pay).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-28 bg-sfm-navy relative overflow-hidden">
-        {/* Decorative elements */}
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-sfm-gold/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sfm-azure/20 rounded-full blur-3xl" />
         
@@ -403,16 +488,16 @@ export default function FounderPage() {
             Begin with a Physician Who <span className="text-sfm-gold">Remembers</span>
           </h2>
           <p className="text-white/60 text-lg md:text-xl mb-4 max-w-2xl mx-auto">
-            Enrollment begins February 2026. No payment required today.
+            Clinical care begins February 2026. No payment required today.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-            <a 
+            <Link 
               href="/founders-waitlist"
               className="btn-primary"
             >
               Reserve a Founders Spot
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
-            </a>
+            </Link>
             <Link href="/services" className="btn-secondary-white">
               View Membership Options
             </Link>
@@ -422,4 +507,3 @@ export default function FounderPage() {
     </>
   )
 }
-
