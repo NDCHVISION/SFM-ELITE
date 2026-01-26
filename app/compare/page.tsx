@@ -1,3 +1,5 @@
+
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, ArrowLeft, Check, X, Clock, Users, Zap } from 'lucide-react'
@@ -168,7 +170,7 @@ const structuredData = {
           name: 'Will I see the same doctor every visit with membership medicine?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. At Sankofa Family Medicine, you see Dr. Nkrumah at every visit. In typical insurance-based clinics, you may see whoever is available, leading to fragmented care.',
+            text: 'Yes. At Sankofa Family Medicine, you see the same Physician at every visit. In typical insurance-based clinics, you may see whoever is available, leading to fragmented care.',
           },
         },
         {
@@ -204,7 +206,7 @@ const statPreviews = [
   {
     icon: Clock,
     before: '15 min',
-    after: '45-60 min',
+    after: '45-75 min',
     label: 'Visit Duration',
   },
   {
@@ -289,7 +291,7 @@ const comparisonData = [
     category: 'When You Call',
     context: 'The phone experience',
     traditional: { text: 'Phone tree, holds, callbacks', isNegative: true },
-    sankofa: { text: 'Direct line to the practice and secure messaging with your physician', isPositive: true },
+    sankofa: { text: 'Direct line and secure messaging to the practice that is seen and addressed promptly by your physician', isPositive: true },
     highlight: false,
   },
 ]
@@ -556,9 +558,9 @@ export default function ComparePage() {
                   The numbers tell a clear story: when your physician has fewer patients and more time, care improves. You get appointments when you need them, visits that address your full concern, and a physician who actually knows your history.
                 </p>
                 <p className="text-white/70 leading-relaxed">
-                  This is not about luxury. It is about how primary care should work. One physician, one relationship, building over time.
-                </p>
-              </div>
+                    One physician and their teamm, who knows truly know you, and grows with you—visit after visit   </p>
+              </div>'One physician and team who know your history and stay with you over time.'
+
             </div>
           </div>
         </div>
