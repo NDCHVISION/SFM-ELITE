@@ -372,6 +372,21 @@ export default function ServicesPage() {
                         Save 10% when you prepay annually
                       </p>
                     )}
+                    {tier.id === 'continuity' && (
+                      <p className="text-sfm-gold/60 text-sm mt-2">
+                        Save 10% with annual billing: $2,430–$2,970/year
+                      </p>
+                    )}
+                    {tier.id === 'precision' && (
+                      <p className="text-sfm-gold/60 text-sm mt-2">
+                        Save 10% with annual billing: $3,510–$4,050/year
+                      </p>
+                    )}
+                    {tier.id === 'executive' && (
+                      <p className="text-sfm-gold/60 text-sm mt-2">
+                        Save 10% with annual billing: $7,020–$7,830/year
+                      </p>
+                    )}
                   </div>
 
                   <p className="text-muted text-sm mb-8 leading-relaxed">
