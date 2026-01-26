@@ -7,7 +7,9 @@ export default function FoundingMemberBadge() {
   const totalSpots = 30
 
   useEffect(() => {
-    // In production, this would fetch from an API
+    // TODO: Replace with API call to fetch current available spots
+    // Expected API response: { spotsRemaining: number }
+    // Endpoint: /api/founding-members/spots
     // For now, set to 30 (all spots available)
     setSpotsLeft(30)
   }, [])
@@ -22,8 +24,7 @@ export default function FoundingMemberBadge() {
           {/* Pulsing dot indicator */}
           <div className="relative">
             <div className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse-slow" />
-            <div className="absolute inset-0 w-2 h-2 bg-sfm-gold rounded-full animate-ping opacity-75" 
-                 style={{ animationDuration: '3s' }} />
+            <div className="absolute inset-0 w-2 h-2 bg-sfm-gold rounded-full animate-pulse-slow opacity-75" />
           </div>
           
           {/* Badge text */}
