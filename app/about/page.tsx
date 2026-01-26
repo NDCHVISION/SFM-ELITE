@@ -492,7 +492,7 @@ export default function AboutPage() {
                   <div className="absolute inset-12 bg-gradient-to-br from-sfm-gold/30 to-sfm-gold/10 rounded-full blur-3xl animate-pulse-slow" aria-hidden="true" />
                   <div className="absolute inset-0 flex items-center justify-center p-16">
                     <Image
-                      src="/images/COMETTRANS.png"
+                      src="/images/comettrans.png"
                       alt="Golden Sankofa bird logo with sapphire blue eye, the official symbol of Sankofa Family Medicine"
                       width={280}
                       height={280}
