@@ -10,7 +10,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Direct Primary Care vs Traditional Medicine | Sankofa Family Medicine Comparison',
   description:
-    'Compare Direct Primary Care (DPC) to traditional insurance-based clinics. Evidence-based differences: 15 min vs 45-60 min visits, 26-day waits vs same-day access, 2,300 patients vs fewer than 200. No insurance billing, no middlemen, just medicine.',
+    'Compare Direct Primary Care (DPC) to traditional insurance-based clinics. Evidence-based differences: 15 min vs 45-75 min visits, 26-day waits vs same-day access, 2,300 patients vs fewer than 200. No insurance billing, no middlemen, just medicine.',
   keywords: [
     'direct primary care comparison',
     'DPC vs traditional primary care',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Direct Primary Care vs Traditional Medicine | Sankofa Family Medicine',
     description:
-      'Evidence-based comparison: 15 min vs 45-60 min visits, 26-day waits vs same-day access, 2,300 patients vs fewer than 200. See why Direct Primary Care works.',
+      'Evidence-based comparison: 15 min vs 45-75 min visits, 26-day waits vs same-day access, 2,300 patients vs fewer than 200. See why Direct Primary Care works.',
     url: 'https://sankofafamilymedicine.com/compare',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Direct Primary Care vs Traditional Medicine | Sankofa Family Medicine',
     description:
-      'Evidence-based comparison: 15 min vs 45-60 min visits, 26-day waits vs same-day access. See why DPC works.',
+      'Evidence-based comparison: 15 min vs 45-75 min visits, 26-day waits vs same-day access. See why DPC works.',
     images: ['https://sankofafamilymedicine.com/images/og-compare.png'],
     creator: '@sankofafamilymed',
   },
@@ -146,7 +146,7 @@ const structuredData = {
           name: 'How long is a typical primary care appointment?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Typical insurance-based primary care appointments average 15 minutes. Direct Primary Care practices like Sankofa Family Medicine offer 45 to 60 minute visits, allowing for comprehensive evaluation and unhurried conversation.',
+            text: 'Typical insurance-based primary care appointments average 15 minutes. Direct Primary Care practices like Sankofa Family Medicine offer 45 to 75 minute visits, allowing for comprehensive evaluation and unhurried conversation.',
           },
         },
         {
@@ -222,7 +222,7 @@ const statPreviews = [
   {
     icon: Clock,
     before: '15 min',
-    after: '45-60 min',
+    after: '45-75 min',
     label: 'Visit Duration',
   },
   {
@@ -244,7 +244,7 @@ const comparisonData = [
     category: 'Visit Duration',
     context: 'Time with your physician',
     traditional: { value: '15 min', label: 'average', isNegative: false },
-    sankofa: { value: '45 to 60 min', label: 'standard', isPositive: true },
+    sankofa: { value: '45 to 75 min', label: 'standard', isPositive: true },
     highlight: true,
   },
   {
@@ -358,7 +358,7 @@ export default function ComparePage() {
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1]">
             The <em className="text-sfm-gold italic">Evidence</em> Speaks
           </h1>
-          <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
+          <p className="text-white/75 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
             Direct Primary Care removes the insurance layer from your primary care relationship. Every metric below is drawn from peer-reviewed research. The difference is not subtle.
           </p>
 
@@ -397,7 +397,7 @@ export default function ComparePage() {
                     Category
                   </th>
                   <th className="w-[36%] p-6 text-center text-xs font-semibold tracking-[0.2em] uppercase text-white/40 bg-white/[0.02]">
-                    <span className="block text-white/60">Insurance-Based Primary Care</span>
+                    <span className="block text-white/75">Insurance-Based Primary Care</span>
                     <span className="block font-display text-2xl font-normal tracking-normal normal-case text-white/40 mt-2">
                       What Most Experience
                     </span>
@@ -532,7 +532,7 @@ export default function ComparePage() {
           <div className="mt-8 p-8 bg-white/[0.02] rounded-xl border border-white/[0.04]">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-center md:text-left">
-                <p className="text-white/60 text-sm mb-2">
+                <p className="text-white/75 text-sm mb-2">
                   <strong className="text-white">Evidence-based statistics</strong> from peer-reviewed sources:
                 </p>
                 <p className="text-white/40 text-xs leading-relaxed">
@@ -594,7 +594,7 @@ export default function ComparePage() {
               </div>
               <div className="flex-1 text-center md:text-left">
                 <h3 className="font-display text-xl text-white mb-2">Still Weighing Your Options?</h3>
-                <p className="text-white/60 text-sm">
+                <p className="text-white/75 text-sm">
                   Read the free guide <strong className="text-white">&quot;How Healthy Is Your Relationship With Your Primary Care Doctor?&quot;</strong> for a simple way to decide whether Direct Primary Care fits how you want to be treated.
                 </p>
               </div>
@@ -630,7 +630,7 @@ export default function ComparePage() {
             <span className="text-sfm-gold">the Difference?</span>
           </h2>
 
-          <p className="text-white/60 text-lg mb-4 max-w-2xl mx-auto">
+          <p className="text-white/75 text-lg mb-4 max-w-2xl mx-auto">
             The evidence is clear. The choice is yours.
           </p>
 
