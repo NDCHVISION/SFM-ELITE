@@ -44,7 +44,7 @@ export default function CareJourney() {
     {
       number: 3,
       title: 'Design Your Plan',
-      description: 'Your first visit is a 45 to 60 minute conversation focused on your context, your goals, and your care priorities. Together, you and your physician design a personalized plan built around what matters most to you.',
+      description: 'Your first visit is a 45 to 75 minute conversation focused on your context, your goals, and your care priorities. Together, you and your physician design a personalized plan built around what matters most to you.',
       hasCTA: false,
     },
     {
@@ -94,7 +94,7 @@ export default function CareJourney() {
               <div className="flex gap-6 md:gap-10">
                 {/* Step Number Circle */}
                 <div className="flex flex-col items-center flex-shrink-0">
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-sfm-gold to-sfm-gold-light flex items-center justify-center text-white font-display text-xl font-bold shadow-lg group-hover:shadow-gold transition-shadow duration-300">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-sfm-gold to-sfm-gold-light flex items-center justify-center text-white font-display text-xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">
                     {String(step.number).padStart(2, '0')}
                   </div>
                   {/* Connector line (not on last item) */}
