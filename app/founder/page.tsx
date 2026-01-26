@@ -393,17 +393,17 @@ export default function FounderPage() {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sfm-azure/20 rounded-full blur-3xl" />
         
         <div className="max-w-4xl mx-auto px-6 text-center relative">
-          {/* Now Accepting Badge */}
+          {/* Founders Waitlist Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" aria-hidden="true" />
-            <span className="text-white/80 text-sm font-medium">Now Accepting Patients</span>
+            <span className="text-white/80 text-sm font-medium">Founders Waitlist Now Open</span>
           </div>
 
           <h2 className="font-display text-4xl md:text-5xl text-white mb-4 leading-tight">
             Begin with a Physician Who <span className="text-sfm-gold">Remembers</span>
           </h2>
           <p className="text-white/60 text-lg md:text-xl mb-4 max-w-2xl mx-auto">
-            Start in Atlas. Secure intake, scheduling, messaging, and visits happen there.
+            Enrollment begins February 2026. No payment required today.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a 

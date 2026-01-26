@@ -76,7 +76,7 @@ export default function ContactPage() {
         <div className="relative max-w-4xl mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-6">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-            <span className="text-white/80 text-sm font-medium">Now Accepting Founding Members</span>
+            <span className="text-white/80 text-sm font-medium">Founders Waitlist Now Open</span>
           </div>
           
           <h1 className="font-display text-5xl md:text-6xl text-white mb-8 leading-[1.1]">
@@ -181,13 +181,11 @@ export default function ContactPage() {
                   <p className="text-white/70 text-sm mb-6 leading-relaxed">
                     A brief conversation to ensure Sankofa Family Medicine is the right fit for your health journey.
                   </p>
-                  <a 
-                    href={EXTERNAL_URLS.atlas}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <a
+                    href="/founders-waitlist"
                     className="inline-flex items-center gap-2 text-sfm-gold font-semibold group"
                   >
-                    Begin enrollment
+                    Reserve a Founders Spot
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>

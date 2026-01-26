@@ -124,7 +124,7 @@ export default function HomePage() {
                     Medicine That Remembers™
                   </p>
                   <p className="text-white/40 text-sm">
-                    Enrollment begins in Atlas.
+                    Enrollment begins February 2026. No payment required today.
                   </p>
                 </div>
 
