@@ -274,13 +274,6 @@ const comparisonData = [
     highlight: true,
   },
   {
-    category: 'Prior Authorizations',
-    context: 'Insurance approval delays',
-    traditional: { text: 'Days to weeks waiting', isNegative: true },
-    sankofa: { text: 'Help navigating prior authorizations when required', isPositive: true },
-    highlight: false,
-  },
-  {
     category: 'Monthly Cost',
     context: 'What you pay for access',
     traditional: { text: 'Unpredictable copays and bills', isNegative: true },
