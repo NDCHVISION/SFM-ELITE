@@ -283,14 +283,12 @@ export default function BlogPost() {
             Experience the difference of continuity-based care with a physician who tracks your health over time.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <a 
-              href="https://sankofafamilymedicine.atlas.md/hub/login"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              href="/founders-waitlist"
               className="btn-primary"
             >
-              Founding Member Enrollment Now Open
-            </a>
+              Reserve a Founders Spot
+            </Link>
             <Link href="/services" className="btn-secondary btn-shine">
               Membership Plans
             </Link>

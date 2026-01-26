@@ -1059,10 +1059,10 @@ export default function ServicesPage() {
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-br from-sfm-cream via-white to-sfm-cream">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            {/* Now Accepting Badge */}
+            {/* Founders Waitlist Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-sfm-gold/10 rounded-full border border-sfm-gold/20 mb-8">
               <span className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse" aria-hidden="true" />
-              <span className="text-sfm-gold text-sm font-semibold">Now Accepting Founding Members</span>
+              <span className="text-sfm-gold text-sm font-semibold">Founders Waitlist Now Open</span>
             </div>
 
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-sfm-navy mb-6 leading-tight">
@@ -1072,7 +1072,8 @@ export default function ServicesPage() {
             </h2>
 
             <p className="text-sfm-navy/60 text-lg mb-10 max-w-2xl mx-auto">
-              Start in Atlas to see if our approach aligns with your health goals.
+              Enrollment begins February 2026. No payment required today.
+            </p>
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
