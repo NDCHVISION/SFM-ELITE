@@ -478,7 +478,7 @@ export default function AboutPage() {
                     </Link>{' '}
                     or explore{' '}
                     <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
-                      how our model differs
+                       how the Direct Primary Care model differs.
                     </Link>.
                   </p>
                 </div>
