@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Clock, MessageCircle, Shield, Heart, CheckCircle2, Award } from 'lucide-react'
+import { ArrowRight, Clock, MessageCircle, Shield, Heart, CheckCircle2, Award, ChevronDown } from 'lucide-react'
 import CareJourney from '@/components/CareJourney'
 import ScrollReveal, { ScrollRevealGroup } from '@/components/ScrollReveal'
 import PrimaryCTA from '@/components/PrimaryCTA'
@@ -18,13 +18,20 @@ export default function HomePage() {
     setCheckedItems(newChecked)
   }
 
+  // Smooth scroll handler
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault()
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <>
       {/* ================================================================
           HERO SECTION
           - Clean radiating glow (no boxy shadows)
           - Accessible font sizes (min 16px body, 18px important text)
-          - Terminology guide compliant
+          - Staggered animations for cinematic reveal
+          - Scroll indicator
           ================================================================ */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background */}
@@ -66,7 +73,7 @@ export default function HomePage() {
               {/* Left Column */}
               <div className="order-2 lg:order-1">
                 
-                {/* Location Badge */}
+                {/* Location Badge - animation-delay-100 */}
                 <div className="opacity-0 animate-fade-in animation-delay-100 mb-10">
                   <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" aria-hidden="true" />
@@ -76,9 +83,9 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Headline - Golden Radiating Glow */}
+                {/* Headline - Golden Radiating Glow - animation-delay-300 */}
                 <div className="overflow-hidden mb-10">
-                  <h1 className="opacity-0 animate-hero-text animation-delay-200 relative" data-speakable>
+                  <h1 className="opacity-0 animate-hero-text animation-delay-300 relative" data-speakable>
                     {/* Radiating glow behind text - clean elliptical, not boxy */}
                     <span 
                       className="absolute -inset-8 -z-10 opacity-80"
@@ -109,8 +116,8 @@ export default function HomePage() {
                   </h1>
                 </div>
 
-                {/* Subheadline */}
-                <div className="opacity-0 animate-fade-in animation-delay-300 mb-12">
+                {/* Subheadline - animation-delay-500 */}
+                <div className="opacity-0 animate-fade-in animation-delay-500 mb-12">
                   <p className="text-lg lg:text-xl text-white/75 leading-relaxed max-w-xl">
                     Sankofa Family Medicine is built on continuity, not throughput. Your physician understands your history, context, and priorities and carries them forward with intention.
                   </p>
@@ -119,8 +126,8 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                {/* Value Props */}
-                <div className="opacity-0 animate-fade-in animation-delay-350 mb-12">
+                {/* Value Props with hover states - animation-delay-700 */}
+                <div className="opacity-0 animate-fade-in animation-delay-700 mb-12">
                   <div className="space-y-5">
                     {[
                       {
@@ -136,10 +143,10 @@ export default function HomePage() {
                         text: 'Memberships begin at $225 per month, with clear, predictable pricing and multiple payment options including HSA/FSA.',
                       },
                     ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-4">
-                        <div className="w-2 h-2 rounded-full bg-sfm-gold mt-3 flex-shrink-0" aria-hidden="true" />
+                      <div key={i} className="flex items-start gap-4 group cursor-default">
+                        <div className="w-2 h-2 rounded-full bg-sfm-gold mt-3 flex-shrink-0 transition-transform duration-300 group-hover:scale-150" aria-hidden="true" />
                         <div>
-                          <span className="text-white font-semibold text-lg block mb-1">{item.title}</span>
+                          <span className="text-white font-semibold text-lg block mb-1 transition-colors duration-300 group-hover:text-sfm-gold">{item.title}</span>
                           <span className="text-white/70 text-base leading-relaxed">{item.text}</span>
                         </div>
                       </div>
@@ -147,27 +154,28 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* CTA Bridge */}
-                <div className="opacity-0 animate-fade-in animation-delay-380 mb-8">
+                {/* CTA Bridge - animation-delay-900 */}
+                <div className="opacity-0 animate-fade-in animation-delay-900 mb-8">
                   <p className="text-white/80 text-lg lg:text-xl leading-relaxed max-w-lg">
                     Ready for care that does not reset every visit?<br />
                     Join a practice designed around continuity, judgment, and long-term relationships.
                   </p>
                 </div>
 
-                {/* CTA Buttons */}
-                <div className="opacity-0 animate-fade-in animation-delay-400 flex flex-wrap items-center gap-4">
+                {/* CTA Buttons - animation-delay-1000 */}
+                <div className="opacity-0 animate-fade-in animation-delay-1000 flex flex-wrap items-center gap-4">
                   <PrimaryCTA variant="hero" />
                   <Link 
-                    href="#membership-plans" 
+                    href="#membership-plans"
+                    onClick={(e) => scrollToSection(e, 'membership-plans')}
                     className="btn-outline btn-shine text-base px-6 py-3 focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 focus:ring-offset-sfm-navy"
                   >
                     View Membership Plans
                   </Link>
                 </div>
 
-                {/* Signature Line */}
-                <div className="opacity-0 animate-fade-in animation-delay-450 mt-8">
+                {/* Signature Line - animation-delay-1100 */}
+                <div className="opacity-0 animate-fade-in animation-delay-1100 mt-8">
                   <p className="text-sfm-gold font-display text-xl mb-2">
                     Medicine That Remembers™
                   </p>
@@ -176,20 +184,43 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                {/* Trust Indicators */}
-                <div className="opacity-0 animate-fade-in animation-delay-500 mt-10 pt-8 border-t border-white/10">
+                {/* Trust Indicators with tooltips - animation-delay-1200 */}
+                <div className="opacity-0 animate-fade-in animation-delay-1200 mt-10 pt-8 border-t border-white/10">
                   <div className="flex flex-wrap items-center gap-6 sm:gap-8">
-                    <div className="flex items-center gap-2 text-white/60 text-base">
-                      <Shield className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
-                      <span>HIPAA Compliant</span>
+                    {/* HIPAA Compliant with tooltip */}
+                    <div className="relative group">
+                      <div className="flex items-center gap-2 text-white/60 text-base cursor-help">
+                        <Shield className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
+                        <span>HIPAA Compliant</span>
+                      </div>
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-white text-sfm-navy text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-20">
+                        Your health information is protected by federal privacy standards.
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white" />
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 text-white/60 text-base">
-                      <Award className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
-                      <span>Board Certified</span>
+                    
+                    {/* Board Certified with tooltip */}
+                    <div className="relative group">
+                      <div className="flex items-center gap-2 text-white/60 text-base cursor-help">
+                        <Award className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
+                        <span>Board Certified</span>
+                      </div>
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-white text-sfm-navy text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-20">
+                        Dr. Nkrumah is board certified in Family Medicine.
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white" />
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2 text-white/60 text-base">
-                      <Clock className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
-                      <span>Same or Next Day Access</span>
+                    
+                    {/* Same Day Access with tooltip */}
+                    <div className="relative group">
+                      <div className="flex items-center gap-2 text-white/60 text-base cursor-help">
+                        <Clock className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
+                        <span>Same or Next Day Access</span>
+                      </div>
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-white text-sfm-navy text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-20">
+                        Virtual visits for urgent concerns when available.
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white" />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -226,16 +257,36 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in animation-delay-1500 hidden lg:flex flex-col items-center gap-2">
+          <span className="text-white/30 text-xs uppercase tracking-widest">Scroll</span>
+          <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center pt-2">
+            <ChevronDown className="w-4 h-4 text-white/40 animate-bounce" />
+          </div>
+        </div>
       </section>
 
       {/* ================================================================
           PHILOSOPHY SECTION
+          - Added Sankofa bird icon above heading
           ================================================================ */}
       <section className="relative py-24 lg:py-32 bg-sfm-cream overflow-hidden">
         <div className="absolute inset-0 pattern-sankofa-subtle opacity-30" aria-hidden="true" />
         
         <div className="relative max-w-7xl mx-auto px-6">
           <ScrollReveal className="max-w-3xl mx-auto text-center mb-20">
+            {/* Sankofa bird icon */}
+            <div className="flex justify-center mb-4">
+              <Image
+                src="/images/comettrans.png"
+                alt=""
+                width={48}
+                height={48}
+                className="opacity-60"
+                aria-hidden="true"
+              />
+            </div>
             <span className="inline-block text-sfm-gold text-sm font-semibold tracking-widest uppercase mb-6">
               Our Philosophy
             </span>
@@ -271,11 +322,11 @@ export default function HomePage() {
               },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-sfm-gold/10 flex items-center justify-center">
+                <div className="text-center group">
+                  <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-sfm-gold/10 flex items-center justify-center transition-all duration-300 group-hover:bg-sfm-gold/20 group-hover:scale-110">
                     <item.icon className="w-7 h-7 text-sfm-gold" aria-hidden="true" />
                   </div>
-                  <h3 className="font-display text-xl text-sfm-navy mb-3">{item.title}</h3>
+                  <h3 className="font-display text-xl text-sfm-navy mb-3 transition-colors duration-300 group-hover:text-sfm-gold">{item.title}</h3>
                   <p className="text-sfm-navy/70 text-base leading-relaxed">{item.description}</p>
                 </div>
               </ScrollReveal>
@@ -292,6 +343,7 @@ export default function HomePage() {
 
       {/* ================================================================
           WHO WE SERVE
+          - Added hover ring effect to images
           ================================================================ */}
       <section className="relative py-20 lg:py-28 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
@@ -332,7 +384,7 @@ export default function HomePage() {
               },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="relative group overflow-hidden rounded-2xl aspect-[4/5]">
+                <div className="relative group overflow-hidden rounded-2xl aspect-[4/5] ring-2 ring-transparent hover:ring-sfm-gold/40 transition-all duration-300">
                   <Image
                     src={item.src}
                     alt={item.alt}
@@ -541,6 +593,7 @@ export default function HomePage() {
           MEMBERSHIP PREVIEW
           - Tier names: Continuity Concierge, Precision Concierge, Executive Concierge
           - Founding member callout
+          - Shine effect on featured tier
           ================================================================ */}
       <section id="membership-plans" className="relative py-24 lg:py-32 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
@@ -581,42 +634,54 @@ export default function HomePage() {
               },
             ].map((tier, i) => (
               <ScrollReveal key={tier.name} delay={i * 0.1}>
-                <div className={`relative rounded-2xl p-8 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${
+                <div className={`relative rounded-2xl p-8 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden ${
                   tier.featured 
                     ? 'bg-sfm-navy text-white ring-2 ring-sfm-gold' 
                     : 'bg-white border border-sfm-border-light hover:border-sfm-border hover:shadow-lg'
                 }`}>
                   
+                  {/* Shine effect for featured tier */}
                   {tier.featured && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
+                      <div 
+                        className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent"
+                        style={{
+                          animation: 'shine 4s ease-in-out infinite',
+                        }}
+                      />
+                    </div>
+                  )}
+                  
+                  {tier.featured && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
                       <span className="px-4 py-1 bg-sfm-gold text-sfm-navy text-sm font-semibold rounded-full">
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <h3 className={`font-display text-2xl mb-2 ${tier.featured ? 'text-white' : 'text-sfm-navy'}`}>
+                  <h3 className={`font-display text-2xl mb-2 relative z-10 ${tier.featured ? 'text-white' : 'text-sfm-navy'}`}>
                     {tier.name}
                   </h3>
 
-                  <p className={`text-sm mb-4 ${tier.featured ? 'text-white/60' : 'text-sfm-navy/50'}`}>
+                  <p className={`text-sm mb-4 relative z-10 ${tier.featured ? 'text-white/60' : 'text-sfm-navy/50'}`}>
                     Concierge Primary Care delivered under a Direct Primary Care (DPC) model
                   </p>
                   
-                  <div className="mb-4">
+                  <div className="mb-4 relative z-10">
                     <span className={`text-4xl font-display ${tier.featured ? 'text-sfm-gold' : 'text-sfm-navy'}`}>
                       {tier.priceRange}
                     </span>
                     <span className={`text-base ${tier.featured ? 'text-white/70' : 'text-sfm-navy/60'}`}>/month</span>
                   </div>
                   
-                  <p className={`text-base mb-6 leading-relaxed ${tier.featured ? 'text-white/80' : 'text-sfm-navy/70'}`}>
+                  <p className={`text-base mb-6 leading-relaxed relative z-10 ${tier.featured ? 'text-white/80' : 'text-sfm-navy/70'}`}>
                     {tier.description}
                   </p>
                   
                   <Link 
                     href="/services" 
-                    className={`inline-flex items-center gap-2 text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded ${
+                    className={`inline-flex items-center gap-2 text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded relative z-10 ${
                       tier.featured 
                         ? 'text-sfm-gold hover:text-sfm-gold-light focus:ring-offset-sfm-navy' 
                         : 'text-sfm-azure hover:text-sfm-gold'
@@ -733,6 +798,7 @@ export default function HomePage() {
 
       {/* ================================================================
           FINAL CTA
+          - Soft urgency text added
           ================================================================ */}
       <section className="relative py-24 lg:py-32 overflow-hidden" aria-labelledby="cta-heading">
         <div className="absolute inset-0 bg-sfm-navy" />
@@ -766,14 +832,20 @@ export default function HomePage() {
             </span>
           </h2>
           
-          <p className="text-white/70 text-lg lg:text-xl mb-10 max-w-xl mx-auto leading-relaxed">
+          <p className="text-white/70 text-lg lg:text-xl mb-6 max-w-xl mx-auto leading-relaxed">
             Enrollment starts in Atlas. Secure intake, scheduling, messaging, and visits happen there.
+          </p>
+
+          {/* Soft urgency text */}
+          <p className="text-white/50 text-base mb-10">
+            Founding member pricing available through February 2026.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <PrimaryCTA variant="hero" />
             <Link 
-              href="#membership-plans" 
+              href="#membership-plans"
+              onClick={(e) => scrollToSection(e, 'membership-plans')}
               className="btn-outline btn-shine text-base px-6 py-3 focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 focus:ring-offset-sfm-navy"
             >
               Membership Plans
@@ -795,7 +867,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Keyframes for shine animation */}
+      <style jsx>{`
+        @keyframes shine {
+          0% { transform: translateX(-100%); }
+          50% { transform: translateX(100%); }
+          100% { transform: translateX(100%); }
+        }
+      `}</style>
     </>
   )
 }
-
