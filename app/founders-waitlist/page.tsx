@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Become a Founding Member | Sankofa Family Medicine',
-  description: 'Join Sankofa Family Medicine as we launch in February 2026. Complete the interest form to reserve your founding member spot.',
+  description: 'Join Sankofa Family Medicine as we launch in February 2026. Complete the registration bellow to reserve your founding member spot.',
   robots: {
     index: true,
     follow: true,
@@ -20,7 +20,7 @@ export default function FoundersWaitlistPage() {
           </h1>
           <div className="divider-gold mx-auto mb-8" />
           <p className="text-xl text-sfm-text-muted max-w-3xl mx-auto">
-            Join Sankofa Family Medicine as we launch in February 2026. Complete the interest form below to reserve your spot.
+            Join Sankofa Family Medicine as we launch in February 2026. Reserve your founder spot below, no payment required until enrollment date. 
           </p>
         </div>
 
