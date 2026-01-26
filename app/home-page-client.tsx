@@ -7,7 +7,7 @@ import { ArrowRight, Clock, MessageCircle, Shield, Heart, Stethoscope, CheckCirc
 import CareJourney from '@/components/CareJourney'
 import TrustStrip from '@/components/TrustStrip'
 import ScrollReveal, { ScrollRevealGroup } from '@/components/ScrollReveal'
-import PrimaryCTA, { SecondaryCTA, ATLAS_PORTAL_URL } from '@/components/PrimaryCTA'
+import PrimaryCTA, { SecondaryCTA } from '@/components/PrimaryCTA'
 
 export default function HomePage() {
   const [checkedItems, setCheckedItems] = useState<boolean[]>([false, false, false, false, false])
