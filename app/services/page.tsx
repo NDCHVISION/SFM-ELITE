@@ -113,7 +113,7 @@ const faqs = [
   },
   {
     q: 'What if I need a specialist?',
-    a: 'Dr. Nkrumah will coordinate referrals to trusted specialists and help navigate the process. Care coordination is included in all membership tiers.',
+    a: 'Your Physician will coordinate referrals to trusted specialists and help navigate the process. Care coordination is included in all membership tiers.',
   },
   {
     q: 'Is virtual care as effective as in-person?',
@@ -189,7 +189,7 @@ export default function ServicesPage() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { icon: Users, label: 'One Physician', desc: 'Dr. Nkrumah personally' },
+              { icon: Users, label: 'One Physician', desc: 'One personal physician' },
               { icon: Clock, label: 'Same-Day Access', desc: 'When you need it' },
               { icon: MessageCircle, label: 'Direct Messaging', desc: 'No phone trees' },
               { icon: FileText, label: 'No Surprise Bills', desc: 'Transparent pricing' },
