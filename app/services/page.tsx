@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import PrimaryCTA, { ATLAS_PORTAL_URL } from '@/components/PrimaryCTA'
+import FoundingMemberBadge from '@/components/FoundingMemberBadge'
 import { 
   ArrowRight, Check, Sparkles, Shield, Clock, MessageCircle, 
   Heart, Dna, Phone, FileText, Star, Users, Zap,
@@ -274,32 +275,8 @@ export default function ServicesPage() {
             <p className="text-muted max-w-xl mx-auto">Every plan includes generous virtual visit access, direct secure messaging, and wholesale lab pricing.</p>
           </div>
 
-          {/* Founding Member Alert */}
-          <div className="bg-gradient-to-r from-sfm-gold/10 via-sfm-gold/5 to-sfm-gold/10 border border-sfm-gold/20 rounded-2xl p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-sfm-gold/20 flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 text-sfm-gold" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                    <span className="text-sfm-navy font-semibold text-sm">Founders Waitlist Open</span>
-                  </div>
-                  <p className="text-sfm-text-muted text-xs">
-                    Lock in your founding member rate for life.
-                  </p>
-                </div>
-              </div>
-              <Link 
-                href="/faq#founding-members" 
-                className="text-sfm-azure text-sm font-medium hover:text-sfm-gold transition-colors flex items-center gap-1"
-              >
-                Learn about founding benefits
-                <ArrowRight className="w-3 h-3" />
-              </Link>
-            </div>
-          </div>
+          {/* Founding Member Badge */}
+          <FoundingMemberBadge />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {tiers.map((tier, index) => (
