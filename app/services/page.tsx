@@ -59,18 +59,18 @@ const tiers = [
   {
     id: 'executive',
     name: 'Executive Concierge',
-    tagline: 'Concierge-level care',
+    tagline: 'The highest level of physician-directed concierge care',
     price: { monthly: 650, monthlyHigh: 725, annual: 585, annualHigh: 653 },
-    description: 'The highest level of personalized care with enhanced access and comprehensive health optimization.',
+    description: 'Designed for individuals and families requiring enhanced access, coordination, and longitudinal oversight.',
     features: [
       { text: 'Everything in Precision Concierge', included: true, highlight: true },
-      { text: 'Priority scheduling', included: true },
-      { text: 'Extended after-hours messaging availability', included: true },
+      { text: 'Concierge-level responsiveness', included: true },
+      { text: 'Priority scheduling and care coordination', included: true },
       { text: 'Expanded access pathways for defined urgent needs', included: true },
-      { text: 'Enhanced care coordination with specialists', included: true },
-      { text: 'Comprehensive executive health planning', included: true },
+      { text: 'Enhanced coordination with specialists and external providers', included: true },
+      { text: 'Executive health planning and longitudinal oversight', included: true },
       { text: 'Annual comprehensive health review', included: true },
-      { text: 'Physician confirmation required for enrollment', included: true },
+      { text: 'Enrollment by physician confirmation', included: true },
     ],
     cta: 'Select This Plan',
     popular: false,
@@ -436,14 +436,18 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          {/* Note */}
-          <div className="mt-12 max-w-2xl mx-auto text-center">
-            <div className="inline-flex items-center gap-3 px-6 py-4 bg-sfm-gold/10 border border-sfm-gold/20 rounded-2xl">
-              <Zap className="w-5 h-5 text-sfm-gold" />
-              <p className="text-sm text-sfm-navy">
-                <span className="font-semibold">All memberships:</span> Concierge Primary Care delivered under the Direct Primary Care (DPC) model.
-              </p>
-            </div>
+          {/* Notes */}
+          <div className="text-center mt-8 space-y-3">
+            <p className="text-sm text-sfm-charcoal/60">
+              <Zap className="inline-block h-4 w-4 mr-2 text-sfm-gold" />
+              <strong>All memberships:</strong> Concierge Primary Care delivered under the Direct Primary Care (DPC) model.
+            </p>
+            <p className="text-xs text-sfm-charcoal/50 max-w-3xl mx-auto">
+              All services are subject to clinical appropriateness, physician judgment, and applicable law. Emergency services are not provided.
+            </p>
+            <p className="text-xs text-sfm-charcoal/40 max-w-3xl mx-auto">
+              <sup>dagger</sup>Executive Concierge does not provide unrestricted or continuous physician availability. Access, responsiveness, and after-hours communication are subject to clinical appropriateness, triage protocols, and physician discretion.
+            </p>
           </div>
         </div>
       </section>
