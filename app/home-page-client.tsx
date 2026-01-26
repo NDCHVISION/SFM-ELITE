@@ -76,20 +76,34 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Headline */}
+                {/* Headline - Golden Radiating Glow */}
                 <div className="overflow-hidden mb-10">
-                  <h1 className="opacity-0 animate-hero-text animation-delay-200" data-speakable>
-                    <span className="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-display text-white leading-[0.95] mb-3">
-                      <span 
-                        className="inline-block"
-                        style={{
-                          textShadow: '0 0 60px rgba(188, 152, 51, 0.3), 0 0 120px rgba(188, 152, 51, 0.15)',
-                        }}
-                      >
-                        Remembered.
-                      </span>
+                  <h1 className="opacity-0 animate-hero-text animation-delay-200 relative" data-speakable>
+                    {/* Radiating glow behind text - clean elliptical, not boxy */}
+                    <span 
+                      className="absolute -inset-8 -z-10 opacity-80"
+                      style={{
+                        background: 'radial-gradient(ellipse 80% 60% at 30% 50%, rgba(188, 152, 51, 0.25) 0%, rgba(188, 152, 51, 0.08) 40%, transparent 70%)',
+                        filter: 'blur(20px)',
+                      }}
+                      aria-hidden="true"
+                    />
+                    <span 
+                      className="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-display leading-[0.95] mb-3"
+                      style={{
+                        color: '#bc9833',
+                        textShadow: '0 0 30px rgba(188, 152, 51, 0.6), 0 0 60px rgba(188, 152, 51, 0.4), 0 0 100px rgba(188, 152, 51, 0.2)',
+                      }}
+                    >
+                      Remembered.
                     </span>
-                    <span className="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-display text-white leading-[0.95]">
+                    <span 
+                      className="block text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-display leading-[0.95]"
+                      style={{
+                        color: '#bc9833',
+                        textShadow: '0 0 30px rgba(188, 152, 51, 0.6), 0 0 60px rgba(188, 152, 51, 0.4), 0 0 100px rgba(188, 152, 51, 0.2)',
+                      }}
+                    >
                       Not Rushed.
                     </span>
                   </h1>
