@@ -446,7 +446,7 @@ export default function ServicesPage() {
               All services are subject to clinical appropriateness, physician judgment, and applicable law. Emergency services are not provided.
             </p>
             <p className="text-xs text-sfm-charcoal/40 max-w-3xl mx-auto">
-              <sup>dagger</sup>Executive Concierge does not provide unrestricted or continuous physician availability. Access, responsiveness, and after-hours communication are subject to clinical appropriateness, triage protocols, and physician discretion.
+              <sup>†</sup>Executive Concierge does not provide unrestricted or continuous physician availability. Access, responsiveness, and after-hours communication are subject to clinical appropriateness, triage protocols, and physician discretion.
             </p>
           </div>
         </div>
