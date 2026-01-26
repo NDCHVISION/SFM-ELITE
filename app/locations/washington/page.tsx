@@ -109,7 +109,7 @@ export default function WashingtonLocationPage() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
               </span>
-              <span className="text-emerald-300 text-sm font-semibold">Now Accepting Patients</span>
+              <span className="text-emerald-300 text-sm font-semibold">Founders Waitlist Now Open</span>
               <span className="w-px h-4 bg-white/20" />
               <span className="text-white/60 text-sm">Washington State</span>
             </div>
@@ -125,8 +125,8 @@ export default function WashingtonLocationPage() {
             </p>
 
             <div className="flex flex-wrap gap-4 mb-4">
-              <a href="https://sankofafamilymedicine.atlas.md/hub/login" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-10 py-5 group">
-                <span>Founding Member Enrollment Now Open</span>
+              <a href="/founders-waitlist" className="btn-primary text-base px-10 py-5 group">
+                <span>Reserve a Founders Spot</span>
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
               <Link href="/services" className="btn-secondary-white btn-shine text-base px-10 py-5">
@@ -134,7 +134,7 @@ export default function WashingtonLocationPage() {
               </Link>
             </div>
             <p className="text-white/40 text-xs mb-12">
-              All intake, scheduling, messaging, and visits occur securely inside Atlas.
+              Enrollment begins February 2026. No payment required today.
             </p>
 
             {/* Trust Points */}
@@ -322,7 +322,7 @@ export default function WashingtonLocationPage() {
         <div className="relative max-w-4xl mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-2 px-5 py-2.5 glass-gold rounded-full mb-10">
             <span className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse" />
-            <span className="text-sfm-gold text-sm font-semibold">Now Accepting Founding Members</span>
+            <span className="text-sfm-gold text-sm font-semibold">Founders Waitlist Now Open</span>
           </div>
 
           <h2 className="text-display-lg text-white mb-6">
@@ -330,16 +330,13 @@ export default function WashingtonLocationPage() {
             <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
           </h2>
 
-          <p className="text-white/60 text-lg mb-4 max-w-2xl mx-auto">
-            Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
-          </p>
-          <p className="text-white/40 text-sm mb-12 max-w-2xl mx-auto">
-            All intake, scheduling, messaging, and visits occur securely inside Atlas.
+          <p className="text-white/60 text-lg mb-12 max-w-2xl mx-auto">
+            Enrollment begins February 2026. No payment required today.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://sankofafamilymedicine.atlas.md/hub/login" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-12 py-5 group">
-              <span>Founding Member Enrollment Now Open</span>
+            <a href="/founders-waitlist" className="btn-primary text-base px-12 py-5 group">
+              <span>Reserve a Founders Spot</span>
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </a>
             <Link href="/services" className="btn-secondary-white text-base px-12 py-5">

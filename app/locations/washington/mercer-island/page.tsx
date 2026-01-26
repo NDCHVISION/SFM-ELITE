@@ -109,13 +109,13 @@ export default function MercerIslandPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <a
+              href="/founders-waitlist"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-colors"
             >
-              Request Consultation
+              Reserve a Founders Spot
               <ArrowRight className="w-5 h-5" />
-            </Link>
+            </a>
             <Link
               href="/services"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-colors"
@@ -184,27 +184,22 @@ export default function MercerIslandPage() {
           {/* Now Accepting Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" aria-hidden="true" />
-            <span className="text-white/80 text-sm font-medium">Now Accepting Founding Members</span>
+            <span className="text-white/80 text-sm font-medium">Founders Waitlist Now Open</span>
           </div>
           
           <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
             Begin Your Care with<br />
             <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
           </h2>
-          <p className="text-white/60 mb-4">
-            Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
-          </p>
-          <p className="text-white/40 text-xs mb-8">
-            All intake, scheduling, messaging, and visits occur securely inside Atlas.
+          <p className="text-white/60 mb-8">
+            Enrollment begins February 2026. No payment required today.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://sankofafamilymedicine.atlas.md/hub/login"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/founders-waitlist"
               className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-colors"
             >
-              Founding Member Enrollment Now Open
+              Reserve a Founders Spot
               <ArrowRight className="w-5 h-5" />
             </a>
             <Link href="/services" className="btn-secondary-white px-8 py-4">
