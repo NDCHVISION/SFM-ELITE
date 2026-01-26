@@ -4,13 +4,13 @@ import { ArrowRight, ArrowLeft, Check, X, Clock, Users, Zap } from 'lucide-react
 import { Metadata } from 'next'
 
 // =============================================================================
-// METADATA - DPC Focused, Optimized for 2026 SEO & AI Scraper Indexing
+// METADATA - Pure DPC Focus, Optimized for 2026 SEO & AI Scraper Indexing
 // =============================================================================
 
 export const metadata: Metadata = {
-  title: 'Direct Primary Care vs Traditional Medicine | Sankofa Family Medicine Comparison',
+  title: 'Direct Primary Care vs Traditional Primary Care | Sankofa Family Medicine',
   description:
-    'Compare Direct Primary Care (DPC) to traditional insurance-based clinics. Evidence-based differences: 15 min vs 45-75 min visits, 26-day waits vs same-day access, 2,300 patients vs fewer than 200. No insurance billing, no middlemen, just medicine.',
+    'Compare Direct Primary Care (DPC) with typical insurance-based primary care using published benchmarks on visit length, panel size, and appointment access. Membership-based, no insurance billing for primary care services.',
   keywords: [
     'direct primary care comparison',
     'DPC vs traditional primary care',
@@ -20,9 +20,7 @@ export const metadata: Metadata = {
     'DPC Bellevue',
     'DPC Spokane',
     'membership medicine comparison',
-    'concierge medicine comparison',
     'Medicine That Remembers',
-    'healthcare fragmentation',
     'virtual primary care comparison',
     'primary care wait times',
     'doctor patient ratio',
@@ -31,14 +29,16 @@ export const metadata: Metadata = {
     'Sankofa Family Medicine',
     'no insurance primary care',
     'membership primary care',
+    'direct primary care benefits',
+    'DPC model explained',
   ],
   authors: [{ name: 'Dr. Yaw Nkrumah, MD', url: 'https://sankofafamilymedicine.com/founder' }],
   creator: 'Sankofa Family Medicine',
   publisher: 'Sankofa Family Medicine',
   openGraph: {
-    title: 'Direct Primary Care vs Traditional Medicine | Sankofa Family Medicine',
+    title: 'Direct Primary Care vs Traditional Primary Care | Sankofa Family Medicine',
     description:
-      'Evidence-based comparison: 15 min vs 45-75 min visits, 26-day waits vs same-day access, 2,300 patients vs fewer than 200. See why Direct Primary Care works.',
+      'Compare DPC with insurance-based primary care using published benchmarks: visit length, panel size, appointment access. No insurance billing for primary care.',
     url: 'https://sankofafamilymedicine.com/compare',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Direct Primary Care vs Traditional Medicine | Sankofa Family Medicine',
+    title: 'Direct Primary Care vs Traditional Primary Care | Sankofa Family Medicine',
     description:
-      'Evidence-based comparison: 15 min vs 45-75 min visits, 26-day waits vs same-day access. See why DPC works.',
+      'Compare DPC with insurance-based care: visit length, panel size, access. No insurance billing for primary care.',
     images: ['https://sankofafamilymedicine.com/images/og-compare.png'],
     creator: '@sankofafamilymed',
   },
@@ -92,14 +92,14 @@ export const metadata: Metadata = {
     'topic-secondary': 'Patient Experience, Physician Access, Healthcare Costs, Insurance-Free Medicine',
     'article-modified-time': '2026-01-26',
     'content-modified': '2026-01-26',
-    'voice-query-match': 'What is direct primary care, What is DPC, How is DPC different from regular doctor, How long are DPC appointments, How many patients does a DPC doctor have, Is direct primary care worth it, DPC vs concierge medicine',
+    'voice-query-match': 'What is direct primary care, What is DPC, How is DPC different from regular doctor, How long are DPC appointments, How many patients does a DPC doctor have, Is direct primary care worth it',
     'snippet-target': 'comparison, table, list, definition',
     'answer-box-eligible': 'true',
   },
 }
 
 // =============================================================================
-// STRUCTURED DATA - DPC Focused Schema for 2026 SEO
+// STRUCTURED DATA - Pure DPC Schema for 2026 SEO
 // =============================================================================
 
 const structuredData = {
@@ -109,9 +109,9 @@ const structuredData = {
       '@type': 'MedicalWebPage',
       '@id': 'https://sankofafamilymedicine.com/compare#webpage',
       url: 'https://sankofafamilymedicine.com/compare',
-      name: 'Direct Primary Care vs Traditional Insurance-Based Medicine',
+      name: 'Direct Primary Care vs Traditional Primary Care',
       description:
-        'Evidence-based side-by-side comparison between typical insurance-based primary care and Direct Primary Care (DPC) at Sankofa Family Medicine.',
+        'Evidence-based comparison between typical insurance-based primary care and Direct Primary Care (DPC) at Sankofa Family Medicine using published benchmarks.',
       specialty: { '@type': 'MedicalSpecialty', name: 'Family Medicine' },
       isPartOf: {
         '@type': 'WebSite',
@@ -146,7 +146,7 @@ const structuredData = {
           name: 'How long is a typical primary care appointment?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Typical insurance-based primary care appointments average 15 minutes. Direct Primary Care practices like Sankofa Family Medicine offer 45 to 75 minute visits, allowing for comprehensive evaluation and unhurried conversation.',
+            text: 'Typical insurance-based primary care appointments average 15 minutes. Direct Primary Care practices like Sankofa Family Medicine offer 45 to 75 minute visits, allowing for comprehensive evaluation and unhurried conversation. Typical appointment length varies by clinic and region.',
           },
         },
         {
@@ -162,7 +162,7 @@ const structuredData = {
           name: 'Can I message my doctor directly with Direct Primary Care?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. In typical insurance-based care, patients use patient portals with 48+ hour response times. Sankofa Family Medicine offers direct secure messaging with responses within one business day, Monday through Friday.',
+            text: 'Yes. In typical insurance-based care, patients use patient portals with 48+ hour response times. Sankofa Family Medicine offers direct secure messaging with response within one business day, Monday through Friday.',
           },
         },
         {
@@ -183,14 +183,6 @@ const structuredData = {
         },
         {
           '@type': 'Question',
-          name: 'What is the difference between Direct Primary Care and concierge medicine?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Both models feature smaller patient panels and longer visits. The key difference: Direct Primary Care does not bill insurance at all for primary care services. Concierge medicine often still bills insurance and charges a retainer on top. DPC eliminates the insurance layer entirely.',
-          },
-        },
-        {
-          '@type': 'Question',
           name: 'Do I still need health insurance with DPC?',
           acceptedAnswer: {
             '@type': 'Answer',
@@ -202,7 +194,7 @@ const structuredData = {
     {
       '@type': 'Table',
       about: 'Direct Primary Care vs Insurance-Based Care Comparison',
-      description: 'Comparison of typical insurance-based primary care versus Sankofa Family Medicine Direct Primary Care',
+      description: 'Comparison of typical insurance-based primary care versus Sankofa Family Medicine Direct Primary Care using published benchmarks',
     },
     {
       '@type': 'BreadcrumbList',
@@ -251,7 +243,7 @@ const comparisonData = [
     category: 'Appointment Waits',
     context: 'Days until you are seen',
     traditional: { value: '26+ days', label: 'average wait', isNegative: false },
-    sankofa: { text: 'Same day or next business day for urgent concerns whenever possible', isPositive: true },
+    sankofa: { text: 'Same day or next business day for urgent concerns when available', isPositive: true },
     highlight: false,
   },
   {
@@ -279,7 +271,7 @@ const comparisonData = [
     category: 'Message Your Doctor',
     context: 'How you reach your physician',
     traditional: { text: 'Patient portal, 48+ hour response', isNegative: true },
-    sankofa: { text: 'Direct secure messaging, response within one business day', isPositive: true },
+    sankofa: { text: 'Direct secure messaging with response within one business day', isPositive: true },
     highlight: false,
   },
   {
@@ -324,7 +316,7 @@ export default function ComparePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
-      {/* Hero with Stat Preview */}
+      {/* Hero */}
       <section className="pt-40 pb-20 bg-gradient-to-b from-sfm-navy via-sfm-navy to-[#070705] relative overflow-hidden">
         {/* Background Elements */}
         <div className="absolute top-1/4 -left-32 w-96 h-96 bg-sfm-gold/5 rounded-full blur-3xl" aria-hidden="true" />
@@ -353,13 +345,14 @@ export default function ComparePage() {
           </div>
 
           <p className="text-sfm-gold text-sm tracking-[0.3em] uppercase mb-4 font-medium">
-            A Different Model
+            Compare Models
           </p>
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1]">
-            The <em className="text-sfm-gold italic">Evidence</em> Speaks
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-[1.1]">
+            Direct Primary Care vs<br />
+            <span className="text-sfm-gold">Traditional Primary Care</span>
           </h1>
           <p className="text-white/75 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
-            Direct Primary Care removes the insurance layer from your primary care relationship. Every metric below is drawn from peer-reviewed research. The difference is not subtle.
+            Direct Primary Care removes insurance billing from primary care so time, access, and continuity return to the physician-patient relationship.
           </p>
 
           {/* Stat Preview Row */}
@@ -388,6 +381,13 @@ export default function ComparePage() {
       {/* Comparison Table */}
       <section className="py-16 bg-gradient-to-b from-[#070705] to-sfm-navy">
         <div className="max-w-5xl mx-auto px-6">
+          {/* Section Intro */}
+          <div className="text-center mb-12">
+            <p className="text-white/60 text-base max-w-2xl mx-auto">
+              This page compares Direct Primary Care with typical insurance-based clinics using published benchmarks on visit length, panel size, and appointment access.
+            </p>
+          </div>
+
           {/* Desktop Table */}
           <div className="hidden md:block overflow-hidden rounded-2xl border border-white/10">
             <table className="w-full" role="table" aria-label="Healthcare model comparison: Traditional insurance-based care versus Sankofa Family Medicine Direct Primary Care">
@@ -524,7 +524,7 @@ export default function ComparePage() {
           {/* Footnote */}
           <div className="mt-8 text-center">
             <p className="text-white/40 text-sm italic">
-              *Typical features of many insurance-based primary care clinics. Individual experiences may differ.
+              *Typical features of many insurance-based primary care clinics. Typical appointment length varies by clinic and region. Individual experiences may differ.
             </p>
           </div>
 
@@ -533,7 +533,7 @@ export default function ComparePage() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="text-center md:text-left">
                 <p className="text-white/75 text-sm mb-2">
-                  <strong className="text-white">Evidence-based statistics</strong> from peer-reviewed sources:
+                  <strong className="text-white">Published benchmarks</strong> from peer-reviewed sources:
                 </p>
                 <p className="text-white/40 text-xs leading-relaxed">
                   PMC, AAFP, AMN Healthcare, Society of Actuaries, Health Tracking Household Survey
@@ -571,7 +571,7 @@ export default function ComparePage() {
                   What This Means for You
                 </h2>
                 <p className="text-white/70 leading-relaxed mb-4">
-                  Direct Primary Care removes the insurance middleman from your primary care relationship. No claim forms, no prior authorizations for your primary care, no surprise bills. Just a simple monthly membership and a physician who has time for you.
+                  Direct Primary Care removes the insurance middleman from your primary care relationship. No claim forms for primary care visits, no surprise bills. A simple monthly membership and a physician who has time for you.
                 </p>
                 <p className="text-white/70 leading-relaxed">
                   One physician and care team who know your history and stay with you over time. When your doctor has fewer patients and more time, care improves. That is the DPC model.
@@ -631,7 +631,7 @@ export default function ComparePage() {
           </h2>
 
           <p className="text-white/75 text-lg mb-4 max-w-2xl mx-auto">
-            The evidence is clear. The choice is yours.
+            The data is clear. The choice is yours.
           </p>
 
           <p className="text-white/50 text-base mb-10 max-w-xl mx-auto">
@@ -676,5 +676,4 @@ export default function ComparePage() {
     </>
   )
 }
-
 
