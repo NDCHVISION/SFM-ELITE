@@ -28,10 +28,10 @@ export default function HomePage() {
     <>
       {/* ================================================================
           HERO SECTION
-          - Clean radiating glow (no boxy shadows)
-          - Accessible font sizes (min 16px body, 18px important text)
-          - Staggered animations for cinematic reveal
-          - Scroll indicator
+          - "Remembered. Not Rushed." headline
+          - "Medicine That Remembers™" as primary brand stamp
+          - Clean radiating glow
+          - Staggered animations
           ================================================================ */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background */}
@@ -73,8 +73,15 @@ export default function HomePage() {
               {/* Left Column */}
               <div className="order-2 lg:order-1">
                 
-                {/* Location Badge - animation-delay-100 */}
-                <div className="opacity-0 animate-fade-in animation-delay-100 mb-10">
+                {/* Primary Brand Stamp - Medicine That Remembers™ */}
+                <div className="opacity-0 animate-fade-in animation-delay-100 mb-6">
+                  <p className="text-sfm-gold font-display text-2xl lg:text-3xl">
+                    Medicine That Remembers™
+                  </p>
+                </div>
+
+                {/* Location Badge */}
+                <div className="opacity-0 animate-fade-in animation-delay-200 mb-10">
                   <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" aria-hidden="true" />
                     <span className="text-white/80 text-sm sm:text-base font-medium">Membership-Based Primary Care</span>
@@ -83,10 +90,10 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Headline - Golden Radiating Glow - animation-delay-300 */}
+                {/* Headline - Golden Radiating Glow */}
                 <div className="overflow-hidden mb-10">
                   <h1 className="opacity-0 animate-hero-text animation-delay-300 relative" data-speakable>
-                    {/* Radiating glow behind text - clean elliptical, not boxy */}
+                    {/* Radiating glow behind text */}
                     <span 
                       className="absolute -inset-8 -z-10 opacity-80"
                       style={{
@@ -116,23 +123,23 @@ export default function HomePage() {
                   </h1>
                 </div>
 
-                {/* Subheadline - animation-delay-500 */}
+                {/* Subheadline */}
                 <div className="opacity-0 animate-fade-in animation-delay-500 mb-12">
                   <p className="text-lg lg:text-xl text-white/75 leading-relaxed max-w-xl">
-                    Sankofa Family Medicine is built on continuity, not throughput. Your physician understands your history, context, and priorities and carries them forward with intention.
+                    Sankofa Family Medicine is built on continuity, not throughput. Your physician knows your history, context, and priorities and carries them forward with intention.
                   </p>
                   <p className="text-lg lg:text-xl text-white/90 font-medium leading-relaxed max-w-xl mt-5">
                     Memory is not an add-on here. It is the foundation of care.
                   </p>
                 </div>
 
-                {/* Value Props with hover states - animation-delay-700 */}
+                {/* Value Props with hover states */}
                 <div className="opacity-0 animate-fade-in animation-delay-700 mb-12">
                   <div className="space-y-5">
                     {[
                       {
                         title: 'Continuity that compounds',
-                        text: 'Each visit builds on an informed understanding of your medical history, not a blank slate.',
+                        text: 'Each visit builds on knowledge of your medical history, not a blank slate.',
                       },
                       {
                         title: 'Direct physician-led care',
@@ -154,15 +161,15 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* CTA Bridge - animation-delay-900 */}
+                {/* CTA Bridge */}
                 <div className="opacity-0 animate-fade-in animation-delay-900 mb-8">
                   <p className="text-white/80 text-lg lg:text-xl leading-relaxed max-w-lg">
                     Ready for care that does not reset every visit?<br />
-                    Join a practice designed around continuity, judgment, and long-term relationships.
+                    Join a practice built for continuity, judgment, and long-term outcomes.
                   </p>
                 </div>
 
-                {/* CTA Buttons - animation-delay-1000 */}
+                {/* CTA Buttons */}
                 <div className="opacity-0 animate-fade-in animation-delay-1000 flex flex-wrap items-center gap-4">
                   <PrimaryCTA variant="hero" />
                   <Link 
@@ -174,17 +181,14 @@ export default function HomePage() {
                   </Link>
                 </div>
 
-                {/* Signature Line - animation-delay-1100 */}
+                {/* Launch Info */}
                 <div className="opacity-0 animate-fade-in animation-delay-1100 mt-8">
-                  <p className="text-sfm-gold font-display text-xl mb-2">
-                    Medicine That Remembers™
-                  </p>
                   <p className="text-white/50 text-base">
-                    Enrollment begins February 2026. No payment required today.
+                    Clinical care begins February 2026. No payment required today.
                   </p>
                 </div>
 
-                {/* Trust Indicators with tooltips - animation-delay-1200 */}
+                {/* Trust Indicators with tooltips */}
                 <div className="opacity-0 animate-fade-in animation-delay-1200 mt-10 pt-8 border-t border-white/10">
                   <div className="flex flex-wrap items-center gap-6 sm:gap-8">
                     {/* HIPAA Compliant with tooltip */}
@@ -211,14 +215,14 @@ export default function HomePage() {
                       </div>
                     </div>
                     
-                    {/* Same Day Access with tooltip */}
+                    {/* Same Day Access with tooltip - consistent language */}
                     <div className="relative group">
                       <div className="flex items-center gap-2 text-white/60 text-base cursor-help">
                         <Clock className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
-                        <span>Same or Next Day Access</span>
+                        <span>Same-Day or Next-Day Visits</span>
                       </div>
                       <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-white text-sfm-navy text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-20">
-                        Virtual visits for urgent concerns when available.
+                        For urgent concerns when available.
                         <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white" />
                       </div>
                     </div>
@@ -269,7 +273,6 @@ export default function HomePage() {
 
       {/* ================================================================
           PHILOSOPHY SECTION
-          - Added Sankofa bird icon above heading
           ================================================================ */}
       <section className="relative py-24 lg:py-32 bg-sfm-cream overflow-hidden">
         <div className="absolute inset-0 pattern-sankofa-subtle opacity-30" aria-hidden="true" />
@@ -291,7 +294,7 @@ export default function HomePage() {
               Our Philosophy
             </span>
             <h2 className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight">
-              Medicine That Remembers
+              Medicine That Remembers™
             </h2>
             <p className="text-lg text-sfm-navy/70 leading-relaxed mb-6">
               Sankofa is a West African word and symbol that means &ldquo;go back and retrieve what matters.&rdquo; 
@@ -318,7 +321,7 @@ export default function HomePage() {
               {
                 icon: MessageCircle,
                 title: 'Accessible When Needed',
-                description: 'Message your physician directly and receive a response within one business day, Monday through Friday. For urgent concerns, virtual visits are available the same or next business day when available.',
+                description: 'Secure messages answered within one business day (Mon-Fri). Same-day or next-business-day visits for urgent concerns when available.',
               },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
@@ -343,7 +346,6 @@ export default function HomePage() {
 
       {/* ================================================================
           WHO WE SERVE
-          - Added hover ring effect to images
           ================================================================ */}
       <section className="relative py-20 lg:py-28 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
@@ -458,7 +460,7 @@ export default function HomePage() {
                   <ul className="space-y-4">
                     {[
                       '45 to 75 minute visits that give you time to be heard',
-                      'Same or next business day virtual access for urgent concerns when available',
+                      'Same-day or next-business-day visits for urgent concerns when available',
                       'Fewer than 200 patients per physician to protect time and access',
                       'The same physician every time, not a rotating team',
                       'Clear monthly pricing with multiple payment options (credit, debit, HSA/FSA, ACH, Apple Pay, Google Pay). No visit fees or unexpected bills.',
@@ -591,8 +593,8 @@ export default function HomePage() {
 
       {/* ================================================================
           MEMBERSHIP PREVIEW
-          - Tier names: Continuity Concierge, Precision Concierge, Executive Concierge
-          - Founding member callout
+          - Tier cards link to specific anchors on /services
+          - Founding member callout with rate confirmation
           - Shine effect on featured tier
           ================================================================ */}
       <section id="membership-plans" className="relative py-24 lg:py-32 bg-white overflow-hidden">
@@ -608,7 +610,7 @@ export default function HomePage() {
               Every membership includes generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing. All memberships operate under the Direct Primary Care (DPC) model: no insurance billing for primary care services.
             </p>
             <p className="text-sfm-gold font-medium text-base">
-              Founding members receive the lower end of each range.
+              Founding members receive the lower end of each range. Your exact rate is confirmed before enrollment.
             </p>
           </ScrollReveal>
 
@@ -619,18 +621,21 @@ export default function HomePage() {
                 priceRange: '$225–$275',
                 description: 'Essential virtual primary care designed to restore the continuity traditional medicine has lost.',
                 featured: false,
+                anchor: 'continuity',
               },
               {
                 name: 'Precision Concierge',
                 priceRange: '$325–$375',
                 description: 'Everything in Continuity plus deeper preventive insight and advanced diagnostics when appropriate.',
                 featured: true,
+                anchor: 'precision',
               },
               {
                 name: 'Executive Concierge',
                 priceRange: '$650–$725',
                 description: 'Enhanced access, coordination, and comprehensive health planning for individuals and families.',
                 featured: false,
+                anchor: 'executive',
               },
             ].map((tier, i) => (
               <ScrollReveal key={tier.name} delay={i * 0.1}>
@@ -680,7 +685,7 @@ export default function HomePage() {
                   </p>
                   
                   <Link 
-                    href="/services" 
+                    href={`/services#${tier.anchor}`}
                     className={`inline-flex items-center gap-2 text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded relative z-10 ${
                       tier.featured 
                         ? 'text-sfm-gold hover:text-sfm-gold-light focus:ring-offset-sfm-navy' 
@@ -798,7 +803,6 @@ export default function HomePage() {
 
       {/* ================================================================
           FINAL CTA
-          - Soft urgency text added
           ================================================================ */}
       <section className="relative py-24 lg:py-32 overflow-hidden" aria-labelledby="cta-heading">
         <div className="absolute inset-0 bg-sfm-navy" />
@@ -833,7 +837,7 @@ export default function HomePage() {
           </h2>
           
           <p className="text-white/70 text-lg lg:text-xl mb-6 max-w-xl mx-auto leading-relaxed">
-            Enrollment starts in Atlas. Secure intake, scheduling, messaging, and visits happen there.
+            Care is delivered through Atlas. Secure intake, scheduling, messaging, and visits happen there.
           </p>
 
           {/* Soft urgency text */}
