@@ -23,22 +23,24 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About Sankofa Family Medicine | Medicine That Remembers',
   description:
-    'Learn about Sankofa Family Medicine, a virtual-first concierge medicine practice serving Washington State. Founded on the Sankofa principle of retrieving what matters to carry forward.',
-  keywords: [
-    'Sankofa Family Medicine',
-    'concierge medicine',
-    'concierge medicine Washington',
-    'virtual primary care',
-    'Washington State telehealth',
-    'Medicine That Remembers',
-    'Dr. Yaw Nkrumah',
-    'patient-centered care',
-    'continuity of care',
-  ],
+  'Sankofa Family Medicine is a physician-led, virtual primary care practice in Washington State focused on continuity, context, and long-term relationships. We learn and remember your medical history so each visit builds on the last. ',
+ ',
+keywords: [
+  'Sankofa Family Medicine',
+  'concierge primary care Washington',
+  'physician-led primary care',
+  'virtual primary care Washington',
+  'telehealth primary care WA',
+  'continuity of care',
+  'patient-centered primary care',
+  'Medicine That Remembers',
+  'Dr. Yaw Nkrumah',
+],
+
   openGraph: {
     title: 'About Sankofa Family Medicine | Medicine That Remembers',
     description:
-      'Virtual-first direct primary care serving Washington State. Founded on the principle of retrieving what matters.',
+     'Virtual-first concierge primary care for Washington State. Built on Sankofa,we learn from your past to guide better care today and tomorrow.',
     url: 'https://sankofafamilymedicine.com/about',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -55,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'About Sankofa Family Medicine',
-    description: 'Virtual-first direct primary care serving Washington State.',
+    description: 'Virtual-first concierge primary care serving Washington State.',
     images: ['/images/og-image.png'],
   },
   alternates: {
@@ -181,14 +183,14 @@ const howToJsonLd = {
       '@type': 'HowToStep',
       position: 1,
       name: 'Secure Onboarding',
-      text: 'Complete secure onboarding in our private clinical platform.',
+      text: 'Complete secure onboarding in our HIPAA compliant private clinical platform.',
       url: 'https://sankofafamilymedicine.atlas.md/hub/login',
     },
     {
       '@type': 'HowToStep',
       position: 2,
       name: 'Ongoing Care Partnership',
-      text: 'Receive virtual-first visits, direct physician access, and long-term partnership over time.',
+      text: 'Receive virtual-first visits, direct physician access, and a long-term healthcare relationship built on continuity',
     },
   ],
 }
