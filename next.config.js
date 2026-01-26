@@ -61,11 +61,11 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://formspree.io",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://formspree.io https://sankofafamilymedicine.atlas.md https://*.atlas.md",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "img-src 'self' data: https: blob:",
               "font-src 'self' https://fonts.gstatic.com",
-              "connect-src 'self' https://www.google-analytics.com https://formspree.io https://analytics.google.com",
+              "connect-src 'self' https://www.google-analytics.com https://formspree.io https://analytics.google.com https://sankofafamilymedicine.atlas.md https://*.atlas.md",
               "frame-src 'self' https://www.google.com https://sankofafamilymedicine.atlas.md https://*.atlas.md",
               "frame-ancestors 'self'",
               "form-action 'self' https://formspree.io",
