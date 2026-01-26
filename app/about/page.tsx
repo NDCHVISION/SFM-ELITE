@@ -487,7 +487,7 @@ const philosophyPillars = [
     icon: Heart,
     title: 'Relationship Continuity',
     description:
-      'See the same physician every visit and build trust over time'',
+      'See the same physician every visit and build trust over time',
   },
   {
     icon: Sparkles,
