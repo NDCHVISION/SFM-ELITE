@@ -31,7 +31,8 @@ export default function FoundersWaitlistPage() {
             title="Founding Member Enrollment Form"
             className="w-full border-0"
             style={{ height: '900px' }}
-            loading="lazy"
+            loading="lazy"30
+          
           />
         </div>
       </div>
