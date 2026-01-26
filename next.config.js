@@ -66,7 +66,7 @@ const nextConfig = {
               "img-src 'self' data: https: blob:",
               "font-src 'self' https://fonts.gstatic.com",
               "connect-src 'self' https://www.google-analytics.com https://formspree.io https://analytics.google.com",
-              "frame-src 'self' https://www.google.com",
+              "frame-src 'self' https://www.google.com https://sankofafamilymedicine.atlas.md https://*.atlas.md",
               "frame-ancestors 'self'",
               "form-action 'self' https://formspree.io",
               "base-uri 'self'",
