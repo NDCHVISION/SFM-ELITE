@@ -709,131 +709,131 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
 
-      <main className="overflow-hidden">
+      <main "overflow-hidden">
         {/* ================================================================= */}
         {/* HERO SECTION */}
         {/* ================================================================= */}
         <section
-          className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-sfm-navy via-[#0a2847] to-sfm-navy overflow-hidden"
+          "relative min-h-[85vh] flex items-center bg-gradient-to-br from-sfm-navy via-[#0a2847] to-sfm-navy overflow-hidden"
           aria-labelledby="hero-heading"
         >
           {/* Background Elements */}
           <div
-            className="absolute inset-0 pattern-sankofa-spiral-gold pattern-sankofa-animated pattern-subtle"
+            "absolute inset-0 pattern-sankofa-spiral-gold pattern-sankofa-animated pattern-subtle"
             aria-hidden="true"
           />
           <div
-            className="absolute top-1/4 -left-32 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl animate-pulse-slow"
+            "absolute top-1/4 -left-32 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl animate-pulse-slow"
             aria-hidden="true"
           />
           <div
-            className="absolute bottom-1/4 -right-32 w-96 h-96 bg-sfm-azure/10 rounded-full blur-3xl animate-pulse-slow"
+            "absolute bottom-1/4 -right-32 w-96 h-96 bg-sfm-azure/10 rounded-full blur-3xl animate-pulse-slow"
             aria-hidden="true"
           />
 
           {/* Grain Texture Overlay */}
           <div
-            className="absolute inset-0 opacity-[0.015] pointer-events-none"
+            "absolute inset-0 opacity-[0.015] pointer-events-none"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
             }}
             aria-hidden="true"
           />
 
-          <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 lg:py-32">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div "relative z-10 max-w-7xl mx-auto px-6 py-24 lg:py-32">
+            <div "grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Content */}
-              <div className="animate-fade-in-up">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/10 mb-8">
+              <div "animate-fade-in-up">
+                <div "inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/10 mb-8">
                   <span
-                    className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse"
+                    "w-2 h-2 bg-sfm-gold rounded-full animate-pulse"
                     aria-hidden="true"
                   />
-                  <span className="text-white/80 text-sm font-medium tracking-wide">
+                  <span "text-white/80 text-sm font-medium tracking-wide">
                     About Our Practice
                   </span>
                 </div>
 
                 <h1
                   id="hero-heading"
-                  className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-2 leading-tight"
+                  "font-display text-4xl md:text-5xl lg:text-6xl text-white mb-2 leading-tight"
                 >
                   Healthcare Built on{' '}
-                  <span className="text-sfm-gold">Continuity</span>
+                  <span "text-sfm-gold">Continuity</span>
                 </h1>
 
-                <p className="font-display text-2xl md:text-3xl lg:text-4xl text-white/80 mb-6 leading-tight">
+                <p "font-display text-2xl md:text-3xl lg:text-4xl text-white/80 mb-6 leading-tight">
                   Through Memory
                 </p>
 
                 {/* Speakable content for voice search */}
-                <div className="speakable-intro">
-                  <p className="text-white/70 text-lg md:text-xl mb-6 max-w-xl leading-relaxed">
+                <div "speakable-intro">
+                  <p "text-white/70 text-lg md:text-xl mb-6 max-w-xl leading-relaxed">
                     At Sankofa Family Medicine, continuity is practiced as a clinical discipline. Your medical history and context are preserved and carried forward so treatment decisions compound rather than reset.
                   </p>
                 </div>
 
-                <p className="text-sfm-gold text-lg font-medium mb-8 flex items-center gap-1">
+                <p "text-sfm-gold text-lg font-medium mb-8 flex items-center gap-1">
                   Medicine That Remembers
-                  <sup className="text-xs" aria-label="Trademark">™</sup>
+                  <sup "text-xs" aria-label="Trademark">™</sup>
                 </p>
 
                 {/* Hero Differentiators Bar */}
-                <div className="flex flex-wrap gap-4 lg:gap-6 mb-8 py-4 border-t border-b border-white/10">
+                <div "flex flex-wrap gap-4 lg:gap-6 mb-8 py-4 border-t border-b border-white/10">
                   {differentiators.map((item) => (
-                    <div key={item.label} className="flex items-center gap-2">
-                      <item.icon className="w-4 h-4 text-sfm-gold" strokeWidth={1.5} aria-hidden="true" />
-                      <span className="text-white font-display text-lg">{item.stat}</span>
-                      <span className="text-white/50 text-sm">{item.unit} {item.label}</span>
+                    <div key={item.label} "flex items-center gap-2">
+                      <item.icon "w-4 h-4 text-sfm-gold" strokeWidth={1.5} aria-hidden="true" />
+                      <span "text-white font-display text-lg">{item.stat}</span>
+                      <span "text-white/50 text-sm">{item.unit} {item.label}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-4">
+                <div "flex flex-wrap gap-4">
                   <Link
                     href="/founders-waitlist"
-                    className="btn-primary group"
+                    "btn-primary group"
                     aria-label="Reserve your founding membership spot at Sankofa Family Medicine"
                   >
                     Reserve a Founders Spot
                     <ArrowRight
-                      className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                      "w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
                       aria-hidden="true"
                     />
                   </Link>
                   <Link
                     href="/#membership-plans"
-                    className="btn-secondary-white btn-shine"
+                    "btn-secondary-white btn-shine"
                     aria-label="View Direct Primary Care membership plan options and pricing"
                   >
                     Membership Plans
                   </Link>
                 </div>
 
-                <p className="text-white/40 text-xs mt-4">
+                <p "text-white/40 text-xs mt-4">
                   Enrollment begins February 2026. No payment required today.
                 </p>
               </div>
 
               {/* Hero Image - Wooden Sankofa Sculpture */}
-              <div className="relative hidden lg:block animate-fade-in-up animation-delay-200">
-                <div className="relative aspect-[4/5] max-w-lg mx-auto group">
+              <div "relative hidden lg:block animate-fade-in-up animation-delay-200">
+                <div "relative aspect-[4/5] max-w-lg mx-auto group">
                   <div
-                    className="absolute inset-0 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl animate-pulse-slow"
+                    "absolute inset-0 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl animate-pulse-slow"
                     aria-hidden="true"
                   />
-                  <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden image-tilt image-fade-dark">
+                  <div "relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden image-tilt image-fade-dark">
                     <Image
                       src="/images/sankofa-wooden-sculpture.png"
                       alt="Traditional hand-carved wooden Sankofa bird sculpture from West Africa, representing the Akan principle of retrieving wisdom from the past to guide the future, a core philosophy of Sankofa Family Medicine"
                       fill
-                      className="object-cover opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
+                      "object-cover opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
                       priority
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-sfm-navy/90 to-transparent p-8">
-                      <p className="text-sfm-gold font-display text-lg mb-1">Sankofa</p>
-                      <p className="text-white/70 text-sm italic">
+                    <div "absolute bottom-0 left-0 right-0 bg-gradient-to-t from-sfm-navy/90 to-transparent p-8">
+                      <p "text-sfm-gold font-display text-lg mb-1">Sankofa</p>
+                      <p "text-white/70 text-sm italic">
                         Retrieve what matters from the past. Apply it deliberately.
                       </p>
                     </div>
@@ -845,7 +845,7 @@ export default function AboutPage() {
 
           {/* Memory Thread Visual Element */}
           <div
-            className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sfm-gold/50 to-transparent"
+            "absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sfm-gold/50 to-transparent"
             aria-hidden="true"
           />
         </section>
@@ -854,26 +854,26 @@ export default function AboutPage() {
         {/* THE SANKOFA PRINCIPLE - Featuring Gold Bird Logo */}
         {/* ================================================================= */}
         <section
-          className="py-24 bg-white"
+          "py-24 bg-white"
           aria-labelledby="sankofa-principle-heading"
         >
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="animate-on-scroll">
-                <p className="section-label">The Principle</p>
+          <div "max-w-6xl mx-auto px-6">
+            <div "grid lg:grid-cols-2 gap-16 items-center">
+              <div "animate-on-scroll">
+                <p "section-label">The Principle</p>
                 <h2
                   id="sankofa-principle-heading"
-                  className="font-display text-3xl md:text-4xl text-sfm-navy mb-6"
+                  "font-display text-3xl md:text-4xl text-sfm-navy mb-6"
                 >
                   What does Sankofa mean?
                 </h2>
                 <div
-                  className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-8"
+                  "w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-8"
                   aria-hidden="true"
                 />
 
                 {/* Speakable content for voice search */}
-                <div className="speakable-sankofa space-y-6 text-sfm-navy/70 leading-relaxed">
+                <div "speakable-sankofa space-y-6 text-sfm-navy/70 leading-relaxed">
                   <p>
                     Sankofa is an Akan principle from West Africa, symbolized by a bird looking backward while moving forward. Its meaning is simple and precise: it is right and necessary to return to the past, retrieve what was learned, and carry it forward for a higher purpose.
                   </p>
@@ -882,11 +882,11 @@ export default function AboutPage() {
                   </p>
                   <p>
                     Sankofa Family Medicine was designed for continuity. One physician who knows your history, visit after visit, so medical decisions build instead of reset. Learn more about our{' '}
-                    <Link href="/services" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                    <Link href="/services" "text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
                       virtual primary care services
                     </Link>{' '}
                     or explore our{' '}
-                    <Link href="/#membership-plans" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                    <Link href="/#membership-plans" "text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
                       membership options
                     </Link>.
                   </p>
@@ -894,33 +894,33 @@ export default function AboutPage() {
               </div>
 
               {/* Sankofa Gold Bird Logo Display */}
-              <div className="relative group animate-on-scroll animation-delay-200">
-                <div className="relative aspect-square max-w-md mx-auto">
+              <div "relative group animate-on-scroll animation-delay-200">
+                <div "relative aspect-square max-w-md mx-auto">
                   {/* Background pattern */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-sfm-cream via-white to-sfm-cream border border-sfm-gold/10 overflow-hidden">
-                    <div className="absolute inset-0 pattern-sankofa-spiral-gold opacity-10" aria-hidden="true" />
+                  <div "absolute inset-0 rounded-3xl bg-gradient-to-br from-sfm-cream via-white to-sfm-cream border border-sfm-gold/10 overflow-hidden">
+                    <div "absolute inset-0 pattern-sankofa-spiral-gold opacity-10" aria-hidden="true" />
                   </div>
 
                   {/* Gold glow */}
                   <div
-                    className="absolute inset-12 bg-gradient-to-br from-sfm-gold/30 to-sfm-gold/10 rounded-full blur-3xl animate-pulse-slow"
+                    "absolute inset-12 bg-gradient-to-br from-sfm-gold/30 to-sfm-gold/10 rounded-full blur-3xl animate-pulse-slow"
                     aria-hidden="true"
                   />
 
                   {/* Sankofa bird logo */}
-                  <div className="absolute inset-0 flex items-center justify-center p-16">
+                  <div "absolute inset-0 flex items-center justify-center p-16">
                     <Image
                       src="/images/sankofa-bird-gold.png"
                       alt="Golden Sankofa bird logo with sapphire blue eye, the official symbol of Sankofa Family Medicine representing Medicine That Remembers and the West African Akan principle of learning from the past"
                       width={280}
                       height={280}
-                      className="relative drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
+                      "relative drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
 
                   {/* Quote card */}
-                  <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] bg-white rounded-2xl shadow-xl shadow-sfm-navy/10 p-6 border border-sfm-gold/10">
-                    <p className="text-sfm-navy/70 text-center italic font-display">
+                  <div "absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] bg-white rounded-2xl shadow-xl shadow-sfm-navy/10 p-6 border border-sfm-gold/10">
+                    <p "text-sfm-navy/70 text-center italic font-display">
                       "Go back and retrieve what matters. Carry it forward."
                     </p>
                   </div>
@@ -934,21 +934,21 @@ export default function AboutPage() {
         {/* MEDICINE THAT REMEMBERS */}
         {/* ================================================================= */}
         <section
-          className="py-24 bg-sfm-cream"
+          "py-24 bg-sfm-cream"
           aria-labelledby="philosophy-heading"
         >
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+          <div "max-w-6xl mx-auto px-6">
+            <div "grid lg:grid-cols-2 gap-16 items-center mb-16">
               {/* Image */}
-              <div className="relative order-2 lg:order-1 group animate-on-scroll">
+              <div "relative order-2 lg:order-1 group animate-on-scroll">
                 <div
-                  className="absolute -inset-6 bg-gradient-to-br from-sfm-gold/25 via-sfm-azure/10 to-transparent rounded-3xl blur-3xl animate-pulse-slow"
+                  "absolute -inset-6 bg-gradient-to-br from-sfm-gold/25 via-sfm-azure/10 to-transparent rounded-3xl blur-3xl animate-pulse-slow"
                   aria-hidden="true"
                 />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-sfm-navy/20 image-fade-elite">
+                <div "relative rounded-2xl overflow-hidden shadow-2xl shadow-sfm-navy/20 image-fade-elite">
                   {/* Brand color overlay */}
                   <div
-                    className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-tr from-sfm-navy/10 via-transparent to-sfm-gold/5"
+                    "absolute inset-0 z-10 pointer-events-none bg-gradient-to-tr from-sfm-navy/10 via-transparent to-sfm-gold/5"
                     aria-hidden="true"
                   />
                   <Image
@@ -956,35 +956,35 @@ export default function AboutPage() {
                     alt="Dr. Yaw Nkrumah having an unhurried 45-minute virtual consultation with a patient, demonstrating the personalized care and continuity that defines Sankofa Family Medicine's approach to Direct Primary Care in Washington State"
                     width={600}
                     height={400}
-                    className="relative object-cover w-full transition-all duration-700 group-hover:scale-[1.02] group-hover:brightness-105"
+                    "relative object-cover w-full transition-all duration-700 group-hover:scale-[1.02] group-hover:brightness-105"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
               </div>
 
               {/* Content */}
-              <div className="order-1 lg:order-2 animate-on-scroll animation-delay-200">
-                <p className="section-label">Our Philosophy</p>
+              <div "order-1 lg:order-2 animate-on-scroll animation-delay-200">
+                <p "section-label">Our Philosophy</p>
                 <h2
                   id="philosophy-heading"
-                  className="font-display text-3xl md:text-4xl text-sfm-navy mb-4"
+                  "font-display text-3xl md:text-4xl text-sfm-navy mb-4"
                 >
                   Medicine That Remembers
-                  <sup className="text-lg text-sfm-gold" aria-label="Trademark">™</sup>
+                  <sup "text-lg text-sfm-gold" aria-label="Trademark">™</sup>
                 </h2>
                 <div
-                  className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-6"
+                  "w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-6"
                   aria-hidden="true"
                 />
 
                 {/* Speakable content for voice search */}
-                <div className="speakable-philosophy">
-                  <p className="text-sfm-navy/60 leading-relaxed mb-6">
+                <div "speakable-philosophy">
+                  <p "text-sfm-navy/60 leading-relaxed mb-6">
                     A care model designed to preserve the details that shape your health over time, from medical history to goals and preferences.
                   </p>
-                  <p className="text-sfm-navy/60 leading-relaxed">
+                  <p "text-sfm-navy/60 leading-relaxed">
                     Your physician knows you. Not as a chart number, but as a person with a history that matters. This is the foundation of{' '}
-                    <Link href="/services/direct-primary-care" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                    <Link href="/services/direct-primary-care" "text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
                       Direct Primary Care
                     </Link>{' '}
                     done right.
@@ -994,21 +994,21 @@ export default function AboutPage() {
             </div>
 
             {/* Philosophy Pillars */}
-            <div className="grid md:grid-cols-3 gap-8">
+            <div "grid md:grid-cols-3 gap-8">
               {philosophyPillars.map((item, index) => (
                 <article
                   key={item.title}
-                  className={`group bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition-all duration-300 hover:-translate-y-1 animate-on-scroll animation-delay-${(index + 1) * 100}`}
+                  {`group bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition-all duration-300 hover:-translate-y-1 animate-on-scroll animation-delay-${(index + 1) * 100}`}
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sfm-azure/10 to-sfm-azure/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div "w-14 h-14 rounded-2xl bg-gradient-to-br from-sfm-azure/10 to-sfm-azure/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <item.icon
-                      className="w-7 h-7 text-sfm-azure"
+                      "w-7 h-7 text-sfm-azure"
                       strokeWidth={1.5}
                       aria-hidden="true"
                     />
                   </div>
-                  <h3 className="font-display text-xl text-sfm-navy mb-3">{item.title}</h3>
-                  <p className="text-sfm-navy/60 leading-relaxed">{item.description}</p>
+                  <h3 "font-display text-xl text-sfm-navy mb-3">{item.title}</h3>
+                  <p "text-sfm-navy/60 leading-relaxed">{item.description}</p>
                 </article>
               ))}
             </div>
@@ -1019,25 +1019,25 @@ export default function AboutPage() {
         {/* HOW IT WORKS - 3-Step Visual Journey */}
         {/* ================================================================= */}
         <section
-          className="py-24 bg-white"
+          "py-24 bg-white"
           aria-labelledby="how-it-works-heading"
         >
-          <div className="max-w-5xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <p className="section-label">How It Works</p>
+          <div "max-w-5xl mx-auto px-6">
+            <div "text-center mb-16">
+              <p "section-label">How It Works</p>
               <h2
                 id="how-it-works-heading"
-                className="font-display text-3xl md:text-4xl text-sfm-navy mb-6"
+                "font-display text-3xl md:text-4xl text-sfm-navy mb-6"
               >
                 Membership-Based Primary Care
               </h2>
               <div
-                className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-8"
+                "w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-8"
                 aria-hidden="true"
               />
-              <p className="text-sfm-navy/70 text-lg max-w-2xl mx-auto">
+              <p "text-sfm-navy/70 text-lg max-w-2xl mx-auto">
                 We practice{' '}
-                <Link href="/services/direct-primary-care" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                <Link href="/services/direct-primary-care" "text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
                   Direct Primary Care
                 </Link>{' '}
                 built for continuity, access, and careful medical decision-making. No insurance billing, no rushed visits, no rotating providers.
@@ -1045,55 +1045,55 @@ export default function AboutPage() {
             </div>
 
             {/* 3-Step Journey */}
-            <div className="relative">
+            <div "relative">
               {/* Connecting line */}
               <div
-                className="hidden md:block absolute top-24 left-[16.67%] right-[16.67%] h-px bg-gradient-to-r from-sfm-gold/30 via-sfm-gold to-sfm-gold/30"
+                "hidden md:block absolute top-24 left-[16.67%] right-[16.67%] h-px bg-gradient-to-r from-sfm-gold/30 via-sfm-gold to-sfm-gold/30"
                 aria-hidden="true"
               />
 
-              <div className="grid md:grid-cols-3 gap-8">
+              <div "grid md:grid-cols-3 gap-8">
                 {journeySteps.map((item, index) => (
                   <div
                     key={item.title}
-                    className={`relative text-center animate-on-scroll animation-delay-${(index + 1) * 100}`}
+                    {`relative text-center animate-on-scroll animation-delay-${(index + 1) * 100}`}
                   >
                     {/* Step number circle */}
-                    <div className="relative inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-sfm-gold to-sfm-gold/80 shadow-lg shadow-sfm-gold/25 mb-6">
-                      <span className="font-display text-2xl text-white">{item.step}</span>
+                    <div "relative inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-sfm-gold to-sfm-gold/80 shadow-lg shadow-sfm-gold/25 mb-6">
+                      <span "font-display text-2xl text-white">{item.step}</span>
                       {/* Icon badge */}
-                      <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center">
-                        <item.icon className="w-5 h-5 text-sfm-azure" strokeWidth={1.5} aria-hidden="true" />
+                      <div "absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center">
+                        <item.icon "w-5 h-5 text-sfm-azure" strokeWidth={1.5} aria-hidden="true" />
                       </div>
                     </div>
 
-                    <h3 className="font-display text-xl text-sfm-navy mb-3">{item.title}</h3>
-                    <p className="text-sfm-navy/60 leading-relaxed">{item.description}</p>
+                    <h3 "font-display text-xl text-sfm-navy mb-3">{item.title}</h3>
+                    <p "text-sfm-navy/60 leading-relaxed">{item.description}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* CTA */}
-            <div className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div "mt-16 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/founders-waitlist"
-                className="btn-primary group"
+                "btn-primary group"
                 aria-label="Reserve your founding membership spot at Sankofa Family Medicine"
               >
                 Reserve a Founders Spot
                 <ArrowRight
-                  className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                  "w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
                   aria-hidden="true"
                 />
               </Link>
               <Link
                 href="/#membership-plans"
-                className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors font-medium"
+                "inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors font-medium"
                 aria-label="View Direct Primary Care membership plan options and pricing"
               >
                 View Membership Plans
-                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                <ArrowRight "w-4 h-4" aria-hidden="true" />
               </Link>
             </div>
           </div>
@@ -1103,48 +1103,48 @@ export default function AboutPage() {
         {/* OUR STANDARDS */}
         {/* ================================================================= */}
         <section
-          className="py-24 bg-sfm-navy"
+          "py-24 bg-sfm-navy"
           aria-labelledby="standards-heading"
         >
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center mb-16">
-              <p className="text-sfm-gold text-sm tracking-widest uppercase mb-4">
+          <div "max-w-6xl mx-auto px-6">
+            <div "text-center mb-16">
+              <p "text-sfm-gold text-sm tracking-widest uppercase mb-4">
                 Our Standards
               </p>
               <h2
                 id="standards-heading"
-                className="font-display text-3xl md:text-4xl text-white mb-4"
+                "font-display text-3xl md:text-4xl text-white mb-4"
               >
                 Commitments to Every Patient
               </h2>
               <div
-                className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-6"
+                "w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-6"
                 aria-hidden="true"
               />
-              <p className="text-white/60 max-w-2xl mx-auto">
+              <p "text-white/60 max-w-2xl mx-auto">
                 These are commitments we measure ourselves against.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div "grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {standards.map((item, index) => (
                 <article
                   key={item.title}
-                  className={`group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-sfm-gold/30 transition-all duration-300 ${
+                  {`group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-sfm-gold/30 transition-all duration-300 ${
                     index === 0 ? 'lg:col-span-2' : ''
                   }`}
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-sfm-gold/10 flex items-center justify-center shrink-0 group-hover:bg-sfm-gold/20 transition-colors">
+                  <div "flex items-start gap-4">
+                    <div "w-12 h-12 rounded-xl bg-sfm-gold/10 flex items-center justify-center shrink-0 group-hover:bg-sfm-gold/20 transition-colors">
                       <item.icon
-                        className="w-6 h-6 text-sfm-gold"
+                        "w-6 h-6 text-sfm-gold"
                         strokeWidth={1.5}
                         aria-hidden="true"
                       />
                     </div>
                     <div>
-                      <h3 className="font-display text-lg text-white mb-2">{item.title}</h3>
-                      <p className="text-white/60 text-sm leading-relaxed">{item.description}</p>
+                      <h3 "font-display text-lg text-white mb-2">{item.title}</h3>
+                      <p "text-white/60 text-sm leading-relaxed">{item.description}</p>
                     </div>
                   </div>
                 </article>
@@ -1157,56 +1157,56 @@ export default function AboutPage() {
         {/* FINAL CTA */}
         {/* ================================================================= */}
         <section
-          className="py-24 bg-gradient-to-br from-sfm-cream via-white to-sfm-cream"
+          "py-24 bg-gradient-to-br from-sfm-cream via-white to-sfm-cream"
           aria-labelledby="cta-heading"
         >
-          <div className="max-w-4xl mx-auto px-6 text-center">
+          <div "max-w-4xl mx-auto px-6 text-center">
             {/* Founders Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sfm-gold/10 rounded-full border border-sfm-gold/20 mb-8">
+            <div "inline-flex items-center gap-2 px-4 py-2 bg-sfm-gold/10 rounded-full border border-sfm-gold/20 mb-8">
               <span
-                className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse"
+                "w-2 h-2 bg-sfm-gold rounded-full animate-pulse"
                 aria-hidden="true"
               />
-              <span className="text-sfm-gold text-sm font-semibold">
+              <span "text-sfm-gold text-sm font-semibold">
                 Founding Memberships Now Available
               </span>
             </div>
 
             <h2
               id="cta-heading"
-              className="font-display text-3xl md:text-4xl lg:text-5xl text-sfm-navy mb-6 leading-tight"
+              "font-display text-3xl md:text-4xl lg:text-5xl text-sfm-navy mb-6 leading-tight"
             >
               Begin Your Care with{' '}
-              <span className="text-sfm-gold whitespace-nowrap">
+              <span "text-sfm-gold whitespace-nowrap">
                 Medicine That Remembers
-                <sup className="text-lg align-top" aria-label="Trademark">™</sup>
+                <sup "text-lg align-top" aria-label="Trademark">™</sup>
               </span>
             </h2>
 
             {/* Warm human line */}
-            <p className="text-sfm-navy/80 text-xl mb-4 font-display">
+            <p "text-sfm-navy/80 text-xl mb-4 font-display">
               We keep our panel small so we can keep our promises.
             </p>
 
-            <p className="text-sfm-navy/60 text-lg mb-10 max-w-2xl mx-auto">
+            <p "text-sfm-navy/60 text-lg mb-10 max-w-2xl mx-auto">
               Join the first 30 members who shape how this practice grows. Enrollment begins February 2026. No payment required today.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div "flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/founders-waitlist"
-                className="btn-primary group"
+                "btn-primary group"
                 aria-label="Reserve your founding membership spot at Sankofa Family Medicine"
               >
                 Reserve a Founders Spot
                 <ArrowRight
-                  className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                  "w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
                   aria-hidden="true"
                 />
               </Link>
               <Link
                 href="/#membership-plans"
-                className="btn-secondary btn-shine"
+                "btn-secondary btn-shine"
                 aria-label="View Direct Primary Care membership plan options and pricing"
               >
                 Membership Plans
@@ -1214,36 +1214,36 @@ export default function AboutPage() {
             </div>
 
             {/* Secondary Link to Founder */}
-            <div className="mt-8">
+            <div "mt-8">
               <Link
                 href="/founder"
-                className="inline-flex items-center gap-2 text-sfm-navy/60 hover:text-sfm-gold transition-colors text-sm font-medium"
+                "inline-flex items-center gap-2 text-sfm-navy/60 hover:text-sfm-gold transition-colors text-sm font-medium"
                 aria-label="Learn more about Dr. Yaw Nkrumah, founder of Sankofa Family Medicine"
               >
                 Meet Dr. Nkrumah, our founder
-                <ArrowRight className="w-3 h-3" aria-hidden="true" />
+                <ArrowRight "w-3 h-3" aria-hidden="true" />
               </Link>
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center justify-center gap-6 mt-10 text-sm text-sfm-navy/50">
-              <span className="flex items-center gap-2">
+            <div "flex flex-wrap items-center justify-center gap-6 mt-10 text-sm text-sfm-navy/50">
+              <span "flex items-center gap-2">
                 <CheckCircle2
-                  className="w-4 h-4 text-sfm-gold"
+                  "w-4 h-4 text-sfm-gold"
                   aria-hidden="true"
                 />
                 HSA/FSA Accepted
               </span>
-              <span className="flex items-center gap-2">
+              <span "flex items-center gap-2">
                 <CheckCircle2
-                  className="w-4 h-4 text-sfm-gold"
+                  "w-4 h-4 text-sfm-gold"
                   aria-hidden="true"
                 />
                 Cancel Anytime
               </span>
-              <span className="flex items-center gap-2">
+              <span "flex items-center gap-2">
                 <CheckCircle2
-                  className="w-4 h-4 text-sfm-gold"
+                  "w-4 h-4 text-sfm-gold"
                   aria-hidden="true"
                 />
                 Same Physician Every Visit
@@ -1251,7 +1251,7 @@ export default function AboutPage() {
             </div>
 
             {/* Service Area Note */}
-            <p className="text-sfm-navy/40 text-xs mt-8">
+            <p "text-sfm-navy/40 text-xs mt-8">
               Serving patients throughout Washington State including Seattle, Bellevue, Spokane, Tacoma, and the Tri-Cities.
             </p>
           </div>
@@ -1260,9 +1260,9 @@ export default function AboutPage() {
         {/* ================================================================= */}
         {/* PAGE FOOTER NOTE */}
         {/* ================================================================= */}
-        <div className="bg-white border-t border-gray-100 py-4">
-          <div className="max-w-6xl mx-auto px-6">
-            <p className="text-xs text-sfm-navy/30 text-center">
+        <div "bg-white border-t border-gray-100 py-4">
+          <div "max-w-6xl mx-auto px-6">
+            <p "text-xs text-sfm-navy/30 text-center">
               Last updated: January 26, 2026
             </p>
           </div>
