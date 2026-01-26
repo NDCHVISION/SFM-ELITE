@@ -417,25 +417,25 @@ const standards = [
     icon: Heart,
     title: 'We listen first',
     description:
-      'Your history and lived experience shape the diagnosis, not the other way around.',
+      'Your medical history and lived experience inform diagnosis and decision-making.'
   },
   {
     icon: FileText,
     title: 'We document with dignity',
     description:
-      'Your medical records reflect who you are, not just what insurance codes might apply.',
+       'Your medical record reflects clinical reality, not billing shortcuts.'
   },
   {
     icon: Shield,
     title: 'Full transparency',
     description:
-      'Clear explanations, access to your records, and no hidden billing surprises.',
+  'Clear explanations, full record access, and straightforward billing.'
   },
   {
     icon: Scale,
     title: 'Fair treatment',
     description:
-      'Your background informs care. It never limits the quality of care you receive.',
+        'Background and circumstance inform decisions without limiting clinical quality.'
   },
   {
     icon: UserCheck,
@@ -451,28 +451,28 @@ const differentiators = [
     stat: '45-60',
     unit: 'min',
     label: 'Visit Duration',
-    description: 'Comprehensive appointments, not rushed 15-minute slots',
+    description: 'Comprehensive appointments where you’re not rushed through decisions.',
   },
   {
     icon: Users,
     stat: '<200',
     unit: '',
     label: 'Patient Panel',
-    description: 'Small panel means your physician actually knows you',
+    description: 'A deliberately small patient panel to support continuity and familiarity',
   },
   {
     icon: Zap,
     stat: 'Same',
     unit: 'Day',
     label: 'Access',
-    description: 'Messaging and appointments when you need them',
+    description: 'Direct messaging and appointment access when care is needed',
   },
   {
     icon: Brain,
     stat: '1',
     unit: '',
     label: 'Physician',
-    description: 'See the same physician every visit, every time',
+    description:'Care delivered by the same physician at every visit',
   },
 ]
 
@@ -481,19 +481,19 @@ const philosophyPillars = [
     icon: Brain,
     title: 'Context Preserved',
     description:
-      'Your physician knows why you made past decisions, not just what medications you take.',
+      'Care decisions informed by prior context and the reasoning behind them',
   },
   {
     icon: Heart,
     title: 'Relationship Continuity',
     description:
-      'See the same physician every visit. Build trust over time, not from scratch each appointment.',
+      'See the same physician every visit and build trust over time'',
   },
   {
     icon: Sparkles,
     title: 'Personalized Care',
     description:
-      'Treatment plans built on comprehensive understanding, not incomplete snapshots.',
+      'Treatment plans shaped by a complete medical picture, not isolated moments',
   },
 ]
 
@@ -590,10 +590,8 @@ export default function AboutPage() {
                 {/* Speakable content for voice search */}
                 <div className="speakable-intro">
                   <p className="text-white/70 text-lg md:text-xl mb-4 max-w-xl leading-relaxed">
-                    Sankofa Family Medicine practices continuity as a clinical discipline. 
-                    Your physician knows your history, understands your context, and carries 
-                    it forward across time. Memory is not a feature here. It is the foundation of care.
-                  </p>
+                 'At Sankofa Family Medicine, continuity is practiced as a clinical discipline. Your medical history and context are preserved and carried forward so treatment decisions compound rather than reset. Memory is not a feature. It is our foundation.'
+</p>
                 </div>
 
                 <p className="text-sfm-gold text-lg font-medium mb-8 flex items-center gap-1">
@@ -645,7 +643,7 @@ export default function AboutPage() {
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-sfm-navy/90 to-transparent p-8">
                       <p className="text-sfm-gold font-display text-lg mb-1">Sankofa</p>
                       <p className="text-white/70 text-sm italic">
-                        "Go back and retrieve what matters. Carry it forward."
+                           'Retrieve what matters from the past. Apply it deliberately.'
                       </p>
                     </div>
                   </div>
@@ -685,19 +683,14 @@ export default function AboutPage() {
 
                 <div className="space-y-6 text-sfm-navy/70 leading-relaxed">
                   <p>
-                    Sankofa is an Akan principle from West Africa, represented by a mythical bird
-                    looking back while moving forward. The word translates to "go back and get it,"
-                    teaching that we must retrieve what matters from our past to build our future.
+                   'Sankofa is an Akan principle from West Africa, symbolized by a bird looking backward while moving forward. Its meaning is simple and precise: it is right and necessary to return to the past, retrieve what was learned, and carry it forward for a higher purpose.'
+                    </p>
+                  <p>
+                 'In healthcare, this principle highlights a common challenge. Medical records often fragment across systems, physicians may change between visits, and patients are frequently asked to repeat their history when continuity is not preserved.'
                   </p>
                   <p>
-                    In healthcare, this principle addresses a fundamental problem: medical records
-                    fragment across systems, physicians rotate between visits, and patients are
-                    forced to repeat their history because no one remembers it.
-                  </p>
-                  <p>
-                    Sankofa Family Medicine was built to solve this. One physician. Complete continuity.
-                    A practice designed to remember what matters about your health.
-                  </p>
+                       'Sankofa Family Medicine was designed for continuity. One physician who knows your history, visit after visit, so medical decisions build instead of reset.'
+                    </p>
                 </div>
               </div>
 
@@ -808,13 +801,11 @@ export default function AboutPage() {
                 {/* Speakable content for voice search */}
                 <div className="speakable-philosophy">
                   <p className="text-sfm-navy/60 leading-relaxed mb-6">
-                    A care model designed to retain the details that shape your health: your history,
-                    your context, your goals, and your preferences.
+                    'A care model designed to preserve the details that shape your health over time, from medical history to goals and preferences.'
                   </p>
                   <p className="text-sfm-navy/60 leading-relaxed">
-                    The connection between physician and patient is not transactional. It is built on
-                    trust, continuity, and the quiet assurance that someone remembers your story.
-                  </p>
+                    'The physician–patient relationship extends beyond transactions, grounded instead in trust, continuity, and familiarity built visit by visit.'
+                    </p>
                 </div>
               </div>
             </div>
@@ -863,12 +854,10 @@ export default function AboutPage() {
 
             <div className="space-y-6 text-sfm-navy/70 text-lg leading-relaxed">
               <p>
-                We practice membership-based primary care built on continuity, access, and thoughtful
-                clinical judgment.
+                'We practice membership-based primary care built for continuity, access, and careful medical decision-making.'
               </p>
               <p>
-                Care begins with secure onboarding in our private clinical platform, followed by
-                virtual-first visits, direct physician access, and long-term partnership over time.
+                'Membership begins with secure onboarding in a private clinical platform, followed by primary care delivered virtually, direct physician access, and a long-term clinical relationship.'
               </p>
             </div>
 
@@ -919,7 +908,7 @@ export default function AboutPage() {
                 aria-hidden="true"
               />
               <p className="text-white/60 max-w-2xl mx-auto">
-                These are not marketing claims. They are commitments we measure ourselves against.
+               'These are commitments we measure ourselves against.'
               </p>
             </div>
 
@@ -1013,13 +1002,10 @@ export default function AboutPage() {
                 {/* Speakable content for voice search */}
                 <div className="speakable-founder space-y-4 text-sfm-navy/70 leading-relaxed mb-8">
                   <p>
-                    Sankofa Family Medicine was built to restore relationship-centered primary care.
-                    This practice is designed around continuity, clinical judgment, and follow-through.
-                  </p>
+                   'Sankofa Family Medicine is a relationship-centered primary care practice designed for continuity, thoughtful clinical decisions, and reliable follow-through.'
+                   </p>
                   <p>
-                    Trained at the Medical University of South Carolina and Kadlec Family Medicine
-                    Residency, Dr. Nkrumah brings both clinical expertise and a vision for how
-                    primary care should work.
+                   'Trained at the Medical University of South Carolina and Kadlec Family Medicine Residency, Dr. Nkrumah brings rigorous clinical training and a disciplined approach to primary care practice.'
                   </p>
                 </div>
 
