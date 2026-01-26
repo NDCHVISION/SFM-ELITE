@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { X, Calendar, Mail, ArrowRight, CheckCircle2, Heart } from 'lucide-react'
-import { ATLAS_PORTAL_URL } from './PrimaryCTA'
+import { FOUNDERS_WAITLIST_URL } from './PrimaryCTA'
 
 export default function ExitIntentPopup() {
   const [isVisible, setIsVisible] = useState(false)
@@ -104,10 +104,10 @@ export default function ExitIntentPopup() {
               <h3 className="font-display text-2xl text-sfm-navy mb-2">You are on the list!</h3>
               <p className="text-sfm-text-muted mb-6">We will send you founding member updates.</p>
               <a
-                href={ATLAS_PORTAL_URL}
+                href={FOUNDERS_WAITLIST_URL}
                 className="inline-flex items-center gap-2 text-sfm-azure font-medium hover:text-sfm-gold transition-colors"
               >
-                Or enroll as a founding member now
+                Or reserve a founders spot now
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -162,11 +162,11 @@ export default function ExitIntentPopup() {
                 <p className="text-sfm-text-muted">We would welcome the opportunity to care for you.</p>
               </div>
               <a
-                href={ATLAS_PORTAL_URL}
+                href={FOUNDERS_WAITLIST_URL}
                 className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-colors mb-4"
               >
                 <Heart className="w-5 h-5" />
-                Founding Member Enrollment Now Open
+                Reserve a Founders Spot
               </a>
               <button
                 onClick={() => setShowEmailForm(true)}

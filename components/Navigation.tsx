@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, ChevronDown, Phone, Mail, ArrowRight, Stethoscope, Users, FileText, Shield, Heart, MapPin, Globe, BookOpen, Wrench, AlertTriangle, PenTool } from 'lucide-react'
-import { ATLAS_PORTAL_URL } from './PrimaryCTA'
+import { FOUNDERS_WAITLIST_URL } from './PrimaryCTA'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -258,11 +258,11 @@ export default function Navigation() {
 
               {/* Primary CTA - Premium Styling */}
               <a
-                href={ATLAS_PORTAL_URL}
+                href={FOUNDERS_WAITLIST_URL}
                 className="ml-3 btn-primary group"
-                aria-label="Founding member enrollment now open at Sankofa Family Medicine"
+                aria-label="Reserve a founders spot at Sankofa Family Medicine"
               >
-                <span>Founding Member Enrollment Now Open</span>
+                <span>Reserve a Founders Spot</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </nav>
@@ -331,11 +331,11 @@ export default function Navigation() {
           <nav className="p-5" aria-label="Mobile navigation">
             {/* Primary CTA - Top position */}
             <a
-              href={ATLAS_PORTAL_URL}
+              href={FOUNDERS_WAITLIST_URL}
               onClick={() => setIsOpen(false)}
               className="flex items-center justify-center gap-2.5 w-full py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl mb-6 shadow-gold hover:bg-sfm-gold-light transition-all duration-300"
             >
-              Founding Member Enrollment Now Open
+              Reserve a Founders Spot
               <ArrowRight className="w-4 h-4" />
             </a>
 

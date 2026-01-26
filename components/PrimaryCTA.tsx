@@ -6,6 +6,9 @@ import { EXTERNAL_URLS } from '@/lib/config'
 // Centralized Atlas portal URL - imported from config for single source of truth
 export const ATLAS_PORTAL_URL = EXTERNAL_URLS.atlas
 
+// Founders Waitlist URL - for CTA buttons
+export const FOUNDERS_WAITLIST_URL = EXTERNAL_URLS.foundersWaitlist
+
 interface PrimaryCTAProps {
   variant?: 'default' | 'hero' | 'compact'
   className?: string
@@ -35,11 +38,11 @@ export default function PrimaryCTA({
 
   return (
     <a
-      href={ATLAS_PORTAL_URL}
+      href={FOUNDERS_WAITLIST_URL}
       className={`${baseStyles} ${variants[variant]} ${className}`}
-      aria-label="Founding member enrollment now open at Sankofa Family Medicine"
+      aria-label="Reserve a founders spot at Sankofa Family Medicine"
     >
-      {children || 'Founding Member Enrollment Now Open'}
+      {children || 'Reserve a Founders Spot'}
       <ArrowRight className="w-4 h-4" />
     </a>
   )

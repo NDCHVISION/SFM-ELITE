@@ -9,6 +9,9 @@ export const EXTERNAL_URLS = {
   // Primary conversion portal - ALL main CTAs should use this
   atlas: 'https://sankofafamilymedicine.atlas.md/enrollment/index.html?account=h5MEw4d0pIPUxA4CiOGy',
   
+  // Founders waitlist landing page - Use for CTA buttons
+  foundersWaitlist: '/founders-waitlist',
+  
   // DEPRECATED - Use atlas for all CTAs
   // calendly: 'https://calendly.com/nkrumah-ndchvision/15-minute-fit-call',
   

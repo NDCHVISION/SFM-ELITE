@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
-import { ATLAS_PORTAL_URL } from './PrimaryCTA'
+import { FOUNDERS_WAITLIST_URL } from './PrimaryCTA'
 
 export default function MobileCTA() {
   const [isVisible, setIsVisible] = useState(false)
@@ -57,13 +57,13 @@ export default function MobileCTA() {
       {/* CTA Container */}
       <div className="bg-white/95 backdrop-blur-xl border-t border-sfm-gold/10 shadow-[0_-4px_20px_rgba(5,28,59,0.1)] px-4 py-3 safe-area-inset-bottom">
         <a
-          href={ATLAS_PORTAL_URL}
+          href={FOUNDERS_WAITLIST_URL}
           className="flex items-center justify-center gap-2 w-full py-3.5 bg-gradient-to-r from-sfm-gold to-sfm-gold-light 
             text-sfm-navy font-bold rounded-xl shadow-lg shadow-sfm-gold/25 
             active:scale-[0.98] transition-transform group"
-          aria-label="Founding member enrollment now open at Sankofa Family Medicine"
+          aria-label="Reserve a founders spot at Sankofa Family Medicine"
         >
-          <span>Founding Member Enrollment Now Open</span>
+          <span>Reserve a Founders Spot</span>
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </a>
         
