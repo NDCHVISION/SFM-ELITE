@@ -316,12 +316,10 @@ export default function AboutPage() {
 
                 <div className="flex flex-wrap gap-4">
                   <a 
-                    href="https://sankofafamilymedicine.atlas.md/hub/login"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/founders-waitlist"
                     className="btn-primary"
                   >
-                    Founding Member Enrollment Now Open
+                    Reserve a Founders Spot
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                   <Link href="/services" className="btn-secondary-white btn-shine">
@@ -651,12 +649,10 @@ export default function AboutPage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a 
-                href="https://sankofafamilymedicine.atlas.md/hub/login"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/founders-waitlist"
                 className="btn-primary"
               >
-                Founding Member Enrollment Now Open
+                Reserve a Founders Spot
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
               <Link href="/services" className="btn-secondary btn-shine">

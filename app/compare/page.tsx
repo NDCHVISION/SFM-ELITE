@@ -435,12 +435,10 @@ export default function ComparePage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="https://sankofafamilymedicine.atlas.md/hub/login"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/founders-waitlist"
               className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-all shadow-lg shadow-sfm-gold/25"
             >
-              Founding Member Enrollment Now Open
+              Reserve a Founders Spot
               <ArrowRight className="w-5 h-5" />
             </a>
             <Link 

@@ -229,8 +229,8 @@ export default function FAQPage() {
           answer: (
             <div className="space-y-3">
               <p>Start in Atlas, our secure patient portal. Complete your intake, select your membership tier, and schedule your first visit directly through the platform.</p>
-              <a href="https://sankofafamilymedicine.atlas.md/hub/login" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sfm-azure hover:text-sfm-navy font-medium">
-                Founding Member Enrollment Now Open <ArrowRight className="ml-2 w-4 h-4" />
+              <a href="/founders-waitlist" className="inline-flex items-center text-sfm-azure hover:text-sfm-navy font-medium">
+                Reserve a Founders Spot <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </div>
           )
@@ -404,12 +404,10 @@ export default function FAQPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="https://sankofafamilymedicine.atlas.md/hub/login"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/founders-waitlist"
               className="btn-primary"
             >
-              Founding Member Enrollment Now Open
+              Reserve a Founders Spot
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </a>
             <Link href="/services" className="btn-secondary-white">

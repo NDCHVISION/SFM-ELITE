@@ -407,12 +407,10 @@ export default function FounderPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a 
-              href="https://sankofafamilymedicine.atlas.md/hub/login"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/founders-waitlist"
               className="btn-primary"
             >
-              Founding Member Enrollment Now Open
+              Reserve a Founders Spot
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </a>
             <Link href="/services" className="btn-secondary-white">
