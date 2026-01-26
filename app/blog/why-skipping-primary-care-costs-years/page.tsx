@@ -283,20 +283,18 @@ export default function BlogPost() {
             Experience the difference of continuity-based care with a physician who tracks your health over time.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <a 
-              href="https://sankofafamilymedicine.atlas.md/hub/login"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              href="/founders-waitlist"
               className="btn-primary"
             >
-              Founding Member Enrollment Now Open
-            </a>
+              Reserve a Founders Spot
+            </Link>
             <Link href="/services" className="btn-secondary btn-shine">
               Membership Plans
             </Link>
           </div>
           <p className="text-sfm-text-muted text-xs mt-3">
-            All intake, scheduling, messaging, and visits occur securely inside Atlas.
+            Enrollment begins February 2026. No payment required today.
           </p>
         </div>
       </section>

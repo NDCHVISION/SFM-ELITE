@@ -49,10 +49,10 @@ export default function TestimonialsPage() {
           </p>
           
           <Link 
-            href="/contact" 
+            href="/founders-waitlist" 
             className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold hover:bg-sfm-gold-dark text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            <span>Founding Member Enrollment Now Open</span>
+            <span>Reserve a Founders Spot</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -110,12 +110,10 @@ export default function TestimonialsPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="https://sankofafamilymedicine.atlas.md/hub/login"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/founders-waitlist"
               className="inline-flex items-center gap-2 px-6 py-3 bg-sfm-azure hover:bg-sfm-navy text-white font-medium rounded-lg transition-colors"
             >
-              Founding Member Enrollment Now Open
+              Reserve a Founders Spot
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link 

@@ -179,12 +179,10 @@ export default function SankofaOSPage() {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href="https://sankofafamilymedicine.atlas.md/hub/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/founders-waitlist"
                   className="group inline-flex items-center gap-3 px-8 py-4 border border-white/20 text-white font-medium rounded-full hover:bg-white/5 transition-all duration-300"
                 >
-                  Founding Member Enrollment Now Open
+                  Reserve a Founders Spot
                 </a>
               </div>
             </div>

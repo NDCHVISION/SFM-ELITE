@@ -76,7 +76,7 @@ export default function ContactPage() {
         <div className="relative max-w-4xl mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-6">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-            <span className="text-white/80 text-sm font-medium">Now Accepting Founding Members</span>
+            <span className="text-white/80 text-sm font-medium">Founders Waitlist Now Open</span>
           </div>
           
           <h1 className="font-display text-5xl md:text-6xl text-white mb-8 leading-[1.1]">
@@ -97,11 +97,11 @@ export default function ContactPage() {
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-sfm-gold to-sfm-gold-light text-sfm-navy font-bold rounded-xl shadow-lg shadow-sfm-gold/25 hover:shadow-xl hover:shadow-sfm-gold/40 hover:scale-[1.02] transition-all duration-300 group"
           >
             <Calendar className="w-5 h-5" />
-            Founding Member Enrollment Now Open
+            Reserve a Founders Spot
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </a>
           <p className="text-white/40 text-sm mt-3">
-            All intake, scheduling, messaging, and visits occur securely inside Atlas.
+            Enrollment begins February 2026. No payment required today.
           </p>
         </div>
       </section>
@@ -177,17 +177,15 @@ export default function ContactPage() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-sfm-gold/10 rounded-full blur-2xl" />
                 <div className="relative">
                   <p className="text-sfm-gold text-sm font-medium mb-2">Ready to begin?</p>
-                  <h3 className="font-display text-2xl mb-3">Founding Member Enrollment Now Open</h3>
+                  <h3 className="font-display text-2xl mb-3">Reserve a Founders Spot</h3>
                   <p className="text-white/70 text-sm mb-6 leading-relaxed">
                     A brief conversation to ensure Sankofa Family Medicine is the right fit for your health journey.
                   </p>
-                  <a 
-                    href={EXTERNAL_URLS.atlas}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <a
+                    href="/founders-waitlist"
                     className="inline-flex items-center gap-2 text-sfm-gold font-semibold group"
                   >
-                    Begin enrollment
+                    Reserve a Founders Spot
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
@@ -224,7 +222,7 @@ export default function ContactPage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 text-sfm-azure font-medium hover:text-sfm-gold transition-colors"
                       >
-                        Founding Member Enrollment Now Open
+                        Reserve a Founders Spot
                         <ArrowRight className="w-4 h-4" />
                       </a>
                     </div>

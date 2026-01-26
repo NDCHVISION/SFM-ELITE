@@ -238,12 +238,10 @@ export default function PrimaryCareGuidePage() {
                   Prefer to talk directly?
                 </p>
                 <a 
-                  href="https://sankofafamilymedicine.atlas.md/hub/login"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/founders-waitlist"
                   className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-navy font-medium text-sm transition-colors"
                 >
-                  Founding Member Enrollment Now Open
+                  Reserve a Founders Spot
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

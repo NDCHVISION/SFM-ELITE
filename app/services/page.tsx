@@ -284,7 +284,7 @@ export default function ServicesPage() {
                 <div>
                   <div className="flex items-center gap-2 mb-1">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                    <span className="text-sfm-navy font-semibold text-sm">Founding Member Enrollment Open</span>
+                    <span className="text-sfm-navy font-semibold text-sm">Founders Waitlist Open</span>
                   </div>
                   <p className="text-sfm-text-muted text-xs">
                     Lock in your founding member rate for life.
@@ -608,22 +608,18 @@ export default function ServicesPage() {
             
             {/* Content */}
             <div className="text-center lg:text-left">
-              {/* Now Accepting Badge */}
+              {/* Founders Waitlist Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6">
                 <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" aria-hidden="true" />
-                <span className="text-white/80 text-sm font-medium">Now Accepting Founding Members</span>
+                <span className="text-white/80 text-sm font-medium">Founders Waitlist Now Open</span>
               </div>
 
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-4">
                 Begin Your Care with<br />
                 <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">™</span>
               </h2>
-              <p className="text-white/70 text-lg mb-4 max-w-2xl">
-                Founding members start enrollment through our secure patient portal. Complete your health history, 
-                select your membership tier, and begin your care journey.
-              </p>
-              <p className="text-white/40 text-sm mb-10 max-w-2xl">
-                Questions before enrolling? We are here to help.
+              <p className="text-white/70 text-lg mb-10 max-w-2xl">
+                Enrollment begins February 2026. No payment required today.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">

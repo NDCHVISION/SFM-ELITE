@@ -7,7 +7,7 @@ import { ArrowRight, Clock, MessageCircle, Shield, Heart, Stethoscope, CheckCirc
 import CareJourney from '@/components/CareJourney'
 import TrustStrip from '@/components/TrustStrip'
 import ScrollReveal, { ScrollRevealGroup } from '@/components/ScrollReveal'
-import PrimaryCTA, { SecondaryCTA, ATLAS_PORTAL_URL } from '@/components/PrimaryCTA'
+import PrimaryCTA, { SecondaryCTA } from '@/components/PrimaryCTA'
 
 export default function HomePage() {
   const [checkedItems, setCheckedItems] = useState<boolean[]>([false, false, false, false, false])
@@ -124,7 +124,7 @@ export default function HomePage() {
                     Medicine That Remembers™
                   </p>
                   <p className="text-white/40 text-sm">
-                    Enrollment begins in Atlas.
+                    Enrollment begins February 2026. No payment required today.
                   </p>
                 </div>
 
@@ -655,7 +655,7 @@ export default function HomePage() {
           {/* Status badge with elite styling */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full mb-10 badge-elite float-elite">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" aria-hidden="true" />
-            <span className="text-white/70 text-sm font-medium">Now Accepting Patients</span>
+            <span className="text-white/70 text-sm font-medium">Founders Waitlist Now Open</span>
           </div>
           
           <h2 id="cta-heading" className="text-3xl sm:text-4xl lg:text-5xl font-display text-white mb-6 leading-tight text-reveal-elite" data-speakable>

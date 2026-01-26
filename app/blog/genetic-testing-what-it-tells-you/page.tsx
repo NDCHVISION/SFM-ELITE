@@ -306,20 +306,18 @@ export default function BlogPost() {
             The answer depends on your history, your goals, and what we are trying to understand. Let&apos;s have that conversation.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <a 
-              href="https://sankofafamilymedicine.atlas.md/hub/login"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              href="/founders-waitlist"
               className="btn-primary"
             >
-              Founding Member Enrollment Now Open
-            </a>
+              Reserve a Founders Spot
+            </Link>
             <Link href="/services" className="btn-secondary btn-shine">
               Membership Plans
             </Link>
           </div>
           <p className="text-sfm-text-muted text-xs mt-3">
-            All intake, scheduling, messaging, and visits occur securely inside Atlas.
+            Enrollment begins February 2026. No payment required today.
           </p>
         </div>
       </section>

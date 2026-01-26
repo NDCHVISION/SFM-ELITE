@@ -417,10 +417,10 @@ export default function ComparePage() {
         <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-sfm-azure/20 rounded-full blur-[100px]" />
         
         <div className="relative max-w-4xl mx-auto px-6 text-center">
-          {/* Now Accepting Badge */}
+          {/* Founders Waitlist Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-            <span className="text-white/80 text-sm font-medium">Now Accepting Founding Members</span>
+            <span className="text-white/80 text-sm font-medium">Founders Waitlist Now Open</span>
           </div>
 
           <h2 className="font-display text-4xl md:text-5xl text-white mb-6 leading-tight">
@@ -429,21 +429,16 @@ export default function ComparePage() {
             <span className="text-sfm-gold text-xl align-top">&#8482;</span>
           </h2>
           
-          <p className="text-white/60 text-lg mb-4 max-w-2xl mx-auto">
-            Enrollment begins in Atlas. Complete your intake and schedule your first visit directly through our secure patient portal.
-          </p>
-          <p className="text-white/40 text-sm mb-10 max-w-2xl mx-auto">
-            All intake, scheduling, messaging, and visits occur securely inside Atlas.
+          <p className="text-white/60 text-lg mb-10 max-w-2xl mx-auto">
+            Enrollment begins February 2026. No payment required today.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="https://sankofafamilymedicine.atlas.md/hub/login"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/founders-waitlist"
               className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-all shadow-lg shadow-sfm-gold/25"
             >
-              Founding Member Enrollment Now Open
+              Reserve a Founders Spot
               <ArrowRight className="w-5 h-5" />
             </a>
             <Link 
