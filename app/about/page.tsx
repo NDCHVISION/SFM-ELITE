@@ -17,48 +17,56 @@ import {
 import type { Metadata } from 'next'
 
 // =============================================================================
-// METADATA
+// METADATA - Enhanced for 2026 SEO & AI Scraper Optimization
 // =============================================================================
 
 export const metadata: Metadata = {
-  title: 'About Sankofa Family Medicine | Medicine That Remembers',
+  title: 'About Sankofa Family Medicine | Medicine That Remembers™',
   description:
-  'Sankofa Family Medicine is a physician-led, virtual primary care practice in Washington State focused on continuity, context, and long-term relationships. We learn and remember your medical history so each visit builds on the last. ',
- ',
-keywords: [
-  'Sankofa Family Medicine',
-  'concierge primary care Washington',
-  'physician-led primary care',
-  'virtual primary care Washington',
-  'telehealth primary care WA',
-  'continuity of care',
-  'patient-centered primary care',
-  'Medicine That Remembers',
-  'Dr. Yaw Nkrumah',
-],
-
+    'Sankofa Family Medicine is a physician-led, virtual primary care practice in Washington State. We learn and remember your medical history so each visit builds on the last and your treatment plan gets stronger over time.',
+  keywords: [
+    'Sankofa Family Medicine',
+    'concierge primary care Washington',
+    'physician-led primary care',
+    'virtual primary care Washington',
+    'telehealth primary care WA',
+    'direct primary care Washington',
+    'DPC Washington State',
+    'continuity of care',
+    'patient-centered primary care',
+    'Medicine That Remembers',
+    'Dr. Yaw Nkrumah',
+    'membership medicine Seattle',
+    'concierge medicine Bellevue',
+    'virtual family medicine',
+  ],
+  authors: [{ name: 'Dr. Yaw Nkrumah, MD', url: 'https://sankofafamilymedicine.com/founder' }],
+  creator: 'Sankofa Family Medicine',
+  publisher: 'Sankofa Family Medicine',
   openGraph: {
-    title: 'About Sankofa Family Medicine | Medicine That Remembers',
+    title: 'About Sankofa Family Medicine | Medicine That Remembers™',
     description:
-     'Virtual-first concierge primary care for Washington State. Built on Sankofa,we learn from your past to guide better care today and tomorrow.',
+      'Virtual-first concierge primary care for Washington State. Built on Sankofa: we learn from your past to guide better care today and tomorrow.',
     url: 'https://sankofafamilymedicine.com/about',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: '/images/og-image.png',
+        url: 'https://sankofafamilymedicine.com/images/og-about.png',
         width: 1200,
         height: 630,
-        alt: 'About Sankofa Family Medicine Medicine That Remembers',
+        alt: 'About Sankofa Family Medicine: Medicine That Remembers',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Sankofa Family Medicine',
-    description: 'Virtual-first concierge primary care serving Washington State.',
-    images: ['/images/og-image.png'],
+    title: 'About Sankofa Family Medicine | Medicine That Remembers™',
+    description:
+      'Virtual-first concierge primary care serving Washington State. Your physician remembers your history so each visit builds on the last.',
+    images: ['https://sankofafamilymedicine.com/images/og-about.png'],
+    creator: '@sankofafamilymed',
   },
   alternates: {
     canonical: 'https://sankofafamilymedicine.com/about',
@@ -74,52 +82,225 @@ keywords: [
       'max-snippet': -1,
     },
   },
+  // 2026 AI Scraper Optimization
   other: {
+    // AI Content Signals
     'ai-content-declaration': 'human-authored',
-    'content-type': 'About',
-    'medical-specialty': 'Primary Care, Family Medicine',
+    'content-type': 'About Page',
+    'content-purpose': 'Practice information, philosophy, and founder background',
+    
+    // Medical Entity Tags
+    'medical-specialty': 'Primary Care, Family Medicine, Preventive Medicine',
     'service-area': 'Washington State, USA',
+    'practice-model': 'Direct Primary Care, Concierge Medicine, Membership Medicine',
+    
+    // Entity Recognition Hints for AI
+    'entity-organization': 'Sankofa Family Medicine',
+    'entity-person': 'Dr. Yaw Nkrumah, MD',
+    'entity-concept': 'Medicine That Remembers, Sankofa Principle, Continuity of Care',
+    'entity-location': 'Washington State',
+    
+    // Semantic Topic Tags
+    'topic-primary': 'Virtual Primary Care',
+    'topic-secondary': 'Healthcare Continuity, Patient-Physician Relationship, Membership Medicine',
+    
+    // Content Freshness
+    'content-modified': new Date().toISOString().split('T')[0],
+    'review-cycle': 'quarterly',
+    
+    // Voice Search Optimization
+    'voice-query-match': 'What is Sankofa Family Medicine, Who founded Sankofa Family Medicine, What does Medicine That Remembers mean',
   },
 }
 
 // =============================================================================
-// STRUCTURED DATA
+// STRUCTURED DATA - Comprehensive Schema for 2026
 // =============================================================================
+
+const medicalWebPageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  '@id': 'https://sankofafamilymedicine.com/about#webpage',
+  url: 'https://sankofafamilymedicine.com/about',
+  name: 'About Sankofa Family Medicine | Medicine That Remembers™',
+  description:
+    'Learn about Sankofa Family Medicine, a virtual-first concierge primary care practice in Washington State founded by Dr. Yaw Nkrumah, MD.',
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': 'https://sankofafamilymedicine.com/#website',
+    name: 'Sankofa Family Medicine',
+    url: 'https://sankofafamilymedicine.com',
+  },
+  about: {
+    '@type': 'MedicalOrganization',
+    '@id': 'https://sankofafamilymedicine.com/#organization',
+  },
+  mainEntity: {
+    '@type': 'MedicalOrganization',
+    '@id': 'https://sankofafamilymedicine.com/#organization',
+  },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['.speakable-intro', '.speakable-philosophy', '.speakable-founder'],
+  },
+  lastReviewed: new Date().toISOString().split('T')[0],
+  reviewedBy: {
+    '@type': 'Physician',
+    '@id': 'https://sankofafamilymedicine.com/#founder',
+    name: 'Dr. Yaw Nkrumah',
+  },
+}
 
 const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'MedicalOrganization',
   '@id': 'https://sankofafamilymedicine.com/#organization',
   name: 'Sankofa Family Medicine',
-  alternateName: 'SFM',
+  alternateName: ['SFM', 'Sankofa Medicine', 'Medicine That Remembers'],
   description:
-    'Sankofa Family Medicine is a virtual-first concierge medicine practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers.',
+    'Sankofa Family Medicine is a virtual-first concierge medicine practice serving patients across Washington State. We learn and remember your medical history so each visit builds on the last and your treatment plan gets stronger over time.',
   url: 'https://sankofafamilymedicine.com',
   logo: {
     '@type': 'ImageObject',
     url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
     width: 512,
     height: 512,
+    caption: 'Sankofa Family Medicine logo featuring the Sankofa bird',
   },
+  image: 'https://sankofafamilymedicine.com/images/og-about.png',
   medicalSpecialty: ['PrimaryCare', 'FamilyPractice', 'PreventiveMedicine'],
+  availableService: [
+    {
+      '@type': 'MedicalProcedure',
+      name: 'Virtual Primary Care Visits',
+      description: 'Comprehensive 45-60 minute virtual appointments with your physician',
+    },
+    {
+      '@type': 'MedicalProcedure',
+      name: 'Chronic Disease Management',
+      description: 'Ongoing management of conditions like diabetes, hypertension, and thyroid disorders',
+    },
+    {
+      '@type': 'MedicalProcedure',
+      name: 'Preventive Care',
+      description: 'Annual wellness visits, health screenings, and preventive medicine',
+    },
+  ],
   priceRange: '$$',
   currenciesAccepted: 'USD',
-  paymentAccepted: 'Credit Card, Debit Card, HSA, FSA',
+  paymentAccepted: ['Credit Card', 'Debit Card', 'HSA', 'FSA'],
   areaServed: {
     '@type': 'State',
     name: 'Washington',
+    containedInPlace: {
+      '@type': 'Country',
+      name: 'United States',
+    },
+  },
+  serviceArea: {
+    '@type': 'GeoShape',
+    addressCountry: 'US',
+    addressRegion: 'WA',
   },
   founder: {
     '@type': 'Physician',
     '@id': 'https://sankofafamilymedicine.com/#founder',
-    name: 'Dr. Yaw Nkrumah',
-    honorificPrefix: 'Dr.',
-    honorificSuffix: 'MD',
-    jobTitle: 'Founder and Primary Care Physician',
-    medicalSpecialty: ['PrimaryCare', 'FamilyPractice'],
   },
+  foundingDate: '2024',
   isAcceptingNewPatients: true,
-  slogan: 'Medicine That Remembers',
+  slogan: 'Medicine That Remembers™',
+  knowsAbout: [
+    'Primary Care',
+    'Family Medicine',
+    'Preventive Medicine',
+    'Chronic Disease Management',
+    'Telehealth',
+    'Direct Primary Care',
+    'Concierge Medicine',
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Membership Plans',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Essential Membership',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Complete Membership',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Premium Membership',
+        },
+      },
+    ],
+  },
+}
+
+const physicianJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Physician',
+  '@id': 'https://sankofafamilymedicine.com/#founder',
+  name: 'Dr. Yaw Nkrumah',
+  givenName: 'Yaw',
+  familyName: 'Nkrumah',
+  honorificPrefix: 'Dr.',
+  honorificSuffix: 'MD',
+  jobTitle: 'Founder and Primary Care Physician',
+  description:
+    'Dr. Yaw Nkrumah is a board-certified family medicine physician and founder of Sankofa Family Medicine. He trained at the Medical University of South Carolina and Kadlec Family Medicine Residency.',
+  image: 'https://sankofafamilymedicine.com/images/dr-nkrumah-desk.png',
+  url: 'https://sankofafamilymedicine.com/founder',
+  sameAs: [
+    'https://www.linkedin.com/in/yaw-nkrumah-md',
+  ],
+  worksFor: {
+    '@type': 'MedicalOrganization',
+    '@id': 'https://sankofafamilymedicine.com/#organization',
+  },
+  medicalSpecialty: ['PrimaryCare', 'FamilyPractice'],
+  availableService: {
+    '@type': 'MedicalProcedure',
+    name: 'Primary Care Services',
+  },
+  alumniOf: [
+    {
+      '@type': 'EducationalOrganization',
+      name: 'Medical University of South Carolina',
+      alternateName: 'MUSC',
+    },
+    {
+      '@type': 'EducationalOrganization',
+      name: 'Kadlec Family Medicine Residency',
+    },
+  ],
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'degree',
+      name: 'Doctor of Medicine (MD)',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'certification',
+      name: 'Board Certified in Family Medicine',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'license',
+      name: 'Washington State Medical License',
+    },
+  ],
 }
 
 const faqJsonLd = {
@@ -131,7 +312,7 @@ const faqJsonLd = {
       name: 'What is Sankofa Family Medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa Family Medicine is a virtual-first concierge medicine practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers.',
+        text: 'Sankofa Family Medicine is a virtual-first concierge medicine practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice is built on the principle of continuity: your physician learns and remembers your medical history so each visit builds on the last and your treatment plan gets stronger over time.',
       },
     },
     {
@@ -139,7 +320,7 @@ const faqJsonLd = {
       name: 'What does Medicine That Remembers mean?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Medicine That Remembers is Sankofa Family Medicine's care philosophy. It means the clinic is designed to retain the details that shape your health: your history, your context, your goals, and your preferences.",
+        text: 'Medicine That Remembers is Sankofa Family Medicine\'s care philosophy. It means your physician retains the details that shape your health: your history, your context, your goals, and your preferences. You never have to start over or repeat your story because your care is built on memory and continuity.',
       },
     },
     {
@@ -147,7 +328,31 @@ const faqJsonLd = {
       name: 'What is the Sankofa principle?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa is an Akan principle from West Africa, represented by a bird looking back while moving forward. Its meaning is: go back, retrieve what matters, and carry it into your future.',
+        text: 'Sankofa is an Akan principle from West Africa, represented by a bird looking back while moving forward. The word translates to "go back and get it," teaching that we must retrieve what matters from our past to build our future. In healthcare, this means using your complete medical history to guide better care today.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Who founded Sankofa Family Medicine?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sankofa Family Medicine was founded by Dr. Yaw Nkrumah, MD, a board-certified family medicine physician. Dr. Nkrumah trained at the Medical University of South Carolina and completed his residency at Kadlec Family Medicine. He built the practice to restore relationship-centered primary care through continuity, clinical judgment, and follow-through.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long are appointments at Sankofa Family Medicine?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Appointments at Sankofa Family Medicine are 45 to 60 minutes, allowing for comprehensive evaluation and unhurried conversation. This is significantly longer than the typical 15-minute appointments in conventional primary care.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will I see the same physician at every visit?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Sankofa Family Medicine is built on continuity. You see the same physician at every visit, building a relationship over time. Your physician knows your history, understands your context, and carries that knowledge forward across all your care.',
       },
     },
   ],
@@ -172,25 +377,33 @@ const breadcrumbJsonLd = {
   ],
 }
 
-// HowTo Schema - simplified for membership-based care overview
 const howToJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'How Care Works at Sankofa Family Medicine',
-  description: 'Membership-based primary care built on continuity, access, and thoughtful clinical judgment. Care begins with secure onboarding followed by virtual-first visits and long-term physician partnership.',
+  name: 'How to Become a Member at Sankofa Family Medicine',
+  description:
+    'Membership-based primary care built on continuity, access, and thoughtful clinical judgment. Become a founding member in three simple steps.',
+  totalTime: 'PT15M',
   step: [
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Secure Onboarding',
-      text: 'Complete secure onboarding in our HIPAA compliant private clinical platform.',
-      url: 'https://sankofafamilymedicine.atlas.md/hub/login',
+      name: 'Reserve Your Founding Spot',
+      text: 'Complete the enrollment form to secure your position as a Founding Member with rate protection and priority access.',
+      url: 'https://sankofafamilymedicine.com/founders-waitlist',
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Ongoing Care Partnership',
-      text: 'Receive virtual-first visits, direct physician access, and a long-term healthcare relationship built on continuity',
+      name: 'Complete Secure Onboarding',
+      text: 'After enrollment opens in February 2026, complete secure onboarding in our HIPAA-compliant clinical platform.',
+      url: 'https://sankofafamilymedicine.atlas.md',
+    },
+    {
+      '@type': 'HowToStep',
+      position: 3,
+      name: 'Begin Your Care Partnership',
+      text: 'Start receiving virtual-first visits, direct physician access, and a long-term healthcare relationship built on continuity.',
     },
   ],
 }
@@ -203,27 +416,32 @@ const standards = [
   {
     icon: Heart,
     title: 'We listen first',
-    description: 'Your history and lived experience shape the diagnosis, not the other way around.',
+    description:
+      'Your history and lived experience shape the diagnosis, not the other way around.',
   },
   {
     icon: FileText,
     title: 'We document with dignity',
-    description: 'Your medical records reflect who you are, not just what insurance codes might apply.',
+    description:
+      'Your medical records reflect who you are, not just what insurance codes might apply.',
   },
   {
     icon: Shield,
     title: 'Full transparency',
-    description: 'Clear explanations, access to your records, and no hidden billing surprises.',
+    description:
+      'Clear explanations, access to your records, and no hidden billing surprises.',
   },
   {
     icon: Scale,
     title: 'Fair treatment',
-    description: 'Your background informs care. It never limits the quality of care you receive.',
+    description:
+      'Your background informs care. It never limits the quality of care you receive.',
   },
   {
     icon: UserCheck,
     title: 'Every question answered',
-    description: 'Secure messaging responses within 24 to 48 hours for established patients.',
+    description:
+      'Secure messaging responses within 24 to 48 hours for established patients.',
   },
 ]
 
@@ -237,7 +455,7 @@ const differentiators = [
   },
   {
     icon: Users,
-    stat: '< 200',
+    stat: '<200',
     unit: '',
     label: 'Patient Panel',
     description: 'Small panel means your physician actually knows you',
@@ -254,7 +472,28 @@ const differentiators = [
     stat: '1',
     unit: '',
     label: 'Physician',
-    description: 'See the same doctor every visit, every time',
+    description: 'See the same physician every visit, every time',
+  },
+]
+
+const philosophyPillars = [
+  {
+    icon: Brain,
+    title: 'Context Preserved',
+    description:
+      'Your physician knows why you made past decisions, not just what medications you take.',
+  },
+  {
+    icon: Heart,
+    title: 'Relationship Continuity',
+    description:
+      'See the same physician every visit. Build trust over time, not from scratch each appointment.',
+  },
+  {
+    icon: Sparkles,
+    title: 'Personalized Care',
+    description:
+      'Treatment plans built on comprehensive understanding, not incomplete snapshots.',
   },
 ]
 
@@ -265,9 +504,18 @@ const differentiators = [
 export default function AboutPage() {
   return (
     <>
+      {/* Structured Data Scripts */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianJsonLd) }}
       />
       <script
         type="application/ld+json"
@@ -282,71 +530,121 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
 
-      <main>
-        {/* Hero Section */}
-        <section className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-sfm-navy via-[#0a2847] to-sfm-navy overflow-hidden">
+      <main className="overflow-hidden">
+        {/* ================================================================= */}
+        {/* HERO SECTION */}
+        {/* ================================================================= */}
+        <section
+          className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-sfm-navy via-[#0a2847] to-sfm-navy overflow-hidden"
+          aria-labelledby="hero-heading"
+        >
           {/* Background Elements */}
-          <div className="absolute inset-0 pattern-sankofa-spiral-gold pattern-sankofa-animated pattern-subtle" aria-hidden="true" />
-          <div className="absolute top-1/4 -left-32 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-sfm-azure/10 rounded-full blur-3xl" />
+          <div
+            className="absolute inset-0 pattern-sankofa-spiral-gold pattern-sankofa-animated pattern-subtle"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute top-1/4 -left-32 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl animate-pulse-slow"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute bottom-1/4 -right-32 w-96 h-96 bg-sfm-azure/10 rounded-full blur-3xl animate-pulse-slow"
+            aria-hidden="true"
+          />
+          
+          {/* Grain Texture Overlay */}
+          <div
+            className="absolute inset-0 opacity-[0.015] pointer-events-none"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+            }}
+            aria-hidden="true"
+          />
 
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-32">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Content */}
-              <div>
+              <div className="animate-fade-in-up">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/10 mb-8">
-                  <span className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse" />
-                  <span className="text-white/80 text-sm font-medium tracking-wide">About Our Practice</span>
+                  <span
+                    className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse"
+                    aria-hidden="true"
+                  />
+                  <span className="text-white/80 text-sm font-medium tracking-wide">
+                    About Our Practice
+                  </span>
                 </div>
 
-                <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-2 leading-tight">
+                <h1
+                  id="hero-heading"
+                  className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-2 leading-tight"
+                >
                   Healthcare Built on{' '}
                   <span className="text-sfm-gold">Continuity</span>
                 </h1>
 
-                <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-white/80 mb-6 leading-tight">
+                <p className="font-display text-2xl md:text-3xl lg:text-4xl text-white/80 mb-6 leading-tight">
                   Through Memory
-                </h2>
-
-                <p className="text-white/70 text-lg md:text-xl mb-4 max-w-xl leading-relaxed">
-                  Sankofa Family Medicine practices continuity as a clinical discipline. Your physician knows your history, understands your context, and carries it forward across time. Memory is not a feature here. It is the foundation of care.
                 </p>
 
-                <p className="text-sfm-gold text-lg font-medium mb-8">
-                  Medicine That Remembers™
+                {/* Speakable content for voice search */}
+                <div className="speakable-intro">
+                  <p className="text-white/70 text-lg md:text-xl mb-4 max-w-xl leading-relaxed">
+                    Sankofa Family Medicine practices continuity as a clinical discipline. 
+                    Your physician knows your history, understands your context, and carries 
+                    it forward across time. Memory is not a feature here. It is the foundation of care.
+                  </p>
+                </div>
+
+                <p className="text-sfm-gold text-lg font-medium mb-8 flex items-center gap-1">
+                  Medicine That Remembers
+                  <sup className="text-xs" aria-label="Trademark">™</sup>
                 </p>
 
                 <div className="flex flex-wrap gap-4">
-                  <a 
+                  <Link
                     href="/founders-waitlist"
-                    className="btn-primary"
+                    className="btn-primary group"
+                    aria-label="Reserve your founding membership spot"
                   >
                     Reserve a Founders Spot
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
-                  <Link href="/services" className="btn-secondary-white btn-shine">
+                    <ArrowRight
+                      className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                      aria-hidden="true"
+                    />
+                  </Link>
+                  <Link
+                    href="/#membership-plans"
+                    className="btn-secondary-white btn-shine"
+                    aria-label="View membership plan options"
+                  >
                     Membership Plans
                   </Link>
                 </div>
-                <p className="text-white/40 text-xs mt-3">
+
+                <p className="text-white/40 text-xs mt-4">
                   Enrollment begins February 2026. No payment required today.
                 </p>
               </div>
 
               {/* Sankofa Visual */}
-              <div className="relative hidden lg:block">
+              <div className="relative hidden lg:block animate-fade-in-up animation-delay-200">
                 <div className="relative aspect-[4/5] max-w-lg mx-auto group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl animate-pulse-slow" />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl animate-pulse-slow"
+                    aria-hidden="true"
+                  />
                   <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden image-tilt image-fade-dark">
                     <Image
                       src="/images/sankofa-wooden-sculpture.png"
                       alt="Traditional wooden Sankofa bird sculpture representing the principle of retrieving what matters from the past"
                       fill
                       className="object-cover opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
+                      priority
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-sfm-navy/90 to-transparent p-8">
                       <p className="text-sfm-gold font-display text-lg mb-1">Sankofa</p>
-                      <p className="text-white/70 text-sm">
+                      <p className="text-white/70 text-sm italic">
                         "Go back and retrieve what matters. Carry it forward."
                       </p>
                     </div>
@@ -355,41 +653,61 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+
+          {/* Memory Thread Visual Element */}
+          <div
+            className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sfm-gold/50 to-transparent"
+            aria-hidden="true"
+          />
         </section>
 
-        {/* The Sankofa Principle */}
-        <section className="py-24 bg-white">
+        {/* ================================================================= */}
+        {/* THE SANKOFA PRINCIPLE */}
+        {/* ================================================================= */}
+        <section
+          className="py-24 bg-white"
+          aria-labelledby="sankofa-principle-heading"
+        >
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
+              <div className="animate-on-scroll">
                 <p className="section-label">The Principle</p>
-                <h2 className="font-display text-3xl md:text-4xl text-sfm-navy mb-6">
+                <h2
+                  id="sankofa-principle-heading"
+                  className="font-display text-3xl md:text-4xl text-sfm-navy mb-6"
+                >
                   What does Sankofa mean?
                 </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-8" />
-                
+                <div
+                  className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-8"
+                  aria-hidden="true"
+                />
+
                 <div className="space-y-6 text-sfm-navy/70 leading-relaxed">
                   <p>
-                    Sankofa is an Akan principle from West Africa, represented by a mythical bird 
-                    looking back while moving forward. The word translates to "go back and get it," 
+                    Sankofa is an Akan principle from West Africa, represented by a mythical bird
+                    looking back while moving forward. The word translates to "go back and get it,"
                     teaching that we must retrieve what matters from our past to build our future.
                   </p>
                   <p>
-                    In healthcare, this principle addresses a fundamental problem: medical records 
-                    fragment across systems, physicians rotate between visits, and patients are 
+                    In healthcare, this principle addresses a fundamental problem: medical records
+                    fragment across systems, physicians rotate between visits, and patients are
                     forced to repeat their history because no one remembers it.
                   </p>
                   <p>
-                    Sankofa Family Medicine was built to solve this. One physician. Complete continuity. 
+                    Sankofa Family Medicine was built to solve this. One physician. Complete continuity.
                     A practice designed to remember what matters about your health.
                   </p>
                 </div>
               </div>
 
-              <div className="relative group">
+              <div className="relative group animate-on-scroll animation-delay-200">
                 {/* Gold Sankofa Sculpture */}
                 <div className="relative mb-8 ml-8">
-                  <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/30 to-sfm-gold/5 rounded-3xl blur-2xl animate-pulse-slow" />
+                  <div
+                    className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/30 to-sfm-gold/5 rounded-3xl blur-2xl animate-pulse-slow"
+                    aria-hidden="true"
+                  />
                   <div className="image-lift image-fade-elite rounded-3xl overflow-hidden shadow-2xl shadow-sfm-navy/20">
                     <Image
                       src="/images/sankofa-gold-sculpture.png"
@@ -398,10 +716,14 @@ export default function AboutPage() {
                       height={600}
                       className="relative object-cover w-full max-w-sm mx-auto transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-110"
                     />
-                    <div className="absolute inset-0 rounded-3xl pointer-events-none shadow-[inset_0_0_30px_rgba(0,0,0,0.2)]" />
+                    <div
+                      className="absolute inset-0 rounded-3xl pointer-events-none shadow-[inset_0_0_30px_rgba(0,0,0,0.2)]"
+                      aria-hidden="true"
+                    />
                   </div>
                 </div>
-                
+
+                {/* Differentiators Grid */}
                 <div className="bg-sfm-cream rounded-3xl p-8 border border-sfm-gold/10">
                   <div className="grid grid-cols-2 gap-4">
                     {differentiators.map((item, index) => (
@@ -413,11 +735,17 @@ export default function AboutPage() {
                       >
                         <div className="flex items-center gap-2 mb-3">
                           <div className="w-10 h-10 rounded-xl bg-sfm-azure/10 flex items-center justify-center">
-                            <item.icon className="w-5 h-5 text-sfm-azure" strokeWidth={1.5} />
+                            <item.icon
+                              className="w-5 h-5 text-sfm-azure"
+                              strokeWidth={1.5}
+                              aria-hidden="true"
+                            />
                           </div>
                         </div>
                         <div className="flex items-baseline gap-1 mb-1">
-                          <span className="font-display text-3xl text-sfm-navy">{item.stat}</span>
+                          <span className="font-display text-3xl text-sfm-navy">
+                            {item.stat}
+                          </span>
                           <span className="text-sfm-navy/60 text-sm">{item.unit}</span>
                         </div>
                         <p className="text-sfm-gold text-sm font-medium mb-1">{item.label}</p>
@@ -431,117 +759,165 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Medicine That Remembers */}
-        <section className="py-24 bg-sfm-cream">
+        {/* ================================================================= */}
+        {/* MEDICINE THAT REMEMBERS */}
+        {/* ================================================================= */}
+        <section
+          className="py-24 bg-sfm-cream"
+          aria-labelledby="philosophy-heading"
+        >
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
               {/* Image */}
-              <div className="relative order-2 lg:order-1 group">
-                <div className="absolute -inset-6 bg-gradient-to-br from-sfm-gold/25 via-sfm-azure/10 to-transparent rounded-3xl blur-3xl animate-pulse-slow" />
+              <div className="relative order-2 lg:order-1 group animate-on-scroll">
+                <div
+                  className="absolute -inset-6 bg-gradient-to-br from-sfm-gold/25 via-sfm-azure/10 to-transparent rounded-3xl blur-3xl animate-pulse-slow"
+                  aria-hidden="true"
+                />
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-sfm-navy/20 image-fade-elite">
                   {/* Brand color overlay */}
-                  <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-tr from-sfm-navy/10 via-transparent to-sfm-gold/5" />
-                  
+                  <div
+                    className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-tr from-sfm-navy/10 via-transparent to-sfm-gold/5"
+                    aria-hidden="true"
+                  />
                   <Image
                     src="/images/physician-conversation-warm.png"
-                    alt="Physician having an unhurried conversation with patient in a warm, non-clinical setting"
+                    alt="Physician having an unhurried conversation with patient in a warm, welcoming setting"
                     width={600}
                     height={400}
                     className="relative object-cover w-full transition-all duration-700 group-hover:scale-[1.02] group-hover:brightness-105"
                   />
                 </div>
               </div>
-              
+
               {/* Content */}
-              <div className="order-1 lg:order-2">
+              <div className="order-1 lg:order-2 animate-on-scroll animation-delay-200">
                 <p className="section-label">Our Philosophy</p>
-                <h2 className="font-display text-3xl md:text-4xl text-sfm-navy mb-4">
-                  Medicine That Remembers™
+                <h2
+                  id="philosophy-heading"
+                  className="font-display text-3xl md:text-4xl text-sfm-navy mb-4"
+                >
+                  Medicine That Remembers
+                  <sup className="text-lg text-sfm-gold" aria-label="Trademark">™</sup>
                 </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-6" />
-                <p className="text-sfm-navy/60 leading-relaxed mb-6">
-                  A care model designed to retain the details that shape your health: your history, 
-                  your context, your goals, and your preferences.
-                </p>
-                <p className="text-sfm-navy/60 leading-relaxed">
-                  The connection between physician and patient is not transactional. It is built on 
-                  trust, continuity, and the quiet assurance that someone remembers your story.
-                </p>
+                <div
+                  className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-6"
+                  aria-hidden="true"
+                />
+                
+                {/* Speakable content for voice search */}
+                <div className="speakable-philosophy">
+                  <p className="text-sfm-navy/60 leading-relaxed mb-6">
+                    A care model designed to retain the details that shape your health: your history,
+                    your context, your goals, and your preferences.
+                  </p>
+                  <p className="text-sfm-navy/60 leading-relaxed">
+                    The connection between physician and patient is not transactional. It is built on
+                    trust, continuity, and the quiet assurance that someone remembers your story.
+                  </p>
+                </div>
               </div>
             </div>
 
+            {/* Philosophy Pillars */}
             <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: Brain,
-                  title: 'Context Preserved',
-                  description: 'Your physician knows why you made past decisions, not just what medications you take.',
-                },
-                {
-                  icon: Heart,
-                  title: 'Relationship Continuity',
-                  description: 'See the same physician every visit. Build trust over time, not from scratch each appointment.',
-                },
-                {
-                  icon: Sparkles,
-                  title: 'Personalized Care',
-                  description: 'Treatment plans built on comprehensive understanding, not incomplete snapshots.',
-                },
-              ].map((item) => (
-                <div
+              {philosophyPillars.map((item, index) => (
+                <article
                   key={item.title}
-                  className="group bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition-all duration-300 hover:-translate-y-1"
+                  className={`group bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition-all duration-300 hover:-translate-y-1 animate-on-scroll animation-delay-${(index + 1) * 100}`}
                 >
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sfm-azure/10 to-sfm-azure/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <item.icon className="w-7 h-7 text-sfm-azure" strokeWidth={1.5} />
+                    <item.icon
+                      className="w-7 h-7 text-sfm-azure"
+                      strokeWidth={1.5}
+                      aria-hidden="true"
+                    />
                   </div>
                   <h3 className="font-display text-xl text-sfm-navy mb-3">{item.title}</h3>
                   <p className="text-sfm-navy/60 leading-relaxed">{item.description}</p>
-                </div>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Journey Steps */}
-        <section className="py-24 bg-white">
+        {/* ================================================================= */}
+        {/* HOW IT WORKS */}
+        {/* ================================================================= */}
+        <section
+          className="py-24 bg-white"
+          aria-labelledby="how-it-works-heading"
+        >
           <div className="max-w-3xl mx-auto px-6 text-center">
             <p className="section-label">How It Works</p>
-            <h2 className="font-display text-3xl md:text-4xl text-sfm-navy mb-6">
+            <h2
+              id="how-it-works-heading"
+              className="font-display text-3xl md:text-4xl text-sfm-navy mb-6"
+            >
               Membership-Based Primary Care
             </h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-8" />
-            
+            <div
+              className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-8"
+              aria-hidden="true"
+            />
+
             <div className="space-y-6 text-sfm-navy/70 text-lg leading-relaxed">
               <p>
-                We practice membership-based primary care built on continuity, access, and thoughtful clinical judgment.
+                We practice membership-based primary care built on continuity, access, and thoughtful
+                clinical judgment.
               </p>
               <p>
-                Care begins with secure onboarding in our private clinical platform, followed by virtual-first visits, direct physician access, and long-term partnership over time.
+                Care begins with secure onboarding in our private clinical platform, followed by
+                virtual-first visits, direct physician access, and long-term partnership over time.
               </p>
             </div>
-            
-            <div className="mt-10">
-              <Link 
-                href="/about#care-journey" 
-                className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors font-medium"
+
+            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/founders-waitlist"
+                className="btn-primary group"
+                aria-label="Reserve your founding membership spot"
               >
-                Learn how care works
-                <ArrowRight className="w-4 h-4" />
+                Reserve a Founders Spot
+                <ArrowRight
+                  className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </Link>
+              <Link
+                href="/#membership-plans"
+                className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors font-medium"
+                aria-label="View membership plan options and pricing"
+              >
+                View Membership Plans
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Our Standards */}
-        <section className="py-24 bg-sfm-navy">
+        {/* ================================================================= */}
+        {/* OUR STANDARDS */}
+        {/* ================================================================= */}
+        <section
+          className="py-24 bg-sfm-navy"
+          aria-labelledby="standards-heading"
+        >
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-16">
-              <p className="text-sfm-gold text-sm tracking-widest uppercase mb-4">Our Standards</p>
-              <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
+              <p className="text-sfm-gold text-sm tracking-widest uppercase mb-4">
+                Our Standards
+              </p>
+              <h2
+                id="standards-heading"
+                className="font-display text-3xl md:text-4xl text-white mb-4"
+              >
                 Commitments to Every Patient
               </h2>
-              <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-6" />
+              <div
+                className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-6"
+                aria-hidden="true"
+              />
               <p className="text-white/60 max-w-2xl mx-auto">
                 These are not marketing claims. They are commitments we measure ourselves against.
               </p>
@@ -549,7 +925,7 @@ export default function AboutPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {standards.map((item, index) => (
-                <div
+                <article
                   key={item.title}
                   className={`group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-sfm-gold/30 transition-all duration-300 ${
                     index === 0 ? 'lg:col-span-2' : ''
@@ -557,36 +933,55 @@ export default function AboutPage() {
                 >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-sfm-gold/10 flex items-center justify-center shrink-0 group-hover:bg-sfm-gold/20 transition-colors">
-                      <item.icon className="w-6 h-6 text-sfm-gold" strokeWidth={1.5} />
+                      <item.icon
+                        className="w-6 h-6 text-sfm-gold"
+                        strokeWidth={1.5}
+                        aria-hidden="true"
+                      />
                     </div>
                     <div>
                       <h3 className="font-display text-lg text-white mb-2">{item.title}</h3>
                       <p className="text-white/60 text-sm leading-relaxed">{item.description}</p>
                     </div>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Founder Teaser */}
-        <section className="py-24 bg-white">
+        {/* ================================================================= */}
+        {/* FOUNDER SECTION */}
+        {/* ================================================================= */}
+        <section
+          className="py-24 bg-white"
+          aria-labelledby="founder-heading"
+        >
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="relative group">
-                <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl opacity-50 animate-pulse-slow" />
+              {/* Founder Image */}
+              <div className="relative group animate-on-scroll">
+                <div
+                  className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl opacity-50 animate-pulse-slow"
+                  aria-hidden="true"
+                />
                 <div className="relative aspect-[4/3] rounded-3xl overflow-hidden image-lift portrait-premium image-fade-elite shadow-2xl shadow-sfm-navy/20">
                   <Image
                     src="/images/dr-nkrumah-desk.png"
-                    alt="Dr. Yaw Nkrumah, founder of Sankofa Family Medicine"
+                    alt="Dr. Yaw Nkrumah, MD, founder of Sankofa Family Medicine, board-certified family medicine physician"
                     fill
                     className="object-cover object-left transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-105"
                   />
                   {/* Blur edge overlay */}
-                  <div className="absolute inset-0 rounded-3xl pointer-events-none shadow-[inset_0_0_40px_rgba(0,0,0,0.25)]" />
+                  <div
+                    className="absolute inset-0 rounded-3xl pointer-events-none shadow-[inset_0_0_40px_rgba(0,0,0,0.25)]"
+                    aria-hidden="true"
+                  />
                   {/* Motion overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-sfm-gold/5 via-transparent to-sfm-azure/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-br from-sfm-gold/5 via-transparent to-sfm-azure/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+                    aria-hidden="true"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy/80 via-transparent to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
                     <div className="flex flex-wrap gap-2">
@@ -601,29 +996,44 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div>
+              {/* Founder Content */}
+              <div className="animate-on-scroll animation-delay-200">
                 <p className="section-label">The Founder</p>
-                <h2 className="font-display text-3xl md:text-4xl text-sfm-navy mb-6">
-                  Yaw Nkrumah, MD
+                <h2
+                  id="founder-heading"
+                  className="font-display text-3xl md:text-4xl text-sfm-navy mb-6"
+                >
+                  Dr. Yaw Nkrumah, MD
                 </h2>
-                <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-8" />
-                
-                <div className="space-y-4 text-sfm-navy/70 leading-relaxed mb-8">
+                <div
+                  className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-8"
+                  aria-hidden="true"
+                />
+
+                {/* Speakable content for voice search */}
+                <div className="speakable-founder space-y-4 text-sfm-navy/70 leading-relaxed mb-8">
                   <p>
-                    Sankofa Family Medicine was built to restore relationship-centered primary care. 
+                    Sankofa Family Medicine was built to restore relationship-centered primary care.
                     This practice is designed around continuity, clinical judgment, and follow-through.
                   </p>
                   <p>
-                    Trained at the Medical University of South Carolina and Kadlec Family Medicine 
-                    Residency, Dr. Nkrumah brings both clinical expertise and a vision for how 
+                    Trained at the Medical University of South Carolina and Kadlec Family Medicine
+                    Residency, Dr. Nkrumah brings both clinical expertise and a vision for how
                     primary care should work.
                   </p>
                 </div>
 
                 <div className="flex flex-wrap gap-4">
-                  <Link href="/founder" className="btn-primary">
-                    More about founder
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                  <Link
+                    href="/founder"
+                    className="btn-primary group"
+                    aria-label="Learn more about Dr. Yaw Nkrumah"
+                  >
+                    Meet Dr. Nkrumah
+                    <ArrowRight
+                      className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                      aria-hidden="true"
+                    />
                   </Link>
                 </div>
               </div>
@@ -631,45 +1041,83 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="py-24 bg-gradient-to-br from-sfm-cream via-white to-sfm-cream">
+        {/* ================================================================= */}
+        {/* FINAL CTA */}
+        {/* ================================================================= */}
+        <section
+          className="py-24 bg-gradient-to-br from-sfm-cream via-white to-sfm-cream"
+          aria-labelledby="cta-heading"
+        >
           <div className="max-w-4xl mx-auto px-6 text-center">
-            {/* Founders Waitlist Badge */}
+            {/* Founders Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-sfm-gold/10 rounded-full border border-sfm-gold/20 mb-8">
-              <span className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse" aria-hidden="true" />
-              <span className="text-sfm-gold text-sm font-semibold">Founders Waitlist Now Open</span>
+              <span
+                className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse"
+                aria-hidden="true"
+              />
+              <span className="text-sfm-gold text-sm font-semibold">
+                Founding Memberships Now Available
+              </span>
             </div>
 
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-sfm-navy mb-6 leading-tight">
+            <h2
+              id="cta-heading"
+              className="font-display text-3xl md:text-4xl lg:text-5xl text-sfm-navy mb-6 leading-tight"
+            >
               Begin Your Care with{' '}
-              <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
+              <span className="text-sfm-gold whitespace-nowrap">
+                Medicine That Remembers
+                <sup className="text-lg align-top" aria-label="Trademark">™</sup>
+              </span>
             </h2>
 
             <p className="text-sfm-navy/60 text-lg mb-10 max-w-2xl mx-auto">
-              Enrollment begins February 2026. No payment required today.
+              Enrollment begins February 2026. Reserve your spot today. No payment required.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a 
+              <Link
                 href="/founders-waitlist"
-                className="btn-primary"
+                className="btn-primary group"
+                aria-label="Reserve your founding membership spot"
               >
                 Reserve a Founders Spot
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-              <Link href="/services" className="btn-secondary btn-shine">
+                <ArrowRight
+                  className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </Link>
+              <Link
+                href="/#membership-plans"
+                className="btn-secondary btn-shine"
+                aria-label="View membership plan options and pricing"
+              >
                 Membership Plans
               </Link>
             </div>
 
-            <div className="flex items-center justify-center gap-6 mt-10 text-sm text-sfm-navy/50">
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center justify-center gap-6 mt-10 text-sm text-sfm-navy/50">
               <span className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-sfm-gold" />
+                <CheckCircle2
+                  className="w-4 h-4 text-sfm-gold"
+                  aria-hidden="true"
+                />
                 HSA/FSA Accepted
               </span>
               <span className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-sfm-gold" />
+                <CheckCircle2
+                  className="w-4 h-4 text-sfm-gold"
+                  aria-hidden="true"
+                />
                 Cancel Anytime
+              </span>
+              <span className="flex items-center gap-2">
+                <CheckCircle2
+                  className="w-4 h-4 text-sfm-gold"
+                  aria-hidden="true"
+                />
+                Same Physician Every Visit
               </span>
             </div>
           </div>
@@ -678,3 +1126,4 @@ export default function AboutPage() {
     </>
   )
 }
+
