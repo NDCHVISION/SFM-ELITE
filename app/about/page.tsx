@@ -26,7 +26,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About Sankofa Family Medicine | Medicine That Remembers™ | Virtual Primary Care Washington',
   description:
-    'Sankofa Family Medicine is a physician-led, virtual-first Direct Primary Care practice serving Washington State. Founded by Dr. Yaw Nkrumah, MD, we practice continuity-based care where your medical history is preserved and each visit builds on the last. Serving Seattle, Bellevue, Spokane, and all of Washington.',
+    'Sankofa Family Medicine is a physician-led, virtual-first membership-based primary care practice serving Washington State. Founded by Dr. Yaw Nkrumah, MD, we practice continuity-based care where your medical history is preserved and each visit builds on the last. Serving Seattle, Bellevue, Spokane, and all of Washington.',
   keywords: [
     'Sankofa Family Medicine',
     'concierge primary care Washington',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Sankofa Family Medicine | Medicine That Remembers™',
     description:
-      'Virtual-first concierge primary care for Washington State. Founded by Dr. Yaw Nkrumah, MD. Built on Sankofa: we learn from your past to guide better care today and tomorrow.',
+      'Virtual-first membership-based primary care for Washington State. Founded by Dr. Yaw Nkrumah, MD. Built on Sankofa: we learn from your past to guide better care today and tomorrow.',
     url: 'https://sankofafamilymedicine.com/about',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Sankofa Family Medicine | Medicine That Remembers™',
     description:
-      'Virtual-first concierge primary care serving Washington State. Your physician remembers your history so each visit builds on the last.',
+      'Virtual-first membership-based primary care serving Washington State. Your physician remembers your history so each visit builds on the last.',
     images: ['https://sankofafamilymedicine.com/images/og-about.png'],
     creator: '@sankofafamilymed',
   },
@@ -106,16 +106,16 @@ export const metadata: Metadata = {
     'service-cities': 'Seattle, Bellevue, Redmond, Kirkland, Tacoma, Spokane, Vancouver, Olympia, Tri-Cities, Richland, Kennewick, Pasco',
     'entity-organization': 'Sankofa Family Medicine',
     'entity-person': 'Dr. Yaw Nkrumah, MD',
-    'entity-concept': 'Medicine That Remembers, Sankofa Principle, Continuity of Care, Direct Primary Care',
+    'entity-concept': 'Medicine That Remembers, Sankofa Principle, Continuity of Care, Membership-Based Primary Care',
     'entity-location': 'Washington State, Pacific Northwest, Seattle Metro',
-    'topic-primary': 'Virtual Primary Care, Direct Primary Care',
+    'topic-primary': 'Virtual Primary Care, Membership-Based Primary Care',
     'topic-secondary': 'Healthcare Continuity, Patient-Physician Relationship, Membership Medicine, Telehealth',
     'topic-tertiary': 'Preventive Care, Chronic Disease Management, Family Medicine',
     'article-modified-time': '2026-01-26',
     'content-modified': '2026-01-26',
     'review-cycle': 'quarterly',
     'next-review': '2026-04-26',
-    'voice-query-match': 'What is Sankofa Family Medicine, Who is Dr Yaw Nkrumah, What does Medicine That Remembers mean, How does direct primary care work, What is concierge medicine, Virtual doctor in Washington State, Best DPC practice Seattle',
+    'voice-query-match': 'What is Sankofa Family Medicine, Who is Dr Yaw Nkrumah, What does Medicine That Remembers mean, How does membership medicine work, What is concierge medicine, Virtual doctor in Washington State, Best primary care practice Seattle',
     'snippet-target': 'definition, list, how-to',
     'answer-box-eligible': 'true',
   },
@@ -131,7 +131,7 @@ const medicalWebPageJsonLd = {
   '@id': 'https://sankofafamilymedicine.com/about#webpage',
   url: 'https://sankofafamilymedicine.com/about',
   name: 'About Sankofa Family Medicine | Medicine That Remembers™',
-  description: 'Learn about Sankofa Family Medicine, a virtual-first concierge primary care practice in Washington State founded by Dr. Yaw Nkrumah, MD.',
+  description: 'Learn about Sankofa Family Medicine, a virtual-first membership-based primary care practice in Washington State founded by Dr. Yaw Nkrumah, MD.',
   isPartOf: {
     '@type': 'WebSite',
     '@id': 'https://sankofafamilymedicine.com/#website',
@@ -157,7 +157,7 @@ const organizationJsonLd = {
   name: 'Sankofa Family Medicine',
   legalName: 'Sankofa Family Medicine PLLC',
   alternateName: ['SFM', 'Sankofa Medicine', 'Medicine That Remembers'],
-  description: 'Sankofa Family Medicine is a virtual-first Direct Primary Care practice serving patients across Washington State.',
+  description: 'Sankofa Family Medicine is a virtual-first membership-based primary care practice serving patients across Washington State.',
   url: 'https://sankofafamilymedicine.com',
   telephone: '+1-425-285-7390',
   email: 'care@sankofafamilymedicine.com',
@@ -210,7 +210,7 @@ const faqJsonLd = {
       name: 'What is Sankofa Family Medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa Family Medicine is a virtual-first Direct Primary Care practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, we offer membership-based primary care with 45-60 minute appointments, same-day access, and a deliberately small patient panel.',
+        text: 'Sankofa Family Medicine is a virtual-first membership-based primary care practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, we offer 45-60 minute appointments, same-day access, and a deliberately small patient panel of fewer than 200 patients.',
       },
     },
     {
@@ -476,9 +476,9 @@ export default function AboutPage() {
                     <Link href="/services" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
                       virtual primary care services
                     </Link>{' '}
-                    or explore our{' '}
-                    <Link href="/#membership-plans" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
-                      membership options
+                    or explore{' '}
+                    <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                      how our model differs
                     </Link>.
                   </p>
                 </div>
@@ -542,8 +542,8 @@ export default function AboutPage() {
                   </p>
                   <p className="text-sfm-navy/60 leading-relaxed">
                     Your physician knows you. Not as a chart number, but as a person with a history that matters. This is the foundation of{' '}
-                    <Link href="/services/direct-primary-care" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
-                      Direct Primary Care
+                    <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                      membership-based primary care
                     </Link>{' '}
                     done right.
                   </p>
@@ -579,8 +579,8 @@ export default function AboutPage() {
               <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-8" aria-hidden="true" />
               <p className="text-sfm-navy/70 text-lg max-w-2xl mx-auto">
                 We practice{' '}
-                <Link href="/services/direct-primary-care" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
-                  Direct Primary Care
+                <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                  membership-based primary care
                 </Link>{' '}
                 built for continuity, access, and careful medical decision-making. No insurance billing, no rushed visits, no rotating providers.
               </p>
@@ -724,5 +724,4 @@ export default function AboutPage() {
     </>
   )
 }
-
 
