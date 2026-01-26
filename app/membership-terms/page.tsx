@@ -195,7 +195,88 @@ export default function MembershipTermsPage() {
                 </div>
               </div>
 
-              {/* 2. TIER SUMMARIES */}
+              {/* 2. FOUNDING MEMBER PROGRAM */}
+              <div>
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-xl bg-sfm-gold/10 flex items-center justify-center flex-shrink-0">
+                    <Users className="w-6 h-6 text-sfm-gold" />
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="font-display text-3xl text-sfm-navy mb-6">Founding Member Program</h2>
+                    
+                    {/* Eligibility */}
+                    <h3 className="font-display text-2xl text-sfm-navy mb-4">Eligibility</h3>
+                    <div className="space-y-4 text-sfm-navy/70 leading-relaxed mb-8">
+                      <p>
+                        Founding Member status is available to the first 30 members who enroll during the initial enrollment period, prior to general practice launch. Founding Member positions are allocated across all membership tiers on a first-come, first-served basis.
+                      </p>
+                    </div>
+
+                    {/* Founding Member Benefits */}
+                    <h3 className="font-display text-2xl text-sfm-navy mb-4">Founding Member Benefits</h3>
+                    <div className="space-y-6 mb-8">
+                      <div>
+                        <h4 className="font-medium text-sfm-navy mb-2">Rate Protection</h4>
+                        <p className="text-sfm-navy/70 leading-relaxed">
+                          Founding Members receive a discounted Founding Member Rate that is locked for the duration of their membership. As long as a Founding Member's membership remains active and in good standing (no lapse in payment exceeding 30 days), their rate will not increase, even if standard rates increase for new members.
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-sfm-navy mb-2">Priority Access</h4>
+                        <p className="text-sfm-navy/70 leading-relaxed">
+                          Founding Members receive priority scheduling consideration during the practice launch period and early access to new services as they become available.
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-sfm-navy mb-2">Input on Service Development</h4>
+                        <p className="text-sfm-navy/70 leading-relaxed">
+                          Founding Members are invited to provide feedback on practice protocols, service offerings, and member experience. While the Practice retains sole discretion over clinical and operational decisions, Founding Member input is valued and considered in ongoing development.
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-sfm-navy mb-2">Recognition</h4>
+                        <p className="text-sfm-navy/70 leading-relaxed">
+                          Founding Members are recognized as early supporters who helped establish the practice. This recognition is internal and does not include public disclosure of membership status without member consent.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Rate Lock Conditions */}
+                    <h3 className="font-display text-2xl text-sfm-navy mb-4">Rate Lock Conditions</h3>
+                    <div className="space-y-4 text-sfm-navy/70 leading-relaxed mb-8">
+                      <p>
+                        The Founding Member Rate lock is contingent upon:
+                      </p>
+                      <ul className="list-disc pl-6 space-y-2">
+                        <li>Continuous active membership without lapse</li>
+                        <li>Payment in good standing (no outstanding balance exceeding 30 days past due)</li>
+                        <li>Compliance with Membership Terms and Practice policies</li>
+                      </ul>
+                      <p>
+                        If a Founding Member cancels their membership or allows it to lapse, they forfeit Founding Member status and rate protection. Re-enrollment, if permitted, would be at then-current standard rates and subject to availability.
+                      </p>
+                    </div>
+
+                    {/* Transferability */}
+                    <h3 className="font-display text-2xl text-sfm-navy mb-4">Transferability</h3>
+                    <div className="space-y-4 text-sfm-navy/70 leading-relaxed mb-8">
+                      <p>
+                        Founding Member status is non-transferable. It applies only to the individual member (or family unit, for family memberships) who originally enrolled.
+                      </p>
+                    </div>
+
+                    {/* Program Closure */}
+                    <h3 className="font-display text-2xl text-sfm-navy mb-4">Program Closure</h3>
+                    <div className="space-y-4 text-sfm-navy/70 leading-relaxed">
+                      <p>
+                        Founding Member enrollment closes when all 30 positions are filled or at general practice launch, whichever occurs first. After closure, new members enroll at standard rates.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 3. TIER SUMMARIES */}
               <div>
                 <h2 className="font-display text-3xl text-sfm-navy mb-8">Tier Summaries</h2>
                 <div className="space-y-8">
@@ -247,7 +328,7 @@ export default function MembershipTermsPage() {
                                   ? 'text-sfm-gold' 
                                   : 'text-sfm-navy'
                               }`}>
-                                {tier.priceMonthly}
+                                {tier.priceMonthly} (Founding Member Rate)
                               </div>
                               <p className={`text-sm ${
                                 tier.highlight 
@@ -291,7 +372,7 @@ export default function MembershipTermsPage() {
                 </div>
               </div>
 
-              {/* 3. SERVICE HOURS & COMMUNICATION */}
+              {/* 4. SERVICE HOURS & COMMUNICATION */}
               <div>
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-sfm-azure/10 flex items-center justify-center flex-shrink-0">
@@ -317,7 +398,7 @@ export default function MembershipTermsPage() {
                 </div>
               </div>
 
-              {/* 4. ACCESS BOUNDARIES */}
+              {/* 5. ACCESS BOUNDARIES */}
               <div className="bg-amber-50 border-l-4 border-amber-400 rounded-r-2xl p-6 md:p-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0">
@@ -351,7 +432,7 @@ export default function MembershipTermsPage() {
                 </div>
               </div>
 
-              {/* 5. BILLING & PREPAYMENT */}
+              {/* 6. BILLING & PREPAYMENT */}
               <div>
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-sfm-gold/10 flex items-center justify-center flex-shrink-0">
@@ -380,7 +461,7 @@ export default function MembershipTermsPage() {
                 </div>
               </div>
 
-              {/* 6. GENERAL TERMS */}
+              {/* 7. GENERAL TERMS */}
               <div>
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-sfm-navy/10 flex items-center justify-center flex-shrink-0">
@@ -406,7 +487,7 @@ export default function MembershipTermsPage() {
                 </div>
               </div>
 
-              {/* 7. CONTACT */}
+              {/* 8. CONTACT */}
               <div className="bg-sfm-cream rounded-3xl p-8 md:p-10 border border-sfm-gold/20">
                 <h2 className="font-display text-3xl text-sfm-navy mb-6">Questions About Membership Terms?</h2>
                 <p className="text-sfm-navy/70 mb-8">
