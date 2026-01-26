@@ -284,7 +284,7 @@ export default function ServicesPage() {
                 <div>
                   <div className="flex items-center gap-2 mb-1">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                    <span className="text-sfm-navy font-semibold text-sm">Founding Member Enrollment Open</span>
+                    <span className="text-sfm-navy font-semibold text-sm">Founders Waitlist Open</span>
                   </div>
                   <p className="text-sfm-text-muted text-xs">
                     Lock in your founding member rate for life.

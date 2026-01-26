@@ -7,7 +7,7 @@ import { stateConfigs } from '@/lib/states'
 const waConfig = stateConfigs.WA
 
 export const metadata: Metadata = {
-  title: 'Virtual Primary Care in Washington State | Now Accepting Patients',
+  title: 'Virtual Primary Care in Washington State | Founders Waitlist Now Open',
   description: waConfig.metadata.description,
   keywords: waConfig.metadata.keywords,
   openGraph: {

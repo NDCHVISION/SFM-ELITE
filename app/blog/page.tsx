@@ -331,7 +331,7 @@ export default function BlogPage() {
             </Link>
           </div>
           <p className="text-sfm-text-muted text-xs mt-3">
-            All intake, scheduling, messaging, and visits occur securely inside Atlas.
+            Enrollment begins February 2026. No payment required today.
           </p>
         </div>
       </section>

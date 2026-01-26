@@ -101,7 +101,7 @@ export default function ContactPage() {
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </a>
           <p className="text-white/40 text-sm mt-3">
-            All intake, scheduling, messaging, and visits occur securely inside Atlas.
+            Enrollment begins February 2026. No payment required today.
           </p>
         </div>
       </section>
