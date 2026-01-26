@@ -20,7 +20,7 @@ export default function FoundersWaitlistPage() {
           </h1>
           <div className="divider-gold mx-auto mb-8" />
           <p className="text-xl text-sfm-text-muted max-w-3xl mx-auto">
-            Join Sankofa Family Medicine as we launch in February 2026. Reserve your founder spot below, no payment required until enrollment date. 
+            Join Sankofa Family Medicine as we launch in February 2026. Reserve your founder spot below, no payment required today. 
           </p>
         </div>
 
