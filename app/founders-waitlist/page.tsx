@@ -105,7 +105,7 @@ export default function FoundersWaitlistPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <main className="min-h-screen bg-gradient-to-b from-white to-sfm-cream/30">
+      <main className="min-h-screen bg-gradient-to-b from-white to-sfm-cream/30 pt-16 lg:pt-[128px]">
         <div className="max-w-7xl mx-auto px-6 py-20">
           {/* Breadcrumb Navigation */}
           <nav aria-label="Breadcrumb" className="mb-8">

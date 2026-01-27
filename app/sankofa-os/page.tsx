@@ -135,7 +135,7 @@ export default function SankofaOSPage() {
           aria-hidden="true"
         />
 
-        <main id="main-content">
+        <main id="main-content" className="pt-16 lg:pt-[128px]">
           {/* Hero Section */}
           <section className="relative min-h-screen flex items-center justify-center px-6" aria-labelledby="hero-heading">
             {/* Atmospheric background */}

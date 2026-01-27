@@ -299,7 +299,7 @@ const sitePages: PageCategory[] = [
 
 export default function SiteMapPage() {
   return (
-    <main className="bg-sfm-cream min-h-screen">
+    <main className="bg-sfm-cream min-h-screen pt-16 lg:pt-[128px]">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-sfm-navy to-sfm-navy-deep py-24 overflow-hidden">
         {/* Background effects */}

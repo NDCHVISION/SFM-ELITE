@@ -157,7 +157,7 @@ export default function ResearchPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <main>
+      <main className="pt-16 lg:pt-[128px]">
         {/* Hero */}
         <section className="relative pt-40 pb-20 bg-gradient-to-b from-sfm-navy via-sfm-navy to-[#070705] overflow-hidden">
           <div className="absolute inset-0 pattern-sankofa-flow-gold pattern-subtle opacity-30" />

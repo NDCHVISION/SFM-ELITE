@@ -455,7 +455,7 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
 
-      <main className="overflow-hidden">
+      <main className="overflow-hidden pt-16 lg:pt-[128px]">
         {/* HERO SECTION */}
         <section
           className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-sfm-navy via-[#0a2847] to-sfm-navy overflow-hidden"

@@ -61,7 +61,7 @@ export const metadata: Metadata = {
 
 export default function PatientFormsPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white pt-16 lg:pt-[128px]">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-sfm-navy via-sfm-azure to-sfm-navy py-20 lg:py-28">
         <div className="absolute inset-0 bg-[url('/images/sankofa-bird.png')] bg-no-repeat bg-right-bottom opacity-5 bg-contain" />

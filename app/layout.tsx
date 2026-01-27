@@ -100,7 +100,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Navigation />
-        <main id="main-content">
+        <main id="main-content" className="pt-16 lg:pt-[128px]">
           {children}
         </main>
         <Footer />
