@@ -182,6 +182,21 @@ const sitePages: PageCategory[] = [
     description: 'What we offer and how we help',
     pages: [
       {
+        title: 'Membership Plans',
+        href: '/services',
+        description: 'View our concierge care membership options',
+      },
+      {
+        title: 'Membership Terms',
+        href: '/membership-terms',
+        description: 'View membership agreement details',
+      },
+      {
+        title: 'Founding Member Program',
+        href: '/membership-terms#founding-member-program',
+        description: 'Exclusive benefits for our first 30 members',
+      },
+      {
         title: 'What We Cover',
         href: '/services/what-we-cover',
         description: 'Comprehensive list of conditions we treat',

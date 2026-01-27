@@ -202,7 +202,7 @@ export default function MembershipTermsPage() {
                     <Users className="w-6 h-6 text-sfm-gold" />
                   </div>
                   <div className="flex-1">
-                    <h2 className="font-display text-3xl text-sfm-navy mb-6">Founding Member Program</h2>
+                    <h2 id="founding-member-program" className="font-display text-3xl text-sfm-navy mb-6">Founding Member Program</h2>
                     
                     {/* Eligibility */}
                     <h3 className="font-display text-2xl text-sfm-navy mb-4">Eligibility</h3>
