@@ -514,7 +514,7 @@ export default function ServicesPage() {
               <p className="text-sfm-gold text-sm uppercase tracking-wider mb-4">Sankofa Family Medicine</p>
               <ul className="space-y-3">
                 {[
-                  '45-60 minute unhurried visits',
+                  '45-75 minute unhurried visits',
                   'Same-day or next-day access',
                   'Approximately 200 patients per physician',
                   'Direct messaging and calls',
