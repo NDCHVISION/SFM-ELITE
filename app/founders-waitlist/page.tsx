@@ -1,75 +1,16 @@
+'use client'
+
 import Link from 'next/link'
 import Script from 'next/script'
-import { Metadata } from 'next'
+import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 
 // =============================================================================
-// METADATA
+// METADATA - Moved to generateMetadata for client components
 // =============================================================================
 
-export const metadata: Metadata = {
-  title: 'Founders Waitlist | Sankofa Family Medicine | Medicine That Remembers™',
-  description:
-    'Join the Sankofa Family Medicine Founders Waitlist. Founders cohort limited (about 30 memberships). Clinical care plans to begin February 2026. No payment required to join the waitlist.',
-  keywords: [
-    'Sankofa Family Medicine waitlist',
-    'founders waitlist',
-    'direct primary care waitlist',
-    'DPC Washington waitlist',
-    'membership-based primary care',
-    'telehealth primary care Washington',
-  ],
-  authors: [{ name: 'Yaw Nkrumah, M.D.', url: 'https://sankofafamilymedicine.com/founder' }],
-  creator: 'Sankofa Family Medicine',
-  publisher: 'Sankofa Family Medicine',
-  openGraph: {
-    title: 'Founders Waitlist | Sankofa Family Medicine',
-    description:
-      'Join the Founders Waitlist. Founders cohort limited (about 30 memberships). Clinical care plans to begin February 2026. No payment required to join.',
-    url: 'https://sankofafamilymedicine.com/founders-waitlist',
-    siteName: 'Sankofa Family Medicine',
-    locale: 'en_US',
-    type: 'website',
-    images: [
-      {
-        url: 'https://sankofafamilymedicine.com/images/og-waitlist.png',
-        width: 1200,
-        height: 630,
-        alt: 'Join the Sankofa Family Medicine Founders Waitlist',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Founders Waitlist | Sankofa Family Medicine',
-    description:
-      'Join the Founders Waitlist. Founders cohort limited (about 30 memberships). No payment required to join.',
-    images: ['https://sankofafamilymedicine.com/images/og-waitlist.png'],
-    creator: '@sankofafamilymed',
-  },
-  alternates: {
-    canonical: 'https://sankofafamilymedicine.com/founders-waitlist',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  other: {
-    'ai-content-declaration': 'human-authored',
-    'content-type': 'Waitlist Page',
-    'content-purpose': 'Interest form for founders waitlist',
-    'page-category': 'Healthcare Services',
-    'practice-model': 'Direct Primary Care (DPC), Membership Medicine',
-    'service-area': 'Washington State, USA',
-    'geo-region': 'US-WA',
-  },
-}
+// Since this is now a client component, metadata export is removed
+// Metadata is handled via Next.js head tags or layout
 
 // =============================================================================
 // STRUCTURED DATA
@@ -121,6 +62,36 @@ const breadcrumbJsonLd = {
 // =============================================================================
 
 export default function FoundersWaitlistPage() {
+  const router = useRouter()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    const formData = new FormData(e.currentTarget)
+    
+    try {
+      const response = await fetch('https://formspree.io/f/manrdjyn', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      
+      if (response.ok) {
+        router.push('/waitlist-success')
+      } else {
+        alert('Submission failed. Please try again.')
+        setIsSubmitting(false)
+      }
+    } catch (error) {
+      alert('Network error. Please try again.')
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <>
       <Script
@@ -175,15 +146,13 @@ export default function FoundersWaitlistPage() {
           {/* Formspree Form */}
           <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-sfm-gold/10 p-8 md:p-10">
             <form 
-              method="POST" 
-              action="https://formspree.io/f/manrdjyn"
+              onSubmit={handleSubmit}
               acceptCharset="UTF-8"
               className="waitlist-form space-y-6"
             >
               {/* Hidden Fields */}
               <input type="hidden" name="source_page" value="/founders-waitlist" />
               <input type="hidden" name="consent_version" value="v2026-01-27" />
-              <input type="hidden" name="_next" value="https://www.sankofafamilymedicine.com/waitlist-success" />
               
               {/* First Name */}
               <div className="form-group">
@@ -330,13 +299,16 @@ export default function FoundersWaitlistPage() {
               
               {/* Submit Button */}
               <button 
-                type="submit" 
-                className="w-full relative inline-flex items-center justify-center gap-2 px-8 py-5 font-semibold text-base rounded-xl overflow-hidden transition-all duration-500 bg-gradient-to-r from-sfm-gold via-sfm-gold-light to-sfm-gold bg-[length:200%_100%] text-sfm-navy shadow-lg shadow-sfm-gold/25 hover:bg-[position:100%_0] hover:shadow-xl hover:shadow-sfm-gold/40 group"
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full relative inline-flex items-center justify-center gap-2 px-8 py-5 font-semibold text-base rounded-xl overflow-hidden transition-all duration-500 bg-gradient-to-r from-sfm-gold via-sfm-gold-light to-sfm-gold bg-[length:200%_100%] text-sfm-navy shadow-lg shadow-sfm-gold/25 hover:bg-[position:100%_0] hover:shadow-xl hover:shadow-sfm-gold/40 group disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Join the Founders Waitlist
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                {isSubmitting ? 'Submitting...' : 'Join the Founders Waitlist'}
+                {!isSubmitting && (
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                )}
               </button>
               
               <p className="text-center text-sm text-sfm-navy/50">
