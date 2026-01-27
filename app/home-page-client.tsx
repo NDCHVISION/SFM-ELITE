@@ -336,7 +336,15 @@ export default function HomePage() {
             <h2 className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight">Membership-Based Primary Care</h2>
             <p className="text-lg text-sfm-navy/70 max-w-2xl mx-auto mb-4">Every membership includes generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing. All memberships operate under the Direct Primary Care (DPC) model: no insurance billing for primary care services.</p>
             <p className="text-base text-sfm-navy/60 max-w-2xl mx-auto mb-4">We do not bill insurance for membership services, but you may use insurance for labs, imaging, and specialists outside the membership.</p>
-            <p className="text-sfm-gold font-medium text-base">Founding members receive the lower end of each range. Your exact rate is confirmed before enrollment.</p>
+            <p className="text-sfm-gold font-medium text-base">
+              <Link 
+                href="/membership-terms#founding-member-program" 
+                className="hover:underline hover:text-sfm-azure transition-colors duration-300"
+                aria-label="Learn more about Founding Member benefits"
+              >
+                Founding members
+              </Link> receive the lower end of each range. Your exact rate is confirmed before enrollment.
+            </p>
           </ScrollReveal>
 
           <ScrollRevealGroup className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -426,7 +434,15 @@ export default function HomePage() {
           
           <h2 id="cta-heading" className="text-4xl sm:text-5xl lg:text-6xl font-display text-white mb-6 leading-tight" data-speakable>Begin with a Physician Who <span className="text-sfm-gold" style={{ textShadow: '0 0 40px rgba(188, 152, 51, 0.4)' }}>Remembers</span></h2>
           <p className="text-white/70 text-lg lg:text-xl mb-6 max-w-xl mx-auto leading-relaxed">Care is delivered through Atlas. Secure intake, scheduling, messaging, and visits happen there.</p>
-          <p className="text-white/50 text-base mb-10">Founding member pricing available through February 2026.</p>
+          <p className="text-white/50 text-base mb-10">
+            <Link 
+              href="/membership-terms#founding-member-program" 
+              className="hover:text-sfm-gold hover:underline transition-colors duration-300"
+              aria-label="Learn more about Founding Member pricing"
+            >
+              Founding member pricing
+            </Link> available through February 2026.
+          </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <PrimaryCTA variant="hero" />

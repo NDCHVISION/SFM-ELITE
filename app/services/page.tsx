@@ -312,9 +312,13 @@ export default function ServicesPage() {
                   {/* Founding Member Badge */}
                   {tier.founding && (
                     <div className="absolute -top-3 right-6 z-10">
-                      <div className="px-4 py-1.5 bg-sfm-azure text-white text-xs font-semibold rounded-full shadow-md">
+                      <Link 
+                        href="/membership-terms#founding-member-program"
+                        className="px-4 py-1.5 bg-sfm-azure text-white text-xs font-semibold rounded-full shadow-md hover:bg-sfm-gold hover:text-sfm-navy transition-colors duration-300"
+                        aria-label="Learn more about Founding Offer"
+                      >
                         Founding Offer
-                      </div>
+                      </Link>
                     </div>
                   )}
 
