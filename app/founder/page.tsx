@@ -76,6 +76,11 @@ const schemaGraph = {
       url: 'https://sankofafamilymedicine.com/founder',
       name: 'Dr. Yaw Nkrumah, MD | Founder | Sankofa Family Medicine',
       description: 'Founder profile for Dr. Yaw Nkrumah, MD, board-certified family physician.',
+      inLanguage: 'en-US',
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        url: 'https://sankofafamilymedicine.com/images/dr-nkrumah-thoughtful.png',
+      },
       about: { '@id': 'https://sankofafamilymedicine.com/#founder' },
       isPartOf: { '@id': 'https://sankofafamilymedicine.com/#organization' },
     },
@@ -91,7 +96,7 @@ const schemaGraph = {
       jobTitle: 'Founder & Medical Director',
       disambiguatingDescription: 'Board-certified family physician and founder of Sankofa Family Medicine PLLC (Washington).',
       description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a membership-based primary care practice available to Washington State patients via telehealth. The practice emphasizes continuity, clinical judgment, and relationship-based care.',
-      image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
+      image: 'https://sankofafamilymedicine.com/images/dr-nkrumah-thoughtful.png',
       url: 'https://sankofafamilymedicine.com/founder',
       mainEntityOfPage: { '@id': 'https://sankofafamilymedicine.com/founder#webpage' },
       sameAs: [
@@ -146,7 +151,7 @@ const schemaGraph = {
     },
     // Organization node
     {
-      '@type': 'MedicalOrganization',
+      '@type': 'MedicalClinic',
       '@id': 'https://sankofafamilymedicine.com/#organization',
       name: 'Sankofa Family Medicine',
       legalName: 'Sankofa Family Medicine PLLC',
@@ -155,6 +160,21 @@ const schemaGraph = {
       description: 'Membership-based primary care practice available to Washington State patients via telehealth.',
       medicalSpecialty: ['Family Medicine', 'Primary Care'],
       availableLanguage: ['English'],
+      isAccessibleForFree: false,
+      knowsAbout: [
+        'Direct Primary Care',
+        'Membership-based primary care',
+        'Telehealth primary care',
+        'Continuity of care',
+      ],
+      sameAs: [
+        'https://www.linkedin.com/company/sankofa-family-medicine/',
+      ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Membership Options',
+        url: 'https://sankofafamilymedicine.com/services',
+      },
       areaServed: {
         '@type': 'State',
         name: 'Washington',
@@ -191,7 +211,7 @@ export default function FounderPage() {
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-sfm-gold/40 to-sfm-gold/10 blur-2xl scale-125 animate-pulse-slow" />
             <div className="absolute -inset-2 rounded-full border-2 border-sfm-gold/20 opacity-0 group-hover:opacity-100 group-hover:-inset-4 transition-all duration-500" />
             <Image 
-              src="/images/dr-nkrumah.png" 
+              src="/images/dr-nkrumah-thoughtful.png" 
               alt="Dr. Yaw Nkrumah, MD" 
               width={208}
               height={208}
@@ -455,10 +475,10 @@ export default function FounderPage() {
               The Sankofa principle means looking back to move forward wisely. Each visit, result, and conversation is carried forward so care compounds over time.
             </p>
             <p>
-              Sankofa is a membership-based primary care practice (Direct Primary Care model). Membership is not insurance, and we do not bill insurance for primary care services included in membership.
+              Sankofa Family Medicine is a membership-based primary care practice (Direct Primary Care model). Membership is not insurance, and we do not bill insurance for primary care services included in membership.
             </p>
             <p>
-              Sankofa also restores respect for physicians by giving them the time and autonomy to think, decide, and follow through.
+              At Sankofa Family Medicine, physicians have time to think, explain, and follow through.
             </p>
             <p className="text-sfm-navy font-medium text-lg">
               This is the kind of practice I would trust with my own family.
@@ -496,7 +516,7 @@ export default function FounderPage() {
                 <span className="font-display text-sfm-gold text-lg">3</span>
               </div>
               <h3 className="font-semibold text-sfm-navy mb-2">Begin Care</h3>
-              <p className="text-muted text-sm">Membership includes primary care services provided by Sankofa Family Medicine. Labs, imaging, prescriptions, and specialist care are billed separately (insurance or direct pay). We do not bill insurance for membership services.</p>
+              <p className="text-muted text-sm">Membership includes primary care services provided by Sankofa Family Medicine. Labs, imaging, prescriptions, and specialist care are billed separately (insurance or direct pay).</p>
             </div>
           </div>
         </div>
