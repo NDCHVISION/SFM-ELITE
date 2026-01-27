@@ -5,8 +5,10 @@ import { ArrowRight, GraduationCap, FileText, Heart, Stethoscope, Brain, Wifi, G
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://sankofafamilymedicine.com'),
   title: 'Dr. Yaw Nkrumah, MD | Founder | Sankofa Family Medicine',
   description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a membership-based primary care practice available to Washington State patients via telehealth. Continuity-driven care built on Medicine That Remembers™.',
+  authors: [{ name: 'Dr. Yaw Nkrumah, MD' }],
   keywords: [
     'Dr. Yaw Nkrumah',
     'family physician Washington',
@@ -58,115 +60,125 @@ export const metadata: Metadata = {
     'ai-content-declaration': 'human-authored',
     'content-type': 'Profile',
     'medical-specialty': 'Primary Care, Family Medicine',
-    'practice-model': 'Direct Primary Care, Membership-Based Primary Care',
+    'practice-model': 'Membership-Based Primary Care (DPC-aligned)',
     'service-area': 'Washington State, USA',
   },
 }
 
-// Person schema for Dr. Yaw Nkrumah (safer pattern: Person + hasOccupation)
-const personSchema = {
+// Consolidated schema using @graph for cleaner entity linking
+const schemaGraph = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  '@id': 'https://sankofafamilymedicine.com/#founder',
-  name: 'Dr. Yaw Nkrumah, MD',
-  givenName: 'Yaw',
-  familyName: 'Nkrumah',
-  honorificPrefix: 'Dr.',
-  honorificSuffix: 'MD',
-  jobTitle: 'Founder & Medical Director',
-  disambiguatingDescription: 'Board-certified family physician and founder of Sankofa Family Medicine PLLC (Washington).',
-  description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a membership-based primary care practice available to Washington State patients via telehealth. The practice emphasizes continuity, clinical judgment, and relationship-based care.',
-  image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
-  url: 'https://sankofafamilymedicine.com/founder',
-  mainEntityOfPage: 'https://sankofafamilymedicine.com/founder',
-  sameAs: [
-    'https://www.linkedin.com/in/yawnkrumahmd/',
-  ],
-  alumniOf: [
+  '@graph': [
+    // WebPage node
     {
-      '@type': 'CollegeOrUniversity',
-      name: 'Medical University of South Carolina',
-      alternateName: 'MUSC',
+      '@type': 'WebPage',
+      '@id': 'https://sankofafamilymedicine.com/founder#webpage',
+      url: 'https://sankofafamilymedicine.com/founder',
+      name: 'Dr. Yaw Nkrumah, MD | Founder | Sankofa Family Medicine',
+      description: 'Founder profile for Dr. Yaw Nkrumah, MD, board-certified family physician.',
+      about: { '@id': 'https://sankofafamilymedicine.com/#founder' },
+      isPartOf: { '@id': 'https://sankofafamilymedicine.com/#organization' },
     },
+    // Person node
+    {
+      '@type': 'Person',
+      '@id': 'https://sankofafamilymedicine.com/#founder',
+      name: 'Dr. Yaw Nkrumah, MD',
+      givenName: 'Yaw',
+      familyName: 'Nkrumah',
+      honorificPrefix: 'Dr.',
+      honorificSuffix: 'MD',
+      jobTitle: 'Founder & Medical Director',
+      disambiguatingDescription: 'Board-certified family physician and founder of Sankofa Family Medicine PLLC (Washington).',
+      description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a membership-based primary care practice available to Washington State patients via telehealth. The practice emphasizes continuity, clinical judgment, and relationship-based care.',
+      image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
+      url: 'https://sankofafamilymedicine.com/founder',
+      mainEntityOfPage: { '@id': 'https://sankofafamilymedicine.com/founder#webpage' },
+      sameAs: [
+        'https://www.linkedin.com/in/yawnkrumahmd/',
+      ],
+      knowsLanguage: ['en'],
+      alumniOf: [
+        {
+          '@type': 'CollegeOrUniversity',
+          name: 'Medical University of South Carolina',
+          alternateName: 'MUSC',
+        },
+        {
+          '@type': 'MedicalOrganization',
+          name: 'Kadlec Family Medicine Residency',
+          address: { '@type': 'PostalAddress', addressRegion: 'WA', addressCountry: 'US' },
+        },
+      ],
+      hasCredential: [
+        {
+          '@type': 'EducationalOccupationalCredential',
+          '@id': 'https://sankofafamilymedicine.com/#abfm-board-certification',
+          name: 'Board Certification in Family Medicine',
+          credentialCategory: 'Board Certification',
+          recognizedBy: { '@type': 'Organization', name: 'American Board of Family Medicine', alternateName: 'ABFM' },
+          url: 'https://www.credential.net/169707940',
+        },
+        {
+          '@type': 'EducationalOccupationalCredential',
+          '@id': 'https://sankofafamilymedicine.com/#wa-medical-license',
+          name: 'Physician License - Washington State',
+          credentialCategory: 'Medical License',
+          recognizedBy: { '@type': 'GovernmentOrganization', name: 'Washington State Department of Health' },
+        },
+      ],
+      hasOccupation: {
+        '@type': 'Occupation',
+        name: 'Family Physician',
+        occupationLocation: {
+          '@type': 'AdministrativeArea',
+          name: 'Washington',
+          addressCountry: 'US',
+        },
+      },
+      knowsAbout: [
+        'Membership-Based Primary Care',
+        'Virtual Primary Care',
+        'Preventive Medicine',
+        'Cardiometabolic Health',
+      ],
+      worksFor: { '@id': 'https://sankofafamilymedicine.com/#organization' },
+    },
+    // Organization node
     {
       '@type': 'MedicalOrganization',
-      name: 'Kadlec Family Medicine Residency',
-      address: { '@type': 'PostalAddress', addressRegion: 'WA', addressCountry: 'US' },
+      '@id': 'https://sankofafamilymedicine.com/#organization',
+      name: 'Sankofa Family Medicine',
+      legalName: 'Sankofa Family Medicine PLLC',
+      url: 'https://sankofafamilymedicine.com',
+      logo: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
+      description: 'Membership-based primary care practice available to Washington State patients via telehealth.',
+      medicalSpecialty: ['Family Medicine', 'Primary Care'],
+      availableLanguage: ['English'],
+      areaServed: {
+        '@type': 'State',
+        name: 'Washington',
+        addressCountry: 'US',
+      },
+      founder: { '@id': 'https://sankofafamilymedicine.com/#founder' },
+      contactPoint: [{
+        '@type': 'ContactPoint',
+        contactType: 'new patient inquiries',
+        url: 'https://sankofafamilymedicine.com/founders-waitlist',
+        availableLanguage: ['English'],
+      }],
     },
   ],
-  hasCredential: [
-    {
-      '@type': 'EducationalOccupationalCredential',
-      name: 'Board Certification in Family Medicine',
-      credentialCategory: 'Board Certification',
-      recognizedBy: { '@type': 'Organization', name: 'American Board of Family Medicine', alternateName: 'ABFM' },
-      url: 'https://www.credential.net/169707940',
-    },
-    {
-      '@type': 'EducationalOccupationalCredential',
-      name: 'Physician License - Washington State',
-      credentialCategory: 'Medical License',
-      recognizedBy: { '@type': 'GovernmentOrganization', name: 'Washington State Department of Health' },
-    },
-  ],
-  hasOccupation: {
-    '@type': 'Occupation',
-    name: 'Family Physician',
-    occupationLocation: {
-      '@type': 'AdministrativeArea',
-      name: 'Washington',
-      addressCountry: 'US',
-    },
-  },
-  knowsAbout: [
-    'Membership-Based Primary Care',
-    'Virtual Primary Care',
-    'Preventive Medicine',
-    'Cardiometabolic Health',
-  ],
-  worksFor: {
-    '@type': 'MedicalOrganization',
-    '@id': 'https://sankofafamilymedicine.com/#organization',
-  },
-}
-
-// Organization schema (connects entity dots)
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'MedicalOrganization',
-  '@id': 'https://sankofafamilymedicine.com/#organization',
-  name: 'Sankofa Family Medicine',
-  legalName: 'Sankofa Family Medicine PLLC',
-  url: 'https://sankofafamilymedicine.com',
-  logo: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
-  description: 'Membership-based primary care practice available to Washington State patients via telehealth.',
-  areaServed: {
-    '@type': 'State',
-    name: 'Washington',
-    addressCountry: 'US',
-  },
-  founder: { '@id': 'https://sankofafamilymedicine.com/#founder' },
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'new patient enrollment',
-    url: 'https://sankofafamilymedicine.com/founders-waitlist',
-    availableLanguage: ['English'],
-  },
 }
 
 export default function FounderPage() {
   return (
     <>
-      {/* Schema */}
+      {/* Consolidated Schema Graph */}
       <Script
-        id="founder-schema"
+        id="ld-json"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
-      <Script
-        id="organization-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
       />
       
       {/* Hero */}
@@ -190,21 +202,33 @@ export default function FounderPage() {
           <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-4 font-medium">Founder & Medical Director</p>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1]">Meet Dr. Yaw Nkrumah</h1>
           <p className="text-white/70 text-lg md:text-xl max-w-xl mx-auto mb-8">
-            Board-certified family physician and founder of Sankofa Family Medicine. Continuity-driven primary care where clinical judgment leads.
+            Board-certified family physician and founder of Sankofa Family Medicine. Continuity-driven primary care available to Washington State patients via telehealth.
           </p>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link 
+              href="/founders-waitlist"
+              className="btn-primary"
+            >
+              Join the Founders Waitlist
+              <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
+            </Link>
             <a 
               href="https://www.linkedin.com/in/yawnkrumahmd/" 
               target="_blank" 
               rel="noopener noreferrer"
+              aria-label="View Dr. Nkrumah on LinkedIn (opens in a new tab)"
               className="btn-secondary-white text-sm py-2 px-4"
             >
               LinkedIn
               <ExternalLink className="ml-2 w-3 h-3" aria-hidden="true" />
             </a>
           </div>
+          <p className="text-white/50 text-xs mt-4">No payment required today</p>
           <p className="text-white/40 text-sm mt-6">
             ABFM Board Certified · Washington State Licensed · MUSC Graduate
+          </p>
+          <p className="text-white/30 text-xs mt-3">
+            Waitlist submission does not create a physician-patient relationship.
           </p>
         </div>
       </section>
@@ -216,10 +240,10 @@ export default function FounderPage() {
         
         <div className="max-w-3xl mx-auto px-6 text-center relative">
           <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl text-sfm-navy italic leading-relaxed">
-            &quot;Care improves when we take the time to listen, document with intention, and follow through 
+            &quot;Care is stronger when we take the time to listen, document with intention, and follow through 
             with consistency. Memory is the foundation of trust.&quot;
           </blockquote>
-          <p className="text-sfm-navy/60 text-lg mt-6 font-display">— Dr. Yaw Nkrumah</p>
+          <p className="text-sfm-navy/60 text-lg mt-6 font-display">- Dr. Yaw Nkrumah</p>
         </div>
       </section>
 
@@ -267,7 +291,7 @@ export default function FounderPage() {
               </ul>
               
               <p>
-                He blends frontline medical training with modern, HIPAA-aligned digital workflows to strengthen follow-through without losing the human core of care.
+                He blends frontline medical training with HIPAA-compliant digital workflows to strengthen follow-through without losing the human core of care.
               </p>
             </div>
           </div>
@@ -291,13 +315,14 @@ export default function FounderPage() {
               href="https://www.credential.net/169707940"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="ABFM board certification verification (opens in a new tab)"
               className="bg-gradient-to-br from-sfm-gold/20 to-sfm-gold/5 backdrop-blur p-8 border border-sfm-gold/30 rounded-2xl hover:border-sfm-gold/50 transition-all duration-300 hover:-translate-y-1 block group"
             >
               <div className="flex items-start justify-between mb-4">
-                <svg className="w-10 h-10 text-sfm-gold" viewBox="0 0 24 24" fill="currentColor">
+                <svg className="w-10 h-10 text-sfm-gold" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
                   <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
                 </svg>
-                <span className="px-2 py-1 bg-sfm-gold/20 text-sfm-gold text-xs font-medium rounded-full">View Credential</span>
+                <span className="px-2 py-1 bg-sfm-gold/20 text-sfm-gold text-xs font-medium rounded-full">ABFM Verification</span>
               </div>
               <h3 className="font-display text-xl text-white mb-3">Board Certified</h3>
               <p className="text-white/80">Family Medicine</p>
@@ -351,6 +376,7 @@ export default function FounderPage() {
                 href="https://www.scienceopen.com/hosted-document?doi=10.33696/epidemiology.4.040" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="Read publication: Treatment of COVID-19 Patients with Remdesivir (opens in a new tab)"
                 className="inline-flex items-center text-sfm-azure hover:text-sfm-navy transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
               >
                 Read Publication
@@ -369,6 +395,7 @@ export default function FounderPage() {
                 href="https://pubmed.ncbi.nlm.nih.gov/35142800/" 
                 target="_blank" 
                 rel="noopener noreferrer"
+                aria-label="View Ménière disease research on PubMed (opens in a new tab)"
                 className="inline-flex items-center text-sfm-azure hover:text-sfm-navy transition-colors text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure rounded"
               >
                 View on PubMed
@@ -391,7 +418,7 @@ export default function FounderPage() {
             {[
               { icon: Heart, title: 'Cardiometabolic Health', description: 'Blood pressure, cholesterol, diabetes prevention and management' },
               { icon: Stethoscope, title: 'Preventive & Precision Care', description: 'Evidence-based screening, pharmacogenomic guidance when appropriate, personalized protocols' },
-              { icon: Brain, title: 'AI-Supported Workflows', description: 'Technology that enhances clinical decision-making and documentation' },
+              { icon: Brain, title: 'AI-Supported Workflows', description: 'Technology that supports clinical decision-making and documentation' },
               { icon: Wifi, title: 'Virtual Care Delivery', description: 'HIPAA-compliant telehealth that maintains human connection' },
               { icon: Globe, title: 'Culturally Grounded Medicine', description: 'Care that honors diverse backgrounds and health traditions' },
             ].map((interest, index) => (
@@ -428,6 +455,9 @@ export default function FounderPage() {
               The Sankofa principle means looking back to move forward wisely. Each visit, result, and conversation is carried forward so care compounds over time.
             </p>
             <p>
+              Sankofa is a membership-based primary care practice (Direct Primary Care model). Membership is not insurance, and we do not bill insurance for primary care services included in membership.
+            </p>
+            <p>
               Sankofa also restores respect for physicians by giving them the time and autonomy to think, decide, and follow through.
             </p>
             <p className="text-sfm-navy font-medium text-lg">
@@ -450,23 +480,23 @@ export default function FounderPage() {
               <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-sfm-gold/20 flex items-center justify-center">
                 <span className="font-display text-sfm-gold text-lg">1</span>
               </div>
-              <h3 className="font-semibold text-sfm-navy mb-2">Reserve Your Spot</h3>
-              <p className="text-muted text-sm">Join the founders waitlist. No payment required today.</p>
+              <h3 className="font-semibold text-sfm-navy mb-2">Join the Founders Waitlist</h3>
+              <p className="text-muted text-sm">Join the Founders Waitlist. No payment required today.</p>
               <p className="text-muted/60 text-xs mt-2 italic">Submitting the waitlist form does not create a physician-patient relationship.</p>
             </div>
             <div className="text-center">
               <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-sfm-gold/20 flex items-center justify-center">
                 <span className="font-display text-sfm-gold text-lg">2</span>
               </div>
-              <h3 className="font-semibold text-sfm-navy mb-2">Enroll in Atlas</h3>
-              <p className="text-muted text-sm">Complete enrollment through the secure patient portal when clinical care begins.</p>
+              <h3 className="font-semibold text-sfm-navy mb-2">Complete Onboarding</h3>
+              <p className="text-muted text-sm">Complete onboarding in Atlas when enrollment opens (February 2026).</p>
             </div>
             <div className="text-center">
               <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-sfm-gold/20 flex items-center justify-center">
                 <span className="font-display text-sfm-gold text-lg">3</span>
               </div>
               <h3 className="font-semibold text-sfm-navy mb-2">Begin Care</h3>
-              <p className="text-muted text-sm">Membership includes primary care services provided by Sankofa Family Medicine. Labs, imaging, prescriptions, and specialist care are billed separately (insurance or direct pay).</p>
+              <p className="text-muted text-sm">Membership includes primary care services provided by Sankofa Family Medicine. Labs, imaging, prescriptions, and specialist care are billed separately (insurance or direct pay). We do not bill insurance for membership services.</p>
             </div>
           </div>
         </div>
@@ -487,21 +517,27 @@ export default function FounderPage() {
           <h2 className="font-display text-4xl md:text-5xl text-white mb-4 leading-tight">
             Begin with a Physician Who <span className="text-sfm-gold">Remembers</span>
           </h2>
-          <p className="text-white/60 text-lg md:text-xl mb-4 max-w-2xl mx-auto">
-            Clinical care begins February 2026. No payment required today.
+          <p className="text-white/60 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
+            Clinical care begins February 2026. No payment required to join the waitlist.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link 
               href="/founders-waitlist"
               className="btn-primary"
             >
-              Reserve a Founders Spot
+              Join the Founders Waitlist
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </Link>
             <Link href="/services" className="btn-secondary-white">
               View Membership Options
             </Link>
           </div>
+          <p className="text-white/40 text-xs mt-8">
+            Not for emergencies. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department. Washington State patients only.
+          </p>
+          <p className="text-white/30 text-xs mt-2">
+            Information on this site is for general informational purposes and is not medical advice.
+          </p>
         </div>
       </section>
     </>
