@@ -517,7 +517,7 @@ export default function AboutPage() {
                   </div>
                   <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] bg-white rounded-2xl shadow-xl shadow-sfm-navy/10 p-6 border border-sfm-gold/10">
                     <p className="text-sfm-navy/70 text-center italic font-display">
-                      &quot;Simply, Sankofa means remembering what matters so the future is built better.&quot;
+                      &quot;Simply, Sankofa means learning from the past to build a better future.&quot;
                     </p>
                   </div>
                 </div>
