@@ -32,7 +32,7 @@ const tiers = [
       { text: 'Genetic testing interpretation', included: false },
       { text: 'Extended after-hours messaging', included: false },
     ],
-    cta: 'Select This Plan',
+    cta: 'Join Waitlist for This Plan',
     popular: false,
   },
   {
@@ -53,7 +53,7 @@ const tiers = [
       { text: 'Extended after-hours messaging', included: false },
       { text: 'Expanded access pathways for urgent needs', included: false },
     ],
-    cta: 'Select This Plan',
+    cta: 'Join Waitlist for This Plan',
     popular: true,
     founding: true,
   },
@@ -73,7 +73,7 @@ const tiers = [
       { text: 'Annual comprehensive health review', included: true },
       { text: 'Enrollment by physician confirmation', included: true },
     ],
-    cta: 'Select This Plan',
+    cta: 'Join Waitlist for This Plan',
     popular: false,
   },
 ]
@@ -227,7 +227,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Billing Toggle */}
-      <section className="py-12 bg-gradient-to-b from-white to-sfm-cream/30">
+      <section className="py-6 bg-gradient-to-b from-white to-sfm-cream/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-center">
             <div className="inline-flex items-center gap-4 p-2 bg-white rounded-2xl shadow-xl shadow-sfm-navy/10 border border-gray-100">
@@ -273,6 +273,10 @@ export default function ServicesPage() {
             <p className="text-sfm-gold text-sm tracking-[0.3em] uppercase mb-4 font-medium">Membership</p>
             <h2 className="font-display text-4xl text-sfm-navy mb-4">Choose Your Level of Care</h2>
             <p className="text-muted max-w-xl mx-auto">Every plan includes generous virtual visit access, direct secure messaging, and wholesale lab pricing.</p>
+            <p className="text-muted max-w-xl mx-auto mt-4">
+              Founding members are joining a limited waitlist.<br />
+              Plan selection helps us prioritize outreach when enrollment opens.
+            </p>
           </div>
 
           {/* Founding Member Badge */}
@@ -348,6 +352,9 @@ export default function ServicesPage() {
                       </span>
                       <span className="text-gray-400 text-sm font-medium">/month</span>
                     </div>
+                    <p className="text-sfm-navy/60 text-sm mt-2">
+                      Founders waitlist only. No payment today.
+                    </p>
                     {billingCycle === 'annual' && (
                       <p className="text-sfm-gold text-sm mt-2 font-medium">
                         Save 10% when you prepay annually

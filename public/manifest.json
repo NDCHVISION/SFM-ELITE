@@ -32,9 +32,9 @@
   ],
   "shortcuts": [
     {
-      "name": "Founding Member Enrollment Now Open",
-      "short_name": "Enroll",
-      "description": "Join Sankofa Family Medicine as a founding member",
+      "name": "Join Founders Waitlist",
+      "short_name": "Waitlist",
+      "description": "Join the founders waitlist - no payment today",
       "url": "/founding-member-enrollment",
       "icons": [{ "src": "/favicon.png", "sizes": "192x192" }]
     },
