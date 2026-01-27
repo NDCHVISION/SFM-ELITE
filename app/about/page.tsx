@@ -741,11 +741,4 @@ export default function AboutPage() {
       </main>
     </>
   )
-}">
-            <p className="text-xs text-sfm-navy/30 text-center">Last updated: January 26, 2026</p>
-          </div>
-        </div>
-      </main>
-    </>
-  )
 }
