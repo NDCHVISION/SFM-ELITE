@@ -50,7 +50,7 @@ export default function WaitlistSuccessPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(successPageJsonLd) }}
       />
 
-      <main className="min-h-screen bg-gradient-to-b from-white to-sfm-cream/30">
+      <main className="min-h-screen bg-gradient-to-b from-white to-sfm-cream/30 pt-16 lg:pt-[128px]">
         <div className="max-w-4xl mx-auto px-6 py-20">
           {/* Success Section */}
           <section className="text-center mb-16">

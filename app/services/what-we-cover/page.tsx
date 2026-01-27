@@ -525,7 +525,7 @@ export default function ServicesPage() {
       />
 
       {/* Main Content */}
-      <main id="main-content">
+      <main id="main-content" className="pt-16 lg:pt-[128px]">
         {/* Hero Section */}
         <section
           className="relative pt-40 pb-24 bg-sfm-navy overflow-hidden"

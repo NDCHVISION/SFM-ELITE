@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function MembershipTermsPage() {
   return (
-    <main className="overflow-hidden">
+    <main className="overflow-hidden pt-16 lg:pt-[128px]">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-sfm-navy via-sfm-navy-light to-sfm-navy overflow-hidden">
         <div

@@ -675,7 +675,7 @@ export default function EmergencyPage() {
       </section>
 
       {/* Main Content */}
-      <main className="bg-white">
+      <main className="bg-white pt-16 lg:pt-[128px]">
         <div className="max-w-4xl mx-auto px-6 py-16 lg:py-20">
           <StateSelector selectedState={selectedState} onStateChange={handleStateChange} />
           <DecisionGuide />
