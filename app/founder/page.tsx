@@ -29,10 +29,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://sankofafamilymedicine.com/images/dr-nkrumah-thoughtful.png',
+        url: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
         width: 400,
         height: 400,
-        alt: 'Dr. Yaw Nkrumah MD, Founder of Sankofa Family Medicine',
+        alt: 'Yaw Nkrumah, M.D., Founder of Sankofa Family Medicine',
       },
     ],
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Dr. Yaw Nkrumah, MD | Sankofa Family Medicine',
     description: 'Founder of Sankofa Family Medicine, a membership-based primary care practice serving Washington State.',
-    images: ['https://sankofafamilymedicine.com/images/dr-nkrumah-thoughtful.png'],
+    images: ['https://sankofafamilymedicine.com/images/dr-nkrumah.png'],
   },
   alternates: {
     canonical: 'https://sankofafamilymedicine.com/founder',
@@ -79,7 +79,7 @@ const schemaGraph = {
       inLanguage: 'en-US',
       primaryImageOfPage: {
         '@type': 'ImageObject',
-        url: 'https://sankofafamilymedicine.com/images/dr-nkrumah-thoughtful.png',
+        url: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
       },
       about: { '@id': 'https://sankofafamilymedicine.com/#founder' },
       isPartOf: { '@id': 'https://sankofafamilymedicine.com/#organization' },
@@ -96,7 +96,7 @@ const schemaGraph = {
       jobTitle: 'Founder & Medical Director',
       disambiguatingDescription: 'Board-certified family physician and founder of Sankofa Family Medicine PLLC (Washington).',
       description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a membership-based primary care practice available to Washington State patients via telehealth. The practice emphasizes continuity, clinical judgment, and relationship-based care.',
-      image: 'https://sankofafamilymedicine.com/images/dr-nkrumah-thoughtful.png',
+      image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
       url: 'https://sankofafamilymedicine.com/founder',
       mainEntityOfPage: { '@id': 'https://sankofafamilymedicine.com/founder#webpage' },
       sameAs: [
@@ -211,7 +211,7 @@ export default function FounderPage() {
             <div className="absolute inset-0 rounded-full bg-gradient-to-br from-sfm-gold/40 to-sfm-gold/10 blur-2xl scale-125 animate-pulse-slow" />
             <div className="absolute -inset-2 rounded-full border-2 border-sfm-gold/20 opacity-0 group-hover:opacity-100 group-hover:-inset-4 transition-all duration-500" />
             <Image 
-              src="/images/dr-nkrumah-thoughtful.png" 
+              src="/images/dr-nkrumah.png" 
               alt="Dr. Yaw Nkrumah, MD" 
               width={208}
               height={208}
@@ -220,7 +220,7 @@ export default function FounderPage() {
             />
           </div>
           <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-4 font-medium">Founder & Medical Director</p>
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1]">Meet Dr. Yaw Nkrumah</h1>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1]">Meet Yaw Nkrumah, M.D.</h1>
           <p className="text-white/70 text-lg md:text-xl max-w-xl mx-auto mb-8">
             Board-certified family physician and founder of Sankofa Family Medicine. Continuity-driven primary care available to Washington State patients via telehealth.
           </p>
@@ -491,7 +491,7 @@ export default function FounderPage() {
       <section className="py-16 bg-sfm-cream/50 border-y border-gray-100">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-10">
-            <h2 className="font-display text-2xl text-sfm-navy mb-2">How to Work With Me</h2>
+            <h2 className="font-display text-2xl text-sfm-navy mb-2">How to Work With Our Team</h2>
             <p className="text-muted">Three steps to get started</p>
           </div>
           
@@ -563,3 +563,4 @@ export default function FounderPage() {
     </>
   )
 }
+
