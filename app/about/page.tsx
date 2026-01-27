@@ -25,37 +25,35 @@ import type { Metadata } from 'next'
 // =============================================================================
 
 export const metadata: Metadata = {
-  title: 'About Sankofa Family Medicine | Medicine That Remembers™ | Membership-Based Primary Care Washington',
+  title: 'About Sankofa Family Medicine | Direct Primary Care (DPC) Washington | Medicine That Remembers™',
   description:
-    'Sankofa Family Medicine is a physician-led membership-based primary care practice serving Washington State via telehealth. Founded by Yaw Nkrumah, M.D., we practice continuity-based care where your medical history is preserved and each visit builds on the last. Serving Seattle, Bellevue, Spokane, and all of Washington.',
+    'Sankofa Family Medicine is a physician-led, virtual Direct Primary Care (DPC) practice serving Washington State. Founded by Yaw Nkrumah, M.D., we deliver continuity-based care where your medical history is preserved and each visit builds on the last.',
   keywords: [
     'Sankofa Family Medicine',
-    'membership-based primary care Washington',
-    'physician-led primary care',
-    'telehealth primary care Washington',
-    'telehealth primary care WA',
     'direct primary care Washington',
     'DPC Washington State',
+    'virtual direct primary care',
+    'telehealth direct primary care WA',
+    'DPC Seattle',
+    'DPC Bellevue',
+    'DPC Spokane',
+    'membership primary care Washington',
+    'membership-based primary care',
+    'physician-led primary care',
+    'telehealth primary care Washington',
     'continuity of care',
     'patient-centered primary care',
     'Medicine That Remembers',
     'Yaw Nkrumah MD',
-    'membership medicine Seattle',
-    'telehealth family medicine',
-    'DPC Seattle',
-    'DPC Bellevue',
-    'DPC Spokane',
-    'telehealth doctor Washington',
     'telemedicine Washington State',
-    'membership primary care',
   ],
   authors: [{ name: 'Yaw Nkrumah, M.D.', url: 'https://sankofafamilymedicine.com/founder' }],
   creator: 'Sankofa Family Medicine',
   publisher: 'Sankofa Family Medicine',
   openGraph: {
-    title: 'About Sankofa Family Medicine | Medicine That Remembers™',
+    title: 'About Sankofa Family Medicine | Direct Primary Care (DPC) | Medicine That Remembers™',
     description:
-      'Membership-based primary care delivered via telehealth for Washington State patients. Founded by Yaw Nkrumah, M.D. Built on Sankofa: we learn from your past to guide better care today and tomorrow.',
+      'Virtual-first Direct Primary Care (DPC) for Washington State patients. Founded by Yaw Nkrumah, M.D. Built on Sankofa: we carry forward what matters from your history so care compounds over time.',
     url: 'https://sankofafamilymedicine.com/about',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -65,15 +63,15 @@ export const metadata: Metadata = {
         url: 'https://sankofafamilymedicine.com/images/og-about.png',
         width: 1200,
         height: 630,
-        alt: 'About Sankofa Family Medicine: Membership-based primary care in Washington State delivered via telehealth, founded by Yaw Nkrumah, M.D.',
+        alt: 'About Sankofa Family Medicine: virtual Direct Primary Care (DPC) in Washington State, founded by Yaw Nkrumah, M.D.',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Sankofa Family Medicine | Medicine That Remembers™',
+    title: 'About Sankofa Family Medicine | Direct Primary Care (DPC) | Medicine That Remembers™',
     description:
-      'Membership-based primary care delivered via telehealth for Washington State patients. Your physician remembers your history so each visit builds on the last.',
+      'Virtual-first Direct Primary Care (DPC) for Washington State patients. Your physician remembers your history so each visit builds on the last.',
     images: ['https://sankofafamilymedicine.com/images/og-about.png'],
     creator: '@sankofafamilymed',
   },
@@ -96,26 +94,24 @@ export const metadata: Metadata = {
     'content-type': 'About Page',
     'content-purpose': 'Practice information, philosophy, care model explanation',
     'page-category': 'Healthcare Services',
-    'medical-specialty': 'Primary Care, Family Medicine, Preventive Medicine, Internal Medicine',
-    'practice-model': 'Direct Primary Care, Membership Medicine, Telehealth',
+    'medical-specialty': 'Primary Care, Family Medicine, Preventive Medicine',
+    'practice-model': 'Direct Primary Care (DPC), Membership Medicine, Telehealth',
     'service-area': 'Washington State, USA',
     'geo-region': 'US-WA',
     'geo-placename': 'Washington State',
-    'geo-position': '47.6062;-122.3321',
-    'ICBM': '47.6062, -122.3321',
     'service-cities': 'Seattle, Bellevue, Redmond, Kirkland, Tacoma, Spokane, Vancouver, Olympia, Tri-Cities, Richland, Kennewick, Pasco',
     'entity-organization': 'Sankofa Family Medicine',
     'entity-person': 'Yaw Nkrumah, M.D.',
-    'entity-concept': 'Medicine That Remembers, Sankofa Principle, Continuity of Care, Membership-Based Primary Care',
+    'entity-concept': 'Medicine That Remembers, Sankofa Principle, Continuity of Care, Direct Primary Care',
     'entity-location': 'Washington State, Pacific Northwest, Seattle Metro',
-    'topic-primary': 'Telehealth Primary Care, Membership-Based Primary Care',
+    'topic-primary': 'Direct Primary Care (DPC), Telehealth Primary Care',
     'topic-secondary': 'Healthcare Continuity, Patient-Physician Relationship, Membership Medicine, Telehealth',
     'topic-tertiary': 'Preventive Care, Chronic Disease Management, Family Medicine',
     'article-modified-time': '2026-01-26',
     'content-modified': '2026-01-26',
     'review-cycle': 'quarterly',
     'next-review': '2026-04-26',
-    'voice-query-match': 'What is Sankofa Family Medicine, Who is Yaw Nkrumah MD, What does Medicine That Remembers mean, How does membership medicine work, What is direct primary care, Telehealth doctor in Washington State, Best primary care practice Seattle',
+    'voice-query-match': 'What is Sankofa Family Medicine, Who is Yaw Nkrumah MD, What does Medicine That Remembers mean, How does membership medicine work, What is direct primary care, Telehealth doctor in Washington State, primary care practice Seattle, telehealth doctor Seattle, direct primary care Washington',
     'snippet-target': 'definition, list, how-to',
     'answer-box-eligible': 'true',
   },
@@ -130,35 +126,44 @@ const medicalWebPageJsonLd = {
   '@type': 'MedicalWebPage',
   '@id': 'https://sankofafamilymedicine.com/about#webpage',
   url: 'https://sankofafamilymedicine.com/about',
-  name: 'About Sankofa Family Medicine | Medicine That Remembers™',
-  description: 'Learn about Sankofa Family Medicine, a membership-based primary care practice in Washington State founded by Yaw Nkrumah, M.D., delivered via telehealth.',
+  name: 'About Sankofa Family Medicine | Direct Primary Care (DPC) | Medicine That Remembers™',
+  description: 'Learn about Sankofa Family Medicine, a virtual Direct Primary Care (DPC) practice in Washington State founded by Yaw Nkrumah, M.D.',
   isPartOf: {
     '@type': 'WebSite',
     '@id': 'https://sankofafamilymedicine.com/#website',
     name: 'Sankofa Family Medicine',
     url: 'https://sankofafamilymedicine.com',
   },
-  about: {
-    '@type': 'MedicalOrganization',
-    '@id': 'https://sankofafamilymedicine.com/#organization',
-  },
+  about: [
+    { '@type': 'MedicalClinic', '@id': 'https://sankofafamilymedicine.com/#organization' },
+    { '@type': 'Person', '@id': 'https://sankofafamilymedicine.com/#founder' },
+  ],
+  mainEntity: { '@type': 'MedicalClinic', '@id': 'https://sankofafamilymedicine.com/#organization' },
   speakable: {
     '@type': 'SpeakableSpecification',
     cssSelector: ['.speakable-intro', '.speakable-philosophy', '.speakable-sankofa'],
   },
   dateModified: '2026-01-26',
   lastReviewed: '2026-01-26',
+  inLanguage: 'en-US',
+  isAccessibleForFree: true,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://sankofafamilymedicine.com/about#webpage' },
+  audience: {
+    '@type': 'PeopleAudience',
+    geographicArea: { '@type': 'AdministrativeArea', name: 'Washington', addressCountry: 'US' },
+  },
 }
 
 const organizationJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'MedicalOrganization',
+  '@type': ['MedicalClinic', 'LocalBusiness'],
   '@id': 'https://sankofafamilymedicine.com/#organization',
   name: 'Sankofa Family Medicine',
   legalName: 'Sankofa Family Medicine PLLC',
   alternateName: ['SFM', 'Sankofa Medicine', 'Medicine That Remembers'],
-  description: 'Sankofa Family Medicine is a membership-based primary care practice serving patients across Washington State via telehealth.',
+  description: 'Sankofa Family Medicine is a virtual Direct Primary Care (DPC) practice serving patients across Washington State via telehealth, accessed through membership.',
   url: 'https://sankofafamilymedicine.com',
+  inLanguage: 'en-US',
   logo: {
     '@type': 'ImageObject',
     url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
@@ -166,36 +171,95 @@ const organizationJsonLd = {
     height: 512,
   },
   medicalSpecialty: ['Primary Care', 'Family Medicine', 'Preventive Medicine'],
-  areaServed: [
-    { '@type': 'State', name: 'Washington' },
-    { '@type': 'City', name: 'Seattle' },
-    { '@type': 'City', name: 'Bellevue' },
-    { '@type': 'City', name: 'Spokane' },
-    { '@type': 'City', name: 'Tacoma' },
+  knowsAbout: [
+    'Direct Primary Care',
+    'Telehealth',
+    'Continuity of care',
+    'Preventive care',
+    'Chronic disease management',
   ],
-  founder: { '@type': 'Person', '@id': 'https://sankofafamilymedicine.com/#founder' },
+  availableLanguage: [{ '@type': 'Language', name: 'English', alternateName: 'en' }],
+  areaServed: [{ '@type': 'State', name: 'Washington', addressCountry: 'US' }],
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: 'WA',
+    addressCountry: 'US',
+  },
+  telephone: '+14252857390',
+  contactPoint: [{
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    telephone: '+14252857390',
+    areaServed: 'US-WA',
+    availableLanguage: ['en'],
+  }],
+  founder: { '@type': 'Person', '@id': 'https://sankofafamilymedicine.com/#founder', name: 'Yaw Nkrumah, M.D.' },
+  employee: [{ '@type': 'Person', '@id': 'https://sankofafamilymedicine.com/#founder' }],
   foundingDate: '2025',
+  sameAs: [
+    'https://www.linkedin.com/company/sankofa-family-medicine/',
+  ],
   isAcceptingNewPatients: false,
   slogan: 'Medicine That Remembers™',
+  additionalProperty: [
+    { '@type': 'PropertyValue', name: 'EnrollmentStatus', value: 'Waitlist open - enrollment begins February 2026' },
+    { '@type': 'PropertyValue', name: 'AcceptingWaitlist', value: 'Yes' },
+    { '@type': 'PropertyValue', name: 'FoundersCap', value: '30' },
+  ],
+  image: 'https://sankofafamilymedicine.com/images/og-about.png',
+  potentialAction: {
+    '@type': 'RegisterAction',
+    name: 'Join the Founders Waitlist',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://sankofafamilymedicine.com/founders-waitlist',
+      actionPlatform: ['http://schema.org/DesktopWebPlatform', 'http://schema.org/MobileWebPlatform'],
+    },
+    object: {
+      '@type': 'Service',
+      name: 'Founding Membership Waitlist',
+      provider: { '@id': 'https://sankofafamilymedicine.com/#organization' },
+    },
+  },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Membership Options',
     url: 'https://sankofafamilymedicine.com/services',
+    itemListElement: [{
+      '@type': 'Offer',
+      name: 'Founding Membership (Waitlist)',
+      availability: 'https://schema.org/PreOrder',
+      url: 'https://sankofafamilymedicine.com/founders-waitlist',
+      description: 'Join the waitlist. No payment required until enrollment opens in February 2026.',
+      itemOffered: {
+        '@type': 'Service',
+        name: 'Founding Membership Waitlist',
+        provider: { '@id': 'https://sankofafamilymedicine.com/#organization' },
+        areaServed: { '@type': 'State', name: 'Washington', addressCountry: 'US' },
+      },
+    }],
   },
 }
 
 const physicianJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
+  '@type': 'Physician',
   '@id': 'https://sankofafamilymedicine.com/#founder',
   name: 'Yaw Nkrumah, M.D.',
   givenName: 'Yaw',
   familyName: 'Nkrumah',
   honorificSuffix: 'M.D.',
   jobTitle: 'Founder and Primary Care Physician',
-  description: 'Yaw Nkrumah, M.D. is a board-certified family medicine physician and founder of Sankofa Family Medicine.',
+  description: 'Yaw Nkrumah, M.D. is a family medicine physician and founder of Sankofa Family Medicine.',
   url: 'https://sankofafamilymedicine.com/founder',
-  worksFor: { '@type': 'MedicalOrganization', '@id': 'https://sankofafamilymedicine.com/#organization' },
+  hasCredential: [{
+    '@type': 'EducationalOccupationalCredential',
+    name: 'Medical Doctor (M.D.)',
+    credentialCategory: 'DegreeCredential',
+  }],
+  worksFor: { '@type': 'MedicalClinic', '@id': 'https://sankofafamilymedicine.com/#organization' },
+  telephone: '+14252857390',
+  medicalSpecialty: ['Family Medicine', 'Primary Care'],
   hasOccupation: {
     '@type': 'Occupation',
     name: 'Family Physician',
@@ -209,18 +273,23 @@ const physicianJsonLd = {
     { '@type': 'CollegeOrUniversity', name: 'Medical University of South Carolina' },
     { '@type': 'MedicalOrganization', name: 'Kadlec Family Medicine Residency' },
   ],
+  sameAs: [
+    'https://www.linkedin.com/in/yawnkrumahmd/',
+  ],
+  mainEntityOfPage: 'https://sankofafamilymedicine.com/founder',
 }
 
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
+  inLanguage: 'en-US',
   mainEntity: [
     {
       '@type': 'Question',
       name: 'What is Sankofa Family Medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa Family Medicine is a membership-based primary care practice serving patients across Washington State via telehealth. Founded by Yaw Nkrumah, M.D., we offer 45 to 75 minute appointments, same-day or next-business-day access when available, and a deliberately small patient panel.',
+        text: 'Sankofa Family Medicine is a virtual Direct Primary Care (DPC) practice serving patients across Washington State. Care is accessed through membership, with longer appointments (often 45 to 75 minutes), scheduling designed for faster access than traditional clinics when available, and a deliberately small patient panel.',
       },
     },
     {
@@ -228,7 +297,7 @@ const faqJsonLd = {
       name: 'What does Medicine That Remembers mean?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Medicine That Remembers is our care philosophy. Your physician retains the details that shape your health: your history, context, goals, and preferences. You never have to start over or repeat your story.',
+        text: 'Medicine That Remembers is how we practice. Your physician retains the details that shape your health: your history, context, goals, and preferences. You never have to start over or repeat your story.',
       },
     },
     {
@@ -255,6 +324,22 @@ const faqJsonLd = {
         text: 'We serve patients throughout Washington State via telehealth, including Seattle, Bellevue, Spokane, Tacoma, the Tri-Cities, and all other Washington communities.',
       },
     },
+    {
+      '@type': 'Question',
+      name: 'Do I pay to join the waitlist?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Joining the waitlist is free. Payment begins only when enrollment opens in February 2026.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if I have an emergency?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Call 911 or go to the nearest emergency room. Sankofa Family Medicine is not an emergency service.',
+      },
+    },
   ],
 }
 
@@ -270,12 +355,13 @@ const breadcrumbJsonLd = {
 const howToJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'How to Become a Member at Sankofa Family Medicine',
-  description: 'Join Sankofa Family Medicine in three simple steps.',
-  totalTime: 'PT15M',
+  inLanguage: 'en-US',
+  name: 'How to Join the Founders Waitlist at Sankofa Family Medicine',
+  description: 'Join the Founders Waitlist in three simple steps.',
+  totalTime: 'PT5M',
   step: [
     { '@type': 'HowToStep', position: 1, name: 'Join the Founders Waitlist', text: 'Complete the Founders Waitlist form. No payment required until enrollment opens.' },
-    { '@type': 'HowToStep', position: 2, name: 'Complete Onboarding', text: 'Securely share your medical history through our HIPAA-compliant platform.' },
+    { '@type': 'HowToStep', position: 2, name: 'Complete Pre-enrollment Onboarding', text: 'Securely share your medical history through our HIPAA-compliant platform.' },
     { '@type': 'HowToStep', position: 3, name: 'Begin Your Care', text: 'Once enrollment opens, schedule your first visit. Your physician is accessible by message or video.' },
   ],
 }
@@ -308,14 +394,14 @@ const standards = [
   {
     icon: UserCheck,
     title: 'Every question answered',
-    description: 'Secure messaging responses typically within 24 to 48 business hours for established patients (excluding weekends and holidays).',
+    description: 'Secure messaging with responses aimed within 24 to 48 business hours for established patients (excluding weekends and holidays).',
   },
 ]
 
 const differentiators = [
-  { icon: Clock, stat: '45-75', unit: 'min', label: 'Visit Duration' },
+  { icon: Clock, stat: '45-75', unit: 'min', label: 'Visits' },
   { icon: Users, stat: 'Limited', unit: '', label: 'Patient Panel' },
-  { icon: Zap, stat: 'Fast', unit: '', label: 'Access When Available' },
+  { icon: Zap, stat: 'Fast', unit: '', label: 'Access when available' },
   { icon: Brain, stat: '1', unit: '', label: 'Physician' },
 ]
 
@@ -339,32 +425,32 @@ export default function AboutPage() {
   return (
     <>
       <Script
-        id="medical-webpage-schema"
+        id="about-medical-webpage-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd) }}
       />
       <Script
-        id="organization-schema"
+        id="about-organization-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
       <Script
-        id="physician-schema"
+        id="about-physician-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(physicianJsonLd) }}
       />
       <Script
-        id="faq-schema"
+        id="about-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Script
-        id="breadcrumb-schema"
+        id="about-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Script
-        id="howto-schema"
+        id="about-howto-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
@@ -413,7 +499,7 @@ export default function AboutPage() {
 
                 <div className="speakable-intro">
                   <p className="text-white/70 text-lg md:text-xl mb-6 max-w-xl leading-relaxed">
-                    At Sankofa Family Medicine, continuity is built on purpose. Your medical history and context are preserved and carried forward so treatment decisions compound rather than reset.
+                    At Sankofa Family Medicine, continuity is built on purpose. Your medical history and context are preserved and carried forward so decisions build instead of reset.
                   </p>
                 </div>
 
@@ -441,7 +527,7 @@ export default function AboutPage() {
                   </Link>
                 </div>
 
-                <p className="text-white/40 text-xs mt-4">Clinical care begins February 2026. No payment required to join the waitlist.</p>
+                <p className="text-white/40 text-xs mt-4">Founding memberships capped at 30. Clinical care begins February 2026. No payment required to join the waitlist.</p>
               </div>
 
               <div className="relative hidden lg:block animate-fade-in-up animation-delay-200">
@@ -488,13 +574,13 @@ export default function AboutPage() {
                     In healthcare, this principle highlights a common challenge. Medical records often fragment across systems, physicians may change between visits, and patients are frequently asked to repeat their history when continuity is not preserved.
                   </p>
                   <p>
-                    Sankofa Family Medicine was designed for continuity. One physician who knows your history, visit after visit, so medical decisions build instead of reset. Learn more about our{' '}
+                    Sankofa Family Medicine was designed for continuity. One physician who knows your history - visit after visit - so medical decisions build instead of reset. Learn more about our{' '}
                     <Link href="/services" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
                       telehealth primary care services
                     </Link>{' '}
                     or explore{' '}
                     <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
-                       how the Direct Primary Care model differs
+                       how Direct Primary Care (DPC) differs
                     </Link>.
                   </p>
                 </div>
@@ -517,7 +603,7 @@ export default function AboutPage() {
                   </div>
                   <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] bg-white rounded-2xl shadow-xl shadow-sfm-navy/10 p-6 border border-sfm-gold/10">
                     <p className="text-sfm-navy/70 text-center italic font-display">
-                      &quot;Simply, Sankofa means learning from the past to build a better future.&quot;
+                      &quot;Simply, Sankofa means remembering what matters so the future is built with intention.&quot;
                     </p>
                   </div>
                 </div>
@@ -536,7 +622,7 @@ export default function AboutPage() {
                   <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-tr from-sfm-navy/10 via-transparent to-sfm-gold/5" aria-hidden="true" />
                   <Image
                     src="/images/physician-conversation-warm.png"
-                    alt="Physician having an unhurried 45 to 75 minute telehealth consultation with a patient, demonstrating personalized care and continuity"
+                    alt="Physician having an unhurried telehealth consultation with a patient, demonstrating personalized care and continuity"
                     width={600}
                     height={400}
                     className="relative object-cover w-full transition-all duration-700 group-hover:scale-[1.02] group-hover:brightness-105"
@@ -559,7 +645,7 @@ export default function AboutPage() {
                   <p className="text-sfm-navy/60 leading-relaxed">
                     Your physician knows you. Not as a chart number, but as a person with a history that matters. This is the foundation of{' '}
                     <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
-                      Sankofa Family Medicine
+                      Direct Primary Care (DPC)
                     </Link>.
                   </p>
                 </div>
@@ -570,7 +656,8 @@ export default function AboutPage() {
               {philosophyPillars.map((item, index) => (
                 <article
                   key={item.title}
-                  className={`group bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition-all duration-300 hover:-translate-y-1 animate-on-scroll animation-delay-${(index + 1) * 100}`}
+                  className="group bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition-all duration-300 hover:-translate-y-1 animate-on-scroll"
+                  style={{ animationDelay: `${(index + 1) * 100}ms` }}
                 >
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sfm-azure/10 to-sfm-azure/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <item.icon className="w-7 h-7 text-sfm-azure" strokeWidth={1.5} aria-hidden="true" />
@@ -589,15 +676,18 @@ export default function AboutPage() {
             <div className="text-center mb-16">
               <p className="section-label">How It Works</p>
               <h2 id="how-it-works-heading" className="font-display text-3xl md:text-4xl text-sfm-navy mb-6">
-                Membership-Based Primary Care
+                Direct Primary Care (DPC)
               </h2>
               <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-8" aria-hidden="true" />
               <p className="text-sfm-navy/70 text-lg max-w-2xl mx-auto">
-                At Sankofa Family Medicine, we practice{' '}
-                <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
-                  membership-based primary care
+                Sankofa Family Medicine is built on{' '}
+                <Link
+                  href="/compare"
+                  className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2"
+                >
+                  Direct Primary Care (DPC)
                 </Link>{' '}
-                built for continuity, access, and careful medical decision-making. No insurance billing for membership services, no rushed visits, no rotating providers.
+                - a membership model designed for continuity, access, and careful medical decision-making. No insurance billing. No rushed visits. No revolving door of providers.
               </p>
             </div>
 
@@ -606,7 +696,7 @@ export default function AboutPage() {
 
               <div className="grid md:grid-cols-3 gap-8">
                 {journeySteps.map((item, index) => (
-                  <div key={item.title} className={`relative text-center animate-on-scroll animation-delay-${(index + 1) * 100}`}>
+                  <div key={item.title} className="relative text-center animate-on-scroll" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
                     <div className="relative inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-sfm-gold to-sfm-gold/80 shadow-lg shadow-sfm-gold/25 mb-6">
                       <span className="font-display text-2xl text-white">{item.step}</span>
                       <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center">
@@ -684,11 +774,11 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-sfm-navy/80 text-xl mb-4 font-display">
-              We keep our panel small so we can keep our promises.
+              We keep our panel small so we can stay unhurried.
             </p>
 
             <p className="text-sfm-navy/60 text-lg mb-10 max-w-2xl mx-auto">
-              Join the first 30 members who shape how this practice grows. Clinical care begins February 2026. No payment required to join the waitlist.
+              Join the first 30 founding members who shape how this practice grows. Founding memberships capped at 30; once filled, new sign-ups remain on the waitlist for the next enrollment wave. Clinical care begins February 2026. No payment required to join the waitlist.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -715,19 +805,23 @@ export default function AboutPage() {
               </span>
               <span className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-sfm-gold" aria-hidden="true" />
-                Cancel With Notice
+                Cancel With 30-Day Notice
               </span>
               <span className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-sfm-gold" aria-hidden="true" />
                 Same Physician for Your Care
               </span>
             </div>
+            
+            <p className="text-sfm-navy/30 text-xs mt-4 max-w-md mx-auto">
+              Continuity is the standard. Rare coverage exceptions may occur for safety or availability.
+            </p>
 
             <p className="text-sfm-navy/40 text-xs mt-8">
               Serving patients throughout Washington State including Seattle, Bellevue, Spokane, Tacoma, and the Tri-Cities. Washington State patients only.
             </p>
             <p className="text-sfm-navy/30 text-xs mt-2">
-              Information on this site is for general informational purposes and is not medical advice.
+              Information on this site is for general informational purposes and is not medical advice. If you are experiencing an emergency, call 911 or go to the nearest emergency room.
             </p>
           </div>
         </section>
