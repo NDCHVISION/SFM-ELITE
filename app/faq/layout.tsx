@@ -177,7 +177,7 @@ const faqSchema = {
       name: 'How do I become a patient at Sankofa Family Medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Start by enrolling through our secure patient portal at sankofafamilymedicine.atlas.md. Complete your health history, select your membership tier, and we will schedule your comprehensive 45-60 minute onboarding visit where we review your complete health history and develop a personalized care plan.",
+        text: "Join the Founders Waitlist on our website. When enrollment opens (February 2026), you will receive instructions to complete intake, select your membership tier, and schedule your comprehensive 45-60 minute onboarding visit where we review your complete health history and develop a personalized care plan.",
       },
     },
     {

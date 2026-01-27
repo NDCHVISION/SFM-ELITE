@@ -601,9 +601,7 @@ function DownloadSection() {
       </p>
       
       <a 
-        href="https://sankofafamilymedicine.atlas.md/hub/login"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/founders-waitlist"
         className="inline-flex items-center gap-2 bg-sfm-gold text-sfm-navy py-3 px-6 rounded-xl hover:bg-sfm-gold-light transition-colors font-medium"
       >
         Access Patient Portal

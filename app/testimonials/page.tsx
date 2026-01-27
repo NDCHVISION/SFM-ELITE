@@ -106,7 +106,7 @@ export default function TestimonialsPage() {
             Your Story Starts Here
           </h2>
           <p className="text-sfm-text-muted mb-8">
-            Start in Atlas and be among the first to experience Medicine That Remembers™.
+            Join the Founders Waitlist and be among the first to experience Medicine That Remembers™.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 

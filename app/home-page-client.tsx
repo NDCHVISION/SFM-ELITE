@@ -433,7 +433,7 @@ export default function HomePage() {
           </div>
           
           <h2 id="cta-heading" className="text-4xl sm:text-5xl lg:text-6xl font-display text-white mb-6 leading-tight" data-speakable>Begin with a Physician Who <span className="text-sfm-gold" style={{ textShadow: '0 0 40px rgba(188, 152, 51, 0.4)' }}>Remembers</span></h2>
-          <p className="text-white/70 text-lg lg:text-xl mb-6 max-w-xl mx-auto leading-relaxed">Care is delivered through Atlas. Secure intake, scheduling, messaging, and visits happen there.</p>
+          <p className="text-white/70 text-lg lg:text-xl mb-6 max-w-xl mx-auto leading-relaxed">Secure intake, scheduling, messaging, and visits all happen through our patient portal.</p>
           <p className="text-white/50 text-base mb-10">
             <Link 
               href="/membership-terms#founding-member-program" 

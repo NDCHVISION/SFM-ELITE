@@ -3,11 +3,11 @@
 import { ArrowRight } from 'lucide-react'
 import { EXTERNAL_URLS } from '@/lib/config'
 
-// Centralized Atlas portal URL - imported from config for single source of truth
-export const ATLAS_PORTAL_URL = EXTERNAL_URLS.atlas
-
-// Founders Waitlist URL - for CTA buttons
+// Founders Waitlist URL - for CTA buttons (PRIMARY)
 export const FOUNDERS_WAITLIST_URL = EXTERNAL_URLS.foundersWaitlist
+
+// Legacy export - now points to waitlist instead of Atlas
+export const ATLAS_PORTAL_URL = EXTERNAL_URLS.foundersWaitlist
 
 interface PrimaryCTAProps {
   variant?: 'default' | 'hero' | 'compact'

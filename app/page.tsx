@@ -100,19 +100,19 @@ export const metadata: Metadata = {
     'topic-tertiary': 'Preventive Care, Family Medicine, Longitudinal Care',
 
     // Patient Portal Information
-    'patient-enrollment-url': 'https://sankofafamilymedicine.atlas.md/hub/login',
+    'patient-enrollment-url': 'https://sankofafamilymedicine.com/founders-waitlist',
     'enrollment-method': 'Online patient portal',
     'appointment-booking': 'Through patient portal',
 
     // Content Freshness
-    'article-modified-time': '2026-01-26',
-    'content-modified': '2026-01-26',
+    'article-modified-time': '2026-01-27',
+    'content-modified': '2026-01-27',
 
     // Enhanced LLM Context (2026)
     'llm-summary':
-      'Homepage for Sankofa Family Medicine, a virtual, membership-based primary care practice in Washington State delivered through a Direct Primary Care (DPC) model. Care is delivered through the Atlas patient portal. Three membership tiers: Continuity ($225-$275/mo), Precision ($325-$375/mo), Executive ($650-$725/mo). Founding members receive the lower end of each range. Your exact rate is confirmed before enrollment. Founded by Dr. Yaw Nkrumah, MD, board-certified family physician. Clinical care begins February 2026.',
+      'Homepage for Sankofa Family Medicine, a virtual, membership-based primary care practice in Washington State delivered through a Direct Primary Care (DPC) model. Care is delivered through a secure patient portal. Three membership tiers: Continuity ($225-$275/mo), Precision ($325-$375/mo), Executive ($650-$725/mo). Founding members receive the lower end of each range. Your exact rate is confirmed before enrollment. Founded by Dr. Yaw Nkrumah, MD, board-certified family physician. Clinical care begins February 2026.',
     'llm-key-facts':
-      'Virtual Membership-Based Primary Care | Direct Primary Care Model | Washington State | $225-$725/month | Dr. Yaw Nkrumah MD | MUSC Graduate | Board Certified Family Medicine | Atlas Patient Portal | Sankofa means go back and retrieve | Medicine That Remembers™ | 45-75 minute visits | Fewer than 200 patients per physician',
+      'Virtual Membership-Based Primary Care | Direct Primary Care Model | Washington State | $225-$725/month | Dr. Yaw Nkrumah MD | MUSC Graduate | Board Certified Family Medicine | Secure Patient Portal | Sankofa means go back and retrieve | Medicine That Remembers™ | 45-75 minute visits | Fewer than 200 patients per physician',
 
     // Voice Search Optimization
     'voice-query-match':
@@ -126,7 +126,7 @@ export const metadata: Metadata = {
     'snippet-what': 'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State, delivered through a Direct Primary Care (DPC) model',
     'snippet-who': 'Founded by Dr. Yaw Nkrumah, MD, Board Certified Family Medicine, graduate of Medical University of South Carolina',
     'snippet-cost': 'Membership plans: Continuity $225-$275/month, Precision $325-$375/month, Executive $650-$725/month. Founding members receive the lower rate. Your exact rate is confirmed before enrollment begins in February 2026.',
-    'snippet-how': 'Join the founders waitlist through the website. No payment today. Enrollment begins February 2026 through the secure Atlas patient portal.',
+    'snippet-how': 'Join the founders waitlist through the website. No payment today. Enrollment begins February 2026 through the secure patient portal.',
     'snippet-target': 'definition, list, pricing',
     'answer-box-eligible': 'true',
   },

@@ -168,51 +168,182 @@ export default function FoundersWaitlistPage() {
             </p>
 
             <p className="text-sm text-sfm-navy/50 max-w-3xl mx-auto mt-4">
-              Submitting this form does not create a physician-patient relationship and is not medical advice.
+              Submitting this form places you on our Founders Waitlist only. It does not enroll you as a patient, create a physician-patient relationship, or provide medical advice. Services are available only to individuals located in Washington State.
             </p>
           </div>
 
-          {/* Iframe Container */}
-          <div className="max-w-[1200px] mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-sfm-gold/10">
-            <iframe
-              src="https://sankofafamilymedicine.atlas.md/enrollment/index.html?account=h5MEw4d0pIPUxA4CiOGy"
-              title="Sankofa Family Medicine Founders Waitlist Form"
-              className="w-full border-0"
-              style={{ height: '900px', minHeight: '600px' }}
-              loading="lazy"
-              aria-label="Founders waitlist form"
-            />
-
-            {/* Noscript Fallback */}
-            <noscript>
-              <div className="p-8 text-center text-sfm-navy/60">
-                <p>
-                  Please enable JavaScript to view the waitlist form, or visit{' '}
-                  <a
-                    href="https://sankofafamilymedicine.atlas.md"
-                    className="text-sfm-azure underline hover:text-sfm-gold transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    our secure form directly
-                  </a>.
-                </p>
-              </div>
-            </noscript>
-          </div>
-
-          {/* Fallback Link */}
-          <p className="text-center text-sm text-sfm-navy/40 mt-6">
-            Having trouble with the form?{' '}
-            <a
-              href="https://sankofafamilymedicine.atlas.md"
-              className="text-sfm-azure underline hover:text-sfm-gold transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
+          {/* Formspree Form */}
+          <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-sfm-gold/10 p-8 md:p-10">
+            <form 
+              method="POST" 
+              action="https://formspree.io/f/manrdjyn"
+              acceptCharset="UTF-8"
+              className="waitlist-form space-y-6"
             >
-              Visit our secure form directly
-            </a>.
-          </p>
+              {/* Hidden Fields */}
+              <input type="hidden" name="source_page" value="/founders-waitlist" />
+              <input type="hidden" name="consent_version" value="v2026-01-27" />
+              <input type="hidden" name="_next" value="https://www.sankofafamilymedicine.com/waitlist-success" />
+              
+              {/* First Name */}
+              <div className="form-group">
+                <label htmlFor="first_name" className="block text-sfm-navy text-sm font-medium mb-2">
+                  First Name <span className="text-sfm-gold">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="first_name"
+                  name="first_name" 
+                  required 
+                  minLength={1}
+                  autoComplete="given-name"
+                  placeholder="First Name"
+                  className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text placeholder:text-sfm-text-light focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300"
+                />
+              </div>
+              
+              {/* Last Name */}
+              <div className="form-group">
+                <label htmlFor="last_name" className="block text-sfm-navy text-sm font-medium mb-2">
+                  Last Name <span className="text-sfm-gold">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="last_name"
+                  name="last_name" 
+                  required 
+                  minLength={1}
+                  autoComplete="family-name"
+                  placeholder="Last Name"
+                  className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text placeholder:text-sfm-text-light focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300"
+                />
+              </div>
+              
+              {/* Email */}
+              <div className="form-group">
+                <label htmlFor="email" className="block text-sfm-navy text-sm font-medium mb-2">
+                  Email Address <span className="text-sfm-gold">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="email"
+                  name="email" 
+                  required
+                  autoComplete="email"
+                  placeholder="you@example.com"
+                  className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text placeholder:text-sfm-text-light focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300"
+                />
+              </div>
+              
+              {/* Phone */}
+              <div className="form-group">
+                <label htmlFor="phone" className="block text-sfm-navy text-sm font-medium mb-2">
+                  Phone Number <span className="text-sfm-gold">*</span>
+                </label>
+                <input 
+                  type="tel" 
+                  id="phone"
+                  name="phone" 
+                  required 
+                  minLength={10}
+                  autoComplete="tel"
+                  placeholder="(425) 555-1234"
+                  className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text placeholder:text-sfm-text-light focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300"
+                />
+              </div>
+              
+              {/* Zip Code */}
+              <div className="form-group">
+                <label htmlFor="zip" className="block text-sfm-navy text-sm font-medium mb-2">
+                  Zip Code <span className="text-sfm-gold">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="zip"
+                  name="zip" 
+                  required 
+                  minLength={5}
+                  maxLength={10}
+                  autoComplete="postal-code"
+                  placeholder="98101"
+                  className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text placeholder:text-sfm-text-light focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300"
+                />
+              </div>
+              
+              {/* Referral Source */}
+              <div className="form-group">
+                <label htmlFor="referral_source" className="block text-sfm-navy text-sm font-medium mb-2">
+                  How did you hear about us?
+                </label>
+                <select 
+                  id="referral_source" 
+                  name="referral_source"
+                  className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300 cursor-pointer"
+                >
+                  <option value="">Select one (optional)...</option>
+                  <option value="google">Google Search</option>
+                  <option value="social_media">Social Media</option>
+                  <option value="friend_family">Friend or Family</option>
+                  <option value="healthcare_provider">Healthcare Provider</option>
+                  <option value="employer">Employer</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              {/* Notes with PHI Guard */}
+              <div className="form-group">
+                <label htmlFor="notes" className="block text-sfm-navy text-sm font-medium mb-2">
+                  Anything you&apos;d like us to know? (Optional)
+                </label>
+                <p className="text-amber-600 text-xs mb-2 flex items-center gap-1">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                  Do not include medical details. This form is for interest only.
+                </p>
+                <textarea 
+                  id="notes"
+                  name="notes" 
+                  maxLength={500}
+                  rows={3}
+                  placeholder="Optional message (no medical information please)"
+                  className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text placeholder:text-sfm-text-light focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300 resize-none"
+                />
+              </div>
+              
+              {/* CONSENT CHECKBOX - CRITICAL */}
+              <div className="form-group">
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input 
+                    type="checkbox" 
+                    id="waitlist_consent"
+                    name="waitlist_consent" 
+                    value="true" 
+                    required
+                    className="mt-1 w-5 h-5 rounded border-sfm-cream-dark text-sfm-gold focus:ring-sfm-gold/20 cursor-pointer"
+                  />
+                  <span className="text-sm text-sfm-text-muted">
+                    I understand this is a waitlist only and does not enroll me as a patient, create a physician-patient relationship, or provide medical advice. Services are available only to individuals located in Washington State. <span className="text-sfm-gold">*</span>
+                  </span>
+                </label>
+              </div>
+              
+              {/* Submit Button */}
+              <button 
+                type="submit" 
+                className="w-full relative inline-flex items-center justify-center gap-2 px-8 py-5 font-semibold text-base rounded-xl overflow-hidden transition-all duration-500 bg-gradient-to-r from-sfm-gold via-sfm-gold-light to-sfm-gold bg-[length:200%_100%] text-sfm-navy shadow-lg shadow-sfm-gold/25 hover:bg-[position:100%_0] hover:shadow-xl hover:shadow-sfm-gold/40 group"
+              >
+                Join the Founders Waitlist
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+              
+              <p className="text-center text-sm text-sfm-navy/50">
+                No payment required. We will contact you by email when enrollment opens.
+              </p>
+            </form>
+          </div>
 
           {/* Trust Indicators */}
           <div className="flex flex-wrap items-center justify-center gap-6 mt-10 text-sm text-sfm-navy/50">
