@@ -34,24 +34,14 @@ export default function FoundingMemberBadge() {
           
           {/* Badge text */}
           <span className="text-white/80 text-sm font-medium tracking-wide uppercase group-hover:text-sfm-gold transition-colors">
-            Founding Member Spots
-          </span>
-        </div>
-        
-        {/* Counter */}
-        <div className="pl-3 border-l border-sfm-gold/30">
-          <span className="text-sfm-gold text-lg font-semibold">
-            {spotsLeft} of {totalSpots}
-          </span>
-          <span className="text-white/60 text-sm ml-2">
-            remaining
+            Founders waitlist capacity: about 30
           </span>
         </div>
       </Link>
 
       {/* Disclaimer text */}
       <p className="text-sfm-text-muted text-xs max-w-2xl text-center">
-        Founding Member enrollment closes when all {totalSpots} positions are filled or at general launch, whichever comes first.
+        Waitlist capacity tracking. Enrollment begins February 2026.
       </p>
     </div>
   )

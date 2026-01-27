@@ -118,15 +118,15 @@ export const metadata: Metadata = {
     'voice-query-match':
       'What is Sankofa Family Medicine, How much does Sankofa Family Medicine cost, Is Sankofa Family Medicine accepting new patients, What is membership-based primary care, Virtual doctor in Washington State, DPC near me',
     'voice-search-answer':
-      'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State. Memberships start at $225 per month. Clinical care begins February 2026. To reserve a Founders spot, visit their website and click Join the Founders Waitlist.',
+      'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State. Memberships start at $225 per month. Clinical care begins February 2026. To join the founders waitlist, visit their website and click Join the Founders Waitlist. No payment today.',
     'speakable-summary':
       'Sankofa Family Medicine offers virtual, membership-based primary care across Washington State with membership plans from $225 to $725 monthly. Care is delivered through a Direct Primary Care model by Dr. Yaw Nkrumah, a board-certified family physician.',
 
     // Featured Snippet Answers
     'snippet-what': 'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State, delivered through a Direct Primary Care (DPC) model',
     'snippet-who': 'Founded by Dr. Yaw Nkrumah, MD, Board Certified Family Medicine, graduate of Medical University of South Carolina',
-    'snippet-cost': 'Membership plans: Continuity $225-$275/month, Precision $325-$375/month, Executive $650-$725/month. Founding members receive the lower rate. Your exact rate is confirmed before enrollment.',
-    'snippet-how': 'Reserve a Founders spot through the website, then enroll through the secure Atlas patient portal. Clinical care begins February 2026.',
+    'snippet-cost': 'Membership plans: Continuity $225-$275/month, Precision $325-$375/month, Executive $650-$725/month. Founding members receive the lower rate. Your exact rate is confirmed before enrollment begins in February 2026.',
+    'snippet-how': 'Join the founders waitlist through the website. No payment today. Enrollment begins February 2026 through the secure Atlas patient portal.',
     'snippet-target': 'definition, list, pricing',
     'answer-box-eligible': 'true',
   },

@@ -107,7 +107,7 @@ export default function ExitIntentPopup() {
                 href={FOUNDERS_WAITLIST_URL}
                 className="inline-flex items-center gap-2 text-sfm-azure font-medium hover:text-sfm-gold transition-colors"
               >
-                Or reserve a founders spot now
+                Or join the founders waitlist now
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
