@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Sankofa Family Medicine | Medicine That Remembers™',
     description:
-      'Virtual-first membership-based primary care for Washington State. Founded by Dr. Yaw Nkrumah, MD. Built on Sankofa: we learn from your past to guide better care today and tomorrow.',
+      'Virtual-first membership-based primary care for Washington State. Founded by Yaw Nkrumah, MD. Built on Sankofa: we learn from your past to guide better care today and tomorrow.',
     url: 'https://sankofafamilymedicine.com/about',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
         url: 'https://sankofafamilymedicine.com/images/og-about.png',
         width: 1200,
         height: 630,
-        alt: 'About Sankofa Family Medicine: Virtual Primary Care Practice in Washington State founded by Dr. Yaw Nkrumah, MD',
+        alt: 'About Sankofa Family Medicine: Virtual Primary Care Practice in Washington State founded by Yaw Nkrumah, MD',
       },
     ],
   },
@@ -210,7 +210,7 @@ const faqJsonLd = {
       name: 'What is Sankofa Family Medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa Family Medicine is a virtual-first membership-based primary care practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, we offer 45-60 minute appointments, same-day access, and a deliberately small patient panel of fewer than 200 patients.',
+        text: 'Sankofa Family Medicine is a virtual-first membership-based primary care practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, we offer 45-75 minute appointments, same-day access, and a deliberately small patient panel of fewer than 200 patients.',
       },
     },
     {
@@ -466,7 +466,7 @@ export default function AboutPage() {
 
                 <div className="speakable-sankofa space-y-6 text-sfm-navy/70 leading-relaxed">
                   <p>
-                    Sankofa is an Akan principle from West Africa, symbolized by a bird looking backward while moving forward. Its meaning is simple and precise: it is right and necessary to return to the past, retrieve what was learned, and carry it forward for a higher purpose.
+                    Sankofa is an Akan principle from West Africa, symbolized by a bird looking backward while moving forward. It conveys that it is right and necessary to return to the past, retrieve what was learned, and carry it forward for a higher purpose.
                   </p>
                   <p>
                     In healthcare, this principle highlights a common challenge. Medical records often fragment across systems, physicians may change between visits, and patients are frequently asked to repeat their history when continuity is not preserved.
@@ -501,7 +501,7 @@ export default function AboutPage() {
                   </div>
                   <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] bg-white rounded-2xl shadow-xl shadow-sfm-navy/10 p-6 border border-sfm-gold/10">
                     <p className="text-sfm-navy/70 text-center italic font-display">
-                      "Go back and retrieve what matters. Carry it forward."
+                      "Simply, Sankofa means remembering what matters so the future is built better."
                     </p>
                   </div>
                 </div>
@@ -541,12 +541,11 @@ export default function AboutPage() {
                     A care model designed to preserve the details that shape your health over time, from medical history to goals and preferences.
                   </p>
                   <p className="text-sfm-navy/60 leading-relaxed">
-                    Your physician knows you. Not as a chart number, but as a person with a history that matters. This is a foundation of{' '}
+                    Your physician knows you. Not as a chart number, but as a person with a history that matters. This is the foundation of{' '}
                     <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
                      Sankofa Family Medicine
-                    </Link>{' '}
-                    done right.
-                  </p>
+                    </Link>{' ')
+                    </p>
                 </div>
               </div>
             </div>
