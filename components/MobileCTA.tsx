@@ -61,7 +61,7 @@ export default function MobileCTA() {
           className="flex items-center justify-center gap-2 w-full py-3.5 bg-gradient-to-r from-sfm-gold to-sfm-gold-light 
             text-sfm-navy font-bold rounded-xl shadow-lg shadow-sfm-gold/25 
             active:scale-[0.98] transition-transform group"
-          aria-label="Reserve a founders spot at Sankofa Family Medicine"
+          aria-label="Join the founders waitlist at Sankofa Family Medicine"
         >
           <span>Join the Founders Waitlist</span>
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

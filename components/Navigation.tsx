@@ -260,7 +260,7 @@ export default function Navigation() {
               <a
                 href={FOUNDERS_WAITLIST_URL}
                 className="ml-3 btn-primary group"
-                aria-label="Reserve a founders spot at Sankofa Family Medicine"
+                aria-label="Join the founders waitlist at Sankofa Family Medicine"
               >
                 <span>Join the Founders Waitlist</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
