@@ -238,9 +238,6 @@ export default function MembershipTermsPage() {
                 <p>
                   Members may also prepay multiple months in advance, including via a health management trust, where permitted. Prepaid amounts are held in trust and applied to the monthly direct fee as earned; unearned amounts are refundable according to the Membership Agreement.
                 </p>
-                <p>
-                  Prepaid amounts are held in trust and applied to the monthly direct fee as earned.
-                </p>
               </div>
             </div>
           </div>
