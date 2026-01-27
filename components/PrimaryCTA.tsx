@@ -40,9 +40,9 @@ export default function PrimaryCTA({
     <a
       href={FOUNDERS_WAITLIST_URL}
       className={`${baseStyles} ${variants[variant]} ${className}`}
-      aria-label="Reserve a founders spot at Sankofa Family Medicine"
+      aria-label="Join the founders waitlist at Sankofa Family Medicine"
     >
-      {children || 'Reserve a Founders Spot'}
+      {children || 'Join the Founders Waitlist'}
       <ArrowRight className="w-4 h-4" />
     </a>
   )

@@ -52,7 +52,7 @@ export default function TestimonialsPage() {
             href="/founders-waitlist" 
             className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold hover:bg-sfm-gold-dark text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            <span>Reserve a Founders Spot</span>
+            <span>Join the Founders Waitlist</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -113,7 +113,7 @@ export default function TestimonialsPage() {
               href="/founders-waitlist"
               className="inline-flex items-center gap-2 px-6 py-3 bg-sfm-azure hover:bg-sfm-navy text-white font-medium rounded-lg transition-colors"
             >
-              Reserve a Founders Spot
+              Join the Founders Waitlist
               <ArrowRight className="w-4 h-4" />
             </a>
             <Link 

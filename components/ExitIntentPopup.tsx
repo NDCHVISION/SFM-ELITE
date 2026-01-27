@@ -166,7 +166,7 @@ export default function ExitIntentPopup() {
                 className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-colors mb-4"
               >
                 <Heart className="w-5 h-5" />
-                Reserve a Founders Spot
+                Join the Founders Waitlist
               </a>
               <button
                 onClick={() => setShowEmailForm(true)}

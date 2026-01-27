@@ -182,7 +182,7 @@ export default function SankofaOSPage() {
                   href="/founders-waitlist"
                   className="group inline-flex items-center gap-3 px-8 py-4 border border-white/20 text-white font-medium rounded-full hover:bg-white/5 transition-all duration-300"
                 >
-                  Reserve a Founders Spot
+                  Join the Founders Waitlist
                 </a>
               </div>
             </div>

@@ -260,9 +260,9 @@ export default function Navigation() {
               <a
                 href={FOUNDERS_WAITLIST_URL}
                 className="ml-3 btn-primary group"
-                aria-label="Reserve a founders spot at Sankofa Family Medicine"
+                aria-label="Join the founders waitlist at Sankofa Family Medicine"
               >
-                <span>Reserve a Founders Spot</span>
+                <span>Join the Founders Waitlist</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </nav>
@@ -335,7 +335,7 @@ export default function Navigation() {
               onClick={() => setIsOpen(false)}
               className="flex items-center justify-center gap-2.5 w-full py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl mb-6 shadow-gold hover:bg-sfm-gold-light transition-all duration-300"
             >
-              Reserve a Founders Spot
+              Join the Founders Waitlist
               <ArrowRight className="w-4 h-4" />
             </a>
 

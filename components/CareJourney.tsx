@@ -123,7 +123,7 @@ export default function CareJourney() {
                         href="/founders-waitlist" 
                         className="btn-primary inline-flex items-center"
                       >
-                        Reserve a Founders Spot
+                        Join the Founders Waitlist
                       </a>
                     </div>
                   )}

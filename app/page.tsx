@@ -118,7 +118,7 @@ export const metadata: Metadata = {
     'voice-query-match':
       'What is Sankofa Family Medicine, How much does Sankofa Family Medicine cost, Is Sankofa Family Medicine accepting new patients, What is membership-based primary care, Virtual doctor in Washington State, DPC near me',
     'voice-search-answer':
-      'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State. Memberships start at $225 per month. Clinical care begins February 2026. To reserve a Founders spot, visit their website and click Reserve a Founders Spot.',
+      'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State. Memberships start at $225 per month. Clinical care begins February 2026. To reserve a Founders spot, visit their website and click Join the Founders Waitlist.',
     'speakable-summary':
       'Sankofa Family Medicine offers virtual, membership-based primary care across Washington State with membership plans from $225 to $725 monthly. Care is delivered through a Direct Primary Care model by Dr. Yaw Nkrumah, a board-certified family physician.',
 

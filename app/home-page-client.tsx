@@ -314,7 +314,7 @@ export default function HomePage() {
                   {yesCount >= 3 ? (
                     <div>
                       <p className="text-emerald-800 text-base mb-3"><strong>Direct Primary Care may be a great fit.</strong> You value continuity, time, and transparency.</p>
-                      <Link href="/founders-waitlist" className="inline-flex items-center gap-2 text-emerald-700 font-medium hover:text-emerald-900 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded">Reserve a Founders Spot<ArrowRight className="w-4 h-4" aria-hidden="true" /></Link>
+                      <Link href="/founders-waitlist" className="inline-flex items-center gap-2 text-emerald-700 font-medium hover:text-emerald-900 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded">Join the Founders Waitlist<ArrowRight className="w-4 h-4" aria-hidden="true" /></Link>
                     </div>
                   ) : yesCount > 0 ? (
                     <p className="text-gray-700 text-base">Check more items to see if Direct Primary Care aligns with your healthcare priorities.</p>
