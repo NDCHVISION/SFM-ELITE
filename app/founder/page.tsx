@@ -472,7 +472,7 @@ export default function FounderPage() {
               Sankofa Family Medicine was built to restore relationship-centered primary care where continuity, clinical judgment, and follow-through are protected.
             </p>
             <p>
-              The Sankofa principle means looking back to move forward wisely. Each visit, result, and conversation is carried forward so care compounds over time.
+              The Sankofa principle simply, means remembering what matters so the future is built better.  Each visit, result, and conversation is carried forward so care compounds over time.
             </p>
             <p>
               Sankofa Family Medicine is a membership-based primary care practice (Direct Primary Care model). Membership is not insurance, and we do not bill insurance for primary care services included in membership.
