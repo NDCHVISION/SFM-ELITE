@@ -650,6 +650,13 @@ export default function ServicesPage() {
           </div>
           <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
             <p>
+              <strong className="text-sfm-navy">Founders Advantage:</strong> Founders Cohort members (approximately the first 30 enrollees) receive reduced founding member pricing across all membership tiers, locked in for as long as continuous membership is maintained.{' '}
+              <Link href="/membership-terms#founders-advantage" className="text-sfm-azure hover:text-sfm-gold font-medium transition-colors inline-flex items-center gap-1">
+                View Founders Pricing Terms
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+            </p>
+            <p>
               <strong className="text-sfm-navy">Emergency Services:</strong> This Practice does <strong>not</strong> provide emergency or urgent care services. For medical emergencies, call 911 or go to your nearest emergency room.
             </p>
             <p>
