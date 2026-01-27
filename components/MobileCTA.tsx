@@ -63,7 +63,7 @@ export default function MobileCTA() {
             active:scale-[0.98] transition-transform group"
           aria-label="Reserve a founders spot at Sankofa Family Medicine"
         >
-          <span>Reserve a Founders Spot</span>
+          <span>Join the Founders Waitlist</span>
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </a>
         

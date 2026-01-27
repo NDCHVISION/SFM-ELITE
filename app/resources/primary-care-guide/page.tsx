@@ -241,7 +241,7 @@ export default function PrimaryCareGuidePage() {
                   href="/founders-waitlist"
                   className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-navy font-medium text-sm transition-colors"
                 >
-                  Reserve a Founders Spot
+                  Join the Founders Waitlist
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>

@@ -287,7 +287,7 @@ export default function BlogPost() {
               href="/founders-waitlist"
               className="btn-primary"
             >
-              Reserve a Founders Spot
+              Join the Founders Waitlist
             </Link>
             <Link href="/services" className="btn-secondary btn-shine">
               Membership Plans

@@ -323,7 +323,7 @@ export default function BlogPage() {
               href="/founders-waitlist"
               className="btn-primary"
             >
-              Reserve a Founders Spot
+              Join the Founders Waitlist
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link href="/services" className="btn-secondary btn-shine">

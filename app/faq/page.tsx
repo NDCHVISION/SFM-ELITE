@@ -230,7 +230,7 @@ export default function FAQPage() {
             <div className="space-y-3">
               <p>Start in Atlas, our secure patient portal. Complete your intake, select your membership tier, and schedule your first visit directly through the platform.</p>
               <a href="/founders-waitlist" className="inline-flex items-center text-sfm-azure hover:text-sfm-navy font-medium">
-                Reserve a Founders Spot <ArrowRight className="ml-2 w-4 h-4" />
+                Join the Founders Waitlist <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </div>
           )
@@ -407,7 +407,7 @@ export default function FAQPage() {
               href="/founders-waitlist"
               className="btn-primary"
             >
-              Reserve a Founders Spot
+              Join the Founders Waitlist
               <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
             </a>
             <Link href="/services" className="btn-secondary-white">

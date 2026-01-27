@@ -42,7 +42,7 @@ export default function PrimaryCTA({
       className={`${baseStyles} ${variants[variant]} ${className}`}
       aria-label="Reserve a founders spot at Sankofa Family Medicine"
     >
-      {children || 'Reserve a Founders Spot'}
+      {children || 'Join the Founders Waitlist'}
       <ArrowRight className="w-4 h-4" />
     </a>
   )

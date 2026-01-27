@@ -644,7 +644,7 @@ export default function ComparePage() {
               className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-all shadow-lg shadow-sfm-gold/25"
               aria-label="Reserve your founding membership spot at Sankofa Family Medicine"
             >
-              Reserve a Founders Spot
+              Join the Founders Waitlist
               <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </Link>
             <Link

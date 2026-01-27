@@ -119,7 +119,7 @@ export default function EverettPage() {
               href="/founders-waitlist"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-colors"
             >
-              Reserve a Founders Spot
+              Join the Founders Waitlist
               <ArrowRight className="w-5 h-5" />
             </a>
             <Link
@@ -205,7 +205,7 @@ export default function EverettPage() {
               href="/founders-waitlist"
               className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-gold text-sfm-navy font-semibold rounded-xl hover:bg-sfm-gold-light transition-colors"
             >
-              Reserve a Founders Spot
+              Join the Founders Waitlist
               <ArrowRight className="w-5 h-5" />
             </a>
             <Link href="/services" className="btn-secondary-white px-8 py-4">
