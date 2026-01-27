@@ -509,7 +509,7 @@ export default function FounderPage() {
                 <span className="font-display text-sfm-gold text-lg">2</span>
               </div>
               <h3 className="font-semibold text-sfm-navy mb-2">Complete Onboarding</h3>
-              <p className="text-muted text-sm">Complete onboarding in Atlas when enrollment opens (February 2026).</p>
+              <p className="text-muted text-sm">Complete onboarding in our secure patient portal when enrollment opens (February 2026).</p>
             </div>
             <div className="text-center">
               <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-sfm-gold/20 flex items-center justify-center">

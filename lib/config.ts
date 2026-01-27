@@ -6,14 +6,8 @@
  */
 
 export const EXTERNAL_URLS = {
-  // Primary conversion portal - ALL main CTAs should use this
-  atlas: 'https://sankofafamilymedicine.atlas.md/enrollment/index.html?account=h5MEw4d0pIPUxA4CiOGy',
-  
-  // Founders waitlist landing page - Use for CTA buttons
+  // Founders waitlist landing page - Use for CTA buttons (PRIMARY)
   foundersWaitlist: '/founders-waitlist',
-  
-  // DEPRECATED - Use atlas for all CTAs
-  // calendly: 'https://calendly.com/nkrumah-ndchvision/15-minute-fit-call',
   
   // Social media
   linkedin: {
@@ -25,8 +19,12 @@ export const EXTERNAL_URLS = {
   formspree: {
     assessment: 'https://formspree.io/f/manrdjgv',
     contact: 'https://formspree.io/f/manrdjgv',
-    expansion: 'https://formspree.io/f/manrdjgv'
-  }
+    expansion: 'https://formspree.io/f/manrdjgv',
+    waitlist: 'https://formspree.io/f/manrdjyn'
+  },
+  
+  // Success redirect after waitlist form submission
+  waitlistSuccess: '/waitlist-success'
 } as const
 
 export const CONTACT_INFO = {

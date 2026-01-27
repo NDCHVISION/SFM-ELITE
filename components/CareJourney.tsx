@@ -32,7 +32,7 @@ export default function CareJourney() {
     {
       number: 1,
       title: 'Enroll and Connect',
-      description: 'Create your secure Atlas account to begin care. Atlas is our private clinical platform for intake, consent, messaging, scheduling, and visits. Your information stays protected, and your care begins with intention.',
+      description: 'Create your secure account to begin care. Our private clinical platform handles intake, consent, messaging, scheduling, and visits. Your information stays protected, and your care begins with intention.',
       hasCTA: false,
     },
     {
@@ -136,7 +136,7 @@ export default function CareJourney() {
         {/* Footer text */}
         <div className="mt-16 text-center">
           <p className="text-muted text-sm">
-            All clinical care and communication take place securely inside Atlas.
+            All clinical care and communication take place securely inside our patient portal.
           </p>
         </div>
       </div>

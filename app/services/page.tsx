@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Breadcrumbs from '@/components/Breadcrumbs'
-import PrimaryCTA, { ATLAS_PORTAL_URL } from '@/components/PrimaryCTA'
+import PrimaryCTA from '@/components/PrimaryCTA'
 import FoundingMemberBadge from '@/components/FoundingMemberBadge'
 import { 
   ArrowRight, Check, Sparkles, Shield, Clock, MessageCircle, 
@@ -381,10 +381,8 @@ export default function ServicesPage() {
                     {tier.description}
                   </p>
 
-                  <a
-                    href={ATLAS_PORTAL_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/founders-waitlist"
                     className={`w-full flex items-center justify-center gap-2 py-4 rounded-xl font-semibold transition-all duration-300 mb-8 ${
                       tier.popular
                         ? 'bg-gradient-to-r from-sfm-gold to-sfm-gold-light text-sfm-navy hover:shadow-lg hover:shadow-sfm-gold/30 hover:-translate-y-0.5'
@@ -393,7 +391,7 @@ export default function ServicesPage() {
                   >
                     {tier.cta}
                     <ArrowRight className="w-4 h-4" />
-                  </a>
+                  </Link>
 
                   <ul className="space-y-4">
                     {tier.features.map((feature, i) => (

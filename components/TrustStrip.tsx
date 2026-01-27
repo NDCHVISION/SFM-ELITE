@@ -20,7 +20,7 @@ export default function TrustStrip() {
     },
     {
       icon: Dna,
-      label: 'Secure Atlas Portal',
+      label: 'Secure Patient Portal',
       href: '/services',
     },
   ]

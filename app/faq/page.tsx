@@ -48,13 +48,13 @@ export default function FAQPage() {
           question: 'How do I pay for services?',
           answer: (
             <div className="space-y-3">
-              <p>We accept the following payment methods through our secure, HIPAA-compliant Atlas.md payment platform:</p>
+              <p>We accept the following payment methods through our secure, HIPAA-compliant patient portal:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Credit cards (Visa, MasterCard, American Express, Discover, JCB, Diners Club)</li>
                 <li>Debit cards</li>
                 <li>HSA/FSA cards</li>
                 <li>ACH bank transfers (direct from your bank account)</li>
-                <li>Apple Pay and Google Pay (via the Atlas.md patient app)</li>
+                <li>Apple Pay and Google Pay (via the patient app)</li>
                 <li>Cash and check (processed manually)</li>
               </ul>
               <p>Membership fees are billed monthly on the 1st of each month via automatic recurring payment. You must maintain a valid payment method on file. Failed or declined payments incur a $25 returned payment fee. Individual visits for non-members and optional programs are billed separately at the time of service.</p>
@@ -78,7 +78,7 @@ export default function FAQPage() {
                 <li>Eligibility depends on your specific FSA plan rules</li>
                 <li>Confirm with your FSA administrator before enrollment</li>
               </ul>
-              <p>We accept HSA/FSA cards directly through our Atlas.md payment system. Keep documentation of membership payments for tax purposes.</p>
+              <p>We accept HSA/FSA cards directly through our secure payment system. Keep documentation of membership payments for tax purposes.</p>
             </div>
           )
         },
@@ -228,7 +228,7 @@ export default function FAQPage() {
           question: 'How do I become a patient?',
           answer: (
             <div className="space-y-3">
-              <p>Start in Atlas, our secure patient portal. Complete your intake, select your membership tier, and schedule your first visit directly through the platform.</p>
+              <p>Join the Founders Waitlist below. When enrollment opens (February 2026), you will receive instructions to complete intake, select your membership tier, and schedule your first visit through our secure patient portal.</p>
               <a href="/founders-waitlist" className="inline-flex items-center text-sfm-azure hover:text-sfm-navy font-medium">
                 Join the Founders Waitlist <ArrowRight className="ml-2 w-4 h-4" />
               </a>
