@@ -604,7 +604,7 @@ export default function HomePageClient() {
             <p className="text-lg text-sfm-navy/60 max-w-2xl mx-auto mb-4">
               We do not bill insurance for membership services, but you may use insurance for labs, imaging, and specialists outside the membership. Services are available only to patients located in Washington State.
             </p>
-            <p className="text-sfm-gold font-medium text-lg">
+            <p className="text-sfm-gold font-medium text-lg text-center">
               <Link href="/membership-terms#founding-member-program" className="hover:underline hover:text-sfm-azure transition-colors duration-300 motion-reduce:transition-none">
                 Founding members
               </Link>{' '}
