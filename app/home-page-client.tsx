@@ -14,6 +14,7 @@ import PrimaryCTA from '@/components/PrimaryCTA'
 // - SEO metadata lives in app/page.tsx (server component)
 // - JSON-LD schema lives in app/page.tsx (server component)
 // - This client component handles interactivity only
+// - Skip link is handled in layout.tsx - do not duplicate here
 // =============================================================================
 
 // Institutional / verification links (safe + trust-building)
@@ -44,15 +45,13 @@ export default function HomePageClient() {
 
   return (
     <>
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-sfm-gold focus:text-sfm-navy focus:rounded-lg focus:font-medium"
-      >
-        Skip to main content
-      </a>
+      {/* 
+        Accessibility Note: Skip link is in layout.tsx
+        Do not add duplicate skip link here
+      */}
 
       {/* HERO */}
-      <section id="main-content" className="relative min-h-screen flex items-center overflow-hidden" aria-labelledby="hero-heading">
+      <section className="relative min-h-screen flex items-center overflow-hidden" aria-labelledby="hero-heading">
         <div className="absolute inset-0 bg-gradient-to-br from-sfm-navy via-sfm-navy to-sfm-azure/60" />
         <div className="absolute inset-0 pattern-sankofa-subtle pattern-animated opacity-40" aria-hidden="true" />
         <div
@@ -188,6 +187,7 @@ export default function HomePageClient() {
                   <p className="text-white/50 text-base mt-4 max-w-xl leading-relaxed">
                     Founders Waitlist only. Joining does not create a doctor-patient relationship. Services are available only to patients located in Washington State.
                   </p>
+                  {/* Compliance: Emergency disclaimer in hero */}
                   <p className="text-white/45 text-base mt-3 max-w-xl leading-relaxed">
                     Not for emergencies. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department.
                   </p>
@@ -717,7 +717,7 @@ export default function HomePageClient() {
                     <div className="aspect-[16/10] relative overflow-hidden">
                       <Image
                         src={article.image}
-                        alt={article.title}
+                        alt={`Illustration for article: ${article.title}`}
                         fill
                         loading="lazy"
                         className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
@@ -794,10 +794,12 @@ export default function HomePageClient() {
             </Link>
           </div>
 
+          {/* Compliance: Waitlist disclaimers */}
           <p className="text-white/50 text-lg mt-10 max-w-lg mx-auto leading-relaxed">
             Founders Waitlist only. No payment is required to join. Joining does not guarantee enrollment. Joining does not create a doctor-patient relationship. Services are available only to patients located in Washington State.
           </p>
 
+          {/* Compliance: Emergency disclaimer in CTA */}
           <p className="text-white/40 text-base mt-4">
             Not for emergencies. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department.
           </p>
