@@ -4,7 +4,7 @@ import { ArrowRight, Clock, MessageCircle, Shield, Landmark, Users } from 'lucid
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Olympia | Sankofa Family Medicine',
-  description: 'Olympia residents: premium virtual primary care with direct physician access. Same-day appointments, transparent pricing. Serving Olympia, Lacey, Tumwater, and Thurston County.',
+  description: 'Olympia residents: premium virtual primary care with direct doctor access. Same-day appointments, transparent pricing. Serving Olympia, Lacey, Tumwater, and Thurston County.',
   keywords: [
     'Olympia virtual doctor',
     'Olympia telemedicine',
@@ -77,7 +77,7 @@ export default function OlympiaPage() {
     {
       icon: MessageCircle,
       title: 'Direct Communication',
-      description: 'Message your physician directly. Responses within 24 to 48 hours.'
+      description: 'Message your doctor directly. Responses within 24 to 48 hours.'
     },
     {
       icon: Shield,
@@ -110,7 +110,7 @@ export default function OlympiaPage() {
           </h1>
           
           <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            Premium physician care for Olympia and Thurston County. Healthcare 
+            Premium doctor care for Olympia and Thurston County. Healthcare 
             that respects your time and delivers personalized attention.
           </p>
 

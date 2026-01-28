@@ -235,7 +235,7 @@ export default function ExpansionPage() {
               Our Expansion Vision
             </h2>
             <p className="text-sfm-text-muted dark:text-sfm-text-muted text-lg max-w-2xl mx-auto">
-              We believe everyone deserves access to a physician who knows their history. 
+              We believe everyone deserves access to a doctor who knows their history. 
               Our virtual-first model allows us to bring Medicine That Remembers nationwide.
             </p>
           </div>

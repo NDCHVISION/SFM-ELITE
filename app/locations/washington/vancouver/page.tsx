@@ -4,7 +4,7 @@ import { ArrowRight, Clock, MessageCircle, Shield, TreePine, Users } from 'lucid
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Vancouver WA | Sankofa Family Medicine',
-  description: 'Vancouver WA residents: premium virtual primary care with direct physician access. Same-day appointments, transparent pricing. Serving Vancouver, Camas, Washougal, and Clark County.',
+  description: 'Vancouver WA residents: premium virtual primary care with direct doctor access. Same-day appointments, transparent pricing. Serving Vancouver, Camas, Washougal, and Clark County.',
   keywords: [
     'Vancouver WA virtual doctor',
     'Vancouver Washington telemedicine',
@@ -67,7 +67,7 @@ export default function VancouverPage() {
     {
       icon: Users,
       title: 'Family-Centered',
-      description: 'Care for adults and teens 12+. One physician who knows your whole family.'
+      description: 'Care for adults and teens 12+. One doctor who knows your whole family.'
     },
     {
       icon: Clock,
@@ -77,7 +77,7 @@ export default function VancouverPage() {
     {
       icon: MessageCircle,
       title: 'Direct Communication',
-      description: 'Message your physician directly. Responses within 24 to 48 hours.'
+      description: 'Message your doctor directly. Responses within 24 to 48 hours.'
     },
     {
       icon: Shield,
@@ -110,7 +110,7 @@ export default function VancouverPage() {
           </h1>
           
           <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            Premium physician care for Vancouver and Clark County. Washington State 
+            Premium doctor care for Vancouver and Clark County. Washington State 
             healthcare without crossing the bridge.
           </p>
 

@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, MapPin, Clock, MessageCircle, Shield, Video }
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Seattle | Sankofa Family Medicine',
-  description: 'Seattle residents: access premium virtual primary care from anywhere. Same-day appointments, direct physician messaging, no insurance hassles. Serving Seattle, Capitol Hill, Ballard, Fremont, and all neighborhoods.',
+  description: 'Seattle residents: access premium virtual primary care from anywhere. Same-day appointments, direct doctor messaging, no insurance hassles. Serving Seattle, Capitol Hill, Ballard, Fremont, and all neighborhoods.',
   keywords: [
     'Seattle virtual doctor',
     'Seattle telemedicine',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Virtual Primary Care in Seattle | Sankofa Family Medicine',
-    description: 'Premium virtual primary care for Seattle residents. One physician who knows your history.',
+    description: 'Premium virtual primary care for Seattle residents. One doctor who knows your history.',
     url: 'https://sankofafamilymedicine.com/locations/washington/seattle',
   },
   alternates: {
@@ -115,7 +115,7 @@ export default function SeattlePage() {
           </h1>
           
           <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            Premium physician care without the Seattle commute. One doctor who knows your history, 
+            Premium doctor care without the Seattle commute. One doctor who knows your history, 
             available when you need them.
           </p>
 

@@ -112,7 +112,7 @@ export default function LocationRequestPage() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-sfm-gold" />
-                <span>Board Certified Physician</span>
+                <span>Board Certified Doctor</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-sfm-gold" />
@@ -357,7 +357,7 @@ export default function LocationRequestPage() {
                     <h3 className="font-display text-2xl mb-3">Nationwide Virtual Care</h3>
                     <p className="text-white/70 text-sm leading-relaxed mb-4">
                       Our goal is to bring Medicine That Remembers to all 50 states, 
-                      ensuring everyone has access to a physician who truly knows their history.
+                      ensuring everyone has access to a doctor who truly knows their history.
                     </p>
                     <div className="flex items-center gap-4 text-sm">
                       <div className="flex items-center gap-2">

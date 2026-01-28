@@ -4,7 +4,7 @@ import { ArrowRight, MapPin, Clock, MessageCircle, Shield, Mountain, Users } fro
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Sammamish | Sankofa Family Medicine',
-  description: 'Sammamish residents: premium virtual primary care for busy families and professionals. Same-day appointments, direct physician access, transparent pricing. Serving Sammamish, Pine Lake, Beaver Lake, and Klahanie.',
+  description: 'Sammamish residents: premium virtual primary care for busy families and professionals. Same-day appointments, direct doctor access, transparent pricing. Serving Sammamish, Pine Lake, Beaver Lake, and Klahanie.',
   keywords: [
     'Sammamish virtual doctor',
     'Sammamish telemedicine',
@@ -67,7 +67,7 @@ export default function SammamishPage() {
     {
       icon: Users,
       title: 'Family-Focused',
-      description: 'Care for adults and teens 12+. A physician who knows your whole family.'
+      description: 'Care for adults and teens 12+. A doctor who knows your whole family.'
     },
     {
       icon: Clock,
@@ -77,7 +77,7 @@ export default function SammamishPage() {
     {
       icon: MessageCircle,
       title: 'Always Connected',
-      description: 'Direct messaging with your physician. Questions answered between visits.'
+      description: 'Direct messaging with your doctor. Questions answered between visits.'
     },
     {
       icon: Shield,
@@ -110,7 +110,7 @@ export default function SammamishPage() {
           </h1>
           
           <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            Premium physician care for Sammamish families. Healthcare designed 
+            Premium doctor care for Sammamish families. Healthcare designed 
             for busy professionals who value quality and efficiency.
           </p>
 

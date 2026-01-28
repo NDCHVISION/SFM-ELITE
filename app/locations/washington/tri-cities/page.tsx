@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, MapPin, Clock, MessageCircle, Shield, Video }
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Tri-Cities | Sankofa Family Medicine',
-  description: 'Tri-Cities residents: access premium virtual primary care from anywhere. Same-day appointments, direct physician messaging, no insurance hassles. Serving Kennewick, Pasco, Richland, and surrounding communities.',
+  description: 'Tri-Cities residents: access premium virtual primary care from anywhere. Same-day appointments, direct doctor messaging, no insurance hassles. Serving Kennewick, Pasco, Richland, and surrounding communities.',
   keywords: [
     'Tri-Cities virtual doctor',
     'Tri-Cities telemedicine',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Virtual Primary Care in Tri-Cities | Sankofa Family Medicine',
-    description: 'Premium virtual primary care for Tri-Cities residents. One physician who knows your history.',
+    description: 'Premium virtual primary care for Tri-Cities residents. One doctor who knows your history.',
     url: 'https://sankofafamilymedicine.com/locations/washington/tri-cities',
   },
   alternates: {

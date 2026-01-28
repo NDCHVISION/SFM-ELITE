@@ -4,7 +4,7 @@ import { ArrowRight, Clock, MessageCircle, Shield, Anchor, Users } from 'lucide-
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Tacoma | Sankofa Family Medicine',
-  description: 'Tacoma residents: premium virtual primary care with direct physician access. Same-day appointments, transparent pricing, continuity of care. Serving Tacoma, University Place, Lakewood, and Pierce County.',
+  description: 'Tacoma residents: premium virtual primary care with direct doctor access. Same-day appointments, transparent pricing, continuity of care. Serving Tacoma, University Place, Lakewood, and Pierce County.',
   keywords: [
     'Tacoma virtual doctor',
     'Tacoma telemedicine',
@@ -66,7 +66,7 @@ export default function TacomaPage() {
     {
       icon: Users,
       title: 'Family Medicine',
-      description: 'Care for adults and teens 12+. One physician who knows your whole family.'
+      description: 'Care for adults and teens 12+. One doctor who knows your whole family.'
     },
     {
       icon: Clock,
@@ -76,7 +76,7 @@ export default function TacomaPage() {
     {
       icon: MessageCircle,
       title: 'Direct Communication',
-      description: 'Message your physician directly. Responses within 24 to 48 hours.'
+      description: 'Message your doctor directly. Responses within 24 to 48 hours.'
     },
     {
       icon: Shield,
@@ -109,7 +109,7 @@ export default function TacomaPage() {
           </h1>
           
           <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            Premium physician care for Tacoma and Pierce County. Healthcare 
+            Premium doctor care for Tacoma and Pierce County. Healthcare 
             that fits your schedule without sacrificing quality.
           </p>
 

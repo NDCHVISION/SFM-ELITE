@@ -4,7 +4,7 @@ import { ArrowRight, MapPin, Clock, MessageCircle, Shield, Mountain } from 'luci
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Spokane | Sankofa Family Medicine',
-  description: 'Spokane residents: access premium virtual primary care without the long waits. Same-day appointments, direct physician messaging, transparent pricing. Serving Spokane, Spokane Valley, Liberty Lake, and Eastern Washington.',
+  description: 'Spokane residents: access premium virtual primary care without the long waits. Same-day appointments, direct doctor messaging, transparent pricing. Serving Spokane, Spokane Valley, Liberty Lake, and Eastern Washington.',
   keywords: [
     'Spokane virtual doctor',
     'Spokane telemedicine',
@@ -77,7 +77,7 @@ export default function SpokanePage() {
     {
       icon: MessageCircle,
       title: 'Direct Access',
-      description: 'Message your physician directly. Get answers within 24 to 48 hours.'
+      description: 'Message your doctor directly. Get answers within 24 to 48 hours.'
     },
     {
       icon: Shield,
@@ -110,7 +110,7 @@ export default function SpokanePage() {
           </h1>
           
           <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            Quality primary care for Eastern Washington. A physician who trained locally 
+            Quality primary care for Eastern Washington. A doctor who trained locally 
             and understands your community.
           </p>
 

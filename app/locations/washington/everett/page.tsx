@@ -4,7 +4,7 @@ import { ArrowRight, Clock, MessageCircle, Shield, Plane, Users } from 'lucide-r
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Everett | Sankofa Family Medicine',
-  description: 'Everett residents: premium virtual primary care with direct physician access. Same-day appointments, transparent pricing. Serving Everett, Marysville, Lake Stevens, and Snohomish County.',
+  description: 'Everett residents: premium virtual primary care with direct doctor access. Same-day appointments, transparent pricing. Serving Everett, Marysville, Lake Stevens, and Snohomish County.',
   keywords: [
     'Everett virtual doctor',
     'Everett telemedicine',
@@ -77,7 +77,7 @@ export default function EverettPage() {
     {
       icon: MessageCircle,
       title: 'Direct Communication',
-      description: 'Message your physician directly. Responses within 24 to 48 hours.'
+      description: 'Message your doctor directly. Responses within 24 to 48 hours.'
     },
     {
       icon: Shield,
@@ -110,7 +110,7 @@ export default function EverettPage() {
           </h1>
           
           <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            Premium physician care for Everett and Snohomish County. Healthcare 
+            Premium doctor care for Everett and Snohomish County. Healthcare 
             designed for busy professionals and families.
           </p>
 

@@ -70,7 +70,7 @@ export default function WashingtonLocationPage() {
     {
       icon: Stethoscope,
       title: 'Continuity of Care',
-      description: 'One physician who knows your complete history, every visit.'
+      description: 'One doctor who knows your complete history, every visit.'
     },
   ]
 
@@ -120,7 +120,7 @@ export default function WashingtonLocationPage() {
             </h1>
 
             <p className="text-xl text-white/70 mb-10 leading-relaxed">
-              Premium virtual primary care built on continuity and the physician-patient relationship. 
+              Premium virtual primary care built on continuity and the doctor-patient relationship. 
               Serving adults throughout Washington State with Medicine That Remembers.
             </p>
 
@@ -145,7 +145,7 @@ export default function WashingtonLocationPage() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-sfm-gold" />
-                <span>Board Certified Physician</span>
+                <span>Board Certified Doctor</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-sfm-gold" />
