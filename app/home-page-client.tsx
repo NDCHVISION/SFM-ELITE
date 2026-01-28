@@ -49,14 +49,9 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20 lg:py-0">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center min-h-screen lg:min-h-0 lg:py-36">
               <div className="order-2 lg:order-1">
-                
-                {/* Brand Stamp FIRST */}
-                <div className="opacity-0 animate-fade-in animation-delay-100 mb-6">
-                  <p className="text-sfm-gold font-display text-2xl lg:text-3xl">Medicine That Remembers™</p>
-                </div>
 
                 {/* Location Badge */}
-                <div className="opacity-0 animate-fade-in animation-delay-200 mb-10">
+                <div className="opacity-0 animate-fade-in animation-delay-100 mb-10">
                   <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full">
                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" aria-hidden="true" />
                     <span className="text-white/80 text-sm sm:text-base font-medium">Membership-Based Primary Care</span>
@@ -67,7 +62,7 @@ export default function HomePage() {
 
                 {/* Headline */}
                 <div className="overflow-hidden mb-10">
-                  <h1 className="opacity-0 animate-hero-text animation-delay-300 relative" data-speakable>
+                  <h1 className="opacity-0 animate-hero-text animation-delay-200 relative" data-speakable>
                     <span 
                       className="absolute -inset-8 -z-10 opacity-80"
                       style={{ background: 'radial-gradient(ellipse 80% 60% at 30% 50%, rgba(188, 152, 51, 0.25) 0%, rgba(188, 152, 51, 0.08) 40%, transparent 70%)', filter: 'blur(20px)' }}
@@ -79,13 +74,13 @@ export default function HomePage() {
                 </div>
 
                 {/* Subheadline */}
-                <div className="opacity-0 animate-fade-in animation-delay-500 mb-12">
+                <div className="opacity-0 animate-fade-in animation-delay-400 mb-12">
                   <p className="text-lg lg:text-xl text-white/75 leading-relaxed max-w-xl">Sankofa Family Medicine is built on continuity, not throughput. Your physician knows your history, context, and priorities and carries them forward with intention.</p>
                   <p className="text-lg lg:text-xl text-white/90 font-medium leading-relaxed max-w-xl mt-5">Memory is not an add-on here. It is the foundation of care.</p>
                 </div>
 
                 {/* Value Props - TIGHTENED */}
-                <div className="opacity-0 animate-fade-in animation-delay-700 mb-12">
+                <div className="opacity-0 animate-fade-in animation-delay-600 mb-12">
                   <div className="space-y-5">
                     {[
                       { title: 'Continuity that compounds over time', text: 'Each visit builds on knowledge of your medical history, not a blank slate.' },
@@ -104,23 +99,23 @@ export default function HomePage() {
                 </div>
 
                 {/* CTA Bridge - TIGHTENED */}
-                <div className="opacity-0 animate-fade-in animation-delay-900 mb-8">
+                <div className="opacity-0 animate-fade-in animation-delay-800 mb-8">
                   <p className="text-white/80 text-lg lg:text-xl leading-relaxed max-w-lg">Ready for a physician who remembers the full picture?<br />Join a practice built for continuity, judgment, and long-term outcomes.</p>
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="opacity-0 animate-fade-in animation-delay-1000 flex flex-wrap items-center gap-4">
+                <div className="opacity-0 animate-fade-in animation-delay-900 flex flex-wrap items-center gap-4">
                   <PrimaryCTA variant="hero" />
                   <Link href="#membership-plans" onClick={(e) => scrollToSection(e, 'membership-plans')} className="btn-outline btn-shine text-base px-6 py-3 focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 focus:ring-offset-sfm-navy">View Membership Plans</Link>
                 </div>
 
                 {/* Launch Info */}
-                <div className="opacity-0 animate-fade-in animation-delay-1100 mt-8">
+                <div className="opacity-0 animate-fade-in animation-delay-1000 mt-8">
                   <p className="text-white/50 text-base">Clinical care begins February 2026. No payment required today.</p>
                 </div>
 
                 {/* Trust Indicators - SAFER CLAIMS */}
-                <div className="opacity-0 animate-fade-in animation-delay-1200 mt-10 pt-8 border-t border-white/10">
+                <div className="opacity-0 animate-fade-in animation-delay-1100 mt-10 pt-8 border-t border-white/10">
                   <div className="flex flex-wrap items-center gap-6 sm:gap-8">
                     <div className="relative group">
                       <div className="flex items-center gap-2 text-white/60 text-base cursor-help">
