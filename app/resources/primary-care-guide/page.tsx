@@ -11,7 +11,7 @@ export default function PrimaryCareGuidePage() {
   const [showAssessment, setShowAssessment] = useState(false)
 
   const assessmentQuestions = [
-    'Have you seen the same physician for more than 2 years?',
+    'Have you seen the same doctor for more than 2 years?',
     'Has anyone compared your labs across multiple years?',
     'Can you message your doctor directly?',
     'Do you feel comfortable bringing up vague concerns?',
@@ -20,7 +20,7 @@ export default function PrimaryCareGuidePage() {
 
   const learningPoints = [
     'Why normal labs can still miss real problems',
-    'The difference between a true physician partner and an overloaded system',
+    'The difference between a true doctor partner and an overloaded system',
     'How continuity changes outcomes before symptoms appear',
     'What questions to ask before committing to a doctor',
     'How to identify the type of primary care relationship you currently have',
@@ -65,7 +65,7 @@ export default function PrimaryCareGuidePage() {
                   But no one noticed her thyroid levels beginning to drift. No one tracked the subtle weight gain despite eating less. Her story was written across years of records, but no one had read it as a single narrative.
                 </p>
                 <p>
-                  By the time she found a physician who held the thread, years had passed. Not because the signs weren't there. Because no one had compared where she was to where she had been.
+                  By the time she found a doctor who held the thread, years had passed. Not because the signs weren't there. Because no one had compared where she was to where she had been.
                 </p>
               </div>
 

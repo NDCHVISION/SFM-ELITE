@@ -5,11 +5,11 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Sankofa Tools - The Continuity Kit | Sankofa Family Medicine',
-  description: 'Free patient tools to help you prepare for medical visits, track symptoms, manage medications, and communicate effectively with your healthcare provider.',
+  description: 'Free patient tools to help you prepare for medical visits, track symptoms, manage medications, and communicate effectively with your doctor.',
   keywords: ['patient tools', 'medical visit preparation', 'symptom tracker', 'medication organizer', 'healthcare communication'],
   openGraph: {
     title: 'Sankofa Tools - The Continuity Kit',
-    description: 'Free patient tools to help you prepare for medical visits and communicate effectively with your provider.',
+    description: 'Free patient tools to help you prepare for medical visits and communicate effectively with your doctor.',
     url: 'https://sankofafamilymedicine.com/resources/tools',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -24,7 +24,7 @@ const tools = [
   {
     id: 'symptom-timeline',
     name: 'Symptom Timeline Builder',
-    description: 'Track your symptoms over time to help your provider understand the full picture of your health concerns.',
+    description: 'Track your symptoms over time to help your healthcare provider understand the full picture of your health concerns.',
     icon: Activity,
     href: '/resources/tools/symptom-timeline',
     image: '/images/Symptom timeline.png',
@@ -54,7 +54,7 @@ const tools = [
   {
     id: 'medication',
     name: 'Medication List Organizer',
-    description: 'Create a clear, organized medication list to share with providers.',
+    description: 'Create a clear, organized medication list to share with your doctor.',
     icon: Pill,
     href: '/resources/tools/medication-organizer',
     image: '/images/NEWMEDORG.png',
@@ -93,7 +93,7 @@ export default function ToolsPage() {
           </h1>
           <div className="w-20 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-8" />
           <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-4">
-            Free tools to help you prepare for medical visits, track your health, and communicate effectively with your provider.
+            Free tools to help you prepare for medical visits, track your health, and communicate effectively with your doctor.
           </p>
           <p className="text-white/50 text-sm">
             No login required • No data stored • Educational use only
@@ -207,7 +207,7 @@ export default function ToolsPage() {
             Ready for Continuity-Based Care?
           </h2>
           <p className="text-white/70 mb-10 text-lg">
-            These tools are just the beginning. Experience what it's like to have a physician who truly knows you.
+            These tools are just the beginning. Experience what it's like to have a doctor who truly knows you.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact" className="btn-primary">

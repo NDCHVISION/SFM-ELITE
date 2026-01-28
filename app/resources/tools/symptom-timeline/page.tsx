@@ -418,7 +418,7 @@ Questions for the Visit:
   return (
     <ToolLayout
       title="Symptom Timeline Builder"
-      description="Track your symptoms over time to help your provider understand the full picture of your health concerns."
+      description="Track your symptoms over time to help your healthcare provider understand the full picture of your health concerns."
     >
       <div className="space-y-8">
         {/* Progress Indicator */}

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'healthcare continuity',
     'patient guide',
     'preventive care',
-    'physician relationship',
+    'doctor relationship',
     'health outcomes',
     'primary care evaluation',
     'Sankofa Family Medicine',
@@ -63,7 +63,7 @@ const guideJsonLd = {
   author: {
     '@type': 'Person',
     name: 'Dr. Yaw Nkrumah',
-    jobTitle: 'Board-Certified Family Medicine Physician',
+    jobTitle: 'Board-Certified Family Medicine Doctor',
     worksFor: {
       '@type': 'MedicalOrganization',
       name: 'Sankofa Family Medicine',

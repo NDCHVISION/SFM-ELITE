@@ -90,7 +90,7 @@ export default function BPChecker() {
 
   const handleDownloadPDF = () => {
     if (!results) return
-    const content = `Blood Pressure Results\n\nAverage BP: ${results.avgSystolic} / ${results.avgDiastolic}\nCategory: ${results.category}\n\nEducational Information:\n- Averages matter more than single readings\n- Home and office readings may differ\n- Regular monitoring helps track trends\n\nNote: This is an educational tool. Share these results with your healthcare provider for proper interpretation.`
+    const content = `Blood Pressure Results\n\nAverage BP: ${results.avgSystolic} / ${results.avgDiastolic}\nCategory: ${results.category}\n\nEducational Information:\n- Averages matter more than single readings\n- Home and office readings may differ\n- Regular monitoring helps track trends\n\nNote: This is an educational tool. Share these results with your doctor for proper interpretation.`
     
     generatePDF('Blood Pressure Results', content, 'bp-results.pdf')
     showToast('PDF downloaded!', 'success')
@@ -239,7 +239,7 @@ export default function BPChecker() {
                   </li>
                   <li className="flex gap-2">
                     <span className="text-sfm-azure">•</span>
-                    Share these results with your healthcare provider
+                    Share these results with your doctor
                   </li>
                 </ul>
               </div>

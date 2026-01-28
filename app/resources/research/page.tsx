@@ -97,11 +97,11 @@ const researchData = [
     url: 'https://www.aafp.org/pubs/fpm/blogs/inpractice/entry/wait-times.html',
   },
   {
-    metric: 'Patients per Doctor (2,300+ patients per physician)',
+    metric: 'Patients per Doctor (2,300+ patients per doctor)',
     title: 'Estimating a Reasonable Patient Panel Size for Primary Care Physicians With Team-Based Task Delegation',
     publisher_or_journal: 'Annals of Family Medicine (PMC full text available)',
     year: 2012,
-    why_it_supports_metric: 'Notes that the average US primary care panel size is about 2,300, supporting the "2,300+ patients per physician" comparison anchor.',
+    why_it_supports_metric: 'Notes that the average US primary care panel size is about 2,300, supporting the "2,300+ patients per doctor" comparison anchor.',
     url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3438206/',
   },
   {
@@ -130,7 +130,7 @@ const researchData = [
   },
   {
     metric: 'Lab Work Pricing (cash/direct options can be lower than hospital/insurance-negotiated settings)',
-    title: 'Cost Comparisons of Physician-Ordered Versus Direct-to-Consumer Laboratory Testing',
+    title: 'Cost Comparisons of Doctor-Ordered Versus Direct-to-Consumer Laboratory Testing',
     publisher_or_journal: 'PubMed indexed article',
     year: 2024,
     why_it_supports_metric: 'Finds direct-to-consumer lab test prices were generally lower than mean insurance-negotiated hospital-based prices.',

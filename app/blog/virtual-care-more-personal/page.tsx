@@ -4,11 +4,11 @@ import { ArrowLeft, Calendar, User, Clock } from 'lucide-react'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Why Virtual Care With the Right Physician Is More Personal, Not Less | Sankofa Family Medicine',
+  title: 'Why Virtual Care With the Right Doctor Is More Personal, Not Less | Sankofa Family Medicine',
   description: 'There is a common assumption that virtual medicine is impersonal. After years of practicing both models, I have found the opposite is often true. Virtual care can deepen the relationship.',
-  keywords: ['virtual care', 'telehealth', 'telemedicine', 'direct primary care', 'physician relationship'],
+  keywords: ['virtual care', 'telehealth', 'telemedicine', 'direct primary care', 'doctor relationship'],
   openGraph: {
-    title: 'Why Virtual Care With the Right Physician Is More Personal, Not Less',
+    title: 'Why Virtual Care With the Right Doctor Is More Personal, Not Less',
     description: 'There is a common assumption that virtual medicine is impersonal. After years of practicing both models, I have found the opposite is often true.',
     type: 'article',
     publishedTime: '2025-12-08T00:00:00Z',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Why Virtual Care With the Right Physician Is More Personal, Not Less',
+    title: 'Why Virtual Care With the Right Doctor Is More Personal, Not Less',
     description: 'There is a common assumption that virtual medicine is impersonal. After years of practicing both models, I have found the opposite is often true.',
     images: ['/images/blog-virtual-care.png'],
   },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
-  headline: 'Why Virtual Care With the Right Physician Is More Personal, Not Less',
+  headline: 'Why Virtual Care With the Right Doctor Is More Personal, Not Less',
   description: 'There is a common assumption that virtual medicine is impersonal. After years of practicing both models, I have found the opposite is often true.',
   image: 'https://sankofafamilymedicine.com/images/blog-virtual-care.png',
   datePublished: '2025-12-08T00:00:00Z',
@@ -34,7 +34,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Dr. Yaw Nkrumah',
-    jobTitle: 'Board Certified Family Physician',
+    jobTitle: 'Board Certified Family Doctor',
     url: 'https://sankofafamilymedicine.com/founder',
   },
   publisher: {
@@ -79,7 +79,7 @@ export default function BlogPost() {
           </div>
           
           <h1 className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-6 leading-tight">
-            Why Virtual Care With the Right Physician Is More Personal, Not Less
+            Why Virtual Care With the Right Doctor Is More Personal, Not Less
           </h1>
           
           <div className="flex flex-wrap items-center gap-6 text-sm text-white/70">
@@ -104,7 +104,7 @@ export default function BlogPost() {
         <div className="rounded-2xl overflow-hidden shadow-xl group image-depth">
           <Image
             src="/images/telehealth-video-visit.png"
-            alt="Patient having a virtual care appointment with their physician"
+            alt="Patient having a virtual care appointment with their doctor"
             width={1200}
             height={675}
             className="w-full h-auto transition-all duration-700 group-hover:scale-[1.02] group-hover:brightness-105"
@@ -138,7 +138,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-lg text-muted leading-relaxed mb-6">
-            Friction delays follow-up. Delayed follow-up breaks <Link href="/blog/why-skipping-primary-care-costs-years" className="text-sfm-azure hover:text-sfm-navy underline underline-offset-2 transition-colors">continuity</Link>. Broken continuity means your physician is always working from a snapshot instead of a full picture.
+            Friction delays follow-up. Delayed follow-up breaks <Link href="/blog/why-skipping-primary-care-costs-years" className="text-sfm-azure hover:text-sfm-navy underline underline-offset-2 transition-colors">continuity</Link>. Broken continuity means your doctor is always working from a snapshot instead of a full picture.
           </p>
 
           <p className="text-lg text-muted leading-relaxed mb-6">The issue is not that people do not value their health.</p>
@@ -172,7 +172,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-lg text-muted leading-relaxed mb-6">
-            In a <Link href="/compare" className="text-sfm-azure hover:text-sfm-navy underline underline-offset-2 transition-colors">traditional model</Link>, she probably would have waited. Taken ibuprofen. Hoped it passed. Maybe gone to urgent care if it got bad enough, where a provider with no context would have started from zero.
+            In a <Link href="/compare" className="text-sfm-azure hover:text-sfm-navy underline underline-offset-2 transition-colors">traditional model</Link>, she probably would have waited. Taken ibuprofen. Hoped it passed. Maybe gone to urgent care if it got bad enough, where a doctor with no context would have started from zero.
           </p>
 
           <p className="text-lg text-muted leading-relaxed mb-6">
@@ -201,7 +201,7 @@ export default function BlogPost() {
             The danger is not the screen. The danger is care without memory, without context, without someone who knows your story and can interpret new information against everything that came before.
           </p>
 
-          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">Why the Physician Still Matters</h2>
+          <h2 className="font-display text-2xl md:text-3xl text-sfm-navy mt-12 mb-6">Why the Doctor Still Matters</h2>
 
           <p className="text-lg text-muted leading-relaxed mb-6">
             Virtual care has expanded access. That is a good thing. But it has also flooded the market with episodic, transactional encounters that feel like customer service, not medicine.
@@ -210,7 +210,7 @@ export default function BlogPost() {
           <p className="text-lg text-muted leading-relaxed mb-6">The differentiator is not technology. It is who is on the other side.</p>
 
           <p className="text-lg text-muted leading-relaxed mb-6">
-            A physician trained to manage uncertainty. To hold broad differentials even when symptoms are vague. To treat when appropriate and refer when necessary, but not reflexively. To integrate mental, metabolic, and lifestyle factors rather than siloing each into a separate specialty visit.
+            A doctor trained to manage uncertainty. To hold broad differentials even when symptoms are vague. To treat when appropriate and refer when necessary, but not reflexively. To integrate mental, metabolic, and lifestyle factors rather than siloing each into a separate specialty visit.
           </p>
 
           <p className="text-lg text-muted leading-relaxed mb-6">
@@ -227,7 +227,7 @@ export default function BlogPost() {
 
           <ul className="text-lg text-muted leading-relaxed mb-8 space-y-2 list-disc pl-6">
             <li>Continuity over time</li>
-            <li>Physician-level clinical reasoning</li>
+            <li>Doctor-level clinical reasoning</li>
             <li>Reduced friction through virtual access</li>
             <li>Responsiveness that matches how people actually live</li>
           </ul>
@@ -272,7 +272,7 @@ export default function BlogPost() {
             Experience Virtual Care That Feels Personal
           </h2>
           <p className="text-muted mb-8 max-w-2xl mx-auto">
-            Discover how physician-led virtual primary care can offer the continuity and depth you deserve.
+            Discover how doctor-led virtual primary care can offer the continuity and depth you deserve.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link 
