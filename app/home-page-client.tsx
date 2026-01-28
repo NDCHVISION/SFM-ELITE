@@ -25,8 +25,13 @@ export default function HomePage() {
 
   return (
     <>
+      {/* Skip Link for Keyboard Accessibility */}
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-sfm-gold focus:text-sfm-navy focus:rounded-lg focus:font-medium">
+        Skip to main content
+      </a>
+
       {/* HERO SECTION */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section id="main-content" className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-sfm-navy via-sfm-navy to-sfm-azure/60" />
         <div className="absolute inset-0 pattern-sankofa-subtle pattern-animated opacity-40" aria-hidden="true" />
         <div 
@@ -75,17 +80,17 @@ export default function HomePage() {
 
                 {/* Subheadline */}
                 <div className="opacity-0 animate-fade-in animation-delay-400 mb-12">
-                  <p className="text-lg lg:text-xl text-white/75 leading-relaxed max-w-xl">Sankofa Family Medicine is built on continuity, not throughput. Your physician knows your history, context, and priorities and carries them forward with intention.</p>
-                  <p className="text-lg lg:text-xl text-white/90 font-medium leading-relaxed max-w-xl mt-5">Memory is not an add-on here. It is the foundation of care.</p>
+                  <p className="text-lg lg:text-xl text-white/75 leading-relaxed max-w-xl">Built for continuity. Each visit is designed to build on the last.</p>
+                  <p className="text-lg lg:text-xl text-white/90 font-medium leading-relaxed max-w-xl mt-5">You don't have to start over every time.</p>
                 </div>
 
-                {/* Value Props - TIGHTENED */}
+                {/* Value Props - CLEANUP #1 + #6 APPLIED */}
                 <div className="opacity-0 animate-fade-in animation-delay-600 mb-12">
                   <div className="space-y-5">
                     {[
-                      { title: 'Continuity that compounds over time', text: 'Each visit builds on knowledge of your medical history, not a blank slate.' },
-                      { title: 'Physician-led care, delivered consistently', text: 'You work with the same board-certified family physician over time. Consistent judgment, consistent follow-through.' },
-                      { title: 'Predictable membership pricing', text: 'Memberships begin at $225/month. Predictable pricing. HSA/FSA accepted.' },
+                      { title: 'Care that builds over time', text: 'We keep track of your history, meds, labs, and goals, so each visit starts where the last one left off.' },
+                      { title: 'The same doctor, every visit', text: "You'll work with one board-certified family doctor who follows your care over time." },
+                      { title: 'Predictable membership pricing', text: 'Pricing is published as ranges. Your exact rate is confirmed before enrollment.' },
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-4 group cursor-default">
                         <div className="w-2 h-2 rounded-full bg-sfm-gold mt-3 flex-shrink-0 transition-transform duration-300 group-hover:scale-150" aria-hidden="true" />
@@ -98,9 +103,9 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* CTA Bridge - TIGHTENED */}
+                {/* CTA Bridge */}
                 <div className="opacity-0 animate-fade-in animation-delay-800 mb-8">
-                  <p className="text-white/80 text-lg lg:text-xl leading-relaxed max-w-lg">Ready for a physician who remembers the full picture?<br />Join a practice built for continuity, judgment, and long-term outcomes.</p>
+                  <p className="text-white/80 text-lg lg:text-xl leading-relaxed max-w-lg">Want care where we remember the full picture?<br />Join a practice built for continuity, clear decisions, and long-term care.</p>
                 </div>
 
                 {/* CTA Buttons */}
@@ -109,34 +114,35 @@ export default function HomePage() {
                   <Link href="#membership-plans" onClick={(e) => scrollToSection(e, 'membership-plans')} className="btn-outline btn-shine text-base px-6 py-3 focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 focus:ring-offset-sfm-navy">View Membership Plans</Link>
                 </div>
 
-                {/* Launch Info */}
+                {/* Launch Info + Above-the-fold Disclaimer */}
                 <div className="opacity-0 animate-fade-in animation-delay-1000 mt-8">
-                  <p className="text-white/50 text-base">Clinical care begins February 2026. No payment required today.</p>
+                  <p className="text-white/50 text-base">Clinical care is planned to begin in early 2026. No payment is required to join the Founders Waitlist.</p>
+                  <p className="text-white/50 text-sm mt-3 max-w-xl leading-relaxed">Founders Waitlist only. No payment is required to join. Joining does not create a doctor-patient relationship. Services are available only to patients located in Washington State.</p>
                 </div>
 
-                {/* Trust Indicators - SAFER CLAIMS */}
+                {/* Trust Indicators */}
                 <div className="opacity-0 animate-fade-in animation-delay-1100 mt-10 pt-8 border-t border-white/10">
                   <div className="flex flex-wrap items-center gap-6 sm:gap-8">
                     <div className="relative group">
                       <div className="flex items-center gap-2 text-white/60 text-base cursor-help">
                         <Shield className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
-                        <span>HIPAA Compliant</span>
+                        <span>HIPAA-Aligned</span>
                       </div>
-                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-white text-sfm-navy text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-20">Your health information is protected by federal privacy standards.<div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white" /></div>
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-white text-sfm-navy text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-20">Your health information is managed under HIPAA privacy and security standards.<div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white" /></div>
                     </div>
                     <div className="relative group">
                       <div className="flex items-center gap-2 text-white/60 text-base cursor-help">
                         <Award className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
                         <span>Board Certified</span>
                       </div>
-                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-white text-sfm-navy text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-20">Dr. Nkrumah is board certified in Family Medicine.<div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white" /></div>
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-white text-sfm-navy text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-20">Board certified in Family Medicine.<div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white" /></div>
                     </div>
                     <div className="relative group">
                       <div className="flex items-center gap-2 text-white/60 text-base cursor-help">
                         <Clock className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
                         <span>Priority Access</span>
                       </div>
-                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-white text-sfm-navy text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-20">Same-day or next-business-day virtual visits for urgent concerns when available.<div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white" /></div>
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-white text-sfm-navy text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-20">When enrolled, members may request same-day or next-business-day visits for urgent concerns, when available, subject to clinical judgment.<div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-white" /></div>
                     </div>
                   </div>
                 </div>
@@ -177,15 +183,15 @@ export default function HomePage() {
             </div>
             <span className="inline-block text-sfm-gold text-sm font-semibold tracking-widest uppercase mb-6">Our Philosophy</span>
             <h2 className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight">Medicine That Remembers™</h2>
-            <p className="text-lg text-sfm-navy/70 leading-relaxed mb-6">Sankofa is a West African word and symbol that means &ldquo;go back and retrieve what matters.&rdquo; In medicine, what matters is continuity, relationship, and the bond between patient and physician.</p>
-            <p className="text-lg text-sfm-navy/70 leading-relaxed">At Sankofa Family Medicine, that idea guides everything we do. We believe good care begins with memory, with knowing your history, your context, and your goals. Lasting relationships make better medicine.</p>
+            <p className="text-lg text-sfm-navy/70 leading-relaxed mb-6">Sankofa means "go back and retrieve what matters."</p>
+            <p className="text-lg text-sfm-navy/70 leading-relaxed">In medicine, what matters is your history. When your story is remembered, care becomes clearer, more personal, and more effective over time.</p>
           </ScrollReveal>
 
           <ScrollRevealGroup className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {[
-              { icon: Heart, title: 'Relationship First', description: 'One physician who knows your history, your context, and your goals. No rotating providers. No repeating your history. No starting from zero.' },
-              { icon: Clock, title: 'Time That Matters', description: 'Visits of 45 to 75 minutes give you time to be heard. Time to understand. Time to address what truly matters to you.' },
-              { icon: MessageCircle, title: 'Accessible When Needed', description: 'Secure messages answered within one business day (Mon-Fri). Same-day or next-business-day visits for urgent concerns when available.' },
+              { icon: Heart, title: 'Relationship First', description: 'One physician who gets to know your history and what matters to you over time. No rotating providers. No repeating yourself. No starting over.' },
+              { icon: Clock, title: 'Time That Matters', description: 'Visits are designed to be longer so you have time to talk, ask questions, and feel heard. No rushing through symptoms.' },
+              { icon: MessageCircle, title: 'Accessible When Needed', description: 'When enrolled, you can message your physician and request visits as needs come up. Urgent concerns may be scheduled same-day or next-business-day when available, subject to availability and clinical judgment.' },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="text-center group">
@@ -205,20 +211,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHO WE SERVE */}
+      {/* WHO WE SERVE - CLEANUP #2 + #3 APPLIED */}
       <section className="relative py-20 lg:py-28 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight">Who We Serve</h2>
-            <p className="text-lg text-sfm-navy/70 leading-relaxed">Whether you are a busy professional, a growing family, tech forward, or focused on proactive health, our virtual membership model is built to fit your life.</p>
+            <p className="text-lg text-sfm-navy/70 leading-relaxed">Sankofa Family Medicine is for people who want a physician who follows their care over time. If you are busy, raising a family, or focused on long-term health, our Washington State membership model is built to fit your life.</p>
           </ScrollReveal>
 
           <ScrollRevealGroup className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             {[
-              { src: '/images/telehealth-video-visit.png', alt: 'Professional woman enjoying a video consultation with her physician from home', label: 'Busy Professionals', description: 'Responsive support for high-performing leaders who value their time.' },
-              { src: '/images/patient-tablet-seattle.png', alt: 'Man reviewing health information on tablet with Seattle skyline in background', label: 'Tech-Forward Patients', description: 'Digital-first care with modern workflows designed for clarity and follow-through.' },
-              { src: '/images/family-gathering-pnw.png', alt: 'Multigenerational family enjoying time together in the Pacific Northwest', label: 'Families', description: 'Continuity for every member of your household with one physician who knows your history.' },
-              { src: '/images/woman-tablet-thoughtful.png', alt: 'Woman thoughtfully reviewing her health plan on a tablet', label: 'Proactive Health', description: 'Prevention and long-term planning for patients who invest in longevity.' },
+              { src: '/images/telehealth-video-visit.png', alt: 'Professional woman enjoying a video consultation with her physician from home', label: 'Busy Professionals', description: 'Responsive support for leaders who value their time.' },
+              { src: '/images/patient-tablet-seattle.png', alt: 'Man reviewing health information on tablet with Seattle skyline in background', label: 'Tech-Forward Patients', description: 'Digital-first care with clear workflows and follow-through.' },
+              { src: '/images/family-gathering-pnw.png', alt: 'Multigenerational family enjoying time together in the Pacific Northwest', label: 'Families', description: 'One physician for your household, visit after visit.' },
+              { src: '/images/woman-tablet-thoughtful.png', alt: 'Woman thoughtfully reviewing her health plan on a tablet', label: 'Proactive Health', description: 'Prevention and long-term planning for those who invest in their health.' },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="relative group overflow-hidden rounded-2xl aspect-[4/5] ring-2 ring-transparent hover:ring-sfm-gold/40 transition-all duration-300">
@@ -237,7 +243,7 @@ export default function HomePage() {
 
       <CareJourney />
 
-      {/* DPC COMPARISON - SAFER CLAIMS */}
+      {/* DPC COMPARISON - CLEANUP #4 APPLIED */}
       <section className="relative py-24 lg:py-32 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
@@ -264,7 +270,7 @@ export default function HomePage() {
                     <span className="w-3 h-3 rounded-full bg-sfm-gold" aria-hidden="true" />Sankofa Family Medicine
                   </h3>
                   <ul className="space-y-4">
-                    {['45 to 75 minute visits that give you time to be heard', 'Same-day or next-business-day visits for urgent concerns when available', 'Intentionally limited panel size to protect time and access', 'The same physician every time, not a rotating team', 'Clear monthly pricing with multiple payment options. No visit fees or unexpected bills.'].map((item, i) => (
+                    {['Visits are planned for 45-75 minutes.', 'Urgent visits may be same-day or next-day, when available.', 'Intentionally limited panel size to protect time and access.', 'The same doctor every time, not a rotating team.', 'Clear monthly pricing. No visit fees or surprise bills.'].map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-white/85 text-base"><CheckCircle2 className="w-5 h-5 text-sfm-gold flex-shrink-0 mt-0.5" aria-hidden="true" />{item}</li>
                     ))}
                   </ul>
@@ -285,7 +291,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <h2 className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight">Is This Model Right for You?</h2>
-              <p className="text-lg text-sfm-navy/70 mb-8 leading-relaxed">If you value time with your physician, continuity of care, and predictable pricing, you will fit right in.</p>
+              <p className="text-lg text-sfm-navy/70 mb-8 leading-relaxed">If you value time with your doctor, continuity of care, and predictable pricing, you will fit right in.</p>
               <div className="flex items-center gap-4">
                 <Link href="/resources/primary-care-guide" className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors font-medium text-base focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded">Download the Free Guide<ArrowRight className="w-4 h-4" aria-hidden="true" /></Link>
               </div>
@@ -295,7 +301,7 @@ export default function HomePage() {
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-sfm-border-light">
                 <p className="font-display text-xl text-sfm-navy mb-6">Check all that apply to you:</p>
                 <div className="space-y-4 mb-8">
-                  {['I want more time with my doctor.', 'I want the same physician who knows my history.', 'I want easier access when I need care.', 'I prefer transparent monthly costs.', 'I believe prevention is worth investing in.'].map((item, index) => (
+                  {['I want more time with my doctor.', 'I want the same doctor who follows my care over time.', 'I want easier access when I need care.', 'I prefer transparent monthly costs.', 'I believe prevention is worth investing in.'].map((item, index) => (
                     <label key={index} className="flex items-start gap-4 cursor-pointer group">
                       <div className={`w-6 h-6 rounded-lg border-2 flex items-center justify-center transition-all flex-shrink-0 mt-0.5 ${checkedItems[index] ? 'bg-sfm-gold border-sfm-gold' : 'border-gray-300 group-hover:border-sfm-gold/50'}`}>
                         {checkedItems[index] && <CheckCircle2 className="w-4 h-4 text-white" aria-hidden="true" />}
@@ -308,11 +314,12 @@ export default function HomePage() {
                 <div className={`p-4 rounded-xl transition-all ${yesCount >= 3 ? 'bg-emerald-50 border border-emerald-200' : 'bg-gray-50 border border-gray-200'}`}>
                   {yesCount >= 3 ? (
                     <div>
-                      <p className="text-emerald-800 text-base mb-3"><strong>Direct Primary Care may be a great fit.</strong> You value continuity, time, and transparency.</p>
+                      <p className="text-emerald-800 text-base mb-3"><strong>Sankofa may be a great fit.</strong> You value continuity, time, and transparency.</p>
                       <Link href="/founders-waitlist" className="inline-flex items-center gap-2 text-emerald-700 font-medium hover:text-emerald-900 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded">Join the Founders Waitlist<ArrowRight className="w-4 h-4" aria-hidden="true" /></Link>
+                      <p className="text-emerald-600/70 text-xs mt-2">Waitlist only. No payment or doctor-patient relationship created.</p>
                     </div>
                   ) : yesCount > 0 ? (
-                    <p className="text-gray-700 text-base">Check more items to see if Direct Primary Care aligns with your healthcare priorities.</p>
+                    <p className="text-gray-700 text-base">Check more boxes to see if this model fits you.</p>
                   ) : (
                     <p className="text-gray-500 text-base">Select the statements that resonate with you.</p>
                   )}
@@ -329,8 +336,8 @@ export default function HomePage() {
           <ScrollReveal className="text-center mb-16">
             <span className="inline-block text-sfm-gold text-sm font-semibold tracking-widest uppercase mb-6">Membership Plans</span>
             <h2 className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight">Membership-Based Primary Care</h2>
-            <p className="text-lg text-sfm-navy/70 max-w-2xl mx-auto mb-4">Every membership includes generous virtual visit access, direct secure messaging with your physician, and wholesale lab pricing. All memberships operate under the Direct Primary Care (DPC) model: no insurance billing for primary care services.</p>
-            <p className="text-base text-sfm-navy/60 max-w-2xl mx-auto mb-4">We do not bill insurance for membership services, but you may use insurance for labs, imaging, and specialists outside the membership.</p>
+            <p className="text-lg text-sfm-navy/70 max-w-2xl mx-auto mb-4">When enrollment opens, memberships are expected to include virtual visits, secure messaging, and wholesale lab pricing. This is Direct Primary Care (DPC). We do not bill insurance for primary care.</p>
+            <p className="text-base text-sfm-navy/60 max-w-2xl mx-auto mb-4">We do not bill insurance for membership services, but you may use insurance for labs, imaging, and specialists outside the membership. Services are available only to patients located in Washington State.</p>
             <p className="text-sfm-gold font-medium text-base">
               <Link 
                 href="/membership-terms#founding-member-program" 
@@ -375,12 +382,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* BLOG PREVIEW */}
+      {/* BLOG PREVIEW - CLEANUP #5 APPLIED */}
       <section className="relative py-24 lg:py-32 bg-sfm-cream overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <ScrollReveal>
-              <h2 className="text-4xl lg:text-5xl font-display text-sfm-navy leading-tight">Insights from the Practice</h2>
+              <h2 className="text-4xl lg:text-5xl font-display text-sfm-navy leading-tight">Insights on Modern Primary Care</h2>
               <p className="text-sfm-navy/70 text-lg mt-4 max-w-xl">Articles on virtual care, prevention, and modern primary care written for clarity and better decision-making.</p>
             </ScrollReveal>
             <Link href="/blog" className="hidden md:inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors font-medium text-base focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded">View all articles<ArrowRight className="w-4 h-4" aria-hidden="true" /></Link>
@@ -424,19 +431,19 @@ export default function HomePage() {
         <div className="relative max-w-3xl mx-auto px-6 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full mb-10">
             <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" aria-hidden="true" />
-            <span className="text-white/80 text-base font-medium">Founders Waitlist Now Open</span>
+            <span className="text-white/80 text-base font-medium">Founders Waitlist Open</span>
           </div>
           
           <h2 id="cta-heading" className="text-4xl sm:text-5xl lg:text-6xl font-display text-white mb-6 leading-tight" data-speakable>Begin with a Physician Who <span className="text-sfm-gold" style={{ textShadow: '0 0 40px rgba(188, 152, 51, 0.4)' }}>Remembers</span></h2>
-          <p className="text-white/70 text-lg lg:text-xl mb-6 max-w-xl mx-auto leading-relaxed">Secure intake, scheduling, messaging, and visits all happen through our patient portal.</p>
-          <p className="text-white/50 text-base mb-10">
+          <p className="text-white/70 text-lg lg:text-xl mb-6 max-w-xl mx-auto leading-relaxed">When enrollment opens, intake, scheduling, messaging, and visits will be managed through a secure patient portal.</p>
+          <p className="text-white/50 text-base mb-6">
             <Link 
               href="/membership-terms#founding-member-program" 
               className="hover:text-sfm-gold hover:underline transition-colors duration-300"
               aria-label="Learn more about Founding Member pricing"
             >
               Founding member pricing
-            </Link> available through February 2026.
+            </Link> is available for a limited time during the launch period, subject to capacity.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -444,10 +451,14 @@ export default function HomePage() {
             <Link href="#membership-plans" onClick={(e) => scrollToSection(e, 'membership-plans')} className="btn-outline btn-shine text-base px-6 py-3 focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 focus:ring-offset-sfm-navy">Membership Plans</Link>
           </div>
 
+          <p className="text-white/50 text-sm mt-6 max-w-lg mx-auto leading-relaxed">
+            Founders Waitlist only. No payment is required to join. Joining does not guarantee enrollment. Joining does not create a doctor-patient relationship. Services are available only to patients located in Washington State.
+          </p>
+
           <div className="mt-12 pt-8 border-t border-white/10">
             <div className="flex flex-wrap items-center justify-center gap-8 text-white/50 text-base">
-              <span className="flex items-center gap-2"><Shield className="w-5 h-5" aria-hidden="true" />HIPAA Compliant</span>
-              <span className="flex items-center gap-2"><MessageCircle className="w-5 h-5" aria-hidden="true" />Secure Portal</span>
+              <span className="flex items-center gap-2"><Shield className="w-5 h-5" aria-hidden="true" />HIPAA-Aligned</span>
+              <span className="flex items-center gap-2"><MessageCircle className="w-5 h-5" aria-hidden="true" />Secure Portal (after enrollment)</span>
             </div>
           </div>
         </div>
