@@ -3,7 +3,6 @@
 import { useId, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import Script from 'next/script'
 import { ArrowRight, Clock, MessageCircle, Shield, Heart, CheckCircle2, Award, ChevronDown, FileText } from 'lucide-react'
 import CareJourney from '@/components/CareJourney'
 import ScrollReveal, { ScrollRevealGroup } from '@/components/ScrollReveal'
@@ -12,8 +11,9 @@ import PrimaryCTA from '@/components/PrimaryCTA'
 // =============================================================================
 // HOME PAGE (CLIENT)
 // Notes:
-// - Keep SEO metadata (export const metadata) in a SERVER file (app/page.tsx or layout.tsx)
-// - This client component can include JSON-LD via <Script>
+// - SEO metadata lives in app/page.tsx (server component)
+// - JSON-LD schema lives in app/page.tsx (server component)
+// - This client component handles interactivity only
 // =============================================================================
 
 // Institutional / verification links (safe + trust-building)
@@ -21,190 +21,6 @@ const EXTERNAL_URLS = {
   abfmCredential: 'https://www.credential.net/169707940',
   waDohProviderSearch: 'https://fortress.wa.gov/doh/providercredentialsearch/',
   linkedinCompany: 'https://www.linkedin.com/company/sankofa-family-medicine/',
-}
-
-// Schema for SEO (JSON-LD). Keep factual. Avoid outcome claims.
-const schemaGraph = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'WebPage',
-      '@id': 'https://sankofafamilymedicine.com/#webpage',
-      url: 'https://sankofafamilymedicine.com',
-      name: 'Sankofa Family Medicine | Membership-Based Primary Care | Washington State',
-      description:
-        'Membership-based primary care for Washington State via telehealth. ABFM board-certified family physician. Longer visits, direct messaging (after enrollment), and care that remembers. Medicine That Remembers™.',
-      dateModified: '2026-01-28',
-      inLanguage: 'en-US',
-      isPartOf: { '@id': 'https://sankofafamilymedicine.com/#website' },
-      about: { '@id': 'https://sankofafamilymedicine.com/#organization' },
-      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable]', 'h1', 'h2'] },
-      breadcrumb: {
-        '@type': 'BreadcrumbList',
-        itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sankofafamilymedicine.com' }],
-      },
-    },
-    {
-      '@type': 'WebSite',
-      '@id': 'https://sankofafamilymedicine.com/#website',
-      url: 'https://sankofafamilymedicine.com',
-      name: 'Sankofa Family Medicine',
-      description: 'Membership-based primary care for Washington State. Medicine That Remembers™.',
-      publisher: { '@id': 'https://sankofafamilymedicine.com/#organization' },
-    },
-    {
-      '@type': ['MedicalBusiness', 'MedicalClinic'],
-      '@id': 'https://sankofafamilymedicine.com/#organization',
-      name: 'Sankofa Family Medicine',
-      legalName: 'Sankofa Family Medicine PLLC',
-      url: 'https://sankofafamilymedicine.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
-        width: 512,
-        height: 512,
-      },
-      description:
-        'Membership-based primary care practice for Washington State patients via telehealth. Medicine That Remembers™.',
-      slogan: 'Medicine That Remembers™',
-      medicalSpecialty: ['Family Medicine', 'Primary Care'],
-      priceRange: '$225-$725/month',
-      currenciesAccepted: 'USD',
-      paymentAccepted: 'Credit Card, ACH, HSA, FSA',
-      areaServed: { '@type': 'State', name: 'Washington', addressCountry: 'US' },
-      founder: { '@id': 'https://sankofafamilymedicine.com/#founder' },
-      foundingDate: '2025',
-      availableChannel: {
-        '@type': 'ServiceChannel',
-        serviceType: 'Telemedicine',
-        availableLanguage: ['English'],
-      },
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Membership Plans',
-        url: 'https://sankofafamilymedicine.com/services',
-        itemListElement: [
-          {
-            '@type': 'Offer',
-            name: 'Continuity',
-            category: 'Membership-Based Primary Care',
-            priceCurrency: 'USD',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Continuity Membership',
-              serviceType: 'Primary Care',
-            },
-            priceSpecification: {
-              '@type': 'AggregateOffer',
-              priceCurrency: 'USD',
-              lowPrice: '225',
-              highPrice: '275',
-              offerCount: '2',
-            },
-          },
-          {
-            '@type': 'Offer',
-            name: 'Precision',
-            category: 'Membership-Based Primary Care',
-            priceCurrency: 'USD',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Precision Membership',
-              serviceType: 'Primary Care',
-            },
-            priceSpecification: {
-              '@type': 'AggregateOffer',
-              priceCurrency: 'USD',
-              lowPrice: '325',
-              highPrice: '375',
-              offerCount: '2',
-            },
-          },
-          {
-            '@type': 'Offer',
-            name: 'Executive',
-            category: 'Membership-Based Primary Care',
-            priceCurrency: 'USD',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Executive Membership',
-              serviceType: 'Primary Care',
-            },
-            priceSpecification: {
-              '@type': 'AggregateOffer',
-              priceCurrency: 'USD',
-              lowPrice: '650',
-              highPrice: '725',
-              offerCount: '2',
-            },
-          },
-        ],
-      },
-      contactPoint: [
-        {
-          '@type': 'ContactPoint',
-          contactType: 'new patient inquiries',
-          url: 'https://sankofafamilymedicine.com/founders-waitlist',
-          availableLanguage: ['English'],
-        },
-      ],
-      sameAs: [EXTERNAL_URLS.linkedinCompany],
-    },
-    {
-      '@type': ['Person', 'Physician'],
-      '@id': 'https://sankofafamilymedicine.com/#founder',
-      name: 'Dr. Yaw Nkrumah, MD',
-      jobTitle: 'Founder & Medical Director',
-      url: 'https://sankofafamilymedicine.com/founder',
-      image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
-      medicalSpecialty: 'Family Medicine',
-      hasCredential: {
-        '@type': 'EducationalOccupationalCredential',
-        name: 'Board Certification in Family Medicine',
-        credentialCategory: 'Board Certification',
-        recognizedBy: { '@type': 'Organization', name: 'American Board of Family Medicine', alternateName: 'ABFM' },
-        url: EXTERNAL_URLS.abfmCredential,
-      },
-      worksFor: { '@id': 'https://sankofafamilymedicine.com/#organization' },
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is Direct Primary Care?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Direct Primary Care (DPC) is a membership-based model where patients pay a monthly fee directly to their physician for primary care services.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much does membership cost?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Membership plans range from $225-$275/month (Continuity), $325-$375/month (Precision), and $650-$725/month (Executive). Founding members receive the lower end of each range. Your exact rate is confirmed before enrollment.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Sankofa Family Medicine accepting new patients?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sankofa Family Medicine is currently accepting Founders Waitlist sign-ups. Clinical care is planned to begin in early 2026.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What states does Sankofa Family Medicine serve?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sankofa Family Medicine serves patients located in Washington State only via telehealth.',
-          },
-        },
-      ],
-    },
-  ],
 }
 
 export default function HomePageClient() {
@@ -228,13 +44,6 @@ export default function HomePageClient() {
 
   return (
     <>
-      <Script
-        id="ld-json-home"
-        type="application/ld+json"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
-      />
-
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-sfm-gold focus:text-sfm-navy focus:rounded-lg focus:font-medium"
@@ -437,7 +246,7 @@ export default function HomePageClient() {
                       <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-sfm-navy/40 via-transparent to-transparent" />
                       <Image
                         src="/images/sankofa-wooden-sculpture.png"
-                        alt="Traditional wooden Sankofa bird sculpture symbolizing Medicine That Remembers™"
+                        alt="Traditional wooden Sankofa bird sculpture symbolizing Medicine That Remembers"
                         fill
                         priority
                         className="object-cover object-center transition-transform duration-700 hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
