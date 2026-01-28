@@ -47,19 +47,61 @@ export const metadata: Metadata = {
         height: 630,
         alt: 'Sankofa Family Medicine: Virtual Membership-Based Primary Care in Washington State',
       },
+    ],import type { Metadata } from 'next'
+import Script from 'next/script'
+import HomePage from './home-page-client'
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://sankofafamilymedicine.com'),
+  title: 'Sankofa Family Medicine | Medicine That Remembers™ | Virtual Membership-Based Primary Care | Washington State',
+  description:
+    'Virtual, membership-based primary care built on continuity, not throughput. We track your history and carry it forward so each visit builds on the last. Serving Washington State. Founders Waitlist open. Memberships expected from $225/month when enrollment begins.',
+  keywords: [
+    'membership-based primary care Washington',
+    'direct primary care Washington',
+    'DPC Washington State',
+    'DPC Seattle',
+    'DPC Bellevue',
+    'DPC Spokane',
+    'virtual primary care Washington',
+    'Medicine That Remembers',
+    'continuity of care',
+    'Dr. Yaw Nkrumah',
+    'telehealth primary care Washington',
+    'primary care membership',
+    'virtual doctor Washington State',
+    'family medicine Washington',
+    'longitudinal care',
+    'physician-led primary care',
+  ],
+  authors: [{ name: 'Dr. Yaw Nkrumah, MD', url: 'https://sankofafamilymedicine.com/founder' }],
+  creator: 'Sankofa Family Medicine',
+  publisher: 'Sankofa Family Medicine',
+  openGraph: {
+    title: 'Sankofa Family Medicine | Medicine That Remembers™',
+    description:
+      'Virtual, membership-based primary care built on continuity, not throughput. Founders Waitlist open for Washington State.',
+    url: 'https://sankofafamilymedicine.com',
+    siteName: 'Sankofa Family Medicine',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: 'https://sankofafamilymedicine.com/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Sankofa Family Medicine: Virtual Membership-Based Primary Care in Washington State',
+      },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Sankofa Family Medicine | Medicine That Remembers™',
-    description:
-      'Virtual, membership-based primary care built on continuity, not throughput. Serving Washington State.',
+    description: 'Virtual, membership-based primary care serving Washington State. Founders Waitlist open.',
     images: ['https://sankofafamilymedicine.com/images/og-image.png'],
     creator: '@sankofafamilymed',
   },
-  alternates: {
-    canonical: 'https://sankofafamilymedicine.com',
-  },
+  alternates: { canonical: 'https://sankofafamilymedicine.com' },
   robots: {
     index: true,
     follow: true,
@@ -72,221 +114,260 @@ export const metadata: Metadata = {
     },
   },
   other: {
-    // Content Declaration
     'ai-content-declaration': 'human-authored',
     'content-type': 'Homepage',
-    'content-purpose': 'Practice introduction, membership information, patient enrollment',
+    'content-purpose': 'Practice introduction, membership information, founders waitlist',
     'page-category': 'Healthcare Services',
-
-    // Medical Practice Info
     'medical-specialty': 'Primary Care, Family Medicine, Preventive Medicine',
     'practice-model': 'Direct Primary Care, Membership-Based Primary Care',
     'service-area': 'Washington State, USA',
     'geo-region': 'US-WA',
     'geo-placename': 'Washington State',
-    'service-cities': 'Seattle, Bellevue, Redmond, Kirkland, Tacoma, Spokane, Vancouver, Olympia, Tri-Cities, Richland, Kennewick, Pasco',
-    'accepting-patients': 'true',
+    'service-cities':
+      'Seattle, Bellevue, Redmond, Kirkland, Tacoma, Spokane, Vancouver, Olympia, Tri-Cities, Richland, Kennewick, Pasco',
+    'accepting-patients': 'founders-waitlist',
     'price-range': '$225-$725/month',
-
-    // Entity Signals
-    'entity-organization': 'Sankofa Family Medicine',
-    'entity-person': 'Dr. Yaw Nkrumah, MD',
-    'entity-concept': 'Medicine That Remembers, Continuity of Care, Direct Primary Care, Membership-Based Primary Care',
-    'entity-location': 'Washington State, Pacific Northwest, Seattle Metro',
-
-    // Topic Signals
-    'topic-primary': 'Membership-Based Primary Care, Virtual Primary Care',
-    'topic-secondary': 'Healthcare Continuity, Physician-Patient Relationship, Direct Primary Care',
-    'topic-tertiary': 'Preventive Care, Family Medicine, Longitudinal Care',
-
-    // Patient Portal Information
     'patient-enrollment-url': 'https://sankofafamilymedicine.com/founders-waitlist',
-    'enrollment-method': 'Online patient portal',
-    'appointment-booking': 'Through patient portal',
-
-    // Content Freshness
-    'article-modified-time': '2026-01-27',
-    'content-modified': '2026-01-27',
-
-    // Enhanced LLM Context (2026)
+    'enrollment-method': 'Online waitlist form',
+    'appointment-booking': 'Through patient portal after enrollment begins',
+    'content-modified': '2026-01-28',
     'llm-summary':
-      'Homepage for Sankofa Family Medicine, a virtual, membership-based primary care practice in Washington State delivered through a Direct Primary Care (DPC) model. Care is delivered through a secure patient portal. Three membership tiers: Continuity ($225-$275/mo), Precision ($325-$375/mo), Executive ($650-$725/mo). Founding members receive the lower end of each range. Your exact rate is confirmed before enrollment. Founded by Dr. Yaw Nkrumah, MD, board-certified family physician. Clinical care begins February 2026.',
-    'llm-key-facts':
-      'Virtual Membership-Based Primary Care | Direct Primary Care Model | Washington State | $225-$725/month | Dr. Yaw Nkrumah MD | MUSC Graduate | Board Certified Family Medicine | Secure Patient Portal | Sankofa means go back and retrieve | Medicine That Remembers™ | 45-75 minute visits | Fewer than 200 patients per physician',
-
-    // Voice Search Optimization
-    'voice-query-match':
-      'What is Sankofa Family Medicine, How much does Sankofa Family Medicine cost, Is Sankofa Family Medicine accepting new patients, What is membership-based primary care, Virtual doctor in Washington State, DPC near me',
+      'Homepage for Sankofa Family Medicine, a virtual, membership-based primary care practice serving Washington State through a Direct Primary Care (DPC) model. Founders Waitlist open. Enrollment planned to begin February 2026. Three membership tiers: Continuity ($225-$275/mo), Precision ($325-$375/mo), Executive ($650-$725/mo). Founding members receive the lower end of each range. Rate confirmed before enrollment.',
     'voice-search-answer':
-      'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State. Memberships start at $225 per month. Clinical care begins February 2026. To join the founders waitlist, visit their website and click Join the Founders Waitlist. No payment today.',
-    'speakable-summary':
-      'Sankofa Family Medicine offers virtual, membership-based primary care across Washington State with membership plans from $225 to $725 monthly. Care is delivered through a Direct Primary Care model by Dr. Yaw Nkrumah, a board-certified family physician.',
-
-    // Featured Snippet Answers
-    'snippet-what': 'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State, delivered through a Direct Primary Care (DPC) model',
-    'snippet-who': 'Founded by Dr. Yaw Nkrumah, MD, Board Certified Family Medicine, graduate of Medical University of South Carolina',
-    'snippet-cost': 'Membership plans: Continuity $225-$275/month, Precision $325-$375/month, Executive $650-$725/month. Founding members receive the lower rate. Your exact rate is confirmed before enrollment begins in February 2026.',
-    'snippet-how': 'Join the founders waitlist through the website. No payment today. Enrollment begins February 2026 through the secure patient portal.',
-    'snippet-target': 'definition, list, pricing',
-    'answer-box-eligible': 'true',
+      'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State. The Founders Waitlist is open. Enrollment is planned to begin in February 2026. No payment is required to join the waitlist.',
   },
 }
 
-// =============================================================================
-// STRUCTURED DATA - Terminology Guide Compliant
-// Tier names: Continuity, Precision, Executive (no "Concierge" suffix)
-// =============================================================================
+const EXTERNAL_URLS = {
+  abfmCredential: 'https://www.credential.net/169707940',
+  linkedinCompany: 'https://www.linkedin.com/company/sankofa-family-medicine/',
+}
 
-const structuredData = {
+const schemaGraph = {
   '@context': 'https://schema.org',
-  '@type': 'MedicalBusiness',
-  '@id': 'https://sankofafamilymedicine.com/#organization',
-  name: 'Sankofa Family Medicine',
-  legalName: 'Sankofa Family Medicine PLLC',
-  alternateName: ['SFM', 'Medicine That Remembers'],
-  description:
-    'Virtual, membership-based primary care practice delivered through a Direct Primary Care (DPC) model, emphasizing continuity, longitudinal care, and physician-led decision-making.',
-  url: 'https://sankofafamilymedicine.com',
-  telephone: '+1-425-285-7390',
-  email: 'info@sankofafamilymedicine.com',
-  logo: {
-    '@type': 'ImageObject',
-    url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
-    width: 512,
-    height: 512,
-  },
-  image: 'https://sankofafamilymedicine.com/images/og-image.png',
-  areaServed: {
-    '@type': 'State',
-    name: 'Washington',
-    addressCountry: 'US',
-  },
-  priceRange: '$225-$725/month',
-  currenciesAccepted: 'USD',
-  paymentAccepted: 'Credit Card, HSA, FSA, ACH, Apple Pay, Google Pay',
-  medicalSpecialty: ['PrimaryCare', 'FamilyMedicine'],
-  isAcceptingNewPatients: true,
-  availableService: [
+  '@graph': [
+    // WebSite
     {
-      '@type': 'MedicalProcedure',
-      name: 'Virtual Primary Care',
-      procedureType: 'Telemedicine',
-      description: 'Comprehensive primary care delivered via secure video visits, 45-75 minutes',
+      '@type': 'WebSite',
+      '@id': 'https://sankofafamilymedicine.com/#website',
+      url: 'https://sankofafamilymedicine.com',
+      name: 'Sankofa Family Medicine',
+      description: 'Virtual, membership-based primary care delivered through a Direct Primary Care model',
+      publisher: { '@id': 'https://sankofafamilymedicine.com/#organization' },
+      inLanguage: 'en-US',
     },
+
+    // WebPage
     {
-      '@type': 'MedicalProcedure',
-      name: 'Chronic Disease Management',
-      description: 'Longitudinal management of chronic conditions with continuity of care',
+      '@type': 'WebPage',
+      '@id': 'https://sankofafamilymedicine.com/#webpage',
+      url: 'https://sankofafamilymedicine.com',
+      name: 'Sankofa Family Medicine | Membership-Based Primary Care | Washington State',
+      description:
+        'Virtual, membership-based primary care built on continuity, not throughput. Founders Waitlist open for Washington State.',
+      isPartOf: { '@id': 'https://sankofafamilymedicine.com/#website' },
+      about: { '@id': 'https://sankofafamilymedicine.com/#organization' },
+      inLanguage: 'en-US',
+      dateModified: '2026-01-28',
+      breadcrumb: {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sankofafamilymedicine.com' },
+        ],
+      },
     },
+
+    // Organization / Clinic
     {
-      '@type': 'MedicalProcedure',
-      name: 'Preventive Care',
-      description: 'Evidence-based preventive care and health maintenance',
+      '@type': ['MedicalBusiness', 'MedicalClinic'],
+      '@id': 'https://sankofafamilymedicine.com/#organization',
+      name: 'Sankofa Family Medicine',
+      legalName: 'Sankofa Family Medicine PLLC',
+      alternateName: ['SFM', 'Medicine That Remembers'],
+      url: 'https://sankofafamilymedicine.com',
+      description:
+        'Virtual, membership-based primary care practice delivered through a Direct Primary Care (DPC) model, emphasizing continuity, longitudinal care, and physician-led decision-making.',
+      slogan: 'Medicine That Remembers™',
+      telephone: '+1-425-285-7390',
+      email: 'info@sankofafamilymedicine.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
+        width: 512,
+        height: 512,
+      },
+      image: 'https://sankofafamilymedicine.com/images/og-image.png',
+      areaServed: { '@type': 'State', name: 'Washington', addressCountry: 'US' },
+      medicalSpecialty: ['Primary care', 'Family medicine'],
+      currenciesAccepted: 'USD',
+      paymentAccepted: 'Credit Card, ACH, HSA, FSA',
+      priceRange: '$225-$725/month',
+
+      // Waitlist open - not active clinical intake yet
+      isAcceptingNewPatients: false,
+
+      availableChannel: {
+        '@type': 'ServiceChannel',
+        serviceType: 'Telemedicine',
+        availableLanguage: ['English'],
+      },
+
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'new patient inquiries',
+          url: 'https://sankofafamilymedicine.com/founders-waitlist',
+          availableLanguage: ['English'],
+        },
+      ],
+
+      availableService: [
+        {
+          '@type': 'MedicalService',
+          name: 'Virtual Primary Care',
+          serviceType: 'Telemedicine',
+          description: 'Primary care delivered via secure video visits (planned visit length 45-75 minutes).',
+        },
+        {
+          '@type': 'MedicalService',
+          name: 'Chronic Disease Management',
+          description: 'Longitudinal management of chronic conditions with continuity of care.',
+        },
+        {
+          '@type': 'MedicalService',
+          name: 'Preventive Care',
+          description: 'Evidence-based preventive care and health maintenance.',
+        },
+      ],
+
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Membership Plans',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            name: 'Continuity',
+            description: 'Essential virtual primary care with continuity and access (DPC model).',
+            priceCurrency: 'USD',
+            priceSpecification: {
+              '@type': 'AggregateOffer',
+              priceCurrency: 'USD',
+              lowPrice: '225',
+              highPrice: '275',
+            },
+          },
+          {
+            '@type': 'Offer',
+            name: 'Precision',
+            description: 'Deeper preventive insight and advanced diagnostics when appropriate (DPC model).',
+            priceCurrency: 'USD',
+            priceSpecification: {
+              '@type': 'AggregateOffer',
+              priceCurrency: 'USD',
+              lowPrice: '325',
+              highPrice: '375',
+            },
+          },
+          {
+            '@type': 'Offer',
+            name: 'Executive',
+            description: 'Enhanced access, coordination, and longitudinal oversight (DPC model).',
+            priceCurrency: 'USD',
+            priceSpecification: {
+              '@type': 'AggregateOffer',
+              priceCurrency: 'USD',
+              lowPrice: '650',
+              highPrice: '725',
+            },
+          },
+        ],
+      },
+
+      potentialAction: {
+        '@type': 'RegisterAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://sankofafamilymedicine.com/founders-waitlist',
+          actionPlatform: ['http://schema.org/DesktopWebPlatform', 'http://schema.org/MobileWebPlatform'],
+        },
+        result: { '@type': 'Thing', name: 'Founders Waitlist Sign-Up' },
+      },
+
+      foundingDate: '2025',
+      founder: { '@id': 'https://sankofafamilymedicine.com/#founder' },
+      sameAs: [EXTERNAL_URLS.linkedinCompany],
+    },
+
+    // Founder (keep claims tight + verifiable)
+    {
+      '@type': ['Person', 'Physician'],
+      '@id': 'https://sankofafamilymedicine.com/#founder',
+      name: 'Dr. Yaw Nkrumah, MD',
+      jobTitle: 'Founder & Medical Director',
+      url: 'https://sankofafamilymedicine.com/founder',
+      medicalSpecialty: 'Family medicine',
+      worksFor: { '@id': 'https://sankofafamilymedicine.com/#organization' },
+      hasCredential: {
+        '@type': 'EducationalOccupationalCredential',
+        name: 'Board Certification in Family Medicine',
+        credentialCategory: 'Board Certification',
+        recognizedBy: { '@type': 'Organization', name: 'American Board of Family Medicine', alternateName: 'ABFM' },
+        url: EXTERNAL_URLS.abfmCredential,
+      },
+    },
+
+    // FAQPage (safe, factual, no outcomes)
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://sankofafamilymedicine.com/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is Direct Primary Care?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Direct Primary Care (DPC) is a membership-based model where patients pay a monthly fee directly to their physician for primary care services, without insurance billing for the membership.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How much does membership cost?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Planned membership ranges are $225-$275/month (Continuity), $325-$375/month (Precision), and $650-$725/month (Executive). Founding members receive the lower end of each range. Your exact rate is confirmed before enrollment.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is Sankofa Family Medicine accepting new patients?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sankofa Family Medicine is currently accepting Founders Waitlist sign-ups. Enrollment is planned to begin in February 2026.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What states does Sankofa Family Medicine serve?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sankofa Family Medicine serves patients located in Washington State only via telehealth.',
+          },
+        },
+      ],
     },
   ],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Membership Plans',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        name: 'Continuity',
-        description: 'Essential virtual primary care with continuity and access. Membership-Based Primary Care (DPC model).',
-        price: '225-275',
-        priceCurrency: 'USD',
-        priceSpecification: {
-          '@type': 'UnitPriceSpecification',
-          price: '225-275',
-          priceCurrency: 'USD',
-          unitText: 'month',
-        },
-      },
-      {
-        '@type': 'Offer',
-        name: 'Precision',
-        description: 'Data-driven personalized medicine with genetic insights and advanced diagnostics. Membership-Based Primary Care (DPC model).',
-        price: '325-375',
-        priceCurrency: 'USD',
-        priceSpecification: {
-          '@type': 'UnitPriceSpecification',
-          price: '325-375',
-          priceCurrency: 'USD',
-          unitText: 'month',
-        },
-      },
-      {
-        '@type': 'Offer',
-        name: 'Executive',
-        description: 'Enhanced access, coordination, and longitudinal oversight for individuals and families. Membership-Based Primary Care (DPC model).',
-        price: '650-725',
-        priceCurrency: 'USD',
-        priceSpecification: {
-          '@type': 'UnitPriceSpecification',
-          price: '650-725',
-          priceCurrency: 'USD',
-          unitText: 'month',
-        },
-      },
-    ],
-  },
-  potentialAction: {
-    '@type': 'ReserveAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://sankofafamilymedicine.com/founders-waitlist',
-      actionPlatform: ['http://schema.org/DesktopWebPlatform', 'http://schema.org/MobileWebPlatform'],
-    },
-    result: {
-      '@type': 'Reservation',
-      name: 'Founding Member Reservation',
-    },
-  },
-  founder: {
-    '@type': 'Physician',
-    '@id': 'https://sankofafamilymedicine.com/#founder',
-    name: 'Dr. Yaw Nkrumah',
-    givenName: 'Yaw',
-    familyName: 'Nkrumah',
-    honorificPrefix: 'Dr.',
-    honorificSuffix: 'MD',
-    jobTitle: 'Founder and Primary Care Physician',
-    medicalSpecialty: 'FamilyMedicine',
-    alumniOf: {
-      '@type': 'CollegeOrUniversity',
-      name: 'Medical University of South Carolina',
-    },
-    url: 'https://sankofafamilymedicine.com/founder',
-  },
-  slogan: 'Medicine That Remembers™',
-  foundingDate: '2024',
-}
-
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  '@id': 'https://sankofafamilymedicine.com/#website',
-  url: 'https://sankofafamilymedicine.com',
-  name: 'Sankofa Family Medicine',
-  description: 'Virtual, membership-based primary care delivered through a Direct Primary Care model',
-  publisher: {
-    '@type': 'MedicalOrganization',
-    '@id': 'https://sankofafamilymedicine.com/#organization',
-  },
 }
 
 export default function Page() {
   return (
     <>
-      <script
+      <Script
+        id="ld-json-graph"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
       />
       <HomePage />
     </>
   )
 }
-
