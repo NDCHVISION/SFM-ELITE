@@ -158,14 +158,14 @@ export default function PartnershipsPage() {
               {
                 icon: Building2,
                 title: 'Employers',
-                description: 'Offer your team access to premium virtual primary care with meaningful physician relationships, reducing healthcare costs while improving employee health outcomes.',
+                description: 'Offer your team access to premium virtual primary care with meaningful doctor relationships, reducing healthcare costs while improving employee health outcomes.',
                 benefits: ['Reduced absenteeism', 'Lower healthcare spend', 'Happier, healthier teams'],
                 status: 'Accepting Inquiries',
               },
               {
                 icon: Stethoscope,
                 title: 'Health Systems',
-                description: 'Collaborate on innovative care models that prioritize continuity, patient outcomes, and physician satisfaction in the evolving healthcare landscape.',
+                description: 'Collaborate on innovative care models that prioritize continuity, patient outcomes, and doctor satisfaction in the evolving healthcare landscape.',
                 benefits: ['Extended care reach', 'Patient retention', 'Quality metrics improvement'],
                 status: 'Accepting Inquiries',
               },
@@ -230,7 +230,7 @@ export default function PartnershipsPage() {
               {
                 icon: Shield,
                 title: 'Clinical Excellence',
-                description: 'Board-certified physician leadership with evidence-based protocols and continuous quality improvement.',
+                description: 'Board-certified doctor leadership with evidence-based protocols and continuous quality improvement.',
               },
               {
                 icon: Brain,

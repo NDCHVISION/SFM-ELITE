@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Sankofa OS | Clinical Infrastructure for Medicine That Remembers',
-    description: 'The clinical infrastructure powering continuity-based primary care. Built for trust, designed for physicians, powered by human judgment.',
+    description: 'The clinical infrastructure powering continuity-based primary care. Built for trust, designed for doctors, powered by human judgment.',
     url: 'https://sankofafamilymedicine.com/sankofa-os',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',

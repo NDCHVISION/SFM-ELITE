@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: 'Sankofa Family Medicine | Medicine That Remembers',
     template: '%s | Sankofa Family Medicine',
   },
-  description: 'Virtual-first concierge medicine built on continuity, relationship, and the physician-patient bond. Serving Washington State.',
+  description: 'Virtual-first concierge medicine built on continuity, relationship, and the doctor-patient bond. Serving Washington State.',
   keywords: [
     'concierge medicine Washington',
     'virtual primary care',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     url: 'https://sankofafamilymedicine.com',
     siteName: 'Sankofa Family Medicine',
     title: 'Sankofa Family Medicine | Medicine That Remembers',
-    description: 'Virtual-first concierge medicine built on continuity, relationship, and the physician-patient bond.',
+    description: 'Virtual-first concierge medicine built on continuity, relationship, and the doctor-patient bond.',
     images: [
       {
         url: '/images/og-image.png',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Sankofa Family Medicine | Medicine That Remembers',
-    description: 'Virtual-first concierge medicine built on continuity, relationship, and the physician-patient bond.',
+    description: 'Virtual-first concierge medicine built on continuity, relationship, and the doctor-patient bond.',
     images: ['/images/og-image.png'],
   },
   robots: {

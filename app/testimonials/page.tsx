@@ -73,7 +73,7 @@ export default function TestimonialsPage() {
               {
                 icon: Heart,
                 title: 'Continuity',
-                description: 'One physician who knows your complete history, not fragments scattered across systems.',
+                description: 'One doctor who knows your complete history, not fragments scattered across systems.',
               },
               {
                 icon: Clock,
@@ -83,7 +83,7 @@ export default function TestimonialsPage() {
               {
                 icon: Users,
                 title: 'True Partnership',
-                description: 'A physician who remembers your last conversation and follows through.',
+                description: 'A doctor who remembers your last conversation and follows through.',
               },
             ].map((item) => (
               <div key={item.title} className="text-center p-6">

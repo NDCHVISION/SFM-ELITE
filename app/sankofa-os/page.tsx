@@ -236,7 +236,7 @@ export default function SankofaOSPage() {
                 <h3 className="font-display text-2xl text-white mb-6">Why Nexus Health?</h3>
                 
                 <p className="text-white/70 text-lg leading-relaxed mb-6">
-                  Nexus Health was selected for its focus on HIPAA-aligned decision support, physician-led workflows, and precision tools that respect clinical autonomy. BioMatrix<span className="tm">™</span> complements our mission without replacing it.
+                  Nexus Health was selected for its focus on HIPAA-aligned decision support, doctor-led workflows, and precision tools that respect clinical autonomy. BioMatrix<span className="tm">™</span> complements our mission without replacing it.
                 </p>
                 
                 <p className="text-white/70 text-lg font-semibold mb-4">Our partnership criteria required:</p>
@@ -311,7 +311,7 @@ export default function SankofaOSPage() {
               <div className="bg-white/[0.05] border border-sfm-gold/20 rounded-lg p-8">
                 <h3 className="font-display text-2xl text-white mb-4">A Living System, Powered by Partnership</h3>
                 <p className="text-white/70 text-lg leading-relaxed">
-                  Sankofa OS<span className="tm">™</span> is a living clinical framework. While BioMatrix<span className="tm">™</span> strengthens today&apos;s decisions, our team continues developing proprietary physician tools and ethical layers to protect continuity, trust, and equity at scale.
+                  Sankofa OS<span className="tm">™</span> is a living clinical framework. While BioMatrix<span className="tm">™</span> strengthens today&apos;s decisions, our team continues developing proprietary doctor tools and ethical layers to protect continuity, trust, and equity at scale.
                 </p>
               </div>
             </div>
@@ -419,7 +419,7 @@ export default function SankofaOSPage() {
                   variant="default"
                   recommended={true}
                   features={[
-                    { label: 'Same physician every visit', included: true },
+                    { label: 'Same doctor every visit', included: true },
                     { label: 'Labs tracked across years', included: true },
                     { label: 'Direct messaging with doctor', included: true },
                     { label: 'Unhurried 30-60 min visits', included: true },
@@ -435,7 +435,7 @@ export default function SankofaOSPage() {
                   description="Traditional primary care under strain"
                   variant="warning"
                   features={[
-                    { label: 'Same physician every visit', included: false },
+                    { label: 'Same doctor every visit', included: false },
                     { label: 'Labs tracked across years', included: false },
                     { label: 'Direct messaging with doctor', included: false },
                     { label: 'Unhurried 30-60 min visits', included: false },
@@ -451,7 +451,7 @@ export default function SankofaOSPage() {
                   description="Retail clinics and urgent care"
                   variant="danger"
                   features={[
-                    { label: 'Same physician every visit', included: false },
+                    { label: 'Same doctor every visit', included: false },
                     { label: 'Labs tracked across years', included: false },
                     { label: 'Direct messaging with doctor', included: false },
                     { label: 'Unhurried 30-60 min visits', included: false },
@@ -524,12 +524,12 @@ export default function SankofaOSPage() {
                 <div className="space-y-4 text-white/60 leading-relaxed mb-8">
                   <p>
                     Sankofa Family Medicine is built for patients who value continuity over convenience, 
-                    who want a physician who knows their story, and who are comfortable with a membership fee 
+                    who want a doctor who knows their story, and who are comfortable with a membership fee 
                     that makes this level of care sustainable.
                   </p>
                   <p>
                     If you are looking for the lowest cost option, or prefer the anonymity of a different 
-                    provider each visit, we are not the right fit. If you want a physician who remembers 
+                    doctor each visit, we are not the right fit. If you want a doctor who remembers 
                     your last conversation and tracks your health across years, we might be.
                   </p>
                 </div>
@@ -540,7 +540,7 @@ export default function SankofaOSPage() {
                     <ul className="space-y-2 text-white/70 text-sm">
                       <li className="flex items-start gap-2">
                         <Check className="w-4 h-4 text-sfm-gold flex-shrink-0 mt-0.5" />
-                        <span>You value a long-term relationship with your physician</span>
+                        <span>You value a long-term relationship with your doctor</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <Check className="w-4 h-4 text-sfm-gold flex-shrink-0 mt-0.5" />
