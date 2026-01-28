@@ -76,7 +76,7 @@ export default function Footer() {
             </Link>
             
             <p className="text-white/50 text-base leading-relaxed max-w-md mb-10">
-              Premium virtual primary care built on memory, dignity, and the physician-patient relationship. 
+              Premium virtual primary care built on memory, dignity, and the doctor-patient relationship. 
               Serving Washington State. South Carolina coming 2026.
             </p>
 

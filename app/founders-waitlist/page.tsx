@@ -139,7 +139,7 @@ export default function FoundersWaitlistPage() {
             </p>
 
             <p className="text-sm text-sfm-navy/50 max-w-3xl mx-auto mt-4">
-              Submitting this form places you on our Founders Waitlist only. It does not enroll you as a patient, create a physician-patient relationship, or provide medical advice. Services are available only to individuals located in Washington State.
+              Submitting this form places you on our Founders Waitlist only. It does not enroll you as a patient, create a doctor-patient relationship, or provide medical advice. Services are available only to individuals located in Washington State.
             </p>
           </div>
 
@@ -292,7 +292,7 @@ export default function FoundersWaitlistPage() {
                     className="mt-1 w-5 h-5 rounded border-sfm-cream-dark text-sfm-gold focus:ring-sfm-gold/20 cursor-pointer"
                   />
                   <span className="text-sm text-sfm-text-muted">
-                    I understand this is a waitlist only and does not enroll me as a patient, create a physician-patient relationship, or provide medical advice. Services are available only to individuals located in Washington State. <span className="text-sfm-gold">*</span>
+                    I understand this is a waitlist only and does not enroll me as a patient, create a doctor-patient relationship, or provide medical advice. Services are available only to individuals located in Washington State. <span className="text-sfm-gold">*</span>
                   </span>
                 </label>
               </div>

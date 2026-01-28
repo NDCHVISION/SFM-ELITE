@@ -34,7 +34,7 @@ const articleSchema = {
   author: {
     '@type': 'Person',
     name: 'Dr. Yaw Nkrumah',
-    jobTitle: 'Board Certified Family Physician',
+    jobTitle: 'Board Certified Family Doctor',
     url: 'https://sankofafamilymedicine.com/founder',
   },
   publisher: {
@@ -280,7 +280,7 @@ export default function BlogPost() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           {/* Removed duplicate 'Medicine That Remembers' heading, keep only one per page */}
           <p className="text-muted mb-8 max-w-2xl mx-auto">
-            Experience the difference of continuity-based care with a physician who tracks your health over time.
+            Experience the difference of continuity-based care with a doctor who tracks your health over time.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link 

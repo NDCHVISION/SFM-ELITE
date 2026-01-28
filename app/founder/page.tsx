@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Dr. Yaw Nkrumah, MD' }],
   keywords: [
     'Dr. Yaw Nkrumah',
-    'family physician Washington',
+    'family doctor Washington',
     'Sankofa Family Medicine',
     'membership-based primary care',
     'direct primary care Washington',
@@ -75,7 +75,7 @@ const schemaGraph = {
       '@id': 'https://sankofafamilymedicine.com/founder#webpage',
       url: 'https://sankofafamilymedicine.com/founder',
       name: 'Dr. Yaw Nkrumah, MD | Founder | Sankofa Family Medicine',
-      description: 'Founder profile for Dr. Yaw Nkrumah, MD, board-certified family physician.',
+      description: 'Founder profile for Dr. Yaw Nkrumah, MD, board-certified family doctor.',
       inLanguage: 'en-US',
       primaryImageOfPage: {
         '@type': 'ImageObject',
@@ -94,7 +94,7 @@ const schemaGraph = {
       honorificPrefix: 'Dr.',
       honorificSuffix: 'MD',
       jobTitle: 'Founder & Medical Director',
-      disambiguatingDescription: 'Board-certified family physician and founder of Sankofa Family Medicine PLLC (Washington).',
+      disambiguatingDescription: 'Board-certified family doctor and founder of Sankofa Family Medicine PLLC (Washington).',
       description: 'Dr. Yaw Nkrumah, MD is the founder of Sankofa Family Medicine, a membership-based primary care practice available to Washington State patients via telehealth. The practice emphasizes continuity, clinical judgment, and relationship-based care.',
       image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
       url: 'https://sankofafamilymedicine.com/founder',
@@ -222,7 +222,7 @@ export default function FounderPage() {
           <p className="text-sfm-gold text-sm tracking-[0.25em] uppercase mb-4 font-medium">Founder & Medical Director</p>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-[1.1]">Meet Yaw Nkrumah, M.D.</h1>
           <p className="text-white/70 text-lg md:text-xl max-w-xl mx-auto mb-8">
-            Board-certified family physician and founder of Sankofa Family Medicine. Continuity-driven primary care available to Washington State patients via telehealth.
+            Board-certified family doctor and founder of Sankofa Family Medicine. Continuity-driven primary care available to Washington State patients via telehealth.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link 
@@ -248,7 +248,7 @@ export default function FounderPage() {
             ABFM Board Certified · Washington State Licensed · MUSC Graduate
           </p>
           <p className="text-white/30 text-xs mt-3">
-            Waitlist submission does not create a physician-patient relationship.
+            Waitlist submission does not create a doctor-patient relationship.
           </p>
         </div>
       </section>
@@ -298,7 +298,7 @@ export default function FounderPage() {
             {/* Biography Text */}
             <div className="space-y-6 text-muted leading-relaxed order-1 lg:order-2">
               <p>
-                Dr. Yaw Nkrumah is a board-certified family physician and founder of Sankofa Family Medicine. His work centers on restoring the physician-patient relationship through continuity, clarity, and systems that preserve memory.
+                Dr. Yaw Nkrumah is a board-certified family doctor and founder of Sankofa Family Medicine. His work centers on restoring the doctor-patient relationship through continuity, clarity, and systems that preserve memory.
               </p>
               
               <p>
@@ -478,7 +478,7 @@ export default function FounderPage() {
               Sankofa Family Medicine is a membership-based primary care practice (Direct Primary Care model). Membership is not insurance, and we do not bill insurance for primary care services included in membership.
             </p>
             <p>
-              At Sankofa Family Medicine, physicians have time to think, explain, and follow through.
+              At Sankofa Family Medicine, doctors have time to think, explain, and follow through.
             </p>
             <p className="text-sfm-navy font-medium text-lg">
               This is the kind of practice I would trust with my own family.
@@ -502,7 +502,7 @@ export default function FounderPage() {
               </div>
               <h3 className="font-semibold text-sfm-navy mb-2">Join the Founders Waitlist</h3>
               <p className="text-muted text-sm">Join the Founders Waitlist. No payment required today.</p>
-              <p className="text-muted/60 text-xs mt-2 italic">Submitting the waitlist form does not create a physician-patient relationship.</p>
+              <p className="text-muted/60 text-xs mt-2 italic">Submitting the waitlist form does not create a doctor-patient relationship.</p>
             </div>
             <div className="text-center">
               <div className="w-10 h-10 mx-auto mb-4 rounded-full bg-sfm-gold/20 flex items-center justify-center">

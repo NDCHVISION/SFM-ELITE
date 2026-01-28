@@ -203,7 +203,7 @@ const faqJsonLd = {
       name: 'Does Sankofa Family Medicine prescribe weight loss medications?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, Sankofa Family Medicine offers comprehensive medical weight management including prescription therapies when clinically appropriate. Dr. Nkrumah evaluates each patient individually to determine the best approach, which may include GLP-1 agonists, combination therapies, or other medications alongside lifestyle and behavioral support for sustainable weight management.',
+        text: 'Yes, Sankofa Family Medicine offers complete medical weight management including prescription therapies when clinically appropriate. Dr. Nkrumah evaluates each patient individually to determine the best approach, which may include GLP-1 agonists, combination therapies, or other medications alongside lifestyle and behavioral support for sustainable weight management.',
       },
     },
     {
@@ -211,7 +211,7 @@ const faqJsonLd = {
       name: 'How does care coordination work at Sankofa Family Medicine?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We provide comprehensive care coordination including laboratory ordering and interpretation, diagnostic imaging coordination, specialty referrals, remote patient monitoring for blood pressure and glucose, chronic care management, care transitions support following hospitalization, and prior authorization assistance.',
+        text: 'We provide complete care coordination including laboratory ordering and interpretation, diagnostic imaging coordination, specialty referrals, remote patient monitoring for blood pressure and glucose, chronic care management, care transitions support following hospitalization, and prior authorization assistance.',
       },
     },
   ],
@@ -599,7 +599,7 @@ export default function ServicesPage() {
         <section className="py-20 bg-white" aria-labelledby="intro-heading">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <p className="text-muted text-lg md:text-xl leading-relaxed">
-              Sankofa Family Medicine provides comprehensive, virtual-first primary care
+              Sankofa Family Medicine provides complete, virtual-first primary care
               across the majority of conditions traditionally managed in family medicine.
               Our approach combines clinical excellence with the convenience of telemedicine,
               ensuring you receive thorough, personalized care without compromise.
@@ -631,7 +631,7 @@ export default function ServicesPage() {
                     { stat: '70%', label: 'of chronic disease is metabolic' },
                     { stat: '45min', label: 'average visit length' },
                     { stat: '100+', label: 'biomarkers tracked' },
-                    { stat: '1:1', label: 'physician relationship' },
+                    { stat: '1:1', label: 'doctor relationship' },
                   ].map((item) => (
                     <div key={item.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
                       <p className="text-2xl font-display text-sfm-gold">{item.stat}</p>
@@ -1107,13 +1107,13 @@ export default function ServicesPage() {
         >
           <div className="max-w-4xl mx-auto px-6">
             <p className="text-sm text-muted/70 leading-relaxed text-center">
-              All clinical decisions are made by licensed physicians practicing within
+              All clinical decisions are made by licensed doctors practicing within
               their scope of licensure and applicable state and federal regulations.
               Sankofa Family Medicine retains sole authority over clinical judgment,
               treatment decisions, referrals, prescribing, and care escalation. This
               information does not constitute a guarantee of treatment for any specific
               condition. All care is subject to clinical appropriateness and the
-              physician-patient relationship.
+              doctor-patient relationship.
             </p>
           </div>
         </section>

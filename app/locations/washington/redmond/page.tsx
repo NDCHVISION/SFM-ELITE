@@ -4,7 +4,7 @@ import { ArrowRight, MapPin, Clock, MessageCircle, Shield, Cpu, Users } from 'lu
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Redmond | Sankofa Family Medicine',
-  description: 'Redmond residents and tech professionals: premium virtual primary care designed for busy schedules. Same-day appointments, direct physician access, transparent pricing. Serving Redmond, Education Hill, Overlake, and Bear Creek.',
+  description: 'Redmond residents and tech professionals: premium virtual primary care designed for busy schedules. Same-day appointments, direct doctor access, transparent pricing. Serving Redmond, Education Hill, Overlake, and Bear Creek.',
   keywords: [
     'Redmond virtual doctor',
     'Redmond telemedicine',
@@ -77,7 +77,7 @@ export default function RedmondPage() {
     {
       icon: Users,
       title: 'Family-Centered',
-      description: 'Care for adults and teens 12+. One physician who knows your whole family.'
+      description: 'Care for adults and teens 12+. One doctor who knows your whole family.'
     },
     {
       icon: Shield,
@@ -110,7 +110,7 @@ export default function RedmondPage() {
           </h1>
           
           <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            Premium physician care for Redmond professionals and families. 
+            Premium doctor care for Redmond professionals and families. 
             Healthcare engineered for efficiency without sacrificing quality.
           </p>
 

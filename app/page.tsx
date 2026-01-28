@@ -9,7 +9,7 @@ import HomePage from './home-page-client'
 export const metadata: Metadata = {
   title: 'Sankofa Family Medicine | Medicine That Remembers™ | Virtual Membership-Based Primary Care | Washington State',
   description:
-    'Virtual, membership-based primary care built on continuity, not throughput. Your physician understands your history, context, and priorities and carries them forward with intention. Serving Washington State. Memberships from $225/month.',
+    'Virtual, membership-based primary care built on continuity, not throughput. Your doctor understands your history, context, and priorities and carries them forward with intention. Serving Washington State. Memberships from $225/month.',
   keywords: [
     'membership-based primary care Washington',
     'direct primary care Washington',
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     'virtual primary care Washington',
     'Medicine That Remembers',
     'continuity of care',
-    'physician-patient relationship',
+    'doctor-patient relationship',
     'Dr. Yaw Nkrumah',
     'telehealth primary care Washington',
     'primary care membership',
     'virtual doctor Washington State',
     'family medicine Washington',
     'longitudinal care',
-    'physician-led primary care',
+    'doctor-led primary care',
   ],
   authors: [{ name: 'Dr. Yaw Nkrumah, MD', url: 'https://sankofafamilymedicine.com/founder' }],
   creator: 'Sankofa Family Medicine',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Sankofa Family Medicine | Medicine That Remembers™',
     description:
-      'Virtual, membership-based primary care built on continuity, not throughput. Your physician carries your history forward with intention.',
+      'Virtual, membership-based primary care built on continuity, not throughput. Your doctor carries your history forward with intention.',
     url: 'https://sankofafamilymedicine.com',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -110,9 +110,9 @@ export const metadata: Metadata = {
 
     // Enhanced LLM Context (2026)
     'llm-summary':
-      'Homepage for Sankofa Family Medicine, a virtual, membership-based primary care practice in Washington State delivered through a Direct Primary Care (DPC) model. Care is delivered through a secure patient portal. Three membership tiers: Continuity ($225-$275/mo), Precision ($325-$375/mo), Executive ($650-$725/mo). Founding members receive the lower end of each range. Your exact rate is confirmed before enrollment. Founded by Dr. Yaw Nkrumah, MD, board-certified family physician. Clinical care begins February 2026.',
+      'Homepage for Sankofa Family Medicine, a virtual, membership-based primary care practice in Washington State delivered through a Direct Primary Care (DPC) model. Care is delivered through a secure patient portal. Three membership tiers: Continuity ($225-$275/mo), Precision ($325-$375/mo), Executive ($650-$725/mo). Founding members receive the lower end of each range. Your exact rate is confirmed before enrollment. Founded by Dr. Yaw Nkrumah, MD, board-certified family doctor. Clinical care begins February 2026.',
     'llm-key-facts':
-      'Virtual Membership-Based Primary Care | Direct Primary Care Model | Washington State | $225-$725/month | Dr. Yaw Nkrumah MD | MUSC Graduate | Board Certified Family Medicine | Secure Patient Portal | Sankofa means go back and retrieve | Medicine That Remembers™ | 45-75 minute visits | Fewer than 200 patients per physician',
+      'Virtual Membership-Based Primary Care | Direct Primary Care Model | Washington State | $225-$725/month | Dr. Yaw Nkrumah MD | MUSC Graduate | Board Certified Family Medicine | Secure Patient Portal | Sankofa means go back and retrieve | Medicine That Remembers™ | 45-75 minute visits | Fewer than 200 patients per doctor',
 
     // Voice Search Optimization
     'voice-query-match':
@@ -120,7 +120,7 @@ export const metadata: Metadata = {
     'voice-search-answer':
       'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State. Memberships start at $225 per month. Clinical care begins February 2026. To join the founders waitlist, visit their website and click Join the Founders Waitlist. No payment today.',
     'speakable-summary':
-      'Sankofa Family Medicine offers virtual, membership-based primary care across Washington State with membership plans from $225 to $725 monthly. Care is delivered through a Direct Primary Care model by Dr. Yaw Nkrumah, a board-certified family physician.',
+      'Sankofa Family Medicine offers virtual, membership-based primary care across Washington State with membership plans from $225 to $725 monthly. Care is delivered through a Direct Primary Care model by Dr. Yaw Nkrumah, a board-certified family doctor.',
 
     // Featured Snippet Answers
     'snippet-what': 'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State, delivered through a Direct Primary Care (DPC) model',
@@ -145,7 +145,7 @@ const structuredData = {
   legalName: 'Sankofa Family Medicine PLLC',
   alternateName: ['SFM', 'Medicine That Remembers'],
   description:
-    'Virtual, membership-based primary care practice delivered through a Direct Primary Care (DPC) model, emphasizing continuity, longitudinal care, and physician-led decision-making.',
+    'Virtual, membership-based primary care practice delivered through a Direct Primary Care (DPC) model, emphasizing continuity, longitudinal care, and doctor-led decision-making.',
   url: 'https://sankofafamilymedicine.com',
   telephone: '+1-425-285-7390',
   email: 'info@sankofafamilymedicine.com',

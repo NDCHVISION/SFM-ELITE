@@ -38,19 +38,19 @@ export default function CareJourney() {
     {
       number: 2,
       title: 'Tell Us Your Story',
-      description: 'Complete a comprehensive intake that captures your history, goals, and concerns. We document your story carefully so your care never resets.',
+      description: 'Complete a full intake that captures your history, goals, and concerns. We document your story carefully so your care never resets.',
       hasCTA: false,
     },
     {
       number: 3,
       title: 'Design Your Plan',
-      description: 'Your first visit is a 45 to 75 minute conversation focused on your context, your goals, and your care priorities. Together, you and your physician design a personalized plan built around what matters most to you.',
+      description: 'Your first visit is a 45 to 75 minute conversation focused on your context, your goals, and your care priorities. Together, you and your doctor design a personalized plan built around what matters most to you.',
       hasCTA: false,
     },
     {
       number: 4,
       title: 'Grow Together',
-      description: 'Stay connected through secure messaging, follow-up visits, and long-term tracking. Your care deepens as your physician knows you, remembers you, and walks with you through each chapter of your health.',
+      description: 'Stay connected through secure messaging, follow-up visits, and long-term tracking. Your care deepens as your doctor knows you, remembers you, and walks with you through each chapter of your health.',
       hasCTA: true,
     },
   ]

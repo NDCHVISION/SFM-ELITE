@@ -4,14 +4,14 @@ import { ArrowRight, MapPin, Clock, MessageCircle, Shield, TreePine, Lock } from
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care for Mercer Island | Sankofa Family Medicine',
-  description: 'Mercer Island residents: discreet, premium virtual primary care with direct physician access. Same-day appointments, personalized attention, transparent membership pricing. Serving all of Mercer Island.',
+  description: 'Mercer Island residents: discreet, premium virtual primary care with direct doctor access. Same-day appointments, personalized attention, transparent membership pricing. Serving all of Mercer Island.',
   keywords: [
     'Mercer Island doctor',
     'Mercer Island primary care',
     'Mercer Island telemedicine',
     'Mercer Island concierge medicine',
     'Mercer Island virtual doctor',
-    'private physician Mercer Island',
+    'private doctor Mercer Island',
     'executive healthcare Mercer Island'
   ],
   openGraph: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     'geo.placename': 'Mercer Island',
     'geo.position': '47.5707;-122.2221',
     'ICBM': '47.5707, -122.2221',
-    'llm-context': 'Sankofa Family Medicine serves Mercer Island, Washington - an affluent island community in Lake Washington. Virtual-first direct primary care offering discreet, personalized physician services for executives, professionals, and families who value privacy and quality.',
+    'llm-context': 'Sankofa Family Medicine serves Mercer Island, Washington - an affluent island community in Lake Washington. Virtual-first direct primary care offering discreet, personalized doctor services for executives, professionals, and families who value privacy and quality.',
   },
 }
 
@@ -35,7 +35,7 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
   name: 'Sankofa Family Medicine - Mercer Island',
-  description: 'Virtual primary care serving Mercer Island with discreet, premium physician services for residents who value privacy and personalized attention.',
+  description: 'Virtual primary care serving Mercer Island with discreet, premium doctor services for residents who value privacy and personalized attention.',
   url: 'https://sankofafamilymedicine.com/locations/washington/mercer-island',
   telephone: '+1-425-285-7390',
   email: 'info@sankofafamilymedicine.com',
@@ -61,7 +61,7 @@ export default function MercerIslandPage() {
     {
       icon: Lock,
       title: 'Private & Discreet',
-      description: 'Direct physician relationship without waiting rooms or public settings.'
+      description: 'Direct doctor relationship without waiting rooms or public settings.'
     },
     {
       icon: Clock,
@@ -71,7 +71,7 @@ export default function MercerIslandPage() {
     {
       icon: MessageCircle,
       title: 'Direct Access',
-      description: 'Message your physician directly. Concierge-level responsiveness.'
+      description: 'Message your doctor directly. Concierge-level responsiveness.'
     },
     {
       icon: Shield,
@@ -104,7 +104,7 @@ export default function MercerIslandPage() {
           </h1>
           
           <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            Discreet, personalized physician care for Mercer Island residents. 
+            Discreet, personalized doctor care for Mercer Island residents. 
             The attention and privacy your family deserves.
           </p>
 
@@ -165,7 +165,7 @@ export default function MercerIslandPage() {
                 Virtual primary care delivers the same clinical quality without the commute.
               </p>
               <p>
-                With Sankofa Family Medicine, you get extended appointments, direct physician access, 
+                With Sankofa Family Medicine, you get extended appointments, direct doctor access, 
                 and continuity of care with a doctor who knows your history. All from wherever you are.
               </p>
               <p>

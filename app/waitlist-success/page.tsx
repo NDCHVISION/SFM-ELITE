@@ -95,7 +95,7 @@ export default function WaitlistSuccessPage() {
               </div>
 
               <p className="text-sfm-navy/60 mb-4">
-                This waitlist submission does not enroll you as a patient or create a physician-patient relationship.
+                This waitlist submission does not enroll you as a patient or create a doctor-patient relationship.
               </p>
 
               <p className="text-sfm-navy/60">

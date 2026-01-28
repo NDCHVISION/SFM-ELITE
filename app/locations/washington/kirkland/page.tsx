@@ -4,7 +4,7 @@ import { ArrowRight, MapPin, Clock, MessageCircle, Shield, Waves, Building2 } fr
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Kirkland | Sankofa Family Medicine',
-  description: 'Kirkland residents: access premium virtual primary care designed for busy professionals. Same-day appointments, direct physician access, transparent membership pricing. Serving Kirkland, Juanita, Totem Lake, and Houghton.',
+  description: 'Kirkland residents: access premium virtual primary care designed for busy professionals. Same-day appointments, direct doctor access, transparent membership pricing. Serving Kirkland, Juanita, Totem Lake, and Houghton.',
   keywords: [
     'Kirkland virtual doctor',
     'Kirkland telemedicine',
@@ -71,11 +71,11 @@ export default function KirklandPage() {
     {
       icon: Clock,
       title: 'Same-Day Access',
-      description: 'Appointments when you need them. Direct messaging with your physician.'
+      description: 'Appointments when you need them. Direct messaging with your doctor.'
     },
     {
       icon: MessageCircle,
-      title: 'One Physician',
+      title: 'One Doctor',
       description: 'Continuity of care with a doctor who knows your history and your goals.'
     },
     {
@@ -109,7 +109,7 @@ export default function KirklandPage() {
           </h1>
           
           <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            Premium physician care for Kirkland residents. Healthcare that respects 
+            Premium doctor care for Kirkland residents. Healthcare that respects 
             your time and delivers the attention you deserve.
           </p>
 

@@ -138,7 +138,7 @@ const structuredData = {
           name: 'What is Direct Primary Care (DPC)?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Direct Primary Care is a membership-based healthcare model where patients pay a monthly fee directly to their physician. There is no insurance billing for primary care services, which eliminates administrative overhead and allows for longer visits, smaller patient panels, and same-day access.',
+            text: 'Direct Primary Care is a membership-based healthcare model where patients pay a monthly fee directly to their doctor. There is no insurance billing for primary care services, which eliminates administrative overhead and allows for longer visits, smaller patient panels, and same-day access.',
           },
         },
         {
@@ -146,7 +146,7 @@ const structuredData = {
           name: 'How long is a typical primary care appointment?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Typical insurance-based primary care appointments average 15 minutes. Direct Primary Care practices like Sankofa Family Medicine offer 45 to 75 minute visits, allowing for comprehensive evaluation and unhurried conversation. Typical appointment length varies by clinic and region.',
+            text: 'Typical insurance-based primary care appointments average 15 minutes. Direct Primary Care practices like Sankofa Family Medicine offer 45 to 75 minute visits, allowing for complete evaluation and unhurried conversation. Typical appointment length varies by clinic and region.',
           },
         },
         {
@@ -154,7 +154,7 @@ const structuredData = {
           name: 'How many patients does a typical primary care doctor have?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Typical insurance-based practices average 2,300 or more patients per physician. Direct Primary Care practices like Sankofa Family Medicine maintain fewer than 200 patients per physician, enabling personalized care and same-day access.',
+            text: 'Typical insurance-based practices average 2,300 or more patients per doctor. Direct Primary Care practices like Sankofa Family Medicine maintain fewer than 200 patients per doctor, enabling personalized care and same-day access.',
           },
         },
         {
@@ -178,7 +178,7 @@ const structuredData = {
           name: 'Will I see the same doctor every visit with DPC?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. At Sankofa Family Medicine, you see the same physician at every visit. In typical insurance-based clinics, you may see whoever is available, leading to fragmented care.',
+            text: 'Yes. At Sankofa Family Medicine, you see the same doctor at every visit. In typical insurance-based clinics, you may see whoever is available, leading to broken care.',
           },
         },
         {
@@ -234,7 +234,7 @@ const statPreviews = [
 const comparisonData = [
   {
     category: 'Visit Duration',
-    context: 'Time with your physician',
+    context: 'Time with your doctor',
     traditional: { value: '15 min', label: 'average', isNegative: false },
     sankofa: { value: '45 to 75 min', label: 'standard', isPositive: true },
     highlight: true,
@@ -249,15 +249,15 @@ const comparisonData = [
   {
     category: 'Patients per Physician',
     context: 'How many share your doctor',
-    traditional: { value: '2,300+', label: 'patients per physician', isNegative: false },
-    sankofa: { text: 'Fewer than 200 patients per physician', isPositive: true },
+    traditional: { value: '2,300+', label: 'patients per doctor', isNegative: false },
+    sankofa: { text: 'Fewer than 200 patients per doctor', isPositive: true },
     highlight: true,
   },
   {
     category: 'Your Physician',
     context: 'Who you see each visit',
     traditional: { text: 'Whoever is available', isNegative: true },
-    sankofa: { text: 'Same physician, every visit', isPositive: true },
+    sankofa: { text: 'Same doctor, every visit', isPositive: true },
     highlight: false,
   },
   {
@@ -269,7 +269,7 @@ const comparisonData = [
   },
   {
     category: 'Message Your Doctor',
-    context: 'How you reach your physician',
+    context: 'How you reach your doctor',
     traditional: { text: 'Patient portal, 48+ hour response', isNegative: true },
     sankofa: { text: 'Direct secure messaging with response within one business day', isPositive: true },
     highlight: false,
@@ -352,7 +352,7 @@ export default function ComparePage() {
             <span className="text-sfm-gold">Traditional Primary Care</span>
           </h1>
           <p className="text-white/75 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
-            Direct Primary Care removes insurance billing from primary care so time, access, and continuity return to the physician-patient relationship.
+            Direct Primary Care removes insurance billing from primary care so time, access, and continuity return to the doctor-patient relationship.
           </p>
 
           {/* Stat Preview Row */}
@@ -571,10 +571,10 @@ export default function ComparePage() {
                   What This Means for You
                 </h2>
                 <p className="text-white/70 leading-relaxed mb-4">
-                  Direct Primary Care removes the insurance middleman from your primary care relationship. No claim forms for primary care visits, no surprise bills. A simple monthly membership and a physician who has time for you.
+                  Direct Primary Care removes the insurance middleman from your primary care relationship. No claim forms for primary care visits, no surprise bills. A simple monthly membership and a doctor who has time for you.
                 </p>
                 <p className="text-white/70 leading-relaxed">
-                  One physician and care team who know your history and stay with you over time. When your doctor has fewer patients and more time, care improves. That is the DPC model.
+                  One doctor and care team who know your history and stay with you over time. When your doctor has fewer patients and more time, care improves. That is the DPC model.
                 </p>
               </div>
             </div>

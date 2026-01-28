@@ -143,7 +143,7 @@ export default function MedicationOrganizer() {
   return (
     <ToolLayout
       title="Medication List Organizer"
-      description="Help users create a clear, organized medication list to share with providers."
+      description="Help users create a clear, organized medication list to share with your doctor."
     >
       <div className="space-y-8">
         {/* Entry Form */}

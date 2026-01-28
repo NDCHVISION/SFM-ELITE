@@ -102,7 +102,7 @@ export default function FAQPage() {
         },
         {
           question: 'How does concierge DPC compare to traditional insurance co-pays?',
-          answer: 'While insurance co-pays may seem lower per visit, most patients with chronic conditions or those who value preventive care find concierge DPC more economical. With concierge DPC, you get generous virtual visit access, no surprise bills, longer appointments, and direct access to your physician. Many members save money overall, especially when factoring in wholesale lab pricing (70-90% savings) and avoiding unnecessary specialist referrals.'
+          answer: 'While insurance co-pays may seem lower per visit, most patients with chronic conditions or those who value preventive care find Direct Primary Care more economical. With DPC, you get generous virtual visit access, no surprise bills, longer appointments, and direct access to your doctor. Many members save money overall, especially when factoring in wholesale lab pricing (70-90% savings) and avoiding unnecessary specialist referrals.'
         },
       ]
     },
@@ -120,7 +120,7 @@ export default function FAQPage() {
         },
         {
           question: 'Is telehealth as effective as in-person care?',
-          answer: 'For most primary care needs, yes. Research shows that telehealth delivers comparable outcomes for many conditions, often with greater convenience and continuity. The key advantage of our model is that you see the same physician every time. This continuity actually improves outcomes compared to fragmented in-person care.'
+          answer: 'For most primary care needs, yes. Research shows that telehealth delivers comparable outcomes for many conditions, often with greater convenience and continuity. The key advantage of our model is that you see the same doctor every time. This continuity actually improves outcomes compared to broken in-person care.'
         },
         {
           question: 'What if I need in-person care?',
@@ -183,7 +183,7 @@ export default function FAQPage() {
       items: [
         {
           question: 'What\'s included in membership?',
-          answer: 'All membership tiers include unlimited virtual visits with Dr. Nkrumah, secure messaging with 24-48 hour response times, care coordination, and prescription management. Higher tiers add genetic testing, AI-powered health insights, and direct physician access. See our Services page for full details.'
+          answer: 'All membership tiers include unlimited virtual visits with Dr. Nkrumah, secure messaging with 24-48 hour response times, care coordination, and prescription management. Higher tiers add genetic testing, AI-powered health insights, and direct doctor access. See our Services page for full details.'
         },
         {
           question: 'What\'s the founding member offer?',
@@ -245,7 +245,7 @@ export default function FAQPage() {
         },
         {
           question: 'Do I need to transfer my medical records?',
-          answer: 'We\'ll help you request records from previous providers. Having your history helps us provide better care, but you can start as a patient before records arrive.'
+          answer: 'We\'ll help you request records from previous doctors. Having your history helps us provide better care, but you can start as a patient before records arrive.'
         },
         {
           question: 'Where do you practice?',
@@ -279,7 +279,7 @@ export default function FAQPage() {
         },
         {
           question: 'How does AI fit into your practice?',
-          answer: 'We use AI tools to support clinical workflows, helping with documentation, surfacing relevant history, and identifying potential health insights. AI never makes clinical decisions; it is a tool that helps your physician focus on you. All AI systems we use are HIPAA-compliant.'
+          answer: 'We use AI tools to support clinical workflows, helping with documentation, surfacing relevant history, and identifying potential health insights. AI never makes clinical decisions; it is a tool that helps your doctor focus on you. All AI systems we use are HIPAA-compliant.'
         },
         {
           question: 'Can I access my own medical records?',
