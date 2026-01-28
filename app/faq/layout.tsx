@@ -126,7 +126,7 @@ const faqSchema = {
       name: 'How much does membership cost?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sankofa Family Medicine offers three membership tiers: Continuity Concierge at $225-$245/month for concierge primary care with continuity and direct physician access, Precision Concierge at $325-$375/month adding advanced interpretation and personalized planning, and Executive Concierge at $650-$725/month for executive-level concierge medicine with comprehensive coordination. Founding members receive preferred founding member pricing.',
+        text: 'Sankofa Family Medicine offers three membership tiers: Continuity Concierge at $225-$245/month for concierge primary care with continuity and direct doctor access, Precision Concierge at $325-$375/month adding advanced interpretation and personalized planning, and Executive Concierge at $650-$725/month for executive-level concierge medicine with complete coordination. Founding members receive preferred founding member pricing.',
       },
     },
     // Virtual Care
@@ -151,7 +151,7 @@ const faqSchema = {
       name: 'Is telehealth as effective as in-person care?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'For most primary care needs, yes. Research shows that telehealth delivers comparable outcomes for many conditions, often with greater convenience and continuity. The key advantage of our model is that you see the same physician every time, which improves outcomes compared to fragmented in-person care.',
+        text: 'For most primary care needs, yes. Research shows that telehealth delivers comparable outcomes for many conditions, often with greater convenience and continuity. The key advantage of our model is that you see the same doctor every time, which improves outcomes compared to broken in-person care.',
       },
     },
     // Membership
@@ -160,7 +160,7 @@ const faqSchema = {
       name: "What's included in a Sankofa Family Medicine membership?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Every membership includes generous virtual visit access with Dr. Nkrumah, direct secure messaging with your physician, care coordination, prescription management, and wholesale lab pricing (up to 90% off retail). Higher tiers add genetic testing, pharmacogenomics, advanced biomarker panels, and direct phone access during extended hours.',
+        text: 'Every membership includes generous virtual visit access with Dr. Nkrumah, direct secure messaging with your doctor, care coordination, prescription management, and wholesale lab pricing (up to 90% off retail). Higher tiers add genetic testing, pharmacogenomics, advanced biomarker panels, and direct phone access during extended hours.',
       },
     },
     {

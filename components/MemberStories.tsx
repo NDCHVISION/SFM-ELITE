@@ -23,13 +23,13 @@ export default function MemberStories() {
     },
     {
       id: 2,
-      quote: 'We solved my chronic fatigue through comprehensive lab work and genetic testing that revealed crucial insights. The personalized plan changed everything for me.',
+      quote: 'We solved my chronic fatigue through complete lab work and genetic testing that revealed crucial insights. The personalized plan changed everything for me.',
       attribution: 'L.M.',
       category: 'case-study',
     },
     {
       id: 3,
-      quote: 'Having the same physician for every visit means no repeating my story. Dr. Nkrumah knows my history and my family. It feels like real continuity of care.',
+      quote: 'Having the same doctor for every visit means no repeating my story. Dr. Nkrumah knows my history and my family. It feels like real continuity of care.',
       attribution: 'M.R.',
       category: 'testimonial',
     },
