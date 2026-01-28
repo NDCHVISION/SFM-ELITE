@@ -180,16 +180,17 @@ export default function HomePageClient() {
                   </Link>
                 </div>
 
+                {/* Compliance: Waitlist and launch info - consolidated */}
                 <div className="opacity-0 animate-fade-in animation-delay-1000 mt-8">
                   <p className="text-white/60 text-lg">
-                    Clinical care is planned to begin in early 2026. No payment is required to join the Founders Waitlist.
+                    Clinical care begins early 2026. Join the Founders Waitlist at no cost.
                   </p>
-                  <p className="text-white/50 text-base mt-4 max-w-xl leading-relaxed">
-                    Founders Waitlist only. Joining does not create a doctor-patient relationship. Services are available only to patients located in Washington State.
+                  <p className="text-white/50 text-base mt-3 max-w-xl">
+                    Joining does not create a doctor-patient relationship or guarantee enrollment. Washington State only.
                   </p>
-                  {/* Compliance: Emergency disclaimer in hero */}
-                  <p className="text-white/45 text-base mt-3 max-w-xl leading-relaxed">
-                    Not for emergencies. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department.
+                  {/* Compliance: Emergency disclaimer */}
+                  <p className="text-white/45 text-sm mt-4 pt-4 border-t border-white/10 max-w-xl">
+                    <span className="text-white/55">Not for emergencies.</span> Call 911 for immediate medical needs.
                   </p>
                 </div>
 
@@ -221,7 +222,7 @@ export default function HomePageClient() {
                       aria-label="Washington State Department of Health provider credential search (opens in new tab)"
                     >
                       <FileText className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
-                      <span>WA Licensed (verify)</span>
+                      <span>WA Licensed</span>
                     </a>
 
                     <span className="flex items-center gap-2 text-white/60 text-base">
@@ -234,16 +235,27 @@ export default function HomePageClient() {
 
               <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
                 <div className="opacity-0 animate-scale-in animation-delay-300 relative">
+                  {/* Ambient glow behind image */}
                   <div
-                    className="absolute -inset-12"
+                    className="absolute -inset-16 blur-3xl"
                     style={{
-                      background: 'radial-gradient(ellipse at center, rgba(188, 152, 51, 0.15) 0%, rgba(188, 152, 51, 0.05) 50%, transparent 70%)',
+                      background: 'radial-gradient(ellipse at center, rgba(188, 152, 51, 0.2) 0%, rgba(188, 152, 51, 0.08) 40%, transparent 70%)',
                     }}
                     aria-hidden="true"
                   />
                   <div className="relative w-[300px] sm:w-[380px] lg:w-[460px] aspect-[3/4]">
-                    <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl shadow-sfm-navy/40">
-                      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-sfm-navy/40 via-transparent to-transparent" />
+                    <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl shadow-sfm-navy/60">
+                      {/* Multi-layer gradient overlay for seamless blending */}
+                      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-sfm-navy via-sfm-navy/20 to-transparent opacity-60" />
+                      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-sfm-navy/30 via-transparent to-transparent" />
+                      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-sfm-navy/20 via-transparent to-sfm-navy/20" />
+                      {/* Soft vignette effect */}
+                      <div 
+                        className="absolute inset-0 z-10 pointer-events-none"
+                        style={{
+                          background: 'radial-gradient(ellipse at center, transparent 50%, rgba(5, 28, 59, 0.4) 100%)',
+                        }}
+                      />
                       <Image
                         src="/images/sankofa-wooden-sculpture.png"
                         alt="Traditional wooden Sankofa bird sculpture symbolizing Medicine That Remembers"
@@ -253,6 +265,8 @@ export default function HomePageClient() {
                         sizes="(max-width: 640px) 300px, (max-width: 1024px) 380px, 460px"
                       />
                     </div>
+                    {/* Soft edge blur on container */}
+                    <div className="absolute -inset-1 rounded-[36px] pointer-events-none" style={{ boxShadow: 'inset 0 0 40px 20px rgba(5, 28, 59, 0.3)' }} aria-hidden="true" />
                   </div>
                 </div>
               </div>
@@ -277,7 +291,11 @@ export default function HomePageClient() {
         <div className="relative max-w-7xl mx-auto px-6">
           <ScrollReveal className="max-w-3xl mx-auto text-center mb-20">
             <div className="flex justify-center mb-4">
-              <Image src="/images/comettrans.png" alt="" width={48} height={48} className="opacity-60" aria-hidden="true" />
+              <div className="relative">
+                {/* Soft glow behind icon */}
+                <div className="absolute inset-0 blur-xl bg-sfm-gold/20 rounded-full scale-150" aria-hidden="true" />
+                <Image src="/images/comettrans.png" alt="" width={48} height={48} className="relative opacity-70" aria-hidden="true" />
+              </div>
             </div>
             <span className="inline-block text-sfm-gold text-base font-semibold tracking-widest uppercase mb-6">Our Philosophy</span>
             <h2 id="philosophy-heading" className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight" data-speakable>
@@ -370,7 +388,7 @@ export default function HomePageClient() {
               },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <article className="relative group overflow-hidden rounded-2xl aspect-[4/5] ring-2 ring-transparent hover:ring-sfm-gold/40 transition-all duration-300 motion-reduce:transition-none">
+                <article className="relative group overflow-hidden rounded-2xl aspect-[4/5] ring-1 ring-black/5 shadow-lg hover:shadow-xl hover:ring-sfm-gold/30 transition-all duration-300 motion-reduce:transition-none">
                   <Image
                     src={item.src}
                     alt={item.alt}
@@ -378,10 +396,19 @@ export default function HomePageClient() {
                     loading="lazy"
                     className="object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy/90 via-sfm-navy/30 to-transparent" />
+                  {/* Enhanced gradient overlay for better text readability and blending */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy via-sfm-navy/40 to-transparent opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-transparent" />
+                  {/* Subtle vignette */}
+                  <div 
+                    className="absolute inset-0"
+                    style={{
+                      background: 'radial-gradient(ellipse at center, transparent 40%, rgba(5, 28, 59, 0.2) 100%)',
+                    }}
+                  />
                   <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-6">
-                    <p className="text-white font-display text-lg lg:text-xl mb-1">{item.label}</p>
-                    <p className="text-white/80 text-base lg:text-lg leading-snug hidden sm:block">{item.description}</p>
+                    <p className="text-white font-display text-lg lg:text-xl mb-1 drop-shadow-sm">{item.label}</p>
+                    <p className="text-white/85 text-base lg:text-lg leading-snug hidden sm:block drop-shadow-sm">{item.description}</p>
                   </div>
                 </article>
               </ScrollReveal>
@@ -722,8 +749,10 @@ export default function HomePageClient() {
                         loading="lazy"
                         className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
                       />
+                      {/* Subtle gradient overlay for consistency */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
                       <div className="absolute top-4 left-4">
-                        <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-base font-medium text-sfm-navy">
+                        <span className="px-3 py-1.5 bg-white/95 backdrop-blur-sm rounded-full text-base font-medium text-sfm-navy shadow-sm">
                           {article.category}
                         </span>
                       </div>
@@ -794,15 +823,16 @@ export default function HomePageClient() {
             </Link>
           </div>
 
-          {/* Compliance: Waitlist disclaimers */}
-          <p className="text-white/50 text-lg mt-10 max-w-lg mx-auto leading-relaxed">
-            Founders Waitlist only. No payment is required to join. Joining does not guarantee enrollment. Joining does not create a doctor-patient relationship. Services are available only to patients located in Washington State.
-          </p>
-
-          {/* Compliance: Emergency disclaimer in CTA */}
-          <p className="text-white/40 text-base mt-4">
-            Not for emergencies. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department.
-          </p>
+          {/* Compliance: Waitlist disclaimers - consolidated */}
+          <div className="mt-10 max-w-lg mx-auto">
+            <p className="text-white/50 text-base leading-relaxed">
+              Founders Waitlist only. No payment required. Joining does not guarantee enrollment or create a doctor-patient relationship. Washington State only.
+            </p>
+            {/* Compliance: Emergency disclaimer */}
+            <p className="text-white/40 text-sm mt-4 pt-4 border-t border-white/10">
+              <span className="text-white/50">Not for emergencies.</span> Call 911 for immediate medical needs.
+            </p>
+          </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">
             <div className="flex flex-wrap items-center justify-center gap-8 text-white/60 text-lg">
@@ -835,7 +865,7 @@ export default function HomePageClient() {
                 aria-label="Washington State Department of Health provider credential search (opens in new tab)"
               >
                 <FileText className="w-5 h-5" aria-hidden="true" />
-                WA licensed (verify)
+                <span>WA Licensed</span>
               </a>
             </div>
           </div>
