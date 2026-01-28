@@ -595,8 +595,8 @@ export default function AboutPage() {
                   <div className="absolute inset-0 flex items-center justify-center p-16">
                     <Image
                       src="/images/SFMLOGOBLUEVELVET.png"
-                                                            alt="Sankofa Family Medicine logo on elegant blue velvet background, the official symbol of the practice"
-                                                    width={280}
+                      alt="Sankofa Family Medicine logo on elegant blue velvet background, the official symbol of the practice"
+                      width={280}
                       height={280}
                       className="relative drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
                     />
