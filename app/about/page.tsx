@@ -27,7 +27,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About Sankofa Family Medicine | Direct Primary Care (DPC) Washington | Medicine That Remembers™',
   description:
-    'Sankofa Family Medicine is a physician-led, virtual Direct Primary Care (DPC) practice serving Washington State. Founded by Yaw Nkrumah, M.D., we deliver continuity-based care where your medical history is preserved and each visit builds on the last.',
+    'Sankofa Family Medicine is a doctor-led, virtual Direct Primary Care (DPC) practice serving Washington State. Founded by Yaw Nkrumah, M.D., we deliver continuity-based care where your medical history is preserved and each visit builds on the last.',
   keywords: [
     'Sankofa Family Medicine',
     'direct primary care Washington',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     'DPC Spokane',
     'membership primary care Washington',
     'membership-based primary care',
-    'physician-led primary care',
+    'doctor-led primary care',
     'telehealth primary care Washington',
     'continuity of care',
     'patient-centered primary care',
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Sankofa Family Medicine | Direct Primary Care (DPC) | Medicine That Remembers™',
     description:
-      'Virtual-first Direct Primary Care (DPC) for Washington State patients. Your physician remembers your history so each visit builds on the last.',
+      'Virtual-first Direct Primary Care (DPC) for Washington State patients. Your doctor remembers your history so each visit builds on the last.',
     images: ['https://sankofafamilymedicine.com/images/og-about.png'],
     creator: '@sankofafamilymed',
   },
@@ -249,8 +249,8 @@ const physicianJsonLd = {
   givenName: 'Yaw',
   familyName: 'Nkrumah',
   honorificSuffix: 'M.D.',
-  jobTitle: 'Founder and Primary Care Physician',
-  description: 'Yaw Nkrumah, M.D. is a family medicine physician and founder of Sankofa Family Medicine.',
+  jobTitle: 'Founder and Primary Care Doctor',
+  description: 'Yaw Nkrumah, M.D. is a family medicine doctor and founder of Sankofa Family Medicine.',
   url: 'https://sankofafamilymedicine.com/founder',
   hasCredential: [{
     '@type': 'EducationalOccupationalCredential',
@@ -262,7 +262,7 @@ const physicianJsonLd = {
   medicalSpecialty: ['Family Medicine', 'Primary Care'],
   hasOccupation: {
     '@type': 'Occupation',
-    name: 'Family Physician',
+    name: 'Family Doctor',
     occupationLocation: {
       '@type': 'AdministrativeArea',
       name: 'Washington',
@@ -297,7 +297,7 @@ const faqJsonLd = {
       name: 'What does Medicine That Remembers mean?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Medicine That Remembers is how we practice. Your physician retains the details that shape your health: your history, context, goals, and preferences. You never have to start over or repeat your story.',
+        text: 'Medicine That Remembers is how we practice. Your doctor retains the details that shape your health: your history, context, goals, and preferences. You never have to start over or repeat your story.',
       },
     },
     {
@@ -310,10 +310,10 @@ const faqJsonLd = {
     },
     {
       '@type': 'Question',
-      name: 'Will I see the same physician at every visit?',
+      name: 'Will I see the same doctor at every visit?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. You see the same physician for your care, building a relationship over time, except in rare circumstances where coverage is required for safety or availability. We maintain an intentionally limited patient panel to ensure personalized attention and continuity.',
+        text: 'Yes. You see the same doctor for your care, building a relationship over time, except in rare circumstances where coverage is required for safety or availability. We maintain an intentionally limited patient panel to ensure personalized attention and continuity.',
       },
     },
     {
@@ -362,7 +362,7 @@ const howToJsonLd = {
   step: [
     { '@type': 'HowToStep', position: 1, name: 'Join the Founders Waitlist', text: 'Complete the Founders Waitlist form. No payment required until enrollment opens.' },
     { '@type': 'HowToStep', position: 2, name: 'Complete Pre-enrollment Onboarding', text: 'Securely share your medical history through our HIPAA-compliant platform.' },
-    { '@type': 'HowToStep', position: 3, name: 'Begin Your Care', text: 'Once enrollment opens, schedule your first visit. Your physician is accessible by message or video.' },
+    { '@type': 'HowToStep', position: 3, name: 'Begin Your Care', text: 'Once enrollment opens, schedule your first visit. Your doctor is accessible by message or video.' },
   ],
 }
 
@@ -402,18 +402,18 @@ const differentiators = [
   { icon: Clock, stat: '45-75', unit: 'min', label: 'Visits' },
   { icon: Users, stat: 'Limited', unit: '', label: 'Patient Panel' },
   { icon: Zap, stat: 'Fast', unit: '', label: 'Access when available' },
-  { icon: Brain, stat: '1', unit: '', label: 'Physician' },
+  { icon: Brain, stat: '1', unit: '', label: 'Doctor' },
 ]
 
 const journeySteps = [
   { icon: UserPlus, step: '01', title: 'Join the Founders Waitlist', description: 'Complete the Founders Waitlist form. No payment required until enrollment opens.' },
   { icon: ClipboardCheck, step: '02', title: 'Complete Onboarding', description: 'Securely share your medical history through our HIPAA-compliant platform.' },
-  { icon: MessageCircle, step: '03', title: 'Begin Your Care', description: 'Once enrollment opens, schedule your first visit and message your physician as needed.' },
+  { icon: MessageCircle, step: '03', title: 'Begin Your Care', description: 'Once enrollment opens, schedule your first visit and message your doctor as needed.' },
 ]
 
 const philosophyPillars = [
   { icon: Brain, title: 'Context Preserved', description: 'Care decisions informed by prior context and the reasoning behind them.' },
-  { icon: Heart, title: 'Relationship Continuity', description: 'See the same physician every visit and build trust over time.' },
+  { icon: Heart, title: 'Relationship Continuity', description: 'See the same doctor every visit and build trust over time.' },
   { icon: Sparkles, title: 'Personalized Care', description: 'Treatment plans shaped by a complete medical picture, not isolated moments.' },
 ]
 
@@ -571,10 +571,10 @@ export default function AboutPage() {
                     Sankofa is an Akan principle from West Africa, symbolized by a bird looking backward while moving forward. It conveys that it is right and necessary to return to the past, retrieve what was learned, and carry it forward for a higher purpose.
                   </p>
                   <p>
-                    In healthcare, this principle highlights a common challenge. Medical records often fragment across systems, physicians may change between visits, and patients are frequently asked to repeat their history when continuity is not preserved.
+                    In healthcare, this principle highlights a common challenge. Medical records often fragment across systems, doctors may change between visits, and patients are frequently asked to repeat their history when continuity is not preserved.
                   </p>
                   <p>
-                    Sankofa Family Medicine was designed for continuity. One physician who knows your history - visit after visit - so medical decisions build instead of reset. Learn more about our{' '}
+                    Sankofa Family Medicine was designed for continuity. One doctor who knows your history - visit after visit - so medical decisions build instead of reset. Learn more about our{' '}
                     <Link href="/services" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
                       telehealth primary care services
                     </Link>{' '}
@@ -643,7 +643,7 @@ export default function AboutPage() {
                     A care model designed to preserve the details that shape your health over time, from medical history to goals and preferences.
                   </p>
                   <p className="text-sfm-navy/60 leading-relaxed">
-                    Your physician knows you. Not as a chart number, but as a person with a history that matters. This is the foundation of{' '}
+                    Your doctor knows you. Not as a chart number, but as a person with a history that matters. This is the foundation of{' '}
                     <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
                       Direct Primary Care (DPC)
                     </Link>.
@@ -687,7 +687,7 @@ export default function AboutPage() {
                 >
                   Direct Primary Care (DPC)
                 </Link>{' '}
-                - a membership model designed for continuity, access, and careful medical decision-making. No insurance billing. No rushed visits. No revolving door of providers.
+                - a membership model designed for continuity, access, and careful medical decision-making. No insurance billing. No rushed visits. No revolving door of doctors.
               </p>
             </div>
 

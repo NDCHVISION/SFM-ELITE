@@ -189,9 +189,9 @@ export default function HomePage() {
 
           <ScrollRevealGroup className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {[
-              { icon: Heart, title: 'Relationship First', description: 'One physician who gets to know your history and what matters to you over time. No rotating providers. No repeating yourself. No starting over.' },
+              { icon: Heart, title: 'Relationship First', description: 'One doctor who gets to know your history and what matters to you over time. No rotating doctors. No repeating yourself. No starting over.' },
               { icon: Clock, title: 'Time That Matters', description: 'Visits are designed to be longer so you have time to talk, ask questions, and feel heard. No rushing through symptoms.' },
-              { icon: MessageCircle, title: 'Accessible When Needed', description: 'When enrolled, you can message your physician and request visits as needs come up. Urgent concerns may be scheduled same-day or next-business-day when available, subject to availability and clinical judgment.' },
+              { icon: MessageCircle, title: 'Accessible When Needed', description: 'When enrolled, you can message your doctor and request visits as needs come up. Urgent concerns may be scheduled same-day or next-business-day when available, subject to availability and good judgment.' },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <div className="text-center group">
@@ -216,14 +216,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight">Who We Serve</h2>
-            <p className="text-lg text-sfm-navy/70 leading-relaxed">Sankofa Family Medicine is for people who want a physician who follows their care over time. If you are busy, raising a family, or focused on long-term health, our Washington State membership model is built to fit your life.</p>
+            <p className="text-lg text-sfm-navy/70 leading-relaxed">Sankofa Family Medicine is for people who want a doctor who follows their care over time. If you are busy, raising a family, or focused on long-term health, our Washington State membership model is built to fit your life.</p>
           </ScrollReveal>
 
           <ScrollRevealGroup className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             {[
-              { src: '/images/telehealth-video-visit.png', alt: 'Professional woman enjoying a video consultation with her physician from home', label: 'Busy Professionals', description: 'Responsive support for leaders who value their time.' },
+              { src: '/images/telehealth-video-visit.png', alt: 'Professional woman enjoying a video consultation with her doctor from home', label: 'Busy Professionals', description: 'Responsive support for leaders who value their time.' },
               { src: '/images/patient-tablet-seattle.png', alt: 'Man reviewing health information on tablet with Seattle skyline in background', label: 'Tech-Forward Patients', description: 'Digital-first care with clear workflows and follow-through.' },
-              { src: '/images/family-gathering-pnw.png', alt: 'Multigenerational family enjoying time together in the Pacific Northwest', label: 'Families', description: 'One physician for your household, visit after visit.' },
+              { src: '/images/family-gathering-pnw.png', alt: 'Multigenerational family enjoying time together in the Pacific Northwest', label: 'Families', description: 'One doctor for your household, visit after visit.' },
               { src: '/images/woman-tablet-thoughtful.png', alt: 'Woman thoughtfully reviewing her health plan on a tablet', label: 'Proactive Health', description: 'Prevention and long-term planning for those who invest in their health.' },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
@@ -260,7 +260,7 @@ export default function HomePage() {
                     <span className="w-3 h-3 rounded-full bg-gray-400" aria-hidden="true" />Insurance-Based Primary Care<span className="text-sfm-navy/50">*</span>
                   </h3>
                   <ul className="space-y-4">
-                    {['15 minute appointments that feel rushed', 'Long waits for visits and limited access', 'Thousands of patients per physician', 'Different provider at each visit', 'Surprise billing and confusing statements'].map((item, i) => (
+                    {['15 minute appointments that feel rushed', 'Long waits for visits and limited access', 'Thousands of patients per doctor', 'Different doctor at each visit', 'Surprise billing and confusing statements'].map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-sfm-navy/70 text-base"><span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2.5 flex-shrink-0" aria-hidden="true" />{item}</li>
                     ))}
                   </ul>
@@ -353,7 +353,7 @@ export default function HomePage() {
             {[
               { name: 'Continuity', priceRange: '$225–$275', description: 'Essential virtual primary care designed to restore the continuity traditional medicine has lost.', featured: false, anchor: 'continuity' },
               { name: 'Precision', priceRange: '$325–$375', description: 'Everything in Continuity plus deeper preventive insight and advanced diagnostics when appropriate.', featured: true, anchor: 'precision' },
-              { name: 'Executive', priceRange: '$650–$725', description: 'Enhanced access, coordination, and comprehensive health planning for individuals and families.', featured: false, anchor: 'executive' },
+              { name: 'Executive', priceRange: '$650–$725', description: 'Enhanced access, coordination, and complete health planning for individuals and families.', featured: false, anchor: 'executive' },
             ].map((tier, i) => (
               <ScrollReveal key={tier.name} delay={i * 0.1}>
                 <div className={`relative rounded-2xl p-8 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl overflow-hidden ${tier.featured ? 'bg-sfm-navy text-white ring-2 ring-sfm-gold' : 'bg-white border border-sfm-border-light hover:border-sfm-border hover:shadow-lg'}`}>

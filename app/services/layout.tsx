@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Membership Plans | Concierge Primary Care | Sankofa Family Medicine",
-  description: "Transparent membership pricing for virtual concierge primary care in Washington State. Three tiers from $225 to $725 per month. Founding member rates available. Direct Primary Care (DPC) model with same-day access and direct physician messaging.",
+  description: "Transparent membership pricing for virtual concierge primary care in Washington State. Three tiers from $225 to $725 per month. Founding member rates available. Direct Primary Care (DPC) model with same-day access and direct doctor messaging.",
   keywords: [
     "concierge medicine pricing",
     "direct primary care membership",
@@ -84,7 +84,7 @@ export default function ServicesLayout({
                 "name": "What is concierge medicine?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Concierge medicine is a healthcare model where patients pay a membership fee for enhanced access to their physician, including same-day appointments, longer visits, direct messaging availability, and personalized care coordination. Sankofa Family Medicine operates under the Direct Primary Care (DPC) model as defined by Washington State law (RCW 48.150)."
+                  "text": "Concierge medicine is a healthcare model where patients pay a membership fee for enhanced access to their doctor, including same-day appointments, longer visits, direct messaging availability, and personalized care coordination. Sankofa Family Medicine operates under the Direct Primary Care (DPC) model as defined by Washington State law (RCW 48.150)."
                 }
               },
               {
@@ -108,7 +108,7 @@ export default function ServicesLayout({
                 "name": "What services are included in my membership?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "All memberships include physician-led virtual primary care visits, same-day or next-day appointments when available, secure non-urgent messaging, chronic condition management, medication management, care coordination, and access to wholesale laboratory pricing. Higher tiers add advanced laboratory interpretation, genetic testing guidance, cardiometabolic risk assessment, and extended access pathways."
+                  "text": "All memberships include doctor-led virtual primary care visits, same-day or next-day appointments when available, secure non-urgent messaging, chronic condition management, medication management, care coordination, and access to wholesale laboratory pricing. Higher tiers add advanced laboratory interpretation, genetic testing guidance, cardiometabolic risk assessment, and extended access pathways."
                 }
               },
               {
@@ -124,7 +124,7 @@ export default function ServicesLayout({
                 "name": "What is Direct Primary Care (DPC)?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Direct Primary Care is a membership-based healthcare model where you pay a monthly fee directly to your physician, removing insurance from the primary care relationship. This allows for longer visits, easier access, transparent pricing, and care focused on you rather than billing codes. DPC practices typically maintain smaller patient panels, enabling more personalized attention."
+                  "text": "Direct Primary Care is a membership-based healthcare model where you pay a monthly fee directly to your doctor, removing insurance from the primary care relationship. This allows for longer visits, easier access, transparent pricing, and care focused on you rather than billing codes. DPC practices typically maintain smaller patient panels, enabling more personalized attention."
                 }
               }
             ]
@@ -190,7 +190,7 @@ export default function ServicesLayout({
                 {
                   "@type": "Offer",
                   "name": "Executive Concierge",
-                  "description": "Highest level of personalized care with enhanced access and comprehensive health optimization",
+                  "description": "Highest level of personalized care with enhanced access and complete health optimization",
                   "price": "650-725",
                   "priceCurrency": "USD",
                   "priceSpecification": {

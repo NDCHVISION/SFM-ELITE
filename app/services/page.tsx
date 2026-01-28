@@ -60,7 +60,7 @@ const tiers = [
   {
     id: 'executive',
     name: 'Executive Concierge',
-    tagline: 'The highest level of physician-directed concierge care',
+    tagline: 'The highest level of doctor-directed concierge care',
     price: { monthly: 650, monthlyHigh: 725, annual: 585, annualHigh: 653 },
     description: 'Designed for individuals and families requiring enhanced access, coordination, and longitudinal oversight.',
     features: [
@@ -70,8 +70,8 @@ const tiers = [
       { text: 'Expanded access pathways for defined urgent needs', included: true },
       { text: 'Enhanced coordination with specialists and external providers', included: true },
       { text: 'Executive health planning and longitudinal oversight', included: true },
-      { text: 'Annual comprehensive health review', included: true },
-      { text: 'Enrollment by physician confirmation', included: true },
+      { text: 'Annual complete health review', included: true },
+      { text: 'Enrollment by doctor confirmation', included: true },
     ],
     cta: 'Join Waitlist for This Plan',
     popular: false,
@@ -105,7 +105,7 @@ const nonMemberPricing = [
 const faqs = [
   {
     q: 'What is Direct Primary Care?',
-    a: 'DPC is a membership-based model where you pay a monthly fee directly to your physician, removing insurance from the primary care relationship. This allows for longer visits, easier access, and care focused on you rather than billing codes.',
+    a: 'DPC is a membership-based model where you pay a monthly fee directly to your doctor, removing insurance from the primary care relationship. This allows for longer visits, easier access, and care focused on you rather than billing codes.',
   },
   {
     q: 'Do I still need health insurance?',
@@ -113,7 +113,7 @@ const faqs = [
   },
   {
     q: 'What if I need a specialist?',
-    a: 'Your Physician will coordinate referrals to trusted specialists and help navigate the process. Care coordination is included in all membership tiers.',
+    a: 'Your doctor will coordinate referrals to trusted specialists and help navigate the process. Care coordination is included in all membership tiers.',
   },
   {
     q: 'Is virtual care as effective as in-person?',
@@ -151,7 +151,7 @@ export default function ServicesPage() {
             </h1>
 
             <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-2xl">
-              Transparent pricing, comprehensive care, and the physician relationship you deserve. 
+              Transparent pricing, complete care, and the doctor relationship you deserve. 
               Choose the level of care that matches your health goals.
             </p>
 
@@ -184,7 +184,7 @@ export default function ServicesPage() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { icon: Users, label: 'One Physician', desc: 'One personal physician' },
+              { icon: Users, label: 'One Doctor', desc: 'One personal doctor' },
               { icon: Clock, label: 'Same-Day Access', desc: 'When you need it' },
               { icon: MessageCircle, label: 'Direct Messaging', desc: 'No phone trees' },
               { icon: FileText, label: 'No Surprise Bills', desc: 'Transparent pricing' },
@@ -420,10 +420,10 @@ export default function ServicesPage() {
               <strong>All memberships:</strong> Concierge Primary Care delivered under the Direct Primary Care (DPC) model.
             </p>
             <p className="text-xs text-sfm-charcoal/50 max-w-3xl mx-auto">
-              All services are subject to clinical appropriateness, physician judgment, and applicable law. Emergency services are not provided.
+              All services are subject to clinical appropriateness, good medical judgment, and applicable law. Emergency services are not provided.
             </p>
             <p className="text-xs text-sfm-charcoal/40 max-w-3xl mx-auto">
-              <sup>†</sup>Executive Concierge does not provide unrestricted or continuous physician availability. Access, responsiveness, and after-hours communication are subject to clinical appropriateness, triage protocols, and physician discretion.
+              <sup>†</sup>Executive Concierge does not provide unrestricted or continuous doctor availability. Access, responsiveness, and after-hours communication are subject to clinical appropriateness, triage protocols, and doctor discretion.
             </p>
           </div>
         </div>
@@ -485,7 +485,7 @@ export default function ServicesPage() {
                 {[
                   '15-minute rushed appointments',
                   '26+ day average wait for appointments',
-                  '2,300+ patients per physician',
+                  '2,300+ patients per doctor',
                   'Phone trees and callbacks',
                   'Surprise bills and copays',
                   'Different doctor each visit',
@@ -507,10 +507,10 @@ export default function ServicesPage() {
                 {[
                   '45-75 minute unhurried visits',
                   'Same-day or next-day access',
-                  'Approximately 200 patients per physician',
+                  'Approximately 200 patients per doctor',
                   'Direct messaging and calls',
                   'Transparent, predictable pricing',
-                  'One physician who knows you',
+                  'One doctor who knows you',
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-white text-sm">
                     <span className="w-5 h-5 rounded-full bg-sfm-gold/20 flex items-center justify-center flex-shrink-0">
