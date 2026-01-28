@@ -13,7 +13,7 @@ import PrimaryCTA from '@/components/PrimaryCTA'
 // HOME PAGE (CLIENT)
 // Notes:
 // - Keep SEO metadata (export const metadata) in a SERVER file (app/page.tsx or layout.tsx)
-// - This client component is safe to ship and can include JSON-LD via <Script>
+// - This client component can include JSON-LD via <Script>
 // =============================================================================
 
 // Institutional / verification links (safe + trust-building)
@@ -23,7 +23,7 @@ const EXTERNAL_URLS = {
   linkedinCompany: 'https://www.linkedin.com/company/sankofa-family-medicine/',
 }
 
-// Schema for SEO (JSON-LD). Keep factual and avoid performance/clinical outcome claims.
+// Schema for SEO (JSON-LD). Keep factual. Avoid outcome claims.
 const schemaGraph = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -33,7 +33,7 @@ const schemaGraph = {
       url: 'https://sankofafamilymedicine.com',
       name: 'Sankofa Family Medicine | Membership-Based Primary Care | Washington State',
       description:
-        'Membership-based primary care for Washington State. Board-certified family doctor. Longer visits, direct messaging, and care that remembers. Medicine That Remembers™.',
+        'Membership-based primary care for Washington State via telehealth. ABFM board-certified family physician. Longer visits, direct messaging (after enrollment), and care that remembers. Medicine That Remembers™.',
       dateModified: '2026-01-28',
       inLanguage: 'en-US',
       isPartOf: { '@id': 'https://sankofafamilymedicine.com/#website' },
@@ -58,8 +58,14 @@ const schemaGraph = {
       name: 'Sankofa Family Medicine',
       legalName: 'Sankofa Family Medicine PLLC',
       url: 'https://sankofafamilymedicine.com',
-      logo: { '@type': 'ImageObject', url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png', width: 512, height: 512 },
-      description: 'Membership-based primary care practice for Washington State patients via telehealth. Medicine That Remembers™.',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
+        width: 512,
+        height: 512,
+      },
+      description:
+        'Membership-based primary care practice for Washington State patients via telehealth. Medicine That Remembers™.',
       slogan: 'Medicine That Remembers™',
       medicalSpecialty: ['Family Medicine', 'Primary Care'],
       priceRange: '$225-$725/month',
@@ -78,9 +84,60 @@ const schemaGraph = {
         name: 'Membership Plans',
         url: 'https://sankofafamilymedicine.com/services',
         itemListElement: [
-          { '@type': 'Offer', name: 'Continuity Plan', price: '225-275', priceCurrency: 'USD' },
-          { '@type': 'Offer', name: 'Precision Plan', price: '325-375', priceCurrency: 'USD' },
-          { '@type': 'Offer', name: 'Executive Plan', price: '650-725', priceCurrency: 'USD' },
+          {
+            '@type': 'Offer',
+            name: 'Continuity',
+            category: 'Membership-Based Primary Care',
+            priceCurrency: 'USD',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Continuity Membership',
+              serviceType: 'Primary Care',
+            },
+            priceSpecification: {
+              '@type': 'AggregateOffer',
+              priceCurrency: 'USD',
+              lowPrice: '225',
+              highPrice: '275',
+              offerCount: '2',
+            },
+          },
+          {
+            '@type': 'Offer',
+            name: 'Precision',
+            category: 'Membership-Based Primary Care',
+            priceCurrency: 'USD',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Precision Membership',
+              serviceType: 'Primary Care',
+            },
+            priceSpecification: {
+              '@type': 'AggregateOffer',
+              priceCurrency: 'USD',
+              lowPrice: '325',
+              highPrice: '375',
+              offerCount: '2',
+            },
+          },
+          {
+            '@type': 'Offer',
+            name: 'Executive',
+            category: 'Membership-Based Primary Care',
+            priceCurrency: 'USD',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Executive Membership',
+              serviceType: 'Primary Care',
+            },
+            priceSpecification: {
+              '@type': 'AggregateOffer',
+              priceCurrency: 'USD',
+              lowPrice: '650',
+              highPrice: '725',
+              offerCount: '2',
+            },
+          },
         ],
       },
       contactPoint: [
@@ -126,7 +183,7 @@ const schemaGraph = {
           name: 'How much does membership cost?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Membership plans range from $225-$275/month (Continuity), $325-$375/month (Precision), and $650-$725/month (Executive). Founding members receive the lower end of each range.',
+            text: 'Membership plans range from $225-$275/month (Continuity), $325-$375/month (Precision), and $650-$725/month (Executive). Founding members receive the lower end of each range. Your exact rate is confirmed before enrollment.',
           },
         },
         {
@@ -154,9 +211,10 @@ export default function HomePageClient() {
   const [checkedItems, setCheckedItems] = useState<boolean[]>([false, false, false, false, false])
   const yesCount = checkedItems.filter(Boolean).length
   const assessmentRegionId = useId()
+  const assessmentHelpId = useId()
 
   const handleCheckChange = (index: number) => {
-    setCheckedItems(prev => {
+    setCheckedItems((prev) => {
       const next = [...prev]
       next[index] = !next[index]
       return next
@@ -272,7 +330,7 @@ export default function HomePageClient() {
                       },
                       {
                         title: 'The same doctor, every visit',
-                        text: "You'll work with one board-certified family doctor who follows your care over time.",
+                        text: "You'll work with one ABFM board-certified family physician who follows your care over time.",
                       },
                       {
                         title: 'Predictable membership pricing',
@@ -299,7 +357,7 @@ export default function HomePageClient() {
                   <p className="text-white/80 text-xl lg:text-2xl leading-relaxed max-w-lg">
                     Want care where we remember the full picture?
                     <br />
-                    Join a practice built for continuity, clear decisions, and long-term care.
+                    Join a practice built for continuity, clear next steps, and long-term care.
                   </p>
                 </div>
 
@@ -343,7 +401,7 @@ export default function HomePageClient() {
 
                     <span className="flex items-center gap-2 text-white/60 text-base">
                       <Shield className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
-                      <span>HIPAA-aligned workflows</span>
+                      <span>HIPAA-conscious privacy practices</span>
                     </span>
 
                     <a
@@ -369,7 +427,9 @@ export default function HomePageClient() {
                 <div className="opacity-0 animate-scale-in animation-delay-300 relative">
                   <div
                     className="absolute -inset-12"
-                    style={{ background: 'radial-gradient(ellipse at center, rgba(188, 152, 51, 0.15) 0%, rgba(188, 152, 51, 0.05) 50%, transparent 70%)' }}
+                    style={{
+                      background: 'radial-gradient(ellipse at center, rgba(188, 152, 51, 0.15) 0%, rgba(188, 152, 51, 0.05) 50%, transparent 70%)',
+                    }}
                     aria-hidden="true"
                   />
                   <div className="relative w-[300px] sm:w-[380px] lg:w-[460px] aspect-[3/4]">
@@ -391,7 +451,10 @@ export default function HomePageClient() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in animation-delay-1500 hidden lg:flex flex-col items-center gap-2" aria-hidden="true">
+        <div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in animation-delay-1500 hidden lg:flex flex-col items-center gap-2"
+          aria-hidden="true"
+        >
           <span className="text-white/30 text-xs uppercase tracking-widest">Scroll</span>
           <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center pt-2">
             <ChevronDown className="w-4 h-4 text-white/40 animate-bounce motion-reduce:animate-none" />
@@ -442,7 +505,9 @@ export default function HomePageClient() {
                   <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-sfm-gold/10 flex items-center justify-center transition-all duration-300 group-hover:bg-sfm-gold/20 group-hover:scale-110 motion-reduce:transition-none motion-reduce:transform-none">
                     <item.icon className="w-8 h-8 text-sfm-gold" aria-hidden="true" />
                   </div>
-                  <h3 className="font-display text-2xl text-sfm-navy mb-4 transition-colors duration-300 group-hover:text-sfm-gold motion-reduce:transition-none">{item.title}</h3>
+                  <h3 className="font-display text-2xl text-sfm-navy mb-4 transition-colors duration-300 group-hover:text-sfm-gold motion-reduce:transition-none">
+                    {item.title}
+                  </h3>
                   <p className="text-sfm-navy/70 text-lg leading-relaxed">{item.description}</p>
                 </article>
               </ScrollReveal>
@@ -497,7 +562,13 @@ export default function HomePageClient() {
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
                 <article className="relative group overflow-hidden rounded-2xl aspect-[4/5] ring-2 ring-transparent hover:ring-sfm-gold/40 transition-all duration-300 motion-reduce:transition-none">
-                  <Image src={item.src} alt={item.alt} fill loading="lazy" className="object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none" />
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    loading="lazy"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy/90 via-sfm-navy/30 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-6">
                     <p className="text-white font-display text-lg lg:text-xl mb-1">{item.label}</p>
@@ -612,9 +683,12 @@ export default function HomePageClient() {
 
             <ScrollReveal delay={0.2}>
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-sfm-border-light">
-                <p className="font-display text-2xl text-sfm-navy mb-6">Check all that apply to you:</p>
+                <p className="font-display text-2xl text-sfm-navy mb-2">Check all that apply to you:</p>
+                <p id={assessmentHelpId} className="sr-only">
+                  Your selections update the message below.
+                </p>
 
-                <div className="space-y-5 mb-8">
+                <div className="space-y-5 mb-8 mt-6">
                   {[
                     'I want more time with my doctor.',
                     'I want the same doctor who follows my care over time.',
@@ -639,6 +713,7 @@ export default function HomePageClient() {
                         onChange={() => handleCheckChange(index)}
                         aria-label={item}
                         aria-controls={assessmentRegionId}
+                        aria-describedby={assessmentHelpId}
                       />
 
                       <span className="text-sfm-navy/80 text-lg">{item}</span>
@@ -734,7 +809,10 @@ export default function HomePageClient() {
                   {tier.featured && (
                     <>
                       <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none" aria-hidden="true">
-                        <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent" style={{ animation: 'shine 4s ease-in-out infinite' }} />
+                        <div
+                          className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent"
+                          style={{ animation: 'shine 4s ease-in-out infinite' }}
+                        />
                       </div>
                       <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
                         <span className="px-4 py-1.5 bg-sfm-gold text-sfm-navy text-base font-semibold rounded-full">Most Popular</span>
@@ -828,7 +906,13 @@ export default function HomePageClient() {
                 <Link href={article.href} className="group block focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded-2xl">
                   <article className="bg-white rounded-2xl overflow-hidden border border-sfm-border-light group-hover:border-sfm-border transition-all motion-reduce:transition-none group-hover:shadow-lg">
                     <div className="aspect-[16/10] relative overflow-hidden">
-                      <Image src={article.image} alt={article.title} fill loading="lazy" className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none" />
+                      <Image
+                        src={article.image}
+                        alt={article.title}
+                        fill
+                        loading="lazy"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
+                      />
                       <div className="absolute top-4 left-4">
                         <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-base font-medium text-sfm-navy">
                           {article.category}
@@ -924,7 +1008,7 @@ export default function HomePageClient() {
 
               <span className="flex items-center gap-2">
                 <Shield className="w-5 h-5" aria-hidden="true" />
-                HIPAA-aligned workflows
+                HIPAA-conscious privacy practices
               </span>
 
               <span className="flex items-center gap-2">
