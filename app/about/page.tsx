@@ -571,7 +571,7 @@ export default function AboutPage() {
                       </Link>{' '}
                       or explore{' '}
                       <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
-                         how Direct Primary Care (DPC) differs
+                        how Direct Primary Care (DPC) differs
                       </Link>.
                     </p>
                   </div>
