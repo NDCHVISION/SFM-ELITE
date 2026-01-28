@@ -555,6 +555,21 @@ export default function AboutPage() {
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sfm-gold/50 to-transparent" aria-hidden="true" />
         </section>
 
+        {/* SFM LOGO VELVET SECTION */}
+        <section className="py-16 bg-white" aria-label="Sankofa Family Medicine logo">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="relative h-64 w-full overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src="/images/SFMLOGOBLUEVELVET.png"
+                alt="Sankofa Family Medicine logo on elegant blue velvet background"
+                fill
+                className="object-cover"
+                sizes="(max-width: 896px) 100vw, 896px"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* SANKOFA PRINCIPLE SECTION */}
         <section className="py-24 bg-white" aria-labelledby="sankofa-principle-heading">
           <div className="max-w-6xl mx-auto px-6">
@@ -594,8 +609,8 @@ export default function AboutPage() {
                   <div className="absolute inset-12 bg-gradient-to-br from-sfm-gold/30 to-sfm-gold/10 rounded-full blur-3xl animate-pulse-slow" aria-hidden="true" />
                   <div className="absolute inset-0 flex items-center justify-center p-16">
                     <Image
-                      src="/images/SFMLOGOBLUEVELVET.png"
-                      alt="Sankofa Family Medicine logo on elegant blue velvet background, the official symbol of the practice"
+                      src="/images/sankofa-gold-sculpture.png"
+                      alt="Gold Sankofa bird sculpture, symbolizing the Akan principle of learning from the past"
                       width={280}
                       height={280}
                       className="relative drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
