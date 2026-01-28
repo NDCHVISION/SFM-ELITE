@@ -227,7 +227,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Billing Toggle */}
-      <section className="py-6 bg-gradient-to-b from-white to-sfm-cream/30">
+      <section className="py-2 bg-gradient-to-b from-white to-sfm-cream/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-center">
             <div className="inline-flex items-center gap-4 p-2 bg-white rounded-2xl shadow-xl shadow-sfm-navy/10 border border-gray-100">
@@ -514,7 +514,7 @@ export default function ServicesPage() {
               <p className="text-sfm-gold text-sm uppercase tracking-wider mb-4">Sankofa Family Medicine</p>
               <ul className="space-y-3">
                 {[
-                  '45-60 minute unhurried visits',
+                  '45-75 minute unhurried visits',
                   'Same-day or next-day access',
                   'Approximately 200 patients per physician',
                   'Direct messaging and calls',
