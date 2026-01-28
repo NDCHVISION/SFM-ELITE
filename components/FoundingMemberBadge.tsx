@@ -33,7 +33,7 @@ export default function FoundingMemberBadge() {
           </div>
           
           {/* Badge text */}
-          <span className="text-white/80 text-sm font-medium tracking-wide uppercase group-hover:text-sfm-gold transition-colors">
+          <span className="text-sfm-navy text-sm font-medium tracking-wide uppercase group-hover:text-sfm-gold transition-colors">
             Founders waitlist capacity: about 30
           </span>
         </div>
