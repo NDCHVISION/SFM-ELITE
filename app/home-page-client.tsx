@@ -590,108 +590,148 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* MEMBERSHIP PREVIEW */}
-      <section id="membership-plans" className="relative py-24 lg:py-32 bg-white overflow-hidden" aria-labelledby="membership-heading">
-        <div className="max-w-7xl mx-auto px-6">
-          <ScrollReveal className="text-center mb-16">
-            <span className="inline-block text-sfm-gold text-base font-semibold tracking-widest uppercase mb-6">Membership Plans</span>
-            <h2 id="membership-heading" className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight" data-speakable>
-              Membership-Based Primary Care
-            </h2>
-            <p className="text-xl text-sfm-navy/70 max-w-2xl mx-auto mb-4">
-              When enrollment opens, memberships are expected to include virtual visits, secure messaging, and wholesale lab pricing. This is Direct Primary Care (DPC). We do not bill insurance for primary care.
+    /* MEMBERSHIP PREVIEW */
+<section
+  id="membership-plans"
+  className="relative py-24 lg:py-32 bg-white overflow-hidden"
+  aria-labelledby="membership-heading"
+>
+  <div className="max-w-7xl mx-auto px-6">
+    <ScrollReveal className="text-center mb-16">
+      <span className="inline-block text-sfm-gold text-base font-semibold tracking-widest uppercase mb-6">
+        Membership Plans
+      </span>
+
+      <h2
+        id="membership-heading"
+        className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight"
+        data-speakable
+      >
+        Membership-Based Primary Care
+      </h2>
+
+      {/* Smaller gray text + more breathing room + wider max width */}
+      <p className="text-base sm:text-lg text-sfm-navy/65 max-w-3xl mx-auto mt-4 leading-relaxed">
+        When enrollment opens, memberships are expected to include virtual visits, secure messaging, and wholesale lab
+        pricing. This is Direct Primary Care (DPC). We do not bill insurance for primary care.
+      </p>
+
+      <p className="text-sm sm:text-base text-sfm-navy/55 max-w-3xl mx-auto mt-3 leading-relaxed">
+        We do not bill insurance for membership services, but you may use insurance for labs, imaging, and specialists
+        outside the membership. Services are available only to patients located in Washington State.
+      </p>
+
+      {/* Optional subtle divider for premium separation */}
+      <div className="mt-8 mx-auto max-w-2xl border-t border-sfm-navy/10" />
+
+      {/* Gold line: forced true centering + controlled width + moved closer to tiers */}
+      <div className="mt-6 flex justify-center">
+        <p className="text-sfm-gold font-medium text-base sm:text-lg text-center max-w-2xl leading-snug">
+          <Link
+            href="/membership-terms#founding-member-program"
+            className="underline underline-offset-4 hover:text-sfm-azure transition-colors duration-300 motion-reduce:transition-none"
+          >
+            Founding members
+          </Link>{' '}
+          receive the lower end of each range. Your exact rate is confirmed before enrollment.
+        </p>
+      </div>
+    </ScrollReveal>
+
+    {/* Tiers pulled slightly closer to the copy */}
+    <ScrollRevealGroup className="mt-8 grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      {[
+        {
+          name: 'Continuity',
+          priceRange: '$225-$275',
+          description: 'Essential virtual primary care designed to restore the continuity traditional medicine has lost.',
+          featured: false,
+          anchor: 'continuity',
+        },
+        {
+          name: 'Precision',
+          priceRange: '$325-$375',
+          description: 'Everything in Continuity plus deeper preventive insight and advanced diagnostics when appropriate.',
+          featured: true,
+          anchor: 'precision',
+        },
+        {
+          name: 'Executive',
+          priceRange: '$650-$725',
+          description: 'Enhanced access, coordination, and comprehensive health planning for individuals and families.',
+          featured: false,
+          anchor: 'executive',
+        },
+      ].map((tier, i) => (
+        <ScrollReveal key={tier.name} delay={i * 0.1}>
+          <article
+            className={`relative rounded-2xl p-8 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl motion-reduce:transition-none motion-reduce:transform-none overflow-hidden ${
+              tier.featured
+                ? 'bg-sfm-navy text-white ring-2 ring-sfm-gold'
+                : 'bg-white border border-sfm-border-light hover:border-sfm-border hover:shadow-lg'
+            }`}
+          >
+            {tier.featured && (
+              <>
+                <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none" aria-hidden="true">
+                  <div
+                    className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent"
+                    style={{ animation: 'shine 4s ease-in-out infinite' }}
+                  />
+                </div>
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                  <span className="px-4 py-1.5 bg-sfm-gold text-sfm-navy text-base font-semibold rounded-full">
+                    Most Popular
+                  </span>
+                </div>
+              </>
+            )}
+
+            <h3 className={`font-display text-2xl mb-2 relative z-10 ${tier.featured ? 'text-white' : 'text-sfm-navy'}`}>
+              {tier.name}
+            </h3>
+            <p className={`text-base mb-4 relative z-10 ${tier.featured ? 'text-white/60' : 'text-sfm-navy/50'}`}>
+              Membership-Based Primary Care (DPC model)
             </p>
-            <p className="text-lg text-sfm-navy/60 max-w-2xl mx-auto mb-4">
-              We do not bill insurance for membership services, but you may use insurance for labs, imaging, and specialists outside the membership. Services are available only to patients located in Washington State.
+
+            <div className="mb-4 relative z-10">
+              <span className={`text-4xl font-display ${tier.featured ? 'text-sfm-gold' : 'text-sfm-navy'}`}>
+                {tier.priceRange}
+              </span>
+              <span className={`text-lg ${tier.featured ? 'text-white/70' : 'text-sfm-navy/60'}`}>/month</span>
+            </div>
+
+            <p className={`text-lg mb-6 leading-relaxed relative z-10 ${tier.featured ? 'text-white/80' : 'text-sfm-navy/70'}`}>
+              {tier.description}
             </p>
-            <p className="text-sfm-gold font-medium text-lg text-center">
-              <Link href="/membership-terms#founding-member-program" className="hover:underline hover:text-sfm-azure transition-colors duration-300 motion-reduce:transition-none">
-                Founding members
-              </Link>{' '}
-              receive the lower end of each range. Your exact rate is confirmed before enrollment.
-            </p>
-          </ScrollReveal>
 
-          <ScrollRevealGroup className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              {
-                name: 'Continuity',
-                priceRange: '$225-$275',
-                description: 'Essential virtual primary care designed to restore the continuity traditional medicine has lost.',
-                featured: false,
-                anchor: 'continuity',
-              },
-              {
-                name: 'Precision',
-                priceRange: '$325-$375',
-                description: 'Everything in Continuity plus deeper preventive insight and advanced diagnostics when appropriate.',
-                featured: true,
-                anchor: 'precision',
-              },
-              {
-                name: 'Executive',
-                priceRange: '$650-$725',
-                description: 'Enhanced access, coordination, and comprehensive health planning for individuals and families.',
-                featured: false,
-                anchor: 'executive',
-              },
-            ].map((tier, i) => (
-              <ScrollReveal key={tier.name} delay={i * 0.1}>
-                <article
-                  className={`relative rounded-2xl p-8 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl motion-reduce:transition-none motion-reduce:transform-none overflow-hidden ${
-                    tier.featured ? 'bg-sfm-navy text-white ring-2 ring-sfm-gold' : 'bg-white border border-sfm-border-light hover:border-sfm-border hover:shadow-lg'
-                  }`}
-                >
-                  {tier.featured && (
-                    <>
-                      <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none" aria-hidden="true">
-                        <div
-                          className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent"
-                          style={{ animation: 'shine 4s ease-in-out infinite' }}
-                        />
-                      </div>
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                        <span className="px-4 py-1.5 bg-sfm-gold text-sfm-navy text-base font-semibold rounded-full">Most Popular</span>
-                      </div>
-                    </>
-                  )}
-
-                  <h3 className={`font-display text-2xl mb-2 relative z-10 ${tier.featured ? 'text-white' : 'text-sfm-navy'}`}>{tier.name}</h3>
-                  <p className={`text-base mb-4 relative z-10 ${tier.featured ? 'text-white/60' : 'text-sfm-navy/50'}`}>
-                    Membership-Based Primary Care (DPC model)
-                  </p>
-
-                  <div className="mb-4 relative z-10">
-                    <span className={`text-4xl font-display ${tier.featured ? 'text-sfm-gold' : 'text-sfm-navy'}`}>{tier.priceRange}</span>
-                    <span className={`text-lg ${tier.featured ? 'text-white/70' : 'text-sfm-navy/60'}`}>/month</span>
-                  </div>
-
-                  <p className={`text-lg mb-6 leading-relaxed relative z-10 ${tier.featured ? 'text-white/80' : 'text-sfm-navy/70'}`}>{tier.description}</p>
-
-                  <Link
-                    href={`/services#${tier.anchor}`}
-                    className={`inline-flex items-center gap-2 text-lg font-medium transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded relative z-10 ${
-                      tier.featured ? 'text-sfm-gold hover:text-sfm-gold-light focus:ring-offset-sfm-navy' : 'text-sfm-azure hover:text-sfm-gold'
-                    }`}
-                  >
-                    View Plan Details <ArrowRight className="w-5 h-5" aria-hidden="true" />
-                  </Link>
-                </article>
-              </ScrollReveal>
-            ))}
-          </ScrollRevealGroup>
-
-          <div className="text-center mt-12">
             <Link
-              href="/services"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-navy text-white font-medium rounded-xl hover:bg-sfm-azure transition-colors motion-reduce:transition-none text-lg focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2"
+              href={`/services#${tier.anchor}`}
+              className={`inline-flex items-center gap-2 text-lg font-medium transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded relative z-10 ${
+                tier.featured
+                  ? 'text-sfm-gold hover:text-sfm-gold-light focus:ring-offset-sfm-navy'
+                  : 'text-sfm-azure hover:text-sfm-gold'
+              }`}
             >
-              View All Plan Details
-              <ArrowRight className="w-5 h-5" aria-hidden="true" />
+              View Plan Details <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </Link>
-          </div>
-        </div>
-      </section>
+          </article>
+        </ScrollReveal>
+      ))}
+    </ScrollRevealGroup>
+
+    <div className="text-center mt-12">
+      <Link
+        href="/services"
+        className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-navy text-white font-medium rounded-xl hover:bg-sfm-azure transition-colors motion-reduce:transition-none text-lg focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2"
+      >
+        View All Plan Details
+        <ArrowRight className="w-5 h-5" aria-hidden="true" />
+      </Link>
+    </div>
+  </div>
+</section>
+
 
       {/* BLOG PREVIEW */}
       <section className="relative py-24 lg:py-32 bg-sfm-cream overflow-hidden" aria-labelledby="blog-heading">
