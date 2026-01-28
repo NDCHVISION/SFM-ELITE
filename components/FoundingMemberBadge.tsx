@@ -41,7 +41,7 @@ export default function FoundingMemberBadge() {
 
       {/* Disclaimer text */}
       <p className="text-sfm-text-muted text-xs max-w-2xl text-center">
-        Waitlist capacity tracking. Enrollment begins February 2026.
+        Waitlist capacity tracking. Enrollment begins early 2026.
       </p>
     </div>
   )

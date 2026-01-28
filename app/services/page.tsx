@@ -144,11 +144,6 @@ export default function ServicesPage() {
           </div>
           
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-8">
-              <Sparkles className="w-4 h-4 text-sfm-gold" />
-              <span className="text-white/90 text-sm font-medium">Membership Plans</span>
-            </div>
-
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
               Healthcare That Fits
               <br />
@@ -226,10 +221,31 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Billing Toggle */}
-      <section className="py-2 bg-gradient-to-b from-white to-sfm-cream/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-center">
+      {/* Pricing Cards */}
+      <section className="section-padding bg-gradient-to-b from-sfm-cream/30 via-white to-sfm-cream/20 relative">
+        {/* Ambient background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 -left-32 w-96 h-96 bg-sfm-gold/5 rounded-full blur-[120px]" />
+          <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-sfm-azure/5 rounded-full blur-[120px]" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-6">
+          {/* Section header */}
+          <div className="text-center mb-12">
+            <p className="text-sfm-gold text-sm tracking-[0.3em] uppercase mb-4 font-medium">Membership</p>
+            <h2 className="font-display text-4xl text-sfm-navy mb-4">Choose Your Level of Care</h2>
+            <p className="text-muted max-w-xl mx-auto">Every plan includes generous virtual visit access, direct secure messaging, and wholesale lab pricing.</p>
+            <p className="text-muted max-w-xl mx-auto mt-4">
+              Founding members are joining a limited waitlist.<br />
+              Plan selection helps us prioritize outreach when enrollment opens.
+            </p>
+          </div>
+
+          {/* Founding Member Badge */}
+          <FoundingMemberBadge />
+
+          {/* Billing Toggle */}
+          <div className="flex justify-center mb-8">
             <div className="inline-flex items-center gap-4 p-2 bg-white rounded-2xl shadow-xl shadow-sfm-navy/10 border border-gray-100">
               <button
                 onClick={() => setBillingCycle('monthly')}
@@ -256,31 +272,6 @@ export default function ServicesPage() {
               </button>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Pricing Cards */}
-      <section className="section-padding bg-gradient-to-b from-sfm-cream/30 via-white to-sfm-cream/20 relative">
-        {/* Ambient background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 -left-32 w-96 h-96 bg-sfm-gold/5 rounded-full blur-[120px]" />
-          <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-sfm-azure/5 rounded-full blur-[120px]" />
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-6">
-          {/* Section header */}
-          <div className="text-center mb-12">
-            <p className="text-sfm-gold text-sm tracking-[0.3em] uppercase mb-4 font-medium">Membership</p>
-            <h2 className="font-display text-4xl text-sfm-navy mb-4">Choose Your Level of Care</h2>
-            <p className="text-muted max-w-xl mx-auto">Every plan includes generous virtual visit access, direct secure messaging, and wholesale lab pricing.</p>
-            <p className="text-muted max-w-xl mx-auto mt-4">
-              Founding members are joining a limited waitlist.<br />
-              Plan selection helps us prioritize outreach when enrollment opens.
-            </p>
-          </div>
-
-          {/* Founding Member Badge */}
-          <FoundingMemberBadge />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {tiers.map((tier, index) => (
@@ -624,7 +615,7 @@ export default function ServicesPage() {
                 <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">™</span>
               </h2>
               <p className="text-white/70 text-lg mb-10 max-w-2xl">
-                Enrollment begins February 2026. No payment required today.
+                Enrollment begins early 2026. No payment required today.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
