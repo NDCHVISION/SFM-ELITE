@@ -30,7 +30,7 @@ export default function ContactPage() {
     setStatusMessage('Submitting your information...')
 
     try {
-      const response = await fetch('https://formspree.io/f/manrdjgv', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -49,6 +49,9 @@ export default function ContactPage() {
       if (response.ok) {
         setIsSubmitted(true)
         setStatusMessage('Success! You have been added to our updates list.')
+      } else if (response.status === 429) {
+        setError('You have made too many requests. Please wait a few minutes before trying again.')
+        setStatusMessage('Rate limited. Please wait before trying again.')
       } else {
         setError('Something went wrong. Please try again or email us directly.')
         setStatusMessage('Error submitting form. Please try again.')
