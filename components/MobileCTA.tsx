@@ -67,12 +67,12 @@ export default function MobileCTA() {
 
         {/* Trust indicator – compliance-safe */}
         <div className="flex items-center justify-center gap-4 mt-2 text-xs text-sfm-text-muted">
-          <span className="flex items-center gap-1">
+          <span className="flex items-center gap-2 mr-1">
             <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" aria-hidden="true" />
             Enrollment begins early 2026
           </span>
           <span className="w-px h-3 bg-gray-200" aria-hidden="true" />
-          <span>No payment to join</span>
+          <span className="ml-1">No payment to join</span>
         </div>
 
         {/* Screen reader-only clarity */}
