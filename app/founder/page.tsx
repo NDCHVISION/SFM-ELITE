@@ -363,17 +363,7 @@ export default function FounderPage() {
               <p>Dr. Yaw Nkrumah is a board-certified family doctor and the founder of Sankofa Family Medicine.</p>
               <p>He practices relationship-based family medicine focused on continuity, prevention, and careful follow-through over time.</p>
               <p>He trained at the Medical University of South Carolina and completed his Family Medicine residency in Washington State. During training, he saw how often care breaks down when doctors change and history gets lost.</p>
-              <p className="text-sfm-navy/70 text-lg mt-2">
-                Sankofa Family Medicine was created to fix that problem. The goal is simple: one doctor, one relationship, building over time.
-                <sup className="text-sfm-gold font-semibold"> *</sup>
-              </p>
-              <div className="mt-6 border-l-2 border-sfm-gold/30 pl-4 text-sm text-sfm-navy/60 leading-relaxed space-y-2">
-                <p>
-                  <span className="font-semibold text-sfm-navy/70">* Telehealth note:</span> Telehealth has limits. Some concerns require an in-person exam.
-                  For emergencies, call 911 or go to the nearest emergency department.
-                </p>
-                <p>Dr. Nkrumah may refer to local providers when clinically appropriate. Individual health outcomes vary.</p>
-              </div>
+              <p>Sankofa Family Medicine was created to fix that problem. The goal is simple: one doctor, one relationship, building over time.</p>
             </article>
 
             <figure className="relative order-1 lg:order-2 group">
@@ -536,8 +526,9 @@ export default function FounderPage() {
             </Link>
           </div>
 
-          <div className="mt-10 space-y-4 text-white/50 text-sm max-w-lg mx-auto leading-relaxed">
+          <div className="mt-10 space-y-3 text-white/50 text-sm max-w-lg mx-auto leading-relaxed">
             <p>Founders Waitlist only. No payment is required to join. Joining does not guarantee enrollment. Joining does not create a doctor-patient relationship. Please do not submit medical information through the waitlist form. Services are available only to patients located in Washington State.</p>
+            <p>Telehealth has limits. Some concerns require an in-person exam. Dr. Nkrumah may refer to local providers when clinically appropriate. Individual health outcomes vary.</p>
             <p>Not for emergencies. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department.</p>
           </div>
 
@@ -573,4 +564,5 @@ export default function FounderPage() {
     </>
   )
 }
+
 
