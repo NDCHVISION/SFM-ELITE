@@ -167,6 +167,7 @@ const nextConfig = {
         permanent: true,
       },
       // Redirect /locations/{city} to /locations/washington/{city}
+      // Note: Different from root path redirects above - these handle the /locations prefix
       {
         source: '/locations/seattle',
         destination: '/locations/washington/seattle',
