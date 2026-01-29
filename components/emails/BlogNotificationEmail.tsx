@@ -275,11 +275,11 @@ export function generateSubscriptionConfirmationEmail(unsubscribeUrl: string): s
                 <li style="margin-bottom: 8px;"><span style="color: #C9A227;">✦</span> In-depth articles on <span style="color: #C9A227;">precision medicine</span> and personalized care</li>
                 <li style="margin-bottom: 8px;"><span style="color: #C9A227;">✦</span> <span style="color: #C9A227;">Wellness updates</span> to support your health journey</li>
                 <li style="margin-bottom: 8px;"><span style="color: #C9A227;">✦</span> Evidence-based health insights you can trust</li>
-                <li><span style="color: #C9A227;">✦</span> Updates on preventive care and direct primary care</li>
+                <li><span style="color: #C9A227;">✦</span> Insights on Preventive Care, Direct Primary Care, Medicine that Remembers, and other topics</li>
               </ul>
               
               <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
-                I look forward to sharing valuable health insights with you. Together, let's build a healthier future—one that remembers the wisdom of the past.
+                I look forward to sharing valuable health insights with you. Together, let's build a healthier future, one that remembers the wisdom of the past.
               </p>
               
               <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
