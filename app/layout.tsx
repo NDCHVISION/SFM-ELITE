@@ -370,58 +370,66 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ],
 
     founder: {
-      '@type': 'Physician',
       '@id': 'https://sankofafamilymedicine.com/#founder',
-      name: 'Yaw A. Nkrumah, MD',
-      givenName: 'Yaw',
-      familyName: 'Nkrumah',
-      honorificSuffix: 'MD',
-      jobTitle: 'Founder and Medical Director',
-      url: 'https://sankofafamilymedicine.com/founder',
-      image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
-      medicalSpecialty: { '@type': 'MedicalSpecialty', name: 'Family Medicine' },
-      alumniOf: [
-        {
-          '@type': 'CollegeOrUniversity',
-          name: 'Medical University of South Carolina',
-          sameAs: 'https://web.musc.edu/',
-        },
-        {
-          '@type': 'EducationalOrganization',
-          name: 'Kadlec Family Medicine Residency',
-          address: { '@type': 'PostalAddress', addressRegion: 'WA', addressCountry: 'US' },
-        },
-      ],
-      hasCredential: [
-        {
-          '@type': 'EducationalOccupationalCredential',
-          credentialCategory: 'degree',
-          name: 'Doctor of Medicine (MD)',
-        },
-        {
-          '@type': 'EducationalOccupationalCredential',
-          credentialCategory: 'certification',
-          name: 'Board Certified in Family Medicine',
-          recognizedBy: {
-            '@type': 'Organization',
-            name: 'American Board of Family Medicine',
-            sameAs: 'https://www.theabfm.org/',
-          },
-        },
-        {
-          '@type': 'EducationalOccupationalCredential',
-          credentialCategory: 'license',
-          name: 'Washington State Medical License',
-          recognizedBy: {
-            '@type': 'Organization',
-            name: 'Washington Medical Commission',
-            sameAs: 'https://wmc.wa.gov/',
-          },
-        },
-      ],
     },
 
     sameAs: ['https://www.linkedin.com/company/sankofa-family-medicine'],
+  }
+
+  const founderSchema = {
+    '@context': 'https://schema.org',
+    '@type': ['Person', 'Physician'],
+    '@id': 'https://sankofafamilymedicine.com/#founder',
+    name: 'Yaw A. Nkrumah, MD',
+    givenName: 'Yaw',
+    familyName: 'Nkrumah',
+    honorificSuffix: 'MD',
+    jobTitle: 'Founder and Medical Director',
+    url: 'https://sankofafamilymedicine.com/founder',
+    image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
+    medicalSpecialty: 'Family medicine',
+    worksFor: {
+      '@id': 'https://sankofafamilymedicine.com/#organization',
+    },
+    alumniOf: [
+      {
+        '@type': 'CollegeOrUniversity',
+        name: 'Medical University of South Carolina',
+        sameAs: 'https://web.musc.edu/',
+      },
+      {
+        '@type': 'EducationalOrganization',
+        name: 'Kadlec Family Medicine Residency',
+        address: { '@type': 'PostalAddress', addressRegion: 'WA', addressCountry: 'US' },
+      },
+    ],
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'degree',
+        name: 'Doctor of Medicine (MD)',
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'certification',
+        name: 'Board Certified in Family Medicine',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'American Board of Family Medicine',
+          sameAs: 'https://www.theabfm.org/',
+        },
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'license',
+        name: 'Washington State Medical License',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'Washington Medical Commission',
+          sameAs: 'https://wmc.wa.gov/',
+        },
+      },
+    ],
   }
 
   const websiteSchema = {
@@ -490,6 +498,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(founderSchema) }}
         />
         <script
           type="application/ld+json"
