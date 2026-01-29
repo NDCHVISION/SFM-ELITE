@@ -653,7 +653,7 @@ const schemaGraph = {
       },
       sameAs: [
         'https://www.linkedin.com/company/sankofafamilymedicine',
-        'https://twitter.com/sankofafamilymed',
+        'https://x.com/sankofafammed',
       ],
       slogan: 'Medicine That Remembers™',
       knowsAbout: [
