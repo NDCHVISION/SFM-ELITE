@@ -343,7 +343,7 @@ export default function AboutPage() {
           />
 
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-32">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-3xl">
               {/* Content */}
               <div className="animate-fade-in-up">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/10 mb-8">
@@ -407,53 +407,6 @@ export default function AboutPage() {
                   Clinical care begins early 2026. No payment required today.
                 </p>
               </div>
-
-              {/* Two-column Sankofa layout: Logo + Text */}
-              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row gap-8 items-start">
-                {/* LEFT Column: Logo Image */}
-                <div className="md:w-1/2 w-full">
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                    <Image
-                      src="/images/SFMLOGOBLUEVELVET.png"
-                      alt="Sankofa Family Medicine logo on elegant blue velvet background"
-                      fill
-                      className="object-cover"
-                      priority
-                    />
-                  </div>
-                </div>
-
-                {/* RIGHT Column: Text Content */}
-                <div className="md:w-1/2 w-full">
-                  <p className="text-sfm-gold font-display text-lg mb-1">Sankofa</p>
-                  <p className="text-white/70 text-sm italic mb-6">Retrieve what matters from the past. Apply it deliberately.</p>
-                  
-                  <p className="section-label text-sfm-gold/80">The Principle</p>
-                  <h2 className="font-display text-3xl md:text-4xl text-white mb-6">
-                    What does Sankofa mean?
-                  </h2>
-                  <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-8" aria-hidden="true" />
-
-                  <div className="speakable-sankofa space-y-6 text-white/70 leading-relaxed">
-                    <p>
-                      Sankofa is an Akan principle from West Africa, symbolized by a bird looking backward while moving forward. It conveys that it is right and necessary to return to the past, retrieve what was learned, and carry it forward for a higher purpose.
-                    </p>
-                    <p>
-                      In healthcare, this principle highlights a common challenge. Medical records often fragment across systems, physicians may change between visits, and patients are frequently asked to repeat their history when continuity is not preserved.
-                    </p>
-                    <p>
-                      Sankofa Family Medicine was designed for continuity. One physician who knows your history - visit after visit - so medical decisions build instead of reset. Learn more about our{' '}
-                      <Link href="/services" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
-                        telehealth primary care services
-                      </Link>{' '}
-                      or explore{' '}
-                      <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
-                        how Direct Primary Care (DPC) differs
-                      </Link>.
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -462,6 +415,58 @@ export default function AboutPage() {
             className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sfm-gold/50 to-transparent"
             aria-hidden="true"
           />
+        </section>
+
+        {/* ================================================================= */}
+        {/* SANKOFA PRINCIPLE SECTION */}
+        {/* ================================================================= */}
+        <section className="py-24 bg-sfm-navy" aria-labelledby="sankofa-heading">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* LEFT: Bird Image */}
+              <div className="relative">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/images/SFMLOGOBLUEVELVET.png"
+                    alt="Sankofa Family Medicine logo on elegant blue velvet background"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              
+              {/* RIGHT: Principle Text */}
+              <div>
+                <p className="text-sfm-gold font-display text-lg mb-1">Sankofa</p>
+                <p className="text-white/70 text-sm italic mb-6">
+                  Retrieve what matters from the past. Apply it deliberately.
+                </p>
+                <p className="section-label text-sfm-gold/80">The Principle</p>
+                <h2 id="sankofa-heading" className="font-display text-3xl md:text-4xl text-white mb-6">
+                  What does Sankofa mean?
+                </h2>
+                <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-8" aria-hidden="true" />
+                <div className="speakable-sankofa space-y-6 text-white/70 leading-relaxed">
+                  <p>
+                    Sankofa is an Akan principle from West Africa, symbolized by a bird looking backward while moving forward. It conveys that it is right and necessary to return to the past, retrieve what was learned, and carry it forward for a higher purpose.
+                  </p>
+                  <p>
+                    In healthcare, this principle highlights a common challenge. Medical records often fragment across systems, physicians may change between visits, and patients are frequently asked to repeat their history when continuity is not preserved.
+                  </p>
+                  <p>
+                    Sankofa Family Medicine was designed for continuity. One physician who knows your history - visit after visit - so medical decisions build instead of reset. Learn more about our{' '}
+                    <Link href="/services" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                      telehealth primary care services
+                    </Link>{' '}
+                    or explore{' '}
+                    <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                      how Direct Primary Care (DPC) differs
+                    </Link>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* ================================================================= */}
