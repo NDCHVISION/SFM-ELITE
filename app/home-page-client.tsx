@@ -3,7 +3,6 @@
 import { useId, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import Script from 'next/script'
 import { ArrowRight, Clock, MessageCircle, Shield, Heart, CheckCircle2, Award, ChevronDown, FileText } from 'lucide-react'
 import CareJourney from '@/components/CareJourney'
 import ScrollReveal, { ScrollRevealGroup } from '@/components/ScrollReveal'
@@ -12,8 +11,10 @@ import PrimaryCTA from '@/components/PrimaryCTA'
 // =============================================================================
 // HOME PAGE (CLIENT)
 // Notes:
-// - Keep SEO metadata (export const metadata) in a SERVER file (app/page.tsx or layout.tsx)
-// - This client component is safe to ship and can include JSON-LD via <Script>
+// - SEO metadata lives in app/page.tsx (server component)
+// - JSON-LD schema lives in app/page.tsx (server component)
+// - This client component handles interactivity only
+// - Skip link is handled in layout.tsx - do not duplicate here
 // =============================================================================
 
 // Institutional / verification links (safe + trust-building)
@@ -23,140 +24,14 @@ const EXTERNAL_URLS = {
   linkedinCompany: 'https://www.linkedin.com/company/sankofa-family-medicine/',
 }
 
-// Schema for SEO (JSON-LD). Keep factual and avoid performance/clinical outcome claims.
-const schemaGraph = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'WebPage',
-      '@id': 'https://sankofafamilymedicine.com/#webpage',
-      url: 'https://sankofafamilymedicine.com',
-      name: 'Sankofa Family Medicine | Membership-Based Primary Care | Washington State',
-      description:
-        'Membership-based primary care for Washington State. Board-certified family doctor. Longer visits, direct messaging, and care that remembers. Medicine That Remembers™.',
-      dateModified: '2026-01-28',
-      inLanguage: 'en-US',
-      isPartOf: { '@id': 'https://sankofafamilymedicine.com/#website' },
-      about: { '@id': 'https://sankofafamilymedicine.com/#organization' },
-      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['[data-speakable]', 'h1', 'h2'] },
-      breadcrumb: {
-        '@type': 'BreadcrumbList',
-        itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sankofafamilymedicine.com' }],
-      },
-    },
-    {
-      '@type': 'WebSite',
-      '@id': 'https://sankofafamilymedicine.com/#website',
-      url: 'https://sankofafamilymedicine.com',
-      name: 'Sankofa Family Medicine',
-      description: 'Membership-based primary care for Washington State. Medicine That Remembers™.',
-      publisher: { '@id': 'https://sankofafamilymedicine.com/#organization' },
-    },
-    {
-      '@type': ['MedicalBusiness', 'MedicalClinic'],
-      '@id': 'https://sankofafamilymedicine.com/#organization',
-      name: 'Sankofa Family Medicine',
-      legalName: 'Sankofa Family Medicine PLLC',
-      url: 'https://sankofafamilymedicine.com',
-      logo: { '@type': 'ImageObject', url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png', width: 512, height: 512 },
-      description: 'Membership-based primary care practice for Washington State patients via telehealth. Medicine That Remembers™.',
-      slogan: 'Medicine That Remembers™',
-      medicalSpecialty: ['Family Medicine', 'Primary Care'],
-      priceRange: '$225-$725/month',
-      currenciesAccepted: 'USD',
-      paymentAccepted: 'Credit Card, ACH, HSA, FSA',
-      areaServed: { '@type': 'State', name: 'Washington', addressCountry: 'US' },
-      founder: { '@id': 'https://sankofafamilymedicine.com/#founder' },
-      foundingDate: '2025',
-      availableChannel: {
-        '@type': 'ServiceChannel',
-        serviceType: 'Telemedicine',
-        availableLanguage: ['English'],
-      },
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Membership Plans',
-        url: 'https://sankofafamilymedicine.com/services',
-        itemListElement: [
-          { '@type': 'Offer', name: 'Continuity Plan', price: '225-275', priceCurrency: 'USD' },
-          { '@type': 'Offer', name: 'Precision Plan', price: '325-375', priceCurrency: 'USD' },
-          { '@type': 'Offer', name: 'Executive Plan', price: '650-725', priceCurrency: 'USD' },
-        ],
-      },
-      contactPoint: [
-        {
-          '@type': 'ContactPoint',
-          contactType: 'new patient inquiries',
-          url: 'https://sankofafamilymedicine.com/founders-waitlist',
-          availableLanguage: ['English'],
-        },
-      ],
-      sameAs: [EXTERNAL_URLS.linkedinCompany],
-    },
-    {
-      '@type': ['Person', 'Physician'],
-      '@id': 'https://sankofafamilymedicine.com/#founder',
-      name: 'Dr. Yaw Nkrumah, MD',
-      jobTitle: 'Founder & Medical Director',
-      url: 'https://sankofafamilymedicine.com/founder',
-      image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
-      medicalSpecialty: 'Family Medicine',
-      hasCredential: {
-        '@type': 'EducationalOccupationalCredential',
-        name: 'Board Certification in Family Medicine',
-        credentialCategory: 'Board Certification',
-        recognizedBy: { '@type': 'Organization', name: 'American Board of Family Medicine', alternateName: 'ABFM' },
-        url: EXTERNAL_URLS.abfmCredential,
-      },
-      worksFor: { '@id': 'https://sankofafamilymedicine.com/#organization' },
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is Direct Primary Care?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Direct Primary Care (DPC) is a membership-based model where patients pay a monthly fee directly to their physician for primary care services.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much does membership cost?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Membership plans range from $225-$275/month (Continuity), $325-$375/month (Precision), and $650-$725/month (Executive). Founding members receive the lower end of each range.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Sankofa Family Medicine accepting new patients?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sankofa Family Medicine is currently accepting Founders Waitlist sign-ups. Clinical care is planned to begin in early 2026.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What states does Sankofa Family Medicine serve?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Sankofa Family Medicine serves patients located in Washington State only via telehealth.',
-          },
-        },
-      ],
-    },
-  ],
-}
-
 export default function HomePageClient() {
   const [checkedItems, setCheckedItems] = useState<boolean[]>([false, false, false, false, false])
   const yesCount = checkedItems.filter(Boolean).length
   const assessmentRegionId = useId()
+  const assessmentHelpId = useId()
 
   const handleCheckChange = (index: number) => {
-    setCheckedItems(prev => {
+    setCheckedItems((prev) => {
       const next = [...prev]
       next[index] = !next[index]
       return next
@@ -170,22 +45,13 @@ export default function HomePageClient() {
 
   return (
     <>
-      <Script
-        id="ld-json-home"
-        type="application/ld+json"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
-      />
-
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-sfm-gold focus:text-sfm-navy focus:rounded-lg focus:font-medium"
-      >
-        Skip to main content
-      </a>
+      {/* 
+        Accessibility Note: Skip link is in layout.tsx
+        Do not add duplicate skip link here
+      */}
 
       {/* HERO */}
-      <section id="main-content" className="relative min-h-screen flex items-center overflow-hidden" aria-labelledby="hero-heading">
+      <section className="relative min-h-screen flex items-center overflow-hidden" aria-labelledby="hero-heading">
         <div className="absolute inset-0 bg-gradient-to-br from-sfm-navy via-sfm-navy to-sfm-azure/60" />
         <div className="absolute inset-0 pattern-sankofa-subtle pattern-animated opacity-40" aria-hidden="true" />
         <div
@@ -271,7 +137,7 @@ export default function HomePageClient() {
                       },
                       {
                         title: 'The same doctor, every visit',
-                        text: "You'll work with one board-certified family doctor who follows your care over time.",
+                        text: "You'll work with one ABFM board-certified family physician who follows your care over time.",
                       },
                       {
                         title: 'Predictable membership pricing',
@@ -294,7 +160,7 @@ export default function HomePageClient() {
                   <p className="text-white/80 text-xl lg:text-2xl leading-relaxed max-w-lg">
                     Want care where we remember the full picture?
                     <br />
-                    Join a practice built for continuity, clear decisions, and long-term care.
+                    Join a practice built for continuity, clear next steps, and long-term care.
                   </p>
                 </div>
 
@@ -309,15 +175,17 @@ export default function HomePageClient() {
                   </Link>
                 </div>
 
+                {/* Compliance: Waitlist and launch info - consolidated */}
                 <div className="opacity-0 animate-fade-in animation-delay-1000 mt-8">
                   <p className="text-white/60 text-lg">
-                    Clinical care is planned to begin in early 2026. No payment is required to join the Founders Waitlist.
+                    Clinical care begins early 2026. Join the Founders Waitlist at no cost.
                   </p>
-                  <p className="text-white/50 text-base mt-4 max-w-xl leading-relaxed">
-                    Founders Waitlist only. Joining does not create a doctor-patient relationship. Services are available only to patients located in Washington State.
+                  <p className="text-white/50 text-base mt-3 max-w-xl">
+                    Joining does not create a doctor-patient relationship or guarantee enrollment. Washington State only.
                   </p>
-                  <p className="text-white/45 text-base mt-3 max-w-xl leading-relaxed">
-                    Not for emergencies. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department.
+                  {/* Compliance: Emergency disclaimer */}
+                  <p className="text-white/45 text-sm mt-4 pt-4 border-t border-white/10 max-w-xl">
+                    <span className="text-white/55">Not for emergencies.</span> Call 911 for immediate medical needs.
                   </p>
                 </div>
 
@@ -338,7 +206,7 @@ export default function HomePageClient() {
 
                     <span className="flex items-center gap-2 text-white/60 text-base">
                       <Shield className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
-                      <span>HIPAA-aligned workflows</span>
+                      <span>HIPAA-conscious privacy practices</span>
                     </span>
 
                     <a
@@ -349,7 +217,7 @@ export default function HomePageClient() {
                       aria-label="Washington State Department of Health provider credential search (opens in new tab)"
                     >
                       <FileText className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
-                      <span>WA Licensed (verify)</span>
+                      <span>WA Licensed</span>
                     </a>
 
                     <span className="flex items-center gap-2 text-white/60 text-base">
@@ -362,23 +230,38 @@ export default function HomePageClient() {
 
               <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
                 <div className="opacity-0 animate-scale-in animation-delay-300 relative">
+                  {/* Ambient glow behind image */}
                   <div
-                    className="absolute -inset-12"
-                    style={{ background: 'radial-gradient(ellipse at center, rgba(188, 152, 51, 0.15) 0%, rgba(188, 152, 51, 0.05) 50%, transparent 70%)' }}
+                    className="absolute -inset-16 blur-3xl"
+                    style={{
+                      background: 'radial-gradient(ellipse at center, rgba(188, 152, 51, 0.2) 0%, rgba(188, 152, 51, 0.08) 40%, transparent 70%)',
+                    }}
                     aria-hidden="true"
                   />
                   <div className="relative w-[300px] sm:w-[380px] lg:w-[460px] aspect-[3/4]">
-                    <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl shadow-sfm-navy/40">
-                      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-sfm-navy/40 via-transparent to-transparent" />
+                    <div className="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl shadow-sfm-navy/60">
+                      {/* Multi-layer gradient overlay for seamless blending */}
+                      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-t from-sfm-navy via-sfm-navy/20 to-transparent opacity-60" />
+                      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-sfm-navy/30 via-transparent to-transparent" />
+                      <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-sfm-navy/20 via-transparent to-sfm-navy/20" />
+                      {/* Soft vignette effect */}
+                      <div 
+                        className="absolute inset-0 z-10 pointer-events-none"
+                        style={{
+                          background: 'radial-gradient(ellipse at center, transparent 50%, rgba(5, 28, 59, 0.4) 100%)',
+                        }}
+                      />
                       <Image
                         src="/images/sankofa-wooden-sculpture.png"
-                        alt="Traditional wooden Sankofa bird sculpture symbolizing Medicine That Remembers™"
+                        alt="Traditional wooden Sankofa bird sculpture symbolizing Medicine That Remembers"
                         fill
                         priority
                         className="object-cover object-center transition-transform duration-700 hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
                         sizes="(max-width: 640px) 300px, (max-width: 1024px) 380px, 460px"
                       />
                     </div>
+                    {/* Soft edge blur on container */}
+                    <div className="absolute -inset-1 rounded-[36px] pointer-events-none" style={{ boxShadow: 'inset 0 0 40px 20px rgba(5, 28, 59, 0.3)' }} aria-hidden="true" />
                   </div>
                 </div>
               </div>
@@ -386,7 +269,10 @@ export default function HomePageClient() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in animation-delay-1500 hidden lg:flex flex-col items-center gap-2" aria-hidden="true">
+        <div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in animation-delay-1500 hidden lg:flex flex-col items-center gap-2"
+          aria-hidden="true"
+        >
           <span className="text-white/30 text-xs uppercase tracking-widest">Scroll</span>
           <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center pt-2">
             <ChevronDown className="w-4 h-4 text-white/40 animate-bounce motion-reduce:animate-none" />
@@ -400,7 +286,11 @@ export default function HomePageClient() {
         <div className="relative max-w-7xl mx-auto px-6">
           <ScrollReveal className="max-w-3xl mx-auto text-center mb-20">
             <div className="flex justify-center mb-4">
-              <Image src="/images/comettrans.png" alt="" width={48} height={48} className="opacity-60" aria-hidden="true" />
+              <div className="relative">
+                {/* Soft glow behind icon */}
+                <div className="absolute inset-0 blur-xl bg-sfm-gold/20 rounded-full scale-150" aria-hidden="true" />
+                <Image src="/images/comettrans.png" alt="" width={48} height={48} className="relative opacity-70" aria-hidden="true" />
+              </div>
             </div>
             <span className="inline-block text-sfm-gold text-base font-semibold tracking-widest uppercase mb-6">Our Philosophy</span>
             <h2 id="philosophy-heading" className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight" data-speakable>
@@ -437,7 +327,9 @@ export default function HomePageClient() {
                   <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-sfm-gold/10 flex items-center justify-center transition-all duration-300 group-hover:bg-sfm-gold/20 group-hover:scale-110 motion-reduce:transition-none motion-reduce:transform-none">
                     <item.icon className="w-8 h-8 text-sfm-gold" aria-hidden="true" />
                   </div>
-                  <h3 className="font-display text-2xl text-sfm-navy mb-4 transition-colors duration-300 group-hover:text-sfm-gold motion-reduce:transition-none">{item.title}</h3>
+                  <h3 className="font-display text-2xl text-sfm-navy mb-4 transition-colors duration-300 group-hover:text-sfm-gold motion-reduce:transition-none">
+                    {item.title}
+                  </h3>
                   <p className="text-sfm-navy/70 text-lg leading-relaxed">{item.description}</p>
                 </article>
               </ScrollReveal>
@@ -491,12 +383,27 @@ export default function HomePageClient() {
               },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <article className="relative group overflow-hidden rounded-2xl aspect-[4/5] ring-2 ring-transparent hover:ring-sfm-gold/40 transition-all duration-300 motion-reduce:transition-none">
-                  <Image src={item.src} alt={item.alt} fill loading="lazy" className="object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy/90 via-sfm-navy/30 to-transparent" />
+                <article className="relative group overflow-hidden rounded-2xl aspect-[4/5] ring-1 ring-black/5 shadow-lg hover:shadow-xl hover:ring-sfm-gold/30 transition-all duration-300 motion-reduce:transition-none">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    loading="lazy"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
+                  />
+                  {/* Enhanced gradient overlay for better text readability and blending */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-sfm-navy via-sfm-navy/40 to-transparent opacity-90" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-transparent" />
+                  {/* Subtle vignette */}
+                  <div 
+                    className="absolute inset-0"
+                    style={{
+                      background: 'radial-gradient(ellipse at center, transparent 40%, rgba(5, 28, 59, 0.2) 100%)',
+                    }}
+                  />
                   <div className="absolute bottom-0 left-0 right-0 p-4 lg:p-6">
-                    <p className="text-white font-display text-lg lg:text-xl mb-1">{item.label}</p>
-                    <p className="text-white/80 text-base lg:text-lg leading-snug hidden sm:block">{item.description}</p>
+                    <p className="text-white font-display text-lg lg:text-xl mb-1 drop-shadow-sm">{item.label}</p>
+                    <p className="text-white/85 text-base lg:text-lg leading-snug hidden sm:block drop-shadow-sm">{item.description}</p>
                   </div>
                 </article>
               </ScrollReveal>
@@ -552,7 +459,7 @@ export default function HomePageClient() {
                   </h3>
                   <ul className="space-y-4">
                     {[
-                      'Visits are planned for 45-75 minutes (planned).',
+                      'Visits are planned for 45-75 minutes.',
                       'Urgent visits may be same-day or next-business-day, when available.',
                       'Intentionally limited panel size to protect time and access.',
                       'The same doctor every time, not a rotating team.',
@@ -607,9 +514,12 @@ export default function HomePageClient() {
 
             <ScrollReveal delay={0.2}>
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-sfm-border-light">
-                <p className="font-display text-2xl text-sfm-navy mb-6">Check all that apply to you:</p>
+                <p className="font-display text-2xl text-sfm-navy mb-2">Check all that apply to you:</p>
+                <p id={assessmentHelpId} className="sr-only">
+                  Your selections update the message below.
+                </p>
 
-                <div className="space-y-5 mb-8">
+                <div className="space-y-5 mb-8 mt-6">
                   {[
                     'I want more time with my doctor.',
                     'I want the same doctor who follows my care over time.',
@@ -634,6 +544,7 @@ export default function HomePageClient() {
                         onChange={() => handleCheckChange(index)}
                         aria-label={item}
                         aria-controls={assessmentRegionId}
+                        aria-describedby={assessmentHelpId}
                       />
 
                       <span className="text-sfm-navy/80 text-lg">{item}</span>
@@ -674,105 +585,147 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* MEMBERSHIP PREVIEW */}
-      <section id="membership-plans" className="relative py-24 lg:py-32 bg-white overflow-hidden" aria-labelledby="membership-heading">
-        <div className="max-w-7xl mx-auto px-6">
-          <ScrollReveal className="text-center mb-16">
-            <span className="inline-block text-sfm-gold text-base font-semibold tracking-widest uppercase mb-6">Membership Plans</span>
-            <h2 id="membership-heading" className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight" data-speakable>
-              Membership-Based Primary Care
-            </h2>
-            <p className="text-xl text-sfm-navy/70 max-w-2xl mx-auto mb-4">
-              When enrollment opens, memberships are expected to include virtual visits, secure messaging, and wholesale lab pricing. This is Direct Primary Care (DPC). We do not bill insurance for primary care.
+<section
+  id="membership-plans"
+  className="relative py-24 lg:py-32 bg-white overflow-hidden"
+  aria-labelledby="membership-heading"
+>
+  <div className="max-w-7xl mx-auto px-6">
+    <ScrollReveal className="text-center mb-16">
+      <span className="inline-block text-sfm-gold text-base font-semibold tracking-widest uppercase mb-6">
+        Membership Plans
+      </span>
+
+      <h2
+        id="membership-heading"
+        className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight"
+        data-speakable
+      >
+        Membership-Based Primary Care
+      </h2>
+
+      {/* Smaller gray text + more breathing room + wider max width */}
+      <p className="text-base sm:text-lg text-sfm-navy/65 max-w-3xl mx-auto mt-4 leading-relaxed">
+        When enrollment opens, memberships are expected to include virtual visits, secure messaging, and wholesale lab
+        pricing. This is Direct Primary Care (DPC). We do not bill insurance for primary care.
+      </p>
+
+      <p className="text-sm sm:text-base text-sfm-navy/55 max-w-3xl mx-auto mt-3 leading-relaxed">
+        We do not bill insurance for membership services, but you may use insurance for labs, imaging, and specialists
+        outside the membership. Services are available only to patients located in Washington State.
+      </p>
+
+      {/* Optional subtle divider for premium separation */}
+      <div className="mt-8 mx-auto max-w-2xl border-t border-sfm-navy/10" />
+
+      {/* Gold line: forced true centering + controlled width + moved closer to tiers */}
+      <div className="mt-6 flex justify-center">
+        <p className="text-sfm-gold font-medium text-base sm:text-lg text-center max-w-2xl leading-snug">
+          <Link
+            href="/membership-terms#founding-member-program"
+            className="underline underline-offset-4 hover:text-sfm-azure transition-colors duration-300 motion-reduce:transition-none"
+          >
+            Founding members
+          </Link>{' '}
+          receive the lower end of each range. Your exact rate is confirmed before enrollment.
+        </p>
+      </div>
+    </ScrollReveal>
+
+    {/* Tiers pulled slightly closer to the copy */}
+    <ScrollRevealGroup className="mt-8 grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      {[
+        {
+          name: 'Continuity',
+          priceRange: '$225-$275',
+          description: 'Essential virtual primary care designed to restore the continuity traditional medicine has lost.',
+          featured: false,
+          anchor: 'continuity',
+        },
+        {
+          name: 'Precision',
+          priceRange: '$325-$375',
+          description: 'Everything in Continuity plus deeper preventive insight and advanced diagnostics when appropriate.',
+          featured: true,
+          anchor: 'precision',
+        },
+        {
+          name: 'Executive',
+          priceRange: '$650-$725',
+          description: 'Enhanced access, coordination, and comprehensive health planning for individuals and families.',
+          featured: false,
+          anchor: 'executive',
+        },
+      ].map((tier, i) => (
+        <ScrollReveal key={tier.name} delay={i * 0.1}>
+          <article
+            className={`relative rounded-2xl p-8 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl motion-reduce:transition-none motion-reduce:transform-none overflow-hidden ${
+              tier.featured
+                ? 'bg-sfm-navy text-white ring-2 ring-sfm-gold'
+                : 'bg-white border border-sfm-border-light hover:border-sfm-border hover:shadow-lg'
+            }`}
+          >
+            {tier.featured && (
+              <>
+                <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none" aria-hidden="true">
+                  <div
+                    className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent"
+                    style={{ animation: 'shine 4s ease-in-out infinite' }}
+                  />
+                </div>
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                  <span className="px-4 py-1.5 bg-sfm-gold text-sfm-navy text-base font-semibold rounded-full">
+                    Most Popular
+                  </span>
+                </div>
+              </>
+            )}
+
+            <h3 className={`font-display text-2xl mb-2 relative z-10 ${tier.featured ? 'text-white' : 'text-sfm-navy'}`}>
+              {tier.name}
+            </h3>
+            <p className={`text-base mb-4 relative z-10 ${tier.featured ? 'text-white/60' : 'text-sfm-navy/50'}`}>
+              Membership-Based Primary Care (DPC model)
             </p>
-            <p className="text-lg text-sfm-navy/60 max-w-2xl mx-auto mb-4">
-              We do not bill insurance for membership services, but you may use insurance for labs, imaging, and specialists outside the membership. Services are available only to patients located in Washington State.
+
+            <div className="mb-4 relative z-10">
+              <span className={`text-4xl font-display ${tier.featured ? 'text-sfm-gold' : 'text-sfm-navy'}`}>
+                {tier.priceRange}
+              </span>
+              <span className={`text-lg ${tier.featured ? 'text-white/70' : 'text-sfm-navy/60'}`}>/month</span>
+            </div>
+
+            <p className={`text-lg mb-6 leading-relaxed relative z-10 ${tier.featured ? 'text-white/80' : 'text-sfm-navy/70'}`}>
+              {tier.description}
             </p>
-            <p className="text-sfm-gold font-medium text-lg">
-              <Link href="/membership-terms#founding-member-program" className="hover:underline hover:text-sfm-azure transition-colors duration-300 motion-reduce:transition-none">
-                Founding members
-              </Link>{' '}
-              receive the lower end of each range. Your exact rate is confirmed before enrollment.
-            </p>
-          </ScrollReveal>
 
-          <ScrollRevealGroup className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              {
-                name: 'Continuity',
-                priceRange: '$225-$275',
-                description: 'Essential virtual primary care designed to restore the continuity traditional medicine has lost.',
-                featured: false,
-                anchor: 'continuity',
-              },
-              {
-                name: 'Precision',
-                priceRange: '$325-$375',
-                description: 'Everything in Continuity plus deeper preventive insight and advanced diagnostics when appropriate.',
-                featured: true,
-                anchor: 'precision',
-              },
-              {
-                name: 'Executive',
-                priceRange: '$650-$725',
-                description: 'Enhanced access, coordination, and comprehensive health planning for individuals and families.',
-                featured: false,
-                anchor: 'executive',
-              },
-            ].map((tier, i) => (
-              <ScrollReveal key={tier.name} delay={i * 0.1}>
-                <article
-                  className={`relative rounded-2xl p-8 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-xl motion-reduce:transition-none motion-reduce:transform-none overflow-hidden ${
-                    tier.featured ? 'bg-sfm-navy text-white ring-2 ring-sfm-gold' : 'bg-white border border-sfm-border-light hover:border-sfm-border hover:shadow-lg'
-                  }`}
-                >
-                  {tier.featured && (
-                    <>
-                      <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none" aria-hidden="true">
-                        <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent" style={{ animation: 'shine 4s ease-in-out infinite' }} />
-                      </div>
-                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                        <span className="px-4 py-1.5 bg-sfm-gold text-sfm-navy text-base font-semibold rounded-full">Most Popular</span>
-                      </div>
-                    </>
-                  )}
-
-                  <h3 className={`font-display text-2xl mb-2 relative z-10 ${tier.featured ? 'text-white' : 'text-sfm-navy'}`}>{tier.name}</h3>
-                  <p className={`text-base mb-4 relative z-10 ${tier.featured ? 'text-white/60' : 'text-sfm-navy/50'}`}>
-                    Membership-Based Primary Care (DPC model)
-                  </p>
-
-                  <div className="mb-4 relative z-10">
-                    <span className={`text-4xl font-display ${tier.featured ? 'text-sfm-gold' : 'text-sfm-navy'}`}>{tier.priceRange}</span>
-                    <span className={`text-lg ${tier.featured ? 'text-white/70' : 'text-sfm-navy/60'}`}>/month</span>
-                  </div>
-
-                  <p className={`text-lg mb-6 leading-relaxed relative z-10 ${tier.featured ? 'text-white/80' : 'text-sfm-navy/70'}`}>{tier.description}</p>
-
-                  <Link
-                    href={`/services#${tier.anchor}`}
-                    className={`inline-flex items-center gap-2 text-lg font-medium transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded relative z-10 ${
-                      tier.featured ? 'text-sfm-gold hover:text-sfm-gold-light focus:ring-offset-sfm-navy' : 'text-sfm-azure hover:text-sfm-gold'
-                    }`}
-                  >
-                    View Plan Details <ArrowRight className="w-5 h-5" aria-hidden="true" />
-                  </Link>
-                </article>
-              </ScrollReveal>
-            ))}
-          </ScrollRevealGroup>
-
-          <div className="text-center mt-12">
             <Link
-              href="/services"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-navy text-white font-medium rounded-xl hover:bg-sfm-azure transition-colors motion-reduce:transition-none text-lg focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2"
+              href={`/services#${tier.anchor}`}
+              className={`inline-flex items-center gap-2 text-lg font-medium transition-colors motion-reduce:transition-none focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded relative z-10 ${
+                tier.featured
+                  ? 'text-sfm-gold hover:text-sfm-gold-light focus:ring-offset-sfm-navy'
+                  : 'text-sfm-azure hover:text-sfm-gold'
+              }`}
             >
-              View All Plan Details
-              <ArrowRight className="w-5 h-5" aria-hidden="true" />
+              View Plan Details <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </Link>
-          </div>
-        </div>
-      </section>
+          </article>
+        </ScrollReveal>
+      ))}
+    </ScrollRevealGroup>
+
+    <div className="text-center mt-12">
+      <Link
+        href="/services"
+        className="inline-flex items-center gap-2 px-8 py-4 bg-sfm-navy text-white font-medium rounded-xl hover:bg-sfm-azure transition-colors motion-reduce:transition-none text-lg focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2"
+      >
+        View All Plan Details
+        <ArrowRight className="w-5 h-5" aria-hidden="true" />
+      </Link>
+    </div>
+  </div>
+</section>
+
 
       {/* BLOG PREVIEW */}
       <section className="relative py-24 lg:py-32 bg-sfm-cream overflow-hidden" aria-labelledby="blog-heading">
@@ -823,9 +776,17 @@ export default function HomePageClient() {
                 <Link href={article.href} className="group block focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded-2xl">
                   <article className="bg-white rounded-2xl overflow-hidden border border-sfm-border-light group-hover:border-sfm-border transition-all motion-reduce:transition-none group-hover:shadow-lg">
                     <div className="aspect-[16/10] relative overflow-hidden">
-                      <Image src={article.image} alt={article.title} fill loading="lazy" className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none" />
+                      <Image
+                        src={article.image}
+                        alt={`Illustration for article: ${article.title}`}
+                        fill
+                        loading="lazy"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:transform-none"
+                      />
+                      {/* Subtle gradient overlay for consistency */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
                       <div className="absolute top-4 left-4">
-                        <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full text-base font-medium text-sfm-navy">
+                        <span className="px-3 py-1.5 bg-white/95 backdrop-blur-sm rounded-full text-base font-medium text-sfm-navy shadow-sm">
                           {article.category}
                         </span>
                       </div>
@@ -896,13 +857,16 @@ export default function HomePageClient() {
             </Link>
           </div>
 
-          <p className="text-white/50 text-lg mt-10 max-w-lg mx-auto leading-relaxed">
-            Founders Waitlist only. No payment is required to join. Joining does not guarantee enrollment. Joining does not create a doctor-patient relationship. Services are available only to patients located in Washington State.
-          </p>
-
-          <p className="text-white/40 text-base mt-4">
-            Not for emergencies. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department.
-          </p>
+          {/* Compliance: Waitlist disclaimers - consolidated */}
+          <div className="mt-6 max-w-lg mx-auto">
+            <p className="text-white/50 text-xs leading-tight">
+              Founders Waitlist only. No payment required. Joining does not guarantee enrollment or create a doctor-patient relationship. Washington State only.
+            </p>
+            {/* Compliance: Emergency disclaimer */}
+            <p className="text-white/40 text-xs leading-tight mt-4 pt-4 border-t border-white/10">
+              <span className="text-white/50">Not for emergencies.</span> Call 911 for immediate medical needs.
+            </p>
+          </div>
 
           <div className="mt-12 pt-8 border-t border-white/10">
             <div className="flex flex-wrap items-center justify-center gap-8 text-white/60 text-lg">
@@ -919,7 +883,7 @@ export default function HomePageClient() {
 
               <span className="flex items-center gap-2">
                 <Shield className="w-5 h-5" aria-hidden="true" />
-                HIPAA-aligned workflows
+                HIPAA-conscious privacy practices
               </span>
 
               <span className="flex items-center gap-2">
@@ -935,7 +899,7 @@ export default function HomePageClient() {
                 aria-label="Washington State Department of Health provider credential search (opens in new tab)"
               >
                 <FileText className="w-5 h-5" aria-hidden="true" />
-                WA licensed (verify)
+                <span>WA Licensed</span>
               </a>
             </div>
           </div>

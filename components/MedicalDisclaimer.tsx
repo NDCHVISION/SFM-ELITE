@@ -19,9 +19,9 @@ export default function MedicalDisclaimer({
 
   if (variant === 'banner') {
     return (
-      <div className={`bg-sfm-cream/80 border-y border-sfm-gold/20 py-3 ${className}`}>
+      <div className={`bg-sfm-cream/60 border-y border-sfm-gold/10 py-2 ${className}`}>
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-xs text-sfm-navy/70 text-center leading-relaxed">
+          <p className="text-[10px] text-sfm-navy/50 text-center leading-tight opacity-80">
             {baseContent}
           </p>
         </div>
