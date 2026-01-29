@@ -20,139 +20,128 @@ import {
 } from 'lucide-react'
 
 /* =========================================================
-SERVICES/PRICING PAGE - PRODUCTION READY
-Version: 5.5 FINAL (Contract-aligned + WA compliance + micro-fixes)
+SERVICES/PRICING PAGE - SHIPPABLE
+Version: 5.6 FINAL (WA compliance + founders ranges + remove non-member pricing)
 =========================================================
 
-MICRO-FIXES (V5.4 → V5.5):
-1. "urgent needs" → "time-sensitive, non-emergent needs" throughout
-   (avoids implied urgent-care service language)
-2. Added "Pricing may change for non-founding members" to disclaimers
-   (prevents bait-and-switch claims when standard pricing is higher)
+KEY UPDATES:
+1) Removed non-member pricing section entirely (labs are never "free").
+2) Pricing now displays CONTRACT-ALIGNED RANGES (monthly + annual).
+3) Founders pricing is explicitly the lower end of each range (first 30, while available).
+4) Removed "MOST COMMON" (cannot claim with no patients yet). Replaced with "FEATURED".
+5) "The Foundation of DPC" renamed to "Included in Every Plan" (no DPC purity claims).
+6) Tier features tightened to avoid contradictions and over-promises.
+   - No visit-length guarantees.
+   - Messaging/access always qualified and tier-based.
 
-WA DOH / ADVERTISING SAFETY:
-✅ Emergency disclaimer - 4 locations (Important box, FAQ, CTA, Footer)
-✅ Not health insurance - 2 locations (Important box, Footer)
-✅ WA State only - 5 locations (Hero, Important box, FAQ, CTA, Footer)
-✅ Waitlist/no relationship - 3 locations (Important box, FAQ, Footer)
-✅ No outcome guarantees
-✅ No superlatives
-✅ All access claims qualified ("when available", "as available")
-✅ No "urgent care" service implications
-
-ACCESSIBILITY (WCAG 2.2 AA+):
-✅ type="button" on all non-submit buttons
-✅ aria-expanded + aria-controls on FAQ
-✅ aria-pressed on billing toggle
-✅ decorative icons aria-hidden
-✅ max-h-[520px] on FAQ answers (prevents clipping)
-
-FOUNDERS PRICING (CONTRACT-ALIGNED):
-✅ "Founders pricing shown (limited to 30 members)"
-✅ "Your exact fee is confirmed prior to enrollment"
-✅ "Pricing is set by the Practice and is not negotiated"
-✅ "Pricing may change for non-founding members"
+WA Advertising / Safety:
+- Not health insurance, not for emergencies, WA-only, waitlist/no relationship, no guarantees, no superlatives.
 ========================================================= */
 
 const FOUNDERS_COHORT_LIMIT = 30
 
-const tiers = [
+type PriceRange = { low: number; high: number }
+type Tier = {
+  id: string
+  name: string
+  tagline: string
+  price: { monthly: PriceRange; annual: PriceRange }
+  description: string
+  features: { text: string; included: boolean; highlight?: boolean }[]
+  cta: string
+  featured?: boolean
+}
+
+const tiers: Tier[] = [
   {
     id: 'continuity',
     name: 'Continuity',
-    tagline: 'Direct Primary Care basics',
-    price: { monthly: 225, annual: 203 },
-    description: 'Membership-based DPC for steady, consistent virtual primary care.',
+    tagline: 'Steady, consistent primary care',
+    price: {
+      monthly: { low: 225, high: 275 }, // Contract range
+      annual: { low: 2430, high: 2970 }, // 10% discount applied to each end
+    },
+    description:
+      'Membership-based Direct Primary Care for ongoing virtual primary care, built on a consistent physician relationship.',
     features: [
-      { text: 'Physician-led virtual primary care visits', included: true },
-      { text: 'Same-day or next-day appointments when available', included: true },
-      { text: 'Secure non-urgent messaging (business hours)', included: true },
-      { text: 'Initial consultation (45 min)', included: true },
-      { text: 'Access to lower-cost lab pricing options', included: true },
-      { text: 'Chronic condition management', included: true },
-      { text: 'Medication management (non-controlled)', included: true },
-      { text: 'Ongoing care coordination', included: true },
-      { text: 'After-hours messaging or real-time physician access', included: false },
-      { text: 'Advanced lab review and interpretation', included: false },
-      { text: 'Genetic testing interpretation', included: false },
+      { text: 'Virtual primary care visits with your physician', included: true },
+      { text: 'Care coordination and follow-through between visits', included: true },
+      { text: 'Secure messaging during standard business hours', included: true },
+      { text: 'Scheduling access based on availability', included: true },
+      { text: 'Chronic disease management and preventive care', included: true },
+      { text: 'Medication management when clinically appropriate', included: true },
+      { text: 'Support with referrals when needed (specialists separate)', included: true },
+      { text: 'Member access to lower-cost lab pricing options (members pay labs directly)', included: true },
+      { text: 'After-hours messaging', included: false },
+      { text: 'Expanded access pathways outside standard hours', included: false },
+      { text: 'Genetics interpretation (if offered)', included: false },
     ],
     cta: 'Join the founders waitlist',
-    popular: false,
-    founding: true,
   },
   {
     id: 'precision',
     name: 'Precision',
-    tagline: 'Deeper reviews (when appropriate)',
-    price: { monthly: 325, annual: 293 },
+    tagline: 'More access for time-sensitive needs',
+    price: {
+      monthly: { low: 325, high: 375 },
+      annual: { low: 3510, high: 4050 },
+    },
     description:
-      'Membership-based DPC with deeper lab reviews and optional genetics interpretation (test costs separate).',
+      'Membership-based DPC with additional access options for time-sensitive, non-emergent concerns, subject to triage and availability.',
     features: [
       { text: 'Everything in Continuity', included: true, highlight: true },
-      { text: 'Advanced lab review and interpretation', included: true },
-      { text: 'Heart and diabetes risk review', included: true },
-      { text: 'Regular health check-ins', included: true },
-      { text: 'Genetic testing interpretation (test costs separate)', included: true },
-      { text: 'Medication management (non-controlled)', included: true },
-      { text: 'Extended visit times when clinically appropriate', included: true },
       { text: 'Priority scheduling when available', included: true },
-      // MICRO-FIX: "urgent" → "time-sensitive, non-emergent"
       {
         text: 'Limited after-hours secure messaging for time-sensitive, non-emergent concerns (as available)',
         included: true,
       },
-      // MICRO-FIX: "urgent needs" → "time-sensitive, non-emergent needs"
-      { text: 'Expanded access pathways for time-sensitive, non-emergent needs', included: false },
+      { text: 'Proactive check-ins when clinically appropriate', included: true },
+      { text: 'Care coordination support (as available)', included: true },
+      { text: 'Support interpreting labs ordered through partnered pathways (members pay labs directly)', included: true },
+      { text: 'Support with referrals when needed (specialists separate)', included: true },
+      { text: 'Visit length varies by clinical need and scheduling capacity', included: true },
+      { text: 'Real-time / on-call physician coverage', included: false },
+      { text: 'Emergency or urgent care services', included: false },
     ],
     cta: 'Join the founders waitlist',
-    popular: true,
-    founding: true,
+    featured: true,
   },
   {
     id: 'executive',
     name: 'Executive',
-    // MICRO-FIX: tagline updated
-    tagline: 'Expanded access pathways (as available)',
-    price: { monthly: 650, annual: 585 },
+    tagline: 'Expanded coordination and access pathways',
+    price: {
+      monthly: { low: 650, high: 725 },
+      annual: { low: 7020, high: 7830 },
+    },
     description:
-      'Membership-based DPC with added coordination and expanded access pathways (based on triage and availability).',
+      'Membership-based DPC with expanded coordination and access pathways for defined time-sensitive, non-emergent needs, based on triage and availability.',
     features: [
       { text: 'Everything in Precision', included: true, highlight: true },
       { text: 'Priority coordination (as available)', included: true },
-      { text: 'Priority scheduling and care coordination', included: true },
-      // MICRO-FIX: "urgent needs" → "time-sensitive, non-emergent needs"
       { text: 'Expanded access pathways for time-sensitive, non-emergent needs (triage-based)', included: true },
       {
         text: 'Care coordination outside standard business hours when clinically appropriate (as available)',
         included: true,
       },
-      { text: 'Coordination with specialists and external providers', included: true },
-      { text: 'Long-term planning and oversight', included: true },
-      { text: 'Annual comprehensive health review', included: true },
-      { text: 'Enrollment by physician confirmation', included: true },
+      { text: 'Coordination with external specialists and facilities (third-party services separate)', included: true },
+      { text: 'Long-term planning and oversight (as available)', included: true },
+      { text: 'Physician confirmation prior to enrollment', included: true },
+      { text: 'Unlimited or immediate response guarantees', included: false },
+      { text: 'Emergency or urgent care services', included: false },
     ],
     cta: 'Join the founders waitlist',
-    popular: false,
-    founding: true,
   },
-]
-
-const nonMemberPricing = [
-  { service: 'Initial Consultation (45 min)', price: 325 },
-  { service: 'Follow-up Visit (30 min)', price: 200 },
-  { service: 'Extended Visit (45 min)', price: 275 },
-  { service: 'Complex Visit (60 min)', price: 350 },
-  { service: 'Labs and Diagnostics', price: 'At cost' },
 ]
 
 const faqs = [
   {
     q: 'What is Direct Primary Care?',
-    a: 'Direct Primary Care (DPC) is a membership model. You pay a monthly fee directly to your clinic for primary care, instead of the clinic billing your insurance for each visit.',
+    a: 'Direct Primary Care (DPC) is a membership model. You pay a recurring fee directly to the practice for primary care services rather than the clinic billing insurance for each visit.',
   },
   {
     q: 'Do I still need health insurance?',
-    a: 'Yes. DPC covers primary care only. Keep insurance for emergencies, hospital care, specialists, imaging, and prescriptions.',
+    a: 'Yes. DPC covers primary care. Keep insurance for emergencies, hospital care, specialists, imaging, and prescriptions.',
   },
   {
     q: 'Do I need to be in Washington State for visits?',
@@ -163,22 +152,22 @@ const faqs = [
     a: 'No. This practice does not provide emergency or urgent care services. For emergencies, call 911 or go to the nearest emergency room.',
   },
   {
-    q: 'What if I need a specialist?',
-    a: 'Your physician can help coordinate referrals when needed. Specialist care is separate and is provided by third-party clinics and hospitals.',
-  },
-  {
-    q: 'Is virtual care the right fit for me?',
-    a: 'Virtual care works well for many common primary care needs. Some concerns require an in-person exam or testing. If that happens, we will guide you to in-person care.',
-  },
-  {
     q: 'Does joining the founders waitlist create a doctor-patient relationship?',
     a: 'No. Joining the founders waitlist does not create a physician-patient relationship. A relationship begins only after enrollment and an initial clinical encounter.',
   },
   {
     q: 'Are the prices on this page final?',
-    a: 'The prices shown are Founders pricing, available while Founders enrollment remains open. Your exact membership fee is confirmed prior to enrollment. Pricing is set by the Practice and is not individually negotiated. Standard pricing may apply after the Founders cohort closes.',
+    a: `Prices are shown as ranges. Founders pricing is the lower end of each range while the Founders cohort remains open (limited to ${FOUNDERS_COHORT_LIMIT} members). Your exact membership fee is confirmed prior to enrollment. Pricing is set by the Practice and is not individually negotiated. Standard pricing may apply after the Founders cohort closes.`,
   },
 ]
+
+function formatUSD(n: number) {
+  return n.toLocaleString('en-US')
+}
+
+function renderPriceRange(range: PriceRange) {
+  return `$${formatUSD(range.low)}-$${formatUSD(range.high)}`
+}
 
 export default function ServicesPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly')
@@ -189,9 +178,18 @@ export default function ServicesPage() {
       {/* Hero */}
       <section aria-labelledby="hero-heading" className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-sfm-navy via-sfm-navy to-sfm-azure" />
-        <div className="absolute inset-0 pattern-sankofa-flow-gold pattern-sankofa-animated pattern-subtle" aria-hidden="true" />
-        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-sfm-gold/10 rounded-full blur-[150px]" aria-hidden="true" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-sfm-azure/30 rounded-full blur-[100px]" aria-hidden="true" />
+        <div
+          className="absolute inset-0 pattern-sankofa-flow-gold pattern-sankofa-animated pattern-subtle"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-sfm-gold/10 rounded-full blur-[150px]"
+          aria-hidden="true"
+        />
+        <div
+          className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-sfm-azure/30 rounded-full blur-[100px]"
+          aria-hidden="true"
+        />
 
         <div className="relative max-w-7xl mx-auto px-6">
           <nav aria-label="Breadcrumb" className="mb-8">
@@ -223,22 +221,22 @@ export default function ServicesPage() {
             <div className="flex flex-wrap gap-6 text-white/60">
               <div className="flex items-center gap-2">
                 <Clock className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
-                <span className="text-sm">Same-day appointments when available</span>
+                <span className="text-sm">Appointments when available</span>
               </div>
               <div className="flex items-center gap-2">
                 <MessageCircle className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
-                <span className="text-sm">Direct physician messaging</span>
+                <span className="text-sm">Direct physician messaging (tier-based)</span>
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
-                <span className="text-sm">No copays. Clear, upfront pricing.</span>
+                <span className="text-sm">Clear, upfront pricing</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What's Included */}
+      {/* Included in Every Plan */}
       <section aria-labelledby="included-heading" className="py-12 bg-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-8">
@@ -246,16 +244,16 @@ export default function ServicesPage() {
               Included in Every Plan
             </p>
             <h2 id="included-heading" className="font-display text-2xl text-sfm-navy">
-              The Foundation of DPC
+              What You Get With Membership
             </h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { icon: Users, label: 'One Physician', desc: 'A consistent point of care' },
-              { icon: Clock, label: 'Flexible Scheduling', desc: 'Same-day when available' },
-              { icon: MessageCircle, label: 'Direct Messaging', desc: 'No phone trees' },
-              { icon: FileText, label: 'Clear Pricing', desc: 'Know the cost upfront' },
+              { icon: Clock, label: 'Scheduling', desc: 'Appointments when available' },
+              { icon: MessageCircle, label: 'Direct Messaging', desc: 'Tier-based access' },
+              { icon: FileText, label: 'Clear Pricing', desc: 'Simple membership ranges' },
             ].map((item) => (
               <div key={item.label} className="text-center p-4">
                 <div className="w-12 h-12 mx-auto mb-3 bg-sfm-gold/10 rounded-xl flex items-center justify-center">
@@ -309,12 +307,11 @@ export default function ServicesPage() {
             </h2>
 
             <p className="text-sfm-navy/60 text-base max-w-xl mx-auto">
-              Every plan includes virtual DPC visits, secure messaging, and care coordination.
-              Access is based on your tier and availability.
+              Tier-based access. Availability varies by scheduling capacity and clinical judgment.
             </p>
           </div>
 
-          {/* Compliance: Important disclaimers before pricing cards */}
+          {/* Short compliance box (keep brief; full details remain at page bottom) */}
           <div className="max-w-3xl mx-auto mb-6">
             <div className="bg-white/70 border border-sfm-navy/10 rounded-2xl px-5 py-4 text-xs text-sfm-navy/70 leading-relaxed">
               <p className="mb-2">
@@ -326,17 +323,14 @@ export default function ServicesPage() {
               <p className="mb-2">
                 <strong className="text-sfm-navy">Washington State only:</strong> You must be physically located in Washington State at the time of your telehealth visit.
               </p>
-              <p className="mb-2">
-                <strong className="text-sfm-navy">Waitlist:</strong> Joining the founders waitlist does not create a physician-patient relationship. A relationship begins only after enrollment and an initial clinical encounter.
-              </p>
               <p>
-                <strong className="text-sfm-navy">Founders pricing:</strong> Prices shown are Founders pricing while Founders availability remains open. Your exact fee is confirmed prior to enrollment. Pricing is set by the Practice and is not negotiated. Pricing may change for non-founding members.
+                <strong className="text-sfm-navy">Waitlist:</strong> Joining the founders waitlist does not create a physician-patient relationship.
               </p>
             </div>
           </div>
 
           {/* Billing Toggle */}
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-4">
             <div
               className="inline-flex items-center gap-3 p-1.5 bg-white rounded-xl shadow-lg shadow-sfm-navy/8 border border-gray-100"
               role="group"
@@ -373,124 +367,139 @@ export default function ServicesPage() {
             </div>
           </div>
 
+          <p className="text-center text-xs text-sfm-navy/50 mb-6">
+            Founders pricing is the lower end of the range (limited to {FOUNDERS_COHORT_LIMIT} members, while available).
+          </p>
+
           {/* Pricing Cards Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-            {tiers.map((tier) => (
-              <div
-                key={tier.id}
-                className={`group relative rounded-2xl transition-all duration-500 ${
-                  tier.popular
-                    ? 'bg-gradient-to-b from-sfm-navy to-sfm-navy-deep text-white shadow-2xl shadow-sfm-navy/30 scale-[1.02] lg:scale-[1.03] z-10'
-                    : 'bg-white border border-gray-200 hover:border-sfm-gold/30 hover:shadow-xl'
-                }`}
-              >
-                {tier.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <div className="px-3 py-1 bg-sfm-gold text-sfm-navy text-xs font-bold rounded-full shadow-lg flex items-center gap-1">
-                      <Star className="w-3 h-3" aria-hidden="true" />
-                      MOST COMMON
+            {tiers.map((tier) => {
+              const range = billingCycle === 'monthly' ? tier.price.monthly : tier.price.annual
+              const foundersValue = billingCycle === 'monthly' ? tier.price.monthly.low : tier.price.annual.low
+              const standardValue = billingCycle === 'monthly' ? tier.price.monthly.high : tier.price.annual.high
+              const unit = billingCycle === 'monthly' ? '/mo' : '/yr'
+
+              return (
+                <div
+                  key={tier.id}
+                  className={`group relative rounded-2xl transition-all duration-500 ${
+                    tier.featured
+                      ? 'bg-gradient-to-b from-sfm-navy to-sfm-navy-deep text-white shadow-2xl shadow-sfm-navy/30 scale-[1.02] lg:scale-[1.03] z-10'
+                      : 'bg-white border border-gray-200 hover:border-sfm-gold/30 hover:shadow-xl'
+                  }`}
+                >
+                  {tier.featured && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                      <div className="px-3 py-1 bg-sfm-gold text-sfm-navy text-xs font-bold rounded-full shadow-lg flex items-center gap-1">
+                        <Star className="w-3 h-3" aria-hidden="true" />
+                        FEATURED
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
 
-                <div className="p-6 lg:p-7">
-                  <div className="mb-4">
-                    <h3 className={`font-display text-xl mb-0.5 ${tier.popular ? 'text-white' : 'text-sfm-navy'}`}>
-                      {tier.name}
-                    </h3>
-                    <p className={`text-sm ${tier.popular ? 'text-white/60' : 'text-gray-500'}`}>
-                      {tier.tagline}
-                    </p>
-                  </div>
-
-                  <div className="mb-4">
-                    <div className="flex items-baseline gap-1">
-                      <span className={`text-3xl font-bold ${tier.popular ? 'text-white' : 'text-sfm-navy'}`}>
-                        ${billingCycle === 'monthly' ? tier.price.monthly : tier.price.annual}
-                      </span>
-                      <span className={`text-sm ${tier.popular ? 'text-white/60' : 'text-gray-500'}`}>
-                        /mo
-                      </span>
+                  <div className="p-6 lg:p-7">
+                    <div className="mb-4">
+                      <h3 className={`font-display text-xl mb-0.5 ${tier.featured ? 'text-white' : 'text-sfm-navy'}`}>
+                        {tier.name}
+                      </h3>
+                      <p className={`text-sm ${tier.featured ? 'text-white/60' : 'text-gray-500'}`}>{tier.tagline}</p>
                     </div>
-                    <p className={`text-xs mt-0.5 ${tier.popular ? 'text-white/50' : 'text-gray-400'}`}>
-                      {billingCycle === 'annual' ? 'Billed annually (10% discount)' : 'Annual billing available'}
-                    </p>
 
-                    <p className="text-[11px] leading-tight mt-1 font-medium tracking-wide text-sfm-gold/80">
-                      Founders pricing shown (limited to {FOUNDERS_COHORT_LIMIT} members)
-                    </p>
-                  </div>
-
-                  <p className={`text-sm mb-4 leading-relaxed ${tier.popular ? 'text-white/70' : 'text-gray-600'}`}>
-                    {tier.description}
-                  </p>
-
-                  <ul className="space-y-2 mb-6">
-                    {tier.features.slice(0, 8).map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <div
-                          className={`w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                            feature.included
-                              ? tier.popular
-                                ? 'bg-sfm-gold/20'
-                                : 'bg-sfm-gold/10'
-                              : 'bg-gray-100'
-                          }`}
-                        >
-                          {feature.included ? (
-                            <Check className="w-2.5 h-2.5 text-sfm-gold" aria-hidden="true" />
-                          ) : (
-                            <span className="w-1 h-px bg-gray-300" aria-hidden="true" />
-                          )}
-                        </div>
-                        <span
-                          className={`text-sm leading-snug ${
-                            feature.included
-                              ? tier.popular
-                                ? 'text-white/80'
-                                : 'text-sfm-navy/80'
-                              : tier.popular
-                              ? 'text-white/40'
-                              : 'text-gray-400'
-                          } ${feature.highlight ? 'font-medium' : ''}`}
-                        >
-                          {feature.text}
+                    <div className="mb-4">
+                      <div className="flex items-baseline gap-2 flex-wrap">
+                        <span className={`text-3xl font-bold ${tier.featured ? 'text-white' : 'text-sfm-navy'}`}>
+                          {renderPriceRange(range)}
                         </span>
-                      </li>
-                    ))}
-                  </ul>
+                        <span className={`text-sm ${tier.featured ? 'text-white/60' : 'text-gray-500'}`}>{unit}</span>
+                      </div>
 
-                  <Link
-                    href="/founders-waitlist"
-                    className={`block w-full py-3.5 px-5 rounded-xl font-semibold text-center transition-all duration-300 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
-                      tier.popular
-                        ? 'bg-sfm-gold text-sfm-navy hover:bg-sfm-gold-light shadow-lg shadow-sfm-gold/30 focus-visible:ring-sfm-gold'
-                        : 'bg-sfm-navy text-white hover:bg-sfm-navy-deep focus-visible:ring-sfm-navy'
-                    }`}
-                  >
-                    {tier.cta}
-                    <ArrowRight className="inline-block w-4 h-4 ml-2" aria-hidden="true" />
-                  </Link>
+                      <p className={`text-xs mt-1 ${tier.featured ? 'text-white/50' : 'text-gray-400'}`}>
+                        {billingCycle === 'annual' ? 'Billed annually (10% discount)' : 'Annual billing available'}
+                      </p>
 
-                  <p className={`mt-3 text-xs leading-relaxed ${tier.popular ? 'text-white/55' : 'text-gray-500'}`}>
-                    No payment required today. We will contact you about next steps if capacity allows.
-                  </p>
+                      <div className="mt-2 text-[11px] leading-tight">
+                        <span className={`font-semibold ${tier.featured ? 'text-white/70' : 'text-gray-500'}`}>
+                          Founders:
+                        </span>{' '}
+                        <span className="font-semibold text-sfm-gold">
+                          ${formatUSD(foundersValue)}{billingCycle === 'monthly' ? '/mo' : '/yr'}
+                        </span>
+                        <span className={`mx-2 ${tier.featured ? 'text-white/35' : 'text-gray-300'}`}>|</span>
+                        <span className={`font-semibold ${tier.featured ? 'text-white/70' : 'text-gray-500'}`}>
+                          Standard:
+                        </span>{' '}
+                        <span className={`font-semibold ${tier.featured ? 'text-white/85' : 'text-sfm-navy/80'}`}>
+                          ${formatUSD(standardValue)}{billingCycle === 'monthly' ? '/mo' : '/yr'}
+                        </span>
+                      </div>
 
-                  <p className={`mt-2 text-[11px] leading-relaxed ${tier.popular ? 'text-white/45' : 'text-gray-400'}`}>
-                    Access, response timing, and scheduling vary by tier and are subject to clinical judgment and availability.
-                  </p>
+                      <p className={`text-[11px] mt-2 ${tier.featured ? 'text-white/45' : 'text-gray-400'}`}>
+                        Exact fee confirmed prior to enrollment. Pricing may change after the Founders cohort closes.
+                      </p>
+                    </div>
+
+                    <p className={`text-sm mb-4 leading-relaxed ${tier.featured ? 'text-white/70' : 'text-gray-600'}`}>
+                      {tier.description}
+                    </p>
+
+                    <ul className="space-y-2 mb-6">
+                      {tier.features.slice(0, 8).map((feature, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <div
+                            className={`w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
+                              feature.included
+                                ? tier.featured
+                                  ? 'bg-sfm-gold/20'
+                                  : 'bg-sfm-gold/10'
+                                : 'bg-gray-100'
+                            }`}
+                          >
+                            {feature.included ? (
+                              <Check className="w-2.5 h-2.5 text-sfm-gold" aria-hidden="true" />
+                            ) : (
+                              <span className="w-1 h-px bg-gray-300" aria-hidden="true" />
+                            )}
+                          </div>
+                          <span
+                            className={`text-sm leading-snug ${
+                              feature.included
+                                ? tier.featured
+                                  ? 'text-white/80'
+                                  : 'text-sfm-navy/80'
+                                : tier.featured
+                                  ? 'text-white/40'
+                                  : 'text-gray-400'
+                            } ${feature.highlight ? 'font-medium' : ''}`}
+                          >
+                            {feature.text}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <Link
+                      href="/founders-waitlist"
+                      className={`block w-full py-3.5 px-5 rounded-xl font-semibold text-center transition-all duration-300 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
+                        tier.featured
+                          ? 'bg-sfm-gold text-sfm-navy hover:bg-sfm-gold-light shadow-lg shadow-sfm-gold/30 focus-visible:ring-sfm-gold'
+                          : 'bg-sfm-navy text-white hover:bg-sfm-navy-deep focus-visible:ring-sfm-navy'
+                      }`}
+                    >
+                      {tier.cta}
+                      <ArrowRight className="inline-block w-4 h-4 ml-2" aria-hidden="true" />
+                    </Link>
+
+                    <p className={`mt-3 text-xs leading-relaxed ${tier.featured ? 'text-white/55' : 'text-gray-500'}`}>
+                      No payment required today. We will contact you about next steps if capacity allows.
+                    </p>
+
+                    <p className={`mt-2 text-[11px] leading-relaxed ${tier.featured ? 'text-white/45' : 'text-gray-400'}`}>
+                      Access and response timing vary by tier and are subject to clinical judgment, triage, and availability.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <p className="text-sm text-sfm-navy/50">
-              Not ready for membership?{' '}
-              <Link href="#non-member" className="text-sfm-azure hover:text-sfm-gold transition-colors font-medium">
-                View single-visit pricing
-              </Link>
-            </p>
+              )
+            })}
           </div>
 
           <div className="text-center mt-4 pt-4 border-t border-sfm-navy/5">
@@ -500,72 +509,6 @@ export default function ServicesPage() {
               <span className="text-sfm-navy/25">·</span>
               <span>Clinical care begins early 2026</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Non-member pricing */}
-      <section id="non-member" aria-labelledby="nonmember-heading" className="section-padding bg-sfm-navy">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Non-Member Pricing */}
-            <div className="bg-white/5 backdrop-blur rounded-3xl p-8 border border-white/10">
-              <h3 id="nonmember-heading" className="font-display text-2xl text-white mb-2">
-                Non-Member Pricing
-              </h3>
-              <p className="text-white/60 text-sm mb-6">
-                For patients who prefer single visits without membership.
-              </p>
-
-              <div className="space-y-3">
-                {nonMemberPricing.map((item) => (
-                  <div
-                    key={item.service}
-                    className="flex justify-between items-center py-3 border-b border-white/10 last:border-0"
-                  >
-                    <span className="text-white/80 text-sm">{item.service}</span>
-                    <span className="text-white font-semibold">
-                      {typeof item.price === 'number' ? `$${item.price}` : item.price}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              <p className="text-white/40 text-xs mt-6">
-                Non-members do not receive messaging access or member laboratory pricing options.
-              </p>
-            </div>
-
-            {/* Why Membership */}
-            <div>
-              <h3 className="font-display text-2xl text-white mb-6">Why Membership Works</h3>
-              <ul className="space-y-4">
-                {[
-                  'Primary care visits without per-visit fees',
-                  'Access to lower-cost lab pricing options (members pay labs directly)',
-                  'Secure messaging based on tier and availability',
-                  'Transparent, predictable pricing',
-                  'One physician who knows your history over time',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white text-sm">
-                    <span className="w-5 h-5 rounded-full bg-sfm-gold/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="w-3 h-3 text-sfm-gold" aria-hidden="true" />
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center mt-8">
-            <Link
-              href="/compare"
-              className="text-sfm-gold hover:text-white text-sm font-medium transition-colors inline-flex items-center gap-2"
-            >
-              See the full comparison
-              <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </Link>
           </div>
         </div>
       </section>
@@ -661,19 +604,14 @@ export default function ServicesPage() {
                 <span className="text-white/80 text-sm font-medium">Founders Waitlist Now Open</span>
               </div>
 
-              <h2
-                id="cta-heading"
-                className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-4"
-              >
+              <h2 id="cta-heading" className="font-display text-3xl md:text-4xl lg:text-5xl text-white mb-4">
                 Begin Your Care with
                 <br />
                 <span className="text-sfm-gold">Medicine That Remembers</span>
                 <span className="text-sfm-gold text-xl align-top">™</span>
               </h2>
 
-              <p className="text-white/70 text-lg mb-10 max-w-2xl">
-                Clinical care begins early 2026. No payment required today.
-              </p>
+              <p className="text-white/70 text-lg mb-10 max-w-2xl">Clinical care begins early 2026. No payment required today.</p>
 
               <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
                 <PrimaryCTA variant="hero" />
@@ -684,15 +622,11 @@ export default function ServicesPage() {
 
               <p className="text-white/40 text-sm mt-8">
                 Questions? Call us at{' '}
-                <a
-                  href="tel:+14252857390"
-                  className="text-sfm-gold hover:text-sfm-gold-light transition-colors"
-                >
+                <a href="tel:+14252857390" className="text-sfm-gold hover:text-sfm-gold-light transition-colors">
                   +1 (425) 285-7390
                 </a>
               </p>
 
-              {/* Compliance: repeat emergency + WA-only succinctly near CTA */}
               <p className="text-white/35 text-xs mt-3 leading-relaxed">
                 Not for emergencies. Call 911 for emergencies. Telehealth visits require you to be in Washington State.
               </p>
@@ -716,7 +650,7 @@ export default function ServicesPage() {
             </p>
 
             <p>
-              <strong className="text-sfm-navy">Founders Pricing:</strong> Founding Members receive preferred pricing while Founders availability remains open. The prices shown on this page reflect Founders pricing. Your exact fee is confirmed prior to enrollment. Pricing is set by the Practice and is not negotiated. Pricing may change for non-founding members.{' '}
+              <strong className="text-sfm-navy">Founders Pricing:</strong> Prices are shown as ranges. Founding Members receive preferred pricing at the lower end of each range while Founders availability remains open. Your exact fee is confirmed prior to enrollment. Pricing is set by the Practice and is not negotiated. Pricing may change for non-founding members after the Founders cohort closes.{' '}
               <Link
                 href="/membership-terms#founders-advantage"
                 className="text-sfm-azure hover:text-sfm-gold font-medium transition-colors inline-flex items-center gap-1"
