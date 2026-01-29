@@ -264,7 +264,7 @@ export function generateSubscriptionConfirmationEmail(unsubscribeUrl: string): s
               </p>
               
               <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
-                At Sankofa Family Medicine, we believe in healthcare that honors your unique story while embracing the latest advances in medical science. Our name comes from the Akan word meaning "go back and get it"—a reminder that understanding where we come from helps us move forward with wisdom and purpose.
+                At Sankofa Family Medicine, we believe in healthcare that honors your unique story while embracing the latest advances in medical science. Our name comes from the Akan word meaning "go back and retrieve what matters", a reminder that understanding where we come from helps us move forward with wisdom and purpose.
               </p>
               
               <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
