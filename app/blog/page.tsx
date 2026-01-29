@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Calendar, User, Clock } from 'lucide-react'
 import { Metadata } from 'next'
+import NewsletterSignup from '@/components/NewsletterSignup'
 
 export const metadata: Metadata = {
   title: 'Blog | Health Insights | Sankofa Family Medicine',
@@ -265,52 +266,12 @@ export default function BlogPage() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
         </div>
 
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
-          <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
-            Get Health Insights Delivered
-          </h2>
-          <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
-            Subscribe to our newsletter for precision medicine articles, wellness updates, and exclusive insights from Dr. Nkrumah.
-          </p>
-          <form 
-            action="https://formspree.io/f/xjgbllpe"
-            method="POST"
-            className="max-w-md mx-auto"
-          >
-            <div className="flex flex-col sm:flex-row gap-3 mb-4">
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email address"
-                className="flex-1 px-6 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-sfm-gold transition-colors"
-                required
-              />
-              <button
-                type="submit"
-                className="px-8 py-3 bg-sfm-gold text-sfm-navy font-semibold rounded-lg hover:bg-sfm-gold-light transition-colors"
-              >
-                Subscribe
-              </button>
-            </div>
-            {/* Hidden fields for tracking */}
-            <input type="hidden" name="_subject" value="New Newsletter Subscriber" />
-            <input type="hidden" name="leadType" value="Newsletter" />
-            <input type="hidden" name="sourcePage" value="/blog" />
-            {/* Consent checkbox */}
-            <div className="flex items-start gap-3 justify-center text-left max-w-sm mx-auto mb-4">
-              <input
-                type="checkbox"
-                id="newsletter-consent"
-                name="consent"
-                required
-                className="mt-1 w-4 h-4 rounded border-white/30 text-sfm-gold focus:ring-sfm-gold/20 cursor-pointer bg-white/10"
-              />
-              <label htmlFor="newsletter-consent" className="text-xs text-white/60 cursor-pointer leading-relaxed">
-                I agree to receive email updates from Sankofa Family Medicine. I can unsubscribe at any time.
-              </label>
-            </div>
-          </form>
-          <p className="text-white/50 text-xs">No spam, just quality health content.</p>
+        <div className="relative max-w-4xl mx-auto px-6">
+          <NewsletterSignup
+            headline="Get Health Insights Delivered"
+            description="Subscribe to our newsletter for precision medicine articles, wellness updates, and exclusive insights from Dr. Nkrumah."
+            variant="dark"
+          />
         </div>
       </section>
 
