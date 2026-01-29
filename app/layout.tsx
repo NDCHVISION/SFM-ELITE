@@ -233,10 +233,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         areaServed: {
           '@type': 'State',
           name: 'Washington',
-          addressCountry: 'US',
           sameAs: 'https://en.wikipedia.org/wiki/Washington_(state)',
         },
-        medicalSpecialty: ['Primary care', 'Family medicine'],
+        medicalSpecialty: [
+          'https://schema.org/PrimaryCare',
+          'https://schema.org/CommunityHealth'
+        ],
         currenciesAccepted: 'USD',
         paymentAccepted: 'Cash, Credit Card, HSA, FSA',
         priceRange: '$225-$725',
@@ -244,11 +246,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         // Waitlist open - not active clinical intake yet
         isAcceptingNewPatients: false,
 
-        availableChannel: {
-          '@type': 'ServiceChannel',
-          serviceType: 'Telemedicine',
-          availableLanguage: ['English'],
-        },
+
 
         contactPoint: [
           {
@@ -261,18 +259,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         availableService: [
           {
-            '@type': 'MedicalService',
+            '@type': 'Service',
             name: 'Virtual Primary Care',
             serviceType: 'Telemedicine',
             description: 'Primary care delivered via secure video visits (planned visit length 45-75 minutes).',
           },
           {
-            '@type': 'MedicalService',
+            '@type': 'Service',
             name: 'Chronic Disease Management',
             description: 'Longitudinal management of chronic conditions with continuity of care.',
           },
           {
-            '@type': 'MedicalService',
+            '@type': 'Service',
             name: 'Preventive Care',
             description: 'Evidence-based preventive care and health maintenance.',
           },
@@ -288,10 +286,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               description: 'Essential virtual primary care with continuity and access (DPC model).',
               priceCurrency: 'USD',
               priceSpecification: {
-                '@type': 'AggregateOffer',
+                '@type': 'PriceSpecification',
                 priceCurrency: 'USD',
-                lowPrice: '225',
-                highPrice: '275',
+                minPrice: '225',
+                maxPrice: '275',
               },
             },
             {
@@ -300,10 +298,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               description: 'Deeper preventive insight and advanced diagnostics when appropriate (DPC model).',
               priceCurrency: 'USD',
               priceSpecification: {
-                '@type': 'AggregateOffer',
+                '@type': 'PriceSpecification',
                 priceCurrency: 'USD',
-                lowPrice: '325',
-                highPrice: '375',
+                minPrice: '325',
+                maxPrice: '375',
               },
             },
             {
@@ -312,10 +310,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               description: 'Enhanced access, coordination, and longitudinal oversight (DPC model).',
               priceCurrency: 'USD',
               priceSpecification: {
-                '@type': 'AggregateOffer',
+                '@type': 'PriceSpecification',
                 priceCurrency: 'USD',
-                lowPrice: '650',
-                highPrice: '725',
+                minPrice: '650',
+                maxPrice: '725',
               },
             },
           ],
@@ -343,7 +341,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         name: 'Dr. Yaw Nkrumah, MD',
         jobTitle: 'Founder & Medical Director',
         url: 'https://sankofafamilymedicine.com/founder',
-        medicalSpecialty: 'Family medicine',
+        medicalSpecialty: 'https://schema.org/PrimaryCare',
         worksFor: { '@id': 'https://sankofafamilymedicine.com/#organization' },
         hasCredential: {
           '@type': 'EducationalOccupationalCredential',
