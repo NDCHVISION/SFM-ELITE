@@ -353,12 +353,9 @@ export default function FoundersWaitlistPage() {
           </div>
 
           {/* Disclaimers */}
-          <div className="max-w-3xl mx-auto mt-16 pt-8 border-t border-sfm-navy/10">
-            <p className="text-xs text-sfm-navy/40 text-center">
-              Sankofa Family Medicine serves patients throughout Washington State via telehealth. Washington State patients only.
-            </p>
-            <p className="text-xs text-sfm-navy/30 text-center mt-2">
-              Information on this site is for general informational purposes and is not medical advice. If you are experiencing an emergency, call 911 or go to the nearest emergency room.
+          <div className="max-w-3xl mx-auto mt-12 pt-6 border-t border-sfm-navy/10">
+            <p className="text-[10px] text-sfm-navy/30 text-center leading-tight">
+              Sankofa Family Medicine serves Washington State patients via telehealth. For emergencies, call 911. Information on this site is for general informational purposes and is not medical advice.
             </p>
           </div>
         </div>
