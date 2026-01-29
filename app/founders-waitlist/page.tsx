@@ -64,12 +64,14 @@ const breadcrumbJsonLd = {
 export default function FoundersWaitlistPage() {
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [newsletterConsent, setNewsletterConsent] = useState(true)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setIsSubmitting(true)
     
     const formData = new FormData(e.currentTarget)
+    const email = formData.get('email') as string
     
     try {
       const response = await fetch('https://formspree.io/f/manrdjyn', {
@@ -81,6 +83,19 @@ export default function FoundersWaitlistPage() {
       })
       
       if (response.ok) {
+        // If newsletter consent is checked, subscribe to newsletter (silent failure)
+        if (newsletterConsent && email) {
+          // Fire-and-forget with proper error handling
+          void fetch('/api/newsletter/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+          }).catch(() => {
+            // Silent failure - don't block waitlist submission
+          })
+        }
         router.push('/waitlist-success')
       } else {
         alert('Submission failed. Please try again.')
@@ -280,6 +295,23 @@ export default function FoundersWaitlistPage() {
                 />
               </div>
               
+              {/* NEWSLETTER CONSENT CHECKBOX */}
+              <div className="form-group">
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input 
+                    type="checkbox" 
+                    id="newsletter_consent"
+                    name="newsletter_consent" 
+                    checked={newsletterConsent}
+                    onChange={(e) => setNewsletterConsent(e.target.checked)}
+                    className="mt-1 w-5 h-5 rounded border-sfm-cream-dark text-sfm-gold focus:ring-sfm-gold/20 cursor-pointer"
+                  />
+                  <span className="text-sm text-sfm-text-muted">
+                    I also want to receive practice updates and health insights via email.
+                  </span>
+                </label>
+              </div>
+
               {/* CONSENT CHECKBOX - CRITICAL */}
               <div className="form-group">
                 <label className="flex items-start gap-3 cursor-pointer">
@@ -292,7 +324,7 @@ export default function FoundersWaitlistPage() {
                     className="mt-1 w-5 h-5 rounded border-sfm-cream-dark text-sfm-gold focus:ring-sfm-gold/20 cursor-pointer"
                   />
                   <span className="text-sm text-sfm-text-muted">
-                    I understand this is a waitlist only and does not enroll me as a patient, create a physician-patient relationship, or provide medical advice. Services are available only to individuals located in Washington State. <span className="text-sfm-gold">*</span>
+                    I understand this is a waitlist only and does not enroll me as a patient, create a physician-patient relationship, or provide medical advice. Services are available only to individuals located in Washington State. By joining, you agree to receive communications from Sankofa Family Medicine including Founding Member updates. If checked above, you will also receive our newsletter with health insights. <span className="text-sfm-gold">*</span>
                   </span>
                 </label>
               </div>
