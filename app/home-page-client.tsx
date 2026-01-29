@@ -222,7 +222,7 @@ export default function HomePageClient() {
 
                     <span className="flex items-center gap-2 text-white/60 text-base">
                       <Clock className="w-5 h-5 text-sfm-gold/80" aria-hidden="true" />
-                      <span>45-75 Min Visits</span>
+                      <span>45 to 75 Minute Visits</span>
                     </span>
                   </div>
                 </div>
@@ -459,7 +459,7 @@ export default function HomePageClient() {
                   </h3>
                   <ul className="space-y-4">
                     {[
-                      'Visits are planned for 45-75 minutes.',
+                      'Visits are planned for 45 to 75 minute.',
                       'Urgent visits may be same-day or next-business-day, when available.',
                       'Intentionally limited panel size to protect time and access.',
                       'The same doctor every time, not a rotating team.',

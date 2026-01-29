@@ -241,8 +241,8 @@ const standards = [
 const differentiators = [
   {
     icon: Clock,
-    stat: '45-75',
-    unit: 'min',
+    stat: '45 to 75',
+    unit: 'minute',
     label: 'Visit Duration',
     description: 'Comprehensive appointments, not rushed 15-minute slots',
   },

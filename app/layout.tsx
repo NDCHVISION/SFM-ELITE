@@ -262,7 +262,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             '@type': 'Service',
             name: 'Virtual Primary Care',
             serviceType: 'Telemedicine',
-            description: 'Primary care delivered via secure video visits (planned visit length 45-75 minutes).',
+            description: 'Primary care delivered via secure video visits (planned visit length 45 to 75 minute).',
           },
           {
             '@type': 'Service',

@@ -214,7 +214,7 @@ const statPreviews = [
   {
     icon: Clock,
     before: '15 min',
-    after: '45-75 min',
+    after: '45 to 75 minute',
     label: 'Visit Duration',
   },
   {
