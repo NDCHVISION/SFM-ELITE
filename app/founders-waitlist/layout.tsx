@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   // Primary SEO
   title: 'Founders Waitlist | Sankofa Family Medicine | Washington State',
   description:
-    'Join the Sankofa Family Medicine Founders Waitlist. Limited to approximately 30 founding memberships. Membership-based primary care via telehealth for Washington State. Clinical care planned February 2026. No payment required.',
+    'Join the Sankofa Family Medicine Founders Waitlist. Limited to approximately 30 founding memberships. Membership-based primary care via telehealth for Washington State. Clinical care planned early 2026. No payment required.',
 
   // Keywords (for legacy crawlers)
   keywords: [

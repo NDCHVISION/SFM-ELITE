@@ -831,7 +831,7 @@ export default function ServicesPage() {
                 {
                   stat: '3x',
                   title: 'Longer Visits',
-                  desc: 'Your appointments are 45 to 60 minutes. The national average for primary care is 15 minutes. Time is the foundation of understanding.',
+                  desc: 'Your appointments are 45 to 75 minutes. The national average for primary care is 15 minutes. Time is the foundation of understanding.',
                   source: 'vs. national average',
                 },
                 {
@@ -1072,7 +1072,7 @@ export default function ServicesPage() {
             </h2>
 
             <p className="text-sfm-navy/60 text-lg mb-10 max-w-2xl mx-auto">
-              Enrollment begins February 2026. No payment required today.
+              Clinical care begins early 2026. No payment required today.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

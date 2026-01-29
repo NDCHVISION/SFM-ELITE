@@ -22,7 +22,7 @@ const waitlistPageJsonLd = {
   '@id': 'https://sankofafamilymedicine.com/founders-waitlist#webpage',
   url: 'https://sankofafamilymedicine.com/founders-waitlist',
   name: 'Founders Waitlist | Sankofa Family Medicine',
-  description: 'Join the Sankofa Family Medicine Founders Waitlist. Founders cohort limited (about 30 memberships). Clinical care plans to begin February 2026.',
+  description: 'Join the Sankofa Family Medicine Founders Waitlist. Founders cohort limited (about 30 memberships). Clinical care plans to begin early 2026.',
   inLanguage: 'en-US',
   isPartOf: {
     '@type': 'WebSite',
@@ -134,7 +134,7 @@ export default function FoundersWaitlistPage() {
             <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-8" aria-hidden="true" />
 
             <p className="text-xl text-sfm-navy/70 max-w-3xl mx-auto leading-relaxed">
-              Sankofa Family Medicine plans to begin clinical care in February 2026. Join the waitlist below to be contacted with next steps.
+              Sankofa Family Medicine plans to begin clinical care in early 2026. Join the waitlist below to be contacted with next steps.
               No payment is required to join.
             </p>
 

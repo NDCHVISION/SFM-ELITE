@@ -145,7 +145,7 @@ export default function Footer() {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://www.tiktok.com/@sankofafammed"
+                href="https://www.tiktok.com/@sankofafamilymedicine"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 
@@ -157,7 +157,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://x.com/sankofafammed"
+                href="https://x.com/@sankofafamilymedicine"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 

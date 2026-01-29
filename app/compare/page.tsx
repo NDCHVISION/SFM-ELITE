@@ -635,7 +635,7 @@ export default function ComparePage() {
           </p>
 
           <p className="text-white/50 text-base mb-10 max-w-xl mx-auto">
-            Join the first 30 founding members who shape how this practice grows. Enrollment begins February 2026. No payment required today.
+            Join the first 30 founding members who shape how this practice grows. Clinical care begins early 2026. No payment required today.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

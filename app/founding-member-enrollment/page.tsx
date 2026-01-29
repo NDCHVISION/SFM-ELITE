@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Founders Waitlist | Sankofa Family Medicine',
-  description: 'Join Sankofa Family Medicine founders waitlist. No payment today. Enrollment begins February 2026.',
+  description: 'Join Sankofa Family Medicine founders waitlist. No payment today. Clinical care begins early 2026.',
   robots: {
     index: false,
     follow: false,

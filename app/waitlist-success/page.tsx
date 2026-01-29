@@ -10,7 +10,7 @@ import { ArrowRight, Check } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Waitlist Confirmed | Sankofa Family Medicine',
   description:
-    'Thank you for joining the Sankofa Family Medicine Founders Waitlist. We will contact you when enrollment opens in February 2026.',
+    'Thank you for joining the Sankofa Family Medicine Founders Waitlist. We will contact you when enrollment opens in early 2026.',
   robots: {
     index: false,
     follow: false,
@@ -99,7 +99,7 @@ export default function WaitlistSuccessPage() {
               </p>
 
               <p className="text-sfm-navy/60">
-                When patient enrollment opens (February 2026), we will contact you by email with details on next steps, including how to review membership terms and complete registration if you choose to proceed.
+                When patient enrollment opens (early 2026), we will contact you by email with details on next steps, including how to review membership terms and complete registration if you choose to proceed.
               </p>
             </div>
           </section>

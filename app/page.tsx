@@ -114,7 +114,7 @@ export const metadata: Metadata = {
 
     // Enhanced LLM Context
     'llm-summary':
-      'Homepage for Sankofa Family Medicine, a virtual, membership-based primary care practice serving Washington State through a Direct Primary Care (DPC) model. Founders Waitlist open. Enrollment planned to begin February 2026. Three membership tiers: Continuity ($225-$275/mo), Precision ($325-$375/mo), Executive ($650-$725/mo). Founding members receive the lower end of each range. Rate confirmed before enrollment.',
+      'Homepage for Sankofa Family Medicine, a virtual, membership-based primary care practice serving Washington State through a Direct Primary Care (DPC) model. Founders Waitlist open. Enrollment planned to begin early 2026. Three membership tiers: Continuity ($225-$275/mo), Precision ($325-$375/mo), Executive ($650-$725/mo). Founding members receive the lower end of each range. Rate confirmed before enrollment.',
     'llm-key-facts':
       'Virtual Membership-Based Primary Care | Direct Primary Care Model | Washington State | $225-$725/month | Dr. Yaw Nkrumah MD | Board Certified Family Medicine | Founders Waitlist | Medicine That Remembers™ | 45-75 minute visits (planned)',
 
@@ -122,7 +122,7 @@ export const metadata: Metadata = {
     'voice-query-match':
       'What is Sankofa Family Medicine, How much does Sankofa Family Medicine cost, Is Sankofa Family Medicine accepting new patients, What is membership-based primary care, Virtual doctor in Washington State, DPC near me',
     'voice-search-answer':
-      'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State. The Founders Waitlist is open. Enrollment is planned to begin in February 2026. No payment is required to join the waitlist.',
+      'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State. The Founders Waitlist is open. Enrollment is planned to begin in early 2026. No payment is required to join the waitlist.',
     'speakable-summary':
       'Sankofa Family Medicine offers virtual, membership-based primary care across Washington State with planned membership pricing from $225 to $725 monthly. Founders Waitlist open.',
 
