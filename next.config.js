@@ -166,6 +166,47 @@ const nextConfig = {
         destination: '/locations/washington/bellevue',
         permanent: true,
       },
+      // Redirect /locations/{city} to /locations/washington/{city}
+      {
+        source: '/locations/seattle',
+        destination: '/locations/washington/seattle',
+        permanent: true,
+      },
+      {
+        source: '/locations/bellevue',
+        destination: '/locations/washington/bellevue',
+        permanent: true,
+      },
+      {
+        source: '/locations/spokane',
+        destination: '/locations/washington/spokane',
+        permanent: true,
+      },
+      {
+        source: '/locations/kirkland',
+        destination: '/locations/washington/kirkland',
+        permanent: true,
+      },
+      {
+        source: '/locations/redmond',
+        destination: '/locations/washington/redmond',
+        permanent: true,
+      },
+      {
+        source: '/locations/sammamish',
+        destination: '/locations/washington/sammamish',
+        permanent: true,
+      },
+      {
+        source: '/locations/mercer-island',
+        destination: '/locations/washington/mercer-island',
+        permanent: true,
+      },
+      {
+        source: '/locations/tacoma',
+        destination: '/locations/washington/tacoma',
+        permanent: true,
+      },
     ]
   }
 }
