@@ -67,7 +67,7 @@ export default function MobileCTA() {
 
         {/* Trust indicator – compliance-safe */}
         <div className="flex items-center justify-center gap-4 mt-2 text-xs text-sfm-text-muted">
-          <span className="flex items-center gap-1">
+          <span className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full" aria-hidden="true" />
             Enrollment begins early 2026
           </span>
