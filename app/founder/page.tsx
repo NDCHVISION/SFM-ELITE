@@ -109,7 +109,7 @@ const schemaGraph = {
       description: 'Board-certified family doctor and founder of Sankofa Family Medicine.',
       image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
       url: 'https://sankofafamilymedicine.com/founder',
-      medicalSpecialty: 'Family Medicine',
+      medicalSpecialty: 'Family medicine',
       knowsAbout: ['Primary care', 'Family medicine', 'Preventive care', 'Chronic disease management', 'Telehealth'],
       alumniOf: [
         {
