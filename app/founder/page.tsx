@@ -68,7 +68,6 @@ SCHEMA - ENHANCED WITH CREDENTIALS + FAQ + NAP
 const schemaGraph = {
   '@context': 'https://schema.org',
   '@graph': [
-    // ProfilePage
     {
       '@type': 'ProfilePage',
       '@id': 'https://sankofafamilymedicine.com/founder#page',
@@ -91,8 +90,6 @@ const schemaGraph = {
         ],
       },
     },
-
-    // Website
     {
       '@type': 'WebSite',
       '@id': 'https://sankofafamilymedicine.com/#website',
@@ -100,8 +97,6 @@ const schemaGraph = {
       name: 'Sankofa Family Medicine',
       publisher: { '@id': 'https://sankofafamilymedicine.com/#organization' },
     },
-
-    // Person + Physician
     {
       '@type': ['Person', 'Physician'],
       '@id': 'https://sankofafamilymedicine.com/#founder',
@@ -126,6 +121,7 @@ const schemaGraph = {
         {
           '@type': 'MedicalOrganization',
           name: 'Kadlec Family Medicine Residency',
+          url: 'https://gme.providence.org/washington/family-medicine-residency-programs-wa/welcome-to-kadlec-family-medicine-residency/',
           address: { '@type': 'PostalAddress', addressRegion: 'WA', addressCountry: 'US' },
         },
       ],
@@ -149,20 +145,16 @@ const schemaGraph = {
       worksFor: { '@id': 'https://sankofafamilymedicine.com/#organization' },
       sameAs: ['https://www.linkedin.com/in/yawnkrumahmd/'],
     },
-
-    // Organization (NAP + contact points + hours)
     {
       '@type': 'MedicalBusiness',
       '@id': 'https://sankofafamilymedicine.com/#organization',
       name: 'Sankofa Family Medicine',
       legalName: 'Sankofa Family Medicine PLLC',
       url: 'https://sankofafamilymedicine.com',
-      description: 'Membership-based primary care for Washington State. Medicine That Remembers™.',
+      description: 'Membership-based primary care for Washington State. Medicine That Remembers.',
       medicalSpecialty: ['Family Medicine', 'Primary Care'],
       areaServed: { '@type': 'State', name: 'Washington', addressCountry: 'US' },
       founder: { '@id': 'https://sankofafamilymedicine.com/#founder' },
-
-      // NAP (schema hygiene)
       address: {
         '@type': 'PostalAddress',
         streetAddress: '522 W Riverside Ave, Ste N',
@@ -201,8 +193,6 @@ const schemaGraph = {
         },
       ],
     },
-
-    // FAQPage (linked via hasPart above)
     {
       '@type': 'FAQPage',
       '@id': 'https://sankofafamilymedicine.com/founder#faq',
@@ -245,25 +235,17 @@ const schemaGraph = {
 }
 
 /* =========================================================
-FOUNDER PAGE - ENHANCED (preserving your perfected layout)
-Edits applied:
-- Disclaimers de-emphasized + footnoted in bio section
-- Trust wording: "HIPAA-conscious privacy practices" (safer than "HIPAA compliant")
-- Credential cards now consistently clickable with ExternalLink icon
-- Performance: lazy loading on below-fold image
+FOUNDER PAGE - PRODUCTION READY
+Fixes:
+- Removed duplicate skip link (layout.tsx provides one)
+- Fixed syntax error (extra </ul> tag removed)
+- Updated Kadlec URL to Providence GME
+- Disclaimers de-emphasized (text-xs, grouped)
 ========================================================= */
 
 export default function FounderPage() {
   return (
     <>
-      {/* Skip Link - WCAG 2.4.1 */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-sfm-gold focus:text-sfm-navy focus:rounded-lg focus:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
-      >
-        Skip to main content
-      </a>
-
       <Script
         id="ld-founder"
         type="application/ld+json"
@@ -271,31 +253,18 @@ export default function FounderPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
       />
 
-      {/* =========================================================
-      HERO
-      ========================================================= */}
+      {/* HERO */}
       <section
         id="main-content"
         className="relative pt-20 pb-16 bg-sfm-navy text-center overflow-hidden"
         aria-labelledby="hero-heading"
       >
-        {/* Decorative backgrounds */}
-        <div
-          className="absolute top-0 right-1/4 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute bottom-0 left-1/4 w-64 h-64 bg-sfm-azure/20 rounded-full blur-3xl"
-          aria-hidden="true"
-        />
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-sfm-gold/10 rounded-full blur-3xl" aria-hidden="true" />
+        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-sfm-azure/20 rounded-full blur-3xl" aria-hidden="true" />
 
         <div className="relative max-w-4xl mx-auto px-6">
-          {/* Photo with hover effect + reduced motion */}
           <div className="relative inline-block group">
-            <div
-              className="absolute inset-0 rounded-full bg-gradient-to-br from-sfm-gold/30 to-sfm-gold/10 blur-2xl scale-125 opacity-60 motion-reduce:transition-none motion-reduce:transform-none"
-              aria-hidden="true"
-            />
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-sfm-gold/30 to-sfm-gold/10 blur-2xl scale-125 opacity-60 motion-reduce:transition-none motion-reduce:transform-none" aria-hidden="true" />
             <Image
               src="/images/dr-nkrumah.png"
               alt="Dr. Yaw Nkrumah, MD - Board-certified family doctor and founder of Sankofa Family Medicine"
@@ -310,11 +279,7 @@ export default function FounderPage() {
             Founder & Medical Director
           </p>
 
-          <h1
-            id="hero-heading"
-            className="text-white text-5xl md:text-6xl font-display mt-4"
-            data-speakable
-          >
+          <h1 id="hero-heading" className="text-white text-5xl md:text-6xl font-display mt-4" data-speakable>
             Yaw Nkrumah, MD
           </h1>
 
@@ -323,20 +288,11 @@ export default function FounderPage() {
             Membership-based primary care for Washington State.
           </p>
 
-          {/* At-a-glance (SEO + readability, no hype) */}
-          <div className="mt-8 max-w-2xl mx-auto">
-            <ul className="text-white/75 text-base md:text-lg leading-relaxed space-y-2">
-            </ul>
-            </ul>
-          </div>
-
-          {/* CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/founders-waitlist" className="btn-primary text-lg px-8 py-4">
               Join the Founders Waitlist
               <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
             </Link>
-
             <a
               href="https://www.linkedin.com/in/yawnkrumahmd/"
               target="_blank"
@@ -349,20 +305,12 @@ export default function FounderPage() {
             </a>
           </div>
 
-          {/* Disclaimers (tightened for waitlist + intake hygiene) */}
-          <p className="text-white/50 text-xs leading-tight mt-4">
-            No payment required. Joining does not create a doctor-patient relationship.
-          </p>
+          <div className="mt-6 space-y-1 text-white/50 text-xs leading-tight">
+            <p>No payment required. Joining does not create a doctor-patient relationship.</p>
+            <p>Joining does not guarantee enrollment. Please do not submit medical information through the waitlist form.</p>
+            <p>Services available only to patients located in Washington State.</p>
+          </div>
 
-          <p className="text-white/50 text-xs leading-tight mt-1">
-            Joining does not guarantee enrollment. Please do not submit medical information through the waitlist form.
-          </p>
-
-          <p className="text-white/50 text-xs leading-tight mt-1">
-            Services available only to patients located in Washington State.
-          </p>
-
-          {/* Trust Badge Bar */}
           <div className="flex flex-wrap items-center justify-center gap-6 mt-10 pt-8 border-t border-white/10">
             <a
               href="https://www.credential.net/169707940"
@@ -388,21 +336,12 @@ export default function FounderPage() {
         </div>
       </section>
 
-      {/* =========================================================
-      PHILOSOPHY
-      ========================================================= */}
-      <section
-        className="relative py-24 bg-sfm-cream text-center overflow-hidden"
-        aria-labelledby="philosophy-heading"
-      >
-        {/* Decorative corners */}
+      {/* PHILOSOPHY */}
+      <section className="relative py-24 bg-sfm-cream text-center overflow-hidden" aria-labelledby="philosophy-heading">
         <div className="absolute top-0 left-0 w-24 h-24 border-l-2 border-t-2 border-sfm-gold/20" aria-hidden="true" />
         <div className="absolute bottom-0 right-0 w-24 h-24 border-r-2 border-b-2 border-sfm-gold/20" aria-hidden="true" />
-
         <div className="relative max-w-3xl mx-auto px-6">
-          <h2 id="philosophy-heading" className="sr-only">
-            Philosophy
-          </h2>
+          <h2 id="philosophy-heading" className="sr-only">Philosophy</h2>
           <blockquote className="font-display text-3xl md:text-4xl text-sfm-navy leading-relaxed italic" data-speakable>
             "Good care happens when your doctor remembers your story and builds on it over time."
           </blockquote>
@@ -410,58 +349,35 @@ export default function FounderPage() {
         </div>
       </section>
 
-      {/* =========================================================
-      BIOGRAPHY
-      ========================================================= */}
+      {/* BIOGRAPHY */}
       <section className="py-28 bg-white" aria-labelledby="biography-heading">
         <div className="max-w-6xl mx-auto px-6">
           <header className="mb-12">
-            <p className="text-sfm-azure text-base tracking-widest uppercase mb-4 font-medium">
-              Biography
-            </p>
-            <h2 id="biography-heading" className="font-display text-4xl md:text-5xl text-sfm-navy mb-6">
-              About Dr. Nkrumah
-            </h2>
+            <p className="text-sfm-azure text-base tracking-widest uppercase mb-4 font-medium">Biography</p>
+            <h2 id="biography-heading" className="font-display text-4xl md:text-5xl text-sfm-navy mb-6">About Dr. Nkrumah</h2>
             <div className="w-16 h-1 bg-sfm-gold" aria-hidden="true" />
           </header>
 
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <article className="text-xl text-sfm-text-muted leading-relaxed space-y-6 order-2 lg:order-1">
-              <p>
-                Dr. Yaw Nkrumah is a board-certified family doctor and the founder of Sankofa Family Medicine.
-              </p>
-
-              {/* softened comparative claim */}
-              <p>
-                He practices relationship-based family medicine focused on continuity, prevention, and careful follow-through over time.
-              </p>
-
-              <p>
-                He trained at the Medical University of South Carolina and completed his Family Medicine residency in Washington State. During training, he saw how often care breaks down when doctors change and history gets lost.
-              </p>
-
+              <p>Dr. Yaw Nkrumah is a board-certified family doctor and the founder of Sankofa Family Medicine.</p>
+              <p>He practices relationship-based family medicine focused on continuity, prevention, and careful follow-through over time.</p>
+              <p>He trained at the Medical University of South Carolina and completed his Family Medicine residency in Washington State. During training, he saw how often care breaks down when doctors change and history gets lost.</p>
               <p className="text-sfm-navy/70 text-lg mt-2">
                 Sankofa Family Medicine was created to fix that problem. The goal is simple: one doctor, one relationship, building over time.
                 <sup className="text-sfm-gold font-semibold"> *</sup>
               </p>
-
-              {/* Telehealth Limitations - de-emphasized + footnoted */}
               <div className="mt-6 border-l-2 border-sfm-gold/30 pl-4 text-sm text-sfm-navy/60 leading-relaxed space-y-2">
                 <p>
                   <span className="font-semibold text-sfm-navy/70">* Telehealth note:</span> Telehealth has limits. Some concerns require an in-person exam.
                   For emergencies, call 911 or go to the nearest emergency department.
                 </p>
-                <p>
-                  Dr. Nkrumah may refer to local providers when clinically appropriate. Individual health outcomes vary.
-                </p>
+                <p>Dr. Nkrumah may refer to local providers when clinically appropriate. Individual health outcomes vary.</p>
               </div>
             </article>
 
             <figure className="relative order-1 lg:order-2 group">
-              <div
-                className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/20 to-transparent rounded-3xl blur-2xl opacity-60"
-                aria-hidden="true"
-              />
+              <div className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/20 to-transparent rounded-3xl blur-2xl opacity-60" aria-hidden="true" />
               <Image
                 src="/images/dr-nkrumah-thoughtful.png"
                 alt="Dr. Yaw Nkrumah in a thoughtful moment"
@@ -475,25 +391,18 @@ export default function FounderPage() {
         </div>
       </section>
 
-      {/* =========================================================
-      CREDENTIALS
-      ========================================================= */}
+      {/* CREDENTIALS */}
       <section className="py-28 bg-sfm-navy text-white relative overflow-hidden" aria-labelledby="credentials-heading">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-sfm-gold/10 rounded-full blur-3xl" aria-hidden="true" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sfm-azure/20 rounded-full blur-3xl" aria-hidden="true" />
 
         <div className="relative max-w-6xl mx-auto px-6">
           <header className="text-center mb-16">
-            <p className="text-sfm-gold text-base tracking-widest uppercase mb-4 font-medium">
-              Training & Credentials
-            </p>
-            <h2 id="credentials-heading" className="font-display text-4xl md:text-5xl text-white">
-              Education & Licensure
-            </h2>
+            <p className="text-sfm-gold text-base tracking-widest uppercase mb-4 font-medium">Training & Credentials</p>
+            <h2 id="credentials-heading" className="font-display text-4xl md:text-5xl text-white">Education & Licensure</h2>
           </header>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {/* Board Certification - Clickable */}
             <a
               href="https://www.credential.net/169707940"
               target="_blank"
@@ -503,9 +412,7 @@ export default function FounderPage() {
             >
               <div className="flex items-start justify-between mb-4">
                 <Award className="w-12 h-12 text-sfm-gold" aria-hidden="true" />
-                <span className="px-3 py-1 bg-sfm-gold/20 text-sfm-gold text-sm font-medium rounded-full">
-                  Verified
-                </span>
+                <span className="px-3 py-1 bg-sfm-gold/20 text-sfm-gold text-sm font-medium rounded-full">Verified</span>
               </div>
               <h3 className="text-2xl font-display mb-2">Board Certified</h3>
               <p className="text-white/80 text-lg">Family Medicine (ABFM)</p>
@@ -515,7 +422,6 @@ export default function FounderPage() {
               </p>
             </a>
 
-            {/* Medical School - Clickable for consistent UX */}
             <a
               href="https://musc.edu"
               target="_blank"
@@ -531,12 +437,11 @@ export default function FounderPage() {
               <p className="text-white/80 text-lg">Medical University of South Carolina (MUSC)</p>
             </a>
 
-            {/* Residency - Clickable for consistent UX */}
             <a
-              href="https://www.kadlecfamilymedicine.com/"
+              href="https://gme.providence.org/washington/family-medicine-residency-programs-wa/welcome-to-kadlec-family-medicine-residency/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Kadlec Family Medicine Residency (opens in new tab)"
+              aria-label="Kadlec Family Medicine Residency at Providence (opens in new tab)"
               className="bg-white/10 backdrop-blur p-8 border border-white/20 rounded-2xl hover:bg-white/15 transition-all duration-300 hover:-translate-y-1 motion-reduce:transition-none motion-reduce:transform-none block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-sfm-navy"
             >
               <div className="flex items-start justify-between mb-4">
@@ -551,14 +456,10 @@ export default function FounderPage() {
         </div>
       </section>
 
-      {/* =========================================================
-      DPC CLARIFICATION (WA posture)
-      ========================================================= */}
+      {/* DPC CLARIFICATION */}
       <section className="py-16 bg-white border-y border-gray-100" aria-labelledby="dpc-heading">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 id="dpc-heading" className="font-display text-2xl text-sfm-navy mb-4">
-            About Direct Primary Care
-          </h2>
+          <h2 id="dpc-heading" className="font-display text-2xl text-sfm-navy mb-4">About Direct Primary Care</h2>
           <p className="text-lg text-sfm-navy/70 leading-relaxed">
             Sankofa Family Medicine is a Direct Primary Care (DPC) practice operating under Washington's direct primary care framework (RCW 48.150).
             Membership is not health insurance and does not replace insurance coverage. You may use insurance for labs, imaging, prescriptions, and specialist care outside the membership.
@@ -573,78 +474,47 @@ export default function FounderPage() {
         </div>
       </section>
 
-      {/* =========================================================
-      FAQ (a11y tightened)
-      ========================================================= */}
+      {/* FAQ */}
       <section className="py-24 bg-sfm-cream" aria-labelledby="faq-heading">
         <div className="max-w-3xl mx-auto px-6">
           <header className="text-center mb-12">
-            <p className="text-sfm-gold text-base tracking-widest uppercase mb-4 font-medium">
-              Questions
-            </p>
-            <h2 id="faq-heading" className="font-display text-4xl text-sfm-navy">
-              Frequently Asked Questions
-            </h2>
+            <p className="text-sfm-gold text-base tracking-widest uppercase mb-4 font-medium">Questions</p>
+            <h2 id="faq-heading" className="font-display text-4xl text-sfm-navy">Frequently Asked Questions</h2>
           </header>
 
           <div className="space-y-4">
             {[
-              {
-                q: 'Is Dr. Nkrumah board certified?',
-                a: 'Yes. He is board certified in Family Medicine by the American Board of Family Medicine. You can verify this at credential.net/169707940.',
-              },
-              {
-                q: 'Where does he practice?',
-                a: 'Sankofa Family Medicine serves patients located in Washington State through telehealth. In-person care is not currently available.',
-              },
-              {
-                q: 'How do I become a patient?',
-                a: 'Join the Founders Waitlist. No payment is required. Clinical care is planned to begin in early 2026. Joining the waitlist does not create a doctor-patient relationship. Joining does not guarantee enrollment.',
-              },
-              {
-                q: 'Is this covered by insurance?',
-                a: 'Sankofa Family Medicine uses a Direct Primary Care (DPC) model. We do not bill insurance for membership services. You may use insurance for labs, imaging, and specialists outside the membership.',
-              },
-            ].map((item, index) => {
-              const panelId = `faq-panel-${index}`
-              const summaryId = `faq-summary-${index}`
-              return (
-                <details key={index} className="group bg-white rounded-xl border border-gray-100 overflow-hidden">
-                  <summary
-                    id={summaryId}
-                    aria-controls={panelId}
-                    className="flex justify-between items-center p-6 cursor-pointer list-none hover:bg-gray-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                  >
-                    <span className="font-display text-lg text-sfm-navy pr-4">{item.q}</span>
-                    <ChevronDown
-                      className="w-5 h-5 text-sfm-azure flex-shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none motion-reduce:transform-none"
-                      aria-hidden="true"
-                    />
-                  </summary>
-                  <div id={panelId} role="region" aria-labelledby={summaryId} className="px-6 pb-6">
-                    <p className="text-sfm-text-muted text-lg leading-relaxed">{item.a}</p>
-                  </div>
-                </details>
-              )
-            })}
+              { q: 'Is Dr. Nkrumah board certified?', a: 'Yes. He is board certified in Family Medicine by the American Board of Family Medicine. You can verify this at credential.net/169707940.' },
+              { q: 'Where does he practice?', a: 'Sankofa Family Medicine serves patients located in Washington State through telehealth. In-person care is not currently available.' },
+              { q: 'How do I become a patient?', a: 'Join the Founders Waitlist. No payment is required. Clinical care is planned to begin in early 2026. Joining the waitlist does not create a doctor-patient relationship. Joining does not guarantee enrollment.' },
+              { q: 'Is this covered by insurance?', a: 'Sankofa Family Medicine uses a Direct Primary Care (DPC) model. We do not bill insurance for membership services. You may use insurance for labs, imaging, and specialists outside the membership.' },
+            ].map((item, index) => (
+              <details key={index} className="group bg-white rounded-xl border border-gray-100 overflow-hidden">
+                <summary
+                  id={`faq-summary-${index}`}
+                  aria-controls={`faq-panel-${index}`}
+                  className="flex justify-between items-center p-6 cursor-pointer list-none hover:bg-gray-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sfm-azure/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                >
+                  <span className="font-display text-lg text-sfm-navy pr-4">{item.q}</span>
+                  <ChevronDown className="w-5 h-5 text-sfm-azure flex-shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none motion-reduce:transform-none" aria-hidden="true" />
+                </summary>
+                <div id={`faq-panel-${index}`} role="region" aria-labelledby={`faq-summary-${index}`} className="px-6 pb-6">
+                  <p className="text-sfm-text-muted text-lg leading-relaxed">{item.a}</p>
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* =========================================================
-      FINAL CTA
-      ========================================================= */}
+      {/* FINAL CTA */}
       <section className="relative py-28 bg-sfm-navy text-center overflow-hidden" aria-labelledby="cta-heading">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-sfm-gold/10 rounded-full blur-3xl" aria-hidden="true" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sfm-azure/20 rounded-full blur-3xl" aria-hidden="true" />
 
         <div className="relative max-w-3xl mx-auto px-6">
-          {/* Badge (reduced motion safe) */}
           <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-10">
-            <span
-              className="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse motion-reduce:animate-none"
-              aria-hidden="true"
-            />
+            <span className="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse motion-reduce:animate-none" aria-hidden="true" />
             <span className="text-white/80 text-lg font-medium">Founders Waitlist Open</span>
           </div>
 
@@ -666,16 +536,11 @@ export default function FounderPage() {
             </Link>
           </div>
 
-          {/* Full Disclaimer (tight, readable, conservative) */}
-          <p className="text-white/70 text-base mt-10 max-w-lg mx-auto leading-relaxed">
-            Founders Waitlist only. No payment is required to join. Joining does not guarantee enrollment. Joining does not create a doctor-patient relationship. Please do not submit medical information through the waitlist form. Services are available only to patients located in Washington State.
-          </p>
+          <div className="mt-10 space-y-4 text-white/50 text-sm max-w-lg mx-auto leading-relaxed">
+            <p>Founders Waitlist only. No payment is required to join. Joining does not guarantee enrollment. Joining does not create a doctor-patient relationship. Please do not submit medical information through the waitlist form. Services are available only to patients located in Washington State.</p>
+            <p>Not for emergencies. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department.</p>
+          </div>
 
-          <p className="text-white/70 text-base mt-4">
-            Not for emergencies. If you are experiencing a medical emergency, call 911 or go to the nearest emergency department.
-          </p>
-
-          {/* Trust Footer */}
           <div className="mt-12 pt-8 border-t border-white/10">
             <div className="flex flex-wrap items-center justify-center gap-8 text-white/70 text-base">
               <a
@@ -697,18 +562,10 @@ export default function FounderPage() {
                 WA Licensed
               </span>
             </div>
-
-            {/* Optional: small policy links (leave if routes exist) */}
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-white/60 text-sm">
-              <Link href="/privacy" className="hover:text-white transition-colors">
-                Notice of Privacy Practices
-              </Link>
-              <span aria-hidden="true" className="text-white/30">
-                |
-              </span>
-              <Link href="/founders-waitlist" className="hover:text-white transition-colors">
-                Founders Waitlist Terms
-              </Link>
+              <Link href="/privacy" className="hover:text-white transition-colors">Notice of Privacy Practices</Link>
+              <span aria-hidden="true" className="text-white/30">|</span>
+              <Link href="/founders-waitlist" className="hover:text-white transition-colors">Founders Waitlist Terms</Link>
             </div>
           </div>
         </div>
@@ -716,3 +573,4 @@ export default function FounderPage() {
     </>
   )
 }
+
