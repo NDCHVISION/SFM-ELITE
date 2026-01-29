@@ -590,7 +590,6 @@ export default function HomePageClient() {
         </div>
       </section>
 
-    /* MEMBERSHIP PREVIEW */
 <section
   id="membership-plans"
   className="relative py-24 lg:py-32 bg-white overflow-hidden"
