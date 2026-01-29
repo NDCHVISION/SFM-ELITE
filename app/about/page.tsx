@@ -189,7 +189,7 @@ const howToJsonLd = {
       '@type': 'HowToStep',
       position: 2,
       name: 'Complete Secure Onboarding',
-      text: 'After enrollment opens in February 2026, complete secure onboarding in our HIPAA-compliant clinical platform.',
+      text: 'After enrollment opens in early 2026, complete secure onboarding in our HIPAA-compliant clinical platform.',
       url: 'https://sankofafamilymedicine.atlas.md',
     },
     {
@@ -241,7 +241,7 @@ const standards = [
 const differentiators = [
   {
     icon: Clock,
-    stat: '45-60',
+    stat: '45-75',
     unit: 'min',
     label: 'Visit Duration',
     description: 'Comprehensive appointments, not rushed 15-minute slots',
@@ -404,7 +404,7 @@ export default function AboutPage() {
                 </div>
 
                 <p className="text-white/40 text-xs mt-4">
-                  Enrollment begins February 2026. No payment required today.
+                  Clinical care begins early 2026. No payment required today.
                 </p>
               </div>
 
@@ -462,104 +462,6 @@ export default function AboutPage() {
             className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sfm-gold/50 to-transparent"
             aria-hidden="true"
           />
-        </section>
-
-        {/* ================================================================= */}
-        {/* THE SANKOFA PRINCIPLE */}
-        {/* ================================================================= */}
-        <section
-          className="py-24 bg-white"
-          aria-labelledby="sankofa-principle-heading"
-        >
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="animate-on-scroll">
-                <p className="section-label">The Principle</p>
-                <h2
-                  id="sankofa-principle-heading"
-                  className="font-display text-3xl md:text-4xl text-sfm-navy mb-6"
-                >
-                  What does Sankofa mean?
-                </h2>
-                <div
-                  className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-8"
-                  aria-hidden="true"
-                />
-
-                <div className="space-y-6 text-sfm-navy/70 leading-relaxed">
-                  <p>
-                    Sankofa is an Akan principle from West Africa, represented by a mythical bird
-                    looking back while moving forward. The word translates to "go back and get it,"
-                    teaching that we must retrieve what matters from our past to build our future.
-                  </p>
-                  <p>
-                    In healthcare, this principle addresses a fundamental problem: medical records
-                    fragment across systems, physicians rotate between visits, and patients are
-                    forced to repeat their history because no one remembers it.
-                  </p>
-                  <p>
-                    Sankofa Family Medicine was built to solve this. One physician. Complete continuity.
-                    A practice designed to remember what matters about your health.
-                  </p>
-                </div>
-              </div>
-
-              <div className="relative group animate-on-scroll animation-delay-200">
-                {/* Gold Sankofa Sculpture */}
-                <div className="relative mb-8 ml-8">
-                  <div
-                    className="absolute -inset-4 bg-gradient-to-br from-sfm-gold/30 to-sfm-gold/5 rounded-3xl blur-2xl animate-pulse-slow"
-                    aria-hidden="true"
-                  />
-                  <div className="image-lift image-fade-elite rounded-3xl overflow-hidden shadow-2xl shadow-sfm-navy/20">
-                    <Image
-                      src="/images/sankofa-gold-sculpture.png"
-                      alt="Modern gold Sankofa sculpture on marble base: the bird looking back while moving forward, symbolizing the retrieval of wisdom from the past"
-                      width={400}
-                      height={600}
-                      className="relative object-cover w-full max-w-sm mx-auto transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-110"
-                    />
-                    <div
-                      className="absolute inset-0 rounded-3xl pointer-events-none shadow-[inset_0_0_30px_rgba(0,0,0,0.2)]"
-                      aria-hidden="true"
-                    />
-                  </div>
-                </div>
-
-                {/* Differentiators Grid */}
-                <div className="bg-sfm-cream rounded-3xl p-8 border border-sfm-gold/10">
-                  <div className="grid grid-cols-2 gap-4">
-                    {differentiators.map((item, index) => (
-                      <div
-                        key={item.label}
-                        className={`bg-white rounded-2xl p-6 shadow-soft hover:shadow-large hover:-translate-y-1 transition-all duration-300 ${
-                          index === 0 ? 'border-2 border-sfm-gold/20' : ''
-                        }`}
-                      >
-                        <div className="flex items-center gap-2 mb-3">
-                          <div className="w-10 h-10 rounded-xl bg-sfm-azure/10 flex items-center justify-center">
-                            <item.icon
-                              className="w-5 h-5 text-sfm-azure"
-                              strokeWidth={1.5}
-                              aria-hidden="true"
-                            />
-                          </div>
-                        </div>
-                        <div className="flex items-baseline gap-1 mb-1">
-                          <span className="font-display text-3xl text-sfm-navy">
-                            {item.stat}
-                          </span>
-                          <span className="text-sfm-navy/60 text-sm">{item.unit}</span>
-                        </div>
-                        <p className="text-sfm-gold text-sm font-medium mb-1">{item.label}</p>
-                        <p className="text-sfm-navy/50 text-xs">{item.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* ================================================================= */}
@@ -875,7 +777,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-sfm-navy/60 text-lg mb-10 max-w-2xl mx-auto">
-              Enrollment begins February 2026. Reserve your spot today. No payment required.
+              Clinical care begins early 2026. Reserve your spot today. No payment required.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -134,7 +134,7 @@ export default function WashingtonLocationPage() {
               </Link>
             </div>
             <p className="text-white/40 text-xs mb-12">
-              Enrollment begins February 2026. No payment required today.
+              Clinical care begins early 2026. No payment required today.
             </p>
 
             {/* Trust Points */}
@@ -331,7 +331,7 @@ export default function WashingtonLocationPage() {
           </h2>
 
           <p className="text-white/60 text-lg mb-12 max-w-2xl mx-auto">
-            Enrollment begins February 2026. No payment required today.
+            Clinical care begins early 2026. No payment required today.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

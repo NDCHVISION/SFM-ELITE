@@ -135,7 +135,7 @@ export default function SeattlePage() {
             </Link>
           </div>
           <p className="text-white/40 text-xs mt-3">
-            Enrollment begins February 2026. No payment required today.
+            Clinical care begins early 2026. No payment required today.
           </p>
         </div>
       </section>
@@ -206,7 +206,7 @@ export default function SeattlePage() {
             <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
           </h2>
           <p className="text-white/60 mb-8">
-            Enrollment begins February 2026. No payment required today.
+            Clinical care begins early 2026. No payment required today.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a

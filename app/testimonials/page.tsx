@@ -78,7 +78,7 @@ export default function TestimonialsPage() {
               {
                 icon: Clock,
                 title: 'Unhurried Care',
-                description: '45 to 60 minute visits that honor the complexity of your health, not 15 minute transactions.',
+                description: '45 to 75 minute visits that honor the complexity of your health, not 15 minute transactions.',
               },
               {
                 icon: Users,

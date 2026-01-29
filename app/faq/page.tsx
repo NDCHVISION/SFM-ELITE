@@ -36,7 +36,7 @@ export default function FAQPage() {
               <p>This DPC model allows us to:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Eliminate insurance-driven administrative overhead</li>
-                <li>Spend more time with patients (45-60 minute visits vs. industry standard 15 minutes)</li>
+                <li>Spend more time with patients (45 to 75 minute visits vs. industry standard 15 minutes)</li>
                 <li>Avoid insurance restrictions on care decisions</li>
                 <li>Provide truly personalized care focused on your health rather than billing codes</li>
               </ul>
@@ -228,7 +228,7 @@ export default function FAQPage() {
           question: 'How do I become a patient?',
           answer: (
             <div className="space-y-3">
-              <p>Join the Founders Waitlist below. When enrollment opens (February 2026), you will receive instructions to complete intake, select your membership tier, and schedule your first visit through our secure patient portal.</p>
+              <p>Join the Founders Waitlist below. When enrollment opens (early 2026), you will receive instructions to complete intake, select your membership tier, and schedule your first visit through our secure patient portal.</p>
               <a href="/founders-waitlist" className="inline-flex items-center text-sfm-azure hover:text-sfm-navy font-medium">
                 Join the Founders Waitlist <ArrowRight className="ml-2 w-4 h-4" />
               </a>
@@ -237,11 +237,11 @@ export default function FAQPage() {
         },
         {
           question: 'What happens during the first visit?',
-          answer: 'Your first visit is a comprehensive intake (45-60 minutes) where we review your complete health history, discuss your goals, and develop a personalized care plan. This is the foundation of "Medicine That Remembers": we take the time to truly understand you.'
+          answer: 'Your first visit is a comprehensive intake (45 to 75 minutes) where we review your complete health history, discuss your goals, and develop a personalized care plan. This is the foundation of "Medicine That Remembers": we take the time to truly understand you.'
         },
         {
           question: 'How does enrollment work?',
-          answer: 'Enrollment begins February 2026. Reserve your spot now through our founders waitlist. No payment required today.'
+          answer: 'Clinical care begins early 2026. Reserve your spot now through our founders waitlist. No payment required today.'
         },
         {
           question: 'Do I need to transfer my medical records?',
@@ -400,7 +400,7 @@ export default function FAQPage() {
             <span className="text-sfm-gold">Medicine That Remembers</span><span className="text-sfm-gold text-xl align-top">&#8482;</span>
           </h2>
           <p className="text-white/60 text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-            Enrollment begins February 2026. No payment required today.
+            Clinical care begins early 2026. No payment required today.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 

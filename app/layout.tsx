@@ -383,7 +383,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             name: 'Is Sankofa Family Medicine accepting new patients?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Sankofa Family Medicine is currently accepting Founders Waitlist sign-ups. Enrollment is planned to begin in February 2026.',
+              text: 'Sankofa Family Medicine is currently accepting Founders Waitlist sign-ups. Enrollment is planned to begin in early 2026.',
             },
           },
           {

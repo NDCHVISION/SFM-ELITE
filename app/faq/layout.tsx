@@ -86,8 +86,8 @@ FOUNDING MEMBER OFFER:
 - Limited spots available
 
 GETTING STARTED:
-- Enrollment begins February 2026
-- First visit is 45-60 minute comprehensive intake
+- Clinical care begins early 2026
+- First visit is 45 to 75 minute comprehensive intake
 - Records transfer assistance provided
 - Currently serving Washington State only (South Carolina coming 2026)
 
