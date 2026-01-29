@@ -195,10 +195,10 @@ export async function POST(request: NextRequest) {
     // Add to subscribers list
     await redis.sadd(SUBSCRIBERS_KEY, normalizedEmail)
     
-    // Send confirmation email (non-blocking)
-    sendConfirmationEmail(normalizedEmail).catch((error) => {
-      console.warn('Confirmation email failed for subscriber:', normalizedEmail, error)
-    })
+    // Welcome email temporarily disabled - pending legal review
+    // sendConfirmationEmail(normalizedEmail).catch((error) => {
+    //   console.warn('Confirmation email failed for subscriber:', normalizedEmail, error)
+    // })
     
     return NextResponse.json(
       { success: true, message: 'Successfully subscribed to newsletter' },
