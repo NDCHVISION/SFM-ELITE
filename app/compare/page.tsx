@@ -214,7 +214,7 @@ const statPreviews = [
   {
     icon: Clock,
     before: '15 min',
-    after: '45-75 min',
+    after: '45 to 75 minute',
     label: 'Visit Duration',
   },
   {
@@ -236,7 +236,7 @@ const comparisonData = [
     category: 'Visit Duration',
     context: 'Time with your physician',
     traditional: { value: '15 min', label: 'average', isNegative: false },
-    sankofa: { value: '45 to 75 min', label: 'standard', isPositive: true },
+    sankofa: { value: '45 to 75 minute', label: 'standard', isPositive: true },
     highlight: true,
   },
   {
