@@ -108,7 +108,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/109183000/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 
+                className="w-12 h-12 rounded-xl bg-sfm-gold/10 border border-sfm-gold/30 flex items-center justify-center text-sfm-gold 
                   hover:bg-sfm-gold hover:border-sfm-gold hover:text-sfm-navy transition-all duration-300"
                 aria-label="Follow Sankofa Family Medicine on LinkedIn"
               >
@@ -157,7 +157,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://x.com/@sankofafamilymedicine"
+                href="https://x.com/sankofafammed"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 
