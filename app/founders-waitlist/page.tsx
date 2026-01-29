@@ -6,54 +6,85 @@ import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 // =============================================================================
-// METADATA - Moved to generateMetadata for client components
+// STRUCTURED DATA (Schema.org) - GRAPH to avoid broken @id references
 // =============================================================================
 
-// Since this is now a client component, metadata export is removed
-// Metadata is handled via Next.js head tags or layout
-
-// =============================================================================
-// STRUCTURED DATA
-// =============================================================================
-
-const waitlistPageJsonLd = {
+const schemaGraph = {
   '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': 'https://sankofafamilymedicine.com/founders-waitlist#webpage',
-  url: 'https://sankofafamilymedicine.com/founders-waitlist',
-  name: 'Founders Waitlist | Sankofa Family Medicine',
-  description: 'Join the Sankofa Family Medicine Founders Waitlist. Founders cohort limited (about 30 memberships). Clinical care plans to begin early 2026.',
-  inLanguage: 'en-US',
-  isPartOf: {
-    '@type': 'WebSite',
-    '@id': 'https://sankofafamilymedicine.com/#website',
-    name: 'Sankofa Family Medicine',
-    url: 'https://sankofafamilymedicine.com',
-  },
-  about: { '@id': 'https://sankofafamilymedicine.com/#organization' },
-  mainEntity: { '@id': 'https://sankofafamilymedicine.com/#organization' },
-  potentialAction: {
-    '@type': 'JoinAction',
-    name: 'Join the Founders Waitlist',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://sankofafamilymedicine.com/founders-waitlist',
-      actionPlatform: ['http://schema.org/DesktopWebPlatform', 'http://schema.org/MobileWebPlatform'],
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': 'https://sankofafamilymedicine.com/#website',
+      url: 'https://sankofafamilymedicine.com',
+      name: 'Sankofa Family Medicine',
+      inLanguage: 'en-US',
     },
-    object: {
-      '@type': 'Thing',
-      name: 'Founders Waitlist',
-      provider: { '@id': 'https://sankofafamilymedicine.com/#organization' },
+    {
+      '@type': 'MedicalClinic',
+      '@id': 'https://sankofafamilymedicine.com/#organization',
+      name: 'Sankofa Family Medicine',
+      legalName: 'Sankofa Family Medicine PLLC',
+      url: 'https://sankofafamilymedicine.com',
+      telephone: '+1-425-285-7390',
+      address: {
+        '@type': 'PostalAddress',
+        addressRegion: 'WA',
+        addressCountry: 'US',
+      },
+      areaServed: {
+        '@type': 'State',
+        name: 'Washington',
+        addressCountry: 'US',
+      },
+      medicalSpecialty: {
+        '@type': 'MedicalSpecialty',
+        name: 'Primary Care',
+      },
+      isAcceptingNewPatients: false,
     },
-  },
-}
-
-const breadcrumbJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sankofafamilymedicine.com' },
-    { '@type': 'ListItem', position: 2, name: 'Founders Waitlist', item: 'https://sankofafamilymedicine.com/founders-waitlist' },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://sankofafamilymedicine.com/founders-waitlist#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sankofafamilymedicine.com' },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Founders Waitlist',
+          item: 'https://sankofafamilymedicine.com/founders-waitlist',
+        },
+      ],
+    },
+    {
+      '@type': 'WebPage',
+      '@id': 'https://sankofafamilymedicine.com/founders-waitlist#webpage',
+      url: 'https://sankofafamilymedicine.com/founders-waitlist',
+      name: 'Founders Waitlist | Sankofa Family Medicine',
+      description:
+        'Join the Sankofa Family Medicine Founders Waitlist. Founders cohort is limited (approximately 30 memberships). Joining the waitlist does not guarantee availability. Clinical care is planned to begin in early 2026.',
+      inLanguage: 'en-US',
+      isPartOf: { '@id': 'https://sankofafamilymedicine.com/#website' },
+      about: { '@id': 'https://sankofafamilymedicine.com/#organization' },
+      mainEntity: { '@id': 'https://sankofafamilymedicine.com/#organization' },
+      breadcrumb: { '@id': 'https://sankofafamilymedicine.com/founders-waitlist#breadcrumb' },
+      potentialAction: {
+        '@type': 'JoinAction',
+        name: 'Join the Founders Waitlist',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://sankofafamilymedicine.com/founders-waitlist',
+          actionPlatform: [
+            'http://schema.org/DesktopWebPlatform',
+            'http://schema.org/MobileWebPlatform',
+          ],
+        },
+        object: {
+          '@type': 'Thing',
+          name: 'Founders Waitlist',
+          provider: { '@id': 'https://sankofafamilymedicine.com/#organization' },
+        },
+      },
+    },
   ],
 }
 
@@ -69,39 +100,35 @@ export default function FoundersWaitlistPage() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     const formData = new FormData(e.currentTarget)
-    const email = formData.get('email') as string
-    
+    const email = (formData.get('email') as string) || ''
+
     try {
       const response = await fetch('https://formspree.io/f/manrdjyn', {
         method: 'POST',
         body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
+        headers: { Accept: 'application/json' },
       })
-      
+
       if (response.ok) {
-        // If newsletter consent is checked, subscribe to newsletter (silent failure)
         if (newsletterConsent && email) {
-          // Fire-and-forget with proper error handling
           void fetch('/api/newsletter/subscribe', {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email })
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email }),
           }).catch(() => {
-            // Silent failure - don't block waitlist submission
+            // Silent failure: do not block waitlist submission
           })
         }
+
         router.push('/waitlist-success')
-      } else {
-        alert('Submission failed. Please try again.')
-        setIsSubmitting(false)
+        return
       }
-    } catch (error) {
+
+      alert('Submission failed. Please try again.')
+      setIsSubmitting(false)
+    } catch {
       alert('Network error. Please try again.')
       setIsSubmitting(false)
     }
@@ -110,14 +137,9 @@ export default function FoundersWaitlistPage() {
   return (
     <>
       <Script
-        id="waitlist-page-schema"
+        id="waitlist-schema"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(waitlistPageJsonLd) }}
-      />
-      <Script
-        id="waitlist-breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
       />
 
       <main className="min-h-screen bg-gradient-to-b from-white to-sfm-cream/30 pt-16 lg:pt-[128px]">
@@ -138,86 +160,109 @@ export default function FoundersWaitlistPage() {
           {/* Header */}
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-sfm-gold/10 rounded-full border border-sfm-gold/20 mb-6">
-              <span className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse" aria-hidden="true" />
-              <span className="text-sfm-gold text-sm font-semibold">Founders Cohort Limited (About 30 Memberships)</span>
+              <span
+                className="w-2 h-2 bg-sfm-gold rounded-full animate-pulse"
+                aria-hidden="true"
+              />
+              <span className="text-sfm-gold text-sm font-semibold">
+                Founders cohort limited (approximately 30 memberships)
+              </span>
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl text-sfm-navy mb-6">
               Join the Founders Waitlist
             </h1>
 
-            <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-8" aria-hidden="true" />
+            <div
+              className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mx-auto mb-8"
+              aria-hidden="true"
+            />
 
             <p className="text-xl text-sfm-navy/70 max-w-3xl mx-auto leading-relaxed">
-              Sankofa Family Medicine plans to begin clinical care in early 2026. Join the waitlist below to be contacted with next steps.
-              No payment is required to join.
+              Sankofa Family Medicine plans to begin clinical care in early 2026. Join the waitlist
+              below to be contacted with next steps. No payment is required to join.
             </p>
 
             <p className="text-sm text-sfm-navy/50 max-w-3xl mx-auto mt-4">
-              Submitting this form places you on our Founders Waitlist only. It does not enroll you as a patient, create a physician-patient relationship, or provide medical advice. Services are available only to individuals located in Washington State.
+              Submitting this form places you on our Founders Waitlist only. It does not enroll you
+              as a patient, create a physician-patient relationship, or provide medical advice.
+              Joining the waitlist does not guarantee availability. Services are available only to
+              individuals located in Washington State at the time of service.
             </p>
           </div>
 
-          {/* Formspree Form */}
+          {/* Form */}
           <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-sfm-gold/10 p-8 md:p-10">
-            <form 
-              onSubmit={handleSubmit}
-              acceptCharset="UTF-8"
-              className="waitlist-form space-y-6"
-            >
+            <form onSubmit={handleSubmit} acceptCharset="UTF-8" className="space-y-6">
               {/* Hidden Fields */}
               <input type="hidden" name="source_page" value="/founders-waitlist" />
               <input type="hidden" name="consent_version" value="v2026-01-27" />
-              
+
               {/* First Name */}
-              <div className="form-group">
+              <div>
                 <label htmlFor="first_name" className="block text-sfm-navy text-sm font-medium mb-2">
                   First Name <span className="text-sfm-gold">*</span>
                 </label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   id="first_name"
-                  name="first_name" 
-                  required 
-                  minLength={1}
+                  name="first_name"
+                  required
                   autoComplete="given-name"
                   placeholder="First Name"
                   className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text placeholder:text-sfm-text-light focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300"
                 />
               </div>
-              
+
               {/* Last Name */}
-              <div className="form-group">
+              <div>
                 <label htmlFor="last_name" className="block text-sfm-navy text-sm font-medium mb-2">
                   Last Name <span className="text-sfm-gold">*</span>
                 </label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   id="last_name"
-                  name="last_name" 
-                  required 
-                  minLength={1}
+                  name="last_name"
+                  required
                   autoComplete="family-name"
                   placeholder="Last Name"
                   className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text placeholder:text-sfm-text-light focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300"
                 />
               </div>
-              
+
               {/* Email */}
-              <div className="form-group">
+              <div>
                 <label htmlFor="email" className="block text-sfm-navy text-sm font-medium mb-2">
                   Email Address <span className="text-sfm-gold">*</span>
                 </label>
-                <p id="no-phi-note" className="text-amber-600 text-xs mb-2 flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+
+                <p
+                  id="no-phi-note"
+                  className="text-amber-600 text-xs mb-2 flex items-center gap-1"
+                >
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                    />
                   </svg>
-                  Please do not share medical details here. This form is only for contact and waitlist updates.
+                  Please do not share medical details here. This form is only for contact and
+                  waitlist updates.
                 </p>
-                <input 
-                  type="email" 
+
+                <input
+                  type="email"
                   id="email"
-                  name="email" 
+                  name="email"
                   required
                   autoComplete="email"
                   placeholder="you@example.com"
@@ -225,49 +270,53 @@ export default function FoundersWaitlistPage() {
                   className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text placeholder:text-sfm-text-light focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300"
                 />
               </div>
-              
+
               {/* Phone */}
-              <div className="form-group">
+              <div>
                 <label htmlFor="phone" className="block text-sfm-navy text-sm font-medium mb-2">
                   Phone Number <span className="text-sfm-gold">*</span>
                 </label>
-                <input 
-                  type="tel" 
+                <input
+                  type="tel"
                   id="phone"
-                  name="phone" 
-                  required 
-                  minLength={10}
+                  name="phone"
+                  required
+                  inputMode="tel"
                   autoComplete="tel"
                   placeholder="(425) 555-1234"
                   className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text placeholder:text-sfm-text-light focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300"
                 />
               </div>
-              
+
               {/* Zip Code */}
-              <div className="form-group">
+              <div>
                 <label htmlFor="zip" className="block text-sfm-navy text-sm font-medium mb-2">
                   Zip Code <span className="text-sfm-gold">*</span>
                 </label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   id="zip"
-                  name="zip" 
-                  required 
+                  name="zip"
+                  required
                   minLength={5}
                   maxLength={10}
+                  inputMode="numeric"
                   autoComplete="postal-code"
                   placeholder="98101"
                   className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text placeholder:text-sfm-text-light focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300"
                 />
               </div>
-              
+
               {/* Referral Source */}
-              <div className="form-group">
-                <label htmlFor="referral_source" className="block text-sfm-navy text-sm font-medium mb-2">
+              <div>
+                <label
+                  htmlFor="referral_source"
+                  className="block text-sfm-navy text-sm font-medium mb-2"
+                >
                   How did you hear about us?
                 </label>
-                <select 
-                  id="referral_source" 
+                <select
+                  id="referral_source"
                   name="referral_source"
                   className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300 cursor-pointer"
                 >
@@ -280,102 +329,141 @@ export default function FoundersWaitlistPage() {
                   <option value="other">Other</option>
                 </select>
               </div>
-              
-              {/* Notes with PHI Guard */}
-              <div className="form-group">
+
+              {/* Notes */}
+              <div>
                 <label htmlFor="notes" className="block text-sfm-navy text-sm font-medium mb-2">
                   Anything you&apos;d like us to know? (Optional)
                 </label>
-                <p className="text-amber-600 text-xs mb-2 flex items-center gap-1">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+
+                <p id="no-phi-notes" className="text-amber-600 text-xs mb-2 flex items-center gap-1">
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                    />
                   </svg>
-                  Do not include medical details. This form is for interest only.
+                  Do not include medical details. This form is for waitlist interest only.
                 </p>
-                <textarea 
+
+                <textarea
                   id="notes"
-                  name="notes" 
+                  name="notes"
                   maxLength={500}
                   rows={3}
+                  aria-describedby="no-phi-notes"
                   placeholder="Optional message (no medical information please)"
                   className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text placeholder:text-sfm-text-light focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300 resize-none"
                 />
               </div>
-              
-              {/* NEWSLETTER CONSENT CHECKBOX - OPTIONAL */}
-              <div className="form-group">
+
+              {/* Newsletter Consent */}
+              <div>
                 <label className="flex items-start gap-3 cursor-pointer">
-                  <input 
-                    type="checkbox" 
+                  <input
+                    type="checkbox"
                     id="newsletter_consent"
-                    name="newsletter_consent" 
+                    name="newsletter_consent"
                     value="true"
                     checked={newsletterConsent}
                     onChange={(e) => setNewsletterConsent(e.target.checked)}
                     className="mt-1 w-5 h-5 rounded border-sfm-cream-dark text-sfm-gold focus:ring-sfm-gold/20 cursor-pointer"
                   />
                   <span className="text-sm text-sfm-text-muted">
-                    I would like to receive practice updates and health insights via email. (Optional)
+                    I would like to receive practice updates and health insights via email.
+                    (Optional) Newsletter signup does not affect waitlist status.
                   </span>
                 </label>
               </div>
 
-              {/* WAITLIST ACKNOWLEDGMENT CHECKBOX - REQUIRED */}
-              <div className="form-group">
+              {/* Required Waitlist Acknowledgment */}
+              <div>
                 <label className="flex items-start gap-3 cursor-pointer">
-                  <input 
-                    type="checkbox" 
+                  <input
+                    type="checkbox"
                     id="waitlist_acknowledgment"
-                    name="waitlist_acknowledgment" 
-                    value="true" 
+                    name="waitlist_acknowledgment"
+                    value="true"
                     required
                     className="mt-1 w-5 h-5 rounded border-sfm-cream-dark text-sfm-gold focus:ring-sfm-gold/20 cursor-pointer"
                   />
                   <span className="text-sm text-sfm-text-muted">
-                    I understand this is a waitlist only and does not enroll me as a patient, create a physician-patient relationship, or provide medical advice. Services are available only to individuals located in Washington State. <span className="text-sfm-gold">*</span>
+                    I understand this is a waitlist only and does not enroll me as a patient, create
+                    a physician-patient relationship, or provide medical advice. Services are
+                    available only to individuals located in Washington State.{' '}
+                    <span className="text-sfm-gold">*</span>
                   </span>
                 </label>
               </div>
 
-              {/* CONTACT CONSENT CHECKBOX - REQUIRED */}
-              <div className="form-group">
+              {/* Required Contact Consent */}
+              <div>
                 <label className="flex items-start gap-3 cursor-pointer">
-                  <input 
-                    type="checkbox" 
+                  <input
+                    type="checkbox"
                     id="contact_consent"
-                    name="contact_consent" 
-                    value="true" 
+                    name="contact_consent"
+                    value="true"
                     required
                     className="mt-1 w-5 h-5 rounded border-sfm-cream-dark text-sfm-gold focus:ring-sfm-gold/20 cursor-pointer"
                   />
                   <span className="text-sm text-sfm-text-muted">
-                    I consent to being contacted by Sankofa Family Medicine regarding waitlist updates and founding membership information. <span className="text-sfm-gold">*</span>
+                    I consent to being contacted by Sankofa Family Medicine regarding waitlist
+                    updates and founding membership information. <span className="text-sfm-gold">*</span>
                   </span>
                 </label>
               </div>
 
               {/* Emergency Note */}
               <p className="text-rose-600 text-sm flex items-center gap-2 bg-rose-50 p-3 rounded-lg border border-rose-200">
-                <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                <svg
+                  className="w-5 h-5 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                  />
                 </svg>
                 If you have urgent symptoms, call 911 or go to the nearest emergency room.
               </p>
-              
+
               {/* Submit Button */}
-              <button 
+              <button
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full relative inline-flex items-center justify-center gap-2 px-8 py-5 font-semibold text-base rounded-xl overflow-hidden transition-all duration-500 bg-gradient-to-r from-sfm-gold via-sfm-gold-light to-sfm-gold bg-[length:200%_100%] text-sfm-navy shadow-lg shadow-sfm-gold/25 hover:bg-[position:100%_0] hover:shadow-xl hover:shadow-sfm-gold/40 group disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Submitting...' : 'Join the Founders Waitlist'}
                 {!isSubmitting && (
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <svg
+                    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 )}
               </button>
-              
+
               <p className="text-center text-sm text-sfm-navy/50">
                 No payment required. We will contact you by email when enrollment opens.
               </p>
@@ -385,20 +473,34 @@ export default function FoundersWaitlistPage() {
           {/* Trust Indicators */}
           <div className="flex flex-wrap items-center justify-center gap-6 mt-10 text-sm text-sfm-navy/50">
             <span className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-sfm-gold" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              <svg className="w-4 h-4 text-sfm-gold" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clipRule="evenodd"
+                />
               </svg>
               No Payment Required
             </span>
+
             <span className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-sfm-gold" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              <svg className="w-4 h-4 text-sfm-gold" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clipRule="evenodd"
+                />
               </svg>
-              Secure Online Form
+              Online Form Submission
             </span>
+
             <span className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-sfm-gold" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              <svg className="w-4 h-4 text-sfm-gold" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clipRule="evenodd"
+                />
               </svg>
               Washington State Only
             </span>
@@ -410,7 +512,7 @@ export default function FoundersWaitlistPage() {
               href="/about"
               className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors font-medium"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               Learn more about Sankofa Family Medicine
@@ -419,8 +521,10 @@ export default function FoundersWaitlistPage() {
 
           {/* Disclaimers */}
           <div className="max-w-3xl mx-auto mt-12 pt-6 border-t border-sfm-navy/10">
-            <p className="text-[10px] text-sfm-navy/30 text-center leading-tight">
-              Sankofa Family Medicine serves Washington State patients via telehealth. For emergencies, call 911. Information on this site is for general informational purposes and is not medical advice.
+            <p className="text-[10px] text-sfm-navy/35 text-center leading-tight">
+              Sankofa Family Medicine serves Washington State patients via telehealth. For emergencies, call 911.
+              This site is for general informational purposes and is not medical advice. Please do not submit medical
+              information through this waitlist form.
             </p>
           </div>
         </div>
@@ -428,3 +532,4 @@ export default function FoundersWaitlistPage() {
     </>
   )
 }
+
