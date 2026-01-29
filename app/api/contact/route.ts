@@ -1,9 +1,96 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Ratelimit } from '@upstash/ratelimit'
 import { Redis } from '@upstash/redis'
+import { Resend } from 'resend'
+
+// Type for contact form data
+interface ContactFormData {
+  email: string
+  name?: string
+  message?: string
+  [key: string]: unknown
+}
+
+// Simple email validation regex
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+// HTML escape function to prevent XSS in email templates
+function escapeHtml(text: string): string {
+  const htmlEscapes: Record<string, string> = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  }
+  return text.replace(/[&<>"']/g, (char) => htmlEscapes[char] || char)
+}
+
+// Validate email format
+function isValidEmail(email: string): boolean {
+  return EMAIL_REGEX.test(email)
+}
 
 // Lazily create Redis client and rate limiter to allow graceful handling of missing env vars
 let ratelimit: Ratelimit | null = null
+
+// Lazily create Resend client
+let resendClient: Resend | null = null
+
+function getResendClient(): Resend | null {
+  if (resendClient) return resendClient
+  
+  const apiKey = process.env.RESEND_API_KEY
+  
+  if (!apiKey) {
+    console.warn('Email confirmation disabled: RESEND_API_KEY not configured')
+    return null
+  }
+  
+  resendClient = new Resend(apiKey)
+  return resendClient
+}
+
+// Send confirmation email to user
+async function sendConfirmationEmail(email: string, name?: string): Promise<void> {
+  const resend = getResendClient()
+  
+  if (!resend) {
+    return
+  }
+  
+  // Validate email format before attempting to send
+  if (!isValidEmail(email)) {
+    console.warn('Invalid email format, skipping confirmation email:', email)
+    return
+  }
+  
+  // Escape name to prevent XSS in email HTML
+  const recipientName = escapeHtml(name || 'Valued Patient')
+  
+  try {
+    await resend.emails.send({
+      from: 'onboarding@resend.dev',
+      to: email,
+      subject: 'Thank you for contacting Sankofa Family Medicine',
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+          <h2 style="color: #2c5530;">Thank You for Reaching Out</h2>
+          <p>Dear ${recipientName},</p>
+          <p>Thank you for contacting Sankofa Family Medicine. We have received your message and truly appreciate you taking the time to reach out to us.</p>
+          <p>Our team is committed to providing you with the best possible care and service. We will review your inquiry and respond within <strong>24 hours</strong>.</p>
+          <p>If you have an urgent medical concern, please call our office directly or visit your nearest emergency room.</p>
+          <p style="margin-top: 30px;">Warm regards,<br/>The Sankofa Family Medicine Team</p>
+          <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 30px 0;" />
+          <p style="font-size: 12px; color: #666;">This is an automated confirmation email. Please do not reply directly to this message.</p>
+        </div>
+      `,
+    })
+  } catch (error) {
+    // Log the error but don't throw - email failure shouldn't break form submission
+    console.error('Failed to send confirmation email:', error)
+  }
+}
 
 function getRateLimiter(): Ratelimit | null {
   if (ratelimit) return ratelimit
@@ -82,7 +169,7 @@ export async function POST(request: NextRequest) {
     }
     
     // Parse the request body
-    const body = await request.json()
+    const body = await request.json() as ContactFormData
     
     // Proxy request to Formspree
     const formspreeResponse = await fetch('https://formspree.io/f/manrdjgv', {
@@ -94,6 +181,14 @@ export async function POST(request: NextRequest) {
     })
     
     if (formspreeResponse.ok) {
+      // Send confirmation email (don't await to avoid blocking response)
+      // Email errors are handled gracefully inside the function
+      if (body.email) {
+        sendConfirmationEmail(body.email, body.name).catch(() => {
+          // Error already logged in sendConfirmationEmail
+        })
+      }
+      
       return NextResponse.json(
         { success: true },
         { status: 200 }
