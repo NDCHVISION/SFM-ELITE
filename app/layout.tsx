@@ -341,7 +341,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         '@type': ['Person', 'Physician'],
         '@id': 'https://sankofafamilymedicine.com/#founder',
         name: 'Dr. Yaw Nkrumah, MD',
-        jobTitle: 'Founder &amp; Medical Director',
+        jobTitle: 'Founder & Medical Director',
         url: 'https://sankofafamilymedicine.com/founder',
         medicalSpecialty: 'Family medicine',
         worksFor: { '@id': 'https://sankofafamilymedicine.com/#organization' },
