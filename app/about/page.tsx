@@ -627,27 +627,49 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              {/* Sankofa Visual */}
-              <div className="relative hidden lg:block animate-fade-in-up animation-delay-200">
-                <div className="relative aspect-[4/5] max-w-lg mx-auto group">
-                  <div
-                    className="absolute inset-0 bg-gradient-to-br from-sfm-gold/20 to-sfm-azure/20 rounded-3xl blur-2xl animate-pulse-slow"
-                    aria-hidden="true"
-                  />
-                  <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden image-tilt image-fade-dark">
+              {/* Two-column Sankofa layout: Logo + Text */}
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row gap-8 items-start">
+                {/* LEFT Column: Logo Image */}
+                <div className="md:w-1/2 w-full">
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                     <Image
-                      src="/images/sankofa-wooden-sculpture.png"
-                      alt="Traditional wooden Sankofa bird sculpture representing the principle of retrieving what matters from the past"
+                      src="/images/SFMLOGOBLUEVELVET.png"
+                      alt="Sankofa Family Medicine logo on elegant blue velvet background"
                       fill
-                      className="object-cover opacity-90 transition-all duration-700 group-hover:scale-105 group-hover:opacity-100"
+                      className="object-cover"
                       priority
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-sfm-navy/90 to-transparent p-8">
-                      <p className="text-sfm-gold font-display text-lg mb-1">Sankofa</p>
-                      <p className="text-white/70 text-sm italic">
-                        "Go back and retrieve what matters. Carry it forward."
-                      </p>
-                    </div>
+                  </div>
+                </div>
+
+                {/* RIGHT Column: Text Content */}
+                <div className="md:w-1/2 w-full">
+                  <p className="text-sfm-gold font-display text-lg mb-1">Sankofa</p>
+                  <p className="text-white/70 text-sm italic mb-6">Retrieve what matters from the past. Apply it deliberately.</p>
+                  
+                  <p className="section-label text-sfm-gold/80">The Principle</p>
+                  <h2 className="font-display text-3xl md:text-4xl text-white mb-6">
+                    What does Sankofa mean?
+                  </h2>
+                  <div className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-8" aria-hidden="true" />
+
+                  <div className="speakable-sankofa space-y-6 text-white/70 leading-relaxed">
+                    <p>
+                      Sankofa is an Akan principle from West Africa, symbolized by a bird looking backward while moving forward. It conveys that it is right and necessary to return to the past, retrieve what was learned, and carry it forward for a higher purpose.
+                    </p>
+                    <p>
+                      In healthcare, this principle highlights a common challenge. Medical records often fragment across systems, physicians may change between visits, and patients are frequently asked to repeat their history when continuity is not preserved.
+                    </p>
+                    <p>
+                      Sankofa Family Medicine was designed for continuity. One physician who knows your history - visit after visit - so medical decisions build instead of reset. Learn more about our{' '}
+                      <Link href="/services" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                        telehealth primary care services
+                      </Link>{' '}
+                      or explore{' '}
+                      <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                        how Direct Primary Care (DPC) differs
+                      </Link>.
+                    </p>
                   </div>
                 </div>
               </div>
