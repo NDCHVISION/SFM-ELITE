@@ -276,7 +276,7 @@ export default function FounderPage() {
       ========================================================= */}
       <section
         id="main-content"
-        className="relative pt-36 pb-24 bg-sfm-navy text-center overflow-hidden"
+        className="relative pt-20 pb-16 bg-sfm-navy text-center overflow-hidden"
         aria-labelledby="hero-heading"
       >
         {/* Decorative backgrounds */}
@@ -315,7 +315,7 @@ export default function FounderPage() {
             className="text-white text-5xl md:text-6xl font-display mt-4"
             data-speakable
           >
-            Dr. Yaw Nkrumah, MD
+            Yaw Nkrumah, MD
           </h1>
 
           <p className="text-white/80 text-xl md:text-2xl mt-6 max-w-xl mx-auto leading-relaxed" data-speakable>
@@ -352,15 +352,15 @@ export default function FounderPage() {
           </div>
 
           {/* Disclaimers (tightened for waitlist + intake hygiene) */}
-          <p className="text-white/70 text-base mt-6">
+          <p className="text-white/50 text-xs leading-tight mt-4">
             No payment required. Joining does not create a doctor-patient relationship.
           </p>
 
-          <p className="text-white/70 text-base mt-2">
+          <p className="text-white/50 text-xs leading-tight mt-1">
             Joining does not guarantee enrollment. Please do not submit medical information through the waitlist form.
           </p>
 
-          <p className="text-white/70 text-base mt-2">
+          <p className="text-white/50 text-xs leading-tight mt-1">
             Services available only to patients located in Washington State.
           </p>
 

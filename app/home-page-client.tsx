@@ -863,12 +863,12 @@ export default function HomePageClient() {
           </div>
 
           {/* Compliance: Waitlist disclaimers - consolidated */}
-          <div className="mt-10 max-w-lg mx-auto">
-            <p className="text-white/50 text-base leading-relaxed">
+          <div className="mt-6 max-w-lg mx-auto">
+            <p className="text-white/50 text-xs leading-tight">
               Founders Waitlist only. No payment required. Joining does not guarantee enrollment or create a doctor-patient relationship. Washington State only.
             </p>
             {/* Compliance: Emergency disclaimer */}
-            <p className="text-white/40 text-sm mt-4 pt-4 border-t border-white/10">
+            <p className="text-white/40 text-xs leading-tight mt-4 pt-4 border-t border-white/10">
               <span className="text-white/50">Not for emergencies.</span> Call 911 for immediate medical needs.
             </p>
           </div>

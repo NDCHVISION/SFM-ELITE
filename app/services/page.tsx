@@ -634,12 +634,12 @@ export default function ServicesPage() {
       </section>
 
       {/* Important Disclosures */}
-      <section className="py-12 bg-sfm-cream/50 border-t border-gray-200">
+      <section className="py-8 bg-sfm-cream/30 border-t border-gray-100">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-6">
-            <h3 className="font-display text-lg text-sfm-navy mb-2">Important Information</h3>
+          <div className="text-center mb-4">
+            <h3 className="font-display text-base text-sfm-navy/70 mb-1">Important Information</h3>
           </div>
-          <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
+          <div className="space-y-2 text-xs text-gray-500 leading-tight">
             <p>
               <strong className="text-sfm-navy">Founders Advantage:</strong> Founders Cohort members (approximately the first 30 enrollees) receive reduced founding member pricing across all membership tiers, locked in for as long as continuous membership is maintained.{' '}
               <Link href="/membership-terms#founders-advantage" className="text-sfm-azure hover:text-sfm-gold font-medium transition-colors inline-flex items-center gap-1">
