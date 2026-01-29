@@ -181,7 +181,7 @@ const howToJsonLd = {
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Reserve Your Founding Spot',
+      name: 'Join the Founders List',
       text: 'Complete the enrollment form to secure your position as a Founding Member with rate protection and priority access.',
       url: 'https://sankofafamilymedicine.com/founders-waitlist',
     },
@@ -358,9 +358,9 @@ export default function AboutPage() {
 
                 <h1
                   id="hero-heading"
-                  className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-2 leading-tight"
+                  className="font-display text-4xl md:text-5xl lg:text-6xl mb-2 leading-tight"
                 >
-                  Healthcare Built on{' '}
+                  <span className="text-white">Healthcare Built on</span>{' '}
                   <span className="text-sfm-gold">Continuity</span>
                 </h1>
 
@@ -386,9 +386,9 @@ export default function AboutPage() {
                   <Link
                     href="/founders-waitlist"
                     className="btn-primary group"
-                    aria-label="Reserve your founding membership spot"
+                    aria-label="Join a spot on the Founders List"
                   >
-                    Reserve a Founders Spot
+                    Join a spot on the Founders List
                     <ArrowRight
                       className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
                       aria-hidden="true"
@@ -437,10 +437,6 @@ export default function AboutPage() {
               
               {/* RIGHT: Principle Text */}
               <div>
-                <p className="text-sfm-gold font-display text-lg mb-1">Sankofa</p>
-                <p className="text-white/70 text-sm italic mb-6">
-                  Retrieve what matters from the past. Apply it deliberately.
-                </p>
                 <p className="section-label text-sfm-gold/80">The Principle</p>
                 <h2 id="sankofa-heading" className="font-display text-3xl md:text-4xl text-white mb-6">
                   What does Sankofa mean?
@@ -455,11 +451,11 @@ export default function AboutPage() {
                   </p>
                   <p>
                     Sankofa Family Medicine was designed for continuity. One physician who knows your history - visit after visit - so medical decisions build instead of reset. Learn more about our{' '}
-                    <Link href="/services" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                    <Link href="/services" className="text-sfm-gold hover:text-sfm-gold/80 transition-colors underline underline-offset-2">
                       telehealth primary care services
                     </Link>{' '}
                     or explore{' '}
-                    <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                    <Link href="/compare" className="text-sfm-gold hover:text-sfm-gold/80 transition-colors underline underline-offset-2">
                       how Direct Primary Care (DPC) differs
                     </Link>.
                   </p>
@@ -586,9 +582,9 @@ export default function AboutPage() {
               <Link
                 href="/founders-waitlist"
                 className="btn-primary group"
-                aria-label="Reserve your founding membership spot"
+                aria-label="Join a spot on the Founders List"
               >
-                Reserve a Founders Spot
+                Join a spot on the Founders List
                 <ArrowRight
                   className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
                   aria-hidden="true"
@@ -678,9 +674,10 @@ export default function AboutPage() {
                 <div className="relative aspect-[4/3] rounded-3xl overflow-hidden image-lift portrait-premium image-fade-elite shadow-2xl shadow-sfm-navy/20">
                   <Image
                     src="/images/dr-nkrumah-desk.png"
-                    alt="Dr. Yaw Nkrumah, MD, founder of Sankofa Family Medicine, board-certified family medicine physician"
+                    alt="Dr. Yaw Nkrumah, founder of Sankofa Family Medicine, board-certified family medicine physician"
                     fill
-                    className="object-cover object-left transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-105"
+                    className="object-cover transition-all duration-700 group-hover:scale-[1.03] group-hover:brightness-105"
+                    style={{ objectPosition: '25% center' }}
                   />
                   {/* Blur edge overlay */}
                   <div
@@ -713,7 +710,7 @@ export default function AboutPage() {
                   id="founder-heading"
                   className="font-display text-3xl md:text-4xl text-sfm-navy mb-6"
                 >
-                  Dr. Yaw Nkrumah, MD
+                  Dr. Yaw Nkrumah
                 </h2>
                 <div
                   className="w-16 h-1 bg-gradient-to-r from-sfm-gold to-sfm-gold/50 rounded-full mb-8"
@@ -782,16 +779,16 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-sfm-navy/60 text-lg mb-10 max-w-2xl mx-auto">
-              Clinical care begins early 2026. Reserve your spot today. No payment required.
+              Clinical care begins early 2026. Join the list today. No payment required.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/founders-waitlist"
                 className="btn-primary group"
-                aria-label="Reserve your founding membership spot"
+                aria-label="Join a spot on the Founders List"
               >
-                Reserve a Founders Spot
+                Join a spot on the Founders List
                 <ArrowRight
                   className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
                   aria-hidden="true"
