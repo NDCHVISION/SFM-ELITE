@@ -196,8 +196,8 @@ export async function POST(request: NextRequest) {
     await redis.sadd(SUBSCRIBERS_KEY, normalizedEmail)
     
     // Send confirmation email (non-blocking)
-    sendConfirmationEmail(normalizedEmail).catch(() => {
-      // Error already logged in sendConfirmationEmail
+    sendConfirmationEmail(normalizedEmail).catch((error) => {
+      console.warn('Confirmation email failed for subscriber:', normalizedEmail, error)
     })
     
     return NextResponse.json(

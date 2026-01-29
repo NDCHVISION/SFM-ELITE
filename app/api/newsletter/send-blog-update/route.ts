@@ -210,8 +210,10 @@ export async function POST(request: NextRequest) {
     
     const { title, excerpt, url, author, publishDate } = body
     
-    // Ensure URL is absolute
-    const fullUrl = url.startsWith('http') ? url : `${SITE_URL}${url.startsWith('/') ? '' : '/'}${url}`
+    // Ensure URL is absolute and normalized
+    const trimmedUrl = url.trim()
+    const isAbsoluteUrl = /^https?:\/\//i.test(trimmedUrl)
+    const fullUrl = isAbsoluteUrl ? trimmedUrl : `${SITE_URL}${trimmedUrl.startsWith('/') ? '' : '/'}${trimmedUrl}`
     
     // Get all subscribers
     const subscribers = await redis.smembers(SUBSCRIBERS_KEY)
