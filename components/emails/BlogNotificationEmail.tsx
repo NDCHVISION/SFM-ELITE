@@ -252,7 +252,7 @@ export function generateSubscriptionConfirmationEmail(unsubscribeUrl: string): s
               </p>
               
               <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
-                The name <span style="color: #C9A227;">Sankofa</span> means "go back and retrieve what matters." In healthcare, this means holding the full timeline together. Past experiences, present habits, and future risks are not separate. They inform each other. What someone has lived through, how they are functioning now, and where they may be headed all shape health in ways that are often subtle but important.
+                <span style="color: #C9A227;">Sankofa</span> is a principle from West Africa that means "go back and retrieve what matters." In healthcare, this means holding the full timeline together. Past experiences, present habits, and future risks are not separate. They inform each other. What someone has lived through, how they are functioning now, and where they may be headed all shape health in ways that are often subtle but important.
               </p>
               
               <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
