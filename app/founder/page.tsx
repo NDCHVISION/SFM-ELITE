@@ -326,9 +326,7 @@ export default function FounderPage() {
           {/* At-a-glance (SEO + readability, no hype) */}
           <div className="mt-8 max-w-2xl mx-auto">
             <ul className="text-white/75 text-base md:text-lg leading-relaxed space-y-2">
-              <li>Board-certified in Family Medicine (ABFM).</li>
-              <li>Telehealth primary care for patients located in Washington State.</li>
-              <li>Membership-based care. Not insurance.</li>
+            </ul>
             </ul>
           </div>
 
