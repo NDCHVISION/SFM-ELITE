@@ -112,7 +112,7 @@ async function sendConfirmationEmail(email: string): Promise<void> {
     await resend.emails.send({
       from: 'Sankofa Family Medicine <newsletter@sankofafamilymedicine.com>',
       to: email,
-      subject: 'Welcome to Sankofa Family Medicine Health Insights',
+      subject: 'Medicine That Remembers | Sankofa Family Medicine',
       html: htmlContent,
     })
   } catch (error) {

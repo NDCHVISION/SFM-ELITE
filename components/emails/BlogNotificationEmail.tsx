@@ -187,8 +187,8 @@ export function generateBlogNotificationEmail({
 /**
  * Generate a subscription confirmation email
  * 
- * Welcome email with warm greeting from Dr. Nkrumah, explaining what subscribers
- * will receive (precision medicine articles, wellness updates)
+ * Welcome email explaining Sankofa Family Medicine's philosophy and what subscribers
+ * can expect from the newsletter
  */
 export function generateSubscriptionConfirmationEmail(unsubscribeUrl: string): string {
   return `
@@ -198,7 +198,7 @@ export function generateSubscriptionConfirmationEmail(unsubscribeUrl: string): s
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Welcome to Sankofa Family Medicine Health Insights</title>
+  <title>Medicine That Remembers | Sankofa Family Medicine</title>
   <!--[if mso]>
   <noscript>
     <xml>
@@ -212,7 +212,7 @@ export function generateSubscriptionConfirmationEmail(unsubscribeUrl: string): s
 <body style="margin: 0; padding: 0; background-color: #0a1628; font-family: 'Georgia', 'Times New Roman', serif;">
   <!-- Preview text -->
   <div style="display: none; max-height: 0; overflow: hidden;">
-    Welcome to our health insights community. Dr. Nkrumah looks forward to sharing precision medicine articles and wellness updates with you.
+    Thank you for subscribing to Sankofa Family Medicine. Your health is better supported when one physician has the time, access, and continuity to know your history.
   </div>
   
   <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #0a1628;">
@@ -224,10 +224,10 @@ export function generateSubscriptionConfirmationEmail(unsubscribeUrl: string): s
           <tr>
             <td style="text-align: center; padding-bottom: 30px;">
               <h1 style="margin: 0; font-size: 28px; font-weight: normal; color: #C9A227; font-family: 'Georgia', 'Times New Roman', serif; letter-spacing: 0.05em;">
-                SANKOFA FAMILY MEDICINE
+                Medicine That Remembers
               </h1>
               <p style="margin: 8px 0 0; font-size: 14px; color: #a8b8c8; font-style: italic;">
-                Medicine That Remembers™
+                Notes from Sankofa Family Medicine
               </p>
             </td>
           </tr>
@@ -239,47 +239,32 @@ export function generateSubscriptionConfirmationEmail(unsubscribeUrl: string): s
             </td>
           </tr>
           
-          <!-- Welcome Badge -->
-          <tr>
-            <td style="text-align: center; padding-bottom: 20px;">
-              <span style="display: inline-block; background-color: rgba(201, 162, 39, 0.15); border: 1px solid #C9A227; color: #C9A227; font-size: 11px; font-weight: bold; padding: 6px 16px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.1em;">
-                Welcome to Health Insights
-              </span>
-            </td>
-          </tr>
-          
           <!-- Welcome Message -->
           <tr>
             <td style="background-color: #0f1f35; border-radius: 16px; padding: 40px; border: 1px solid #2a4060;">
-              <h2 style="margin: 0 0 24px; font-size: 24px; color: #f0f4f8; font-family: 'Georgia', 'Times New Roman', serif; text-align: center;">
-                Welcome to Our Community!
-              </h2>
               
               <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
-                Dear Friend,
+                Thank you for subscribing to Sankofa Family Medicine.
               </p>
               
               <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
-                Thank you for joining the Sankofa Family Medicine Health Insights community. I'm Dr. Yaw Nkrumah, and I'm truly honored to welcome you.
+                Sankofa Family Medicine was founded around one idea: your health is better supported when one physician has the time, access, and continuity to know your history and understand your needs over time. When the same doctor stays involved and is reachable, questions are answered sooner, decisions feel clearer, and next steps are easier to take.
               </p>
               
               <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
-                At Sankofa Family Medicine, we believe in healthcare that honors your unique story while embracing the latest advances in medical science. Our name comes from the Akan word meaning "go back and retrieve what matters", a reminder that understanding where we come from helps us move forward with wisdom and purpose.
+                The name <span style="color: #C9A227;">Sankofa</span> means "go back and retrieve what matters." In healthcare, this means holding the full timeline together. Past experiences, present habits, and future risks are not separate. They inform each other. What someone has lived through, how they are functioning now, and where they may be headed all shape health in ways that are often subtle but important.
               </p>
               
-              <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
-                As a subscriber, here's what you'll receive:
+              <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
+                This newsletter reflects that way of thinking. Here, we share clear health explanations, practical preventive guidance, and insight into how understanding the full picture over time helps concerns surface earlier and decisions feel more grounded.
               </p>
-              
-              <ul style="margin: 0 0 24px; padding-left: 20px; color: #a8b8c8; font-size: 15px; line-height: 1.8;">
-                <li style="margin-bottom: 8px;"><span style="color: #C9A227;">✦</span> In-depth articles on <span style="color: #C9A227;">precision medicine</span> and personalized care</li>
-                <li style="margin-bottom: 8px;"><span style="color: #C9A227;">✦</span> <span style="color: #C9A227;">Wellness updates</span> to support your health journey</li>
-                <li style="margin-bottom: 8px;"><span style="color: #C9A227;">✦</span> Evidence-based health insights you can trust</li>
-                <li><span style="color: #C9A227;">✦</span> Insights on Preventive Care, Direct Primary Care, Medicine that Remembers, and other topics</li>
-              </ul>
               
               <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
-                I look forward to sharing valuable health insights with you. Together, let's build a healthier future, one that remembers the wisdom of the past.
+                Whether you are a patient here or simply seeking to understand your health better, this space is here for ongoing reflection, understanding, and practical insight.
+              </p>
+              
+              <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
+                I'm glad you're here.
               </p>
               
               <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.7; color: #a8b8c8;">
@@ -297,23 +282,6 @@ export function generateSubscriptionConfirmationEmail(unsubscribeUrl: string): s
                   </td>
                 </tr>
               </table>
-            </td>
-          </tr>
-          
-          <!-- Spacer -->
-          <tr>
-            <td style="height: 40px;"></td>
-          </tr>
-          
-          <!-- Secondary CTA -->
-          <tr>
-            <td style="text-align: center; padding: 24px; background-color: rgba(201, 162, 39, 0.1); border-radius: 12px; border: 1px solid rgba(201, 162, 39, 0.2);">
-              <p style="margin: 0 0 12px; font-size: 16px; color: #f0f4f8; font-family: 'Georgia', 'Times New Roman', serif;">
-                Ready for personalized primary care?
-              </p>
-              <a href="https://sankofafamilymedicine.com/founders-waitlist" target="_blank" style="color: #C9A227; font-size: 14px; text-decoration: underline;">
-                Join the Founders Waitlist →
-              </a>
             </td>
           </tr>
           
