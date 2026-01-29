@@ -64,7 +64,7 @@ export default function Navigation() {
       label: 'About',
       items: [
         { href: '/founder', label: 'Meet Our Founder', desc: 'Board Certified Family Physician', icon: Users },
-        { href: '/about#care-journey', label: 'How It Works', desc: 'Our virtual care model', icon: Heart },
+        { href: '/about#how-it-works-heading', label: 'How It Works', desc: 'Our virtual care model', icon: Heart },
         { href: '/faq', label: 'FAQs', desc: 'Common questions answered', icon: FileText },
         { href: '/partnerships', label: 'Partnerships', desc: 'Strategic collaborations', icon: Users },
       ],

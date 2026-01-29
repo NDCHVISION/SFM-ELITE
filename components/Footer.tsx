@@ -115,7 +115,7 @@ export default function Footer() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="https://www.linkedin.com/in/yaw-nkrumah-md/"
+                href="https://www.linkedin.com/in/yawnkrumahmd/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/60 
