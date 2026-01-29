@@ -64,12 +64,14 @@ const breadcrumbJsonLd = {
 export default function FoundersWaitlistPage() {
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [newsletterConsent, setNewsletterConsent] = useState(false)
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setIsSubmitting(true)
     
     const formData = new FormData(e.currentTarget)
+    const email = formData.get('email') as string
     
     try {
       const response = await fetch('https://formspree.io/f/manrdjyn', {
@@ -81,6 +83,19 @@ export default function FoundersWaitlistPage() {
       })
       
       if (response.ok) {
+        // If newsletter consent is checked, subscribe to newsletter (silent failure)
+        if (newsletterConsent && email) {
+          // Fire-and-forget with proper error handling
+          void fetch('/api/newsletter/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+          }).catch(() => {
+            // Silent failure - don't block waitlist submission
+          })
+        }
         router.push('/waitlist-success')
       } else {
         alert('Submission failed. Please try again.')
@@ -193,6 +208,12 @@ export default function FoundersWaitlistPage() {
                 <label htmlFor="email" className="block text-sfm-navy text-sm font-medium mb-2">
                   Email Address <span className="text-sfm-gold">*</span>
                 </label>
+                <p id="no-phi-note" className="text-amber-600 text-xs mb-2 flex items-center gap-1">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                  Please do not share medical details here. This form is only for contact and waitlist updates.
+                </p>
                 <input 
                   type="email" 
                   id="email"
@@ -200,6 +221,7 @@ export default function FoundersWaitlistPage() {
                   required
                   autoComplete="email"
                   placeholder="you@example.com"
+                  aria-describedby="no-phi-note"
                   className="w-full px-5 py-4 bg-sfm-cream/50 border border-sfm-cream-dark rounded-xl text-sfm-text placeholder:text-sfm-text-light focus:outline-none focus:border-sfm-gold focus:bg-white focus:ring-2 focus:ring-sfm-gold/20 transition-all duration-300"
                 />
               </div>
@@ -280,13 +302,31 @@ export default function FoundersWaitlistPage() {
                 />
               </div>
               
-              {/* CONSENT CHECKBOX - CRITICAL */}
+              {/* NEWSLETTER CONSENT CHECKBOX - OPTIONAL */}
               <div className="form-group">
                 <label className="flex items-start gap-3 cursor-pointer">
                   <input 
                     type="checkbox" 
-                    id="waitlist_consent"
-                    name="waitlist_consent" 
+                    id="newsletter_consent"
+                    name="newsletter_consent" 
+                    value="true"
+                    checked={newsletterConsent}
+                    onChange={(e) => setNewsletterConsent(e.target.checked)}
+                    className="mt-1 w-5 h-5 rounded border-sfm-cream-dark text-sfm-gold focus:ring-sfm-gold/20 cursor-pointer"
+                  />
+                  <span className="text-sm text-sfm-text-muted">
+                    I would like to receive practice updates and health insights via email. (Optional)
+                  </span>
+                </label>
+              </div>
+
+              {/* WAITLIST ACKNOWLEDGMENT CHECKBOX - REQUIRED */}
+              <div className="form-group">
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input 
+                    type="checkbox" 
+                    id="waitlist_acknowledgment"
+                    name="waitlist_acknowledgment" 
                     value="true" 
                     required
                     className="mt-1 w-5 h-5 rounded border-sfm-cream-dark text-sfm-gold focus:ring-sfm-gold/20 cursor-pointer"
@@ -296,6 +336,31 @@ export default function FoundersWaitlistPage() {
                   </span>
                 </label>
               </div>
+
+              {/* CONTACT CONSENT CHECKBOX - REQUIRED */}
+              <div className="form-group">
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input 
+                    type="checkbox" 
+                    id="contact_consent"
+                    name="contact_consent" 
+                    value="true" 
+                    required
+                    className="mt-1 w-5 h-5 rounded border-sfm-cream-dark text-sfm-gold focus:ring-sfm-gold/20 cursor-pointer"
+                  />
+                  <span className="text-sm text-sfm-text-muted">
+                    I consent to being contacted by Sankofa Family Medicine regarding waitlist updates and founding membership information. <span className="text-sfm-gold">*</span>
+                  </span>
+                </label>
+              </div>
+
+              {/* Emergency Note */}
+              <p className="text-rose-600 text-sm flex items-center gap-2 bg-rose-50 p-3 rounded-lg border border-rose-200">
+                <svg className="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                If you have urgent symptoms, call 911 or go to the nearest emergency room.
+              </p>
               
               {/* Submit Button */}
               <button 
