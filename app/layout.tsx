@@ -184,309 +184,219 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   /* ============================================================================
-     SCHEMA.ORG STRUCTURED DATA
+     SCHEMA.ORG STRUCTURED DATA - CONSOLIDATED @GRAPH
+     All site-wide JSON-LD in ONE place to avoid duplicate/conflicting schemas
      ============================================================================ */
 
-  const organizationSchema = {
+  const consolidatedSchema = {
     '@context': 'https://schema.org',
-    '@type': ['MedicalOrganization', 'MedicalBusiness'],
-    '@id': 'https://sankofafamilymedicine.com/#organization',
-    name: 'Sankofa Family Medicine PLLC',
-    legalName: 'Sankofa Family Medicine PLLC',
-    alternateName: ['Sankofa Family Medicine', 'SFM', 'Medicine That Remembers'],
-    url: 'https://sankofafamilymedicine.com',
-    description:
-      'Virtual-first direct primary care (DPC) practice serving adults and adolescents throughout Washington State. Telehealth visits, chronic care management, and preventive care through a membership model with concierge-style access.',
-    slogan: 'Medicine That Remembers',
-    foundingDate: '2025',
-
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://sankofafamilymedicine.com/images/logo.png',
-      width: 512,
-      height: 512,
-    },
-    image: 'https://sankofafamilymedicine.com/images/og-image.png',
-
-    telephone: '+1-425-285-7390',
-    email: 'info@sankofafamilymedicine.com',
-
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '522 W. Riverside Ave, Suite N',
-      addressLocality: 'Spokane',
-      addressRegion: 'WA',
-      postalCode: '99201',
-      addressCountry: 'US',
-    },
-
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 47.6588,
-      longitude: -117.426,
-    },
-
-    /* Clarity: These are general contact hours (not emergency services) */
-    openingHoursSpecification: [
+    '@graph': [
+      // WebSite entity
       {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-        opens: '08:00',
-        closes: '12:00',
-      },
-    ],
-
-    areaServed: {
-      '@type': 'State',
-      name: 'Washington',
-      sameAs: 'https://en.wikipedia.org/wiki/Washington_(state)',
-      containsPlace: [
-        { '@type': 'City', name: 'Seattle' },
-        { '@type': 'City', name: 'Bellevue' },
-        { '@type': 'City', name: 'Tacoma' },
-        { '@type': 'City', name: 'Spokane' },
-        { '@type': 'City', name: 'Vancouver' },
-        { '@type': 'City', name: 'Kirkland' },
-        { '@type': 'City', name: 'Redmond' },
-        { '@type': 'City', name: 'Everett' },
-        { '@type': 'City', name: 'Olympia' },
-        { '@type': 'City', name: 'Sammamish' },
-        { '@type': 'City', name: 'Mercer Island' },
-      ],
-    },
-
-    /* Compliance: Waitlist posture */
-    isAcceptingNewPatients: false,
-
-    medicalSpecialty: ['https://schema.org/PrimaryCare'],
-
-    availableService: [
-      {
-        '@type': 'MedicalProcedure',
-        name: 'Virtual Primary Care Visit',
-        procedureType: 'https://schema.org/NoninvasiveProcedure',
-        description: 'Telehealth consultations for acute illness, chronic conditions, and preventive care.',
-      },
-      {
-        '@type': 'MedicalProcedure',
-        name: 'Chronic Disease Management',
-        procedureType: 'https://schema.org/NoninvasiveProcedure',
-        description: 'Ongoing management of diabetes, hypertension, thyroid disorders, and other chronic conditions.',
-      },
-      {
-        '@type': 'MedicalProcedure',
-        name: 'Preventive Care and Annual Wellness',
-        procedureType: 'https://schema.org/NoninvasiveProcedure',
-        description: 'Annual wellness visits, health screenings, and preventive care guidance.',
-      },
-      {
-        '@type': 'MedicalProcedure',
-        name: 'Mental Health Screening',
-        procedureType: 'https://schema.org/NoninvasiveProcedure',
-        description: 'Depression and anxiety screening and basic mental health medication management.',
-      },
-      {
-        '@type': 'MedicalProcedure',
-        name: 'Prescription Management',
-        procedureType: 'https://schema.org/NoninvasiveProcedure',
-        description: 'Prescription renewals and pharmacy coordination when clinically appropriate.',
-      },
-    ],
-
-    /* SEO: Differentiated tier descriptions (avoid "concierge" as a tier label) */
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Membership Plans',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          name: 'Continuity Membership',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Continuity Membership',
-            description:
-              'Virtual primary care through a membership-based DPC model with concierge-style access during standard business hours.',
+        '@type': 'WebSite',
+        '@id': 'https://sankofafamilymedicine.com/#website',
+        url: 'https://sankofafamilymedicine.com',
+        name: 'Sankofa Family Medicine',
+        description: 'Virtual, membership-based primary care delivered through a Direct Primary Care model',
+        publisher: { '@id': 'https://sankofafamilymedicine.com/#organization' },
+        inLanguage: 'en-US',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://sankofafamilymedicine.com/search?q={search_term_string}',
           },
-          priceSpecification: {
-            '@type': 'UnitPriceSpecification',
-            price: '225',
-            priceCurrency: 'USD',
-            unitText: 'month',
-          },
+          'query-input': 'required name=search_term_string',
         },
-        {
-          '@type': 'Offer',
-          name: 'Precision Membership',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Precision Membership',
-            description:
-              'Virtual primary care with expanded access, including after-hours secure messaging for time-sensitive, non-emergent concerns.',
-          },
-          priceSpecification: {
-            '@type': 'UnitPriceSpecification',
-            price: '325',
-            priceCurrency: 'USD',
-            unitText: 'month',
-          },
-        },
-        {
-          '@type': 'Offer',
-          name: 'Executive Membership',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Executive Membership',
-            description:
-              'Virtual primary care with expanded care coordination, priority scheduling, and enhanced availability within the membership model.',
-          },
-          priceSpecification: {
-            '@type': 'UnitPriceSpecification',
-            price: '650',
-            priceCurrency: 'USD',
-            unitText: 'month',
-          },
-        },
-      ],
-    },
+      },
 
-    priceRange: '$$',
-    paymentAccepted: ['Credit Card', 'Debit Card', 'ACH Transfer', 'HSA', 'FSA'],
-    currenciesAccepted: 'USD',
-
-    contactPoint: [
+      // Organization entity (MedicalBusiness, MedicalClinic)
       {
-        '@type': 'ContactPoint',
+        '@type': ['MedicalBusiness', 'MedicalClinic'],
+        '@id': 'https://sankofafamilymedicine.com/#organization',
+        name: 'Sankofa Family Medicine',
+        legalName: 'Sankofa Family Medicine PLLC',
+        alternateName: ['SFM', 'Medicine That Remembers'],
+        url: 'https://sankofafamilymedicine.com',
+        description:
+          'Virtual, membership-based primary care practice delivered through a Direct Primary Care (DPC) model, emphasizing continuity, longitudinal care, and physician-led decision-making.',
+        slogan: 'Medicine That Remembers™',
         telephone: '+1-425-285-7390',
-        contactType: 'customer service',
-        availableLanguage: 'English',
-        areaServed: 'US-WA',
-      },
-      {
-        '@type': 'ContactPoint',
         email: 'info@sankofafamilymedicine.com',
-        contactType: 'customer service',
-        availableLanguage: 'English',
-      },
-    ],
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://sankofafamilymedicine.com/images/SFM_Trans.png',
+          width: 512,
+          height: 512,
+        },
+        image: 'https://sankofafamilymedicine.com/images/og-image.png',
+        areaServed: {
+          '@type': 'State',
+          name: 'Washington',
+          addressCountry: 'US',
+          sameAs: 'https://en.wikipedia.org/wiki/Washington_(state)',
+        },
+        medicalSpecialty: ['Primary care', 'Family medicine'],
+        currenciesAccepted: 'USD',
+        paymentAccepted: 'Cash, Credit Card, HSA, FSA',
+        priceRange: '$225-$725',
 
-    founder: {
-      '@id': 'https://sankofafamilymedicine.com/#founder',
-    },
+        // Waitlist open - not active clinical intake yet
+        isAcceptingNewPatients: false,
 
-    sameAs: ['https://www.linkedin.com/company/sankofa-family-medicine'],
-  }
+        availableChannel: {
+          '@type': 'ServiceChannel',
+          serviceType: 'Telemedicine',
+          availableLanguage: ['English'],
+        },
 
-  const founderSchema = {
-    '@context': 'https://schema.org',
-    '@type': ['Person', 'Physician'],
-    '@id': 'https://sankofafamilymedicine.com/#founder',
-    name: 'Yaw A. Nkrumah, MD',
-    givenName: 'Yaw',
-    familyName: 'Nkrumah',
-    honorificSuffix: 'MD',
-    jobTitle: 'Founder and Medical Director',
-    url: 'https://sankofafamilymedicine.com/founder',
-    image: 'https://sankofafamilymedicine.com/images/dr-nkrumah.png',
-    medicalSpecialty: 'Family medicine',
-    worksFor: {
-      '@id': 'https://sankofafamilymedicine.com/#organization',
-    },
-    alumniOf: [
-      {
-        '@type': 'CollegeOrUniversity',
-        name: 'Medical University of South Carolina',
-        sameAs: 'https://web.musc.edu/',
-      },
-      {
-        '@type': 'EducationalOrganization',
-        name: 'Kadlec Family Medicine Residency',
-        address: { '@type': 'PostalAddress', addressRegion: 'WA', addressCountry: 'US' },
-      },
-    ],
-    hasCredential: [
-      {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'degree',
-        name: 'Doctor of Medicine (MD)',
-      },
-      {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'certification',
-        name: 'Board Certified in Family Medicine',
-        recognizedBy: {
-          '@type': 'Organization',
-          name: 'American Board of Family Medicine',
-          sameAs: 'https://www.theabfm.org/',
-        },
-      },
-      {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'license',
-        name: 'Washington State Medical License',
-        recognizedBy: {
-          '@type': 'Organization',
-          name: 'Washington Medical Commission',
-          sameAs: 'https://wmc.wa.gov/',
-        },
-      },
-    ],
-  }
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            contactType: 'new patient inquiries',
+            url: 'https://sankofafamilymedicine.com/founders-waitlist',
+            availableLanguage: ['English'],
+          },
+        ],
 
-  const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    '@id': 'https://sankofafamilymedicine.com/#website',
-    url: 'https://sankofafamilymedicine.com',
-    name: 'Sankofa Family Medicine',
-    description: 'Virtual primary care for Washington State',
-    publisher: { '@id': 'https://sankofafamilymedicine.com/#organization' },
-    inLanguage: 'en-US',
-  }
+        availableService: [
+          {
+            '@type': 'MedicalService',
+            name: 'Virtual Primary Care',
+            serviceType: 'Telemedicine',
+            description: 'Primary care delivered via secure video visits (planned visit length 45-75 minutes).',
+          },
+          {
+            '@type': 'MedicalService',
+            name: 'Chronic Disease Management',
+            description: 'Longitudinal management of chronic conditions with continuity of care.',
+          },
+          {
+            '@type': 'MedicalService',
+            name: 'Preventive Care',
+            description: 'Evidence-based preventive care and health maintenance.',
+          },
+        ],
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    '@id': 'https://sankofafamilymedicine.com/#faq',
-    mainEntity: [
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Membership Plans',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              name: 'Continuity',
+              description: 'Essential virtual primary care with continuity and access (DPC model).',
+              priceCurrency: 'USD',
+              priceSpecification: {
+                '@type': 'AggregateOffer',
+                priceCurrency: 'USD',
+                lowPrice: '225',
+                highPrice: '275',
+              },
+            },
+            {
+              '@type': 'Offer',
+              name: 'Precision',
+              description: 'Deeper preventive insight and advanced diagnostics when appropriate (DPC model).',
+              priceCurrency: 'USD',
+              priceSpecification: {
+                '@type': 'AggregateOffer',
+                priceCurrency: 'USD',
+                lowPrice: '325',
+                highPrice: '375',
+              },
+            },
+            {
+              '@type': 'Offer',
+              name: 'Executive',
+              description: 'Enhanced access, coordination, and longitudinal oversight (DPC model).',
+              priceCurrency: 'USD',
+              priceSpecification: {
+                '@type': 'AggregateOffer',
+                priceCurrency: 'USD',
+                lowPrice: '650',
+                highPrice: '725',
+              },
+            },
+          ],
+        },
+
+        potentialAction: {
+          '@type': 'RegisterAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://sankofafamilymedicine.com/founders-waitlist',
+            actionPlatform: ['http://schema.org/DesktopWebPlatform', 'http://schema.org/MobileWebPlatform'],
+          },
+          result: { '@type': 'Thing', name: 'Founders Waitlist Sign-Up' },
+        },
+
+        foundingDate: '2025',
+        founder: { '@id': 'https://sankofafamilymedicine.com/#founder' },
+        sameAs: ['https://www.linkedin.com/company/sankofa-family-medicine/'],
+      },
+
+      // Person/Physician entity (Founder)
       {
-        '@type': 'Question',
-        name: 'What is direct primary care?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Direct primary care (DPC) is a membership-based healthcare model where patients pay a monthly fee directly to their physician for primary care services. Insurance is not billed for membership fees.',
+        '@type': ['Person', 'Physician'],
+        '@id': 'https://sankofafamilymedicine.com/#founder',
+        name: 'Dr. Yaw Nkrumah, MD',
+        jobTitle: 'Founder &amp; Medical Director',
+        url: 'https://sankofafamilymedicine.com/founder',
+        medicalSpecialty: 'Family medicine',
+        worksFor: { '@id': 'https://sankofafamilymedicine.com/#organization' },
+        hasCredential: {
+          '@type': 'EducationalOccupationalCredential',
+          name: 'Board Certification in Family Medicine',
+          credentialCategory: 'Board Certification',
+          recognizedBy: {
+            '@type': 'Organization',
+            name: 'American Board of Family Medicine',
+            alternateName: 'ABFM',
+            sameAs: 'https://www.theabfm.org/',
+          },
+          url: 'https://www.credential.net/169707940',
         },
       },
+
+      // FAQPage entity (complete version)
       {
-        '@type': 'Question',
-        name: 'Do you accept insurance?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Sankofa Family Medicine does not bill insurance for membership fees. We encourage members to maintain health insurance for hospitalizations, specialist care, and emergencies. HSA/FSA funds may be used.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What areas do you serve?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We provide virtual primary care to patients physically located in Washington State at the time of the visit, including Seattle, Bellevue, Spokane, Tacoma, Vancouver, Kirkland, Redmond, Everett, Olympia, and all other areas throughout the state.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Is this practice for emergencies?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'No. Sankofa Family Medicine does not provide emergency or urgent care services. For emergencies including chest pain, difficulty breathing, or stroke symptoms, call 911 or go to the nearest emergency room immediately.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'When does enrollment begin?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Patient enrollment begins early 2026. You can join the founders waitlist now at no cost. No payment is required to join the waitlist.',
-        },
+        '@type': 'FAQPage',
+        '@id': 'https://sankofafamilymedicine.com/#faq',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is Direct Primary Care?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Direct Primary Care (DPC) is a membership-based model where patients pay a monthly fee directly to their physician for primary care services, without insurance billing for the membership.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'How much does membership cost?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Planned membership ranges are $225-$275/month (Continuity), $325-$375/month (Precision), and $650-$725/month (Executive). Founding members receive the lower end of each range. Your exact rate is confirmed before enrollment.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Is Sankofa Family Medicine accepting new patients?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sankofa Family Medicine is currently accepting Founders Waitlist sign-ups. Enrollment is planned to begin in February 2026.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'What states does Sankofa Family Medicine serve?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Sankofa Family Medicine serves patients located in Washington State only via telehealth.',
+            },
+          },
+        ],
       },
     ],
   }
@@ -494,22 +404,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" dir="ltr" className={cormorantGaramond.variable}>
       <head>
-        {/* JSON-LD Structured Data */}
+        {/* Consolidated JSON-LD Structured Data */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(founderSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(consolidatedSchema) }}
         />
       </head>
 

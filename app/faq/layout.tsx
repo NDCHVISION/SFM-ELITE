@@ -99,115 +99,6 @@ PRIVACY:
   },
 }
 
-// Comprehensive FAQ Schema for rich results and voice assistants
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    // Payment & Insurance
-    {
-      '@type': 'Question',
-      name: 'Do you accept insurance?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sankofa Family Medicine is currently a direct-pay (cash-pay) practice. We do not bill insurance directly. This model allows us to spend more time with patients, avoid insurance restrictions, and provide truly personalized care. We may expand to accept insurance in the future.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I use my HSA or FSA to pay for Sankofa Family Medicine?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes! Health Savings Accounts (HSA) and Flexible Spending Accounts (FSA) can be used for membership fees, visits, and programs at Sankofa Family Medicine. These are qualified medical expenses.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How much does membership cost?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sankofa Family Medicine offers three membership tiers: Continuity Concierge at $225-$245/month for concierge primary care with continuity and direct physician access, Precision Concierge at $325-$375/month adding advanced interpretation and personalized planning, and Executive Concierge at $650-$725/month for executive-level concierge medicine with comprehensive coordination. Founding members receive preferred founding member pricing.',
-      },
-    },
-    // Virtual Care
-    {
-      '@type': 'Question',
-      name: 'How do virtual visits work at Sankofa Family Medicine?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Virtual visits are conducted via secure, HIPAA-compliant video conferencing. You'll receive a link before your appointment and can join from any device with a camera and internet connection. No special software is required.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What conditions can be treated virtually?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Most primary care concerns can be effectively addressed via telehealth, including acute illnesses (cold, flu, infections), chronic disease management, medication refills and adjustments, mental health support, preventive care planning, lab result reviews, and health coaching. Some conditions may require in-person evaluation, and we coordinate referrals when needed.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is telehealth as effective as in-person care?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'For most primary care needs, yes. Research shows that telehealth delivers comparable outcomes for many conditions, often with greater convenience and continuity. The key advantage of our model is that you see the same physician every time, which improves outcomes compared to fragmented in-person care.',
-      },
-    },
-    // Membership
-    {
-      '@type': 'Question',
-      name: "What's included in a Sankofa Family Medicine membership?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Every membership includes generous virtual visit access with Dr. Nkrumah, direct secure messaging with your physician, care coordination, prescription management, and wholesale lab pricing (up to 90% off retail). Higher tiers add genetic testing, pharmacogenomics, advanced biomarker panels, and direct phone access during extended hours.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: "What is the founding member offer at Sankofa Family Medicine?",
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Founding members lock in their rate for life. Limited spots available. Join now to secure your membership at current pricing.',
-      },
-    },
-    // Getting Started
-    {
-      '@type': 'Question',
-      name: 'How do I become a patient at Sankofa Family Medicine?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Join the Founders Waitlist on our website. When enrollment opens (February 2026), you will receive instructions to complete intake, select your membership tier, and schedule your comprehensive 45-60 minute onboarding visit where we review your complete health history and develop a personalized care plan.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What areas does Sankofa Family Medicine serve?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Sankofa Family Medicine currently serves patients throughout Washington State via telemedicine. Dr. Nkrumah is licensed in Washington. Expansion to South Carolina is planned for 2026, with additional states to follow.',
-      },
-    },
-    // Privacy & Security
-    {
-      '@type': 'Question',
-      name: 'Is my health information secure at Sankofa Family Medicine?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We are fully HIPAA-compliant. All video visits, messaging, and health records are encrypted and stored securely. We use enterprise-grade security practices and never sell or share your data. AI tools we use to support clinical workflows are also HIPAA-compliant and never make clinical decisions.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is Sankofa Family Medicine an emergency service?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. Sankofa Family Medicine does not replace emergency services. If you experience chest pain, shortness of breath, neurological symptoms, severe injury, or any life-threatening condition, call 911 or seek immediate emergency care.',
-      },
-    },
-  ],
-}
-
 // Breadcrumb schema
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -231,10 +122,6 @@ const breadcrumbSchema = {
 export default function FAQLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
