@@ -3,24 +3,25 @@ import Script from 'next/script'
 
 /* =========================================================
 SERVICES/MEMBERSHIP PAGE LAYOUT - PRODUCTION READY
-Version: 5.0
+Version: 5.2 (contract-aligned + schema/page consistency)
 =========================================================
-CHANGES:
-- Removed "Concierge" from all tier names
-- Shifted language to "membership-based DPC"
-- Updated schema, metadata, AI fields
-- Softened all outcome claims
+PRECISION FIXES:
+- Compliance: removed all numeric price ranges from metadata + schema (page does not show ranges)
+- Compliance: added physician-patient relationship disclaimer to AI fields (waitlist ≠ care)
+- Contract alignment: tier access language mirrors Membership Agreement Section "Tier-Based Access"
+- SEO: kept DPC-first positioning; maintained clean OG/Twitter
+- Schema hygiene: added alternateName mapping to contract tier names (Concierge) WITHOUT changing page titles
 ========================================================= */
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sankofafamilymedicine.com'),
 
-  // SEO: emphasize DPC, reduce concierge language
-  title: 'Direct Primary Care Membership Plans & Pricing | Sankofa Family Medicine | Washington State',
+  // SEO: DPC-first, WA State intent
+  title: 'Direct Primary Care (DPC) Membership Plans & Pricing | Sankofa Family Medicine | Washington State',
 
-  // Compliance/SEO: avoid guarantees; keep plain language
+  // Compliance/SEO: removed numeric price claims because they are not shown on the page
   description:
-    'Transparent Direct Primary Care (DPC) membership pricing for Washington State patients. Three tiers from $225-$725/month. Same-day appointments when available. Direct messaging. Cancel with notice.',
+    'Transparent Direct Primary Care (DPC) membership tiers for Washington State patients. Same-day appointments when available. Direct messaging. Cancel with notice.',
 
   keywords: [
     'direct primary care membership Washington',
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'DPC Membership Plans | Sankofa Family Medicine',
     description:
-      'Transparent DPC membership pricing from $225-$725/month. Washington State. Direct physician messaging. Cancel with notice.',
+      'Direct Primary Care (DPC) membership tiers for Washington State patients. Same-day appointments when available. Direct physician messaging.',
     url: '/services',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
     site: '@sankofafamilymed',
     creator: '@sankofafamilymed',
     title: 'DPC Membership Plans | Sankofa Family Medicine',
-    description: 'Direct Primary Care in Washington State from $225/month. Direct messaging.',
+    description: 'Direct Primary Care (DPC) membership tiers in Washington State.',
     images: ['/images/og-services.png'],
   },
 
@@ -75,19 +76,24 @@ export const metadata: Metadata = {
   category: 'Healthcare',
 
   other: {
+    // AI/LLM hygiene
     'ai-content-declaration': 'human-authored',
     'ai-extractable': 'true',
+
+    // Compliance: no price claims if not visible on-page
     'ai-summary':
-      'Membership pricing for Sankofa Family Medicine, a Direct Primary Care (DPC) practice in Washington State. Three tiers: Continuity ($225-275/mo), Precision ($325-375/mo), Executive ($650-725/mo). Virtual care only. Not health insurance.',
+      'Sankofa Family Medicine offers Direct Primary Care (DPC) memberships for Washington State patients. Three tiers: Continuity, Precision, and Executive. Virtual care only. Not health insurance.',
 
     'content-type': 'Pricing Page',
     'page-category': 'Healthcare Services',
     'page-subcategory': 'Membership Pricing',
 
-    'price-range': '$225-$725/month',
-    'price-currency': 'USD',
-    'billing-options': 'monthly, annual',
+    // Removed: 'price-range' and tier price fields (page does not show ranges)
+    // 'price-range': '$225-$725/month',
+    // 'tier-1-price': '$225-275/month',
+    // etc.
 
+    'billing-options': 'monthly, annual',
     'payment-methods': 'Credit Card, Debit Card, ACH',
 
     // Practice Model
@@ -95,20 +101,19 @@ export const metadata: Metadata = {
     'practice-type': 'Membership Medicine',
     'delivery-method': 'Telehealth',
 
-    'geo-region': 'US-WA',
-    'geo-placename': 'Washington State, USA',
+    // WA telehealth limitation (plain + accurate)
     'service-area': 'Washington State only',
     'geographic-limitation': 'Patients must be physically located in Washington State during telehealth encounters',
 
-    // Tier Names (for AI extraction) - removed "Concierge"
+    // Tier Names (page titles)
     'tier-1-name': 'Continuity Membership',
-    'tier-1-price': '$225-275/month',
     'tier-2-name': 'Precision Membership',
-    'tier-2-price': '$325-375/month',
     'tier-3-name': 'Executive Membership',
-    'tier-3-price': '$650-725/month',
 
+    // Required disclaimers
     'insurance-disclaimer': 'This is not health insurance',
+    'relationship-disclaimer':
+      'Joining the founders waitlist does not create a physician-patient relationship. A relationship begins only after enrollment and an initial clinical encounter.',
     'emergency-disclaimer': 'Not for emergencies - call 911',
     'state-registration': 'RCW 48.150',
   },
@@ -117,13 +122,23 @@ export const metadata: Metadata = {
 const schemaGraph = {
   '@context': 'https://schema.org',
   '@graph': [
+    // Site entity
+    {
+      '@type': 'WebSite',
+      '@id': 'https://sankofafamilymedicine.com/#website',
+      url: 'https://sankofafamilymedicine.com',
+      name: 'Sankofa Family Medicine',
+      inLanguage: 'en-US',
+    },
+
+    // Page entity
     {
       '@type': 'WebPage',
       '@id': 'https://sankofafamilymedicine.com/services#webpage',
       url: 'https://sankofafamilymedicine.com/services',
-      name: 'Direct Primary Care Membership Plans & Pricing | Sankofa Family Medicine',
+      name: 'Direct Primary Care (DPC) Membership Plans & Pricing | Sankofa Family Medicine',
       description:
-        'Transparent Direct Primary Care (DPC) membership pricing for Washington State. Three tiers from $225-$725/month.',
+        'Direct Primary Care (DPC) membership tiers for Washington State patients. Same-day appointments when available. Direct messaging.',
       isPartOf: { '@id': 'https://sankofafamilymedicine.com/#website' },
       about: { '@id': 'https://sankofafamilymedicine.com/#organization' },
       breadcrumb: { '@id': 'https://sankofafamilymedicine.com/services#breadcrumb' },
@@ -131,9 +146,13 @@ const schemaGraph = {
       dateModified: '2026-01-28',
       inLanguage: 'en-US',
       isAccessibleForFree: true,
-      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '#pricing-heading', '[data-speakable]'] },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['h1', '#pricing-heading', '[data-speakable]'],
+      },
     },
 
+    // Breadcrumbs
     {
       '@type': 'BreadcrumbList',
       '@id': 'https://sankofafamilymedicine.com/services#breadcrumb',
@@ -143,20 +162,73 @@ const schemaGraph = {
       ],
     },
 
-    // Product - Continuity (removed "Concierge")
+    // Organization (clinic)
+    {
+      '@type': 'MedicalClinic',
+      '@id': 'https://sankofafamilymedicine.com/#organization',
+      name: 'Sankofa Family Medicine',
+      legalName: 'Sankofa Family Medicine PLLC',
+      url: 'https://sankofafamilymedicine.com',
+      telephone: '+1-425-285-7390',
+      email: 'info@sankofafamilymedicine.com',
+      currenciesAccepted: 'USD',
+      paymentAccepted: ['Cash', 'Credit Card', 'Debit Card', 'ACH'],
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '522 W Riverside Ave, Ste N',
+        addressLocality: 'Spokane',
+        addressRegion: 'WA',
+        postalCode: '99201',
+        addressCountry: 'US',
+      },
+      areaServed: { '@type': 'State', name: 'Washington', addressCountry: 'US' },
+      medicalSpecialty: { '@type': 'MedicalSpecialty', name: 'Primary Care' },
+
+      // Compliance: prelaunch posture
+      isAcceptingNewPatients: false,
+
+      // SEO/compliance: policy links
+      termsOfService: 'https://sankofafamilymedicine.com/membership-terms',
+      privacyPolicy: 'https://sankofafamilymedicine.com/privacy',
+
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: '+1-425-285-7390',
+          contactType: 'customer support',
+          areaServed: 'US-WA',
+          availableLanguage: ['en'],
+        },
+      ],
+
+      availableService: [
+        {
+          '@type': 'MedicalProcedure',
+          name: 'Virtual Direct Primary Care (DPC)',
+          procedureType: 'https://schema.org/NoninvasiveProcedure',
+        },
+      ],
+    },
+
+    /* =========================================================
+       Product nodes: keep names matching page (no "Concierge")
+       Add alternateName to map to contract tier names
+       Remove all numeric prices unless the page displays them
+       ========================================================= */
+
     {
       '@type': 'Product',
       '@id': 'https://sankofafamilymedicine.com/services#continuity',
       name: 'Continuity Membership (DPC)',
+      alternateName: 'Continuity Concierge Membership', // Contract mapping without changing page
       description:
-        'Virtual Direct Primary Care for Washington State patients. Includes physician-led visits, secure messaging, and access to lower-cost lab pricing options.',
+        // Contract-aligned: standard business hours only; no after-hours messaging/access
+        'DPC membership for Washington State patients. Access is limited to services during standard business hours. After-hours messaging and urgent consultations are not included.',
       brand: { '@id': 'https://sankofafamilymedicine.com/#organization' },
-      category: 'Healthcare Membership',
+      category: 'Direct Primary Care (DPC) membership',
       offers: {
         '@type': 'Offer',
-        price: '225',
-        priceCurrency: 'USD',
-        priceValidUntil: '2026-12-31',
+        // No "price" fields here unless prices are shown on the page
         availability: 'https://schema.org/PreOrder',
         url: 'https://sankofafamilymedicine.com/founders-waitlist',
         seller: { '@id': 'https://sankofafamilymedicine.com/#organization' },
@@ -164,20 +236,18 @@ const schemaGraph = {
       },
     },
 
-    // Product - Precision (removed "Concierge")
     {
       '@type': 'Product',
       '@id': 'https://sankofafamilymedicine.com/services#precision',
       name: 'Precision Membership (DPC)',
+      alternateName: 'Precision Concierge Membership', // Contract mapping
       description:
-        'Virtual Direct Primary Care with added data-informed reviews (when clinically appropriate). Includes advanced lab review and optional genetic testing interpretation (test costs separate).',
+        // Contract-aligned: limited after-hours secure messaging for time-sensitive, non-emergent concerns; not immediate; not emergencies
+        'DPC membership with limited after-hours secure messaging for time-sensitive, non-emergent concerns, subject to clinical appropriateness and availability. Not for emergencies.',
       brand: { '@id': 'https://sankofafamilymedicine.com/#organization' },
-      category: 'Healthcare Membership',
+      category: 'Direct Primary Care (DPC) membership',
       offers: {
         '@type': 'Offer',
-        price: '325',
-        priceCurrency: 'USD',
-        priceValidUntil: '2026-12-31',
         availability: 'https://schema.org/PreOrder',
         url: 'https://sankofafamilymedicine.com/founders-waitlist',
         seller: { '@id': 'https://sankofafamilymedicine.com/#organization' },
@@ -185,20 +255,18 @@ const schemaGraph = {
       },
     },
 
-    // Product - Executive (removed "Concierge")
     {
       '@type': 'Product',
       '@id': 'https://sankofafamilymedicine.com/services#executive',
       name: 'Executive Membership (DPC)',
+      alternateName: 'Executive Concierge Membership', // Contract mapping
       description:
-        'Virtual Direct Primary Care with expanded access pathways and priority coordination (based on clinical triage and availability).',
+        // Contract-aligned: expanded access pathways for defined urgent needs; care coordination outside hours; not unrestricted/on-call
+        'DPC membership with expanded access pathways for defined urgent needs, based on clinical triage and availability. May include care coordination outside standard business hours when clinically appropriate. Not unrestricted or on-call coverage.',
       brand: { '@id': 'https://sankofafamilymedicine.com/#organization' },
-      category: 'Healthcare Membership',
+      category: 'Direct Primary Care (DPC) membership',
       offers: {
         '@type': 'Offer',
-        price: '650',
-        priceCurrency: 'USD',
-        priceValidUntil: '2026-12-31',
         availability: 'https://schema.org/PreOrder',
         url: 'https://sankofafamilymedicine.com/founders-waitlist',
         seller: { '@id': 'https://sankofafamilymedicine.com/#organization' },
@@ -206,6 +274,7 @@ const schemaGraph = {
       },
     },
 
+    // FAQ (add the two high-risk compliance items as plain-language FAQs)
     {
       '@type': 'FAQPage',
       '@id': 'https://sankofafamilymedicine.com/services#faq',
@@ -216,7 +285,7 @@ const schemaGraph = {
           acceptedAnswer: {
             '@type': 'Answer',
             text:
-              'Direct Primary Care (DPC) is a membership model where you pay a monthly fee directly to your clinic for primary care services, instead of having the clinic bill your insurance for each visit.',
+              'Direct Primary Care (DPC) is a membership model. You pay a monthly fee directly to your clinic for primary care, instead of the clinic billing your insurance for each visit.',
           },
         },
         {
@@ -230,54 +299,22 @@ const schemaGraph = {
         },
         {
           '@type': 'Question',
-          name: 'What if I need a specialist?',
+          name: 'Do I need to be in Washington State for visits?',
           acceptedAnswer: {
             '@type': 'Answer',
             text:
-              'Your physician can help coordinate referrals when needed. Specialist services are separate from membership and are provided by third parties.',
+              'Yes. You must be physically located in Washington State at the time of your telehealth visit.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Is virtual care the right fit for me?',
+          name: 'Is this service for emergencies?',
           acceptedAnswer: {
             '@type': 'Answer',
             text:
-              'Virtual care works well for many common primary care needs. Some concerns require an in-person exam or testing, and we will guide you to in-person care when clinically appropriate.',
+              'No. This practice does not provide emergency or urgent care. For emergencies, call 911 or go to the nearest emergency room.',
           },
         },
-      ],
-    },
-
-    {
-      '@type': 'MedicalBusiness',
-      '@id': 'https://sankofafamilymedicine.com/#organization',
-      name: 'Sankofa Family Medicine',
-      legalName: 'Sankofa Family Medicine PLLC',
-      url: 'https://sankofafamilymedicine.com',
-      telephone: '+1-425-285-7390',
-      email: 'info@sankofafamilymedicine.com',
-      priceRange: '$225-$725/month',
-      currenciesAccepted: 'USD',
-      paymentAccepted: ['Cash', 'Credit Card', 'Debit Card', 'ACH'],
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '522 W Riverside Ave, Ste N',
-        addressLocality: 'Spokane',
-        addressRegion: 'WA',
-        postalCode: '99201',
-        addressCountry: 'US',
-      },
-      areaServed: { '@type': 'State', name: 'Washington', addressCountry: 'US' },
-      medicalSpecialty: { '@type': 'MedicalSpecialty', name: 'Primary Care' },
-      availableService: {
-        '@type': 'MedicalProcedure',
-        name: 'Virtual Direct Primary Care (DPC)',
-        procedureType: 'https://schema.org/NoninvasiveProcedure',
-      },
-      isAcceptingNewPatients: false,
-      contactPoint: [
-        { '@type': 'ContactPoint', telephone: '+1-425-285-7390', contactType: 'customer support', areaServed: 'US-WA', availableLanguage: ['en'] },
       ],
     },
   ],
