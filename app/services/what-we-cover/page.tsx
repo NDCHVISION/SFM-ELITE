@@ -52,7 +52,7 @@ const organizationJsonLd = {
     sameAs: 'https://en.wikipedia.org/wiki/Washington_(state)',
   },
   priceRange: '$225-$725/month',
-  paymentAccepted: 'Cash, Credit Card, HSA, FSA',
+  paymentAccepted: 'Cash, Credit Card',
   currenciesAccepted: 'USD',
   medicalSpecialty: ['PrimaryCare', 'FamilyPractice', 'Telemedicine', 'PreventiveMedicine'],
   isAcceptingNewPatients: true,

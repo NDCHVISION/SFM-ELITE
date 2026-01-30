@@ -75,7 +75,6 @@ export default function Navigation() {
         { href: '/services', label: 'Membership Plans', desc: 'From $225/month', icon: Heart },
         { href: '/membership-terms', label: 'Membership Terms', desc: 'View membership agreement details', icon: FileText },
         { href: '/services/what-we-cover', label: 'Conditions We Treat', desc: 'Scope of care', icon: Stethoscope },
-        { href: '/compare', label: 'Our Standard', desc: 'Philosophy and safeguards', icon: Shield },
       ],
     },
     locations: {

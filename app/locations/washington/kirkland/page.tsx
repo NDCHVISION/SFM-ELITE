@@ -81,7 +81,7 @@ export default function KirklandPage() {
     {
       icon: Shield,
       title: 'Transparent Pricing',
-      description: 'Monthly membership with no surprise bills. HSA and FSA accepted.'
+      description: 'Monthly membership with no surprise bills.'
     },
   ]
 

@@ -32,15 +32,14 @@ export default function FAQPage() {
           question: 'Do you accept insurance?',
           answer: (
             <div className="space-y-3">
-              <p>Sankofa Family Medicine is a direct-pay practice registered as a Direct Primary Care (DPC) practice with the Washington State Office of the Insurance Commissioner pursuant to RCW 48.150. We do not bill insurance companies for primary care membership fees or services.</p>
-              <p>This DPC model allows us to:</p>
+              <p>Sankofa Family Medicine is a direct-pay, membership-based practice. We do not bill insurance companies for primary care membership fees or services.</p>
+              <p>This model allows us to:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Eliminate insurance-driven administrative overhead</li>
                 <li>Spend more time with patients (45 to 75 minute visits vs. industry standard 15 minutes)</li>
                 <li>Avoid insurance restrictions on care decisions</li>
                 <li>Provide truly personalized care focused on your health rather than billing codes</li>
               </ul>
-              <p>Our DPC registration qualifies membership fees as HSA-eligible medical expenses as of January 1, 2026, for patients enrolled in HSA-qualified high-deductible health plans (HDHPs).</p>
             </div>
           )
         },
@@ -52,33 +51,11 @@ export default function FAQPage() {
               <ul className="list-disc pl-5 space-y-1">
                 <li>Credit cards (Visa, MasterCard, American Express, Discover, JCB, Diners Club)</li>
                 <li>Debit cards</li>
-                <li>HSA/FSA cards</li>
                 <li>ACH bank transfers (direct from your bank account)</li>
                 <li>Apple Pay and Google Pay (via the patient app)</li>
                 <li>Cash and check (processed manually)</li>
               </ul>
               <p>Membership fees are billed monthly on the 1st of each month via automatic recurring payment. You must maintain a valid payment method on file. Failed or declined payments incur a $25 returned payment fee. Individual visits for non-members and optional programs are billed separately at the time of service.</p>
-            </div>
-          )
-        },
-        {
-          question: 'Can I use my HSA or FSA?',
-          answer: (
-            <div className="space-y-3">
-              <p>Yes. As of January 1, 2026, Direct Primary Care (DPC) membership fees are HSA-eligible qualified medical expenses under IRS Section 213(d). Sankofa Family Medicine is registered as a DPC practice with the Washington State Office of the Insurance Commissioner (RCW 48.150), making our membership fees HSA-eligible for patients enrolled in HSA-qualified high-deductible health plans (HDHPs).</p>
-              <p><strong>HSA Eligibility Requirements:</strong></p>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>You must be enrolled in an HSA-qualified high-deductible health plan (HDHP)</li>
-                <li>Your HSA administrator must approve DPC membership fees as eligible expenses</li>
-                <li>Verify any monthly or annual DPC contribution limits under your specific plan</li>
-              </ul>
-              <p><strong>FSA Eligibility:</strong></p>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>Flexible Spending Accounts (FSA) can typically be used for DPC membership fees</li>
-                <li>Eligibility depends on your specific FSA plan rules</li>
-                <li>Confirm with your FSA administrator before enrollment</li>
-              </ul>
-              <p>We accept HSA/FSA cards directly through our secure payment system. Keep documentation of membership payments for tax purposes.</p>
             </div>
           )
         },
