@@ -12,34 +12,35 @@ import {
   Clock,
   MessageCircle,
   Heart,
-  FileText,
   Star,
   Users,
   ChevronDown,
   ChevronUp,
   Dna,
   Activity,
+  FlaskConical,
+  CalendarCheck,
 } from 'lucide-react'
 
 /* =========================================================
 SERVICES PAGE CLIENT COMPONENT
-Version: 10.0 (Membership-Based Primary Care)
+Version: 11.0 (Membership-Based Primary Care + Corrected Tiers)
 =========================================================
 
 POSITIONING: Membership-Based Primary Care
-- Relationship first, tools second
-- Clean, honest, legally sound
-- Scales to brick-and-mortar
-- No luxury baggage
+ANCHOR: "One physician. One relationship. Built over time."
+DIFFERENTIATOR: Comprehensive Precision Baseline (genetics + labs + intake)
 
-ANCHOR TAGLINE: "One physician. One relationship. Built over time."
+TIER STRUCTURE:
+- All tiers: Comprehensive Precision Baseline at enrollment
+- All tiers: Quarterly reassessment AVAILABLE
+- Differentiation: Included labs, genetic re-analysis cadence, visit length, response time
 
-DIFFERENTIATOR: Genetic health analysis included in every tier
-BRAND: Medicine That Remembers™
+NO VENDOR NAMES (pending BAA)
 
 WA DOH / ADVERTISING COMPLIANCE:
 - Emergency disclaimer: multiple locations
-- Not health insurance: multiple locations
+- Not health insurance: multiple locations  
 - WA State only: multiple locations
 - Waitlist/no relationship: multiple locations
 - No outcome guarantees
@@ -62,19 +63,19 @@ const tiers = [
     id: 'continuity',
     name: 'Continuity',
     tagline: 'Your foundation for ongoing care',
-    description:
-      'Membership-based primary care with genetic health analysis, unhurried visits, and direct physician access. The relationship starts here.',
+    bestFor: 'People who want a physician who knows them deeply, builds a baseline once, and manages care consistently with a prevention-first mindset.',
     features: [
-      { text: 'Genetic health analysis at enrollment', included: true, highlight: true },
-      { text: 'Virtual visits (40 minutes scheduled)', included: true },
+      { text: 'Comprehensive Precision Baseline at enrollment', included: true, highlight: true },
+      { text: 'Comprehensive genetic health analysis', included: true, highlight: true },
+      { text: 'Comprehensive lab panel at enrollment', included: true, highlight: true },
+      { text: 'Genetic re-analysis: annual (1x/year)', included: true },
+      { text: 'Quarterly reassessment available (every 90 days)', included: true },
+      { text: 'Visit duration: 40 minutes', included: true },
+      { text: 'Response time: within 48 business hours', included: true },
+      { text: 'Future labs: wholesale access (as clinically appropriate)', included: true },
       { text: 'Secure messaging during business hours', included: true },
-      { text: 'Response within 48 hours', included: true },
-      { text: 'Chronic condition management', included: true },
-      { text: 'Preventive care and wellness guidance', included: true },
-      { text: 'Medication management', included: true },
       { text: 'Care coordination and referrals', included: true },
-      { text: 'Access to wholesale laboratory pricing', included: true },
-      { text: 'Extended visits and included lab panels', included: false },
+      { text: 'Included lab reassessments', included: false },
       { text: 'After-hours access', included: false },
     ],
     popular: false,
@@ -82,41 +83,38 @@ const tiers = [
   {
     id: 'precision',
     name: 'Precision',
-    tagline: 'Deeper insight into your health',
-    description:
-      'Everything in Continuity, plus extended visits, advanced interpretation, and included laboratory coordination. Your genetics inform every clinical decision.',
+    tagline: 'Deeper monitoring and active optimization',
+    bestFor: 'Patients with chronic conditions or early risk patterns who want more structured follow-up and optimization over time.',
     features: [
-      { text: 'Everything in Continuity', included: true, highlight: true },
-      { text: 'Genetic health analysis at enrollment', included: true, highlight: true },
-      { text: 'Extended visits (50 minutes scheduled)', included: true },
-      { text: 'Response within 24 hours', included: true },
-      { text: 'Advanced laboratory interpretation', included: true },
-      { text: 'Cardiometabolic risk assessment', included: true },
+      { text: 'Everything in Continuity, plus:', included: true, highlight: true },
+      { text: 'Genetic re-analysis: twice yearly (2x/year)', included: true, highlight: true },
+      { text: 'One comprehensive lab reassessment per year included', included: true, highlight: true },
+      { text: 'Visit duration: 50 minutes', included: true },
+      { text: 'Response time: within 24 business hours', included: true },
       { text: 'Pharmacogenomic guidance when appropriate', included: true },
-      { text: 'One comprehensive lab panel per year included', included: true },
+      { text: 'Cardiometabolic risk assessment', included: true },
       { text: 'Priority scheduling when available', included: true },
-      { text: 'Limited after-hours messaging', included: true },
-      { text: 'Expanded access pathways', included: false },
+      { text: 'Limited after-hours messaging for non-emergent concerns', included: true },
+      { text: 'Additional reassessments at wholesale rates', included: true },
+      { text: 'Quarterly included lab reassessments', included: false },
     ],
     popular: true,
   },
   {
     id: 'executive',
     name: 'Executive',
-    tagline: 'The full picture, fully coordinated',
-    description:
-      'Everything in Precision, plus the highest level of access, coordination, and comprehensive health planning. For those who want more from their primary care relationship.',
+    tagline: 'Continuous optimization with highest priority',
+    bestFor: 'Founders, executives, and high-responsibility individuals who want the tightest oversight and the most structured quarterly cadence.',
     features: [
-      { text: 'Everything in Precision', included: true, highlight: true },
-      { text: 'Genetic health analysis at enrollment', included: true, highlight: true },
-      { text: 'Extended visits (60 minutes scheduled)', included: true },
-      { text: 'Response within same business day', included: true },
-      { text: 'Four comprehensive lab panels per year included', included: true },
-      { text: 'Expanded access for time-sensitive needs', included: true },
-      { text: 'Care coordination outside business hours', included: true },
+      { text: 'Everything in Precision, plus:', included: true, highlight: true },
+      { text: 'Genetic re-analysis: quarterly (4x/year)', included: true, highlight: true },
+      { text: 'Up to 4 comprehensive lab reassessments per year included', included: true, highlight: true },
+      { text: 'Visit duration: 60 minutes', included: true },
+      { text: 'Response time: same business day', included: true },
+      { text: 'Expanded after-hours access for time-sensitive needs', included: true },
+      { text: 'Care coordination outside business hours when needed', included: true },
       { text: 'Enhanced specialist coordination', included: true },
       { text: 'Comprehensive annual health review', included: true },
-      { text: 'Long-term health planning', included: true },
       { text: 'Direct consultation prior to enrollment', included: true },
     ],
     popular: false,
@@ -129,12 +127,20 @@ const faqs = [
     a: 'Membership-based primary care means you pay a monthly fee directly to your physician for primary care services. Instead of billing insurance for each visit, you have a direct relationship with one doctor who has time to know you. Visits are longer, access is simpler, and care is continuous.',
   },
   {
-    q: 'What is the genetic health analysis?',
-    a: 'Every member receives a comprehensive genetic health analysis at enrollment. This examines how your unique genetic profile may influence your health, medication responses, and disease predispositions. Your physician uses this information to guide clinical decisions throughout your care.',
+    q: 'What is the Comprehensive Precision Baseline?',
+    a: 'Every member starts with a Comprehensive Precision Baseline. This includes a full intake (history, goals, risk profile), a comprehensive lab panel, and a comprehensive genetic health analysis. Your lab results are correlated with your genetic findings to identify risk trends and prevention targets. This baseline is built once and refined over time.',
   },
   {
-    q: 'How does genetic analysis improve my care?',
-    a: 'Your genetics are static, but how we apply that knowledge evolves with your health. When combined with your laboratory results and clinical history, genetic insights help identify risks earlier, optimize medication selection, and personalize prevention strategies.',
+    q: 'How does genetic analysis work in my care?',
+    a: 'You receive a copy of your genetic report. Before your visit, your physician reviews your genetic information comprehensively. During your visit, the most relevant genetic findings are connected to your personal history and current lab results. Together, we build a long-term prevention and optimization plan around what matters most for you.',
+  },
+  {
+    q: 'What is genetic re-analysis?',
+    a: 'Your DNA does not change, but our understanding of it evolves. Genetic re-analysis means your physician reviews your genetic data alongside updated labs to refine recommendations. Continuity includes annual re-analysis (1x/year), Precision includes twice yearly (2x/year), and Executive includes quarterly re-analysis (4x/year).',
+  },
+  {
+    q: 'What is the difference between reassessment available and labs included?',
+    a: 'Quarterly reassessment is available to all tiers. This means every member can request a check-in and updated analysis every 90 days. What differs by tier is whether the lab work for that reassessment is included in your membership or available at wholesale rates. Executive includes up to 4 lab reassessments per year. Precision includes 1. Continuity members access labs at wholesale pricing.',
   },
   {
     q: 'Do I still need health insurance?',
@@ -154,11 +160,7 @@ const faqs = [
   },
   {
     q: 'How will I learn about pricing?',
-    a: 'Pricing will be published soon. You will receive complete terms and costs before any commitment is required. Monthly and annual billing options will be available.',
-  },
-  {
-    q: 'What if I need a specialist?',
-    a: 'Your physician coordinates referrals when clinically appropriate. Specialist care is separate and provided by third-party clinics and hospitals.',
+    a: 'Pricing will be shared with Founders List members before any commitment is required. Monthly and annual billing options will be available.',
   },
 ]
 
@@ -217,8 +219,8 @@ export default function ServicesPageClient() {
             </p>
 
             <p className="text-base text-white/70 leading-relaxed mb-8 max-w-2xl">
-              Virtual primary care for Washington State. Genetic health analysis included in every
-              membership. No insurance billing. Direct access to your physician.
+              Precision-informed primary care for Washington State. We build your baseline once,
+              then use it to prevent years of reactive medicine.
             </p>
 
             <div className="flex flex-wrap gap-6 text-white/70">
@@ -227,157 +229,114 @@ export default function ServicesPageClient() {
                 <span className="text-sm">One physician, every visit</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
-                <span className="text-sm">40 to 60 minute visits</span>
+                <Dna className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
+                <span className="text-sm">Genetics + labs at enrollment</span>
               </div>
               <div className="flex items-center gap-2">
-                <Dna className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
-                <span className="text-sm">Genetic analysis included</span>
+                <CalendarCheck className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
+                <span className="text-sm">Quarterly reassessment available</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Relationship Section */}
+      {/* Comprehensive Precision Baseline Section */}
       <section
-        aria-labelledby="relationship-heading"
+        aria-labelledby="baseline-heading"
         className="py-16 bg-white border-b border-gray-100"
       >
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2
-            id="relationship-heading"
-            className="font-display text-3xl md:text-4xl text-sfm-navy mb-6"
-          >
-            Primary Care That Continues
-          </h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-4">
-            Most primary care today is fragmented. You see whoever is available. Visits are rushed.
-            No one remembers your last conversation.
-          </p>
-          <p className="text-gray-700 text-lg leading-relaxed mb-8">
-            Membership-based care is different. You have one physician who knows your history, your
-            goals, and your preferences. Visits are unhurried. The relationship deepens over time.
-          </p>
-          <p className="text-sfm-navy font-medium text-lg">
-            This is medicine that remembers.
-          </p>
-        </div>
-      </section>
-
-      {/* What's Included */}
-      <section
-        aria-labelledby="included-heading"
-        className="py-12 bg-sfm-cream/30 border-b border-gray-100"
-      >
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-10">
-            <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase font-medium mb-2">
+            <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase font-medium mb-3">
               Every Membership Includes
             </p>
-            <h2 id="included-heading" className="font-display text-2xl text-sfm-navy">
-              The Foundation
+            <h2
+              id="baseline-heading"
+              className="font-display text-3xl md:text-4xl text-sfm-navy mb-4"
+            >
+              Comprehensive Precision Baseline
             </h2>
+            <p className="text-gray-700 text-lg leading-relaxed max-w-2xl mx-auto">
+              We build your baseline once, then refine it over time. Clarity early, not guessing later.
+            </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 mb-10">
             {[
-              { icon: Users, label: 'One Physician', desc: 'The same doctor, every visit' },
-              { icon: Clock, label: 'Unhurried Visits', desc: '40 to 60 minutes scheduled' },
-              { icon: Dna, label: 'Genetic Analysis', desc: 'Your DNA informs your care' },
-              { icon: MessageCircle, label: 'Direct Access', desc: 'Reach your physician directly' },
+              {
+                icon: Users,
+                title: 'Comprehensive Intake',
+                desc: 'Full history, goals, and risk profile assessment',
+              },
+              {
+                icon: FlaskConical,
+                title: 'Comprehensive Lab Panel',
+                desc: 'Full metabolic, thyroid, inflammatory, and nutrient biomarkers',
+              },
+              {
+                icon: Dna,
+                title: 'Comprehensive Genetic Health Analysis',
+                desc: 'Clinical-grade genetic profiling across multiple biological systems',
+              },
+              {
+                icon: Activity,
+                title: 'Correlation and Synthesis',
+                desc: 'Lab results integrated with genetic findings to identify risk trends',
+              },
             ].map((item) => (
-              <div key={item.label} className="text-center p-4">
-                <div className="w-12 h-12 mx-auto mb-3 bg-sfm-gold/10 rounded-xl flex items-center justify-center">
+              <div
+                key={item.title}
+                className="flex gap-4 p-5 bg-sfm-cream/30 rounded-xl border border-gray-100"
+              >
+                <div className="w-12 h-12 bg-sfm-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-6 h-6 text-sfm-gold" aria-hidden="true" />
                 </div>
-                <p className="font-semibold text-sfm-navy text-sm">{item.label}</p>
-                <p className="text-xs text-gray-600 mt-1">{item.desc}</p>
+                <div>
+                  <p className="font-semibold text-sfm-navy">{item.title}</p>
+                  <p className="text-sm text-gray-600 mt-1">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 mt-8 pt-8 border-t border-gray-200">
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Shield className="w-4 h-4 text-sfm-azure" aria-hidden="true" />
-              <span>HIPAA compliant</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Check className="w-4 h-4 text-emerald-600" aria-hidden="true" />
-              <span>Washington State telehealth</span>
-            </div>
-            <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Heart className="w-4 h-4 text-sfm-gold" aria-hidden="true" />
-              <span>Relationship-centered</span>
+          {/* How Genetics Works */}
+          <div className="bg-sfm-navy rounded-2xl p-8 text-white">
+            <h3 className="font-display text-xl mb-4">How Genetics Works in Your Care</h3>
+            <div className="space-y-4 text-white/80 text-sm leading-relaxed">
+              <p>
+                <span className="text-sfm-gold font-medium">You receive a copy</span> of your
+                genetic report.
+              </p>
+              <p>
+                <span className="text-sfm-gold font-medium">Before your visit,</span> your
+                physician reviews your genetic information comprehensively.
+              </p>
+              <p>
+                <span className="text-sfm-gold font-medium">During your visit,</span> the most
+                relevant genetic findings are connected to your personal history and current lab
+                results.
+              </p>
+              <p>
+                <span className="text-sfm-gold font-medium">Together,</span> we build a long-term
+                prevention and optimization plan around what matters most for you.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Genetic Health Analysis */}
-      <section
-        aria-labelledby="genetics-heading"
-        className="py-16 bg-white border-b border-gray-100"
-      >
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase font-medium mb-3">
-                Included in Every Tier
-              </p>
-              <h2 id="genetics-heading" className="font-display text-3xl text-sfm-navy mb-4">
-                Genetic Health Analysis
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Your DNA holds insights that can shape your care for years to come. Every member
-                receives a comprehensive genetic health analysis at enrollment.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                This is not a consumer ancestry test. This is clinical-grade genetic analysis,
-                interpreted by your physician in the context of your complete health history.
-              </p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Your genetics help guide medication selection, identify risks before they become
-                problems, and personalize prevention strategies to your actual biology.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                {
-                  icon: Dna,
-                  label: 'Comprehensive Profile',
-                  desc: 'Analysis at enrollment',
-                },
-                {
-                  icon: Activity,
-                  label: 'Ongoing Integration',
-                  desc: 'Informs every visit',
-                },
-                {
-                  icon: Shield,
-                  label: 'Medication Guidance',
-                  desc: 'Pharmacogenomic insights',
-                },
-                {
-                  icon: Heart,
-                  label: 'Risk Assessment',
-                  desc: 'Personalized prevention',
-                },
-              ].map((item) => (
-                <div
-                  key={item.label}
-                  className="bg-sfm-cream/50 p-5 rounded-xl border border-gray-100"
-                >
-                  <div className="w-10 h-10 mb-3 bg-sfm-gold/10 rounded-lg flex items-center justify-center">
-                    <item.icon className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
-                  </div>
-                  <p className="font-semibold text-sfm-navy text-sm">{item.label}</p>
-                  <p className="text-xs text-gray-600 mt-1">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+      {/* Quarterly Reassessment Note */}
+      <section className="py-10 bg-sfm-cream/30 border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h3 className="font-display text-xl text-sfm-navy mb-3">
+            Ongoing Reassessment Available to All Tiers
+          </h3>
+          <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+            Every tier includes quarterly reassessment availability (every 90 days) so we can
+            revisit your data and make adjustments as needed. What varies by tier is what lab work
+            is included versus available at wholesale access, plus response time and visit length.
+          </p>
         </div>
       </section>
 
@@ -396,8 +355,8 @@ export default function ServicesPageClient() {
               Membership Tiers
             </h2>
             <p className="text-sfm-navy/70 text-base max-w-2xl mx-auto">
-              Three levels of access. All include genetic health analysis and a dedicated physician
-              relationship. Choose the level that fits your needs.
+              All tiers include the Comprehensive Precision Baseline. Choose the level of ongoing
+              reassessment and access that fits your needs.
             </p>
           </div>
 
@@ -435,18 +394,32 @@ export default function ServicesPageClient() {
                     </p>
                   </div>
 
-                  {/* Pricing placeholder */}
+                  {/* Best For */}
                   <div
                     className={`mb-4 pb-4 border-b ${
                       tier.popular ? 'border-white/20' : 'border-gray-100'
                     }`}
                   >
                     <p
+                      className={`text-xs leading-relaxed ${
+                        tier.popular ? 'text-white/70' : 'text-gray-600'
+                      }`}
+                    >
+                      <span className={`font-medium ${tier.popular ? 'text-white/90' : 'text-sfm-navy'}`}>
+                        Best for:
+                      </span>{' '}
+                      {tier.bestFor}
+                    </p>
+                  </div>
+
+                  {/* Pricing placeholder */}
+                  <div className="mb-4">
+                    <p
                       className={`text-sm font-medium ${
                         tier.popular ? 'text-white/80' : 'text-sfm-navy/80'
                       }`}
                     >
-                      Pricing coming soon
+                      Pricing shared with Founders List
                     </p>
                     <p
                       className={`text-xs mt-1 ${tier.popular ? 'text-white/50' : 'text-gray-500'}`}
@@ -454,14 +427,6 @@ export default function ServicesPageClient() {
                       Monthly and annual options
                     </p>
                   </div>
-
-                  <p
-                    className={`text-sm mb-5 leading-relaxed ${
-                      tier.popular ? 'text-white/70' : 'text-gray-700'
-                    }`}
-                  >
-                    {tier.description}
-                  </p>
 
                   <ul className="space-y-2.5 mb-6">
                     {tier.features.map((feature, i) => (
@@ -513,7 +478,7 @@ export default function ServicesPageClient() {
                         : 'bg-sfm-navy text-white hover:bg-sfm-navy-deep focus-visible:ring-sfm-navy'
                     }`}
                   >
-                    Join the Founders Waitlist
+                    Join the Founders List
                     <ArrowRight className="inline-block w-4 h-4 ml-2" aria-hidden="true" />
                   </Link>
 
@@ -522,26 +487,78 @@ export default function ServicesPageClient() {
                       tier.popular ? 'text-white/50' : 'text-gray-500'
                     }`}
                   >
-                    No payment today. We will contact you when space opens.
+                    No payment today. Pricing shared before commitment.
                   </p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-8">
-            <p className="text-xs text-sfm-navy/50">
-              Access and response times vary by tier, clinical need, and availability.
-            </p>
+          {/* Quick Comparison Table */}
+          <div className="max-w-4xl mx-auto mt-12">
+            <h3 className="font-display text-xl text-sfm-navy mb-6 text-center">
+              Quick Comparison
+            </h3>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-gray-200">
+                    <th className="text-left py-3 px-4 font-semibold text-sfm-navy">Feature</th>
+                    <th className="text-center py-3 px-4 font-semibold text-sfm-navy">Continuity</th>
+                    <th className="text-center py-3 px-4 font-semibold text-sfm-navy bg-sfm-gold/10">Precision</th>
+                    <th className="text-center py-3 px-4 font-semibold text-sfm-navy">Executive</th>
+                  </tr>
+                </thead>
+                <tbody className="text-gray-700">
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4">Enrollment: labs + genetics</td>
+                    <td className="text-center py-3 px-4">Included</td>
+                    <td className="text-center py-3 px-4 bg-sfm-gold/5">Included</td>
+                    <td className="text-center py-3 px-4">Included</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4">Quarterly reassessment</td>
+                    <td className="text-center py-3 px-4">Available</td>
+                    <td className="text-center py-3 px-4 bg-sfm-gold/5">Available</td>
+                    <td className="text-center py-3 px-4">Available</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4">Included lab reassessments</td>
+                    <td className="text-center py-3 px-4">Wholesale access</td>
+                    <td className="text-center py-3 px-4 bg-sfm-gold/5">1/year</td>
+                    <td className="text-center py-3 px-4">Up to 4/year</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4">Genetic re-analysis</td>
+                    <td className="text-center py-3 px-4">1x/year</td>
+                    <td className="text-center py-3 px-4 bg-sfm-gold/5">2x/year</td>
+                    <td className="text-center py-3 px-4">4x/year</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4">Visit length</td>
+                    <td className="text-center py-3 px-4">40 min</td>
+                    <td className="text-center py-3 px-4 bg-sfm-gold/5">50 min</td>
+                    <td className="text-center py-3 px-4">60 min</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4">Response time</td>
+                    <td className="text-center py-3 px-4">≤ 48 hrs</td>
+                    <td className="text-center py-3 px-4 bg-sfm-gold/5">≤ 24 hrs</td>
+                    <td className="text-center py-3 px-4">Same-day</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          {/* Founders Cohort Notice */}
+          {/* Founders List Notice */}
           <div className="max-w-2xl mx-auto mt-10 pt-8 border-t border-sfm-navy/10">
             <div className="bg-gradient-to-r from-sfm-gold/10 to-sfm-gold/5 border border-sfm-gold/20 rounded-2xl px-6 py-5 text-center">
-              <p className="text-sfm-navy font-semibold mb-2">Founders Cohort</p>
+              <p className="text-sfm-navy font-semibold mb-2">Founders List</p>
               <p className="text-sm text-sfm-navy/70 leading-relaxed mb-3">
-                The first {FOUNDERS_COHORT_LIMIT} members receive founding member benefits. Limited
-                availability. No payment required to join the waitlist.
+                Founders List members get early access to enrollment as we finalize partnerships
+                and infrastructure. Pricing and final enrollment details will be shared before any
+                member commits. Limited to {FOUNDERS_COHORT_LIMIT} members.
               </p>
               <p className="text-xs text-sfm-navy/50">
                 Clinical care begins early 2026
@@ -582,21 +599,23 @@ export default function ServicesPageClient() {
                 Why Membership Works
               </h2>
               <p className="text-white/70 mb-8 leading-relaxed">
-                Traditional primary care is broken. Physicians see 20 to 30 patients per day. Visits
-                last 7 minutes. No one has time to think deeply about your health.
+                Traditional primary care is reactive. You wait until something is wrong, then see
+                whoever is available for 7 minutes. No one builds a baseline. No one tracks trends.
+                No one connects the dots.
               </p>
               <p className="text-white/70 mb-8 leading-relaxed">
-                Membership changes the economics. Your physician has fewer patients and more time.
-                The relationship can actually develop. Care can actually continue.
+                Membership changes this. We build your baseline once, then use it to prevent years
+                of reactive medicine. Your genetics and biomarkers are tracked over time. Patterns
+                are caught early. Care is continuous.
               </p>
               <ul className="space-y-4">
                 {[
-                  'Genetic health analysis included at enrollment',
-                  'Visits of 40 to 60 minutes, not 7',
+                  'Comprehensive Precision Baseline at enrollment',
+                  'Genetics + labs correlated for complete picture',
+                  'Quarterly reassessment available (all tiers)',
                   'One physician who knows your complete history',
-                  'Your genetics inform clinical decisions',
-                  'Wholesale laboratory pricing access',
-                  'Transparent terms, no hidden costs',
+                  'Visits of 40 to 60 minutes, not 7',
+                  'Prevention-first, not reactive',
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-white text-sm">
                     <span className="w-5 h-5 rounded-full bg-sfm-gold/20 flex items-center justify-center flex-shrink-0">
@@ -617,9 +636,8 @@ export default function ServicesPageClient() {
                 retrieve what matters."
               </p>
               <p className="text-white/70 text-sm leading-relaxed mb-6">
-                In medicine, what matters is continuity. Knowing what happened before. Remembering
-                what worked and what didn't. Building on previous conversations instead of starting
-                over every time.
+                In medicine, what matters is continuity. Building a baseline. Tracking trends.
+                Remembering what worked and what did not. Connecting each visit to the last.
               </p>
               <p className="text-white/60 text-sm italic">
                 This is primary care that remembers. Your history. Your goals. Your biology.
@@ -727,7 +745,7 @@ export default function ServicesPageClient() {
                   className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse motion-reduce:animate-none"
                   aria-hidden="true"
                 />
-                <span className="text-white/90 text-sm font-medium">Founders Waitlist Open</span>
+                <span className="text-white/90 text-sm font-medium">Founders List Open</span>
               </div>
 
               <h2
@@ -745,8 +763,8 @@ export default function ServicesPageClient() {
               </p>
 
               <p className="text-white/60 text-base mb-10 max-w-2xl">
-                Membership-based primary care with genetic health analysis. Clinical care begins
-                2026. No payment required to join the waitlist.
+                Membership-based primary care with comprehensive genetic and metabolic health
+                assessment. Clinical care begins 2026.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
@@ -803,13 +821,14 @@ export default function ServicesPageClient() {
             </p>
 
             <p>
-              <strong className="text-sfm-navy">Pricing:</strong> Pricing will be published soon.
-              Your fee is confirmed before you commit. Pricing is set by the Practice.
+              <strong className="text-sfm-navy">Pricing:</strong> Pricing will be shared with
+              Founders List members before any commitment is required. Pricing is set by the Practice.
             </p>
 
             <p>
-              <strong className="text-sfm-navy">Waitlist:</strong> The Founders Waitlist has limited
-              space. Joining does not guarantee enrollment or create a doctor-patient relationship.
+              <strong className="text-sfm-navy">Founders List:</strong> The Founders List has
+              limited space. Joining does not guarantee enrollment or create a doctor-patient
+              relationship.
             </p>
 
             <p>
@@ -824,8 +843,9 @@ export default function ServicesPageClient() {
             </p>
 
             <p>
-              <strong className="text-sfm-navy">Labs:</strong> Members may access wholesale lab
-              pricing. Prices vary by test and lab. Higher tiers include coordinated lab panels.
+              <strong className="text-sfm-navy">Labs:</strong> Comprehensive lab panel included at
+              enrollment for all tiers. Ongoing lab reassessments vary by tier (wholesale access,
+              1/year included, or up to 4/year included).
             </p>
 
             <p>
