@@ -77,7 +77,7 @@ VIRTUAL CARE:
 
 MEMBERSHIP TIERS:
 - Tier 1 Continuity Concierge: $225-$245/month ($203/month billed annually)
-- Tier 2 Precision Concierge: $325-$375/month ($293/month billed annually) - Most Popular
+- Tier 2 Precision Concierge: $325-$375/month ($293/month billed annually) - Featured
 - Tier 3 Executive Concierge: $650-$725/month ($585/month billed annually)
 
 FOUNDING MEMBER OFFER:
