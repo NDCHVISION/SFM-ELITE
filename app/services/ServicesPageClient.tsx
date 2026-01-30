@@ -11,8 +11,6 @@ import {
   Shield,
   Clock,
   MessageCircle,
-  Heart,
-  Star,
   Users,
   ChevronDown,
   ChevronUp,
@@ -24,36 +22,23 @@ import {
 
 /* =========================================================
 SERVICES PAGE CLIENT COMPONENT
-Version: 11.0 (Membership-Based Primary Care + Corrected Tiers)
+Version: 12.0 (Final Tier Design - Calm Progression)
 =========================================================
 
-POSITIONING: Membership-Based Primary Care
-ANCHOR: "One physician. One relationship. Built over time."
-DIFFERENTIATOR: Comprehensive Precision Baseline (genetics + labs + intake)
+DESIGN PHILOSOPHY:
+- Calm, intentional progression (not a feature ladder)
+- Continuity = Foundation
+- Precision = Optimization  
+- Executive = Priority + Oversight
 
-TIER STRUCTURE:
-- All tiers: Comprehensive Precision Baseline at enrollment
-- All tiers: Quarterly reassessment AVAILABLE
-- Differentiation: Included labs, genetic re-analysis cadence, visit length, response time
+RULES:
+- Max 5 bullets per tier
+- No greyed-out negatives
+- Lead with purpose, not features
+- Same visual weight across cards
+- Executive is calmer, not louder
 
 NO VENDOR NAMES (pending BAA)
-
-WA DOH / ADVERTISING COMPLIANCE:
-- Emergency disclaimer: multiple locations
-- Not health insurance: multiple locations  
-- WA State only: multiple locations
-- Waitlist/no relationship: multiple locations
-- No outcome guarantees
-- No superlatives
-- All access claims qualified
-- No em dashes
-
-ACCESSIBILITY (WCAG 2.2 AA+):
-- type="button" on all non-submit buttons
-- aria-expanded + aria-controls on FAQ
-- decorative icons aria-hidden
-- Focus states on interactive elements
-- Skip link to main content
 ========================================================= */
 
 const FOUNDERS_COHORT_LIMIT = 30
@@ -63,61 +48,60 @@ const tiers = [
     id: 'continuity',
     name: 'Continuity',
     tagline: 'Your foundation for ongoing care',
-    bestFor: 'People who want a physician who knows them deeply, builds a baseline once, and manages care consistently with a prevention-first mindset.',
+    description:
+      'Continuity Care is designed for patients who want a physician who truly understands their health history and genetic profile, and who manages care consistently with a prevention-first approach.',
     features: [
-      { text: 'Comprehensive Precision Baseline at enrollment', included: true, highlight: true },
-      { text: 'Comprehensive genetic health analysis', included: true, highlight: true },
-      { text: 'Comprehensive lab panel at enrollment', included: true, highlight: true },
-      { text: 'Genetic re-analysis: annual (1x/year)', included: true },
-      { text: 'Quarterly reassessment available (every 90 days)', included: true },
-      { text: 'Visit duration: 40 minutes', included: true },
-      { text: 'Response time: within 48 business hours', included: true },
-      { text: 'Future labs: wholesale access (as clinically appropriate)', included: true },
-      { text: 'Secure messaging during business hours', included: true },
-      { text: 'Care coordination and referrals', included: true },
-      { text: 'Included lab reassessments', included: false },
-      { text: 'After-hours access', included: false },
+      'Comprehensive Precision Baseline at enrollment (full intake, comprehensive lab panel, and genetic health analysis)',
+      'Genetic data reviewed comprehensively and integrated annually',
+      'Quarterly clinical reassessment available (every 90 days)',
+      '40-minute visits',
+      'Secure messaging with response within 48 business hours',
     ],
     popular: false,
+    bgClass: 'bg-white border border-gray-200',
+    textClass: 'text-sfm-navy',
+    mutedClass: 'text-gray-600',
+    btnClass: 'bg-sfm-navy text-white hover:bg-sfm-navy-deep',
   },
   {
     id: 'precision',
     name: 'Precision',
     tagline: 'Deeper monitoring and active optimization',
-    bestFor: 'Patients with chronic conditions or early risk patterns who want more structured follow-up and optimization over time.',
+    description:
+      'Precision Care builds on Continuity by increasing how often your health data is actively reassessed and adjusted over time.',
+    includesPrefix: 'Everything in Continuity, plus:',
     features: [
-      { text: 'Everything in Continuity, plus:', included: true, highlight: true },
-      { text: 'Genetic re-analysis: twice yearly (2x/year)', included: true, highlight: true },
-      { text: 'One comprehensive lab reassessment per year included', included: true, highlight: true },
-      { text: 'Visit duration: 50 minutes', included: true },
-      { text: 'Response time: within 24 business hours', included: true },
-      { text: 'Pharmacogenomic guidance when appropriate', included: true },
-      { text: 'Cardiometabolic risk assessment', included: true },
-      { text: 'Priority scheduling when available', included: true },
-      { text: 'Limited after-hours messaging for non-emergent concerns', included: true },
-      { text: 'Additional reassessments at wholesale rates', included: true },
-      { text: 'Quarterly included lab reassessments', included: false },
+      'Genetic data re-integrated twice yearly',
+      'One comprehensive lab reassessment included annually',
+      'More frequent data-driven adjustments to your care plan',
+      '50-minute visits',
+      'Secure messaging with response within 24 business hours',
     ],
     popular: true,
+    bgClass: 'bg-gradient-to-b from-sfm-navy to-sfm-navy-deep',
+    textClass: 'text-white',
+    mutedClass: 'text-white/70',
+    btnClass: 'bg-sfm-gold text-sfm-navy hover:bg-sfm-gold-light shadow-lg shadow-sfm-gold/30',
   },
   {
     id: 'executive',
     name: 'Executive',
     tagline: 'Continuous optimization with highest priority',
-    bestFor: 'Founders, executives, and high-responsibility individuals who want the tightest oversight and the most structured quarterly cadence.',
+    description:
+      'Executive Care is designed for individuals who want the highest level of physician oversight, fastest response times, and the most structured reassessment cadence.',
+    includesPrefix: 'Everything in Precision, plus:',
     features: [
-      { text: 'Everything in Precision, plus:', included: true, highlight: true },
-      { text: 'Genetic re-analysis: quarterly (4x/year)', included: true, highlight: true },
-      { text: 'Up to 4 comprehensive lab reassessments per year included', included: true, highlight: true },
-      { text: 'Visit duration: 60 minutes', included: true },
-      { text: 'Response time: same business day', included: true },
-      { text: 'Expanded after-hours access for time-sensitive needs', included: true },
-      { text: 'Care coordination outside business hours when needed', included: true },
-      { text: 'Enhanced specialist coordination', included: true },
-      { text: 'Comprehensive annual health review', included: true },
-      { text: 'Direct consultation prior to enrollment', included: true },
+      'Genetic data re-integrated quarterly',
+      'Up to four comprehensive lab reassessments per year included',
+      'Care reviewed proactively at regular intervals',
+      '60-minute visits',
+      'Highest response priority within the care model (same business day)',
     ],
     popular: false,
+    bgClass: 'bg-sfm-navy-deep',
+    textClass: 'text-white',
+    mutedClass: 'text-white/70',
+    btnClass: 'bg-white text-sfm-navy hover:bg-gray-100',
   },
 ]
 
@@ -135,12 +119,12 @@ const faqs = [
     a: 'You receive a copy of your genetic report. Before your visit, your physician reviews your genetic information comprehensively. During your visit, the most relevant genetic findings are connected to your personal history and current lab results. Together, we build a long-term prevention and optimization plan around what matters most for you.',
   },
   {
-    q: 'What is genetic re-analysis?',
-    a: 'Your DNA does not change, but our understanding of it evolves. Genetic re-analysis means your physician reviews your genetic data alongside updated labs to refine recommendations. Continuity includes annual re-analysis (1x/year), Precision includes twice yearly (2x/year), and Executive includes quarterly re-analysis (4x/year).',
+    q: 'What is the difference between tiers?',
+    a: 'All tiers include the Comprehensive Precision Baseline at enrollment and quarterly reassessment availability. Higher tiers increase how often your genetic data is re-integrated (annually, twice yearly, or quarterly), include more lab reassessments per year, offer longer visits, and provide faster response times.',
   },
   {
-    q: 'What is the difference between reassessment available and labs included?',
-    a: 'Quarterly reassessment is available to all tiers. This means every member can request a check-in and updated analysis every 90 days. What differs by tier is whether the lab work for that reassessment is included in your membership or available at wholesale rates. Executive includes up to 4 lab reassessments per year. Precision includes 1. Continuity members access labs at wholesale pricing.',
+    q: 'What about lab work after enrollment?',
+    a: 'All members can access lab work at wholesale rates at any time. Precision includes one comprehensive lab reassessment per year. Executive includes up to four per year. Additional labs beyond what is included are available at wholesale pricing.',
   },
   {
     q: 'Do I still need health insurance?',
@@ -156,7 +140,7 @@ const faqs = [
   },
   {
     q: 'Does joining the waitlist create a doctor-patient relationship?',
-    a: 'No. Joining the founders waitlist does not create a physician-patient relationship. A relationship begins only after enrollment and an initial clinical encounter.',
+    a: 'No. Joining the Founders List does not create a physician-patient relationship. A relationship begins only after enrollment and an initial clinical encounter.',
   },
   {
     q: 'How will I learn about pricing?',
@@ -326,167 +310,94 @@ export default function ServicesPageClient() {
         </div>
       </section>
 
-      {/* Quarterly Reassessment Note */}
-      <section className="py-10 bg-sfm-cream/30 border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h3 className="font-display text-xl text-sfm-navy mb-3">
-            Ongoing Reassessment Available to All Tiers
-          </h3>
-          <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto">
-            Every tier includes quarterly reassessment availability (every 90 days) so we can
-            revisit your data and make adjustments as needed. What varies by tier is what lab work
-            is included versus available at wholesale access, plus response time and visit length.
-          </p>
-        </div>
-      </section>
-
       {/* Membership Tiers */}
       <section
         id="membership-tiers"
         aria-labelledby="tiers-heading"
-        className="section-padding bg-white relative"
+        className="section-padding bg-sfm-cream/20 relative"
       >
         <div className="relative max-w-7xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <p className="text-sfm-gold text-sm tracking-[0.3em] uppercase mb-2 font-medium">
-              Choose Your Level
-            </p>
-            <h2 id="tiers-heading" className="font-display text-4xl text-sfm-navy mb-3">
-              Membership Tiers
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 id="tiers-heading" className="font-display text-3xl md:text-4xl text-sfm-navy mb-4">
+              Care Built Around Continuity, Precision, and Priority
             </h2>
-            <p className="text-sfm-navy/70 text-base max-w-2xl mx-auto">
-              All tiers include the Comprehensive Precision Baseline. Choose the level of ongoing
-              reassessment and access that fits your needs.
+            <p className="text-gray-700 text-base max-w-3xl mx-auto leading-relaxed">
+              All members receive comprehensive primary care with a physician who knows their full
+              history and biology. Higher tiers increase reassessment cadence, visit length, and
+              response priority.
             </p>
           </div>
 
-          {/* Tier Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Tier Cards - Equal Weight */}
+          <div className="grid md:grid-cols-3 gap-6">
             {tiers.map((tier) => (
               <div
                 key={tier.id}
-                className={`group relative rounded-2xl transition-all duration-500 ${
-                  tier.popular
-                    ? 'bg-gradient-to-b from-sfm-navy to-sfm-navy-deep text-white shadow-2xl shadow-sfm-navy/30 scale-[1.02] lg:scale-[1.03] z-10'
-                    : 'bg-white border border-gray-200 hover:border-sfm-gold/30 hover:shadow-xl'
-                }`}
+                className={`rounded-2xl ${tier.bgClass} overflow-hidden`}
               >
-                {tier.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <div className="px-3 py-1 bg-sfm-gold text-sfm-navy text-xs font-bold rounded-full shadow-lg flex items-center gap-1">
-                      <Star className="w-3 h-3" aria-hidden="true" />
-                      RECOMMENDED
-                    </div>
-                  </div>
-                )}
-
-                <div className="p-6 lg:p-7">
-                  <div className="mb-4">
-                    <h3
-                      className={`font-display text-xl mb-1 ${
-                        tier.popular ? 'text-white' : 'text-sfm-navy'
-                      }`}
-                    >
+                <div className="p-7">
+                  {/* Header */}
+                  <div className="mb-5">
+                    <h3 className={`font-display text-2xl mb-1 ${tier.textClass}`}>
                       {tier.name}
                     </h3>
-                    <p className={`text-sm ${tier.popular ? 'text-white/60' : 'text-gray-600'}`}>
+                    <p className={`text-sm ${tier.mutedClass}`}>
                       {tier.tagline}
                     </p>
                   </div>
 
-                  {/* Best For */}
-                  <div
-                    className={`mb-4 pb-4 border-b ${
-                      tier.popular ? 'border-white/20' : 'border-gray-100'
-                    }`}
-                  >
-                    <p
-                      className={`text-xs leading-relaxed ${
-                        tier.popular ? 'text-white/70' : 'text-gray-600'
-                      }`}
-                    >
-                      <span className={`font-medium ${tier.popular ? 'text-white/90' : 'text-sfm-navy'}`}>
-                        Best for:
-                      </span>{' '}
-                      {tier.bestFor}
-                    </p>
-                  </div>
-
-                  {/* Pricing placeholder */}
-                  <div className="mb-4">
-                    <p
-                      className={`text-sm font-medium ${
-                        tier.popular ? 'text-white/80' : 'text-sfm-navy/80'
-                      }`}
-                    >
+                  {/* Pricing */}
+                  <div className={`mb-5 pb-5 border-b ${
+                    tier.id === 'continuity' ? 'border-gray-200' : 'border-white/20'
+                  }`}>
+                    <p className={`text-sm font-medium ${tier.textClass}`}>
                       Pricing shared with Founders List
                     </p>
-                    <p
-                      className={`text-xs mt-1 ${tier.popular ? 'text-white/50' : 'text-gray-500'}`}
-                    >
+                    <p className={`text-xs mt-1 ${tier.mutedClass}`}>
                       Monthly and annual options
                     </p>
                   </div>
 
-                  <ul className="space-y-2.5 mb-6">
+                  {/* Description */}
+                  <p className={`text-sm leading-relaxed mb-6 ${tier.mutedClass}`}>
+                    {tier.description}
+                  </p>
+
+                  {/* Includes Prefix (for Precision & Executive) */}
+                  {tier.includesPrefix && (
+                    <p className={`text-sm font-medium mb-3 ${tier.textClass}`}>
+                      {tier.includesPrefix}
+                    </p>
+                  )}
+
+                  {/* Features - Max 5, No Negatives */}
+                  <ul className="space-y-3 mb-6">
                     {tier.features.map((feature, i) => (
-                      <li key={i} className="flex items-start gap-2.5">
-                        <div
-                          className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                            feature.included
-                              ? tier.popular
-                                ? 'bg-sfm-gold/20'
-                                : 'bg-sfm-gold/15'
-                              : tier.popular
-                              ? 'bg-white/10'
-                              : 'bg-gray-100'
-                          }`}
-                        >
-                          {feature.included ? (
-                            <Check className="w-3 h-3 text-sfm-gold" aria-hidden="true" />
-                          ) : (
-                            <span
-                              className={`w-1.5 h-px ${
-                                tier.popular ? 'bg-white/30' : 'bg-gray-400'
-                              }`}
-                              aria-hidden="true"
-                            />
-                          )}
-                        </div>
-                        <span
-                          className={`text-sm leading-snug ${
-                            feature.included
-                              ? tier.popular
-                                ? 'text-white/90'
-                                : 'text-sfm-navy/90'
-                              : tier.popular
-                              ? 'text-white/40'
-                              : 'text-gray-400'
-                          } ${feature.highlight ? 'font-medium' : ''}`}
-                        >
-                          {feature.text}
+                      <li key={i} className="flex items-start gap-3">
+                        <Check 
+                          className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
+                            tier.id === 'continuity' ? 'text-sfm-gold' : 'text-sfm-gold'
+                          }`} 
+                          aria-hidden="true" 
+                        />
+                        <span className={`text-sm leading-snug ${tier.mutedClass}`}>
+                          {feature}
                         </span>
                       </li>
                     ))}
                   </ul>
 
+                  {/* CTA */}
                   <Link
                     href="/founders-waitlist"
-                    className={`block w-full py-3.5 px-5 rounded-xl font-semibold text-center transition-all duration-300 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
-                      tier.popular
-                        ? 'bg-sfm-gold text-sfm-navy hover:bg-sfm-gold-light shadow-lg shadow-sfm-gold/30 focus-visible:ring-sfm-gold'
-                        : 'bg-sfm-navy text-white hover:bg-sfm-navy-deep focus-visible:ring-sfm-navy'
-                    }`}
+                    className={`block w-full py-4 px-5 rounded-xl font-semibold text-center transition-all duration-300 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${tier.btnClass}`}
                   >
                     Join the Founders List
                     <ArrowRight className="inline-block w-4 h-4 ml-2" aria-hidden="true" />
                   </Link>
 
-                  <p
-                    className={`mt-3 text-xs leading-relaxed text-center ${
-                      tier.popular ? 'text-white/50' : 'text-gray-500'
-                    }`}
-                  >
+                  <p className={`mt-3 text-xs text-center ${tier.mutedClass}`}>
                     No payment today. Pricing shared before commitment.
                   </p>
                 </div>
@@ -494,81 +405,21 @@ export default function ServicesPageClient() {
             ))}
           </div>
 
-          {/* Quick Comparison Table */}
-          <div className="max-w-4xl mx-auto mt-12">
-            <h3 className="font-display text-xl text-sfm-navy mb-6 text-center">
-              Quick Comparison
-            </h3>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="text-left py-3 px-4 font-semibold text-sfm-navy">Feature</th>
-                    <th className="text-center py-3 px-4 font-semibold text-sfm-navy">Continuity</th>
-                    <th className="text-center py-3 px-4 font-semibold text-sfm-navy bg-sfm-gold/10">Precision</th>
-                    <th className="text-center py-3 px-4 font-semibold text-sfm-navy">Executive</th>
-                  </tr>
-                </thead>
-                <tbody className="text-gray-700">
-                  <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4">Enrollment: labs + genetics</td>
-                    <td className="text-center py-3 px-4">Included</td>
-                    <td className="text-center py-3 px-4 bg-sfm-gold/5">Included</td>
-                    <td className="text-center py-3 px-4">Included</td>
-                  </tr>
-                  <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4">Quarterly reassessment</td>
-                    <td className="text-center py-3 px-4">Available</td>
-                    <td className="text-center py-3 px-4 bg-sfm-gold/5">Available</td>
-                    <td className="text-center py-3 px-4">Available</td>
-                  </tr>
-                  <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4">Included lab reassessments</td>
-                    <td className="text-center py-3 px-4">Wholesale access</td>
-                    <td className="text-center py-3 px-4 bg-sfm-gold/5">1/year</td>
-                    <td className="text-center py-3 px-4">Up to 4/year</td>
-                  </tr>
-                  <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4">Genetic re-analysis</td>
-                    <td className="text-center py-3 px-4">1x/year</td>
-                    <td className="text-center py-3 px-4 bg-sfm-gold/5">2x/year</td>
-                    <td className="text-center py-3 px-4">4x/year</td>
-                  </tr>
-                  <tr className="border-b border-gray-100">
-                    <td className="py-3 px-4">Visit length</td>
-                    <td className="text-center py-3 px-4">40 min</td>
-                    <td className="text-center py-3 px-4 bg-sfm-gold/5">50 min</td>
-                    <td className="text-center py-3 px-4">60 min</td>
-                  </tr>
-                  <tr>
-                    <td className="py-3 px-4">Response time</td>
-                    <td className="text-center py-3 px-4">≤ 48 hrs</td>
-                    <td className="text-center py-3 px-4 bg-sfm-gold/5">≤ 24 hrs</td>
-                    <td className="text-center py-3 px-4">Same-day</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
           {/* Founders List Notice */}
-          <div className="max-w-2xl mx-auto mt-10 pt-8 border-t border-sfm-navy/10">
-            <div className="bg-gradient-to-r from-sfm-gold/10 to-sfm-gold/5 border border-sfm-gold/20 rounded-2xl px-6 py-5 text-center">
+          <div className="max-w-2xl mx-auto mt-12">
+            <div className="bg-white border border-sfm-gold/20 rounded-2xl px-6 py-5 text-center shadow-sm">
               <p className="text-sfm-navy font-semibold mb-2">Founders List</p>
-              <p className="text-sm text-sfm-navy/70 leading-relaxed mb-3">
+              <p className="text-sm text-gray-600 leading-relaxed">
                 Founders List members get early access to enrollment as we finalize partnerships
                 and infrastructure. Pricing and final enrollment details will be shared before any
                 member commits. Limited to {FOUNDERS_COHORT_LIMIT} members.
               </p>
-              <p className="text-xs text-sfm-navy/50">
-                Clinical care begins early 2026
-              </p>
             </div>
           </div>
 
-          {/* Important Notice Box */}
+          {/* Compliance Notice */}
           <div className="max-w-3xl mx-auto mt-6">
-            <div className="bg-sfm-cream/50 border border-sfm-navy/10 rounded-2xl px-5 py-4 text-sm text-sfm-navy/80 leading-relaxed">
+            <div className="bg-sfm-cream/50 border border-gray-200 rounded-xl px-5 py-4 text-sm text-gray-600 leading-relaxed">
               <p className="mb-2">
                 <strong className="text-sfm-navy">This is not health insurance.</strong> Keep
                 insurance for emergencies, hospital care, specialists, and prescriptions.
@@ -577,13 +428,9 @@ export default function ServicesPageClient() {
                 <strong className="text-sfm-navy">Not for emergencies.</strong> Call 911 or go to
                 the ER for emergencies.
               </p>
-              <p className="mb-2">
+              <p>
                 <strong className="text-sfm-navy">Washington State only.</strong> You must be in
                 Washington during visits.
-              </p>
-              <p>
-                <strong className="text-sfm-navy">Waitlist only.</strong> Joining does not make you
-                a patient or guarantee enrollment.
               </p>
             </div>
           </div>
@@ -612,10 +459,9 @@ export default function ServicesPageClient() {
                 {[
                   'Comprehensive Precision Baseline at enrollment',
                   'Genetics + labs correlated for complete picture',
-                  'Quarterly reassessment available (all tiers)',
+                  'Quarterly reassessment available for all members',
                   'One physician who knows your complete history',
                   'Visits of 40 to 60 minutes, not 7',
-                  'Prevention-first, not reactive',
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-white text-sm">
                     <span className="w-5 h-5 rounded-full bg-sfm-gold/20 flex items-center justify-center flex-shrink-0">
@@ -806,52 +652,45 @@ export default function ServicesPageClient() {
             Important Information
           </h3>
 
-          <div className="space-y-3 text-sm text-gray-600 leading-relaxed">
-            <p>
-              <strong className="text-sfm-navy">Not Health Insurance:</strong> This membership is
-              not health insurance. Keep coverage for emergencies, hospital stays, specialists, and
-              major events.
-            </p>
-
-            <p>
-              <strong className="text-sfm-navy">Genetic Analysis:</strong> Genetic health analysis
-              provides information that may be useful for clinical decision-making but does not
-              diagnose disease or predict outcomes. Results are interpreted by your physician in the
-              context of your complete health history.
-            </p>
-
-            <p>
-              <strong className="text-sfm-navy">Pricing:</strong> Pricing will be shared with
-              Founders List members before any commitment is required. Pricing is set by the Practice.
-            </p>
-
-            <p>
-              <strong className="text-sfm-navy">Founders List:</strong> The Founders List has
-              limited space. Joining does not guarantee enrollment or create a doctor-patient
-              relationship.
-            </p>
-
-            <p>
-              <strong className="text-sfm-navy">Emergencies:</strong> We do not provide emergency or
-              urgent care. For emergencies, call 911 or go to the ER.
-            </p>
-
-            <p>
-              <strong className="text-sfm-navy">Access:</strong> No tier guarantees unlimited
-              access, instant responses, or around-the-clock availability. Timing depends on
-              clinical judgment and scheduling.
-            </p>
-
-            <p>
-              <strong className="text-sfm-navy">Labs:</strong> Comprehensive lab panel included at
-              enrollment for all tiers. Ongoing lab reassessments vary by tier (wholesale access,
-              1/year included, or up to 4/year included).
-            </p>
-
-            <p>
-              <strong className="text-sfm-navy">Location:</strong> You must be physically in
-              Washington State during telehealth visits.
-            </p>
+          <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600 leading-relaxed">
+            <div className="space-y-3">
+              <p>
+                <strong className="text-sfm-navy">Not Health Insurance:</strong> This membership is
+                not health insurance. Keep coverage for emergencies, hospital stays, specialists, and
+                major events.
+              </p>
+              <p>
+                <strong className="text-sfm-navy">Genetic Analysis:</strong> Genetic health analysis
+                provides information useful for clinical decision-making but does not diagnose disease
+                or predict outcomes.
+              </p>
+              <p>
+                <strong className="text-sfm-navy">Telehealth Limitations:</strong> Telehealth has
+                limitations compared to in-person care. Some conditions require in-person evaluation.
+              </p>
+              <p>
+                <strong className="text-sfm-navy">No Outcome Guarantees:</strong> Medicine is not an
+                exact science. No specific health outcomes are guaranteed.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <p>
+                <strong className="text-sfm-navy">Emergencies:</strong> We do not provide emergency or
+                urgent care. For emergencies, call 911 or go to the ER.
+              </p>
+              <p>
+                <strong className="text-sfm-navy">Location:</strong> You must be physically in
+                Washington State during telehealth visits.
+              </p>
+              <p>
+                <strong className="text-sfm-navy">Founders List:</strong> Joining does not guarantee
+                enrollment or create a doctor-patient relationship.
+              </p>
+              <p>
+                <strong className="text-sfm-navy">Complaints:</strong> Washington Medical Commission:
+                (360) 236-2750 | wmc.wa.gov
+              </p>
+            </div>
           </div>
 
           <div className="text-center mt-6 flex flex-wrap justify-center gap-4">
