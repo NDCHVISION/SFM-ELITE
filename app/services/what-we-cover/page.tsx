@@ -30,7 +30,7 @@ const organizationJsonLd = {
   name: 'Sankofa Family Medicine',
   alternateName: ['SFM', 'Medicine That Remembers'],
   description:
-    'Sankofa Family Medicine is a virtual-first concierge medicine practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers - a care model built on continuity, genetic testing, precision medicine, and cardiometabolic health optimization.',
+    'Sankofa Family Medicine is a virtual-first membership-based primary care practice serving patients across Washington State. Founded by Dr. Yaw Nkrumah, MD, the practice solves healthcare fragmentation through Medicine That Remembers - a care model built on continuity, personalized care, and cardiometabolic health optimization.',
   url: 'https://sankofafamilymedicine.com',
   logo: {
     '@type': 'ImageObject',
@@ -51,8 +51,7 @@ const organizationJsonLd = {
     name: 'Washington',
     sameAs: 'https://en.wikipedia.org/wiki/Washington_(state)',
   },
-  priceRange: '$225-$725/month',
-  paymentAccepted: 'Cash, Credit Card, HSA, FSA',
+  paymentAccepted: 'Cash, Credit Card',
   currenciesAccepted: 'USD',
   medicalSpecialty: ['PrimaryCare', 'FamilyPractice', 'Telemedicine', 'PreventiveMedicine'],
   isAcceptingNewPatients: true,

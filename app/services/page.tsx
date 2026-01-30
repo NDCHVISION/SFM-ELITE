@@ -125,7 +125,6 @@ const schemaData = {
       },
       isAcceptingNewPatients: true,
       healthPlanNetworkId: 'NONE',
-      priceRange: '$$$$',
     },
     {
       '@type': 'FAQPage',

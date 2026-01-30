@@ -73,11 +73,7 @@ const sitePages: PageCategory[] = [
         href: '/founder',
         description: 'Learn about Dr. Yaw Nkrumah and his vision',
       },
-      {
-        title: 'Compare',
-        href: '/compare',
-        description: 'See how we compare to traditional healthcare',
-      },
+
       {
         title: 'FAQ',
         href: '/faq',

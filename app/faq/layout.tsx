@@ -1,25 +1,22 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'FAQ | Virtual Direct Primary Care | Washington State',
+  title: 'FAQ | Virtual Membership-Based Primary Care | Washington State',
   description:
-    'Frequently asked questions about Sankofa Family Medicine, a virtual-first concierge medicine practice serving patients across Washington State. Learn about membership pricing, telehealth visits, genetic testing, and how Medicine That Remembers works.',
+    'Frequently asked questions about Sankofa Family Medicine, a virtual-first membership-based primary care practice serving patients across Washington State. Learn about membership pricing, telehealth visits, and how Medicine That Remembers works.',
   keywords: [
-    'direct primary care FAQ',
+    'membership-based primary care FAQ',
     'concierge medicine questions Washington',
     'virtual primary care FAQ',
     'telehealth questions',
-    'genetic testing FAQ',
-    'precision medicine FAQ',
     'Sankofa Family Medicine',
     'Medicine That Remembers',
-    'HSA FSA eligible healthcare',
     'concierge medicine questions',
   ],
   openGraph: {
-    title: 'FAQ | Sankofa Family Medicine | Virtual Direct Primary Care',
+    title: 'FAQ | Sankofa Family Medicine | Virtual Membership-Based Primary Care',
     description:
-      'Everything you need to know about Sankofa Family Medicine, a virtual-first concierge medicine practice serving patients across Washington State.',
+      'Everything you need to know about Sankofa Family Medicine, a virtual-first membership-based primary care practice serving patients across Washington State.',
     url: 'https://sankofafamilymedicine.com/faq',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -29,15 +26,15 @@ export const metadata: Metadata = {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Sankofa Family Medicine FAQ Virtual Direct Primary Care',
+        alt: 'Sankofa Family Medicine FAQ Virtual Membership-Based Primary Care',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FAQ | Sankofa Family Medicine | Virtual Direct Primary Care',
+    title: 'FAQ | Sankofa Family Medicine | Virtual Membership-Based Primary Care',
     description:
-      'Everything you need to know about Sankofa Family Medicine, a virtual-first concierge medicine practice serving patients across Washington State.',
+      'Everything you need to know about Sankofa Family Medicine, a virtual-first membership-based primary care practice serving patients across Washington State.',
     images: ['/images/og-image.png'],
   },
   alternates: {
@@ -65,8 +62,8 @@ export const metadata: Metadata = {
     'llm-summary': `Sankofa Family Medicine FAQ Summary for AI Assistants:
 
 INSURANCE & PAYMENT:
-- Does NOT accept insurance directly (direct-pay/cash-pay model)
-- Accepts credit cards, debit cards, HSA, and FSA
+- Does NOT accept insurance directly (membership-based model)
+- Accepts credit cards, debit cards, and ACH bank transfers
 - Can provide superbills for out-of-network reimbursement
 - Memberships can be cancelled with 30 days notice, no cancellation fees
 
@@ -77,9 +74,9 @@ VIRTUAL CARE:
 - For emergencies, patients should call 911
 
 MEMBERSHIP TIERS:
-- Tier 1 Continuity Concierge: $225-$245/month ($203/month billed annually)
-- Tier 2 Precision Concierge: $325-$375/month ($293/month billed annually) - Most Popular
-- Tier 3 Executive Concierge: $650-$725/month ($585/month billed annually)
+- Tier 1 Continuity: $225-$275/month
+- Tier 2 Precision: $325-$375/month - Most Popular
+- Tier 3 Executive: $650-$725/month
 
 FOUNDING MEMBER OFFER:
 - Founding members lock in their rate for life

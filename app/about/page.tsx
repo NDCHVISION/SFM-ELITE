@@ -458,9 +458,9 @@ export default function AboutPage() {
                     <Link href="/services" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
                       telehealth primary care services
                     </Link>{' '}
-                    or explore{' '}
-                    <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
-                      how Direct Primary Care (DPC) differs
+                    and{' '}
+                    <Link href="/services" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
+                      membership options
                     </Link>.
                   </p>
                 </div>
@@ -813,7 +813,7 @@ export default function AboutPage() {
                   className="w-4 h-4 text-sfm-gold"
                   aria-hidden="true"
                 />
-                HSA/FSA Accepted
+                No Surprise Bills
               </span>
               <span className="flex items-center gap-2">
                 <CheckCircle2

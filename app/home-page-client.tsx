@@ -414,16 +414,16 @@ export default function HomePageClient() {
 
       <CareJourney />
 
-      {/* DPC COMPARISON */}
+      {/* MEMBERSHIP COMPARISON */}
       <section className="relative py-24 lg:py-32 bg-white overflow-hidden" aria-labelledby="compare-heading">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
             <span className="inline-block text-sfm-gold text-base font-semibold tracking-widest uppercase mb-6">The Difference</span>
             <h2 id="compare-heading" className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight" data-speakable>
-              Why Direct Primary Care Works
+              Why Membership-Based Care Works
             </h2>
             <p className="text-xl text-sfm-navy/70">
-              Insurance-driven systems are built for volume, not memory. Direct Primary Care restores time, continuity, and transparency.
+              Insurance-driven systems are built for volume, not memory. Membership-based care restores time, continuity, and transparency.
             </p>
           </ScrollReveal>
 
@@ -480,10 +480,10 @@ export default function HomePageClient() {
 
               <div className="text-center mt-6">
                 <Link
-                  href="/compare"
+                  href="/services"
                   className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors motion-reduce:transition-none font-medium text-lg focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded"
                 >
-                  See the full comparison
+                  View membership options
                   <ArrowRight className="w-5 h-5" aria-hidden="true" />
                 </Link>
               </div>
@@ -607,7 +607,7 @@ export default function HomePageClient() {
       {/* Smaller gray text + more breathing room + wider max width */}
       <p className="text-base sm:text-lg text-sfm-navy/65 max-w-3xl mx-auto mt-4 leading-relaxed">
         When enrollment opens, memberships are expected to include virtual visits, secure messaging, and wholesale lab
-        pricing. This is Direct Primary Care (DPC). We do not bill insurance for primary care.
+        pricing. We do not bill insurance for primary care.
       </p>
 
       <p className="text-sm sm:text-base text-sfm-navy/55 max-w-3xl mx-auto mt-3 leading-relaxed">
@@ -685,7 +685,7 @@ export default function HomePageClient() {
               {tier.name}
             </h3>
             <p className={`text-base mb-4 relative z-10 ${tier.featured ? 'text-white/60' : 'text-sfm-navy/50'}`}>
-              Membership-Based Primary Care (DPC model)
+              Membership-Based Primary Care
             </p>
 
             <div className="mb-4 relative z-10">

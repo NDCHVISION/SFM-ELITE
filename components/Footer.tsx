@@ -226,7 +226,7 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Heart className="w-4 h-4 text-sfm-gold/60" />
-                  <span>Direct Primary Care Model</span>
+                  <span>Membership-Based Primary Care</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-sfm-gold/60" />

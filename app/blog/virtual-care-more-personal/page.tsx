@@ -172,7 +172,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-lg text-muted leading-relaxed mb-6">
-            In a <Link href="/compare" className="text-sfm-azure hover:text-sfm-navy underline underline-offset-2 transition-colors">traditional model</Link>, she probably would have waited. Taken ibuprofen. Hoped it passed. Maybe gone to urgent care if it got bad enough, where a provider with no context would have started from zero.
+            In a <Link href="/faq" className="text-sfm-azure hover:text-sfm-navy underline underline-offset-2 transition-colors">typical insurance-based model</Link>, she probably would have waited. Taken ibuprofen. Hoped it passed. Maybe gone to urgent care if it got bad enough, where a provider with no context would have started from zero.
           </p>
 
           <p className="text-lg text-muted leading-relaxed mb-6">

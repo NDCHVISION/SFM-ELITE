@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 
   /* SEO: Plain-language, no guarantees */
   description:
-    'Virtual primary care for adults and adolescents throughout Washington State. Telehealth visits, chronic care management, and preventive care through a membership-based direct primary care (DPC) model with concierge-style access. Join the founders waitlist.',
+    'Virtual primary care for adults and adolescents throughout Washington State. Telehealth visits, chronic care management, and preventive care through a membership-based model with concierge-style access. Join the founders waitlist.',
 
   /* SEO: De-duped + tightened (avoid keyword stuffing) */
   keywords: [
@@ -72,8 +72,6 @@ export const metadata: Metadata = {
     'telemedicine Washington',
     'online doctor Washington',
     'virtual family medicine',
-    'direct primary care Washington',
-    'DPC Washington',
     'membership-based primary care',
     'concierge-style primary care',
     'virtual doctor Seattle',
@@ -111,7 +109,7 @@ export const metadata: Metadata = {
     siteName: 'Sankofa Family Medicine',
     title: 'Virtual Primary Care in Washington State | Sankofa Family Medicine',
     description:
-      'Virtual primary care for adults and adolescents throughout Washington State through a direct primary care (DPC) model with concierge-style access. Join the founders waitlist.',
+      'Virtual primary care for adults and adolescents throughout Washington State through a membership-based model with concierge-style access. Join the founders waitlist.',
     images: [
       {
         url: '/images/og-image.png',
@@ -165,8 +163,8 @@ export const metadata: Metadata = {
     'ai-content-declaration':
       'This website represents Sankofa Family Medicine PLLC, a medical practice providing telehealth services in Washington State.',
     'ai-practice-summary':
-      'Virtual-first direct primary care (DPC) practice offering membership-based telehealth services for adults and adolescents (12+) throughout Washington State, with concierge-style access.',
-    'practice-type': 'Direct Primary Care (DPC), Telehealth, Concierge-Style Access',
+      'Virtual-first membership-based primary care practice offering telehealth services for adults and adolescents (12+) throughout Washington State, with concierge-style access.',
+    'practice-type': 'Membership-Based Primary Care, Telehealth, Concierge-Style Access',
     'service-area': 'Washington State, USA',
     'patient-age-range': '12 years and older',
     'healthcare-provider': 'true',
@@ -175,10 +173,9 @@ export const metadata: Metadata = {
     'telemedicine-platform': 'true',
     'accepting-new-patients': 'waitlist',
     'insurance-accepted': 'false',
-    'payment-model': 'Direct Primary Care Membership',
+    'payment-model': 'Membership-Based Primary Care',
     'geo.region': 'US-WA',
     'geo.placename': 'Washington State',
-    'wa-insurance-commissioner': 'Registered pursuant to RCW 48.150',
   },
 }
 
@@ -197,7 +194,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         '@id': 'https://sankofafamilymedicine.com/#website',
         url: 'https://sankofafamilymedicine.com',
         name: 'Sankofa Family Medicine',
-        description: 'Virtual, membership-based primary care delivered through a Direct Primary Care model',
+        description: 'Virtual, membership-based primary care practice',
         publisher: { '@id': 'https://sankofafamilymedicine.com/#organization' },
         inLanguage: 'en-US',
         potentialAction: {
@@ -219,7 +216,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         alternateName: ['SFM', 'Medicine That Remembers'],
         url: 'https://sankofafamilymedicine.com',
         description:
-          'Virtual, membership-based primary care practice delivered through a Direct Primary Care (DPC) model, emphasizing continuity, longitudinal care, and physician-led decision-making.',
+          'Virtual, membership-based primary care practice emphasizing continuity, longitudinal care, and physician-led decision-making.',
         slogan: 'Medicine That Remembers™',
         telephone: '+1-425-285-7390',
         email: 'info@sankofafamilymedicine.com',
@@ -240,8 +237,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           'https://schema.org/CommunityHealth'
         ],
         currenciesAccepted: 'USD',
-        paymentAccepted: 'Cash, Credit Card, HSA, FSA',
-        priceRange: '$225-$725',
+        paymentAccepted: 'Cash, Credit Card',
 
         // Waitlist open - not active clinical intake yet
         isAcceptingNewPatients: false,
@@ -283,38 +279,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {
               '@type': 'Offer',
               name: 'Continuity',
-              description: 'Essential virtual primary care with continuity and access (DPC model).',
-              priceCurrency: 'USD',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                priceCurrency: 'USD',
-                minPrice: '225',
-                maxPrice: '275',
-              },
+              description: 'Essential virtual primary care with continuity and access.',
             },
             {
               '@type': 'Offer',
               name: 'Precision',
-              description: 'Deeper preventive insight and advanced diagnostics when appropriate (DPC model).',
-              priceCurrency: 'USD',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                priceCurrency: 'USD',
-                minPrice: '325',
-                maxPrice: '375',
-              },
+              description: 'Deeper preventive insight and advanced diagnostics when appropriate.',
             },
             {
               '@type': 'Offer',
               name: 'Executive',
-              description: 'Enhanced access, coordination, and longitudinal oversight (DPC model).',
-              priceCurrency: 'USD',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                priceCurrency: 'USD',
-                minPrice: '650',
-                maxPrice: '725',
-              },
+              description: 'Enhanced access, coordination, and longitudinal oversight.',
             },
           ],
         },
@@ -364,18 +339,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'What is Direct Primary Care?',
+            name: 'What is membership-based primary care?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Direct Primary Care (DPC) is a membership-based model where patients pay a monthly fee directly to their physician for primary care services, without insurance billing for the membership.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'How much does membership cost?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Planned membership ranges are $225-$275/month (Continuity), $325-$375/month (Precision), and $650-$725/month (Executive). Founding members receive the lower end of each range. Your exact rate is confirmed before enrollment.',
+              text: 'Membership-based primary care is a model where patients pay a monthly fee directly to their physician for primary care services, without insurance billing for primary care visits.',
             },
           },
           {
