@@ -17,29 +17,42 @@ import {
   Users,
   ChevronDown,
   ChevronUp,
+  Dna,
+  Activity,
 } from 'lucide-react'
 
 /* =========================================================
 SERVICES PAGE CLIENT COMPONENT
-Version: 7.0 (No Pricing - Pre-launch)
+Version: 10.0 (Membership-Based Primary Care)
 =========================================================
 
-NO PRICING DISPLAYED - Pricing shared at enrollment
+POSITIONING: Membership-Based Primary Care
+- Relationship first, tools second
+- Clean, honest, legally sound
+- Scales to brick-and-mortar
+- No luxury baggage
 
-WA DOH / ADVERTISING SAFETY:
-✅ Emergency disclaimer - multiple locations
-✅ Not health insurance - multiple locations
-✅ WA State only - multiple locations
-✅ Waitlist/no relationship - multiple locations
-✅ No outcome guarantees
-✅ No superlatives
-✅ All access claims qualified
+ANCHOR TAGLINE: "One physician. One relationship. Built over time."
+
+DIFFERENTIATOR: Genetic health analysis included in every tier
+BRAND: Medicine That Remembers™
+
+WA DOH / ADVERTISING COMPLIANCE:
+- Emergency disclaimer: multiple locations
+- Not health insurance: multiple locations
+- WA State only: multiple locations
+- Waitlist/no relationship: multiple locations
+- No outcome guarantees
+- No superlatives
+- All access claims qualified
+- No em dashes
 
 ACCESSIBILITY (WCAG 2.2 AA+):
-✅ type="button" on all non-submit buttons
-✅ aria-expanded + aria-controls on FAQ
-✅ decorative icons aria-hidden
-✅ Focus states on interactive elements
+- type="button" on all non-submit buttons
+- aria-expanded + aria-controls on FAQ
+- decorative icons aria-hidden
+- Focus states on interactive elements
+- Skip link to main content
 ========================================================= */
 
 const FOUNDERS_COHORT_LIMIT = 30
@@ -50,18 +63,19 @@ const tiers = [
     name: 'Continuity',
     tagline: 'Your foundation for ongoing care',
     description:
-      'Membership-based primary care with unhurried visits and direct physician access. The relationship starts here.',
+      'Membership-based primary care with genetic health analysis, unhurried visits, and direct physician access. The relationship starts here.',
     features: [
-      { text: 'Virtual visits up to 45 minutes', included: true },
-      { text: 'Same-day or next-day scheduling when available', included: true },
+      { text: 'Genetic health analysis at enrollment', included: true, highlight: true },
+      { text: 'Virtual visits (40 minutes scheduled)', included: true },
       { text: 'Secure messaging during business hours', included: true },
+      { text: 'Response within 48 hours', included: true },
       { text: 'Chronic condition management', included: true },
-      { text: 'Preventive care guidance', included: true },
+      { text: 'Preventive care and wellness guidance', included: true },
       { text: 'Medication management', included: true },
       { text: 'Care coordination and referrals', included: true },
-      { text: 'Access to member lab pricing', included: true },
-      { text: 'Extended visits and deeper reviews', included: false },
-      { text: 'Genetic and precision health services', included: false },
+      { text: 'Access to wholesale laboratory pricing', included: true },
+      { text: 'Extended visits and included lab panels', included: false },
+      { text: 'After-hours access', included: false },
     ],
     popular: false,
   },
@@ -70,17 +84,19 @@ const tiers = [
     name: 'Precision',
     tagline: 'Deeper insight into your health',
     description:
-      'Everything in Continuity, plus advanced lab interpretation, cardiometabolic risk assessment, and discounted access to genetic health services.',
+      'Everything in Continuity, plus extended visits, advanced interpretation, and included laboratory coordination. Your genetics inform every clinical decision.',
     features: [
       { text: 'Everything in Continuity', included: true, highlight: true },
-      { text: 'Extended visits up to 60 minutes when appropriate', included: true },
-      { text: 'Advanced laboratory review and interpretation', included: true },
-      { text: 'Cardiometabolic and metabolic risk assessment', included: true },
-      { text: 'Discounted access to genetic health services', included: true },
-      { text: 'Pharmacogenomic guidance when applicable', included: true },
+      { text: 'Genetic health analysis at enrollment', included: true, highlight: true },
+      { text: 'Extended visits (50 minutes scheduled)', included: true },
+      { text: 'Response within 24 hours', included: true },
+      { text: 'Advanced laboratory interpretation', included: true },
+      { text: 'Cardiometabolic risk assessment', included: true },
+      { text: 'Pharmacogenomic guidance when appropriate', included: true },
+      { text: 'One comprehensive lab panel per year included', included: true },
       { text: 'Priority scheduling when available', included: true },
-      { text: 'Limited after-hours messaging for non-emergent concerns', included: true },
-      { text: 'Expanded access and coordination pathways', included: false },
+      { text: 'Limited after-hours messaging', included: true },
+      { text: 'Expanded access pathways', included: false },
     ],
     popular: true,
   },
@@ -89,15 +105,18 @@ const tiers = [
     name: 'Executive',
     tagline: 'The full picture, fully coordinated',
     description:
-      'Everything in Precision, plus the highest level of access, coordination, and comprehensive health planning for those who want more from their primary care relationship.',
+      'Everything in Precision, plus the highest level of access, coordination, and comprehensive health planning. For those who want more from their primary care relationship.',
     features: [
       { text: 'Everything in Precision', included: true, highlight: true },
-      { text: 'Extended visits up to 75 minutes when appropriate', included: true },
-      { text: 'Expanded access for time-sensitive, non-emergent needs', included: true },
-      { text: 'Care coordination outside business hours when needed', included: true },
-      { text: 'Enhanced coordination with specialists and facilities', included: true },
+      { text: 'Genetic health analysis at enrollment', included: true, highlight: true },
+      { text: 'Extended visits (60 minutes scheduled)', included: true },
+      { text: 'Response within same business day', included: true },
+      { text: 'Four comprehensive lab panels per year included', included: true },
+      { text: 'Expanded access for time-sensitive needs', included: true },
+      { text: 'Care coordination outside business hours', included: true },
+      { text: 'Enhanced specialist coordination', included: true },
       { text: 'Comprehensive annual health review', included: true },
-      { text: 'Long-term health planning and optimization', included: true },
+      { text: 'Long-term health planning', included: true },
       { text: 'Direct consultation prior to enrollment', included: true },
     ],
     popular: false,
@@ -106,19 +125,27 @@ const tiers = [
 
 const faqs = [
   {
-    q: 'What is Direct Primary Care?',
-    a: 'Direct Primary Care (DPC) is a membership model. You pay a monthly fee directly to your clinic for primary care, instead of the clinic billing your insurance for each visit.',
+    q: 'What is membership-based primary care?',
+    a: 'Membership-based primary care means you pay a monthly fee directly to your physician for primary care services. Instead of billing insurance for each visit, you have a direct relationship with one doctor who has time to know you. Visits are longer, access is simpler, and care is continuous.',
+  },
+  {
+    q: 'What is the genetic health analysis?',
+    a: 'Every member receives a comprehensive genetic health analysis at enrollment. This examines how your unique genetic profile may influence your health, medication responses, and disease predispositions. Your physician uses this information to guide clinical decisions throughout your care.',
+  },
+  {
+    q: 'How does genetic analysis improve my care?',
+    a: 'Your genetics are static, but how we apply that knowledge evolves with your health. When combined with your laboratory results and clinical history, genetic insights help identify risks earlier, optimize medication selection, and personalize prevention strategies.',
   },
   {
     q: 'Do I still need health insurance?',
-    a: 'Yes. DPC covers primary care only. Keep insurance for emergencies, hospital care, specialists, imaging, and prescriptions.',
+    a: 'Yes. Membership covers primary care services only. Keep insurance for emergencies, hospital care, specialists, imaging, and prescriptions.',
   },
   {
     q: 'Do I need to be in Washington State for visits?',
     a: 'Yes. You must be physically located in Washington State at the time of your telehealth visit.',
   },
   {
-    q: 'Is this service for emergencies or urgent care?',
+    q: 'Is this service for emergencies?',
     a: 'No. This practice does not provide emergency or urgent care services. For emergencies, call 911 or go to the nearest emergency room.',
   },
   {
@@ -127,15 +154,11 @@ const faqs = [
   },
   {
     q: 'How will I learn about pricing?',
-    a: 'Pricing will be available soon. You will see all terms and costs before any commitment is required. Monthly and annual billing options will be offered.',
+    a: 'Pricing will be published soon. You will receive complete terms and costs before any commitment is required. Monthly and annual billing options will be available.',
   },
   {
     q: 'What if I need a specialist?',
-    a: 'Your physician can help coordinate referrals when needed. Specialist care is separate and is provided by third-party clinics and hospitals.',
-  },
-  {
-    q: 'Is virtual care the right fit for me?',
-    a: 'Virtual care works well for many common primary care needs. Some concerns require an in-person exam or testing. If that happens, we will guide you to in-person care.',
+    a: 'Your physician coordinates referrals when clinically appropriate. Specialist care is separate and provided by third-party clinics and hospitals.',
   },
 ]
 
@@ -182,58 +205,87 @@ export default function ServicesPageClient() {
           <div className="max-w-3xl">
             <h1
               id="hero-heading"
-              className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4 leading-tight"
+              className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight"
             >
-              Direct Primary Care
+              Membership-Based
               <br />
-              <span className="text-sfm-gold">Membership</span>
+              <span className="text-sfm-gold">Primary Care</span>
             </h1>
 
-            <p className="text-white/90 text-lg md:text-xl font-medium mb-4">
-              Virtual primary care for Washington State. No insurance billing. Direct access to your
-              physician.
+            <p className="text-white/90 text-xl md:text-2xl font-medium mb-4 leading-relaxed">
+              One physician. One relationship. Built over time.
             </p>
 
             <p className="text-base text-white/70 leading-relaxed mb-8 max-w-2xl">
-              One doctor. One relationship. Built over time.
+              Virtual primary care for Washington State. Genetic health analysis included in every
+              membership. No insurance billing. Direct access to your physician.
             </p>
 
             <div className="flex flex-wrap gap-6 text-white/70">
               <div className="flex items-center gap-2">
+                <Users className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
+                <span className="text-sm">One physician, every visit</span>
+              </div>
+              <div className="flex items-center gap-2">
                 <Clock className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
-                <span className="text-sm">Scheduled appointments</span>
+                <span className="text-sm">40 to 60 minute visits</span>
               </div>
               <div className="flex items-center gap-2">
-                <MessageCircle className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
-                <span className="text-sm">Direct messaging</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
-                <span className="text-sm">Simple membership</span>
+                <Dna className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
+                <span className="text-sm">Genetic analysis included</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* The Relationship Section */}
+      <section
+        aria-labelledby="relationship-heading"
+        className="py-16 bg-white border-b border-gray-100"
+      >
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2
+            id="relationship-heading"
+            className="font-display text-3xl md:text-4xl text-sfm-navy mb-6"
+          >
+            Primary Care That Continues
+          </h2>
+          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+            Most primary care today is fragmented. You see whoever is available. Visits are rushed.
+            No one remembers your last conversation.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed mb-8">
+            Membership-based care is different. You have one physician who knows your history, your
+            goals, and your preferences. Visits are unhurried. The relationship deepens over time.
+          </p>
+          <p className="text-sfm-navy font-medium text-lg">
+            This is medicine that remembers.
+          </p>
+        </div>
+      </section>
+
       {/* What's Included */}
-      <section aria-labelledby="included-heading" className="py-12 bg-white border-b border-gray-100">
+      <section
+        aria-labelledby="included-heading"
+        className="py-12 bg-sfm-cream/30 border-b border-gray-100"
+      >
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-8">
+          <div className="text-center mb-10">
             <p className="text-sfm-azure text-sm tracking-[0.2em] uppercase font-medium mb-2">
               Every Membership Includes
             </p>
             <h2 id="included-heading" className="font-display text-2xl text-sfm-navy">
-              What You Get
+              The Foundation
             </h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { icon: Users, label: 'One Physician', desc: 'The same doctor, every visit' },
-              { icon: Clock, label: 'Real Appointments', desc: 'Time to talk, not rush' },
-              { icon: MessageCircle, label: 'Direct Messaging', desc: 'Reach your doctor directly' },
-              { icon: FileText, label: 'Clear Terms', desc: 'Know what you get' },
+              { icon: Clock, label: 'Unhurried Visits', desc: '40 to 60 minutes scheduled' },
+              { icon: Dna, label: 'Genetic Analysis', desc: 'Your DNA informs your care' },
+              { icon: MessageCircle, label: 'Direct Access', desc: 'Reach your physician directly' },
             ].map((item) => (
               <div key={item.label} className="text-center p-4">
                 <div className="w-12 h-12 mx-auto mb-3 bg-sfm-gold/10 rounded-xl flex items-center justify-center">
@@ -245,18 +297,85 @@ export default function ServicesPageClient() {
             ))}
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 mt-8 pt-8 border-t border-gray-100">
+          <div className="flex flex-wrap items-center justify-center gap-6 mt-8 pt-8 border-t border-gray-200">
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <Shield className="w-4 h-4 text-sfm-azure" aria-hidden="true" />
-              <span>Your health information is protected</span>
+              <span>HIPAA compliant</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <Check className="w-4 h-4 text-emerald-600" aria-hidden="true" />
-              <span>Receipts on request</span>
+              <span>Washington State telehealth</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <Heart className="w-4 h-4 text-sfm-gold" aria-hidden="true" />
-              <span>Cancel with 30 days notice</span>
+              <span>Relationship-centered</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Genetic Health Analysis */}
+      <section
+        aria-labelledby="genetics-heading"
+        className="py-16 bg-white border-b border-gray-100"
+      >
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-sfm-gold text-sm tracking-[0.2em] uppercase font-medium mb-3">
+                Included in Every Tier
+              </p>
+              <h2 id="genetics-heading" className="font-display text-3xl text-sfm-navy mb-4">
+                Genetic Health Analysis
+              </h2>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Your DNA holds insights that can shape your care for years to come. Every member
+                receives a comprehensive genetic health analysis at enrollment.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                This is not a consumer ancestry test. This is clinical-grade genetic analysis,
+                interpreted by your physician in the context of your complete health history.
+              </p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Your genetics help guide medication selection, identify risks before they become
+                problems, and personalize prevention strategies to your actual biology.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                {
+                  icon: Dna,
+                  label: 'Comprehensive Profile',
+                  desc: 'Analysis at enrollment',
+                },
+                {
+                  icon: Activity,
+                  label: 'Ongoing Integration',
+                  desc: 'Informs every visit',
+                },
+                {
+                  icon: Shield,
+                  label: 'Medication Guidance',
+                  desc: 'Pharmacogenomic insights',
+                },
+                {
+                  icon: Heart,
+                  label: 'Risk Assessment',
+                  desc: 'Personalized prevention',
+                },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="bg-sfm-cream/50 p-5 rounded-xl border border-gray-100"
+                >
+                  <div className="w-10 h-10 mb-3 bg-sfm-gold/10 rounded-lg flex items-center justify-center">
+                    <item.icon className="w-5 h-5 text-sfm-gold" aria-hidden="true" />
+                  </div>
+                  <p className="font-semibold text-sfm-navy text-sm">{item.label}</p>
+                  <p className="text-xs text-gray-600 mt-1">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -269,15 +388,16 @@ export default function ServicesPageClient() {
         className="section-padding bg-white relative"
       >
         <div className="relative max-w-7xl mx-auto px-6">
-          <div className="text-center mb-6">
+          <div className="text-center mb-10">
             <p className="text-sfm-gold text-sm tracking-[0.3em] uppercase mb-2 font-medium">
               Choose Your Level
             </p>
-            <h2 id="tiers-heading" className="font-display text-4xl text-sfm-navy mb-2">
+            <h2 id="tiers-heading" className="font-display text-4xl text-sfm-navy mb-3">
               Membership Tiers
             </h2>
-            <p className="text-sfm-navy/70 text-base max-w-xl mx-auto">
-              Three levels of access. All include a dedicated physician relationship.
+            <p className="text-sfm-navy/70 text-base max-w-2xl mx-auto">
+              Three levels of access. All include genetic health analysis and a dedicated physician
+              relationship. Choose the level that fits your needs.
             </p>
           </div>
 
@@ -296,7 +416,7 @@ export default function ServicesPageClient() {
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                     <div className="px-3 py-1 bg-sfm-gold text-sfm-navy text-xs font-bold rounded-full shadow-lg flex items-center gap-1">
                       <Star className="w-3 h-3" aria-hidden="true" />
-                      MOST SELECTED
+                      RECOMMENDED
                     </div>
                   </div>
                 )}
@@ -316,7 +436,11 @@ export default function ServicesPageClient() {
                   </div>
 
                   {/* Pricing placeholder */}
-                  <div className="mb-4 pb-4 border-b border-gray-100">
+                  <div
+                    className={`mb-4 pb-4 border-b ${
+                      tier.popular ? 'border-white/20' : 'border-gray-100'
+                    }`}
+                  >
                     <p
                       className={`text-sm font-medium ${
                         tier.popular ? 'text-white/80' : 'text-sfm-navy/80'
@@ -398,7 +522,7 @@ export default function ServicesPageClient() {
                       tier.popular ? 'text-white/50' : 'text-gray-500'
                     }`}
                   >
-                    No payment today. We will contact you if space opens.
+                    No payment today. We will contact you when space opens.
                   </p>
                 </div>
               </div>
@@ -411,8 +535,22 @@ export default function ServicesPageClient() {
             </p>
           </div>
 
-          {/* Important Notice Box - After Cards */}
-          <div className="max-w-3xl mx-auto mt-10 pt-8 border-t border-sfm-navy/10">
+          {/* Founders Cohort Notice */}
+          <div className="max-w-2xl mx-auto mt-10 pt-8 border-t border-sfm-navy/10">
+            <div className="bg-gradient-to-r from-sfm-gold/10 to-sfm-gold/5 border border-sfm-gold/20 rounded-2xl px-6 py-5 text-center">
+              <p className="text-sfm-navy font-semibold mb-2">Founders Cohort</p>
+              <p className="text-sm text-sfm-navy/70 leading-relaxed mb-3">
+                The first {FOUNDERS_COHORT_LIMIT} members receive founding member benefits. Limited
+                availability. No payment required to join the waitlist.
+              </p>
+              <p className="text-xs text-sfm-navy/50">
+                Clinical care begins early 2026
+              </p>
+            </div>
+          </div>
+
+          {/* Important Notice Box */}
+          <div className="max-w-3xl mx-auto mt-6">
             <div className="bg-sfm-cream/50 border border-sfm-navy/10 rounded-2xl px-5 py-4 text-sm text-sfm-navy/80 leading-relaxed">
               <p className="mb-2">
                 <strong className="text-sfm-navy">This is not health insurance.</strong> Keep
@@ -432,26 +570,6 @@ export default function ServicesPageClient() {
               </p>
             </div>
           </div>
-
-          {/* Pricing Notice */}
-          <div className="max-w-2xl mx-auto mt-6">
-            <div className="bg-sfm-cream border border-sfm-navy/10 rounded-xl px-6 py-4 text-center">
-              <p className="text-sm text-sfm-navy font-medium mb-1">Pricing Coming Soon</p>
-              <p className="text-sm text-sfm-navy/70 leading-relaxed">
-                You will receive complete pricing and terms before any commitment.
-                Monthly and annual billing options will be available.
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center mt-4 pt-4 border-t border-sfm-navy/5">
-            <div className="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-sfm-navy/45">
-              <span className="w-1 h-1 bg-sfm-gold/50 rounded-full" aria-hidden="true" />
-              <span>Founders waitlist: limited to {FOUNDERS_COHORT_LIMIT} members</span>
-              <span className="text-sfm-navy/25">·</span>
-              <span>Clinical care begins early 2026</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -460,23 +578,25 @@ export default function ServicesPageClient() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2
-                id="why-heading"
-                className="font-display text-3xl text-white mb-6"
-              >
+              <h2 id="why-heading" className="font-display text-3xl text-white mb-6">
                 Why Membership Works
               </h2>
               <p className="text-white/70 mb-8 leading-relaxed">
-                Traditional healthcare fragments your care across rotating providers. Membership
-                means one physician who knows your history, your goals, and your preferences.
+                Traditional primary care is broken. Physicians see 20 to 30 patients per day. Visits
+                last 7 minutes. No one has time to think deeply about your health.
+              </p>
+              <p className="text-white/70 mb-8 leading-relaxed">
+                Membership changes the economics. Your physician has fewer patients and more time.
+                The relationship can actually develop. Care can actually continue.
               </p>
               <ul className="space-y-4">
                 {[
-                  'Primary care visits without per-visit fees',
-                  'Access to lower-cost lab pricing options',
-                  'Secure messaging based on tier and availability',
-                  'Transparent terms with no hidden costs',
-                  'One physician who knows your history over time',
+                  'Genetic health analysis included at enrollment',
+                  'Visits of 40 to 60 minutes, not 7',
+                  'One physician who knows your complete history',
+                  'Your genetics inform clinical decisions',
+                  'Wholesale laboratory pricing access',
+                  'Transparent terms, no hidden costs',
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-white text-sm">
                     <span className="w-5 h-5 rounded-full bg-sfm-gold/20 flex items-center justify-center flex-shrink-0">
@@ -489,25 +609,20 @@ export default function ServicesPageClient() {
             </div>
 
             <div className="bg-white/5 backdrop-blur rounded-3xl p-8 border border-white/10">
-              <h3 className="font-display text-xl text-white mb-4">
-                What Members Say They Value
+              <h3 className="font-display text-xl text-white mb-6">
+                Medicine That Remembers
               </h3>
-              <ul className="space-y-4 text-white/80 text-sm">
-                <li className="flex items-start gap-3">
-                  <span className="text-sfm-gold">"</span>
-                  <span>Finally, a doctor who remembers my last conversation.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-sfm-gold">"</span>
-                  <span>I message instead of waiting on hold for callbacks.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-sfm-gold">"</span>
-                  <span>Visits feel unhurried. Questions actually get answered.</span>
-                </li>
-              </ul>
-              <p className="text-white/40 text-xs mt-6 italic">
-                Composite quotes reflecting common member feedback in DPC practices.
+              <p className="text-white/70 text-sm leading-relaxed mb-6">
+                The name Sankofa comes from the Akan people of West Africa. It means "go back and
+                retrieve what matters."
+              </p>
+              <p className="text-white/70 text-sm leading-relaxed mb-6">
+                In medicine, what matters is continuity. Knowing what happened before. Remembering
+                what worked and what didn't. Building on previous conversations instead of starting
+                over every time.
+              </p>
+              <p className="text-white/60 text-sm italic">
+                This is primary care that remembers. Your history. Your goals. Your biology.
               </p>
             </div>
           </div>
@@ -625,8 +740,13 @@ export default function ServicesPageClient() {
                 <span className="text-sfm-gold text-xl align-top">™</span>
               </h2>
 
-              <p className="text-white/80 text-lg mb-10 max-w-2xl">
-                Clinical care begins 2026. No payment required today.
+              <p className="text-white/80 text-lg mb-6 max-w-2xl">
+                One physician. One relationship. Built over time.
+              </p>
+
+              <p className="text-white/60 text-base mb-10 max-w-2xl">
+                Membership-based primary care with genetic health analysis. Clinical care begins
+                2026. No payment required to join the waitlist.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4">
@@ -676,6 +796,13 @@ export default function ServicesPageClient() {
             </p>
 
             <p>
+              <strong className="text-sfm-navy">Genetic Analysis:</strong> Genetic health analysis
+              provides information that may be useful for clinical decision-making but does not
+              diagnose disease or predict outcomes. Results are interpreted by your physician in the
+              context of your complete health history.
+            </p>
+
+            <p>
               <strong className="text-sfm-navy">Pricing:</strong> Pricing will be published soon.
               Your fee is confirmed before you commit. Pricing is set by the Practice.
             </p>
@@ -697,14 +824,8 @@ export default function ServicesPageClient() {
             </p>
 
             <p>
-              <strong className="text-sfm-navy">Labs:</strong> Members may access lower-cost lab
-              options. Prices vary by test and lab. You pay the lab directly.
-            </p>
-
-            <p>
-              <strong className="text-sfm-navy">Controlled Substances:</strong> The Practice decides
-              when to prescribe controlled substances. These are rarely prescribed via telehealth
-              for chronic pain.
+              <strong className="text-sfm-navy">Labs:</strong> Members may access wholesale lab
+              pricing. Prices vary by test and lab. Higher tiers include coordinated lab panels.
             </p>
 
             <p>
@@ -732,3 +853,4 @@ export default function ServicesPageClient() {
     </>
   )
 }
+
