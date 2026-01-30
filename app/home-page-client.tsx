@@ -615,9 +615,11 @@ export default function HomePageClient() {
             href="/membership-terms#founding-member-program"
             className="underline underline-offset-4 hover:text-sfm-azure transition-colors duration-300 motion-reduce:transition-none"
           >
-            Founding members
+            Founding Members
           </Link>{' '}
-          receive special benefits. Your exact rate is confirmed before enrollment.
+          may receive early enrollment consideration.
+          <br />
+          Final pricing and membership terms are confirmed prior to enrollment.
         </p>
       </div>
     </ScrollReveal>
@@ -627,13 +629,13 @@ export default function HomePageClient() {
       {[
         {
           name: 'Continuity',
-          description: 'Essential virtual primary care designed to restore the continuity traditional medicine has lost.',
+          description: 'Essential virtual concierge primary care designed to restore the continuity traditional medicine has lost. Care emphasizes understanding your history over time and may include routine laboratory review when clinically appropriate.',
           featured: false,
           anchor: 'continuity',
         },
         {
           name: 'Precision',
-          description: 'Everything in Continuity plus deeper preventive insight and advanced diagnostics when appropriate.',
+          description: 'Includes all Continuity services, with deeper preventive insight and advanced diagnostics when appropriate. Care may incorporate relevant laboratory testing and, for some patients, genetic information to support long-term care planning when guided by clinical judgment.',
           featured: true,
           anchor: 'precision',
         },
@@ -662,7 +664,7 @@ export default function HomePageClient() {
                 </div>
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
                   <span className="px-4 py-1.5 bg-sfm-gold text-sfm-navy text-base font-semibold rounded-full">
-                    Most Popular
+                    Featured
                   </span>
                 </div>
               </>
