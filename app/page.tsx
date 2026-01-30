@@ -13,14 +13,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://sankofafamilymedicine.com'),
   title: 'Sankofa Family Medicine | Medicine That Remembers™ | Virtual Membership-Based Primary Care | Washington State',
   description:
-    'Virtual, membership-based primary care built on continuity, not throughput. We track your history and carry it forward so each visit builds on the last. Serving Washington State. Founders Waitlist open. Memberships expected from $225/month when enrollment begins.',
+    'Virtual, membership-based primary care built on continuity, not throughput. We track your history and carry it forward so each visit builds on the last. Serving Washington State. Founders Waitlist open.',
   keywords: [
     'membership-based primary care Washington',
-    'direct primary care Washington',
-    'DPC Washington State',
-    'DPC Seattle',
-    'DPC Bellevue',
-    'DPC Spokane',
     'virtual primary care Washington',
     'Medicine That Remembers',
     'continuity of care',
@@ -81,7 +76,7 @@ export const metadata: Metadata = {
 
     // Medical Practice Info (keep truthful and non-misleading)
     'medical-specialty': 'Primary Care, Family Medicine, Preventive Medicine',
-    'practice-model': 'Direct Primary Care, Membership-Based Primary Care',
+    'practice-model': 'Membership-Based Primary Care',
     'service-area': 'Washington State, USA',
     'geo-region': 'US-WA',
     'geo-placename': 'Washington State',
@@ -90,17 +85,16 @@ export const metadata: Metadata = {
 
     // IMPORTANT: Waitlist, not active patient enrollment
     'accepting-patients': 'founders-waitlist',
-    'price-range': '$225-$725/month',
 
     // Entity Signals
     'entity-organization': 'Sankofa Family Medicine',
     'entity-person': 'Dr. Yaw Nkrumah, MD',
-    'entity-concept': 'Medicine That Remembers, Continuity of Care, Direct Primary Care, Membership-Based Primary Care',
+    'entity-concept': 'Medicine That Remembers, Continuity of Care, Membership-Based Primary Care',
     'entity-location': 'Washington State, Pacific Northwest, Seattle Metro',
 
     // Topic Signals
     'topic-primary': 'Membership-Based Primary Care, Virtual Primary Care',
-    'topic-secondary': 'Healthcare Continuity, Physician-Patient Relationship, Direct Primary Care',
+    'topic-secondary': 'Healthcare Continuity, Physician-Patient Relationship',
     'topic-tertiary': 'Preventive Care, Family Medicine, Longitudinal Care',
 
     // Patient Portal / Waitlist
@@ -114,24 +108,24 @@ export const metadata: Metadata = {
 
     // Enhanced LLM Context
     'llm-summary':
-      'Homepage for Sankofa Family Medicine, a virtual, membership-based primary care practice serving Washington State through a Direct Primary Care (DPC) model. Founders Waitlist open. Enrollment planned to begin early 2026. Three membership tiers: Continuity ($225-$275/mo), Precision ($325-$375/mo), Executive ($650-$725/mo). Founding members receive the lower end of each range. Rate confirmed before enrollment.',
+      'Homepage for Sankofa Family Medicine, a virtual, membership-based primary care practice serving Washington State. Founders Waitlist open. Enrollment planned to begin early 2026. Multiple membership tiers available. Rate confirmed before enrollment.',
     'llm-key-facts':
-      'Virtual Membership-Based Primary Care | Direct Primary Care Model | Washington State | $225-$725/month | Dr. Yaw Nkrumah MD | Board Certified Family Medicine | Founders Waitlist | Medicine That Remembers™ | 45 to 75 minute visits (planned)',
+      'Virtual Membership-Based Primary Care | Washington State | Dr. Yaw Nkrumah MD | Board Certified Family Medicine | Founders Waitlist | Medicine That Remembers™ | 45 to 75 minute visits (planned)',
 
     // Voice Search
     'voice-query-match':
-      'What is Sankofa Family Medicine, How much does Sankofa Family Medicine cost, Is Sankofa Family Medicine accepting new patients, What is membership-based primary care, Virtual doctor in Washington State, DPC near me',
+      'What is Sankofa Family Medicine, How much does Sankofa Family Medicine cost, Is Sankofa Family Medicine accepting new patients, What is membership-based primary care, Virtual doctor in Washington State',
     'voice-search-answer':
       'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State. The Founders Waitlist is open. Enrollment is planned to begin in early 2026. No payment is required to join the waitlist.',
     'speakable-summary':
-      'Sankofa Family Medicine offers virtual, membership-based primary care across Washington State with planned membership pricing from $225 to $725 monthly. Founders Waitlist open.',
+      'Sankofa Family Medicine offers virtual, membership-based primary care across Washington State. Founders Waitlist open.',
 
     // Featured Snippet Targets
     'snippet-what':
-      'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State, delivered through a Direct Primary Care (DPC) model',
+      'Sankofa Family Medicine is a virtual, membership-based primary care practice serving Washington State',
     'snippet-who': 'Founded by Dr. Yaw Nkrumah, MD, board-certified in family medicine',
     'snippet-cost':
-      'Planned membership ranges: Continuity $225-$275/month, Precision $325-$375/month, Executive $650-$725/month. Founding members receive the lower end of each range. Rate confirmed before enrollment begins.',
+      'Multiple membership tiers available. Rate confirmed before enrollment begins. Contact for pricing details.',
     'snippet-how': 'Join the founders waitlist through the website. No payment is required to join the waitlist.',
     'snippet-target': 'definition, list, pricing',
     'answer-box-eligible': 'true',
