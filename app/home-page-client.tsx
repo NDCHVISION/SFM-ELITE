@@ -459,7 +459,7 @@ export default function HomePageClient() {
                   </h3>
                   <ul className="space-y-4">
                     {[
-                      'Visits are planned for 45 to 75 minute.',
+                      'Visits are planned for 45 to 75 minutes.',
                       'Urgent visits may be same-day or next-business-day, when available.',
                       'Intentionally limited panel size to protect time and access.',
                       'The same doctor every time, not a rotating team.',
