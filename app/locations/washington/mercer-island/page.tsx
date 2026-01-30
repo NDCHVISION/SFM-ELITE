@@ -76,7 +76,7 @@ export default function MercerIslandPage() {
     {
       icon: Shield,
       title: 'Transparent Terms',
-      description: 'Clear monthly membership. No surprise bills. HSA and FSA accepted.'
+      description: 'Clear monthly membership. No surprise bills.'
     },
   ]
 

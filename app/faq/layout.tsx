@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     'precision medicine FAQ',
     'Sankofa Family Medicine',
     'Medicine That Remembers',
-    'HSA FSA eligible healthcare',
     'concierge medicine questions',
   ],
   openGraph: {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
 
 INSURANCE & PAYMENT:
 - Does NOT accept insurance directly (direct-pay/cash-pay model)
-- Accepts credit cards, debit cards, HSA, and FSA
+- Accepts credit cards and debit cards
 - Can provide superbills for out-of-network reimbursement
 - Memberships can be cancelled with 30 days notice, no cancellation fees
 

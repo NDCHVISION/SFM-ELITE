@@ -457,10 +457,6 @@ export default function AboutPage() {
                     Sankofa Family Medicine was designed for continuity. One physician who knows your history - visit after visit - so medical decisions build instead of reset. Learn more about our{' '}
                     <Link href="/services" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
                       telehealth primary care services
-                    </Link>{' '}
-                    or explore{' '}
-                    <Link href="/compare" className="text-sfm-azure hover:text-sfm-gold transition-colors underline underline-offset-2">
-                      how Direct Primary Care (DPC) differs
                     </Link>.
                   </p>
                 </div>
@@ -813,7 +809,7 @@ export default function AboutPage() {
                   className="w-4 h-4 text-sfm-gold"
                   aria-hidden="true"
                 />
-                HSA/FSA Accepted
+                HIPAA Compliant
               </span>
               <span className="flex items-center gap-2">
                 <CheckCircle2

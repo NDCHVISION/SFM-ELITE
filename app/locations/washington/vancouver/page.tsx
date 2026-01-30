@@ -82,7 +82,7 @@ export default function VancouverPage() {
     {
       icon: Shield,
       title: 'Transparent Pricing',
-      description: 'Monthly membership, no surprise bills. HSA and FSA accepted.'
+      description: 'Monthly membership, no surprise bills.'
     },
   ]
 

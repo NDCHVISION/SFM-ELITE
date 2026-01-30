@@ -240,8 +240,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           'https://schema.org/CommunityHealth'
         ],
         currenciesAccepted: 'USD',
-        paymentAccepted: 'Cash, Credit Card, HSA, FSA',
-        priceRange: '$225-$725',
+        paymentAccepted: 'Cash, Credit Card',
 
         // Waitlist open - not active clinical intake yet
         isAcceptingNewPatients: false,
@@ -283,38 +282,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {
               '@type': 'Offer',
               name: 'Continuity',
-              description: 'Essential virtual primary care with continuity and access (DPC model).',
-              priceCurrency: 'USD',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                priceCurrency: 'USD',
-                minPrice: '225',
-                maxPrice: '275',
-              },
+              description: 'Essential virtual primary care with continuity and access.',
             },
             {
               '@type': 'Offer',
               name: 'Precision',
-              description: 'Deeper preventive insight and advanced diagnostics when appropriate (DPC model).',
-              priceCurrency: 'USD',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                priceCurrency: 'USD',
-                minPrice: '325',
-                maxPrice: '375',
-              },
+              description: 'Deeper preventive insight and advanced diagnostics when appropriate.',
             },
             {
               '@type': 'Offer',
               name: 'Executive',
-              description: 'Enhanced access, coordination, and longitudinal oversight (DPC model).',
-              priceCurrency: 'USD',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                priceCurrency: 'USD',
-                minPrice: '650',
-                maxPrice: '725',
-              },
+              description: 'Enhanced access, coordination, and longitudinal oversight.',
             },
           ],
         },

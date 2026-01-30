@@ -477,16 +477,6 @@ export default function HomePageClient() {
               <p className="text-center text-base text-sfm-navy/60 mt-8">
                 *Typical features of many insurance-based primary care clinics. Individual experiences may differ.
               </p>
-
-              <div className="text-center mt-6">
-                <Link
-                  href="/compare"
-                  className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors motion-reduce:transition-none font-medium text-lg focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded"
-                >
-                  See the full comparison
-                  <ArrowRight className="w-5 h-5" aria-hidden="true" />
-                </Link>
-              </div>
             </div>
           </ScrollReveal>
         </div>
