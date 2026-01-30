@@ -1,6 +1,6 @@
 /* =========================================================
 SERVICES LAYOUT - Simple Passthrough
-Version: 11.0
+Version: 12.0
 ========================================================= */
 
 export default function ServicesLayout({
