@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'membership primary care questions',
   ],
   openGraph: {
-    title: 'FAQ | Sankofa Family Medicine | Virtual Direct Primary Care',
+    title: 'FAQ | Sankofa Family Medicine | Virtual Membership-Based Primary Care',
     description:
       'Everything you need to know about Sankofa Family Medicine, a virtual-first concierge medicine practice serving patients across Washington State.',
     url: 'https://sankofafamilymedicine.com/faq',

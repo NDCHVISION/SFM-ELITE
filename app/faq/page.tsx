@@ -68,12 +68,12 @@ export default function FAQPage() {
           answer: (
             <div className="space-y-3">
               <p><strong>Monthly Memberships:</strong></p>
-              <p>Monthly memberships may be cancelled with 30 days written notice to info@sankofafamilymedicine.com. Cancellation becomes effective at the end of your current billing period. Details regarding cancellation policies and any applicable fees are provided in your membership agreement.</p>
+              <p>Monthly memberships may be cancelled with 30 days written notice to info@sankofafamilymedicine.com. Cancellation becomes effective at the end of your current billing period.</p>
               <p><strong>Annual Memberships:</strong></p>
               <p>Cancel with 30 days written notice. You will receive a pro-rata refund for unused full months minus a $100 administrative fee. No refund is provided for any month in which services were rendered or available.</p>
               <p><strong>Founding Member Pricing:</strong></p>
               <p>Founding member pricing is locked for the duration of continuous membership. If you cancel and re-enroll later, founding member pricing does not apply; you will be charged current standard rates.</p>
-              <p><strong>Important:</strong> Membership fees are non-refundable for any month in which you accessed services or services were available to you, even if you did not use them.</p>
+              <p><strong>Important:</strong> Membership fees are non-refundable for any month in which you accessed services or services were available to you, even if you did not use them. Full cancellation terms and any applicable fees are disclosed prior to enrollment.</p>
             </div>
           )
         },
@@ -182,8 +182,7 @@ export default function FAQPage() {
           question: 'Is there a minimum commitment?',
           answer: (
             <div className="space-y-3">
-              <p>Memberships involve minimum commitment terms that are disclosed prior to enrollment. You may request cancellation with 30 days written notice, subject to the terms of your membership agreement.</p>
-              <p>We believe you should stay because the care is excellent, not because you are locked into a contract. Please note:</p>
+              <p>Membership terms, including any minimum commitment requirements, are disclosed prior to enrollment. Please note:</p>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Cancellation requires 30 days written notice</li>
                 <li>Membership fees are billed on the 1st of each month via automatic recurring payment</li>
@@ -191,7 +190,7 @@ export default function FAQPage() {
                 <li>No refunds are provided for partial months</li>
               </ul>
               <p><strong>Annual Prepayment Option:</strong></p>
-              <p>If you choose to prepay annually to receive a 10% discount, you may still cancel with 30 days notice and receive a pro-rata refund for unused full months minus a $100 administrative fee.</p>
+              <p>If you choose to prepay annually, you may still cancel with 30 days notice and receive a pro-rata refund for unused full months minus a $100 administrative fee.</p>
             </div>
           )
         },
@@ -230,7 +229,7 @@ export default function FAQPage() {
         },
         {
           question: 'How quickly can I get an appointment?',
-          answer: 'Appointment availability varies. We aim to provide access within a reasonable timeframe for acute needs. Routine appointments are typically available within a few days. Response times and scheduling are subject to practice capacity and clinical appropriateness.'
+          answer: 'Appointment availability varies based on practice capacity. For acute needs, we aim to respond within 24-48 hours when possible. Routine appointments are typically available within a few days. Response times and scheduling are subject to clinical appropriateness.'
         },
         {
           question: 'Do I need to leave my current doctor?',
