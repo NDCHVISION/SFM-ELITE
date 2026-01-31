@@ -79,9 +79,9 @@ export default function HomePageClient() {
               <div className="order-2 lg:order-1">
                 <div className="opacity-0 animate-fade-in animation-delay-100 mb-10">
                   <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full">
-                    <span className="text-white/80 text-base font-medium">Virtual Concierge Precision Medicine</span>
+                    <span className="text-white/80 text-base font-medium">Virtual-Only, Physician-Led Primary Care</span>
                     <span className="w-px h-4 bg-white/20 hidden sm:block" aria-hidden="true" />
-                    <span className="text-white/60 text-base hidden sm:block">Washington State</span>
+                    <span className="text-white/60 text-base hidden sm:block">Spokane, Washington</span>
                   </div>
                 </div>
 

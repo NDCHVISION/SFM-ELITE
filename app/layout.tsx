@@ -165,9 +165,10 @@ export const metadata: Metadata = {
     'ai-content-declaration':
       'This website represents Sankofa Family Medicine PLLC, a medical practice providing telehealth services in Washington State.',
     'ai-practice-summary':
-      'Virtual-only, physician-led, membership-based primary care practice, concierge in structure and precision-informed in approach, offering telehealth services for adults and adolescents (12+) throughout Washington State.',
+      'Virtual-only, physician-led, membership-based primary care practice, concierge in structure and precision-informed in approach, founded in 2025, operating from Spokane, Washington and serving patients statewide in Washington through telehealth.',
     'practice-type': 'Membership-Based Primary Care, Concierge in Structure, Precision-Informed, Telehealth',
     'service-area': 'Washington State, USA',
+    'operations-anchor': 'Spokane, Washington',
     'patient-age-range': '12 years and older',
     'healthcare-provider': 'true',
     'hipaa-aligned': 'true',
@@ -177,7 +178,7 @@ export const metadata: Metadata = {
     'insurance-accepted': 'false',
     'payment-model': 'Self-Pay Membership',
     'geo.region': 'US-WA',
-    'geo.placename': 'Washington State',
+    'geo.placename': 'Spokane, Washington State',
     'wa-insurance-commissioner': 'Registered pursuant to RCW 48.150',
   },
 }
@@ -219,7 +220,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         alternateName: ['SFM', 'Medicine That Remembers'],
         url: 'https://sankofafamilymedicine.com',
         description:
-          'Virtual-only, physician-led, membership-based primary care practice, concierge in structure and precision-informed in approach, emphasizing continuity, longitudinal care, and physician-led decision-making.',
+          'Virtual-only, physician-led, membership-based primary care practice, concierge in structure and precision-informed in approach, founded in 2025, operating from Spokane, Washington and serving patients statewide in Washington through telehealth.',
         slogan: 'Medicine That Remembers™',
         telephone: '+1-425-285-7390',
         email: 'info@sankofafamilymedicine.com',
@@ -230,6 +231,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           height: 512,
         },
         image: 'https://sankofafamilymedicine.com/images/og-image.png',
+        location: {
+          '@type': 'Place',
+          name: 'Spokane, Washington',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Spokane',
+            addressRegion: 'WA',
+            addressCountry: 'US',
+          },
+        },
         areaServed: {
           '@type': 'State',
           name: 'Washington',

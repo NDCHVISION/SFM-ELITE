@@ -185,17 +185,17 @@ export default function ServicesPageClient() {
               id="hero-heading"
               className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight"
             >
-              Virtual Concierge Precision Medicine
+              Virtual-Only, Physician-Led
               <br />
               <span className="text-sfm-gold">Primary Care</span>
             </h1>
 
             <p className="text-white/90 text-xl md:text-2xl font-medium mb-4 leading-relaxed">
-              Care built on continuity, precision, and informed medical judgment.
+              Membership-based primary care, concierge in structure, precision-informed in approach.
             </p>
 
             <p className="text-base text-white/70 leading-relaxed mb-8 max-w-2xl">
-              Serving patients across Washington State through a limited membership model.
+              Operating from Spokane, Washington and serving patients statewide through telehealth.
             </p>
 
             <p className="text-sm text-white/50 leading-relaxed">
