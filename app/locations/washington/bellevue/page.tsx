@@ -4,7 +4,7 @@ import { ArrowRight, MapPin, Clock, MessageCircle, Shield, Video, Building2 } fr
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Bellevue | Sankofa Family Medicine',
-  description: 'Bellevue residents and tech professionals: access premium virtual primary care that fits your schedule. Same-day appointments, direct physician access, transparent pricing.',
+  description: 'Bellevue residents and tech professionals: access premium virtual primary care that fits your schedule. Enhanced appointment availability, direct physician access, transparent pricing.',
   keywords: [
     'Bellevue virtual doctor',
     'Bellevue telemedicine',
@@ -71,7 +71,7 @@ export default function BellevuePage() {
     {
       icon: Clock,
       title: 'Responsive Care',
-      description: 'Same-day appointments. Direct messaging with 24 to 48 hour response times.'
+      description: 'Enhanced appointment availability. Direct messaging with 24 to 48 hour response times.'
     },
     {
       icon: MessageCircle,

@@ -4,7 +4,7 @@ import { ArrowRight, Clock, MessageCircle, Shield, Landmark, Users } from 'lucid
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Olympia | Sankofa Family Medicine',
-  description: 'Olympia residents: premium virtual primary care with direct physician access. Same-day appointments, transparent pricing. Serving Olympia, Lacey, Tumwater, and Thurston County.',
+  description: 'Olympia residents: premium virtual primary care with direct physician access. Enhanced appointment availability, transparent pricing. Serving Olympia, Lacey, Tumwater, and Thurston County.',
   keywords: [
     'Olympia virtual doctor',
     'Olympia telemedicine',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'geo.placename': 'Olympia',
     'geo.position': '47.0379;-122.9007',
     'ICBM': '47.0379, -122.9007',
-    'llm-context': 'Sankofa Family Medicine serves Olympia, Washington - the state capital. Virtual-first direct primary care for state employees, professionals, and families in downtown Olympia, Lacey, Tumwater, and Thurston County.',
+    'llm-context': 'Sankofa Family Medicine serves Olympia, Washington - the state capital. Virtual concierge primary care for state employees, professionals, and families in downtown Olympia, Lacey, Tumwater, and Thurston County.',
   },
 }
 
@@ -71,7 +71,7 @@ export default function OlympiaPage() {
     },
     {
       icon: Clock,
-      title: 'Same-Day Access',
+      title: 'Enhanced Availability',
       description: 'Virtual appointments when you need them. No bureaucratic waits.'
     },
     {

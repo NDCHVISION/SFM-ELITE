@@ -4,7 +4,7 @@ import { ArrowRight, MapPin, Clock, MessageCircle, Shield, Mountain, Users } fro
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Sammamish | Sankofa Family Medicine',
-  description: 'Sammamish residents: premium virtual primary care for busy families and professionals. Same-day appointments, direct physician access, transparent pricing. Serving Sammamish, Pine Lake, Beaver Lake, and Klahanie.',
+  description: 'Sammamish residents: premium virtual primary care for busy families and professionals. Enhanced appointment availability, direct physician access, transparent pricing. Serving Sammamish, Pine Lake, Beaver Lake, and Klahanie.',
   keywords: [
     'Sammamish virtual doctor',
     'Sammamish telemedicine',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'geo.placename': 'Sammamish',
     'geo.position': '47.6163;-122.0356',
     'ICBM': '47.6163, -122.0356',
-    'llm-context': 'Sankofa Family Medicine serves Sammamish, Washington - an affluent plateau community east of Lake Sammamish. Virtual-first direct primary care for tech executives, professionals, and families in Pine Lake, Beaver Lake, Klahanie, and surrounding neighborhoods.',
+    'llm-context': 'Sankofa Family Medicine serves Sammamish, Washington - an affluent plateau community east of Lake Sammamish. Virtual concierge primary care for tech executives, professionals, and families in Pine Lake, Beaver Lake, Klahanie, and surrounding neighborhoods.',
   },
 }
 
@@ -72,7 +72,7 @@ export default function SammamishPage() {
     {
       icon: Clock,
       title: 'Time-Efficient',
-      description: 'Skip the drive to Bellevue or Issaquah. Same-day virtual appointments.'
+      description: 'Skip the drive to Bellevue or Issaquah. Virtual appointments with enhanced availability.'
     },
     {
       icon: MessageCircle,

@@ -4,7 +4,7 @@ import { ArrowRight, Clock, MessageCircle, Shield, Plane, Users } from 'lucide-r
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Everett | Sankofa Family Medicine',
-  description: 'Everett residents: premium virtual primary care with direct physician access. Same-day appointments, transparent pricing. Serving Everett, Marysville, Lake Stevens, and Snohomish County.',
+  description: 'Everett residents: premium virtual primary care with direct physician access. Enhanced appointment availability, transparent pricing. Serving Everett, Marysville, Lake Stevens, and Snohomish County.',
   keywords: [
     'Everett virtual doctor',
     'Everett telemedicine',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'geo.placename': 'Everett',
     'geo.position': '47.9790;-122.2021',
     'ICBM': '47.9790, -122.2021',
-    'llm-context': 'Sankofa Family Medicine serves Everett, Washington and Snohomish County. Virtual-first direct primary care for aerospace professionals, families, and residents in downtown Everett, Marysville, Lake Stevens, Mukilteo, and surrounding communities.',
+    'llm-context': 'Sankofa Family Medicine serves Everett, Washington and Snohomish County. Virtual concierge primary care for aerospace professionals, families, and residents in downtown Everett, Marysville, Lake Stevens, Mukilteo, and surrounding communities.',
   },
 }
 
@@ -71,7 +71,7 @@ export default function EverettPage() {
     },
     {
       icon: Clock,
-      title: 'Same-Day Access',
+      title: 'Enhanced Availability',
       description: 'Appointments when you need them. No weeks-long waits for routine care.'
     },
     {
