@@ -40,8 +40,8 @@ export const stateConfigs: Record<string, StateConfig> = {
     },
     metadata: {
       title: 'Virtual Primary Care in Washington State',
-      description: 'Sankofa Family Medicine offers virtual-first direct primary care across Washington State. Same-day appointments, direct physician access, transparent pricing.',
-      keywords: ['Washington virtual doctor', 'Seattle telemedicine', 'WA direct primary care', 'Washington State concierge medicine', 'virtual primary care Washington']
+      description: 'Sankofa Family Medicine offers virtual concierge primary care across Washington State. Enhanced availability, direct physician access, transparent pricing.',
+      keywords: ['Washington virtual doctor', 'Seattle telemedicine', 'WA concierge primary care', 'Washington State concierge medicine', 'virtual primary care Washington']
     }
   },
   SC: {
@@ -49,9 +49,9 @@ export const stateConfigs: Record<string, StateConfig> = {
     name: 'South Carolina',
     status: 'coming-soon',
     foundingMemberSpots: 50,
-    launchDate: '2026',
+    launchDate: 'Future',
     licensureStatus: 'pending',
-    telemedicineNotes: 'Licensure in progress. Join the waitlist for priority access when we launch.',
+    telemedicineNotes: 'Licensure in progress. Join the waitlist for updates when we expand.',
     majorCities: ['Charleston', 'Columbia', 'Greenville', 'Rock Hill', 'Mount Pleasant', 'Summerville', 'Hilton Head', 'Spartanburg'],
     timezone: 'America/New_York',
     coordinates: {
@@ -59,9 +59,9 @@ export const stateConfigs: Record<string, StateConfig> = {
       lng: -81.1637
     },
     metadata: {
-      title: 'Virtual Primary Care Coming to South Carolina',
-      description: 'Sankofa Family Medicine is expanding to South Carolina in 2026. Join the founding member waitlist for priority enrollment and exclusive benefits.',
-      keywords: ['South Carolina virtual doctor', 'Charleston telemedicine', 'SC direct primary care', 'South Carolina concierge medicine coming soon']
+      title: 'Virtual Primary Care May Expand to South Carolina',
+      description: 'Sankofa Family Medicine may expand to South Carolina in the future. Join the interest list for updates.',
+      keywords: ['South Carolina virtual doctor', 'Charleston telemedicine', 'SC concierge primary care', 'South Carolina concierge medicine future']
     }
   }
 }

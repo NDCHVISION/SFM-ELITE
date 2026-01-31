@@ -118,7 +118,7 @@ const schemaData = {
               '@type': 'Service',
               name: 'Executive Care',
               description:
-                'Priority tier with quarterly genetic review, up to four included lab reassessments, 60-minute visits, and same-day response.',
+                'Priority tier with quarterly genetic review, up to four included lab reassessments, 60-minute visits, and highest response priority within the care model.',
             },
           },
         ],

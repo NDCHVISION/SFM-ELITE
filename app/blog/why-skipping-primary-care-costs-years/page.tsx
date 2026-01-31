@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Why Skipping Primary Care Feels Rational (And Why It Quietly Costs People Years) | Sankofa Family Medicine',
   description: 'Most people avoid primary care because their reasoning makes sense to them. Learn why reactive thinking in a system that punishes delay has hidden costs measured in years.',
-  keywords: ['primary care', 'preventive medicine', 'health prevention', 'direct primary care'],
+  keywords: ['primary care', 'preventive medicine', 'health prevention', 'membership primary care'],
   openGraph: {
     title: 'Why Skipping Primary Care Feels Rational (And Why It Quietly Costs People Years)',
     description: 'Most people avoid primary care because their reasoning makes sense to them. Learn why reactive thinking has hidden costs.',

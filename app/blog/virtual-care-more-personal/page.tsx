@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Why Virtual Care With the Right Physician Is More Personal, Not Less | Sankofa Family Medicine',
   description: 'There is a common assumption that virtual medicine is impersonal. After years of practicing both models, I have found the opposite is often true. Virtual care can deepen the relationship.',
-  keywords: ['virtual care', 'telehealth', 'telemedicine', 'direct primary care', 'physician relationship'],
+  keywords: ['virtual care', 'telehealth', 'telemedicine', 'membership primary care', 'physician relationship'],
   openGraph: {
     title: 'Why Virtual Care With the Right Physician Is More Personal, Not Less',
     description: 'There is a common assumption that virtual medicine is impersonal. After years of practicing both models, I have found the opposite is often true.',

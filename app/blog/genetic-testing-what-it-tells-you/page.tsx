@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'What Genetic Testing Actually Tells You (And What It Does Not) | Sankofa Family Medicine',
   description: 'Genetic testing is not about predicting the future. It is about adding context to the present. Learn when testing adds value and why precision without continuity is just fragmentation.',
-  keywords: ['genetic testing', 'precision medicine', 'preventive care', 'personalized medicine', 'direct primary care'],
+  keywords: ['genetic testing', 'precision medicine', 'preventive care', 'personalized medicine', 'membership primary care'],
   openGraph: {
     title: 'What Genetic Testing Actually Tells You (And What It Does Not)',
     description: 'Genetic testing is not about predicting the future. It is about adding context to the present.',
