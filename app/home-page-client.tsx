@@ -79,7 +79,7 @@ export default function HomePageClient() {
               <div className="order-2 lg:order-1">
                 <div className="opacity-0 animate-fade-in animation-delay-100 mb-10">
                   <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full">
-                    <span className="text-white/80 text-base font-medium">Membership-Based Primary Care</span>
+                    <span className="text-white/80 text-base font-medium">Virtual Concierge Precision Medicine</span>
                     <span className="w-px h-4 bg-white/20 hidden sm:block" aria-hidden="true" />
                     <span className="text-white/60 text-base hidden sm:block">Washington State</span>
                   </div>
@@ -140,8 +140,8 @@ export default function HomePageClient() {
                         text: "You'll work with one ABFM board-certified family physician who follows your care over time.",
                       },
                       {
-                        title: 'Predictable membership pricing',
-                        text: 'Pricing is published as ranges. Your exact rate is confirmed before enrollment.',
+                        title: 'Transparent membership model',
+                        text: 'Your exact rate is confirmed before enrollment.',
                       },
                     ].map((item, i) => (
                       <div key={i} className="flex items-start gap-4 group cursor-default">
@@ -414,16 +414,16 @@ export default function HomePageClient() {
 
       <CareJourney />
 
-      {/* DPC COMPARISON */}
+      {/* COMPARISON */}
       <section className="relative py-24 lg:py-32 bg-white overflow-hidden" aria-labelledby="compare-heading">
         <div className="max-w-7xl mx-auto px-6">
           <ScrollReveal className="max-w-3xl mx-auto text-center mb-16">
             <span className="inline-block text-sfm-gold text-base font-semibold tracking-widest uppercase mb-6">The Difference</span>
             <h2 id="compare-heading" className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight" data-speakable>
-              Why Direct Primary Care Works
+              Why Membership-Based Primary Care Works
             </h2>
             <p className="text-xl text-sfm-navy/70">
-              Insurance-driven systems are built for volume, not memory. Direct Primary Care restores time, continuity, and transparency.
+              Insurance-driven systems are built for volume, not memory. Membership-based care restores time, continuity, and transparency.
             </p>
           </ScrollReveal>
 
@@ -459,11 +459,11 @@ export default function HomePageClient() {
                   </h3>
                   <ul className="space-y-4">
                     {[
-                      'Visits are planned for 45 to 75 minute.',
+                      'Visits are planned for 45 to 75 minutes.',
                       'Urgent visits may be same-day or next-business-day, when available.',
                       'Intentionally limited panel size to protect time and access.',
                       'The same doctor every time, not a rotating team.',
-                      'Clear monthly pricing. No visit fees or surprise bills.',
+                      'Clear monthly membership. No visit fees or surprise bills.',
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-3 text-white/85 text-lg">
                         <CheckCircle2 className="w-5 h-5 text-sfm-gold flex-shrink-0 mt-0.5" aria-hidden="true" />
@@ -477,16 +477,6 @@ export default function HomePageClient() {
               <p className="text-center text-base text-sfm-navy/60 mt-8">
                 *Typical features of many insurance-based primary care clinics. Individual experiences may differ.
               </p>
-
-              <div className="text-center mt-6">
-                <Link
-                  href="/compare"
-                  className="inline-flex items-center gap-2 text-sfm-azure hover:text-sfm-gold transition-colors motion-reduce:transition-none font-medium text-lg focus:outline-none focus:ring-2 focus:ring-sfm-gold focus:ring-offset-2 rounded"
-                >
-                  See the full comparison
-                  <ArrowRight className="w-5 h-5" aria-hidden="true" />
-                </Link>
-              </div>
             </div>
           </ScrollReveal>
         </div>
@@ -500,8 +490,8 @@ export default function HomePageClient() {
               <h2 id="assessment-heading" className="text-4xl lg:text-5xl font-display text-sfm-navy mb-6 leading-tight" data-speakable>
                 Is This Model Right for You?
               </h2>
-              <p className="text-xl text-sfm-navy/70 mb-8 leading-relaxed">
-                If you value time with your doctor, continuity of care, and predictable pricing, you will fit right in.
+               <p className="text-xl text-sfm-navy/70 mb-8 leading-relaxed">
+                If you value time with your doctor, continuity of care, and a transparent membership model, you will fit right in.
               </p>
               <Link
                 href="/resources/primary-care-guide"
@@ -607,7 +597,7 @@ export default function HomePageClient() {
       {/* Smaller gray text + more breathing room + wider max width */}
       <p className="text-base sm:text-lg text-sfm-navy/65 max-w-3xl mx-auto mt-4 leading-relaxed">
         When enrollment opens, memberships are expected to include virtual visits, secure messaging, and wholesale lab
-        pricing. This is Direct Primary Care (DPC). We do not bill insurance for primary care.
+        pricing. We do not bill insurance for primary care.
       </p>
 
       <p className="text-sm sm:text-base text-sfm-navy/55 max-w-3xl mx-auto mt-3 leading-relaxed">
@@ -625,9 +615,11 @@ export default function HomePageClient() {
             href="/membership-terms#founding-member-program"
             className="underline underline-offset-4 hover:text-sfm-azure transition-colors duration-300 motion-reduce:transition-none"
           >
-            Founding members
+            Founding Members
           </Link>{' '}
-          receive the lower end of each range. Your exact rate is confirmed before enrollment.
+          may receive early enrollment consideration.
+          <br />
+          Final pricing and membership terms are confirmed prior to enrollment.
         </p>
       </div>
     </ScrollReveal>
@@ -637,21 +629,18 @@ export default function HomePageClient() {
       {[
         {
           name: 'Continuity',
-          priceRange: '$225-$275',
-          description: 'Essential virtual primary care designed to restore the continuity traditional medicine has lost.',
+          description: 'Essential virtual concierge primary care designed to restore the continuity traditional medicine has lost. Care emphasizes understanding your history over time and may include routine laboratory review when clinically appropriate.',
           featured: false,
           anchor: 'continuity',
         },
         {
           name: 'Precision',
-          priceRange: '$325-$375',
-          description: 'Everything in Continuity plus deeper preventive insight and advanced diagnostics when appropriate.',
+          description: 'Includes all Continuity services, with deeper preventive insight and advanced diagnostics when appropriate. Care may incorporate relevant laboratory testing and, for some patients, genetic information to support long-term care planning when guided by clinical judgment.',
           featured: true,
           anchor: 'precision',
         },
         {
           name: 'Executive',
-          priceRange: '$650-$725',
           description: 'Enhanced access, coordination, and comprehensive health planning for individuals and families.',
           featured: false,
           anchor: 'executive',
@@ -675,25 +664,15 @@ export default function HomePageClient() {
                 </div>
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
                   <span className="px-4 py-1.5 bg-sfm-gold text-sfm-navy text-base font-semibold rounded-full">
-                    Most Popular
+                    Featured
                   </span>
                 </div>
               </>
             )}
 
-            <h3 className={`font-display text-2xl mb-2 relative z-10 ${tier.featured ? 'text-white' : 'text-sfm-navy'}`}>
+            <h3 className={`font-display text-2xl mb-4 relative z-10 ${tier.featured ? 'text-white' : 'text-sfm-navy'}`}>
               {tier.name}
             </h3>
-            <p className={`text-base mb-4 relative z-10 ${tier.featured ? 'text-white/60' : 'text-sfm-navy/50'}`}>
-              Membership-Based Primary Care (DPC model)
-            </p>
-
-            <div className="mb-4 relative z-10">
-              <span className={`text-4xl font-display ${tier.featured ? 'text-sfm-gold' : 'text-sfm-navy'}`}>
-                {tier.priceRange}
-              </span>
-              <span className={`text-lg ${tier.featured ? 'text-white/70' : 'text-sfm-navy/60'}`}>/month</span>
-            </div>
 
             <p className={`text-lg mb-6 leading-relaxed relative z-10 ${tier.featured ? 'text-white/80' : 'text-sfm-navy/70'}`}>
               {tier.description}
@@ -841,9 +820,9 @@ export default function HomePageClient() {
 
           <p className="text-white/60 text-lg mb-8">
             <Link href="/membership-terms#founding-member-program" className="hover:text-sfm-gold hover:underline transition-colors duration-300 motion-reduce:transition-none">
-              Founding member pricing
+              Founding member benefits
             </Link>{' '}
-            is available for a limited time during the launch period, subject to capacity.
+            are available for a limited time during the launch period, subject to capacity.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

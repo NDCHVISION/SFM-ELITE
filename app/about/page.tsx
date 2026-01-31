@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     'physician-led primary care',
     'virtual primary care Washington',
     'telehealth primary care WA',
-    'direct primary care Washington',
-    'DPC Washington State',
+    'concierge primary care Washington',
+    'membership primary care Washington State',
     'continuity of care',
     'patient-centered primary care',
     'Medicine That Remembers',
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     // Medical Entity Tags
     'medical-specialty': 'Primary Care, Family Medicine, Preventive Medicine',
     'service-area': 'Washington State, USA',
-    'practice-model': 'Direct Primary Care, Concierge Medicine, Membership Medicine',
+    'practice-model': 'Membership-Based Primary Care, Concierge in Structure, Precision-Informed',
     
     // Entity Recognition Hints for AI
     'entity-organization': 'Sankofa Family Medicine',
@@ -810,14 +810,14 @@ export default function AboutPage() {
                   className="w-4 h-4 text-sfm-gold"
                   aria-hidden="true"
                 />
-                HSA/FSA Accepted
+                HIPAA Compliant
               </span>
               <span className="flex items-center gap-2">
                 <CheckCircle2
                   className="w-4 h-4 text-sfm-gold"
                   aria-hidden="true"
                 />
-                Cancel Anytime
+                Transparent Membership
               </span>
               <span className="flex items-center gap-2">
                 <CheckCircle2

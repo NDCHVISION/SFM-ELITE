@@ -7,7 +7,7 @@ const contactSchema = {
       '@type': 'ContactPage',
       '@id': 'https://sankofafamilymedicine.com/contact/#page',
       name: 'Contact Sankofa Family Medicine',
-      description: 'Become a patient through our secure patient portal for virtual-first direct primary care in Washington State',
+      description: 'Become a patient through our secure patient portal for virtual membership-based primary care in Washington State',
       url: 'https://sankofafamilymedicine.com/contact',
       mainEntity: {
         '@type': 'MedicalBusiness',
@@ -38,12 +38,12 @@ const contactSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Contact | Become a Patient | Sankofa Family Medicine | Virtual Direct Primary Care',
+  title: 'Contact | Become a Patient | Sankofa Family Medicine | Virtual Membership-Based Primary Care',
   description: 'Become a patient at Sankofa Family Medicine through our secure patient portal. Virtual-first concierge medicine for patients across Washington State. Medicine That Remembers solves healthcare fragmentation through continuity, genetic testing, and precision medicine.',
   keywords: [
     'Sankofa Family Medicine contact',
     'become a patient concierge medicine',
-    'direct primary care Washington',
+    'membership primary care Washington',
     'virtual concierge medicine signup',
     'Medicine That Remembers',
     'healthcare fragmentation solution',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Contact Sankofa Family Medicine Virtual Direct Primary Care',
+        alt: 'Contact Sankofa Family Medicine Virtual Membership-Based Primary Care',
       },
     ],
   },

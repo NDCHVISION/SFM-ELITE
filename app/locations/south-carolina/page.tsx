@@ -45,18 +45,18 @@ export default function SouthCarolinaLocationPage() {
   const benefits = [
     {
       icon: Bell,
-      title: 'Priority Access',
-      description: 'Be first to enroll when we launch in South Carolina.'
+      title: 'Priority Updates',
+      description: 'Be first to know if we expand to South Carolina.'
     },
     {
       icon: CheckCircle2,
-      title: 'Founding Member Pricing',
-      description: 'Lock in special rates available only to early members.'
+      title: 'Early Interest',
+      description: 'Express interest in potential future services.'
     },
     {
       icon: Clock,
-      title: 'Shape Our Launch',
-      description: 'Your input helps us tailor services for South Carolina.'
+      title: 'Share Your Input',
+      description: 'Your feedback helps inform our expansion planning.'
     },
   ]
 
@@ -84,25 +84,24 @@ export default function SouthCarolinaLocationPage() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-400"></span>
               </span>
-              <span className="text-amber-300 text-sm font-semibold">Coming {scConfig.launchDate}</span>
+              <span className="text-amber-300 text-sm font-semibold">May Expand in the Future</span>
               <span className="w-px h-4 bg-white/20" />
               <span className="text-white/60 text-sm">South Carolina</span>
             </div>
 
             <h1 className="text-display-lg text-white mb-6">
-              Virtual Primary Care Coming to{' '}
+              Virtual Primary Care May Expand to{' '}
               <span className="text-sfm-gold">South Carolina</span>
             </h1>
 
             <p className="text-xl text-white/70 mb-10 leading-relaxed">
-              Sankofa Family Medicine is expanding to South Carolina in {scConfig.launchDate}. 
-              Join the updates list to be notified when enrollment opens.
+              Sankofa Family Medicine may expand to South Carolina in the future. 
+              Join the updates list to be notified if and when enrollment opens.
             </p>
 
-            {/* Founding Member Spots */}
+            {/* Interest List Info */}
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-sfm-gold/10 border border-sfm-gold/30 rounded-xl mb-8">
-              <span className="text-sfm-gold font-bold text-2xl">{scConfig.foundingMemberSpots}</span>
-              <span className="text-white/70 text-sm">Founding Member Spots Reserved</span>
+              <span className="text-white/70 text-sm">Join our interest list for future updates</span>
             </div>
           </div>
         </div>
@@ -115,10 +114,10 @@ export default function SouthCarolinaLocationPage() {
             {/* Form */}
             <div className="bg-sfm-cream dark:bg-sfm-surface rounded-2xl p-8 lg:p-10">
               <h2 className="font-display text-2xl text-sfm-navy dark:text-sfm-navy mb-2">
-                Get Notified When We Launch
+                Get Updates on Potential Expansion
               </h2>
               <p className="text-sfm-text-muted dark:text-sfm-text-muted mb-8">
-                Be the first to know when enrollment opens in South Carolina.
+                Be the first to know if we expand to South Carolina.
               </p>
 
               {status === 'success' ? (
@@ -130,7 +129,7 @@ export default function SouthCarolinaLocationPage() {
                     You are on the list!
                   </h3>
                   <p className="text-sfm-text-muted dark:text-sfm-text-muted mb-6">
-                    We will notify you as soon as we launch in South Carolina.
+                    We will notify you if we expand to South Carolina.
                   </p>
                   <Link href="/locations/washington" className="text-sfm-azure hover:underline text-sm">
                     Explore our active Washington services
@@ -197,7 +196,7 @@ export default function SouthCarolinaLocationPage() {
             {/* Benefits */}
             <div>
               <h2 className="text-display-md text-sfm-navy dark:text-sfm-navy mb-8">
-                Why Join Early?
+                Why Join the Interest List?
               </h2>
 
               <div className="space-y-6">
@@ -238,7 +237,7 @@ export default function SouthCarolinaLocationPage() {
                     
                     <Image
                       src="/images/map-south-carolina.png"
-                      alt="Map of South Carolina showing future Sankofa Family Medicine service areas including Columbia, Charleston, Greenville, and Myrtle Beach. Coming 2026."
+                      alt="Map of South Carolina showing potential future Sankofa Family Medicine service areas including Columbia, Charleston, Greenville, and Myrtle Beach."
                       width={600}
                       height={450}
                       className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
@@ -247,7 +246,7 @@ export default function SouthCarolinaLocationPage() {
                 </div>
                 
                 <p className="text-sm text-sfm-text-muted dark:text-sfm-text-muted mb-4">
-                  Coming to communities across South Carolina including:
+                  Potential future service areas may include:
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {scConfig.majorCities.map((city) => (

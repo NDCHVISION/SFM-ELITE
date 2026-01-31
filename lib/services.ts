@@ -95,7 +95,7 @@ export const primaryServices = [
     id: 'acute-care',
     icon: Thermometer,
     category: 'Acute Telemedicine Care',
-    tagline: 'Same-day access when you need it most',
+    tagline: 'Accessible care when you need it',
     conditions: [
       'Upper respiratory infections and pharyngitis',
       'Acute sinusitis and bronchitis',

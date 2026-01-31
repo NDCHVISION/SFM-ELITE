@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Why Virtual Care With the Right Physician Is More Personal, Not Less | Sankofa Family Medicine',
   description: 'There is a common assumption that virtual medicine is impersonal. After years of practicing both models, I have found the opposite is often true. Virtual care can deepen the relationship.',
-  keywords: ['virtual care', 'telehealth', 'telemedicine', 'direct primary care', 'physician relationship'],
+  keywords: ['virtual care', 'telehealth', 'telemedicine', 'membership primary care', 'physician relationship'],
   openGraph: {
     title: 'Why Virtual Care With the Right Physician Is More Personal, Not Less',
     description: 'There is a common assumption that virtual medicine is impersonal. After years of practicing both models, I have found the opposite is often true.',
@@ -172,7 +172,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-lg text-muted leading-relaxed mb-6">
-            In a <Link href="/compare" className="text-sfm-azure hover:text-sfm-navy underline underline-offset-2 transition-colors">traditional model</Link>, she probably would have waited. Taken ibuprofen. Hoped it passed. Maybe gone to urgent care if it got bad enough, where a provider with no context would have started from zero.
+            In a typical insurance-based model, she probably would have waited. Taken ibuprofen. Hoped it passed. Maybe gone to urgent care if it got bad enough, where a provider with no context would have started from zero.
           </p>
 
           <p className="text-lg text-muted leading-relaxed mb-6">

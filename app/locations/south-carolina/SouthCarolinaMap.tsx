@@ -181,7 +181,7 @@ export default function SouthCarolinaMap() {
         </g>
         <g transform="translate(150, 250)">
           <rect x="2" y="4" width="10" height="8" fill="#bc9833" fillOpacity="0.15" stroke="#bc9833" strokeWidth="1" rx="1" />
-          <text x="18" y="12" className="text-[10px] fill-sfm-text-muted">Coming 2026</text>
+          <text x="18" y="12" className="text-[10px] fill-sfm-text-muted">Potential Future</text>
         </g>
       </svg>
     </div>

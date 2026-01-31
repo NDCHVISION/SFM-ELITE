@@ -4,7 +4,7 @@ import { ArrowRight, Clock, MessageCircle, Shield, Anchor, Users } from 'lucide-
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Tacoma | Sankofa Family Medicine',
-  description: 'Tacoma residents: premium virtual primary care with direct physician access. Same-day appointments, transparent pricing, continuity of care. Serving Tacoma, University Place, Lakewood, and Pierce County.',
+  description: 'Tacoma residents: premium virtual primary care with direct physician access. Enhanced appointment availability, transparent pricing, continuity of care. Serving Tacoma, University Place, Lakewood, and Pierce County.',
   keywords: [
     'Tacoma virtual doctor',
     'Tacoma telemedicine',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     'geo.placename': 'Tacoma',
     'geo.position': '47.2529;-122.4443',
     'ICBM': '47.2529, -122.4443',
-    'llm-context': 'Sankofa Family Medicine serves Tacoma, Washington and Pierce County. Virtual-first direct primary care for professionals, families, and port workers in Stadium District, North End, University Place, Lakewood, and surrounding communities.',
+    'llm-context': 'Sankofa Family Medicine serves Tacoma, Washington and Pierce County. Virtual concierge primary care for professionals, families, and port workers in Stadium District, North End, University Place, Lakewood, and surrounding communities.',
   },
 }
 
@@ -70,7 +70,7 @@ export default function TacomaPage() {
     },
     {
       icon: Clock,
-      title: 'Same-Day Access',
+      title: 'Enhanced Availability',
       description: 'Virtual appointments when you need them. No weeks-long waits.'
     },
     {
@@ -81,7 +81,7 @@ export default function TacomaPage() {
     {
       icon: Shield,
       title: 'Transparent Pricing',
-      description: 'Monthly membership, no surprise bills. HSA and FSA accepted.'
+      description: 'Monthly membership, no surprise bills.'
     },
   ]
 

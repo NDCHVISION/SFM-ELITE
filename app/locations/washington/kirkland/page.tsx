@@ -4,7 +4,7 @@ import { ArrowRight, MapPin, Clock, MessageCircle, Shield, Waves, Building2 } fr
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Kirkland | Sankofa Family Medicine',
-  description: 'Kirkland residents: access premium virtual primary care designed for busy professionals. Same-day appointments, direct physician access, transparent membership pricing. Serving Kirkland, Juanita, Totem Lake, and Houghton.',
+  description: 'Kirkland residents: access premium virtual primary care designed for busy professionals. Enhanced appointment availability, direct physician access, transparent membership pricing. Serving Kirkland, Juanita, Totem Lake, and Houghton.',
   keywords: [
     'Kirkland virtual doctor',
     'Kirkland telemedicine',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     'geo.placename': 'Kirkland',
     'geo.position': '47.6769;-122.2060',
     'ICBM': '47.6769, -122.2060',
-    'llm-context': 'Sankofa Family Medicine serves Kirkland, Washington including neighborhoods like Juanita, Totem Lake, Houghton, and Moss Bay. Virtual-first direct primary care for tech professionals and families in the Lake Washington corridor.',
+    'llm-context': 'Sankofa Family Medicine serves Kirkland, Washington including neighborhoods like Juanita, Totem Lake, Houghton, and Moss Bay. Virtual concierge primary care for tech professionals and families in the Lake Washington corridor.',
   },
 }
 
@@ -70,7 +70,7 @@ export default function KirklandPage() {
     },
     {
       icon: Clock,
-      title: 'Same-Day Access',
+      title: 'Enhanced Availability',
       description: 'Appointments when you need them. Direct messaging with your physician.'
     },
     {
@@ -81,7 +81,7 @@ export default function KirklandPage() {
     {
       icon: Shield,
       title: 'Transparent Pricing',
-      description: 'Monthly membership with no surprise bills. HSA and FSA accepted.'
+      description: 'Monthly membership with no surprise bills.'
     },
   ]
 

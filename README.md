@@ -20,6 +20,16 @@ This website follows the Sankofa Family Medicine Voice, Tone, and Message Standa
 
 ---
 
+## Compliance & Guardrails
+
+All contributors and AI tools (including GitHub Copilot) must follow [`WEBSITE-GUARDRAILS.md`](WEBSITE-GUARDRAILS.md) for all website copy, structure, metadata, and code.
+
+This document is authoritative and overrides conflicting instructions in other files.
+
+For the canonical Copilot session prompt, see [`COPILOT-PROMPT.md`](COPILOT-PROMPT.md).
+
+---
+
 ## V12 Elite Refinements
 
 | Enhancement | Description |
@@ -69,8 +79,8 @@ This website follows the Sankofa Family Medicine Voice, Tone, and Message Standa
 
 | Metric | Value |
 |--------|-------|
-| **Pages** | 27 |
-| **Build Routes** | 31 (static) |
+| **Pages** | 25 |
+| **Build Routes** | 29 (static) |
 | **TypeScript Errors** | 0 |
 | **Em/En Dashes** | 0 |
 
@@ -108,7 +118,7 @@ This website follows the Sankofa Family Medicine Voice, Tone, and Message Standa
 - **Dark Mode** - Full support with ThemeProvider
 - **Multi-State** - WA active, SC coming 2026, expansion interest capture
 - **Accessibility** - WCAG 2.1 AA+, dedicated /accessibility page
-- **SEO** - Schema.org on 26 pages, AI crawler optimization
+- **SEO** - Schema.org on 24 pages, AI crawler optimization
 - **Video Ready** - Placeholder for intro video when recorded
 
 ---

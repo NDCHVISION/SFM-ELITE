@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, MapPin, Clock, MessageCircle, Shield, Video }
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Tri-Cities | Sankofa Family Medicine',
-  description: 'Tri-Cities residents: access premium virtual primary care from anywhere. Same-day appointments, direct physician messaging, no insurance hassles. Serving Kennewick, Pasco, Richland, and surrounding communities.',
+  description: 'Tri-Cities residents: access premium virtual primary care from anywhere. Enhanced appointment availability, direct physician messaging, no insurance hassles. Serving Kennewick, Pasco, Richland, and surrounding communities.',
   keywords: [
     'Tri-Cities virtual doctor',
     'Tri-Cities telemedicine',
@@ -77,8 +77,8 @@ export default function TriCitiesPage() {
     },
     {
       icon: Clock,
-      title: 'Same-Day Access',
-      description: 'Appointments available within 24 hours, often same-day. No weeks-long waits.'
+      title: 'Enhanced Availability',
+      description: 'Appointments typically available within a reasonable timeframe. No weeks-long waits.'
     },
     {
       icon: MessageCircle,

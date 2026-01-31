@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, MapPin, Clock, MessageCircle, Shield, Video }
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Seattle | Sankofa Family Medicine',
-  description: 'Seattle residents: access premium virtual primary care from anywhere. Same-day appointments, direct physician messaging, no insurance hassles. Serving Seattle, Capitol Hill, Ballard, Fremont, and all neighborhoods.',
+  description: 'Seattle residents: access premium virtual primary care from anywhere. Enhanced appointment availability, direct physician messaging, no insurance hassles. Serving Seattle, Capitol Hill, Ballard, Fremont, and all neighborhoods.',
   keywords: [
     'Seattle virtual doctor',
     'Seattle telemedicine',
@@ -76,8 +76,8 @@ export default function SeattlePage() {
     },
     {
       icon: Clock,
-      title: 'Same-Day Access',
-      description: 'Appointments available within 24 hours, often same-day. No weeks-long waits.'
+      title: 'Enhanced Availability',
+      description: 'Appointments typically available within a reasonable timeframe. No weeks-long waits.'
     },
     {
       icon: MessageCircle,

@@ -1,7 +1,7 @@
 {
   "name": "Sankofa Family Medicine",
   "short_name": "SFM",
-  "description": "Medicine That Remembers - Virtual Direct Primary Care serving Washington State",
+  "description": "Medicine That Remembers - Virtual Membership-Based Primary Care serving Washington State",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",

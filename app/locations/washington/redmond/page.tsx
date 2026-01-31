@@ -4,7 +4,7 @@ import { ArrowRight, MapPin, Clock, MessageCircle, Shield, Cpu, Users } from 'lu
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Redmond | Sankofa Family Medicine',
-  description: 'Redmond residents and tech professionals: premium virtual primary care designed for busy schedules. Same-day appointments, direct physician access, transparent pricing. Serving Redmond, Education Hill, Overlake, and Bear Creek.',
+  description: 'Redmond residents and tech professionals: premium virtual primary care designed for busy schedules. Enhanced appointment availability, direct physician access, transparent pricing. Serving Redmond, Education Hill, Overlake, and Bear Creek.',
   keywords: [
     'Redmond virtual doctor',
     'Redmond telemedicine',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'geo.placename': 'Redmond',
     'geo.position': '47.6740;-122.1215',
     'ICBM': '47.6740, -122.1215',
-    'llm-context': 'Sankofa Family Medicine serves Redmond, Washington - home to Microsoft headquarters and the tech corridor. Virtual-first direct primary care for tech professionals, executives, and families in Education Hill, Overlake, Bear Creek, and Idylwood.',
+    'llm-context': 'Sankofa Family Medicine serves Redmond, Washington - home to Microsoft headquarters and the tech corridor. Virtual concierge primary care for tech professionals, executives, and families in Education Hill, Overlake, Bear Creek, and Idylwood.',
   },
 }
 
@@ -71,7 +71,7 @@ export default function RedmondPage() {
     },
     {
       icon: Clock,
-      title: 'Same-Day Appointments',
+      title: 'Enhanced Availability',
       description: 'Access when you need it. No weeks-long waits for routine concerns.'
     },
     {
@@ -82,7 +82,7 @@ export default function RedmondPage() {
     {
       icon: Shield,
       title: 'Transparent Pricing',
-      description: 'Monthly membership, no surprise bills. HSA and FSA accepted.'
+      description: 'Monthly membership, no surprise bills.'
     },
   ]
 

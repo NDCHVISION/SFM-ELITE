@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   keywords: [
     'Sankofa Family Medicine waitlist',
     'founders waitlist Washington',
-    'direct primary care waitlist',
-    'DPC Washington State',
+    'concierge primary care waitlist',
+    'precision medicine Washington State',
     'membership primary care Seattle',
     'telehealth primary care Washington',
     'concierge medicine waitlist',
@@ -111,8 +111,8 @@ export const metadata: Metadata = {
     'page-subcategory': 'Primary Care Membership',
 
     // Practice model
-    'practice-model': 'Direct Primary Care (DPC)',
-    'practice-type': 'Membership Medicine, Concierge Primary Care',
+    'practice-model': 'Membership-Based Primary Care, Concierge in Structure, Precision-Informed',
+    'practice-type': 'Membership-Based Primary Care, Concierge Primary Care',
     'delivery-method': 'Telehealth, Virtual Care',
 
     // Geographic
@@ -124,7 +124,7 @@ export const metadata: Metadata = {
     // Waitlist-specific
     'waitlist-status': 'open',
     'payment-required': 'false',
-    'target-launch-date': '2026-02',
+    'target-launch-date': 'early 2026',
     'cohort-size': 'approximately 30',
     'enrollment-type': 'interest-only',
 

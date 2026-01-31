@@ -4,11 +4,11 @@ import { stateConfigs } from '@/lib/states'
 const scConfig = stateConfigs.SC
 
 export const metadata: Metadata = {
-  title: 'Virtual Primary Care Coming to South Carolina | Request Access',
+  title: 'Virtual Primary Care May Expand to South Carolina | Express Interest',
   description: scConfig.metadata.description,
   keywords: scConfig.metadata.keywords,
   openGraph: {
-    title: 'Sankofa Family Medicine | Coming to South Carolina',
+    title: 'Sankofa Family Medicine | May Expand to South Carolina',
     description: scConfig.metadata.description,
     url: 'https://sankofafamilymedicine.com/locations/south-carolina',
     siteName: 'Sankofa Family Medicine',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'MedicalBusiness',
-  name: 'Sankofa Family Medicine - South Carolina (Coming Soon)',
+  name: 'Sankofa Family Medicine - South Carolina (Potential Future Expansion)',
   description: scConfig.metadata.description,
   url: 'https://sankofafamilymedicine.com/locations/south-carolina',
   areaServed: {
@@ -37,7 +37,7 @@ const structuredData = {
   },
   potentialAction: {
     '@type': 'JoinAction',
-    name: 'Request Access',
+    name: 'Express Interest',
     target: 'https://sankofafamilymedicine.com/locations/south-carolina'
   }
 }

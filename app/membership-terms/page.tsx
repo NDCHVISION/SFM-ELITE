@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import Breadcrumbs from '@/components/Breadcrumbs'
 import PrimaryCTA from '@/components/PrimaryCTA'
-import { ArrowRight, FileText, Scale, Shield, AlertCircle } from 'lucide-react'
+import { ArrowRight, Scale, Shield, AlertCircle } from 'lucide-react'
 import type { Metadata } from 'next'
 
 // =============================================================================
@@ -42,25 +41,13 @@ export default function MembershipTermsPage() {
         />
 
         <div className="relative z-10 max-w-5xl mx-auto px-6">
-          <Breadcrumbs
-            items={[{ label: 'Membership Terms' }]}
-            className="mb-8 text-white/70"
-          />
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
+            Legal &amp; Membership Terms
+          </h1>
 
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/10 mb-6">
-              <FileText className="w-4 h-4 text-sfm-gold" />
-              <span className="text-white/80 text-sm font-medium tracking-wide">Legal & Membership Terms</span>
-            </div>
-
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
-              Membership Terms & Policies
-            </h1>
-
-            <p className="text-white/70 text-lg md:text-xl leading-relaxed">
-              Transparent pricing, clear terms, and the Founders Advantage benefit for early members.
-            </p>
-          </div>
+          <p className="text-white/70 text-lg md:text-xl leading-relaxed max-w-3xl">
+            Transparent pricing, clear terms, and the Founders Advantage benefit for early members.
+          </p>
         </div>
       </section>
 
@@ -70,7 +57,7 @@ export default function MembershipTermsPage() {
           {/* Introduction */}
           <div className="prose prose-lg max-w-none mb-16">
             <p className="text-gray-600 text-lg leading-relaxed">
-              Sankofa Family Medicine operates as a direct primary care (DPC) membership practice. Members pay a monthly or annual membership fee directly to the practice in exchange for comprehensive primary care services. The membership fee is separate from and does not include insurance, laboratory testing, imaging, medications, or services provided by other healthcare providers.
+              Sankofa Family Medicine operates as a membership-based primary care practice. Members pay a monthly or annual membership fee directly to the practice in exchange for comprehensive primary care services. The membership fee is separate from and does not include insurance, laboratory testing, imaging, medications, or services provided by other healthcare providers.
             </p>
           </div>
 

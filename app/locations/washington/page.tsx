@@ -54,8 +54,8 @@ export default function WashingtonLocationPage() {
   const features = [
     {
       icon: Clock,
-      title: 'Same-Day Access',
-      description: 'Virtual appointments available within 24 hours, often same-day.'
+      title: 'Enhanced Availability',
+      description: 'Virtual appointments typically available within a reasonable timeframe.'
     },
     {
       icon: MessageCircle,

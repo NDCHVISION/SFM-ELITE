@@ -75,14 +75,13 @@ export default function Navigation() {
         { href: '/services', label: 'Membership Plans', desc: 'From $225/month', icon: Heart },
         { href: '/membership-terms', label: 'Membership Terms', desc: 'View membership agreement details', icon: FileText },
         { href: '/services/what-we-cover', label: 'Conditions We Treat', desc: 'Scope of care', icon: Stethoscope },
-        { href: '/compare', label: 'Our Standard', desc: 'Philosophy and safeguards', icon: Shield },
       ],
     },
     locations: {
       label: 'Locations',
       items: [
         { href: '/locations/washington', label: 'Washington', desc: 'Now accepting patients', icon: MapPin, status: 'active' },
-        { href: '/locations/south-carolina', label: 'South Carolina', desc: 'Coming 2026', icon: MapPin, status: 'coming-soon' },
+        { href: '/locations/south-carolina', label: 'South Carolina', desc: 'May expand in the future', icon: MapPin, status: 'coming-soon' },
         { href: '/locations/request', label: 'Request a Location', desc: 'Bring us to your area', icon: Globe },
       ],
     },
@@ -238,7 +237,7 @@ export default function Navigation() {
                                 <span className="ml-2 px-2 py-0.5 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold rounded-full">NOW</span>
                               )}
                               {'status' in item && item.status === 'coming-soon' && (
-                                <span className="ml-2 px-2 py-0.5 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-[10px] font-bold rounded-full">2026</span>
+                                <span className="ml-2 px-2 py-0.5 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-[10px] font-bold rounded-full">FUTURE</span>
                               )}
                             </span>
                             <span className="text-xs text-sfm-text-muted dark:text-sfm-dark-text-muted mt-0.5 block">{item.desc}</span>

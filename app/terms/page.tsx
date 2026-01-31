@@ -4,11 +4,11 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Terms of Service | Sankofa Family Medicine',
-  description: 'Terms of service and user agreement for Sankofa Family Medicine virtual direct primary care services in Washington State.',
+  description: 'Terms of service and user agreement for Sankofa Family Medicine virtual membership-based primary care services in Washington State.',
   keywords: ['terms of service', 'user agreement', 'legal terms', 'service agreement', 'healthcare terms'],
   openGraph: {
     title: 'Terms of Service | Sankofa Family Medicine',
-    description: 'Terms of service for Sankofa Family Medicine virtual direct primary care services.',
+    description: 'Terms of service for Sankofa Family Medicine virtual membership-based primary care services.',
     url: 'https://sankofafamilymedicine.com/terms',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Terms of Service | Sankofa Family Medicine',
-    description: 'Terms of service for Sankofa Family Medicine virtual direct primary care services.',
+    description: 'Terms of service for Sankofa Family Medicine virtual membership-based primary care services.',
     images: ['/images/og-image.png'],
   },
   alternates: {

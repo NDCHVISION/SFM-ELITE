@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Why Skipping Primary Care Feels Rational (And Why It Quietly Costs People Years) | Sankofa Family Medicine',
   description: 'Most people avoid primary care because their reasoning makes sense to them. Learn why reactive thinking in a system that punishes delay has hidden costs measured in years.',
-  keywords: ['primary care', 'preventive medicine', 'health prevention', 'direct primary care'],
+  keywords: ['primary care', 'preventive medicine', 'health prevention', 'membership primary care'],
   openGraph: {
     title: 'Why Skipping Primary Care Feels Rational (And Why It Quietly Costs People Years)',
     description: 'Most people avoid primary care because their reasoning makes sense to them. Learn why reactive thinking has hidden costs.',
@@ -243,7 +243,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-lg text-muted leading-relaxed mb-6">
-            If that kind of relationship sounds like what has been missing from your care, that is exactly what I do. Not rushed. Not transactional. Just steady attention to the things that matter before they become urgent. <Link href="/compare" className="text-sfm-azure hover:text-sfm-navy underline underline-offset-2 transition-colors">Direct primary care</Link> makes this possible.
+            If that kind of relationship sounds like what has been missing from your care, that is exactly what I do. Not rushed. Not transactional. Just steady attention to the things that matter before they become urgent. <Link href="/services" className="text-sfm-azure hover:text-sfm-navy underline underline-offset-2 transition-colors">Membership-based primary care</Link> makes this possible.
           </p>
 
           <p className="text-lg leading-relaxed mb-8 bg-sfm-cream/50 p-4 rounded-lg border-l-4 border-sfm-gold">

@@ -74,11 +74,6 @@ const sitePages: PageCategory[] = [
         description: 'Learn about Dr. Yaw Nkrumah and his vision',
       },
       {
-        title: 'Compare',
-        href: '/compare',
-        description: 'See how we compare to traditional healthcare',
-      },
-      {
         title: 'FAQ',
         href: '/faq',
         description: 'Frequently asked questions about our practice',
@@ -168,7 +163,7 @@ const sitePages: PageCategory[] = [
       {
         title: 'South Carolina',
         href: '/locations/south-carolina',
-        description: 'Coming 2026 - Join our waitlist',
+        description: 'May expand in the future - Join our interest list',
       },
       {
         title: 'Request Your State',
