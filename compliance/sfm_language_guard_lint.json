@@ -1,0 +1,32 @@
+{
+  "version": "1.1",
+  "authoritative": true,
+  "scope": "public_facing_copy",
+  "enforcement": {
+    "mode": "block_on_violation"
+  },
+  "prohibited_phrases": {
+    "absolute_or_superiority": ["guarantee", "guaranteed", "best", "superior", "optimal", "proven results", "better outcomes", "always", "never", "for everyone"],
+    "medical_outcomes": ["cure", "reverse", "eliminate", "prevent"],
+    "predictive_language": ["predict", "forecast", "determine your future", "genetic destiny"],
+    "access_promises": ["instant", "immediate", "real-time", "same-day for everyone", "24/7 access", "instant access", "unlimited visits", "always available"],
+    "insurance_confusion": ["covered", "in-network", "out-of-network benefits", "submit to insurance", "we help you get reimbursed", "insurance will pay"],
+    "dpc_framing": ["direct primary care", "DPC", "unlimited visits for one fee", "cancel anytime", "one monthly fee covers everything"],
+    "technology_overreach": ["AI-powered care", "automated decisions", "decision engine", "automated triage"]
+  },
+  "required_modifiers": {
+    "precision": ["precision-informed", "precision-supported", "precision as context"],
+    "genetics": ["physician-led interpretation of genetic health information", "genetic health interpretation"],
+    "concierge": ["concierge in structure"]
+  },
+  "disclaimer_integrity": {
+    "must_preserve_verbatim": [
+      "may",
+      "when clinically appropriate",
+      "subject to physician judgment",
+      "does not establish a physician-patient relationship",
+      "does not provide medical advice",
+      "does not provide emergency care"
+    ]
+  }
+}
