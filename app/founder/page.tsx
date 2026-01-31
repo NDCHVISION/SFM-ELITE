@@ -451,7 +451,7 @@ export default function FounderPage() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 id="model-heading" className="font-display text-2xl text-sfm-navy mb-4">About Our Practice Model</h2>
           <p className="text-lg text-sfm-navy/70 leading-relaxed">
-            Sankofa Family Medicine is a virtual-only, physician-led, membership-based primary care practice, concierge in structure and precision-informed in approach, founded in 2025.
+            Sankofa Family Medicine is a virtual-only, physician-led, membership-based primary care practice, concierge in structure and precision-informed in approach, founded in 2025, operating from Spokane, Washington, and serving patients statewide in Washington through telehealth. {/* Compliance: Added founded date and location per temporal guardrail */}
             Membership is not health insurance and does not replace insurance coverage. You may use insurance for labs, imaging, prescriptions, and specialist care outside the membership.
           </p>
           <Link
