@@ -1,8 +1,33 @@
-# Copilot Instructions for Sankofa Family Medicine Repository
+# GitHub Copilot Instructions (Sankofa Family Medicine)
 
-## Core Compliance
+You must treat the following file as authoritative for all public-facing language:
 
-In this repository, always comply with `WEBSITE-GUARDRAILS.md`, `README.md`, and the latest SFM AI handoff files (currently V30).
+- /compliance/guardrails.public.md
+
+## Mandatory behavior
+1. Read /compliance/guardrails.public.md before proposing or editing any:
+   - website copy
+   - UI text
+   - metadata (titles, descriptions, OpenGraph)
+   - schema (JSON-LD, FAQ)
+   - marketing snippets
+
+2. If language is not explicitly authorized by the guardrails, omit it rather than infer it.
+
+3. Do not soften, shorten, paraphrase, or rewrite disclaimers for tone.
+
+4. Do not introduce:
+   - DPC framing
+   - insurance coverage implications
+   - guarantees, superiority claims, outcomes promises
+   - 24/7 access, instant access, real-time claims
+   - in-person care implications
+   - continuous monitoring implications
+   - automated or AI-driven clinical decision claims
+
+## Placement requirement
+When you add copy, place it only in the appropriate file near the UI or metadata it governs.
+If you add disclaimers, reuse canonical text and do not create new variants.
 
 ## Primary Identity
 
@@ -36,7 +61,8 @@ When unsure, omit or ask rather than infer.
 
 ## Related Documents
 
-- `WEBSITE-GUARDRAILS.md` — Full compliance guardrails (authoritative)
+- `/compliance/guardrails.public.md` — Full compliance guardrails (authoritative, canonical)
+- `WEBSITE-GUARDRAILS.md` — Legacy guardrails file (retained for reference)
 - `README.md` — Project overview and brand context
 - `COPILOT-PROMPT.md` — Session prompt for manual Copilot Chat use
 - `V30-ELITE-MASTER-HANDOFF.md` — Latest AI handoff document
