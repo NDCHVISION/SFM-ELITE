@@ -14,6 +14,16 @@ Do not infer insurance billing, in-person care, emergency coverage, automated de
 
 If a suggestion would conflict with guardrails, omit it and flag the issue instead of guessing.
 
+## Canonical Values (Hard-Coded)
+
+The following values are canonical and must be used consistently across all website copy. Do not use alternative values, ranges, or derivations.
+
+### Visit Duration
+- **Canonical range: 40 to 60 minutes**
+- Do not use "45 to 75 minutes," "45-75 minutes," or any other derivation
+- If existing copy contains "45 to 75" or similar, it must be corrected to "40 to 60 minutes"
+- This applies to all references to visit length, appointment duration, or consultation time
+
 ---
 
 ## Language Requirements
