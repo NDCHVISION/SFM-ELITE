@@ -112,8 +112,9 @@ const tiers: Tier[] = [
 // --- FAQ DATA ---
 const faqs = [
   {
-    q: 'What is Direct Primary Care?',
-    a: 'Direct Primary Care is a membership model. You pay a monthly fee directly to the practice for primary care services. We do not bill insurance for visits.',
+    // Compliance: Changed from "Direct Primary Care" to "Membership-Based Primary Care"
+    q: 'What is Membership-Based Primary Care?',
+    a: 'Membership-based primary care is a model where you pay a monthly fee directly to the practice for primary care services. We do not bill insurance for visits.',
   },
   {
     q: 'Do I still need health insurance?',
@@ -176,11 +177,12 @@ export default function ServicesPageClient() {
           </nav>
 
           <div className="max-w-3xl">
+            {/* Compliance: Changed from "Direct Primary Care" to "Membership-Based Primary Care" */}
             <h1
               id="hero-heading"
               className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-4 leading-tight"
             >
-              Direct Primary Care
+              Membership-Based Primary Care
               <br />
               <span className="text-sfm-gold">Membership</span>
             </h1>

@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   keywords: [
     'membership primary care Washington',
     'primary care membership Seattle',
-    'genetic health analysis',
     'precision primary care',
     'virtual primary care Seattle',
     'telehealth Washington State',
@@ -32,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Membership | Sankofa Family Medicine',
-    description: 'Membership-based primary care with genetic health analysis. Washington State.',
+    // Compliance: Updated genetics framing
+    description: 'Membership-based primary care with physician-led interpretation of genetic health information. Washington State.',
   },
   robots: {
     index: true,
@@ -75,8 +75,9 @@ const schemaData = {
         {
           '@type': 'MedicalProcedure',
           name: 'Comprehensive Precision Baseline',
+          // Compliance: Genetics requires "physician-led interpretation" modifier
           description:
-            'Full intake, comprehensive lab panel, and genetic health analysis at enrollment',
+            'Full intake, comprehensive lab panel, and physician-led interpretation of genetic health information at enrollment',
         },
         {
           '@type': 'MedicalProcedure',
@@ -85,9 +86,10 @@ const schemaData = {
         },
         {
           '@type': 'MedicalProcedure',
-          name: 'Genetic Health Analysis',
+          name: 'Physician-Led Genetic Health Interpretation',
+          // Compliance: Genetics requires "physician-led interpretation" modifier
           description:
-            'Clinical-grade genetic profiling integrated with lab results for personalized care',
+            'Clinical-grade genetic profiling integrated with lab results for personalized care through physician-led interpretation',
         },
       ],
       hasOfferCatalog: {
@@ -125,7 +127,7 @@ const schemaData = {
       },
       isAcceptingNewPatients: true,
       healthPlanNetworkId: 'NONE',
-      priceRange: '$$$$',
+      // Compliance: Removed priceRange per WA DOH requirements
     },
     {
       '@type': 'FAQPage',
@@ -143,7 +145,8 @@ const schemaData = {
           name: 'What is the Comprehensive Precision Baseline?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Every member starts with a Comprehensive Precision Baseline including a full intake, comprehensive lab panel, and genetic health analysis. Lab results are correlated with genetic findings to identify risk trends and prevention targets.',
+            // Compliance: Genetics requires "physician-led interpretation" modifier
+            text: 'Every member starts with a Comprehensive Precision Baseline including a full intake, comprehensive lab panel, and physician-led interpretation of genetic health information. Lab results are correlated with genetic findings to identify risk trends and prevention targets.',
           },
         },
         {

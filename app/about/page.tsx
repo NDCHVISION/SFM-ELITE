@@ -454,9 +454,10 @@ export default function AboutPage() {
                     <Link href="/services" className="text-sfm-gold hover:text-sfm-gold/80 transition-colors underline underline-offset-2">
                       telehealth primary care services
                     </Link>{' '}
+                    {/* Compliance: Non-membership-based framing removed */}
                     or explore{' '}
-                    <Link href="/compare" className="text-sfm-gold hover:text-sfm-gold/80 transition-colors underline underline-offset-2">
-                      how Direct Primary Care (DPC) differs
+                    <Link href="/services" className="text-sfm-gold hover:text-sfm-gold/80 transition-colors underline underline-offset-2">
+                      how membership-based primary care differs
                     </Link>.
                   </p>
                 </div>
