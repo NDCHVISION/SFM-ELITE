@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     // Medical Entity Tags
     'medical-specialty': 'Primary Care, Family Medicine, Preventive Medicine',
     'service-area': 'Washington State, USA',
-    'practice-model': 'Concierge Precision Medicine, Membership Medicine',
+    'practice-model': 'Membership-Based Primary Care, Concierge in Structure, Precision-Informed',
     
     // Entity Recognition Hints for AI
     'entity-organization': 'Sankofa Family Medicine',

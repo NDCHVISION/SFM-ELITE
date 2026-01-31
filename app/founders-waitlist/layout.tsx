@@ -111,8 +111,8 @@ export const metadata: Metadata = {
     'page-subcategory': 'Primary Care Membership',
 
     // Practice model
-    'practice-model': 'Concierge Precision Medicine Primary Care',
-    'practice-type': 'Membership Medicine, Concierge Primary Care',
+    'practice-model': 'Membership-Based Primary Care, Concierge in Structure, Precision-Informed',
+    'practice-type': 'Membership-Based Primary Care, Concierge Primary Care',
     'delivery-method': 'Telehealth, Virtual Care',
 
     // Geographic
