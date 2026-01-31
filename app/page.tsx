@@ -76,12 +76,13 @@ export const metadata: Metadata = {
 
     // Medical Practice Info (keep truthful and non-misleading)
     'medical-specialty': 'Primary Care, Family Medicine, Preventive Medicine',
-    'practice-model': 'Virtual Concierge Precision Medicine Primary Care',
+    'practice-model': 'Virtual-Only, Physician-Led, Membership-Based Primary Care, Concierge in Structure, Precision-Informed',
     'service-area': 'Washington State, USA',
     'geo-region': 'US-WA',
-    'geo-placename': 'Washington State',
+    'geo-placename': 'Spokane, Washington State',
     'service-cities':
       'Seattle, Bellevue, Redmond, Kirkland, Tacoma, Spokane, Vancouver, Olympia, Tri-Cities, Richland, Kennewick, Pasco',
+    'operations-anchor': 'Spokane, Washington',
 
     // IMPORTANT: Waitlist, not active patient enrollment
     'accepting-patients': 'founders-waitlist',
