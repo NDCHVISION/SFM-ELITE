@@ -361,7 +361,7 @@ export default function FounderPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <article className="text-xl text-sfm-text-muted leading-relaxed space-y-6 order-2 lg:order-1">
               <p>Dr. Yaw Nkrumah is a board-certified family doctor and the founder of Sankofa Family Medicine.</p>
-              <p>He practices relationship-based family medicine focused on continuity, prevention, and careful follow-through over time.</p>
+              <p>He practices virtual concierge precision medicine, integrating genetic health analysis and continuous clinical data monitoring into longitudinal primary care relationships. His approach combines relationship-based family medicine focused on continuity, prevention, and careful follow-through over time.</p>
               <p>He trained at the Medical University of South Carolina and completed his Family Medicine residency in Washington State. During training, he saw how often care breaks down when doctors change and history gets lost.</p>
               <p>Sankofa Family Medicine was created to fix that problem. The goal is simple: one doctor, one relationship, building over time.</p>
             </article>

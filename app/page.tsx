@@ -76,7 +76,7 @@ export const metadata: Metadata = {
 
     // Medical Practice Info (keep truthful and non-misleading)
     'medical-specialty': 'Primary Care, Family Medicine, Preventive Medicine',
-    'practice-model': 'Membership-Based Primary Care',
+    'practice-model': 'Virtual Concierge Precision Medicine Primary Care',
     'service-area': 'Washington State, USA',
     'geo-region': 'US-WA',
     'geo-placename': 'Washington State',
