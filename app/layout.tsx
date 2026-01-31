@@ -165,8 +165,8 @@ export const metadata: Metadata = {
     'ai-content-declaration':
       'This website represents Sankofa Family Medicine PLLC, a medical practice providing telehealth services in Washington State.',
     'ai-practice-summary':
-      'Virtual-only, physician-led concierge precision medicine primary care practice offering membership-based telehealth services for adults and adolescents (12+) throughout Washington State.',
-    'practice-type': 'Concierge Precision Medicine Primary Care, Telehealth',
+      'Virtual-only, physician-led, membership-based primary care practice, concierge in structure and precision-informed in approach, offering telehealth services for adults and adolescents (12+) throughout Washington State.',
+    'practice-type': 'Membership-Based Primary Care, Concierge in Structure, Precision-Informed, Telehealth',
     'service-area': 'Washington State, USA',
     'patient-age-range': '12 years and older',
     'healthcare-provider': 'true',
@@ -197,7 +197,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         '@id': 'https://sankofafamilymedicine.com/#website',
         url: 'https://sankofafamilymedicine.com',
         name: 'Sankofa Family Medicine',
-        description: 'Virtual, membership-based concierge precision medicine primary care',
+        description: 'Virtual, membership-based primary care, concierge in structure and precision-informed in approach',
         publisher: { '@id': 'https://sankofafamilymedicine.com/#organization' },
         inLanguage: 'en-US',
         potentialAction: {
@@ -219,7 +219,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         alternateName: ['SFM', 'Medicine That Remembers'],
         url: 'https://sankofafamilymedicine.com',
         description:
-          'Virtual-only, physician-led concierge precision medicine primary care practice emphasizing continuity, longitudinal care, and physician-led decision-making.',
+          'Virtual-only, physician-led, membership-based primary care practice, concierge in structure and precision-informed in approach, emphasizing continuity, longitudinal care, and physician-led decision-making.',
         slogan: 'Medicine That Remembers™',
         telephone: '+1-425-285-7390',
         email: 'info@sankofafamilymedicine.com',
