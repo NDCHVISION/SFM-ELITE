@@ -217,7 +217,7 @@ export default function FAQPage() {
         },
         {
           question: 'How does enrollment work?',
-          answer: 'Clinical care begins early 2026. Reserve your spot now through our founders waitlist. No payment required today.'
+          answer: 'Clinical care begins early 2026. Join the list now through our founders waitlist. No payment required today.'
         },
         {
           question: 'Do I need to transfer my medical records?',
