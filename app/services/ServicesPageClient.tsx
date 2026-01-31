@@ -43,7 +43,8 @@ const tiers = [
       'Care is designed to compound over time, so each visit builds on prior decisions rather than starting from scratch.',
     features: [
       'Comprehensive health intake at enrollment',
-      'Genetic health analysis reviewed and integrated into care',
+      // Compliance: Genetics requires "physician-led interpretation" modifier
+      'Physician-led interpretation of genetic health information reviewed and integrated into care',
       'Ongoing primary care with longitudinal context',
       'Scheduled clinical reassessment availability',
       'Secure physician messaging during business hours',
@@ -112,7 +113,8 @@ const faqs = [
   },
   {
     q: 'How does genetic analysis work in my care?',
-    a: 'Genetic health analysis is reviewed and integrated into your care. Your physician uses this information alongside your health history and clinical data to inform medical decisions. Together, you build a long-term approach around what matters most for your health.',
+    // Compliance: Genetics requires "physician-led interpretation" modifier
+    a: 'Physician-led interpretation of genetic health information is reviewed and integrated into your care. Your physician uses this information alongside your health history and clinical data to inform medical decisions. Together, you build a long-term approach around what matters most for your health.',
   },
   {
     q: 'What is the difference between tiers?',
@@ -440,9 +442,10 @@ export default function ServicesPageClient() {
                 major events.
               </p>
               <p>
-                <strong className="text-sfm-navy">Genetic Analysis:</strong> Genetic health analysis
-                provides information useful for clinical decision-making but does not diagnose disease
-                or predict outcomes.
+                {/* Compliance: Genetics requires "physician-led interpretation" modifier */}
+                <strong className="text-sfm-navy">Genetic Analysis:</strong> Genetic information is reviewed through
+                physician-led interpretation and provides context useful for clinical decision-making
+                but does not diagnose disease or predict outcomes.
               </p>
               <p>
                 <strong className="text-sfm-navy">Telehealth Limitations:</strong> Telehealth has

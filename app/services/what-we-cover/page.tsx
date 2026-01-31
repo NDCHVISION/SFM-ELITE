@@ -51,7 +51,7 @@ const organizationJsonLd = {
     name: 'Washington',
     sameAs: 'https://en.wikipedia.org/wiki/Washington_(state)',
   },
-  priceRange: '$225-$725/month',
+  // Compliance: Removed priceRange per WA DOH requirements
   paymentAccepted: 'Cash, Credit Card',
   currenciesAccepted: 'USD',
   medicalSpecialty: ['PrimaryCare', 'FamilyPractice', 'Telemedicine', 'PreventiveMedicine'],
