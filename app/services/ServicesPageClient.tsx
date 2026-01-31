@@ -185,7 +185,7 @@ export default function ServicesPageClient() {
               id="hero-heading"
               className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight"
             >
-              Membership-Based
+              Virtual Concierge Precision Medicine
               <br />
               <span className="text-sfm-gold">Primary Care</span>
             </h1>
