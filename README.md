@@ -20,6 +20,16 @@ This website follows the Sankofa Family Medicine Voice, Tone, and Message Standa
 
 ---
 
+## Compliance & Guardrails
+
+All contributors and AI tools (including GitHub Copilot) must follow [`WEBSITE-GUARDRAILS.md`](WEBSITE-GUARDRAILS.md) for all website copy, structure, metadata, and code.
+
+This document is authoritative and overrides conflicting instructions in other files.
+
+For the canonical Copilot session prompt, see [`COPILOT-PROMPT.md`](COPILOT-PROMPT.md).
+
+---
+
 ## V12 Elite Refinements
 
 | Enhancement | Description |
