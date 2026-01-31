@@ -635,7 +635,7 @@ export default function HomePageClient() {
         },
         {
           name: 'Precision',
-          description: 'Includes all Continuity services, with deeper preventive insight and advanced diagnostics when appropriate. Care may incorporate relevant laboratory testing and, for some patients, genetic information to support long-term care planning when guided by clinical judgment.',
+          description: 'Includes all Continuity services, with deeper preventive insight and advanced diagnostics when appropriate. Care may incorporate relevant laboratory testing and, for some patients, physician-led interpretation of genetic health information to support long-term care planning when guided by clinical judgment.',
           featured: true,
           anchor: 'precision',
         },

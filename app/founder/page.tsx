@@ -361,7 +361,7 @@ export default function FounderPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <article className="text-xl text-sfm-text-muted leading-relaxed space-y-6 order-2 lg:order-1">
               <p>Dr. Yaw Nkrumah is a board-certified family doctor and the founder of Sankofa Family Medicine.</p>
-              <p>He practices virtual concierge precision medicine, integrating genetic health analysis and continuous clinical data monitoring into longitudinal primary care relationships. His approach combines relationship-based family medicine focused on continuity, prevention, and careful follow-through over time.</p>
+              <p>He practices virtual concierge precision medicine, integrating physician-led interpretation of genetic health information and continuous clinical data monitoring into longitudinal primary care relationships. His approach combines relationship-based family medicine focused on continuity, prevention, and careful follow-through over time.</p>
               <p>He trained at the Medical University of South Carolina and completed his Family Medicine residency in Washington State. During training, he saw how often care breaks down when doctors change and history gets lost.</p>
               <p>Sankofa Family Medicine was created to fix that problem. The goal is simple: one doctor, one relationship, building over time.</p>
             </article>
@@ -451,7 +451,7 @@ export default function FounderPage() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 id="model-heading" className="font-display text-2xl text-sfm-navy mb-4">About Our Practice Model</h2>
           <p className="text-lg text-sfm-navy/70 leading-relaxed">
-            Sankofa Family Medicine is a virtual-only, physician-led, membership-based primary care practice, concierge in structure and precision-informed in approach.
+            Sankofa Family Medicine is a virtual-only, physician-led, membership-based primary care practice, concierge in structure and precision-informed in approach, founded in 2025.
             Membership is not health insurance and does not replace insurance coverage. You may use insurance for labs, imaging, prescriptions, and specialist care outside the membership.
           </p>
           <Link
