@@ -443,9 +443,9 @@ export default function ServicesPageClient() {
               </p>
               <p>
                 {/* Compliance: Genetics requires "physician-led interpretation" modifier */}
-                <strong className="text-sfm-navy">Genetic Analysis:</strong> Physician-led interpretation of genetic health information
-                provides context useful for clinical decision-making but does not diagnose disease
-                or predict outcomes.
+                <strong className="text-sfm-navy">Genetic Analysis:</strong> Genetic information is reviewed through
+                physician-led interpretation and provides context useful for clinical decision-making
+                but does not diagnose disease or predict outcomes.
               </p>
               <p>
                 <strong className="text-sfm-navy">Telehealth Limitations:</strong> Telehealth has
