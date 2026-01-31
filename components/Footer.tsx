@@ -31,7 +31,7 @@ export default function Footer() {
       title: 'Locations',
       links: [
         { label: 'Washington', href: '/locations/washington', badge: 'Active' },
-        { label: 'South Carolina', href: '/locations/south-carolina', badge: '2026' },
+        { label: 'South Carolina', href: '/locations/south-carolina', badge: 'Future' },
         { label: 'Request a Location', href: '/locations/request' },
       ],
     },
@@ -77,7 +77,7 @@ export default function Footer() {
             
             <p className="text-white/50 text-base leading-relaxed max-w-md mb-10">
               Premium virtual primary care built on memory, dignity, and the physician-patient relationship. 
-              Serving Washington State. South Carolina coming 2026.
+              Serving Washington State. South Carolina may be available in the future.
             </p>
 
             {/* Contact - Enhanced */}
@@ -226,11 +226,11 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Heart className="w-4 h-4 text-sfm-gold/60" />
-                  <span>Direct Primary Care Model</span>
+                  <span>Membership-Based Primary Care</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-sfm-gold/60" />
-                  <span>Same-Day Access</span>
+                  <span>Enhanced Availability</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-sfm-gold/60" />

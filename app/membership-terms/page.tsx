@@ -57,7 +57,7 @@ export default function MembershipTermsPage() {
           {/* Introduction */}
           <div className="prose prose-lg max-w-none mb-16">
             <p className="text-gray-600 text-lg leading-relaxed">
-              Sankofa Family Medicine operates as a direct primary care (DPC) membership practice. Members pay a monthly or annual membership fee directly to the practice in exchange for comprehensive primary care services. The membership fee is separate from and does not include insurance, laboratory testing, imaging, medications, or services provided by other healthcare providers.
+              Sankofa Family Medicine operates as a membership-based primary care practice. Members pay a monthly or annual membership fee directly to the practice in exchange for comprehensive primary care services. The membership fee is separate from and does not include insurance, laboratory testing, imaging, medications, or services provided by other healthcare providers.
             </p>
           </div>
 

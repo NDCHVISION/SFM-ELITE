@@ -163,7 +163,7 @@ const sitePages: PageCategory[] = [
       {
         title: 'South Carolina',
         href: '/locations/south-carolina',
-        description: 'Coming 2026 - Join our waitlist',
+        description: 'May expand in the future - Join our interest list',
       },
       {
         title: 'Request Your State',

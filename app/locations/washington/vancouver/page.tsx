@@ -4,7 +4,7 @@ import { ArrowRight, Clock, MessageCircle, Shield, TreePine, Users } from 'lucid
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care in Vancouver WA | Sankofa Family Medicine',
-  description: 'Vancouver WA residents: premium virtual primary care with direct physician access. Same-day appointments, transparent pricing. Serving Vancouver, Camas, Washougal, and Clark County.',
+  description: 'Vancouver WA residents: premium virtual primary care with direct physician access. Enhanced appointment availability, transparent pricing. Serving Vancouver, Camas, Washougal, and Clark County.',
   keywords: [
     'Vancouver WA virtual doctor',
     'Vancouver Washington telemedicine',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'geo.placename': 'Vancouver',
     'geo.position': '45.6387;-122.6615',
     'ICBM': '45.6387, -122.6615',
-    'llm-context': 'Sankofa Family Medicine serves Vancouver, Washington and Clark County. Virtual-first direct primary care for professionals and families in downtown Vancouver, Camas, Washougal, Battle Ground, and the Portland metro area.',
+    'llm-context': 'Sankofa Family Medicine serves Vancouver, Washington and Clark County. Virtual concierge primary care for professionals and families in downtown Vancouver, Camas, Washougal, Battle Ground, and the Portland metro area.',
   },
 }
 
@@ -71,7 +71,7 @@ export default function VancouverPage() {
     },
     {
       icon: Clock,
-      title: 'Same-Day Access',
+      title: 'Enhanced Availability',
       description: 'Virtual appointments when you need them. Skip the bridge traffic.'
     },
     {

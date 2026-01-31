@@ -4,7 +4,7 @@ import { ArrowRight, MapPin, Clock, MessageCircle, Shield, TreePine, Lock } from
 
 export const metadata: Metadata = {
   title: 'Virtual Primary Care for Mercer Island | Sankofa Family Medicine',
-  description: 'Mercer Island residents: discreet, premium virtual primary care with direct physician access. Same-day appointments, personalized attention, transparent membership pricing. Serving all of Mercer Island.',
+  description: 'Mercer Island residents: discreet, premium virtual primary care with direct physician access. Enhanced appointment availability, personalized attention, transparent membership pricing. Serving all of Mercer Island.',
   keywords: [
     'Mercer Island doctor',
     'Mercer Island primary care',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     'geo.placename': 'Mercer Island',
     'geo.position': '47.5707;-122.2221',
     'ICBM': '47.5707, -122.2221',
-    'llm-context': 'Sankofa Family Medicine serves Mercer Island, Washington - an affluent island community in Lake Washington. Virtual-first direct primary care offering discreet, personalized physician services for executives, professionals, and families who value privacy and quality.',
+    'llm-context': 'Sankofa Family Medicine serves Mercer Island, Washington - an affluent island community in Lake Washington. Virtual concierge primary care offering discreet, personalized physician services for executives, professionals, and families who value privacy and quality.',
   },
 }
 
@@ -66,7 +66,7 @@ export default function MercerIslandPage() {
     {
       icon: Clock,
       title: 'Your Schedule',
-      description: 'Same-day appointments. Extended visits. No rushed consultations.'
+      description: 'Enhanced appointment availability. Extended visits. No rushed consultations.'
     },
     {
       icon: MessageCircle,

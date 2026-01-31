@@ -164,7 +164,7 @@ const servicesJsonLd = {
           '@type': 'MedicalTherapy',
           name: 'Acute Telemedicine Care',
           description:
-            'Same-day virtual visits for respiratory infections, UTIs, skin conditions, and urgent medication needs.',
+            'Virtual visits for respiratory infections, UTIs, skin conditions, and urgent medication needs, typically available within 24-48 hours.',
         },
       },
     ],
@@ -241,11 +241,11 @@ const breadcrumbJsonLd = {
 // =============================================================================
 
 export const metadata: Metadata = {
-  title: 'What We Treat | Virtual Direct Primary Care Services | Washington State',
+  title: 'What We Treat | Virtual Membership-Based Primary Care Services | Washington State',
   description:
-    'Sankofa Family Medicine offers virtual-first concierge medicine across Washington State. We treat cardiometabolic conditions, diabetes, hypertension, mental health, weight management, and acute illness through Medicine That Remembers.',
+    'Sankofa Family Medicine offers virtual concierge medicine across Washington State. We treat cardiometabolic conditions, diabetes, hypertension, mental health, weight management, and acute illness through Medicine That Remembers.',
   keywords: [
-    'direct primary care services',
+    'membership primary care services',
     'concierge medicine conditions treated',
     'virtual primary care Washington',
     'genetic testing primary care',
@@ -394,7 +394,7 @@ const primaryServices = [
     id: 'acute-care',
     icon: Thermometer,
     category: 'Acute Telemedicine Care',
-    tagline: 'Same-day access when you need it most',
+    tagline: 'Accessible care when you need it',
     conditions: [
       'Upper respiratory infections and pharyngitis',
       'Acute sinusitis and bronchitis',
@@ -580,8 +580,8 @@ export default function ServicesPage() {
               aria-label="Key statistics"
             >
               <div className="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-sfm-gold/30 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <p className="text-4xl font-display text-sfm-gold mb-2 group-hover:scale-110 transition-transform duration-300">Same Day</p>
-                <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors">Acute care appointments available</p>
+                <p className="text-4xl font-display text-sfm-gold mb-2 group-hover:scale-110 transition-transform duration-300">Enhanced</p>
+                <p className="text-sm text-white/70 group-hover:text-white/90 transition-colors">Availability for acute care needs</p>
               </div>
               <div className="group p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-sfm-gold/30 hover:scale-105 transition-all duration-300 cursor-pointer">
                 <p className="text-4xl font-display text-sfm-gold mb-2 group-hover:scale-110 transition-transform duration-300">100%</p>
@@ -835,9 +835,9 @@ export default function ServicesPage() {
                   source: 'vs. national average',
                 },
                 {
-                  stat: 'Same Day',
-                  title: 'When It Matters',
-                  desc: 'Acute concerns are addressed immediately. The average wait for a new patient appointment in traditional care exceeds 26 days.',
+                  stat: 'Enhanced',
+                  title: 'Availability',
+                  desc: 'Acute concerns are addressed within a reasonable timeframe. The average wait for a new patient appointment in traditional care exceeds 26 days.',
                   source: 'Merritt Hawkins Survey',
                 },
               ].map((item, index) => (

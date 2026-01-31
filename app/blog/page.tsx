@@ -6,11 +6,11 @@ import NewsletterSignup from '@/components/NewsletterSignup'
 
 export const metadata: Metadata = {
   title: 'Blog | Health Insights | Sankofa Family Medicine',
-  description: 'Health insights, precision medicine articles, and updates from Sankofa Family Medicine. Expert perspectives on direct primary care, virtual medicine, genetic testing, and preventive health from Dr. Yaw Nkrumah.',
+  description: 'Health insights, precision medicine articles, and updates from Sankofa Family Medicine. Expert perspectives on concierge primary care, virtual medicine, genetic testing, and preventive health from Dr. Yaw Nkrumah.',
   keywords: [
     'health blog',
     'precision medicine',
-    'direct primary care',
+    'concierge primary care',
     'wellness',
     'virtual care',
     'genetic testing',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Blog | Health Insights | Sankofa Family Medicine',
-    description: 'Expert perspectives on direct primary care, virtual medicine, genetic testing, and preventive health.',
+    description: 'Expert perspectives on concierge primary care, virtual medicine, genetic testing, and preventive health.',
     url: 'https://sankofafamilymedicine.com/blog',
     siteName: 'Sankofa Family Medicine',
     locale: 'en_US',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Blog | Sankofa Family Medicine',
-    description: 'Expert perspectives on direct primary care, virtual medicine, and preventive health.',
+    description: 'Expert perspectives on concierge primary care, virtual medicine, and preventive health.',
     images: ['/images/og-image.png'],
   },
   alternates: {
@@ -157,7 +157,7 @@ export default function BlogPage() {
             </h1>
             <div className="divider-gold mx-auto mb-6" />
             <p className="text-white/70 max-w-2xl mx-auto text-lg">
-              Precision medicine articles, wellness strategies, and direct primary care insights from Dr. Yaw Nkrumah and the SFM team.
+              Precision medicine articles, wellness strategies, and primary care insights from Dr. Yaw Nkrumah and the SFM team.
             </p>
           </div>
         </div>
